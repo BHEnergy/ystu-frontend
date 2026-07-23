@@ -1,0 +1,39 @@
+.advertising-banner {
+    background-color: var(--subprimary-color-1);
+    padding: 9px 0;
+    color: var(--white-shade-1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.advertising-banner::before {
+    display: none;
+    content: url(/images/svg/adv-before.svg);
+    position: absolute;
+    z-index: -1;
+}
+
+.advertising-banner::after {
+    display: none;
+    content: url(/images/svg/adv-after.svg);
+    position: absolute;
+    z-index: -1;
+}
+
+.advertising-banner__body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.advertising-banner__date {
+    display: flex;
+    gap: 40px;
+}
+
+.advertising-banner__text {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+}

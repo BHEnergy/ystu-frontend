@@ -1,0 +1,90 @@
+/* Подключение шрифта */
+@import url('../fonts/GoogleSans.ttf');
+@import url('../fonts/GoogleSans-Medium.ttf');
+
+/* Подключение стилей сторонних библиотек */
+@import url('components/swiper-bundle.css');
+/* @import url('components/bootstrap.min.css'); */
+/* @import url('components/bootstrap-grid.min.css'); */
+
+/* Подключение стилей компонентов */
+@import url('components/_main.css');
+@import url('components/_header.css');
+@import url('components/_body.css');
+@import url('components/_footer.css');
+@import url('components/_buttons.css');
+@import url('components/_advertising_banner.css');
+
+/* Обнуление стилей */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    margin: 0;
+    font-family: 'GoogleSans', sans-serif;
+    height: 100%;
+}
+
+a, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Рут стили и правила для быстрой верстки */
+:root {
+    /* Основные цвета из UI-кита */
+    --primary-color-1: #E55700;
+    --primary-color-2: #F4772B;
+    --primary-color-3: #F69255;
+    --primary-color-4: #F8AD80;
+    --primary-color-5: #FBC9AA;
+    --primary-color-6: #FDE4D5;
+    --primary-color-7: #FEF1EA;
+    --subprimary-color-1: #094188;
+    --subprimary-color-2: #537AAC;
+    --subprimary-color-3: #9DB3CF;
+    --subprimary-color-4: #CED9E7;
+    --subprimary-color-5: #E6ECF3;
+    --subprimary-color-6: #E5E9EE;
+    --subprimary-color-7: #EEF0F2;
+
+    /* Цвета ошибок */
+    --error-color-1: #FF3633;
+    --error-color-2: #FF5E5C;
+
+    /* Оттенки белого цвета */
+    --white-shade-1: #FFFFFF;
+    --white-shade-2: #FEFEFE;
+    --white-shade-3: #FBFBFB;
+    --white-shade-4: #FAFAFA;
+
+    /* Оттенки черного цвета */
+    --black-shade-1: #000000;
+    --black-shade-2: #333333;
+    --black-shade-3: #4C4C4C;
+    --black-shade-4: #666666;
+    --black-shade-5: #808080;
+    --black-shade-6: #999999;
+    --black-shade-7: #B3B3B3;
+    --black-shade-8: #CCCCCC;
+    --black-shade-9: #E5E5E5;
+    --black-shade-10: #F2F2F2;
+
+    /* Контейнер */
+    --container-padding: 40px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    min-height: 100%;
+}

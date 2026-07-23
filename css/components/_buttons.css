@@ -1,0 +1,26 @@
+.btn {
+    background-color: none;
+    border: none;
+}
+
+.btn--default {
+    background-color: var(--primary-color-2);
+    border-radius: 100px;
+    color: var(--white-shade-1);
+}
+
+.btn--s {
+    padding: 12px 24px;
+}
+
+.btn--m {
+    padding: 16px 40px;
+}
+
+.btn--l {
+    padding: 16px 48px;
+}
+
+.btn--xl {
+    padding: 20px 48px;
+}
