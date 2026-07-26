@@ -24,3 +24,14 @@
 .btn--xl {
     padding: 20px 48px;
 }
+
+.btn--blue {
+    color: var(--white-shade-3) !important;
+    background-color: var(--subprimary-color-1);
+}
+
+.btn--white {
+    color: var(--subprimary-color-1) !important;
+    background-color: var(--white-shade-3);
+    border: 1px solid var(--subprimary-color-1);
+}

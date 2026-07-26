@@ -1,19 +1,33 @@
-/* Подключение шрифта */
-@import url('../fonts/GoogleSans.ttf');
-@import url('../fonts/GoogleSans-Medium.ttf');
+
 
 /* Подключение стилей сторонних библиотек */
 @import url('components/swiper-bundle.css');
 /* @import url('components/bootstrap.min.css'); */
-/* @import url('components/bootstrap-grid.min.css'); */
+@import url('components/bootstrap-grid.min.css');
 
 /* Подключение стилей компонентов */
-@import url('components/_main.css');
-@import url('components/_header.css');
-@import url('components/_body.css');
-@import url('components/_footer.css');
-@import url('components/_buttons.css');
-@import url('components/_advertising_banner.css');
+@import url('components/main.css');
+@import url('components/header.css');
+@import url('components/body.css');
+@import url('components/footer.css');
+@import url('components/buttons.css');
+@import url('components/information_banner.css');
+@import url('components/fichers.css');
+@import url('components/slider.css');
+@import url('components/events.css');
+
+@import url('components/preparatory-courses.css');
+@import url('components/flagship-projects.css');
+@import url('components/university-statistics.css');
+
+/* Подключение шрифта */
+@font-face {
+    font-family: 'GoogleSans';
+    src: url('../fonts/GoogleSans.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
 
 /* Обнуление стилей */
 * {

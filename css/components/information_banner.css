@@ -1,4 +1,4 @@
-.advertising-banner {
+.information-banner {
     background-color: var(--subprimary-color-1);
     padding: 9px 0;
     color: var(--white-shade-1);
@@ -7,32 +7,37 @@
     z-index: 1;
 }
 
-.advertising-banner::before {
-    display: none;
+.information-banner::before {
+    display: block;
     content: url(/images/svg/adv-before.svg);
     position: absolute;
     z-index: -1;
+    top: -70%;
+    left: -2%;
 }
 
-.advertising-banner::after {
-    display: none;
+.information-banner::after {
+    display: block;
     content: url(/images/svg/adv-after.svg);
     position: absolute;
     z-index: -1;
+    right: -4%;
+    top: -20%;
 }
 
-.advertising-banner__body {
+.information-banner__body {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 80px;
 }
 
-.advertising-banner__date {
+.information-banner__date {
     display: flex;
     gap: 40px;
 }
 
-.advertising-banner__text {
+.information-banner__text {
     font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;

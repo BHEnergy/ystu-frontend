@@ -1,0 +1,30 @@
+.footer {
+    background-color: var(--subprimary-color-1);
+    width: 100%;
+}
+
+.footer__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__links {
+    color: var(--white-shade-1);
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    padding: 24px 0;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--white-shade-1);
+}
+
+.footer__body {
+    padding: 24px 0 80px;
+    border-bottom: 1px solid var(--white-shade-1);
+}
+
+.footer__bottom {
+    display: flex;
+    flex-direction: row;
+    padding: 40px 0 30px;
+}

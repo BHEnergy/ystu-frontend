@@ -5,6 +5,7 @@
     max-width: 1520px;
     border-left: var(--container-padding) solid transparent;
     border-right: var(--container-padding) solid transparent;
+    padding: 0;
 }
 
 /* Устройства X-Large (большие настольные компьютеры, 1200 пикселей и выше) */
