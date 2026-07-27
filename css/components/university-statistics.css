@@ -1,4 +1,133 @@
 .university-statistics {
     background-color: var(--subprimary-color-1);
     margin-bottom: 110px;
+    background-image: url(/images/svg/ystu.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.university-statistics__container {
+    padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 110px
+}
+
+.university-statistics__header {
+    color: var(--white-shade-1);
+    display: flex;
+    gap: 140px;
+    padding: 0 24px;
+}
+
+.university-statistics__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.university-statistics__title {
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.university-statistics__description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-top: 16px;
+}
+
+.university-statistics__button {
+    color: var(--white-shade-1);
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+.university-statistics__numbers {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(330px, 1fr));
+    gap: 80px 24px;
+}
+
+.university-statistics__number {
+    font-size: 90px;
+    font-weight: 700;
+}
+
+.university-statistics__number-label {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.university-statistics__institutes {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(330px, 1fr));
+    gap: 24px;
+}
+
+.university-statistics__institute {
+    padding: 24px 16px 98px;
+    list-style: none;
+    background-color: var(--white-shade-1);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.university-statistics__institute::before {
+    position: absolute;
+    bottom: -10%;
+    right: -30px;
+    content: "";
+    display: block;
+    width: 94px;
+    height: 132px;
+    background-color: var(--primary-color-2);
+    clip-path: polygon(0 0, 43% 0, 100% 50%, 43% 100%, 0 100%, 57% 50%);
+}
+
+.university-statistics__institute::after {
+    position: absolute;
+    bottom: -2.5%;
+    right: 40px;
+    content: "";
+    display: block;
+    width: 60px;
+    height: 85px;
+    background-color: var(--primary-color-5);
+    clip-path: polygon(0 0, 43% 0, 100% 50%, 43% 100%, 0 100%, 57% 50%);
+}
+
+.university-statistics__institute-title {
+    font-size: 20px;
+    color: var(--subprimary-color-1);
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.university-statistics__institute-link {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.university-statistics__programs {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: baseline;
+}
+
+.university-statistics__program {
+    background-color: var(--subprimary-color-4);
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-size: 16px;
+    color: var(--subprimary-color-1);
+    text-transform: lowercase;
+    font-style: italic;
 }

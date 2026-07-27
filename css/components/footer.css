@@ -1,6 +1,7 @@
 .footer {
     background-color: var(--subprimary-color-1);
     width: 100%;
+    color: var(--white-shade-1);
 }
 
 .footer__wrapper {
@@ -9,7 +10,6 @@
 }
 
 .footer__links {
-    color: var(--white-shade-1);
     font-size: 18px;
     display: flex;
     flex-direction: row;
@@ -21,10 +21,85 @@
 .footer__body {
     padding: 24px 0 80px;
     border-bottom: 1px solid var(--white-shade-1);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: row;
+    gap: 52px;
+}
+
+.footer__information {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
 }
 
 .footer__bottom {
     display: flex;
     flex-direction: row;
     padding: 40px 0 30px;
+    justify-content: space-between;
+}
+
+.footer__consultation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer__phones {
+    display: flex;
+    gap: 52px;
+}
+
+.footer__call {
+    flex: 0 0 35%;
+}
+
+.footer__call a {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.footer__call p {
+    margin-top: 8px;
+}
+
+.footer__modals {
+    display: flex;
+    gap: 40px;
+}
+
+.footer__modal {
+    background-color: var(--white-shade-4);
+    padding: 24px 24px 26px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex: 0 0 53%;
+    justify-content: space-between;
+}
+
+.footer__modal p {
+    color: var(--subprimary-color-1);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.footer__modal a {
+    color: var(--primary-color-2) !important;
+    font-weight: 600;
+    border-bottom: 1px solid var(--primary-color-2);
+    padding-bottom: 6px;
 }

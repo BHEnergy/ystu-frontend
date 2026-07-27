@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../css/styles.css?v=3" rel="stylesheet" />
+    <script src = "../js/main.js" type="text/javascript"></script>
     <title>Главная страница</title>
   </head>
   <body>
@@ -68,22 +69,56 @@
               <li>Обучающимся</li>
               <li>Сотрудникам</li>
             </ul>
-            <button class="btn btn--default btn--s" data-trigger="open-menu">
+            <button class="btn btn--default btn--s btn__menu" data-trigger="open-menu">
+              <div class = "btn__burger">
+                <div class = "btn__burger__line"></div>
+                <div class = "btn__burger__line"></div>
+                <div class = "btn__burger__line"></div>
+                <div class = "btn__burger__line"></div>
+              </div>
               Меню
             </button>
           </div>
         </div>
       </header>
       <main class="main">
-        <div class="container">
           <!-- Слайдер -->
           <section>
-            <div class = "swiper js-init-first-slider default-slider">
+            <div class="container">
+            <div class = "swiper js-init-first-slider default-slider main-slider">
               <div class = "swiper-wrapper">
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
+                <div class="swiper-slide main-slide">
+                  <img class = "slide__photo" src = "/images/fallback/main-slide.png">
+                  <div class = "slide__info">
+                    <p class = "slide__title">Добро пожаловать в ЯГТУ!</p>
+                    <p class = "slide__description">ЯГТУ - крупный российский технический вуз, где учатся<br> более 5000 студентов и аспирантов!</p>
+                    <a href = "#" class = "btn btn--default btn--xl">Подробнее</a>
+                  </div>
+                </div>
+                <div class="swiper-slide main-slide">
+                  <img class = "slide__photo" src = "/images/fallback/main-slide.png">
+                  <div class = "slide__info">
+                    <p class = "slide__title">Добро пожаловать в ЯГТУ!</p>
+                    <p class = "slide__description">ЯГТУ - крупный российский технический вуз, где учатся<br> более 5000 студентов и аспирантов!</p>
+                    <a href = "#" class = "btn btn--default btn--xl">Подробнее</a>
+                  </div>
+                </div>
+                <div class="swiper-slide main-slide">
+                  <img class = "slide__photo" src = "/images/fallback/main-slide.png">
+                  <div class = "slide__info">
+                    <p class = "slide__title">Добро пожаловать в ЯГТУ!</p>
+                    <p class = "slide__description">ЯГТУ - крупный российский технический вуз, где учатся<br> более 5000 студентов и аспирантов!</p>
+                    <a href = "#" class = "btn btn--default btn--xl">Подробнее</a>
+                  </div>
+                </div>
+                <div class="swiper-slide main-slide">
+                  <img class = "slide__photo" src = "/images/fallback/main-slide.png">
+                  <div class = "slide__info">
+                    <p class = "slide__title">Добро пожаловать в ЯГТУ!</p>
+                    <p class = "slide__description">ЯГТУ - крупный российский технический вуз, где учатся<br> более 5000 студентов и аспирантов!</p>
+                    <a href = "#" class = "btn btn--default btn--xl">Подробнее</a>
+                  </div>
+                </div>
               </div>
               <div class = "default-slider-controls">
                 <div class = "swiper-button-prev"></div>
@@ -91,10 +126,12 @@
                 <div class = "swiper-button-next"></div>
               </div>
             </div>
+          </div>
           </section>
 
           <!-- Фичеры -->
           <section>
+          <div class="container">
             <div class="fichers">
               <div class="ficher">
                 <img class="ficher__icon" src="../images/svg/abt.svg" />
@@ -119,10 +156,12 @@
                 <p class="ficher__text">Партнерам</p>
               </div>
             </div>
+          </div>
           </section>
 
           <!-- События / новости -->
           <section>
+          <div class = "container">
             <div class="events">
               <div class="events__wrapper">
                 <div class="events__header">
@@ -130,7 +169,8 @@
                     <div class="events__separator"></div>
                     <div class="title events__title unactive" data-value="tab" data-tab="news">Новости</div>
                 </div>
-                <div class = "events__content active" data-value="tab-container" data-tab="events">
+                <div class = "events__container active" data-value="tab-container" data-tab="events">
+                  <div class = "events__content ">
                         <div class="event__card">
                             <div class = "event__photo">
                                 <img src = "../images/fallback/banner1.png">
@@ -148,6 +188,14 @@
                                         <a class = "btn btn--link btn--white" href = "#">Подробнее</a>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="event__tags">
+                              <div class = "event__tag">
+                                10-11 класс
+                              </div>
+                              <div class = "event__tag">
+                                Онлайн
+                              </div>
                             </div>
                         </div>
                         <div class="event__card">
@@ -168,6 +216,14 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="event__tags">
+                              <div class = "event__tag">
+                                10-11 класс
+                              </div>
+                              <div class = "event__tag">
+                                Онлайн
+                              </div>
+                            </div>
                         </div>
                         <div class="event__card">
                             <div class = "event__photo">
@@ -187,71 +243,117 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class = "events__content unactive" data-value="tab-container" data-tab="news">
-                        <div class="news__card">
-                            <img src = "">
-                            <div class = "news__content">
-                                <div class = "news__header">
-                                    <p class = "news__date"></p>
-                                    <p class = "news__title"></p>
-                                </div>
-                                <div class = "news__tags">
-                                    <p class = "news__tag"></p>
-                                    <p class = "news__tag"></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="news__card">
-                            <img src = "">
-                            <div class = "news__content">
-                                <div class = "news__header">
-                                    <p class = "news__date"></p>
-                                    <p class = "news__title"></p>
-                                </div>
-                                <div class = "news__tags">
-                                    <p class = "news__tag"></p>
-                                    <p class = "news__tag"></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="news__card">
-                            <img src = "">
-                            <div class = "news__content">
-                                <div class = "news__header">
-                                    <p class = "news__date"></p>
-                                    <p class = "news__title"></p>
-                                </div>
-                                <div class = "news__tags">
-                                    <p class = "news__tag"></p>
-                                    <p class = "news__tag"></p>
-                                </div>
+                            <div class="event__tags">
+                              <div class = "event__tag">
+                                10-11 класс
+                              </div>
+                              <div class = "event__tag">
+                                Онлайн
+                              </div>
                             </div>
                         </div>
                     </div>
+                    <a class = "btn btn--default btn--m" href = "#">
+                      Все события
+                    </a>
+                </div>
+                <div class = "events__container unactive" data-value="tab-container" data-tab="news">
+                  <div class = "events__content">
+                        <div class="news__card">
+                            <div class = "news__photo">
+                              <img src = "../images/fallback/banner-news.png">
+                            </div>
+                            <div class = "news__content">
+                              <div class = "news__header">
+                                  <p class = "news__date">26.02.2026</p>
+                                  <p class = "news__title">Международная научно-практическая конференция «Экологическая безопасность водных объектов»</p>
+                              </div>
+                              <div class = "news__tags">
+                                  <p class = "news__tag">приемная кампания</p>
+                                  <p class = "news__tag">поступающим</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="news__card">
+                            <div class = "news__photo">
+                              <img src = "../images/fallback/banner-news.png">
+                            </div>
+                            <div class = "news__content">
+                              <div class = "news__header">
+                                  <p class = "news__date">26.02.2026</p>
+                                  <p class = "news__title">Социологическй опрос «Приоритет 2030»</p>
+                              </div>
+                              <div class = "news__tags">
+                                  <p class = "news__tag">приемная кампания</p>
+                                  <p class = "news__tag">поступающим</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="news__card">
+                            <div class = "news__photo">
+                              <img src = "../images/fallback/banner-news.png">
+                            </div>
+                            <div class = "news__content">
+                              <div class = "news__header">
+                                  <p class = "news__date">26.02.2026</p>
+                                  <p class = "news__title">Максим Татаров встретился <br>со студентами Института экономики и менеджмента</p>
+                              </div>
+                              <div class = "news__tags">
+                                  <p class = "news__tag">приемная кампания</p>
+                                  <p class = "news__tag">поступающим</p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class = "btn btn--default btn--m" href = "#">
+                      Все события
+                    </a>
+                </div>
               </div>
             </div>
+          </div>
           </section>
 
           <!-- Флагманские проекты -->
-          <section>
+          <section class="flagship-projects">
+          <div class = "container">
             <h2 class="flagship-projects__title">Флагманские проекты</h2>
 
             <div class="flagship-projects__grid">
-                <div class="flagship-projects__card"></div>
-                <div class="flagship-projects__card"></div>
-                <div class="flagship-projects__card"></div>
-                <div class="flagship-projects__card"></div>
-                <div class="flagship-projects__card"></div>
-                <div class="flagship-projects__card"></div>
-                <div class="flagship-projects__card"></div>
-                <div class="flagship-projects__card"></div>
+                <div class="flagship-project__card">
+                  <p class = "flagship-project__title">Название проекта</p>
+                </div>
+                <div class="flagship-project__card">
+                  <p class = "flagship-project__title">Очень очень Очень длиное название проекта</p>
+                </div>
+                <div class="flagship-project__card">
+                  <p class = "flagship-project__title">Название проекта</p>
+                  <div class = "flagship-project__photo">
+                    <img src = "/images/fallback/prioritet.png">
+                  </div>
+                </div>
+                <div class="flagship-project__card">
+                  <p class = "flagship-project__title">Название проекта</p>
+                </div>
+                <div class="flagship-project__card">
+                  <p class = "flagship-project__title">Название проекта</p>
+                </div>
+                <div class="flagship-project__card">
+                  <p class = "flagship-project__title">Очень очень Очень длиное название проекта</p>
+                </div>
+                <div class="flagship-project__card">
+                  <p class = "flagship-project__title">Название проекта</p>
+                </div>
+                <div class="flagship-project__card">
+                  <p class = "flagship-project__title">Название проекта</p>
+                </div>
             </div>
+          </div>
           </section>
 
           <!-- ЯГТУ в цифрах -->
           <section class="university-statistics">
+          <div class = "container">
             <div class="university-statistics__container">
               <div class="university-statistics__header">
                 <div class="university-statistics__content">
@@ -259,12 +361,14 @@
 
                   <p class="university-statistics__description">
                     В вузе идет прием на почти 900 бюджетных мест, а общий набор
-                    составляет больше 1600 студентов. Почти 90% выпускников ЯГТУ
+                    составляет больше 1600 студентов.<br> 
+                    Почти 90%<br>
+                    выпускников ЯГТУ
                     успешно трудоустраиваются. Многие находят работу уже во
                     время учебы.
                   </p>
 
-                  <a class="university-statistics__button" href="#">
+                  <a class="btn btn--m btn--default university-statistics__button" href="#">
                     Об университете
                   </a>
                 </div>
@@ -438,10 +542,13 @@
                 </li>
               </ul>
             </div>
+          </div>
           </section>
 
           <!-- CTA -->
-          <section class="preparatory-courses">
+          <section>
+          <div class = "container">
+          <div class="preparatory-courses">
             <div class="preparatory-courses__content">
               <h2 class="preparatory-courses__title">
                 Подготовительные курсы
@@ -458,19 +565,80 @@
             </div>
 
             <div class="preparatory-courses__media">
-              <!-- <img
-                            class="preparatory-courses__image"
-                            src="images/preparatory-courses.jpg"
-                            alt="Школьники занимаются на подготовительных курсах"
-                        > -->
+              <img
+                class="preparatory-courses__image"
+                src="/images/fallback/banner-courses.png"
+                alt="Школьники занимаются на подготовительных курсах"
+              >
             </div>
+          </div>
+          </div>
           </section>
 
           <!-- Слайдер в низу -->
-          <section>
-
+          <section class = "banner-slider">
+            <div class = "container">
+              <div class = "swiper js-init-banner-slider banner-slider-1 default-slider">
+                <div class = "swiper-wrapper">
+                  <div class="swiper-slide banner__body">
+                      <p class = "banner__title">
+                        Социологический опрос
+                      </p>
+                  </div>
+                  <div class="swiper-slide banner__body">
+                      <p class = "banner__title">
+                        Социологический опрос
+                      </p>
+                  </div>
+                  <div class="swiper-slide banner__body">
+                      <p class = "banner__title">
+                        Социологический опрос
+                      </p>
+                  </div>
+                  <div class="swiper-slide banner__body">
+                      <p class = "banner__title">
+                        Социологический опрос
+                      </p>
+                  </div>
+                  <div class="swiper-slide banner__body">
+                      <p class = "banner__title">
+                        Социологический опрос
+                      </p>
+                  </div>
+                  <div class="swiper-slide banner__body">
+                      <p class = "banner__title">
+                        Социологический опрос
+                      </p>
+                  </div>
+                  <div class="swiper-slide banner__body">
+                      <p class = "banner__title">
+                        Социологический опрос
+                      </p>
+                  </div>
+                  <div class="swiper-slide banner__body">
+                      <p class = "banner__title">
+                        Социологический опрос
+                      </p>
+                  </div>
+                  <div class="swiper-slide banner__body">
+                      <p class = "banner__title">
+                        Социологический опрос
+                      </p>
+                  </div>
+                  <div class="swiper-slide banner__body">
+                      <p class = "banner__title">
+                        Социологический опрос
+                      </p>
+                  </div>
+                </div>
+                <div class = "default-slider-controls">
+                  <div class = "swiper-button-prev"></div>
+                  <div class = "swiper-pagination"></div>
+                  <div class = "swiper-button-next"></div>
+                </div>
+              </div>
+            </div>
           </section>
-        </div>
       </main>
       <footer class="footer">
         <div class = "container">
@@ -482,10 +650,49 @@
               <a href="#">Политика конфиденциальности</a>
             </div>
             <div class = "footer__body">
-              
+              <div class = "footer__header">
+                <div class = "footer__contacts">
+                  <a href = "tel:74852402199" class = "footer__phone">+7 (4852) 40-21-99</a>
+                  <a href = "mailto:74852402199" class = "footer__mail">info@ystu.ru</a>
+                  <a href = "#" class = "footer__location">г. Ярославль, Московский проспект, 88</a>
+                </div>
+                <div class = "footer__messages">
+                  <a href = "#">TG</a>
+                  <a href = "#">VK</a>
+                  <a href = "#">OK</a>
+                </div>
+                <a href =  "#">Обработка персональных данных</a>
+              </div>
+              <div class = "footer__information">
+                <div class = "footer__emblem">
+                  <img src = "/images/fallback/emblem.png">
+                </div>
+                <div class = "footer__consultation">
+                  <div class = "footer__phones">
+                    <div class = "footer__call">
+                      <a href = "tel:88002507677">8-800-250-76-77</a>
+                      <p>По вопросам поступления (бакалавриат и магистратура)</p>
+                    </div>
+                    <div class = "footer__call">
+                      <a href = "tel:88002507677">8-800-250-76-77</a>
+                      <p>По вопросам дополнительного образования</p>
+                    </div>
+                  </div>
+                  <div class = "footer__modals">
+                    <div class = "footer__modal">
+                      <p>Подать обращение<br> гражданина</p>
+                      <a href = "#">Подать обращение</a>
+                    </div>
+                    <div class = "footer__modal">
+                      <p>Оставить мнение<br> об организации</p>
+                      <a href = "#">Оставить отзыв</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class = "footer__bottom">
-
+              <p>© ФГБОУ ВО «ЯГТУ», 2026</p>
             </div>
           </div>
         </div>

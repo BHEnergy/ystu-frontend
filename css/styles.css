@@ -1,24 +1,25 @@
 
 
 /* Подключение стилей сторонних библиотек */
-@import url('components/swiper-bundle.css');
-/* @import url('components/bootstrap.min.css'); */
-@import url('components/bootstrap-grid.min.css');
+@import url('/css/components/swiper-bundle.css');
+/* @import url('/css/components/bootstrap.min.css'); */
+@import url('/css/components/bootstrap-grid.min.css');
 
 /* Подключение стилей компонентов */
-@import url('components/main.css');
-@import url('components/header.css');
-@import url('components/body.css');
-@import url('components/footer.css');
-@import url('components/buttons.css');
-@import url('components/information_banner.css');
-@import url('components/fichers.css');
-@import url('components/slider.css');
-@import url('components/events.css');
+@import url('/css/components/main.css');
+@import url('/css/components/header.css');
+@import url('/css/components/body.css');
+@import url('/css/components/footer.css');
+@import url('/css/components/buttons.css');
+@import url('/css/components/information_banner.css');
+@import url('/css/components/fichers.css');
+@import url('/css/components/slider.css');
+@import url('/css/components/events.css');
+@import url('/css/components/news.css');
 
-@import url('components/preparatory-courses.css');
-@import url('components/flagship-projects.css');
-@import url('components/university-statistics.css');
+@import url('/css/components/preparatory-courses.css');
+@import url('/css/components/flagship-projects.css');
+@import url('/css/components/university-statistics.css');
 
 /* Подключение шрифта */
 @font-face {

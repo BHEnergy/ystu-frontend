@@ -25,12 +25,14 @@
 }
 
 .events__title.active {
+    order: -1;
     font-weight: 600;
     font-size: 52px;
     color: var(--subprimary-color-1);
 }
 
 .events__title.unactive {
+    order: 1;
     font-weight: 500;
     font-size: 44px;
     color: var(--subprimary-color-2);
@@ -42,11 +44,18 @@
     gap: 24px;
 }
 
-.events__content.active {
+.events__container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+.events__container.active {
     display: revert-rule;
 }
 
-.events__content.unactive {
+.events__container.unactive {
     display: none;
 }
 
@@ -89,6 +98,43 @@
     color: #5B5B5D;
 }
 
+.event__date, .event__time, .event__location {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+.event__date::before {
+    content: url(/images/svg/calendar.svg);
+    line-height: 1;
+    width: 24px;
+    height: 24px;
+    padding: 0px;
+    align-content: end;
+    text-align: center;
+}
+
+.event__time::before {
+    content: url(/images/svg/time.svg);
+    line-height: 1;
+    width: 24px;
+    height: 24px;
+    padding: 0px;
+    align-content: end;
+    text-align: center;
+}
+
+.event__location::before {
+    content: url(/images/svg/location.svg);
+    line-height: 1;
+    width: 24px;
+    height: 24px;
+    padding: 0px;
+    align-content: end;
+    text-align: center;
+}
+
 .event__body {
     display: flex;
     flex-direction: column;
@@ -110,4 +156,44 @@
 
 .event__footer .btn--link {
     padding: 16px 0px;
+}
+
+.event__tags {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: flex;
+    gap: 10px;
+}
+
+.event__tag {
+    --primary-color-2: rgba(244, 120, 43, 0.5);
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 1.25;
+    white-space: nowrap;
+    color: var(--white-shade-1);
+    background-color: var(--primary-color-2);
+    padding: 8px 16px;
+    border-radius: 50px;
+    -webkit-backdrop-filter: blur(10px) saturate(150%);
+    backdrop-filter: blur(10px) saturate(150%);
+}
+
+.event__tag::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(120% 90% at 18% 0%, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 24%), linear-gradient(165deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 58%);
+    pointer-events: none;
+}
+
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    .event__tag {
+        background-color: rgba(207, 101, 40, 0.9);
+    }
 }

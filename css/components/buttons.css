@@ -1,12 +1,13 @@
 .btn {
     background-color: none;
     border: none;
+    font-family: 'GoogleSans', sans-serif;
 }
 
 .btn--default {
     background-color: var(--primary-color-2);
     border-radius: 100px;
-    color: var(--white-shade-1);
+    color: var(--white-shade-1) !important;
 }
 
 .btn--s {
