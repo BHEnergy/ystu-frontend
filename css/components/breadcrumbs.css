@@ -1,0 +1,15 @@
+.breadcrumbs {
+    margin-top: 24px;
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--subprimary-color-2);
+    align-items: center;
+}
+
+.breadcrumbs__separator {
+    background: url(/images/svg/breadcrumb-separator.svg) 50% 50%;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+}

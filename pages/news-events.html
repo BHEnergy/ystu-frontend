@@ -9,20 +9,6 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="information-banner">
-        <div class="container">
-          <div class="information-banner__body">
-            <p class="information-banner__text">День открытых дверей</p>
-            <div class="information-banner__date">
-              <p class="information-banner__text">14 апреля</p>
-              <p class="information-banner__text">12:00 — 18:00</p>
-            </div>
-            <a href="#">
-              <div class="btn btn--default btn--s">Подробнее</div>
-            </a>
-          </div>
-        </div>
-      </div>
       <header class="header">
         <div class="header__wrapper container">
           <div class="header__top">
@@ -92,7 +78,7 @@
             </div>
         </div>    
         <!-- События / новости -->
-        <section>
+        <section class = "events-section">
           <div class = "container">
             <div class="events">
               <div class="events__wrapper">
@@ -100,6 +86,44 @@
                     <div class="title events__title active" data-value="tab" data-tab="events">События</div>
                     <div class="events__separator"></div>
                     <div class="title events__title unactive" data-value="tab" data-tab="news">Новости</div>
+                </div>
+                <div class = "events__tags unactive">
+                  <div class = "events__tag">
+                    #приемная компания
+                  </div>
+                  <div class = "events__tag">
+                    #приемная компания
+                  </div>
+                  <div class = "events__tag">
+                    #приемная компания
+                  </div>
+                  <div class = "events__tag">
+                    #приемная компания
+                  </div>
+                  <div class = "events__tag">
+                    #приемная компания
+                  </div>
+                  <div class = "events__tag">
+                    #приемная компания
+                  </div>
+                  <div class = "events__tag">
+                    #приемная компания
+                  </div>
+                  <div class = "events__tag">
+                    #приемная компания
+                  </div>
+                  <div class = "events__tag">
+                    #приемная компания
+                  </div>
+                  <div class = "events__tag">
+                    #приемная компания
+                  </div>
+                  <div class = "events__tag">
+                    #приемная компания
+                  </div>
+                  <div class = "events__tag">
+                    #приемная компания
+                  </div>
                 </div>
                 <div class = "events__container active" data-value="tab-container" data-tab="events">
                   <div class = "events__content ">
@@ -266,9 +290,29 @@
                             </div>
                         </div>
                     </div>
-                    <a class = "btn btn--default btn--m" href = "#">
-                      Все события
-                    </a>
+                    <!-- Пагинация -->
+                    <div class = "pagination">
+                      <a class = "pagination__button-prev" href = "#"></a>
+                      <a class = "pagination__page current" href = "#">
+                        1
+                      </a>
+                      <a class = "pagination__page" href = "#">
+                        2
+                      </a>
+                      <a class = "pagination__page" href = "#">
+                        3
+                      </a>
+                      <a class = "pagination__page" href = "#">
+                        4
+                      </a>
+                      <a class = "pagination__page" href = "#">
+                        ...
+                      </a>
+                      <a class = "pagination__page" href = "#">
+                        16
+                      </a>
+                      <a class = "pagination__button-next" href = "#"></a>
+                    </div>
                 </div>
                 <div class = "events__container unactive" data-value="tab-container" data-tab="news">
                   <div class = "events__content">
@@ -318,6 +362,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Пагинация -->
                 </div>
               </div>
             </div>
@@ -341,9 +386,15 @@
                   <a href = "#" class = "footer__location">г. Ярославль, Московский проспект, 88</a>
                 </div>
                 <div class = "footer__messages">
-                  <a href = "#">TG</a>
-                  <a href = "#">VK</a>
-                  <a href = "#">OK</a>
+                  <a href = "#">
+                    <img src = "/images/svg/tg.svg">
+                  </a>
+                  <a href = "#">
+                    <img src = "/images/svg/vk.svg">
+                  </a>
+                  <a href = "#">
+                    <img src = "/images/svg/ok.svg">
+                  </a>
                 </div>
                 <a href =  "#">Обработка персональных данных</a>
               </div>

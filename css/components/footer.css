@@ -37,6 +37,7 @@
     display: flex;
     flex-direction: row;
     gap: 52px;
+    flex: 0 0 65%;
 }
 
 .footer__information {
@@ -102,4 +103,28 @@
     font-weight: 600;
     border-bottom: 1px solid var(--primary-color-2);
     padding-bottom: 6px;
+}
+
+.footer__messages {
+    display: flex;
+    gap: 24px;
+}
+
+.footer__phone::before, .footer__mail::before, .footer__location::before {
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 11px;
+}
+
+.footer__phone::before {
+    content: url(/images/svg/call-white.svg);
+}
+
+.footer__mail::before {
+    content: url(/images/svg/mail-white.svg);
+}
+
+.footer__location::before {
+    content: url(/images/svg/location-white.svg);
 }

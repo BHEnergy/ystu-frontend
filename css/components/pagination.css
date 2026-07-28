@@ -1,0 +1,38 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+.pagination__page.current {
+    background-color: var(--subprimary-color-1);
+    color: var(--white-shade-1);
+}
+
+.pagination__page {
+    padding: 12px 16px;
+    border: 1px solid var(--subprimary-color-1);
+    border-radius: 6px;
+    color: var(--subprimary-color-1);
+    font-size: 16px;
+    font-weight: 600;
+    width: 52px;
+    text-align: center;
+}
+
+.pagination__button-prev, .pagination__button-next {
+    height: 24px;
+    width: 24px;
+}
+
+.pagination__button-prev {
+    background: url(/images/svg/triangle-left-orange.svg) 50% 50%;
+    background-repeat: no-repeat;
+}
+
+
+.pagination__button-next {
+    background: url(/images/svg/triangle-right-orange.svg) 50% 50%;
+    background-repeat: no-repeat;
+}

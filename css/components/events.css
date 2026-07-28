@@ -1,3 +1,7 @@
+.events-section {
+    margin-top: 60px;
+}
+
 .events {
     margin-bottom: 110px;
 }
@@ -13,6 +17,35 @@
     flex-direction: row;
     align-items: center;
     gap: 24px;
+}
+
+.events__tags {
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+.events__tags.active {
+    display: inherit;
+}
+
+.events__tags.unactive {
+    display: none;
+}
+
+.events__tag {
+    padding: 12px;
+    border: 1px solid var(--subprimary-color-1);
+    border-radius: 6px;
+    font-size: 15px;
+    color: var(--subprimary-color-1);
+    cursor: pointer;
+}
+
+.events__tag.current {
+    background-color: var(--subprimary-color-4);
 }
 
 .events__separator {
