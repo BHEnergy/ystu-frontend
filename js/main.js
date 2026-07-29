@@ -85,10 +85,12 @@
         });
     };
 
+    /* Здесь инициализируем библиотеки */
     const initLibraries = async () => {
         await Promise.all([
             loadScript("bootstrap.min.js", "bootstrap"),
             loadScript("swiper-bundle.min.js", "Swiper"),
+            loadScript("tabs.js", "Tabs")
         ]);
 
         initSwiper();

@@ -1,0 +1,105 @@
+.structure {
+    margin-top: 40px;
+    margin-bottom: 140px;
+}
+
+.structure__container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.structure__tags {
+    display: flex;
+    gap: 25px;
+}
+
+.structure__tag {
+    color: var(--subprimary-color-1);
+    border: 1px solid var(--subprimary-color-1);
+    border-radius: 50px;
+    padding: 16px 32px;
+    transition: 0.3s all ease-in-out;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.structure__tag.select {
+    background-color: var(--primary-color-2);
+    color: var(--white-shade-1);
+    border: none;
+}
+
+
+.structure__institutes {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(330px, 1fr));
+    gap: 24px;
+}
+
+.structure__institute {
+    padding: 24px 16px 98px;
+    list-style: none;
+    background-color: var(--white-shade-1);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--subprimary-color-2);
+}
+
+.structure__institute::before {
+    position: absolute;
+    bottom: -10%;
+    right: -30px;
+    content: "";
+    display: block;
+    width: 94px;
+    height: 132px;
+    background-color: var(--primary-color-2);
+    clip-path: polygon(0 0, 43% 0, 100% 50%, 43% 100%, 0 100%, 57% 50%);
+}
+
+.structure__institute::after {
+    position: absolute;
+    bottom: -2.5%;
+    right: 40px;
+    content: "";
+    display: block;
+    width: 60px;
+    height: 85px;
+    background-color: var(--primary-color-5);
+    clip-path: polygon(0 0, 43% 0, 100% 50%, 43% 100%, 0 100%, 57% 50%);
+}
+
+.structure__institute-title {
+    font-size: 20px;
+    color: var(--subprimary-color-1);
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.structure__institute-link {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.structure__programs {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: baseline;
+}
+
+.structure__program {
+    background-color: var(--subprimary-color-4);
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-size: 16px;
+    color: var(--subprimary-color-1);
+    text-transform: lowercase;
+    font-style: italic;
+}

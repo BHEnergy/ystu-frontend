@@ -55,6 +55,7 @@
 
 .events__title {
     line-height: 1.2;
+    cursor: pointer;
 }
 
 .events__title.active {

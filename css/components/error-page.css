@@ -1,0 +1,31 @@
+.error-page {
+    height: 65vh;
+    align-content: center;
+}
+
+.error-page__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.error-page__description {
+    font-size: 18px;
+}
+
+/* Устройства X-Large (большие настольные компьютеры, 1200 пикселей и выше) */
+@media (max-width: 1200px) { }
+
+/* Устройства Large (настольные компьютеры, 992 пикселей и выше) */
+@media (max-width: 992px) { }
+
+/* Устройства Medium (планшеты, 768 пикселей и выше) */
+@media (max-width: 768px) { }
+
+/* Устройства Small (телефоны с горизонтальной ориентацией, 576 пикселей и выше) */
+@media (max-width: 576px) { 
+    .error-page__container {
+        align-items: center;
+    }
+}

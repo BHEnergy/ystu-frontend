@@ -10,11 +10,13 @@
 @import url('/css/components/header.css');
 @import url('/css/components/body.css');
 @import url('/css/components/footer.css');
+@import url('/css/components/error-page.css');
 @import url('/css/components/buttons.css');
 @import url('/css/components/information_banner.css');
 @import url('/css/components/fichers.css');
 @import url('/css/components/slider.css');
 @import url('/css/components/events.css');
+@import url('/css/components/structure.css');
 @import url('/css/components/news.css');
 @import url('/css/components/breadcrumbs.css');
 @import url('/css/components/pagination.css');
@@ -37,6 +39,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    line-height: 1.2;
 }
 
 html,
@@ -104,4 +107,10 @@ img {
     flex-direction: column;
     max-width: 100%;
     min-height: 100%;
+}
+
+@media (max-width: 576px) { 
+    :root {
+        --container-padding: 16px;
+    }
 }

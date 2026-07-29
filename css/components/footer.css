@@ -128,3 +128,52 @@
 .footer__location::before {
     content: url(/images/svg/location-white.svg);
 }
+
+/* Шаблон для медиа-запросов */
+/* Устройства X-Large (большие настольные компьютеры, 1200 пикселей и выше) */
+@media (max-width: 1200px) { }
+
+/* Устройства Large (настольные компьютеры, 992 пикселей и выше) */
+@media (max-width: 992px) { }
+
+/* Устройства Medium (планшеты, 768 пикселей и выше) */
+@media (max-width: 768px) { }
+
+/* Устройства Small (телефоны с горизонтальной ориентацией, 576 пикселей и выше) */
+@media (max-width: 576px) { 
+    .footer__links {
+        flex-direction: column;
+        gap: 18px;
+        padding: 48px 0 24px;
+        font-size: 16px;
+    }
+
+    .footer__header {
+        flex-direction: column;
+        gap: 16px;
+        font-size: 16px;
+    }
+
+    .footer__contacts {
+        flex-direction: row;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .footer__messages {
+        justify-content: center;
+        order: 1;
+    }
+
+    .footer__information {
+        flex-wrap: wrap;
+    }
+
+    .footer__modals {
+        flex-direction: column;
+    }
+
+    .footer__bottom {
+        font-size: 14px;
+    }
+}
