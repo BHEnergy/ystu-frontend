@@ -1,0 +1,87 @@
+.search-page {
+    min-height: 620px;
+    padding-bottom: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.search-page-background {
+    position: relative;
+}
+
+.search-page-background::after {
+    content: url(/images/svg/big-ystu.svg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.search-page__form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 80px;
+}
+
+.search-page__input {
+    width: 100%;
+    min-width: 0;
+    height: 58px;
+    padding: 16px 24px;
+    border: 1px solid var(--subprimary-color-2);
+    border-radius: 8px;
+    outline: none;
+    background-color: transparent;
+    color: var(--subprimary-color-1);
+    font: 400 18px/1.2 'GoogleSans', sans-serif;
+}
+
+.search-page__input::placeholder {
+    color: var(--subprimary-color-2);
+    opacity: 1;
+}
+
+.search-page__input:focus {
+    border-color: var(--subprimary-color-1);
+    box-shadow: 0 0 0 2px var(--subprimary-color-5);
+}
+
+.search-page__submit {
+    min-width: 160px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .search-page {
+        min-height: 460px;
+    }
+
+    .search-page__form {
+        margin-top: 48px;
+    }
+
+    .search-page-background::after {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .search-page {
+        min-height: 400px;
+        padding-bottom: 56px;
+    }
+
+    .search-page__form {
+        flex-direction: column;
+        margin-top: 32px;
+    }
+
+    .search-page__submit {
+        width: 100%;
+        min-height: 54px;
+    }
+}
