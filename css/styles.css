@@ -40,6 +40,8 @@
 
 /* Страница Студенческая жизнь */
 @import url('/css/components/student-directions.css');
+@import url('/css/components/student-links.css');
+@import url('/css/components/student-driving.css');
 
 
 /* Страница вакансий */
@@ -124,7 +126,8 @@ img {
 
     /* Контейнер */
     --container-padding: 40px;
-    --header-height: 190px;
+    /* --header-height: 190px; */
+    --header-height: 0px;
     --header-top: 0px;
 }
 

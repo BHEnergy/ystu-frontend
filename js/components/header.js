@@ -29,15 +29,15 @@
         }
     };
 
-    // const resizeObserver = new ResizeObserver(() => {
-    //     document.documentElement.style.setProperty(
-    //         '--header-height',
-    //         `${headerWrapper.getBoundingClientRect().height}px`,
-    //     );
-    //     requestPositionUpdate();
-    // });
+    const resizeObserver = new ResizeObserver(() => {
+        document.documentElement.style.setProperty(
+            '--header-height',
+            `${headerWrapper.getBoundingClientRect().height + 30}px`,
+        );
+        requestPositionUpdate();
+    });
 
-    // resizeObserver.observe(headerWrapper);
+    resizeObserver.observe(headerWrapper);
     window.addEventListener('scroll', requestPositionUpdate, { passive: true });
     window.addEventListener('resize', requestPositionUpdate);
     updateHeaderPosition();

@@ -6,3 +6,8 @@
 .main--header-overlay {
     padding-top: 0;
 }
+
+/* Кастомные классы */
+.grid-list-3 {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+}

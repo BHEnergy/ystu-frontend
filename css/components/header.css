@@ -129,6 +129,7 @@
         width: calc(100% + var(--container-padding)*2);
         margin-left: -16px;
         padding: 20px 24px 24px;
+        border-radius: 0;
         border: none;
     }
     .main-nav {

@@ -1,0 +1,56 @@
+.student-links {
+    margin-bottom: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.student-links__title {
+    font-size: 44px;
+}
+
+.student-links__body {
+    list-style-type: none;
+    gap: 24px;
+}
+
+.student-links__item {
+    min-height: 270px;
+    border-radius: 16px;
+    background-color: var(--subprimary-color-7);
+    padding: 28px 24px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--subprimary-color-1);
+    position: relative;
+    overflow: hidden;
+}
+
+.student-links__item:nth-child(4n + 1)::after {
+    content: url(/images/svg/sd-1.svg);
+    position: absolute;
+    left: -50px;
+    bottom: -135px;
+}
+
+.student-links__item:nth-child(4n + 2)::after {
+    content: url(/images/svg/sd-2.svg);
+    position: absolute;
+    bottom: -60px;
+    right: -40px;
+} 
+
+.student-links__item:nth-child(4n + 3)::after {
+    content: url(/images/svg/sd-3.svg);
+    position: absolute;
+    left: 0;
+    bottom: -65px;
+} 
+
+.student-links__item:nth-child(4n + 4)::after {
+    content: url(/images/svg/sd-4.svg);
+    position: absolute;
+    left: 0;
+    bottom: -65px;
+} 

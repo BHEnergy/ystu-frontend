@@ -136,3 +136,29 @@
         font-weight: 600;
     }
 }
+
+/* Слайдер "Студ. жизнь" */
+.student-direction__gallery {
+    & .default-slider-controls {
+        position: unset;
+        width: 100%;
+
+        & .swiper-button-next, .swiper-button-prev {
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            height: 60px;
+            width: 60px;
+            background-color: var(--subprimary-color-5);
+            border-radius: 50px;
+        }
+
+        & .swiper-button-next::after, .swiper-button-prev::after {
+            transform: scale(2.5);
+        }
+    }
+    & .swiper-pagination {
+        bottom: 0;
+        top: -20px;
+    }
+}

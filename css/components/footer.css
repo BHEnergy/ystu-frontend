@@ -165,15 +165,52 @@
         order: 1;
     }
 
+    .footer__messages a img {
+        width: 28px;
+        height: 28px;
+        line-height: 0;
+    }
+
     .footer__information {
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 110px 1fr;
+        gap: 40px 24px;
+    }
+
+    .footer__consultation {
+        display: contents;
+    }
+
+    .footer__phones {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .footer__body {
+        padding: 24px 0 40px;
     }
 
     .footer__modals {
-        flex-direction: column;
+        display: grid;
+        gap: 16px;
+        grid-column: span 2;
     }
 
     .footer__bottom {
         font-size: 14px;
+        padding: 16px 0;
+    }
+
+    .footer__call a {
+        font-size: 18px;
+    }
+
+    .footer__call p {
+        margin-top: 4px;
+        font-size: 14px;
+    }
+
+    .footer__modal p {
+        font-size: 15px;
     }
 }

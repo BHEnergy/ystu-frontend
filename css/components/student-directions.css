@@ -36,4 +36,47 @@
     flex-direction: column;
     gap: 40px;
     align-items: baseline;
+    font-size: 18px;
+}
+
+.student-direction__gallery img {
+    border-radius: 16px;
+}
+
+.student-direction__title {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--subprimary-color-1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.student-direction__title.projects-svg::before {
+    content: url(/images/svg/projects.svg);
+    line-height: 0;
+}
+
+.student-direction__title.art-svg::before {
+    content: url(/images/svg/art.svg);
+    line-height: 0;
+}
+
+.student-direction__title.sport-svg::before {
+    content: url(/images/svg/sport.svg);
+    line-height: 0;
+}
+
+.student-direction__title.volonter-svg::before {
+    content: url(/images/svg/volonter.svg);
+    line-height: 0;
+}
+
+.student-direction__title.science-svg::before {
+    content: url(/images/svg/science.svg);
+    line-height: 0;
+}
+
+.student-direction__description {
+    font-size: 18px;
 }

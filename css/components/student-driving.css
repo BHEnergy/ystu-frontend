@@ -1,0 +1,28 @@
+.student-driving {
+    margin-bottom: 110px;
+}
+
+.student-driving__title {
+    font-size: 44px;
+}
+
+.student-driving__body {
+    margin-top: 40px;
+    display: flex;
+    gap: 24px;
+}
+
+.student-driving__content {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 40px;
+}
+
+.student-driving__gallery {
+    flex: 0 0 60%;
+    max-width: 832px;
+    border-radius: 16px;
+    overflow: hidden;
+}
