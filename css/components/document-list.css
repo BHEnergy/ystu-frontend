@@ -1,0 +1,77 @@
+.vacancy-documents {
+    margin-top: 110px;
+}
+
+.vacancy-documents__title {
+    margin-bottom: 40px;
+    color: var(--subprimary-color-1);
+    font-size: 44px;
+    font-weight: 500;
+}
+
+.document-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+}
+
+.document-list__link {
+    display: flex;
+    min-height: 80px;
+    padding: 16px 24px;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--subprimary-color-7);
+    border-radius: 8px;
+}
+
+.document-list__name {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.document-list__file-icon,
+.document-list__download-icon {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+}
+
+@media (max-width: 768px) {
+    .vacancy-documents {
+        margin-top: 64px;
+    }
+
+    .vacancy-documents__title {
+        margin-bottom: 24px;
+        font-size: 24px;
+    }
+
+    .document-list__link {
+        min-height: 92px;
+        padding: 16px;
+    }
+
+    .document-list__name {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        font-size: 18px;
+    }
+
+    .document-list__file-icon {
+        width: 24px;
+        height: 24px;
+        flex-basis: 24px;
+    }
+
+    .document-list__download-icon {
+        width: 32px;
+        height: 32px;
+        flex-basis: 32px;
+    }
+}

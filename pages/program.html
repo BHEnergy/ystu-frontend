@@ -68,14 +68,16 @@
         </div>
       </header>
 
-      <main class="main">
+      <main class="main main--header-overlay">
         <!-- Баннер направления -->
-        <section class="program-banner">
+        <section class="hero-banner">
+        <div class = "hero-banner__image">
           <img
-            class="program-banner__image"
+            class="hero-banner__image"
             src="../images/fallback/program-banner.png"
             alt=""
           />
+        </div>
           <div class="container">
             <div class="breadcrumbs">
               <a class="breadcrumbs__item" href="index.html">Главная</a>
@@ -85,73 +87,70 @@
               <span>Конструкторско-технологическое обеспечение</span>
             </div>
 
-            <div class="program-banner__content">
-              <p class="program-banner__code">07.03.01</p>
-              <h1 class="program-banner__title">
+            <div class="hero-banner__content">
+              <p class="hero-banner__code">07.03.01</p>
+              <h1 class="hero-banner__title">
                 Конструкторско-технологическое обеспечение машиностроительных производств
               </h1>
-              <p class="program-banner__institute">
+              <p class="hero-banner__institute">
                 Институт базовой инженерной подготовки
               </p>
-              <div class="program-banner__tags">
-                <span class="program-banner__tag">Бакалавриат</span>
-                <span class="program-banner__tag">Очно</span>
-                <span class="program-banner__tag">Государственная аккредитация</span>
+              <div class="hero-banner__tags">
+                <span class="hero-banner__tag">Бакалавриат</span>
+                <span class="hero-banner__tag">Очно</span>
+                <span class="hero-banner__tag accredit">Государственная аккредитация</span>
               </div>
             </div>
           </div>
         </section>
 
         <!-- О направлении -->
-        <section class="program-about">
-          <div class="container">
+        <section class="program-about container">
             <h2 class="title program-about__title">О направлении</h2>
             <div class="program-about__body">
               <div class="program-about__description">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur. Eu augue fames felis
-                  ultrices. Scelerisque ipsum nulla tempor vitae. Eu augue fames
-                  felis ultrices. Scelerisque ipsum nulla tempor vitae.
+                <p class="program-about__description__text">
+                  Lorem ipsum dolor sit amet consectetur. Faucibus in euismod consequat nunc porta eleifend. Nibh sit pharetra nisi fermentum amet commodo feugiat blandit semper. Orci aliquet pellentesque tellus aliquam feugiat a facilisi cursus. Gravida diam non bibendum eu vel consequat sit suscipit arcu. Arcu lacus aliquet vulputate vivamus. Purus laoreet tellus ultrices odio nulla auctor pretium adipiscing arcu.
                 </p>
-                <a class="btn btn--default btn--m" href="#">
-                  Подать заявление онлайн
-                </a>
+                <div class="program-about__description__feacher">
+                  <p>Подать заявление онлайн</p>
+                  <a class = "btn btn--default btn--sm" href = "#">Подать</a>
+                </div>
               </div>
 
               <dl class="program-about__facts">
                 <div class="program-about__fact">
-                  <dt>Срок обучения</dt>
-                  <dd>5 лет</dd>
+                  <div class = "program-about__fact__title">Срок обучения</div>
+                  <div class = "program-about__fact__description">5 лет</div>
                 </div>
                 <div class="program-about__fact">
-                  <dt>Количество мест</dt>
-                  <dd>
-                    <span>25 бюджетных</span>
-                    <span>16 внебюджетных</span>
-                  </dd>
+                  <div class = "program-about__fact__title">Количество мест</div>
+                  <div class = "program-about__fact__description">
+                    <p>25 <span>платные места</span></p>
+                    <p>16 <span>бюджетные места</span></p>
+                  </div>
                 </div>
                 <div class="program-about__fact">
-                  <dt>Стоимость обучения</dt>
-                  <dd>185 278 ₽</dd>
+                  <div class = "program-about__fact__title">Стоимость обучения</div>
+                  <div class = "program-about__fact__description">185 278 ₽</div>
                 </div>
                 <div class="program-about__fact">
-                  <dt>Средний балл</dt>
-                  <dd>76,3</dd>
+                  <div class = "program-about__fact__title">Средний балл</div>
+                  <div class = "program-about__fact__description">76,3</div>
                 </div>
                 <div class="program-about__fact">
-                  <dt>Государственная аккредитация</dt>
-                  <dd>Присутствует</dd>
+                  <div class = "program-about__fact__title">Государственная аккредитация</div>
+                  <div class = "program-about__fact__description">Присутствует</div>
                 </div>
                 <div class="program-about__fact">
-                  <dt>Неограниченное бюджетное место</dt>
-                  <dd>
+                  <div class = "program-about__fact__title">Неограниченное бюджетное место</div>
+                  <div class = "program-about__fact__description">
                     Присутствует
-                    <a href="#">Подробнее</a>
-                  </dd>
+                    <a class = "program-about__link" href="#">Подробнее</a>
+                  </div>
                 </div>
               </dl>
             </div>
-          </div>
         </section>
 
         <!-- Подготовительные курсы -->
@@ -185,108 +184,130 @@
         </section>
 
         <!-- Образовательные программы -->
-        <section class="program-education">
-          <div class="container">
+        <section class="program-education container">
             <h2 class="title program-education__title">
               Образовательные программы
             </h2>
 
             <div class="program-education__list">
-              <article class="program-education__item">
-                <header class="program-education__header">
+              <article class="program-education__item dropdown--item open">
+                <header class="program-education__header dropdown--header">
                   <h3 class="program-education__name">
                     Архитектурное проектирование
                   </h3>
-                  <button type="button" aria-label="Свернуть программу">−</button>
                 </header>
 
-                <div class="program-education__content">
+                <div class="program-education__content dropdown--content">
                   <section class="program-education__section">
                     <div class="program-education__caption">
                       <h4>Основные дисциплины</h4>
-                      <a class="btn btn--white btn--m" href="#" download>
+                      <a class="btn btn--reverse btn--m" href="#" download>
                         Скачать учебный план
                       </a>
                     </div>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur. Faucibus in euismod
-                      consequat nunc porta eleifend. Nibh sit pharetra nisi
-                      fermentum amet commodo feugiat blandit semper. Orci aliquet
-                      pellentesque tellus aliquam feugiat a facilisi cursus.
+                      Lorem ipsum dolor sit amet consectetur. Faucibus in euismod consequat nunc porta eleifend. Nibh sit pharetra nisi fermentum amet commodo feugiat blandit semper. Orci aliquet pellentesque tellus aliquam feugiat a facilisi cursus. Gravida diam non bibendum eu vel consequat sit suscipit arcu. Arcu lacus aliquet vulputate vivamus. Purus laoreet tellus ultrices odio nulla auctor pretium adipiscing arcu.
                     </p>
                   </section>
 
                   <section class="program-education__section">
-                    <h4>Преимущества программы</h4>
+                    <div class="program-education__caption">
+                      <h4>Преимущества и программы</h4>
+                    </div>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur. Faucibus in euismod
-                      consequat nunc porta eleifend. Nibh sit pharetra nisi
-                      fermentum amet commodo feugiat blandit semper. Orci aliquet
-                      pellentesque tellus aliquam feugiat a facilisi cursus.
+                      Lorem ipsum dolor sit amet consectetur. Faucibus in euismod consequat nunc porta eleifend. Nibh sit pharetra nisi fermentum amet commodo feugiat blandit semper. Orci aliquet pellentesque tellus aliquam feugiat a facilisi cursus. Gravida diam non bibendum eu vel consequat sit suscipit arcu. Arcu lacus aliquet vulputate vivamus. Purus laoreet tellus ultrices odio nulla auctor pretium adipiscing arcu.
                     </p>
                   </section>
 
                   <section class="program-education__section">
-                    <h4>Кем работают выпускники</h4>
+                    <div class="program-education__caption">
+                      <h4>Кем работают выпускники</h4>
+                    </div>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur. Faucibus in euismod
-                      consequat nunc porta eleifend. Nibh sit pharetra nisi
-                      fermentum amet commodo feugiat blandit semper. Orci aliquet
-                      pellentesque tellus aliquam feugiat a facilisi cursus.
+                      Lorem ipsum dolor sit amet consectetur. Faucibus in euismod consequat nunc porta eleifend. Nibh sit pharetra nisi fermentum amet commodo feugiat blandit semper. Orci aliquet pellentesque tellus aliquam feugiat a facilisi cursus. Gravida diam non bibendum eu vel consequat sit suscipit arcu. Arcu lacus aliquet vulputate vivamus. Purus laoreet tellus ultrices odio nulla auctor pretium adipiscing arcu.
                     </p>
                   </section>
                 </div>
               </article>
 
-              <article class="program-education__item">
-                <header class="program-education__header">
+              <article class="program-education__item dropdown--item">
+                <header class="program-education__header dropdown--header">
                   <h3 class="program-education__name">
                     Дизайн городской среды
                   </h3>
-                  <button type="button" aria-label="Развернуть программу">+</button>
                 </header>
+
+                <div class="program-education__content dropdown--content">
+                  <section class="program-education__section">
+                    <div class="program-education__caption">
+                      <h4>Основные дисциплины</h4>
+                      <a class="btn btn--reverse btn--m" href="#" download>
+                        Скачать учебный план
+                      </a>
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur. Faucibus in euismod consequat nunc porta eleifend. Nibh sit pharetra nisi fermentum amet commodo feugiat blandit semper. Orci aliquet pellentesque tellus aliquam feugiat a facilisi cursus. Gravida diam non bibendum eu vel consequat sit suscipit arcu. Arcu lacus aliquet vulputate vivamus. Purus laoreet tellus ultrices odio nulla auctor pretium adipiscing arcu.
+                    </p>
+                  </section>
+
+                  <section class="program-education__section">
+                    <div class="program-education__caption">
+                      <h4>Преимущества и программы</h4>
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur. Faucibus in euismod consequat nunc porta eleifend. Nibh sit pharetra nisi fermentum amet commodo feugiat blandit semper. Orci aliquet pellentesque tellus aliquam feugiat a facilisi cursus. Gravida diam non bibendum eu vel consequat sit suscipit arcu. Arcu lacus aliquet vulputate vivamus. Purus laoreet tellus ultrices odio nulla auctor pretium adipiscing arcu.
+                    </p>
+                  </section>
+
+                  <section class="program-education__section">
+                    <div class="program-education__caption">
+                      <h4>Кем работают выпускники</h4>
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur. Faucibus in euismod consequat nunc porta eleifend. Nibh sit pharetra nisi fermentum amet commodo feugiat blandit semper. Orci aliquet pellentesque tellus aliquam feugiat a facilisi cursus. Gravida diam non bibendum eu vel consequat sit suscipit arcu. Arcu lacus aliquet vulputate vivamus. Purus laoreet tellus ultrices odio nulla auctor pretium adipiscing arcu.
+                    </p>
+                  </section>
+                </div>
               </article>
             </div>
-          </div>
         </section>
 
         <!-- Вступительные испытания -->
-        <section class="program-exams">
-          <div class="container">
+        <section class="container program-exams">
             <h2 class="title program-exams__title">
               Вступительные испытания и проходные баллы
             </h2>
 
             <ul class="program-exams__list">
               <li class="program-exams__item">
-                <p>Русский язык (ЕГЭ)</p>
-                <strong>40</strong>
+                <p class="program-exams__item__title">Русский язык (ЕГЭ)</p>
+                <p class="program-exams__item__value">40</p>
               </li>
               <li class="program-exams__item">
-                <p>Профильная математика (ЕГЭ)</p>
-                <strong>40</strong>
+                <p class="program-exams__item__title">Профильная математика (ЕГЭ)</p>
+                <p class="program-exams__item__value">40</p>
               </li>
               <li class="program-exams__item">
-                <p>Композиция в графике (ДВИ)</p>
-                <strong>40</strong>
+                <p class="program-exams__item__title">Композиция в графике (ДВИ)</p>
+                <p class="program-exams__item__value">40</p>
               </li>
               <li class="program-exams__item">
-                <p>Рисунок (ДВИ)</p>
-                <strong>40</strong>
+                <p class="program-exams__item__title">Рисунок (ДВИ)</p>
+                <p class="program-exams__item__value">40</p>
               </li>
             </ul>
 
-            <div class="program-exams__description">
+            <div class="program-exams__description wyswig">
               <p>
                 Для приема на направление 07.03.01 «Архитектура» предусмотрены
-                два дополнительных вступительных испытания творческой направленности:
+                два дополнительных вступительных<br> испытания творческой направленности:
               </p>
               <ul>
                 <li>Композиция в графике (рисунок 1)</li>
                 <li>Рисунок (рисунок 2)</li>
               </ul>
               <p>
-                Вступительные испытания проводятся в очном формате.
+                Вступительные испытания проводятся в очном формате.<br>
                 Продолжительность каждого вступительного испытания —
                 шесть астрономических часов.
               </p>
@@ -294,8 +315,10 @@
 
             <details class="program-exams__examples">
               <summary>Примеры экзаменационных работ</summary>
+              <div class ="program-exams__details">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              </div>
             </details>
-          </div>
         </section>
 
         <!-- Приёмная комиссия -->

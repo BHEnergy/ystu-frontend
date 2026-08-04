@@ -90,7 +90,9 @@
         await Promise.all([
             loadScript("bootstrap.min.js", "bootstrap"),
             loadScript("swiper-bundle.min.js", "Swiper"),
-            loadScript("tabs.js", "Tabs")
+            loadScript("tabs.js", "Tabs"),
+            loadScript("header.js", "Header"),
+            loadScript("dropdown.js", "Dropdown")
         ]);
 
         initSwiper();

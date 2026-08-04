@@ -1,5 +1,11 @@
 .header {
     width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: var(--header-top, 0px);
+    right: 0;
+    left: 0;
+    transition: top 180ms ease, box-shadow 180ms ease;
 }
 
 .header__wrapper {
@@ -11,6 +17,7 @@
 
 .navbar {
     padding: 5px 40px;
+    min-height: 52px;
     background-color: var(--white-shade-1);
     display: flex;
     align-items: center;
@@ -48,8 +55,9 @@
 }
 
 .header__menu {
+    min-height: 96px;
     border: 1px solid var(--subprimary-color-1);
-    border-radius: 16px;
+    border-radius: 12px;
     padding: 24px 40px;
     display: flex;
     flex-direction: row;
@@ -117,6 +125,7 @@
         margin-top: 0;
     }
     .header__menu {
+        min-height: 72px;
         width: calc(100% + var(--container-padding)*2);
         margin-left: -16px;
         padding: 20px 24px 24px;

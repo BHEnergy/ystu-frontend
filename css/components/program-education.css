@@ -1,0 +1,65 @@
+.program-education {
+    margin-bottom: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.program-education__title {
+    font-size: 44px;
+}
+
+.program-education__list {
+    display: flex;
+    flex-direction: column;
+    gap: inherit;
+}
+
+.program-education__header {
+    background: var(--subprimary-color-7);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.program-education__name {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--subprimary-color-1);
+    text-transform: uppercase;
+}
+
+.program-education__content {
+    padding-top: 20px;
+}
+
+.program-education__section {
+    padding: 40px 0;
+    border-bottom: 1px solid var(--subprimary-color-4);
+    display: flex;
+    gap: 26px;
+    font-size: 18px;
+}
+
+.program-education__caption {
+    flex: 0 0 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 24px;
+}
+
+.program-education__caption h4 {
+    font-size: 24px;
+    color: var(--subprimary-color-1);
+    font-weight: 500;
+}
+
+.program-education__caption .btn {
+    border-radius: 10px;
+    font-weight: 600;
+}

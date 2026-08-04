@@ -1,0 +1,165 @@
+.program-admissions {
+    margin-bottom: 110px;
+}
+
+.program-admissions__title {
+    margin-bottom: 40px;
+    color: var(--subprimary-color-1);
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.program-admissions__body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.program-admissions__map {
+    height: 464px;
+    overflow: hidden;
+    border: 2px solid var(--subprimary-color-2);
+    border-radius: 16px;
+}
+
+.program-admissions__map img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.program-admissions__contacts {
+    display: grid;
+    grid-template-columns: 356px minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+    font-size: 20px;
+}
+
+.program-admissions__contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    row-gap: 8px;
+    color: var(--black-shade-1);
+}
+
+.program-admissions__contact:first-child,
+.program-admissions__contact:nth-child(n + 4) {
+    grid-column: 1 / -1;
+}
+
+.program-admissions__contact h3 {
+    flex-basis: 100%;
+    margin-bottom: 4px;
+    color: var(--subprimary-color-2);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.program-admissions__contact address,
+.program-admissions__contact a,
+.program-admissions__contact p {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.program-admissions__contact:first-child address {
+    max-width: 501px;
+}
+
+.program-admissions__contact:nth-child(2) {
+    column-gap: 0;
+}
+
+.program-admissions__contact:nth-child(2) a + a::before {
+    content: ",\00a0";
+}
+
+.program-admissions__contact:nth-child(4),
+.program-admissions__contact:nth-child(5) {
+    max-width: 430px;
+}
+
+.program-admissions__contact:nth-child(4) p,
+.program-admissions__contact:nth-child(5) p {
+    flex-basis: 100%;
+}
+
+.program-admissions__contact:nth-child(4) p:last-child,
+.program-admissions__contact:nth-child(5) p:last-child {
+    color: var(--error-color-1);
+}
+
+@media (max-width: 1199px) {
+    .program-admissions__body {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    }
+
+    .program-admissions__contacts {
+        grid-template-columns: 1fr;
+    }
+
+    .program-admissions__contact {
+        grid-column: 1;
+    }
+}
+
+@media (max-width: 991px) {
+    .program-admissions {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    .program-admissions__body {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .program-admissions__contacts {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .program-admissions__contact:first-child,
+    .program-admissions__contact:nth-child(n + 4) {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 576px) {
+    .program-admissions {
+        margin-top: 64px;
+        margin-bottom: 64px;
+    }
+
+    .program-admissions__title {
+        margin-bottom: 24px;
+        font-size: 32px;
+    }
+
+    .program-admissions__map {
+        height: 320px;
+        border-radius: 12px;
+    }
+
+    .program-admissions__contacts {
+        grid-template-columns: 1fr;
+        font-size: 18px;
+    }
+
+    .program-admissions__contact,
+    .program-admissions__contact:first-child,
+    .program-admissions__contact:nth-child(n + 4) {
+        grid-column: 1;
+    }
+
+    .program-admissions__contact h3 {
+        font-size: 18px;
+    }
+}

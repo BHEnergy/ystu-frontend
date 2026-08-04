@@ -18,13 +18,36 @@
 @import url('/css/components/events.css');
 @import url('/css/components/structure.css');
 @import url('/css/components/news.css');
+
+/* Основные компоненты */
 @import url('/css/components/breadcrumbs.css');
 @import url('/css/components/pagination.css');
+@import url('/css/components/dropdown.css');
+@import url('/css/components/hero-banner.css');
+
+/* Страница поиска */
 @import url('/css/components/search-page.css');
+
+/* Страница программы */
+@import url('/css/components/program-about.css');
+@import url('/css/components/program-amissions.css');
+@import url('/css/components/program-exams.css');
+@import url('/css/components/program-education.css');
 
 @import url('/css/components/preparatory-courses.css');
 @import url('/css/components/flagship-projects.css');
 @import url('/css/components/university-statistics.css');
+
+/* Страница Студенческая жизнь */
+@import url('/css/components/student-directions.css');
+
+
+/* Страница вакансий */
+@import url('/css/components/vacancies.css');
+@import url('/css/components/vacancy-filters.css');
+@import url('/css/components/vacancy-card.css');
+@import url('/css/components/document-list.css');
+@import url('/css/components/mobile-filter-panel.css');
 
 /* Подключение шрифта */
 @font-face {
@@ -101,6 +124,8 @@ img {
 
     /* Контейнер */
     --container-padding: 40px;
+    --header-height: 190px;
+    --header-top: 0px;
 }
 
 .wrapper {

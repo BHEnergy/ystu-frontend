@@ -1,0 +1,76 @@
+.program-exams {
+    margin-bottom: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.program-exams__title {
+    font-size: 44px;
+}
+
+.program-exams__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(340px, 1fr));
+    gap: 24px;
+}
+
+.program-exams__item {
+    background: var(--subprimary-color-7);
+    border-radius: 12px;
+    padding: 24px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.program-exams__item__title {
+    font-size: 20px;
+    color: var(--subprimary-color-2);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.program-exams__item__value {
+    font-size: 28px;
+    color: var(--subprimary-color-1);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.program-exams__examples summary {
+    font-size: 28px;
+    color: var(--subprimary-color-1);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 23px 0;
+    border-bottom: 1px solid var(--subprimary-color-2);
+}
+
+.program-exams__examples summary::marker, .program-exams__examples summary::-webkit-details-marker {
+    display: none;
+    font-size: 0;
+}
+
+.program-exams__examples summary::after {
+    content: url(/images/svg/triangle-down.svg);
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    align-content: center;
+    transition: transform 0.2s ease;
+}
+
+.program-exams__examples[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.program-exams__details {
+    padding: 20px 0;
+    font-size: 18px;
+}

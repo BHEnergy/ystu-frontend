@@ -1,0 +1,39 @@
+.student-directions {
+    margin-top: 100px;
+    margin-bottom: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.student-directions__title {
+    font-size: 44px;
+    font-weight: 500;
+}
+
+.student-directions__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.student-direction {
+    display: flex;
+    gap: 24px;
+}
+
+.student-direction.student-direction--reverse {
+    flex-direction: row-reverse;
+}
+
+.student-direction__content, .student-direction__gallery {
+    max-width: 708px;
+    flex: 0 0 50%;
+}
+
+.student-direction__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: baseline;
+}

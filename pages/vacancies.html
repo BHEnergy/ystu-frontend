@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/styles.css?v=3" rel="stylesheet" />
+    <script src="../js/main.js" type="text/javascript"></script>
+    <script src="../js/components/vacancy-filters.js" defer></script>
+    <title>Работа в ЯГТУ</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__wrapper container">
+          <div class="header__top">
+            <nav class="navbar" aria-label="Дополнительная навигация">
+              <ul class="secondary-nav">
+                <li><a href="#">Образование</a></li>
+                <li><a href="#">Наука</a></li>
+                <li><a href="student-life.html">Студенческая жизнь</a></li>
+                <li><a href="#">Заочное обучение</a></li>
+                <li><a href="news-events.html">Новости</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="vacancies.html" aria-current="page">Работа в ЯГТУ</a></li>
+              </ul>
+              <a href="tel:+74852402199" class="navbar__phone">+7 (4852) 40-21-99</a>
+              <div class="navbar__panel">
+                <a href="search.html"><img src="../images/svg/search.svg" alt="Поиск" /></a>
+                <a href="#"><img src="../images/svg/portrait.svg" alt="Личный кабинет" /></a>
+                <a href="#"><img src="../images/svg/translation.svg" alt="Выбрать язык" /></a>
+                <a href="#"><img src="../images/svg/eyeglases.svg" alt="Версия для слабовидящих" /></a>
+              </div>
+            </nav>
+          </div>
+          <div class="header__menu">
+            <a href="index.html"><img src="../images/svg/logo.svg" alt="ЯГТУ" /></a>
+            <ul class="main-nav">
+              <li><a href="#">Университет</a></li>
+              <li><a href="#">Школьникам</a></li>
+              <li><a href="#">Поступающим</a></li>
+              <li><a href="#">Партнерам</a></li>
+              <li><a href="#">Обучающимся</a></li>
+              <li><a href="#">Сотрудникам</a></li>
+            </ul>
+            <button class="btn btn--default btn--s btn__menu" type="button" data-trigger="open-menu">
+              <span class="btn__burger" aria-hidden="true">
+                <span class="btn__burger__line"></span><span class="btn__burger__line"></span>
+                <span class="btn__burger__line"></span><span class="btn__burger__line"></span>
+              </span>
+              Меню
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="main vacancies">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a class="breadcrumbs__item" href="index.html">Главная</a>
+            <div class="breadcrumbs__separator"></div>
+            <a class="breadcrumbs__item" href="#">Университет</a>
+            <div class="breadcrumbs__separator"></div>
+            <span>Работа в ЯГТУ</span>
+          </nav>
+
+          <section class="vacancies__intro">
+            <h1 class="vacancies__title">Работа в ЯГТУ</h1>
+            <p class="vacancies__description">Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem. In malesuada vitae urna mattis tortor aenean porttitor aenean. Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem. In malesuada vitae urna mattis tortor aenean porttitor aenean.</p>
+          </section>
+
+          <div class="vacancies__body">
+            <aside class="vacancies__sidebar">
+              <form class="vacancy-filters">
+                <h2 class="vacancy-filters__title">Фильтры</h2>
+                <div class="vacancy-search">
+                  <input class="vacancy-search__input" type="search" placeholder="найти направление" aria-label="Найти направление" />
+                  <button class="vacancy-search__button" type="submit" aria-label="Найти"><img src="../images/svg/vacancy-search.svg" alt="" /></button>
+                </div>
+                <fieldset class="vacancy-filter-group">
+                  <legend class="vacancy-filter-group__title">категория</legend>
+                  <div class="vacancy-filter-group__options">
+                    <label class="vacancy-filter-option"><input type="checkbox" />Научно-педагогические работники</label>
+                    <label class="vacancy-filter-option"><input type="checkbox" checked />Административный персонал</label>
+                  </div>
+                </fieldset>
+                <fieldset class="vacancy-filter-group">
+                  <legend class="vacancy-filter-group__title">опыт работы</legend>
+                  <div class="vacancy-filter-group__options">
+                    <label class="vacancy-filter-option"><input type="radio" name="experience-desktop" />без опыта</label>
+                    <label class="vacancy-filter-option"><input type="radio" name="experience-desktop" checked />от 1 годы</label>
+                    <label class="vacancy-filter-option"><input type="radio" name="experience-desktop" />от 3 до 6 лет</label>
+                    <label class="vacancy-filter-option"><input type="radio" name="experience-desktop" />более 6 лет</label>
+                  </div>
+                </fieldset>
+                <fieldset class="vacancy-filter-group">
+                  <legend class="vacancy-filter-group__title">тип занятости</legend>
+                  <div class="vacancy-filter-group__options">
+                    <label class="vacancy-filter-option"><input type="checkbox" checked />полная</label>
+                    <label class="vacancy-filter-option"><input type="checkbox" />частичная</label>
+                    <label class="vacancy-filter-option"><input type="checkbox" />стажировка</label>
+                  </div>
+                </fieldset>
+                <fieldset class="vacancy-filter-group">
+                  <legend class="vacancy-filter-group__title">формат работы</legend>
+                  <div class="vacancy-filter-group__options">
+                    <label class="vacancy-filter-option"><input type="checkbox" />Офис</label>
+                    <label class="vacancy-filter-option"><input type="checkbox" />Гибрид</label>
+                    <label class="vacancy-filter-option"><input type="checkbox" />Удаленно</label>
+                  </div>
+                </fieldset>
+                <div class="vacancy-filters__actions">
+                  <button class="btn btn--default btn--m vacancy-filters__apply" type="submit">Применить</button>
+                  <button class="vacancy-filters__reset" type="reset">Очистить</button>
+                </div>
+              </form>
+            </aside>
+
+            <section aria-label="Список вакансий">
+              <div class="vacancies__mobile-tools">
+                <div class="vacancy-search">
+                  <input class="vacancy-search__input" type="search" placeholder="найти направление" aria-label="Найти направление" />
+                  <button class="vacancy-search__button" type="button" aria-label="Найти"><img src="../images/svg/vacancy-search.svg" alt="" /></button>
+                </div>
+                <button class="vacancy-filters-trigger" type="button" data-open-vacancy-filters aria-controls="vacancy-filter-panel" aria-expanded="false">Фильтры<img src="../images/svg/filters.svg" alt="" /></button>
+              </div>
+              <div class="vacancies__results">
+                <article class="vacancy-card">
+                  <img class="vacancy-card__pattern" src="../images/svg/vacancy-pattern.svg" alt="" />
+                  <div class="vacancy-card__content"><div class="vacancy-card__heading"><h2 class="vacancy-card__title">Документовед</h2><p class="vacancy-card__category">Административный персонал</p></div><p class="vacancy-card__description">Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem.</p><a class="btn btn--default btn--m vacancy-card__button" href="#">Подробнее</a></div>
+                </article>
+                <article class="vacancy-card">
+                  <img class="vacancy-card__pattern" src="../images/svg/vacancy-pattern.svg" alt="" />
+                  <div class="vacancy-card__content"><div class="vacancy-card__heading"><h2 class="vacancy-card__title">Инженер-конструктор</h2><p class="vacancy-card__category">Административный персонал</p></div><p class="vacancy-card__description">Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem.</p><a class="btn btn--default btn--m vacancy-card__button" href="#">Подробнее</a></div>
+                </article>
+                <article class="vacancy-card">
+                  <img class="vacancy-card__pattern" src="../images/svg/vacancy-pattern.svg" alt="" />
+                  <div class="vacancy-card__content"><div class="vacancy-card__heading"><h2 class="vacancy-card__title">Инженер-техник</h2><p class="vacancy-card__category">Административный персонал</p></div><p class="vacancy-card__description">Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem.</p><a class="btn btn--default btn--m vacancy-card__button" href="#">Подробнее</a></div>
+                </article>
+              </div>
+            </section>
+          </div>
+
+          <section class="vacancy-documents">
+            <h2 class="vacancy-documents__title">Основные документы</h2>
+            <ul class="document-list">
+              <li><a class="document-list__link" href="#"><span class="document-list__name"><img class="document-list__file-icon" src="../images/svg/document.svg" alt="" />Документ 1</span><img class="document-list__download-icon" src="../images/svg/download.svg" alt="Скачать" /></a></li>
+              <li><a class="document-list__link" href="#"><span class="document-list__name"><img class="document-list__file-icon" src="../images/svg/document.svg" alt="" />Документ 2</span><img class="document-list__download-icon" src="../images/svg/download.svg" alt="Скачать" /></a></li>
+              <li><a class="document-list__link" href="#"><span class="document-list__name"><img class="document-list__file-icon" src="../images/svg/document.svg" alt="" />Документ 3</span><img class="document-list__download-icon" src="../images/svg/download.svg" alt="Скачать" /></a></li>
+            </ul>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container"><div class="footer__wrapper">
+          <div class="footer__links"><a href="#">Сведения об образовательной организации</a><a href="#">Противодействие коррупции</a><a href="#">Противодействие терроризму и экстремизму</a><a href="#">Политика конфиденциальности</a></div>
+          <div class="footer__body"><div class="footer__header"><div class="footer__contacts"><a href="tel:+74852402199" class="footer__phone">+7 (4852) 40-21-99</a><a href="mailto:info@ystu.ru" class="footer__mail">info@ystu.ru</a><a href="#" class="footer__location">г. Ярославль, Московский проспект, 88</a></div><div class="footer__messages"><a href="#"><img src="../images/svg/tg.svg" alt="Telegram" /></a><a href="#"><img src="../images/svg/vk.svg" alt="ВКонтакте" /></a><a href="#"><img src="../images/svg/ok.svg" alt="Одноклассники" /></a></div><a href="#">Обработка персональных данных</a></div>
+          <div class="footer__information"><div class="footer__emblem"><img src="../images/fallback/emblem.png" alt="Герб Российской Федерации" /></div><div class="footer__consultation"><div class="footer__phones"><div class="footer__call"><a href="tel:88002507677">8-800-250-76-77</a><p>По вопросам поступления (бакалавриат и магистратура)</p></div><div class="footer__call"><a href="tel:88002507677">8-800-250-76-77</a><p>По вопросам дополнительного образования</p></div></div><div class="footer__modals"><div class="footer__modal"><p>Подать обращение<br />гражданина</p><a href="#">Подать обращение</a></div><div class="footer__modal"><p>Оставить мнение<br />об организации</p><a href="#">Оставить отзыв</a></div></div></div></div></div>
+          <div class="footer__bottom"><p>© ФГБОУ ВО «ЯГТУ», 2026</p></div>
+        </div></div>
+      </footer>
+    </div>
+
+    <div class="mobile-filter-panel" id="vacancy-filter-panel" data-vacancy-filter-panel role="dialog" aria-modal="true" aria-hidden="true">
+      <aside class="mobile-filter-panel__drawer" aria-label="Фильтры вакансий">
+        <header class="mobile-filter-panel__header"><h2 class="mobile-filter-panel__title">Фильтры</h2><button class="mobile-filter-panel__close" type="button" data-close-vacancy-filters aria-label="Закрыть фильтры"><img src="../images/svg/close-white.svg" alt="" /></button></header>
+        <form class="mobile-filter-panel__form">
+          <details open><summary>категория</summary><div class="vacancy-filter-group__options"><label class="vacancy-filter-option"><input type="checkbox" />Научно-педагогические работники</label><label class="vacancy-filter-option"><input type="checkbox" checked />Административный персонал</label></div></details>
+          <details open><summary>опыт работы</summary><div class="vacancy-filter-group__options"><label class="vacancy-filter-option"><input type="radio" name="experience-mobile" />без опыта</label><label class="vacancy-filter-option"><input type="radio" name="experience-mobile" checked />от 1 годы</label><label class="vacancy-filter-option"><input type="radio" name="experience-mobile" />от 3 до 6 лет</label><label class="vacancy-filter-option"><input type="radio" name="experience-mobile" />более 6 лет</label></div></details>
+          <details open><summary>тип занятости</summary><div class="vacancy-filter-group__options"><label class="vacancy-filter-option"><input type="checkbox" checked />полная</label><label class="vacancy-filter-option"><input type="checkbox" />стажировка</label><label class="vacancy-filter-option"><input type="checkbox" />частичная</label></div></details>
+          <details><summary>формат работы</summary><div class="vacancy-filter-group__options"><label class="vacancy-filter-option"><input type="checkbox" />Офис</label><label class="vacancy-filter-option"><input type="checkbox" />Гибрид</label><label class="vacancy-filter-option"><input type="checkbox" />Удаленно</label></div></details>
+          <div class="vacancy-filters__actions"><button class="btn btn--default btn--m vacancy-filters__apply" type="submit">Применить</button><button class="vacancy-filters__reset" type="reset">Сбросить</button></div>
+        </form>
+      </aside>
+    </div>
+  </body>
+</html>

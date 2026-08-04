@@ -1,0 +1,149 @@
+.hero-banner {
+    position: relative;
+    min-height: 800px;
+    overflow: hidden;
+    display: flex;
+}
+
+.hero-banner__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+}
+
+.hero-banner > .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    min-height: 610px;
+    flex-direction: column;
+    align-self: flex-end;
+}
+
+.hero-banner .breadcrumbs {
+    flex: 0 0 auto;
+    color: var(--white-shade-4);
+}
+
+.hero-banner__content {
+    display: flex;
+    width: min(952px, 100%);
+    margin-top: auto;
+    padding: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    color: var(--white-shade-1);
+    background: rgb(9 65 136 / 20%);
+    border-radius: 40px 40px 0 0;
+    backdrop-filter: blur(20px) saturate(1.5);
+}
+
+.hero-banner__code {
+    color: var(--subprimary-color-5);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.hero-banner__title {
+    max-width: 840px;
+    margin-top: 4px;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.hero-banner__title.h1 {
+    font-size: 60px;
+}
+
+.hero-banner__institute {
+    max-width: 560px;
+    margin-top: 4px;
+    color: var(--subprimary-color-5);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.hero-banner__tags {
+    display: flex;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+}
+
+.hero-banner__tag {
+    display: inline-flex;
+    min-height: 32px;
+    padding: 6px 20px;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid currentColor;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.hero-banner__tag.accredit::before {
+    content: url(/images/svg/check-mark.svg);
+    line-height: 0;
+    margin-right: 8px;
+}
+
+@media (max-width: 992px) {
+    .hero-banner,
+    .hero-banner > .container {
+        min-height: 560px;
+    }
+
+    .hero-banner__content {
+        width: min(760px, 100%);
+    }
+
+    .hero-banner__title {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-banner,
+    .hero-banner > .container {
+        min-height: 520px;
+    }
+
+    .hero-banner__content {
+        padding: 24px 20px;
+        border-radius: 24px 24px 0 0;
+    }
+
+    .hero-banner__code {
+        font-size: 18px;
+    }
+
+    .hero-banner__title {
+        font-size: 30px;
+    }
+
+    .hero-banner__institute {
+        font-size: 18px;
+    }
+
+    .hero-banner__tags {
+        margin-top: 24px;
+        gap: 8px;
+    }
+
+    .hero-banner__tag {
+        padding: 5px 14px;
+        font-size: 14px;
+        white-space: normal;
+    }
+}
