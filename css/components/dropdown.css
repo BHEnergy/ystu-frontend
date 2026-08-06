@@ -1,3 +1,14 @@
+.dropdown--header {
+    background: var(--subprimary-color-7);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
 .dropdown--header::after {
     content: url(/images/svg/triangle-down.svg);
     width: 48px;

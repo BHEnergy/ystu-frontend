@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/styles.css?v=3" rel="stylesheet" />
+    <script src="../js/main.js" type="text/javascript"></script>
+    <title>Образовательные программы 2026</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__wrapper container">
+          <div class="header__top">
+            <nav class="navbar" aria-label="Дополнительная навигация">
+              <ul class="secondary-nav">
+                <li><a href="#" aria-current="page">Образование</a></li>
+                <li><a href="#">Наука</a></li>
+                <li><a href="student-life.html">Студенческая жизнь</a></li>
+                <li><a href="#">Заочное обучение</a></li>
+                <li><a href="news-events.html">Новости</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="vacancies.html">Работа в ЯГТУ</a></li>
+              </ul>
+              <a href="tel:+74852402199" class="navbar__phone"
+                >+7 (4852) 40-21-99</a
+              >
+              <div class="navbar__panel">
+                <a href="search.html"
+                  ><img src="../images/svg/search.svg" alt="Поиск" /></a
+                ><a href="#"
+                  ><img
+                    src="../images/svg/portrait.svg"
+                    alt="Личный кабинет" /></a
+                ><a href="#"
+                  ><img
+                    src="../images/svg/translation.svg"
+                    alt="Выбрать язык" /></a
+                ><a href="#"
+                  ><img
+                    src="../images/svg/eyeglases.svg"
+                    alt="Версия для слабовидящих"
+                /></a>
+              </div>
+            </nav>
+          </div>
+          <div class="header__menu">
+            <a href="index.html"
+              ><img src="../images/svg/logo.svg" alt="ЯГТУ"
+            /></a>
+            <ul class="main-nav">
+              <li><a href="#">Университет</a></li>
+              <li><a href="#">Школьникам</a></li>
+              <li><a href="#">Поступающим</a></li>
+              <li><a href="#">Партнерам</a></li>
+              <li><a href="#">Обучающимся</a></li>
+              <li><a href="#">Сотрудникам</a></li>
+            </ul>
+            <button
+              class="btn btn--default btn--s btn__menu"
+              type="button"
+              data-trigger="open-menu"
+            >
+              <span class="btn__burger" aria-hidden="true"
+                ><span class="btn__burger__line"></span
+                ><span class="btn__burger__line"></span
+                ><span class="btn__burger__line"></span
+                ><span class="btn__burger__line"></span></span
+              >Меню
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="main listing-page listing-page--programs">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a class="breadcrumbs__item" href="index.html">Главная</a>
+            <div class="breadcrumbs__separator"></div>
+            <a class="breadcrumbs__item" href="#">Образование</a>
+            <div class="breadcrumbs__separator"></div>
+            <span>Образовательные программы</span>
+          </nav>
+          <section class="listing-page__intro">
+            <h1 class="listing-page__title">Образовательные программы 2026</h1>
+          </section>
+
+          <div class="listing-page__body">
+            <aside class="listing-page__sidebar">
+              <h2 class="catalog-filters__title">Фильтры</h2>
+              <form class="catalog-filters" action="" method="get">
+                <div class="catalog-search">
+                  <input
+                    class="catalog-search__input"
+                    name="query"
+                    type="search"
+                    aria-label="Найти направление"
+                  /><button
+                    class="catalog-search__button"
+                    type="submit"
+                    aria-label="Найти"
+                  >
+                    <img src="../images/svg/vacancy-search.svg" alt="" />
+                  </button>
+                </div>
+                <div class="catalog-filter-group">
+                  <div class="catalog-filter-group__title">
+                    уровень образования
+                  </div>
+                  <div class="catalog-filter-group__options">
+                    <label class="catalog-filter-option"
+                      ><input
+                        type="checkbox"
+                        name="education_level[]"
+                        value="bachelor"
+                      />Бакалавриат</label
+                    ><label class="catalog-filter-option"
+                      ><input
+                        type="checkbox"
+                        name="education_level[]"
+                        value="specialist"
+                      />Специалитет</label
+                    ><label class="catalog-filter-option"
+                      ><input
+                        type="checkbox"
+                        name="education_level[]"
+                        value="master"
+                        checked
+                      />Магистратура</label
+                    >
+                  </div>
+                </div>
+                <div class="catalog-filter-group">
+                  <div class="catalog-filter-group__title">
+                    форма обучения
+                  </div>
+                  <div class="catalog-filter-group__options">
+                    <label class="catalog-filter-option"
+                      ><input
+                        type="checkbox"
+                        name="study_form[]"
+                        value="full_time"
+                        checked
+                      />Очная</label
+                    ><label class="catalog-filter-option"
+                      ><input
+                        type="checkbox"
+                        name="study_form[]"
+                        value="extramural"
+                      />Заочная</label
+                    ><label class="catalog-filter-option"
+                      ><input
+                        type="checkbox"
+                        name="study_form[]"
+                        value="part_time"
+                      />Очно-заочная</label
+                    >
+                  </div>
+                </div>
+                <div class="catalog-filter-group">
+                  <div class="catalog-filter-group__title">
+                    основа обучения
+                  </div>
+                  <div class="catalog-filter-group__options">
+                    <label class="catalog-filter-option"
+                      ><input
+                        type="checkbox"
+                        name="financing[]"
+                        value="budget"
+                      />Бюджет</label
+                    ><label class="catalog-filter-option"
+                      ><input
+                        type="checkbox"
+                        name="financing[]"
+                        value="target"
+                      />Целевое</label
+                    ><label class="catalog-filter-option"
+                      ><input
+                        type="checkbox"
+                        name="financing[]"
+                        value="paid"
+                      />Платное</label
+                    >
+                  </div>
+                </div>
+                <div class="catalog-filter-group">
+                  <div class="catalog-filter-group__title">
+                    вступительные испытания
+                  </div>
+                  <div class="catalog-filter-group__options">
+                    <label class="catalog-filter-option"
+                      ><input
+                        type="checkbox"
+                        name="entrance_exam[]"
+                        value="russian"
+                        checked
+                      />Русский язык</label
+                    ><label class="catalog-filter-option"
+                      ><input
+                        type="checkbox"
+                        name="entrance_exam[]"
+                        value="mathematics"
+                        checked
+                      />Математика</label
+                    ><label class="catalog-filter-option"
+                      ><input
+                        type="checkbox"
+                        name="entrance_exam[]"
+                        value="physics"
+                      />Физика</label
+                    ><label class="catalog-filter-option"
+                      ><input
+                        type="checkbox"
+                        name="entrance_exam[]"
+                        value="social_studies"
+                      />Обществознание</label
+                    ><label class="catalog-filter-option"
+                      ><input
+                        type="checkbox"
+                        name="entrance_exam[]"
+                        value="history"
+                        checked
+                      />История</label
+                    ><label class="catalog-filter-option"
+                      ><input
+                        type="checkbox"
+                        name="entrance_exam[]"
+                        value="informatics"
+                      />Информатика</label
+                    ><label class="catalog-filter-option"
+                      ><input
+                        type="checkbox"
+                        name="entrance_exam[]"
+                        value="foreign_language"
+                      />Иностранный язык</label
+                    ><label class="catalog-filter-option"
+                      ><input
+                        type="checkbox"
+                        name="entrance_exam[]"
+                        value="chemistry"
+                      />Химия</label
+                    ><label class="catalog-filter-option"
+                      ><input
+                        type="checkbox"
+                        name="entrance_exam[]"
+                        value="geography"
+                      />География</label
+                    ><label class="catalog-filter-option"
+                      ><input
+                        type="checkbox"
+                        name="entrance_exam[]"
+                        value="creative"
+                      />Творческое испытание</label
+                    >
+                  </div>
+                </div>
+                <div class="catalog-filters__actions">
+                  <button
+                    class="btn btn--default btn--m catalog-filters__apply"
+                    type="submit"
+                  >
+                    Применить</button
+                  ><button class="btn catalog-filters__reset" type="reset">
+                    Очистить
+                  </button>
+                </div>
+              </form>
+            </aside>
+
+            <section aria-label="Список образовательных программ">
+              <div class="listing-page__mobile-tools">
+                <div class="catalog-search">
+                  <input
+                    class="catalog-search__input"
+                    name="query"
+                    type="search"
+                    placeholder="найти направление"
+                    aria-label="Найти направление"
+                  /><button
+                    class="catalog-search__button"
+                    type="button"
+                    aria-label="Найти"
+                  >
+                    <img src="../images/svg/vacancy-search.svg" alt="" />
+                  </button>
+                </div>
+                <button
+                  class="catalog-filters-trigger"
+                  type="button"
+                  data-open-filter-panel="program-filter-panel"
+                  aria-controls="program-filter-panel"
+                  aria-expanded="false"
+                >
+                  Фильтры<img src="../images/svg/filters.svg" alt="" />
+                </button>
+              </div>
+              <div class="listing-page__results">
+                <article class="program-card">
+                  <div class="program-card__content">
+                    <div class="program-card__tags">
+                      <span class="program-card__tag program-card__tag--accent"
+                        >Бакалавриат</span
+                      ><span
+                        class="program-card__tag program-card__tag--outline"
+                        >Очная форма</span
+                      ><span
+                        class="program-card__tag program-card__tag--outline program-card__tag--accreditation"
+                        >Государственная аккредитация</span
+                      >
+                    </div>
+                    <div class="program-card__heading">
+                      <p class="program-card__code">07.03.01</p>
+                      <h2 class="program-card__title">Архитектура</h2>
+                    </div>
+                    <div class="program-card__profiles">
+                      <p class="program-card__profiles-title">Профили</p>
+                      <ul class="program-card__profiles-list">
+                        <li>Профиль 1</li>
+                        <li>Профиль 2</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <dl class="program-card__stats">
+                    <div class="program-card__stat">
+                      <dt>Бюджетных мест</dt>
+                      <dd>16</dd>
+                    </div>
+                    <div class="program-card__stat">
+                      <dt>Целевых мест</dt>
+                      <dd>16</dd>
+                    </div>
+                    <div class="program-card__stat">
+                      <dt>Платных мест</dt>
+                      <dd>50</dd>
+                    </div>
+                    <div class="program-card__stat">
+                      <dt>Срок обучения</dt>
+                      <dd>5 лет</dd>
+                    </div>
+                  </dl>
+                </article>
+                <article class="program-card">
+                  <div class="program-card__content">
+                    <div class="program-card__tags">
+                      <span class="program-card__tag program-card__tag--accent"
+                        >Бакалавриат</span
+                      ><span
+                        class="program-card__tag program-card__tag--outline"
+                        >Очная форма</span
+                      ><span
+                        class="program-card__tag program-card__tag--outline program-card__tag--accreditation"
+                        >Государственная аккредитация</span
+                      >
+                    </div>
+                    <div class="program-card__heading">
+                      <p class="program-card__code">07.03.01</p>
+                      <h2 class="program-card__title">Дизайн</h2>
+                    </div>
+                    <div class="program-card__profiles">
+                      <p class="program-card__profiles-title">Профили</p>
+                      <ul class="program-card__profiles-list">
+                        <li>Профиль 1</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <dl class="program-card__stats">
+                    <div class="program-card__stat">
+                      <dt>Бюджетных мест</dt>
+                      <dd>16</dd>
+                    </div>
+                    <div class="program-card__stat">
+                      <dt>Целевых мест</dt>
+                      <dd>16</dd>
+                    </div>
+                    <div class="program-card__stat">
+                      <dt>Платных мест</dt>
+                      <dd>50</dd>
+                    </div>
+                    <div class="program-card__stat">
+                      <dt>Срок обучения</dt>
+                      <dd>5 лет</dd>
+                    </div>
+                  </dl>
+                </article>
+                <article class="program-card">
+                  <div class="program-card__content">
+                    <div class="program-card__tags">
+                      <span class="program-card__tag program-card__tag--accent"
+                        >Магистратура</span
+                      ><span
+                        class="program-card__tag program-card__tag--outline"
+                        >Очная форма</span
+                      ><span
+                        class="program-card__tag program-card__tag--outline program-card__tag--accreditation"
+                        >Государственная аккредитация</span
+                      >
+                    </div>
+                    <div class="program-card__heading">
+                      <p class="program-card__code">15.04.02</p>
+                      <h2 class="program-card__title">
+                        Технологические машины и оборудование
+                      </h2>
+                    </div>
+                    <div class="program-card__profiles">
+                      <p class="program-card__profiles-title">Профили</p>
+                      <ul class="program-card__profiles-list">
+                        <li>Профиль 1</li>
+                        <li>Профиль 2</li>
+                        <li>Профиль 3</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <dl class="program-card__stats">
+                    <div class="program-card__stat">
+                      <dt>Бюджетных мест</dt>
+                      <dd>16</dd>
+                    </div>
+                    <div class="program-card__stat">
+                      <dt>Целевых мест</dt>
+                      <dd>16</dd>
+                    </div>
+                    <div class="program-card__stat">
+                      <dt>Платных мест</dt>
+                      <dd>50</dd>
+                    </div>
+                    <div class="program-card__stat">
+                      <dt>Срок обучения</dt>
+                      <dd>2 года</dd>
+                    </div>
+                  </dl>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__wrapper">
+            <div class="footer__links">
+              <a href="#">Сведения об образовательной организации</a
+              ><a href="#">Противодействие коррупции</a
+              ><a href="#">Противодействие терроризму и экстремизму</a
+              ><a href="#">Политика конфиденциальности</a>
+            </div>
+            <div class="footer__body">
+              <div class="footer__header">
+                <div class="footer__contacts">
+                  <a href="tel:+74852402199" class="footer__phone"
+                    >+7 (4852) 40-21-99</a
+                  ><a href="mailto:info@ystu.ru" class="footer__mail"
+                    >info@ystu.ru</a
+                  ><a href="#" class="footer__location"
+                    >г. Ярославль, Московский проспект, 88</a
+                  >
+                </div>
+                <div class="footer__messages">
+                  <a href="#"
+                    ><img src="../images/svg/tg.svg" alt="Telegram" /></a
+                  ><a href="#"
+                    ><img src="../images/svg/vk.svg" alt="ВКонтакте" /></a
+                  ><a href="#"
+                    ><img src="../images/svg/ok.svg" alt="Одноклассники"
+                  /></a>
+                </div>
+                <a href="#">Обработка персональных данных</a>
+              </div>
+              <div class="footer__information">
+                <div class="footer__emblem">
+                  <img
+                    src="../images/fallback/emblem.png"
+                    alt="Герб Российской Федерации"
+                  />
+                </div>
+                <div class="footer__consultation">
+                  <div class="footer__phones">
+                    <div class="footer__call">
+                      <a href="tel:88002507677">8-800-250-76-77</a>
+                      <p>
+                        По вопросам поступления (бакалавриат и магистратура)
+                      </p>
+                    </div>
+                    <div class="footer__call">
+                      <a href="tel:88002507677">8-800-250-76-77</a>
+                      <p>По вопросам дополнительного образования</p>
+                    </div>
+                  </div>
+                  <div class="footer__modals">
+                    <div class="footer__modal">
+                      <p>Подать обращение<br />гражданина</p>
+                      <a href="#">Подать обращение</a>
+                    </div>
+                    <div class="footer__modal">
+                      <p>Оставить мнение<br />об организации</p>
+                      <a href="#">Оставить отзыв</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__bottom"><p>© ФГБОУ ВО «ЯГТУ», 2026</p></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div
+      class="mobile-filter-panel"
+      id="program-filter-panel"
+      data-filter-panel
+      aria-hidden="true"
+    >
+      <aside
+        class="mobile-filter-panel__drawer"
+        aria-label="Фильтры образовательных программ"
+      >
+        <header class="mobile-filter-panel__header">
+          <h2 class="mobile-filter-panel__title">Фильтры</h2>
+          <button
+            class="mobile-filter-panel__close"
+            type="button"
+            data-close-filter-panel
+            aria-label="Закрыть фильтры"
+          >
+            <img src="../images/svg/close-white.svg" alt="" />
+          </button>
+        </header>
+        <form class="mobile-filter-panel__form" action="" method="get">
+          <details open>
+            <summary>уровень образования</summary>
+            <div class="catalog-filter-group__options">
+              <label class="catalog-filter-option"
+                ><input
+                  type="checkbox"
+                  name="education_level[]"
+                  value="bachelor"
+                />Бакалавриат</label
+              ><label class="catalog-filter-option"
+                ><input
+                  type="checkbox"
+                  name="education_level[]"
+                  value="specialist"
+                />Специалитет</label
+              ><label class="catalog-filter-option"
+                ><input
+                  type="checkbox"
+                  name="education_level[]"
+                  value="master"
+                  checked
+                />Магистратура</label
+              >
+            </div>
+          </details>
+          <details open>
+            <summary>форма обучения</summary>
+            <div class="catalog-filter-group__options">
+              <label class="catalog-filter-option"
+                ><input
+                  type="checkbox"
+                  name="study_form[]"
+                  value="full_time"
+                  checked
+                />Очная</label
+              ><label class="catalog-filter-option"
+                ><input
+                  type="checkbox"
+                  name="study_form[]"
+                  value="extramural"
+                />Заочная</label
+              ><label class="catalog-filter-option"
+                ><input
+                  type="checkbox"
+                  name="study_form[]"
+                  value="part_time"
+                />Очно-заочная</label
+              >
+            </div>
+          </details>
+          <details open>
+            <summary>основа обучения</summary>
+            <div class="catalog-filter-group__options">
+              <label class="catalog-filter-option"
+                ><input
+                  type="checkbox"
+                  name="financing[]"
+                  value="budget"
+                />Бюджет</label
+              ><label class="catalog-filter-option"
+                ><input
+                  type="checkbox"
+                  name="financing[]"
+                  value="target"
+                />Целевое</label
+              ><label class="catalog-filter-option"
+                ><input
+                  type="checkbox"
+                  name="financing[]"
+                  value="paid"
+                />Платное</label
+              >
+            </div>
+          </details>
+          <details>
+            <summary>вступительные испытания</summary>
+            <div class="catalog-filter-group__options">
+              <label class="catalog-filter-option"
+                ><input
+                  type="checkbox"
+                  name="entrance_exam[]"
+                  value="russian"
+                  checked
+                />Русский язык</label
+              ><label class="catalog-filter-option"
+                ><input
+                  type="checkbox"
+                  name="entrance_exam[]"
+                  value="mathematics"
+                  checked
+                />Математика</label
+              ><label class="catalog-filter-option"
+                ><input
+                  type="checkbox"
+                  name="entrance_exam[]"
+                  value="physics"
+                />Физика</label
+              ><label class="catalog-filter-option"
+                ><input
+                  type="checkbox"
+                  name="entrance_exam[]"
+                  value="social_studies"
+                />Обществознание</label
+              ><label class="catalog-filter-option"
+                ><input
+                  type="checkbox"
+                  name="entrance_exam[]"
+                  value="history"
+                  checked
+                />История</label
+              ><label class="catalog-filter-option"
+                ><input
+                  type="checkbox"
+                  name="entrance_exam[]"
+                  value="informatics"
+                />Информатика</label
+              ><label class="catalog-filter-option"
+                ><input
+                  type="checkbox"
+                  name="entrance_exam[]"
+                  value="foreign_language"
+                />Иностранный язык</label
+              ><label class="catalog-filter-option"
+                ><input
+                  type="checkbox"
+                  name="entrance_exam[]"
+                  value="chemistry"
+                />Химия</label
+              ><label class="catalog-filter-option"
+                ><input
+                  type="checkbox"
+                  name="entrance_exam[]"
+                  value="geography"
+                />География</label
+              ><label class="catalog-filter-option"
+                ><input
+                  type="checkbox"
+                  name="entrance_exam[]"
+                  value="creative"
+                />Творческое испытание</label
+              >
+            </div>
+          </details>
+          <div class="catalog-filters__actions">
+            <button
+              class="btn btn--default btn--m catalog-filters__apply"
+              type="submit"
+            >
+              Применить</button
+            ><button class="catalog-filters__reset" type="reset">
+              Сбросить
+            </button>
+          </div>
+        </form>
+      </aside>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+.science {
+    margin-top: 60px;
+    padding-bottom: 160px;
+}
+
+.science-list {
+    gap: 40px;
+}
+
+.science-detail__title {
+    font-size: 20px;
+    color: var(--subprimary-color-1);
+    font-weight: 600;
+}
+
+.science-detail__section {
+    padding-top: 24px;
+    padding-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.science-list__content {
+    gap: 24px;
+}
+
+.science-detail__content {
+    gap: 24px;
+}
+
+.science-detail__info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px 40px;
+    flex-wrap: wrap;
+    max-height: 320px;
+    align-items: flex-start;
+}
+
+.science-detail__info dl {
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.science-detail__info dt {
+    font-size: 15px;
+    color: var(--subprimary-color-2);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.science-detail__info dd {
+    font-size: 16px;
+}
+
+.science-detail__description {
+    max-width: 835px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.science-detail__code {
+    color: var(--subprimary-color-2);
+    font-size: 16px;
+}

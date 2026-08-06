@@ -15,17 +15,6 @@
     gap: inherit;
 }
 
-.program-education__header {
-    background: var(--subprimary-color-7);
-    border-radius: 12px;
-    padding: 24px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-}
-
 .program-education__name {
     font-size: 28px;
     font-weight: 600;

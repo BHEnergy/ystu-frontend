@@ -1,71 +1,27 @@
 .mobile-filter-panel {
-    position: fixed;
-    z-index: 3000;
-    inset: 0;
+    display: grid;
+    width: 100%;
+    grid-template-rows: 0fr;
     visibility: hidden;
-    background: rgb(0 0 0 / 88%);
     opacity: 0;
-    transition: visibility 280ms ease, opacity 280ms ease;
+    transition: grid-template-rows 280ms ease, visibility 280ms ease, opacity 280ms ease;
 }
 
 .mobile-filter-panel.is-open {
+    grid-template-rows: 1fr;
     visibility: visible;
     opacity: 1;
 }
 
 .mobile-filter-panel__drawer {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: min(390px, 100%);
-    height: 100dvh;
-    overflow-y: auto;
+    min-height: 0;
+    overflow: hidden;
     background: var(--white-shade-1);
-    clip-path: inset(
-        var(--filter-origin-top, 100%)
-        var(--filter-origin-right, 0)
-        var(--filter-origin-bottom, 0)
-        var(--filter-origin-left, 0)
-        round 4px
-    );
-    transition: clip-path 280ms cubic-bezier(.2, .8, .2, 1);
-}
-
-.mobile-filter-panel.is-open .mobile-filter-panel__drawer {
-    clip-path: inset(0 round 0);
+    border-radius: 0 0 8px 8px;
 }
 
 .mobile-filter-panel__header {
-    position: sticky;
-    z-index: 2;
-    top: 0;
-    display: flex;
-    padding: 24px 16px 12px;
-    align-items: center;
-    justify-content: space-between;
-    background: var(--white-shade-1);
-}
-
-.mobile-filter-panel__title {
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
-.mobile-filter-panel__close {
-    display: grid;
-    width: 42px;
-    height: 42px;
-    padding: 12px;
-    place-items: center;
-    background: var(--primary-color-2);
-    border: 0;
-    border-radius: 50%;
-}
-
-.mobile-filter-panel__close img {
-    width: 18px;
-    height: 18px;
+    display: none;
 }
 
 .mobile-filter-panel__form {
@@ -106,12 +62,8 @@
     transform: rotate(0);
 }
 
-.mobile-filter-panel .vacancy-filter-group__options {
+.mobile-filter-panel .catalog-filter-group__options {
     margin-top: 16px;
-}
-
-body.has-open-panel {
-    overflow: hidden;
 }
 
 @media (min-width: 769px) {
@@ -122,7 +74,8 @@ body.has-open-panel {
 
 @media (prefers-reduced-motion: reduce) {
     .mobile-filter-panel,
-    .mobile-filter-panel__drawer {
+    .catalog-filters-trigger img,
+    .mobile-filter-panel summary::after {
         transition: none;
     }
 }

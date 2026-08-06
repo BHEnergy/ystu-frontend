@@ -44,12 +44,16 @@
 @import url('/css/components/student-driving.css');
 
 
-/* Страница вакансий */
-@import url('/css/components/vacancies.css');
-@import url('/css/components/vacancy-filters.css');
+/* Каталоги вакансий и образовательных программ */
+@import url('/css/components/listing-page.css');
+@import url('/css/components/catalog-filters.css');
 @import url('/css/components/vacancy-card.css');
+@import url('/css/components/program-card.css');
 @import url('/css/components/document-list.css');
 @import url('/css/components/mobile-filter-panel.css');
+
+/* Страница научной деятельности */
+@import url('/css/components/science.css');
 
 /* Подключение шрифта */
 @font-face {

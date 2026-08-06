@@ -1,23 +1,27 @@
-.vacancy-filters {
+.catalog-filters {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
+    margin-top: 24px;
 }
 
-.vacancy-filters__title {
+.catalog-filters__title {
     color: var(--subprimary-color-1);
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
 }
 
-.vacancy-search {
+.catalog-search {
     position: relative;
+    padding: 16px 16px 24px 16px;
+    border: 1px solid var(--subprimary-color-1);
+    border-radius: 8px;
 }
 
-.vacancy-search__input {
+.catalog-search__input {
     width: 100%;
-    min-height: 48px;
-    padding: 12px 48px 12px 16px;
+    max-height: 40px;
+    padding: 10px 16px;
     color: var(--subprimary-color-1);
     background: var(--white-shade-1);
     border: 1px solid var(--subprimary-color-2);
@@ -25,15 +29,19 @@
     font: inherit;
 }
 
-.vacancy-search__input::placeholder {
+.catalog-search__input:focus-visible {
+    outline: none;
+}
+
+.catalog-search__input::placeholder {
     color: var(--subprimary-color-1);
     opacity: 1;
 }
 
-.vacancy-search__button {
+.catalog-search__button {
     position: absolute;
-    top: 50%;
-    right: 12px;
+    top: 45%;
+    right: 30px;
     display: grid;
     width: 24px;
     height: 24px;
@@ -41,35 +49,36 @@
     place-items: center;
     background: none;
     border: 0;
-    transform: translateY(-50%);
+    transform: translateY(-45%);
+    cursor: pointer;
 }
 
-.vacancy-search__button img {
+.catalog-search__button img {
     width: 24px;
     height: 24px;
 }
 
-.vacancy-filter-group {
+.catalog-filter-group {
     min-width: 0;
     padding: 16px 16px 24px;
     border: 1px solid var(--subprimary-color-2);
     border-radius: 8px;
 }
 
-.vacancy-filter-group__title {
+.catalog-filter-group__title {
     margin-bottom: 12px;
     color: var(--subprimary-color-1);
     font-size: 18px;
     font-weight: 400;
 }
 
-.vacancy-filter-group__options {
+.catalog-filter-group__options {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.vacancy-filter-option {
+.catalog-filter-option {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -78,57 +87,58 @@
     cursor: pointer;
 }
 
-.vacancy-filter-option input {
-    appearance: none;
+.catalog-filter-option input {
     width: 18px;
     height: 18px;
     flex: 0 0 18px;
+    appearance: none;
     background-color: var(--white-shade-1);
     border: 1px solid var(--subprimary-color-2);
     cursor: pointer;
 }
 
-.vacancy-filter-option input[type="checkbox"] {
+.catalog-filter-option input[type="checkbox"] {
     border-radius: 2px;
 }
 
-.vacancy-filter-option input[type="checkbox"]:checked {
+.catalog-filter-option input[type="checkbox"]:checked {
     background: var(--subprimary-color-1) url('/images/svg/checkbox-check.svg') center / 100% 100% no-repeat;
     border-color: var(--subprimary-color-1);
 }
 
-.vacancy-filter-option input[type="radio"] {
+.catalog-filter-option input[type="radio"] {
     border-radius: 50%;
 }
 
-.vacancy-filter-option input[type="radio"]:checked {
+.catalog-filter-option input[type="radio"]:checked {
+    background: var(--subprimary-color-1);
     border-color: var(--subprimary-color-1);
     box-shadow: inset 0 0 0 3px var(--white-shade-1);
-    background: var(--subprimary-color-1);
 }
 
-.vacancy-filters__actions {
+.catalog-filters__actions {
     display: flex;
     margin-top: 4px;
     flex-direction: column;
     gap: 12px;
 }
 
-.vacancy-filters__apply,
-.vacancy-filters__reset {
+.catalog-filters__apply,
+.catalog-filters__reset {
     width: 100%;
     border: 0;
     cursor: pointer;
+    font-size: 18px;
 }
 
-.vacancy-filters__reset {
+.catalog-filters__reset {
     padding: 10px 16px;
     color: var(--subprimary-color-1);
     background: transparent;
     font-size: 16px;
 }
 
-.vacancy-filters-trigger {
+.catalog-filters-trigger {
     display: flex;
     width: 100%;
     min-height: 48px;
@@ -144,7 +154,12 @@
     text-transform: uppercase;
 }
 
-.vacancy-filters-trigger img {
+.catalog-filters-trigger img {
     width: 24px;
     height: 24px;
+    transition: transform 280ms ease;
+}
+
+.catalog-filters-trigger[aria-expanded="true"] img {
+    transform: rotate(180deg);
 }
