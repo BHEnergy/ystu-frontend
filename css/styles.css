@@ -56,6 +56,9 @@
 /* Страница научной деятельности */
 @import url('/css/components/science.css');
 
+/* Детальная страница сотнрудника */
+@import url('/css/components/detail-sotrudnik.css');
+
 /* Подключение шрифта */
 @font-face {
     font-family: 'GoogleSans';

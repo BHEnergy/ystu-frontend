@@ -15,6 +15,20 @@
     font-weight: 600;
 }
 
+.title.h2 {
+    font-size: 44px;
+}
+
+/* Для кастомизирования того, что будет приходить с админки, специальный класс wyswig*/
+.wyswig ul {
+    list-style-position: inside;
+}
+
+.wyswig ul li::marker {
+    content: '-';
+    letter-spacing: 5px;
+}
+
 /* Устройства X-Large (большие настольные компьютеры, 1200 пикселей и выше) */
 @media (max-width: 1200px) { }
 
