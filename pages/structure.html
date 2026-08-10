@@ -43,7 +43,7 @@
               </div>
             </nav>
           </div>
-          <div class="header__menu">
+          <div class="header__menu header__menu--collapsed">
             <a href="/">
               <img src="../images/svg/logo.svg" />
             </a>
@@ -55,7 +55,7 @@
               <li>Обучающимся</li>
               <li>Сотрудникам</li>
             </ul>
-            <button class="btn btn--default btn--s btn__menu" data-trigger="open-menu">
+            <button class="btn btn--default btn--s btn__menu" data-trigger="open-menu" aria-controls="main-mega-menu" aria-expanded="false">
               <div class = "btn__burger">
                 <div class = "btn__burger__line"></div>
                 <div class = "btn__burger__line"></div>
@@ -64,6 +64,47 @@
               </div>
               Меню
             </button>
+            <nav class="mega-menu" id="main-mega-menu" aria-label="Основное меню">
+              <ul class="mega-menu__primary">
+                <li><a class="mega-menu__primary-link is-active" href="#" data-menu-section="university" aria-current="true">Университет</a></li>
+                <li><a class="mega-menu__primary-link is-muted" href="#" data-menu-section="applicants">Поступающим</a></li>
+                <li><a class="mega-menu__primary-link is-muted" href="#" data-menu-section="students">Обучающимся</a></li>
+                <li><a class="mega-menu__primary-link is-muted" href="#" data-menu-section="school">Школьникам</a></li>
+                <li><a class="mega-menu__primary-link is-muted" href="#" data-menu-section="employees">Сотрудникам</a></li>
+                <li><a class="mega-menu__primary-link is-muted" href="#" data-menu-section="graduates">Выпускникам</a></li>
+                <li><a class="mega-menu__primary-link" href="vacancies.html" data-menu-section="vacancies">Работа в ЯГТУ</a></li>
+                <li><a class="mega-menu__primary-link" href="#" data-menu-section="education">Образование</a></li>
+                <li><a class="mega-menu__primary-link" href="#" data-menu-section="science">Наука и инновации</a></li>
+                <li><a class="mega-menu__primary-link" href="student-life.html" data-menu-section="student-life">Студенческая жизнь</a></li>
+                <li><a class="mega-menu__primary-link is-muted" href="#" data-menu-section="distance">Заочное обучение</a></li>
+                <li><a class="mega-menu__primary-link is-muted" href="#" data-menu-section="targeted">Целевое обучение</a></li>
+              </ul>
+              <section class="mega-menu__section" data-menu-panel="university" aria-labelledby="mega-menu-university-title">
+                <h2 class="mega-menu__title" id="mega-menu-university-title">Университет</h2>
+                <ul class="mega-menu__links">
+                  <li><a class="is-muted" href="#">Об университете</a></li>
+                  <li><a class="is-muted" href="#">Программа развития</a></li>
+                  <li><a href="#">Органы управления (детальная)</a></li>
+                  <li><a href="#">Структура университета</a></li>
+                  <li><a class="is-muted" href="#">Все сотрудники</a></li>
+                  <li><a class="is-muted" href="#">Научно-педагогический состав</a></li>
+                  <li><a href="#">Карта кампуса</a></li>
+                  <li><a class="is-muted" href="#">Партнеры</a></li>
+                </ul>
+              </section>
+              <ul class="mega-menu__additional">
+                <li><a href="#">Колледж</a></li>
+                <li><a href="#">ДПО</a></li>
+                <li><a href="vacancies.html">Работа в ЯГТУ</a></li>
+                <li><a href="news-events.html">Новости</a></li>
+                <li><a class="is-muted" href="#">События</a></li>
+                <li><a class="is-muted" href="#">Партнерам</a></li>
+                <li><a class="is-muted" href="#">Контакты</a></li>
+                <li><a class="is-muted" href="#">Сведения об образовательной организации</a></li>
+                <li><a class="is-muted" href="#">Реквизиты</a></li>
+                <li><a class="is-muted" href="#">Противодействие коррупции</a></li>
+              </ul>
+            </nav>
           </div>
         </div>
       </header>
@@ -286,11 +327,11 @@
                   <div class = "footer__modals">
                     <div class = "footer__modal">
                       <p>Подать обращение<br> гражданина</p>
-                      <a href = "#">Подать обращение</a>
+                      <a href = "#">Подробнее</a>
                     </div>
                     <div class = "footer__modal">
                       <p>Оставить мнение<br> об организации</p>
-                      <a href = "#">Оставить отзыв</a>
+                      <a href = "#">Подробнее</a>
                     </div>
                   </div>
                 </div>

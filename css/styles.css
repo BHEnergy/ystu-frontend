@@ -8,6 +8,7 @@
 /* Подключение стилей компонентов */
 @import url('/css/components/main.css');
 @import url('/css/components/header.css');
+@import url('/css/components/mega-menu.css');
 @import url('/css/components/body.css');
 @import url('/css/components/footer.css');
 @import url('/css/components/error-page.css');
