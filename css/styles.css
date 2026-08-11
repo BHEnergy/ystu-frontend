@@ -52,12 +52,16 @@
 @import url('/css/components/program-card.css');
 @import url('/css/components/document-list.css');
 @import url('/css/components/mobile-filter-panel.css');
+@import url('/css/components/campus-map.css');
 
 /* Страница научной деятельности */
 @import url('/css/components/science.css');
 
 /* Детальная страница сотнрудника */
 @import url('/css/components/detail-sotrudnik.css');
+
+/* Детальная страница вакансии */
+@import url('/css/components/detail-vacancy.css');
 
 /* Подключение шрифта */
 @font-face {

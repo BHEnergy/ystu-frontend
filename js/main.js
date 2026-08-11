@@ -94,7 +94,8 @@
             loadScript("tabs.js", "Tabs"),
             loadScript("header.js", "Header"),
             loadScript("dropdown.js", "Dropdown"),
-            loadScript("filter-panel.js", "FilterPanel")
+            loadScript("filter-panel.js", "FilterPanel"),
+            loadScript("campus-map.js", "CampusMap")
         ]);
 
         initSwiper();

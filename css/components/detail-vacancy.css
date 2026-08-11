@@ -1,0 +1,79 @@
+.detail-vacancy {
+    margin-top: 60px;
+    margin-bottom: 130px;
+}
+
+.detail-vacancy__body {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-vacancy__content {
+    margin-top: 60px;
+}
+
+.detail-vacancy__info {
+    font-size: 18px;
+    align-items: baseline;
+    gap: 40px;
+    max-width: 830px;
+    flex: 0 0 66%;
+}
+
+.detail-vacancy__info .btn {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.detail-vacancy__resume {
+    background-color: var(--subprimary-color-7);
+    padding: 24px;
+    border-radius: 16px;
+    max-width: 484px;
+    flex: 0 0 34%;
+    gap: 24px;
+}
+
+.resume-data {
+    gap: 8px;
+}
+
+.resume-data p:first-child {
+    color: var(--subprimary-color-2);
+    font-size: 18px;
+}
+
+.resume-data p:last-child {
+    color: var(--subprimary-color-1);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.detail-vacancy__content {
+    gap: 60px;
+    max-width: 830px;
+}
+
+.detail-vacancy__list {
+    gap: 24px;
+}
+
+.detail-vacancy__list__title {
+    font-size: 24px;
+    color: var(--subprimary-color-1);
+    font-weight: 600;
+}
+
+.detail-vacancy__list.wyswig ul {
+    font-size: 18px;
+}
+
+.detail-vacancy__list.wyswig ul li {
+    padding-left: 8px;
+}
+
+.detail-vacancy__list.wyswig ul li::marker {
+    content: '•';
+    letter-spacing: 8px;
+}

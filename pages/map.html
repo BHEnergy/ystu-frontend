@@ -1,182 +1,116 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../css/styles.css?v=3" rel="stylesheet" />
-    <script src = "../js/main.js" type="text/javascript"></script>
-    <title>Страница не найдена</title>
+    <script src="../js/main.js" type="text/javascript"></script>
+    <title>Карта кампуса — ЯГТУ</title>
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
         <div class="header__wrapper container">
           <div class="header__top">
-            <nav class="navbar">
+            <nav class="navbar" aria-label="Дополнительная навигация">
               <ul class="secondary-nav">
-                <li>
-                  <a href="#"> Образование </a>
-                </li>
-                <li>Наука</li>
-                <li>Студенческая жизнь</li>
-                <li>Заочное обучение</li>
-                <li>Новости</li>
-                <li>Контакты</li>
-                <li>Работа в ЯГТУ</li>
+                <li><a href="#">Образование</a></li>
+                <li><a href="#">Наука</a></li>
+                <li><a href="student-life.html">Студенческая жизнь</a></li>
+                <li><a href="#">Заочное обучение</a></li>
+                <li><a href="news-events.html">Новости</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="vacancies.html">Работа в ЯГТУ</a></li>
               </ul>
-              <a href="tel:+74852402199" class="navbar__phone"
-                >+7 (4852) 40-21-99</a
-              >
+              <a href="tel:+74852402199" class="navbar__phone">+7 (4852) 40-21-99</a>
               <div class="navbar__panel">
-                <a href="#">
-                  <img src="../images/svg/search.svg" />
-                </a>
-                <a href="#">
-                  <img src="../images/svg/portrait.svg" />
-                </a>
-                <a href="#">
-                  <img src="../images/svg/translation.svg" />
-                </a>
-                <a href="#">
-                  <img src="../images/svg/eyeglases.svg" />
-                </a>
+                <a href="search.html"><img src="../images/svg/search.svg" alt="Поиск" /></a>
+                <a href="#"><img src="../images/svg/portrait.svg" alt="Личный кабинет" /></a>
+                <a href="#"><img src="../images/svg/translation.svg" alt="Выбрать язык" /></a>
+                <a href="#"><img src="../images/svg/eyeglases.svg" alt="Версия для слабовидящих" /></a>
               </div>
             </nav>
           </div>
-          <div class="header__menu header__menu--collapsed">
-            <a href="/">
-              <img src="../images/svg/logo.svg" />
-            </a>
+          <div class="header__menu">
+            <a href="index.html"><img src="../images/svg/logo.svg" alt="ЯГТУ" /></a>
             <ul class="main-nav">
-              <li>Университет</li>
-              <li>Школьникам</li>
-              <li>Поступающим</li>
-              <li>Партнерам</li>
-              <li>Обучающимся</li>
-              <li>Сотрудникам</li>
+              <li><a href="#">Университет</a></li>
+              <li><a href="#">Школьникам</a></li>
+              <li><a href="#">Поступающим</a></li>
+              <li><a href="#">Партнерам</a></li>
+              <li><a href="#">Обучающимся</a></li>
+              <li><a href="#">Сотрудникам</a></li>
             </ul>
-            <button class="btn btn--default btn--s btn__menu" data-trigger="open-menu" aria-controls="main-mega-menu" aria-expanded="false">
-              <div class = "btn__burger">
-                <div class = "btn__burger__line"></div>
-                <div class = "btn__burger__line"></div>
-                <div class = "btn__burger__line"></div>
-                <div class = "btn__burger__line"></div>
-              </div>
+            <button class="btn btn--default btn--s btn__menu" type="button" data-trigger="open-menu">
+              <span class="btn__burger" aria-hidden="true"><span class="btn__burger__line"></span><span class="btn__burger__line"></span><span class="btn__burger__line"></span><span class="btn__burger__line"></span></span>
               Меню
             </button>
-            <nav class="mega-menu" id="main-mega-menu" aria-label="Основное меню">
-              <ul class="mega-menu__primary">
-                <li><a class="mega-menu__primary-link is-active" href="#" data-menu-section="university" aria-current="true">Университет</a></li>
-                <li><a class="mega-menu__primary-link is-muted" href="#" data-menu-section="applicants">Поступающим</a></li>
-                <li><a class="mega-menu__primary-link is-muted" href="#" data-menu-section="students">Обучающимся</a></li>
-                <li><a class="mega-menu__primary-link is-muted" href="#" data-menu-section="school">Школьникам</a></li>
-                <li><a class="mega-menu__primary-link is-muted" href="#" data-menu-section="employees">Сотрудникам</a></li>
-                <li><a class="mega-menu__primary-link is-muted" href="#" data-menu-section="graduates">Выпускникам</a></li>
-                <li><a class="mega-menu__primary-link" href="vacancies.html" data-menu-section="vacancies">Работа в ЯГТУ</a></li>
-                <li><a class="mega-menu__primary-link" href="#" data-menu-section="education">Образование</a></li>
-                <li><a class="mega-menu__primary-link" href="#" data-menu-section="science">Наука и инновации</a></li>
-                <li><a class="mega-menu__primary-link" href="student-life.html" data-menu-section="student-life">Студенческая жизнь</a></li>
-                <li><a class="mega-menu__primary-link is-muted" href="#" data-menu-section="distance">Заочное обучение</a></li>
-                <li><a class="mega-menu__primary-link is-muted" href="#" data-menu-section="targeted">Целевое обучение</a></li>
-              </ul>
-              <section class="mega-menu__section" data-menu-panel="university" aria-labelledby="mega-menu-university-title">
-                <h2 class="mega-menu__title" id="mega-menu-university-title">Университет</h2>
-                <ul class="mega-menu__links">
-                  <li><a class="is-muted" href="#">Об университете</a></li>
-                  <li><a class="is-muted" href="#">Программа развития</a></li>
-                  <li><a href="#">Органы управления (детальная)</a></li>
-                  <li><a href="#">Структура университета</a></li>
-                  <li><a class="is-muted" href="#">Все сотрудники</a></li>
-                  <li><a class="is-muted" href="#">Научно-педагогический состав</a></li>
-                  <li><a href="#">Карта кампуса</a></li>
-                  <li><a class="is-muted" href="#">Партнеры</a></li>
-                </ul>
-              </section>
-              <ul class="mega-menu__additional">
-                <li><a href="#">Колледж</a></li>
-                <li><a href="#">ДПО</a></li>
-                <li><a href="vacancies.html">Работа в ЯГТУ</a></li>
-                <li><a href="news-events.html">Новости</a></li>
-                <li><a class="is-muted" href="#">События</a></li>
-                <li><a class="is-muted" href="#">Партнерам</a></li>
-                <li><a class="is-muted" href="#">Контакты</a></li>
-                <li><a class="is-muted" href="#">Сведения об образовательной организации</a></li>
-                <li><a class="is-muted" href="#">Реквизиты</a></li>
-                <li><a class="is-muted" href="#">Противодействие коррупции</a></li>
-              </ul>
-            </nav>
           </div>
         </div>
       </header>
-      <main class="main">
-        <section class = "error-page">
-            <div class = "container error-page__container">
-                <h1 class = "title">Страница не найдена</h1>
-                <p class = "error-page__description">Возможно, адрес был введен с ошибкой или страница была удалена.<br> Воспользуйтесь меню или перейдите на главную, чтобы найти нужную информацию.</p>
-                <a href = "/pages/index.html" class = "btn btn--default btn--m">На главную страницу</a>
+
+      <main class="main campus-map-page">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a class="breadcrumbs__item" href="index.html">Главная</a>
+            <div class="breadcrumbs__separator"></div>
+            <a class="breadcrumbs__item" href="#">Университет</a>
+            <div class="breadcrumbs__separator"></div>
+            <span>Карта кампуса</span>
+          </nav>
+
+          <h1 class="campus-map-page__title">Карта кампуса</h1>
+
+          <div class="campus-map-page__toolbar">
+            <div class="campus-map-page__filters">
+              <details class="campus-filter campus-filter--object" data-campus-filter="category">
+                <summary><span data-campus-filter-label>выбрать объект</span><span class="campus-filter__icon" aria-hidden="true"></span></summary>
+                <div class="campus-filter__panel">
+                  <button type="button" data-filter-value="admissions"><img src="../images/svg/campus-admissions.svg" alt="" />Приемная комиссия</button>
+                  <button type="button" data-filter-value="administration"><img src="../images/svg/campus-administration.svg" alt="" />Администрация</button>
+                  <button type="button" data-filter-value="food"><img src="../images/svg/campus-food.svg" alt="" />Объекты питания</button>
+                  <button type="button" data-filter-value="education"><img src="../images/svg/campus-school.svg" alt="" />Учебные корпуса</button>
+                  <button type="button" data-filter-value="dormitory"><img src="../images/svg/campus-dormitory.svg" alt="" />Общежития</button>
+                  <button type="button" data-filter-value="sport"><img src="../images/svg/campus-sport.svg" alt="" />Спорт</button>
+                  <button type="button" data-filter-value="driving"><img src="../images/svg/campus-driving.svg" alt="" />Автодром</button>
+                  <button type="button" data-filter-value="laboratory"><img src="../images/svg/campus-lab.svg" alt="" />Лаборатории</button>
+                  <button type="button" data-filter-value="military"><img src="../images/svg/campus-military.svg" alt="" />Военный учебный центр</button>
+                  <button type="button" data-filter-value="library"><img src="../images/svg/campus-library.svg" alt="" />Библиотека</button>
+                </div>
+              </details>
+              <details class="campus-filter campus-filter--department" data-campus-filter="department">
+                <summary><span data-campus-filter-label>выбрать подразделение</span><span class="campus-filter__icon" aria-hidden="true"></span></summary>
+                <div class="campus-filter__panel campus-filter__panel--grouped">
+                  <p class="campus-filter__group-title">Институты</p>
+                  <button type="button" data-filter-value="institute-1">Институт 1</button><button type="button" data-filter-value="institute-2">Институт 2</button><button type="button" data-filter-value="institute-3">Институт 3</button><button type="button" data-filter-value="institute-4">Институт 4</button><button type="button" data-filter-value="institute-5">Институт 5</button><button type="button" data-filter-value="institute-6">Институт 6</button><button type="button" data-filter-value="institute-7">Институт 7</button><button type="button" data-filter-value="institute-8">Институт 8</button><button type="button" data-filter-value="institute-9">Институт 9</button>
+                  <p class="campus-filter__group-title">Кафедры</p>
+                  <button type="button" data-filter-value="department-1">Кафедра 1</button><button type="button" data-filter-value="department-2">Кафедра 2</button><button type="button" data-filter-value="department-3">Кафедра 3</button>
+                  <p class="campus-filter__group-title">Службы и отделы</p>
+                  <button type="button" data-filter-value="service-1">1</button><button type="button" data-filter-value="service-2">2</button><button type="button" data-filter-value="service-3">3</button>
+                </div>
+              </details>
             </div>
-        </section>
+            <form class="campus-map-page__control" data-campus-search role="search">
+              <input class="campus-map-page__search-input" type="search" name="campus-query" placeholder="поиск" aria-label="Поиск по карте кампуса" />
+              <button class="campus-map-page__search-button" type="submit" aria-label="Найти"><img src="../images/svg/search.svg" alt="" /></button>
+            </form>
+          </div>
+
+          <section class="campus-map-page__canvas" aria-label="Интерактивная карта кампуса">
+            <div id="campus-map" data-campus-map></div>
+          </section>
+        </div>
       </main>
+
       <footer class="footer">
-        <div class = "container">
-          <div class = "footer__wrapper">
-            <div class = "footer__links">
-              <a href="#">Сведения об образовательной организации</a>
-              <a href="#">Противодействие коррупции</a>
-              <a href="#">Противодействие терроризму и экстремизму</a>
-              <a href="#">Политика конфиденциальности</a>
+        <div class="container">
+          <div class="footer__wrapper">
+            <div class="footer__links"><a href="#">Сведения об образовательной организации</a><a href="#">Противодействие коррупции</a><a href="#">Противодействие терроризму и экстремизму</a><a href="#">Политика конфиденциальности</a></div>
+            <div class="footer__body">
+              <div class="footer__header"><div class="footer__contacts"><a href="tel:+74852402199" class="footer__phone">+7 (4852) 40-21-99</a><a href="mailto:info@ystu.ru" class="footer__mail">info@ystu.ru</a><a href="#" class="footer__location">г. Ярославль, Московский проспект, 88</a></div><div class="footer__messages"><a href="#"><img src="../images/svg/tg.svg" alt="Telegram" /></a><a href="#"><img src="../images/svg/vk.svg" alt="ВКонтакте" /></a><a href="#"><img src="../images/svg/ok.svg" alt="Одноклассники" /></a></div><a href="#">Обработка персональных данных</a></div>
+              <div class="footer__information"><div class="footer__emblem"><img src="../images/fallback/emblem.png" alt="Герб Российской Федерации" /></div><div class="footer__consultation"><div class="footer__phones"><div class="footer__call"><a href="tel:88002507677">8-800-250-76-77</a><p>По вопросам поступления (бакалавриат и магистратура)</p></div><div class="footer__call"><a href="tel:88002507677">8-800-250-76-77</a><p>По вопросам дополнительного образования</p></div></div><div class="footer__modals"><div class="footer__modal"><p>Подать обращение<br />гражданина</p><a href="#">Подать обращение</a></div><div class="footer__modal"><p>Оставить мнение<br />об организации</p><a href="#">Оставить отзыв</a></div></div></div></div>
             </div>
-            <div class = "footer__body">
-              <div class = "footer__header">
-                <div class = "footer__contacts">
-                  <a href = "tel:74852402199" class = "footer__phone">+7 (4852) 40-21-99</a>
-                  <a href = "mailto:74852402199" class = "footer__mail">info@ystu.ru</a>
-                  <a href = "#" class = "footer__location">г. Ярославль, Московский проспект, 88</a>
-                </div>
-                <div class = "footer__messages">
-                  <a href = "#">
-                    <img src = "/images/svg/tg.svg">
-                  </a>
-                  <a href = "#">
-                    <img src = "/images/svg/vk.svg">
-                  </a>
-                  <a href = "#">
-                    <img src = "/images/svg/ok.svg">
-                  </a>
-                </div>
-                <a href =  "#">Обработка персональных данных</a>
-              </div>
-              <div class = "footer__information">
-                <div class = "footer__emblem">
-                  <img src = "/images/fallback/emblem.png">
-                </div>
-                <div class = "footer__consultation">
-                  <div class = "footer__phones">
-                    <div class = "footer__call">
-                      <a href = "tel:88002507677">8-800-250-76-77</a>
-                      <p>По вопросам поступления (бакалавриат и магистратура)</p>
-                    </div>
-                    <div class = "footer__call">
-                      <a href = "tel:88002507677">8-800-250-76-77</a>
-                      <p>По вопросам дополнительного образования</p>
-                    </div>
-                  </div>
-                  <div class = "footer__modals">
-                    <div class = "footer__modal">
-                      <p>Подать обращение<br> гражданина</p>
-                      <a href = "#">Подробнее</a>
-                    </div>
-                    <div class = "footer__modal">
-                      <p>Оставить мнение<br> об организации</p>
-                      <a href = "#">Подробнее</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class = "footer__bottom">
-              <p>© ФГБОУ ВО «ЯГТУ», 2026</p>
-            </div>
+            <div class="footer__bottom"><p>© ФГБОУ ВО «ЯГТУ», 2026</p></div>
           </div>
         </div>
       </footer>
