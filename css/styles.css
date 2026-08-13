@@ -59,6 +59,7 @@
 
 /* Детальная страница сотнрудника */
 @import url('/css/components/detail-sotrudnik.css');
+@import url('/css/components/detail-structure.css');
 
 /* Детальная страница вакансии */
 @import url('/css/components/detail-vacancy.css');

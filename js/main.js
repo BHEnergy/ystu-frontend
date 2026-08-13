@@ -20,12 +20,15 @@
 
     const initSwiper = () => {
         /* Инициализация слайдеров */
+
+        /* Слайдер на главной */
         document.querySelectorAll(".js-init-first-slider").forEach((slider) => {
+
             if (slider.swiper || !slider.classList.contains("swiper")) {
                 return;
             }
 
-            new Swiper(slider, {
+            const swiper = new Swiper(slider, {
                 loop: false,
                 slidesPerView: 1,
                 spaceBetween: 24,
@@ -80,6 +83,87 @@
                     el: slider.querySelector(".swiper-pagination"),
                     type: 'fraction',
                     clickable: true,
+                },
+            });
+        });
+
+        /* Слайдеры студенческая жизнь */
+        document.querySelectorAll(".js-init-student-slider").forEach((slider) => {
+            const prevButton = slider.querySelector('.swiper-button-prev:not(.big)');
+            const nextButton = slider.querySelector('.swiper-button-next:not(.big)');
+            const prevButtonBig = slider.querySelector('.swiper-button-prev.big');
+            const nextButtonBig = slider.querySelector('.swiper-button-next.big');
+
+            const updateNavigationState = (swiper, prevBig, nextBig) => {
+                prevBig.classList.toggle('swiper-button-disabled', swiper.isBeginning);
+                nextBig.classList.toggle('swiper-button-disabled', swiper.isEnd);
+
+                prevBig.setAttribute('aria-disabled', String(swiper.isBeginning));
+                nextBig.setAttribute('aria-disabled', String(swiper.isEnd));
+
+                prevBig.tabIndex = swiper.isBeginning ? -1 : 0;
+                nextBig.tabIndex = swiper.isEnd ? -1 : 0;
+            };
+
+            if (slider.swiper || !slider.classList.contains("swiper")) {
+                return;
+            }
+
+            const swiper = new Swiper(slider, {
+                loop: false,
+                slidesPerView: 1,
+                spaceBetween: 24,
+                navigation: {
+                    prevEl: prevButton,
+                    nextEl: nextButton,
+                },
+                pagination: {
+                    el: slider.querySelector(".swiper-pagination"),
+                    clickable: true,
+                },
+                on: {
+                    init(swiper) {
+                        updateNavigationState(swiper, prevButtonBig, nextButtonBig);
+                    },
+                
+                    slideChange(swiper) {
+                        updateNavigationState(swiper, prevButtonBig, nextButtonBig);
+                    },
+
+                    lock(swiper) {
+                        updateNavigationState(swiper, prevButtonBig, nextButtonBig);
+                    },
+
+                    unlock(swiper) {
+                        updateNavigationState(swiper, prevButtonBig, nextButtonBig);
+                    },
+                },
+            });
+
+            prevButtonBig.addEventListener("click", () => swiper.slidePrev());
+            nextButtonBig.addEventListener("click", () => swiper.slideNext());
+        });
+
+        document.querySelectorAll('.js-init-structure-gallery').forEach((slider) => {
+            if (slider.swiper || !slider.classList.contains('swiper')) {
+                return;
+            }
+
+            new Swiper(slider, {
+                loop: false,
+                slidesPerView: 1,
+                spaceBetween: 24,
+                navigation: {
+                    prevEl: slider.querySelector('.swiper-button-prev'),
+                    nextEl: slider.querySelector('.swiper-button-next'),
+                },
+                pagination: {
+                    el: slider.querySelector('.swiper-pagination'),
+                    clickable: true,
+                },
+                breakpoints: {
+                    768: { slidesPerView: 2 },
+                    1200: { slidesPerView: 4 },
                 },
             });
         });

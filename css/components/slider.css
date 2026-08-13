@@ -6,7 +6,7 @@
     
     & .swiper-button-prev, & .swiper-button-next, & .swiper-pagination {
         position: relative;
-        height: 24px;
+        height: 20px;
     }
 
     .swiper-pagination-fraction {
@@ -142,8 +142,13 @@
     & .default-slider-controls {
         position: unset;
         width: 100%;
+        justify-content: center;
 
         & .swiper-button-next, .swiper-button-prev {
+            top: -12px;
+        }
+
+        & .swiper-button-next.big, .swiper-button-prev.big {
             top: 50%;
             transform: translateY(-50%);
             position: absolute;
@@ -153,12 +158,22 @@
             border-radius: 50px;
         }
 
-        & .swiper-button-next::after, .swiper-button-prev::after {
+        & .swiper-button-next.big::after, .swiper-button-prev.big::after {
             transform: scale(2.5);
         }
     }
     & .swiper-pagination {
         bottom: 0;
         top: -20px;
+        width: auto;
+    }
+}
+
+/* Слайдер "Галерея" */
+.structure-gallery__slider {
+    & .default-slider-controls {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);        
     }
 }

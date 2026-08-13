@@ -29,6 +29,7 @@
 .student-direction__content, .student-direction__gallery {
     max-width: 708px;
     flex: 0 0 50%;
+    min-height: 518px;
 }
 
 .student-direction__content {

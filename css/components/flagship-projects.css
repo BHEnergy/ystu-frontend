@@ -21,10 +21,14 @@
     transition: all 0.3s ease-in-out;
 }
 
-.flagship-project__card:hover {
-    &::after {
-        transform: scale(1.2);
-    }
+.flagship-project__card::after {
+    transform: scale(1);
+    transform-origin: center bottom;
+    transition: transform 0.45s ease-in-out;
+}
+
+.flagship-project__card:hover::after {
+    transform: scale(1.08);
 }
 
 .flagship-project__photo {
@@ -133,4 +137,10 @@
     position: absolute;
     bottom: -10px;
     right: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .flagship-project__card::after {
+        transition: none;
+    }
 }

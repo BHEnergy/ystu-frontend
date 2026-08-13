@@ -52,6 +52,19 @@
     const megaMenu = header.querySelector('.mega-menu');
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
+    if (openBtn && !openBtn.querySelector('.btn__menu-label')) {
+        const labelNode = [...openBtn.childNodes].find(
+            (node) => node.nodeType === Node.TEXT_NODE && node.textContent.trim(),
+        );
+
+        if (labelNode) {
+            const label = document.createElement('span');
+            label.className = 'btn__menu-label';
+            label.textContent = labelNode.textContent.trim();
+            labelNode.replaceWith(label);
+        }
+    }
+
     if (openBtn && megaMenu) {
         const menuItems = megaMenu.querySelectorAll(
             '.mega-menu__primary > li, .mega-menu__section, .mega-menu__additional > li',
