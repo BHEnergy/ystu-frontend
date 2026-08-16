@@ -35,3 +35,14 @@
     color: var(--subprimary-color-1);
     font-weight: 600;
 }
+
+@media(max-width: 768px) {
+    .dropdown--header {
+        padding: 24px 16px;
+    }
+
+    .dropdown--header::after {
+        height: 32px;
+        width: 32px;
+    }
+}

@@ -86,3 +86,53 @@
     font-size: 20px;
     max-width: 1010px;
 }
+
+@media (max-width: 768px) {
+    .sotrudnik {
+        flex-direction: column !important;
+        gap: 24px;
+    }
+
+    .sotrudnik__info {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .sotrudnik__picture {
+        max-width: 200px;
+        max-height: 200px;
+    }
+    
+    .sotrudnik__name .title {
+        font-size: 28px;
+    }
+
+    .sotrudnik__qualification {
+        font-size: 18px;
+    }
+
+    .sotrudnik__division {
+        font-size: 16px;
+    }
+
+    .sotrudnik__division-position {
+        font-size: 20px;
+    }
+
+    .sotrudnik__contacts {
+        padding: 24px 16px;
+    }
+
+    .sotrudnik__contact-item p:first-child {
+        font-size: 15px;
+    }
+
+    .sotrudnik__contact-item{
+        font-size: 16px;
+    }
+
+    .sotrudnik__content {
+        padding-top: 16px;
+        font-size: 16px;
+    }
+}

@@ -137,7 +137,53 @@
 @media (max-width: 992px) { }
 
 /* Устройства Medium (планшеты, 768 пикселей и выше) */
-@media (max-width: 768px) { }
+@media (max-width: 768px) {
+    .footer__links {
+        gap: 16px 32px;
+        flex-wrap: wrap;
+        font-size: 16px;
+    }
+
+    .footer__header {
+        gap: 20px;
+        flex-wrap: wrap;
+        font-size: 16px;
+    }
+
+    .footer__contacts {
+        gap: 16px 32px;
+        flex: 1 1 100%;
+        flex-wrap: wrap;
+    }
+
+    .footer__information {
+        display: grid;
+        grid-template-columns: 120px minmax(0, 1fr);
+        gap: 32px;
+    }
+
+    .footer__consultation {
+        gap: 32px;
+    }
+
+    .footer__phones {
+        gap: 24px;
+        flex-direction: column;
+    }
+
+    .footer__call {
+        flex-basis: auto;
+    }
+
+    .footer__modals {
+        display: grid;
+        gap: 16px;
+    }
+
+    .footer__modal {
+        flex-basis: auto;
+    }
+}
 
 /* Устройства Small (телефоны с горизонтальной ориентацией, 576 пикселей и выше) */
 @media (max-width: 576px) { 

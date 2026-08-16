@@ -13,3 +13,24 @@
     height: 24px;
     background-repeat: no-repeat;
 }
+
+@media(max-width: 576px) {
+    .breadcrumbs {
+        margin-top: 16px;
+        gap: 4px;
+        overflow-y: hidden;
+        overflow-x: auto;
+        scrollbar-width: none;
+        white-space: nowrap;
+    }
+
+    .breadcrumbs__item,
+    .breadcrumbs span {
+        flex: 0 0 auto;
+        font-size: 12px;
+    }
+
+    .breadcrumbs__separator {
+        flex: 0 0 24px;
+    }
+}

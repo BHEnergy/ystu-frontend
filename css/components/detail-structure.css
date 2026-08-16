@@ -379,8 +379,59 @@
         padding: 40px 0 80px;
     }
 
+    .structure-detail__lead, .structure-detail__text {
+        font-size: 16px;
+    }
+
     .structure-detail__title {
         font-size: 32px;
+    }
+
+    .structure-contact-card {
+        padding: 24px 16px;
+    }
+
+    .structure-contact-card h2 {
+        font-size: 15px;
+    }
+
+    .structure-contact-card p, .structure-contact-card a {
+        font-size: 16px;
+    }
+
+    .structure-detail__tabs {
+        gap: 16px;
+    }
+
+    .structure-detail__tab {
+        padding: 8px 10px;
+        font-size: 16px;
+    }
+
+    .training-program-card {
+        padding: 24px 16px;
+        min-height: 300px;
+    }
+
+    .training-program-card__tags span {
+        padding: 4px 16px;
+        font-size: 12px;
+    }
+
+    .training-program-card__code {
+        font-size: 15px;
+    }
+
+    .training-program-card__footer-item span {
+        font-size: 15px;
+    }
+
+    .training-program-card__footer-item p {
+        font-size: 24px;
+    }
+
+    .training-program-card h3 {
+        font-size: 20px;
     }
 
     .structure-detail__intro-grid,

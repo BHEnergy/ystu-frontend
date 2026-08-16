@@ -1,6 +1,6 @@
 .science {
     margin-top: 60px;
-    padding-bottom: 160px;
+    margin-bottom: 160px;
 }
 
 .science-list {
@@ -67,4 +67,26 @@
 .science-detail__code {
     color: var(--subprimary-color-2);
     font-size: 16px;
+}
+
+@media(max-width: 768px) {
+    .science {
+        margin-bottom: 100px;
+    }
+
+    .science-detail__content {
+        flex-direction: column !important;
+    }
+
+    .science-detail__info {
+        max-height: unset;
+    }
+
+    .science-detail__info dt {
+        font-size: 14px;
+    }
+
+    .science-detail__info dd {
+        font-size: 15px;
+    }
 }

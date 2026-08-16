@@ -49,13 +49,18 @@
     background: transparent;
 }
 
-.program-card__tag--accent {
+.program-card__tag--magistratura {
     background: var(--primary-color-2);
     border-color: var(--primary-color-2);
 }
 
+.program-card__tag--bacalavr {
+    background: var(--subprimary-color-1);
+    border-color: var(--subprimary-color-1);
+}
+
 .program-card__tag--accreditation::before {
-    content: url('/images/svg/check-mark.svg');
+    content: url('/images/svg/check-mark-blue.svg');
     margin-right: 8px;
     line-height: 0;
 }

@@ -28,4 +28,9 @@
     .error-page__container {
         align-items: center;
     }
+
+    .error-page__description {
+        max-width: 340px;
+        font-size: 16px;
+    }
 }

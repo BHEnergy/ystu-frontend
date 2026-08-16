@@ -71,7 +71,7 @@
 
 @media (max-width: 576px) {
     .search-page {
-        min-height: 400px;
+        min-height: 200px;
         padding-bottom: 56px;
     }
 

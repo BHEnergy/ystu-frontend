@@ -7,6 +7,12 @@
     padding-top: 0;
 }
 
+@media (max-width: 768px) {
+    .main {
+        padding-top: calc(var(--header-height) - 50px);
+    }
+}
+
 /* Кастомные классы */
 .grid-list-3 {
     grid-template-columns: repeat(3, minmax(100px, 1fr));

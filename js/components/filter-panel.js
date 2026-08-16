@@ -13,6 +13,7 @@
         const openButtons = document.querySelectorAll(
             `[data-open-filter-panel="${panelId}"]`
         );
+        const closeButtons = panel.querySelectorAll('[data-close-filter-panel]');
         const form = panel.querySelector('form');
 
         if (!panelId || !openButtons.length) {
@@ -24,6 +25,10 @@
             panel.setAttribute('aria-hidden', String(!isOpen));
             openButtons.forEach((button) => {
                 button.setAttribute('aria-expanded', String(isOpen));
+                button.closest('.listing-page__mobile-tools')?.classList.toggle(
+                    'is-filter-open',
+                    isOpen,
+                );
             });
         };
 
@@ -31,6 +36,13 @@
             button.insertAdjacentElement('afterend', panel);
             button.addEventListener('click', () => {
                 setOpen(!panel.classList.contains('is-open'));
+            });
+        });
+
+        closeButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                setOpen(false);
+                openButtons[0]?.focus();
             });
         });
 

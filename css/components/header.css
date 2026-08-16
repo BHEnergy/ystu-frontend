@@ -195,7 +195,28 @@
 @media (max-width: 992px) { }
 
 /* Устройства Medium (планшеты, 768 пикселей и выше) */
-@media (max-width: 768px) { }
+@media (max-width: 768px) {
+    .header__top {
+        display: none;
+    }
+
+    .header__wrapper {
+        margin-top: 0;
+    }
+
+    .header__menu {
+        min-height: 88px;
+        width: calc(100% + var(--container-padding) * 2);
+        margin-left: calc(var(--container-padding) * -1);
+        padding: 20px var(--container-padding);
+        border: 0;
+        border-radius: 0;
+    }
+
+    .main-nav {
+        display: none;
+    }
+}
 
 /* Устройства Small (телефоны с горизонтальной ориентацией, 576 пикселей и выше) */
 @media (max-width: 576px) { 

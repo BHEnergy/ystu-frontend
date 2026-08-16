@@ -177,3 +177,13 @@
         transform: translateX(-50%);        
     }
 }
+
+@media(max-width: 768px) {
+    .default-slider-controls {
+    
+        & .swiper-pagination {
+            width: max-content;
+        }
+    }
+
+}

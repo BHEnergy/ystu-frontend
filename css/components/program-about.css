@@ -109,3 +109,15 @@
     content: '-';
     letter-spacing: 5px;
 }
+
+@media(max-width: 768px) {
+    .program-about__description {
+        flex-direction: column-reverse;
+        gap: 24px;
+    }
+
+    .program-about__facts {
+        display: flex;
+        flex-direction: column;
+    }
+}

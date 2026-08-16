@@ -63,7 +63,7 @@
 .preparatory-courses__media {
     position: relative;
     z-index: 2;
-
+    border-radius: 12px;
     flex: 0 1 42%;
     align-self: stretch;
     min-width: 0;
@@ -87,4 +87,33 @@
     border-radius: 12px;
     object-fit: cover;
     object-position: center;
+}
+
+@media(max-width: 768px) {
+    .preparatory-courses {
+        flex-direction: column;
+        padding: 40px 11px 40px 16px;
+    }
+
+    .preparatory-courses::before {
+        content: none;
+    }
+
+    .preparatory-courses__title {
+        font-size: 24px;
+    }
+
+    .preparatory-courses__description {
+        font-size: 16px;
+    }
+
+    .preparatory-courses__media {
+        min-height: unset;
+        max-height: 230px;
+    }
+
+    .preparatory-courses__image {
+        min-height: unset;
+        max-height: 230px;
+    }
 }

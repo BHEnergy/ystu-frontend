@@ -52,3 +52,17 @@
     border-radius: 10px;
     font-weight: 600;
 }
+
+@media(max-width: 768px) {
+    .program-education__name {
+        font-size: 20px;
+    }
+
+    .program-education__section {
+        flex-direction: column;
+    }
+
+    .program-exams__examples summary {
+        font-size: 20px;
+    }
+}
