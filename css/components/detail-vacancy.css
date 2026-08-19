@@ -136,7 +136,7 @@
     }
 
     .detail-vacancy__content {
-        width: calc(100% - 16px);
+        width: 100%;
         max-width: none;
         margin-top: 60px;
         gap: 24px;

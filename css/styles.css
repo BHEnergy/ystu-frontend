@@ -67,6 +67,10 @@
 /* Детальная страница вакансии */
 @import url('/css/components/cookie-banner.css');
 
+/* Подключение формы и модалки */
+@import url('/css/components/modal.css');
+@import url('/css/components/form.css');
+
 /* Подключение шрифта */
 @font-face {
     font-family: 'GoogleSans';

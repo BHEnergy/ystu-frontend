@@ -54,6 +54,10 @@
     gap: 12px;
 }
 
+.header__mobile-tools {
+    display: none;
+}
+
 .header__menu {
     min-height: 96px;
     border: 1px solid var(--subprimary-color-1);
@@ -215,6 +219,24 @@
 
     .main-nav {
         display: none;
+    }
+
+    .header--menu-open .header__menu > a:first-child {
+        display: none;
+    }
+
+    .header--menu-open .header__mobile-tools {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-right: auto;
+    }
+
+    .header__mobile-tools a,
+    .header__mobile-tools img {
+        display: block;
+        width: 24px;
+        height: 24px;
     }
 }
 

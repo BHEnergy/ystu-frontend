@@ -54,15 +54,45 @@
 }
 
 @media(max-width: 768px) {
+    .preparatory-courses {
+        margin: 60px 0;
+    }
+
     .program-education__name {
         font-size: 20px;
     }
 
+    .program-education__title {
+        font-size: 32px;
+    }
+
     .program-education__section {
         flex-direction: column;
+        gap: 24px;
+        font-size: 16px;
+    }
+
+    .program-education__caption {
+        display: contents;
+    }
+
+    .program-education__caption h4 {
+        order: 1;
+        font-size: 20px;
+    }
+
+    .program-education__section > p {
+        order: 2;
+    }
+
+    .program-education__caption .btn {
+        order: 3;
+        align-self: flex-start;
+        padding: 14px 24px;
     }
 
     .program-exams__examples summary {
         font-size: 20px;
     }
+
 }

@@ -1,6 +1,5 @@
 .listing-page {
-    padding-top: calc(var(--header-height) + 25px);
-    padding-bottom: 200px;
+    padding-bottom: 280px;
 }
 
 .listing-page__intro {
@@ -52,7 +51,6 @@
     .listing-page {
         padding-bottom: 80px;
     }
-
     .listing-page__intro {
         margin-top: 40px;
     }
@@ -82,12 +80,6 @@
     }
 
     .listing-page__results {
-        gap: 24px;
-    }
-}
-
-@media (max-width: 576px) {
-    .listing-page {
-        padding-top: calc(var(--header-height) + 11px);
+        gap: 16px;
     }
 }

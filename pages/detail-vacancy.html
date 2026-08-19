@@ -126,7 +126,7 @@
           <div class = "detail-vacancy__body">
             <div class = "detail-vacancy__info d-flex flex-column">
               <p>Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem. In malesuada vitae urna mattis tortor aenean porttitor aenean. Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem. In malesuada vitae urna mattis tortor aenean porttitor aenean.</p>
-              <button class = "btn btn--default btn--m">Откликнуться</button>
+              <button type = "button" class = "btn btn--default btn--m button-modal" data-modal="vacancy">Откликнуться</button>
             </div>
             <div class = "detail-vacancy__resume d-flex flex-column">
               <div class = "resume-data d-flex flex-column">
@@ -242,6 +242,46 @@
           </div>
         </div>
       </footer>
+    </div>
+    <div class = "modal" data-modal="vacancy" role="dialog" aria-modal="true" aria-labelledby="vacancy-modal-title">
+      <div class = "modal-overlay">
+        <div class = "modal-body">
+          <button type = "button" class = "modal-close btn btn--default" data-modal="vacancy" aria-label="Закрыть окно">
+            <img src = "../images/svg/close.svg" alt="">
+          </button>
+          <div class = "modal-header d-flex flex-column">
+            <h2 class = "modal-header__title title" id="vacancy-modal-title">Отклик на вакансию</h2>
+            <p class = "modal-header__subtitle">Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae.</p>
+          </div>
+          <form class = "modal-form d-flex flex-column">
+            <input type = "text" name = "name" id = "vacancy-name" placeholder="Текст*">
+            <input type = "email" name = "email" id = "vacancy-email" placeholder="Текст*">
+            <input type = "tel" name = "phone" id = "vacancy-phone" placeholder="Текст*">
+            <div class = "modal-form__file">
+              <span class = "modal-form__file-title">Резюме</span>
+              <input class = "visually-hidden" type = "file" name = "resume" id = "vacancy-resume">
+              <label class = "modal-form__file-button" for = "vacancy-resume">
+                <img src = "../images/svg/upload-file.svg" alt="">
+                <span>Прикрепить файл</span>
+              </label>
+            </div>
+            <textarea name = "comment" id = "vacancy-comment" placeholder="Комментарии/Сопроводительное письмо"></textarea>
+            <div class = "modal-form__footer">
+              <button type = "submit" class = "btn btn--default btn--m">Откликнуться</button>
+              <div class = "modal-form__checkboxes d-flex flex-column">
+                <div class = "checkbox--container">
+                  <input type = "checkbox" name = "personal-data" id = "vacancy-personal-data" required>
+                  <label for = "vacancy-personal-data">Я даю согласие на обработку персональных данных</label>
+                </div>
+                <div class = "checkbox--container">
+                  <input type = "checkbox" name = "privacy-policy" id = "vacancy-privacy-policy" required>
+                  <label for = "vacancy-privacy-policy">Я ознакомлен(а) с <a href = "#">Политикой конфиденциальности</a></label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>

@@ -17,7 +17,19 @@
     gap: 40px;
 }
 
-.program-card__heading,
+.program-card__body {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.program-card__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
 .program-card__profiles {
     display: flex;
     flex-direction: column;
@@ -75,7 +87,6 @@
 }
 
 .program-card__code {
-    margin-bottom: 8px;
     font-size: 18px;
 }
 
@@ -90,6 +101,10 @@
     padding-left: 24px;
     color: var(--subprimary-color-1);
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 500;
 }
 
 .program-card__stats {
@@ -154,8 +169,17 @@
         gap: 16px;
     }
 
-    .program-card__stat dt {
+    .program-card__stat {
+        gap: 12px;
+        min-height: 59px;
+    }
+
+    .program-card__profiles-list {
         font-size: 14px;
+    }
+
+    .program-card__code, .program-card__profiles-title, .program-card__stat dt {
+        font-size: 15px;
     }
 
     .program-card__stat dd {

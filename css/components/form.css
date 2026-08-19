@@ -1,0 +1,154 @@
+/* Пару управляющий классов */
+.visually-hidden {
+    display: none;
+}
+
+/* Форма в модальном окне */
+.modal-form {
+    width: 100%;
+    gap: 24px;
+}
+
+.modal-form > input,
+.modal-form textarea {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 16px 18px;
+    color: var(--black-shade-1);
+    background: transparent;
+    border: 1px solid var(--subprimary-color-2);
+    border-radius: 8px;
+    outline: none;
+    font-family: 'GoogleSans';
+    font-size: 16px;
+}
+
+.modal-form > input {
+    height: 48px;
+}
+
+.modal-form textarea {
+    height: 140px;
+    padding-top: 17px;
+    resize: none;
+}
+
+.modal-form > input::placeholder,
+.modal-form textarea::placeholder {
+    color: #4779b8;
+    opacity: 1;
+}
+
+.modal-form > input:focus-visible,
+.modal-form textarea:focus-visible,
+.modal-form__file:focus-within .modal-form__file-button {
+    outline: 2px solid var(--subprimary-color-1);
+    outline-offset: 2px;
+}
+
+.modal-form__file {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.modal-form__file-title {
+    color: #111;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.modal-form__file-button {
+    min-width: 220px;
+    height: 52px;
+    padding: 0 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--subprimary-color-1);
+    background: #bfd0e8;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.modal-form__file-button img {
+    width: 18px;
+    height: 18px;
+}
+
+.modal-form__checkboxes {
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.checkbox--container {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    color: #3f3f41;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.checkbox--container input {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    flex: 0 0 18px;
+    appearance: none;
+    background: transparent;
+    border: 1px solid #4779b8;
+    border-radius: 2px;
+}
+
+.checkbox--container input:checked {
+    background: var(--subprimary-color-1);
+    box-shadow: inset 0 0 0 3px var(--subprimary-color-7);
+}
+
+.checkbox--container a {
+    color: var(--primary-color-1);
+    text-decoration: none;
+}
+
+@media(max-width: 768px) {
+    .modal-form {
+        gap: 16px;
+    }
+
+    .modal-form > input {
+        height: 44px;
+        padding: 0 15px;
+    }
+
+    .modal-form textarea {
+        height: 178px;
+        padding: 14px 16px;
+        font-size: 14px;
+    }
+
+    .modal-form__file-button {
+        min-width: 206px;
+        height: 42px;
+        padding: 0 20px;
+    }
+
+    .modal-form__footer {
+        margin-top: 8px;
+    }
+
+    .modal-form__footer > .btn {
+        height: 59px;
+        border-radius: 10px;
+    }
+
+    .checkbox--container {
+        gap: 16px;
+        align-items: center;
+        padding-right: 12px;
+        font-size: 15px;
+    }
+}

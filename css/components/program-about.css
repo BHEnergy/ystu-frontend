@@ -91,7 +91,7 @@
 }
 
 .program-about__link {
-    color: var(--primary-color-2);
+    color: var(--primary-color-2) !important;
     font-size: 16px;
     font-weight: 500;
     text-transform: capitalize;
@@ -111,13 +111,66 @@
 }
 
 @media(max-width: 768px) {
+    .program-about {
+        margin: 60px 0;
+    }
     .program-about__description {
         flex-direction: column-reverse;
         gap: 24px;
     }
 
+    .program-about__title {
+        font-size: 32px;
+    }
+
     .program-about__facts {
         display: flex;
         flex-direction: column;
+    }
+
+    .program-about__description__feacher {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        padding: 16px;
+    }
+
+    .program-about__description__feacher > p {
+        font-size: 20px;
+        max-width: 265px;
+    }
+
+    .program-about__description__feacher .btn {
+        padding: 12px 24px;
+    }
+
+    .program-about__description__feacher::after {
+        right: -70px;
+        top: -40px;
+        transform: scale(1);
+    }
+
+    .program-about__fact {
+        padding: 24px 16px;
+        gap: 40px;
+        min-height: 0;
+    }
+
+    .program-about__fact__title {
+        font-size: 18px;
+    }
+
+    .program-about__fact__description {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        font-size: 24px;
+    }
+
+    .program-about__fact--row {
+        font-size: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 }

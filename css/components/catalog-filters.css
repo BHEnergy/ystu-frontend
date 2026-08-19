@@ -16,6 +16,10 @@
     padding: 16px 16px 24px 16px;
     border: 1px solid var(--subprimary-color-1);
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: var(--subprimary-color-1);
 }
 
 .catalog-search__input {
@@ -40,7 +44,7 @@
 
 .catalog-search__button {
     position: absolute;
-    top: 45%;
+    top: 60%;
     right: 30px;
     display: grid;
     width: 24px;
@@ -230,4 +234,16 @@
 
 .catalog-filters-trigger[aria-expanded="true"] img {
     transform: rotate(180deg);
+}
+
+@media(max-width: 768px) {
+    .catalog-search {
+        padding: 0;
+        border: none;
+    }
+
+    .catalog-search__button {
+        top: 45%;
+        right: 16px;
+    }
 }

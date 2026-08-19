@@ -21,8 +21,67 @@
 }
 
 .student-driving__gallery {
+    min-width: 0;
+    min-height: 518px;
     flex: 0 0 60%;
     max-width: 832px;
     border-radius: 16px;
     overflow: hidden;
+}
+
+.student-driving__gallery img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 991px) {
+    .student-driving {
+        margin-bottom: 80px;
+    }
+
+    .student-driving__body {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .student-driving__content {
+        gap: 24px;
+    }
+
+    .student-driving__gallery {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: none;
+        min-height: 0;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+@media (max-width: 576px) {
+    .student-driving {
+        margin-bottom: 60px;
+    }
+
+    .student-driving__title {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .student-driving__body {
+        margin-top: 24px;
+        gap: 24px;
+    }
+
+    .student-driving__content {
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+    .student-driving__gallery {
+        border-radius: 10px;
+        aspect-ratio: 358 / 241;
+    }
 }

@@ -356,10 +356,13 @@
     }
 
     .campus-filter__panel {
-        position: static;
-        width: 100%;
-        padding-top: 0;
-        border: 0;
+        position: absolute;
+        top: calc(100% - 1px);
+        left: -1px;
+        z-index: 40;
+        width: calc(100% + 2px);
+        max-height: min(440px, calc(100dvh - 180px));
+        overflow-y: auto;
     }
 }
 

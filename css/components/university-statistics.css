@@ -50,6 +50,12 @@
     gap: 80px 24px;
 }
 
+.university-statistics__number-item {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
 .university-statistics__number {
     font-size: 90px;
     font-weight: 700;
@@ -59,4 +65,59 @@
     font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+@media(max-width: 768px) {
+    .university-statistics {
+        margin-bottom: 60px;
+        background-size: 436px;
+        background-position-x: 125px;
+        background-position-y: -30px;
+    }
+
+    .university-statistics__container {
+        padding: 60px 0;
+        gap: 40px;
+    }
+
+    .university-statistics__header {
+        flex-direction: column;
+        padding: 0;
+        gap: 40px;
+    }
+
+    .university-statistics__content {
+        padding: 0 8px;
+    }
+
+    .university-statistics__title {
+        font-size: 32px;
+    }
+
+    .university-statistics__description {
+        font-size: 16px;
+        margin-top: 16px;
+    }
+
+    .university-statistics__button {
+        padding: 14px 24px;
+    }
+
+    .university-statistics__numbers {
+        gap: 16px 24px;
+        grid-template-columns: repeat(2, minmax(170px, 1fr));
+    }
+
+    .university-statistics__number-item {
+        gap: 10px;
+    }
+
+    .university-statistics__number {
+        font-size: 44px;
+    }
+
+    .university-statistics__number-label {
+        font-size: 14px;
+    }
+
 }

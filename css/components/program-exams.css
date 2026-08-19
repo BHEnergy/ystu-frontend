@@ -80,4 +80,26 @@
         display: flex;
         flex-direction: column;
     }
+
+    .program-exams__title {
+        font-size: 32px;
+    }
+
+    .program-exams__item {
+        min-height: 0;
+        padding: 24px 16px;
+        gap: 40px;
+    }
+
+    .program-exams__item__title {
+        font-size: 18px;
+    }
+
+    .program-exams__description {
+        font-size: 16px;
+    }
+
+    .program-exams__details {
+        font-size: 16px;
+    }
 }

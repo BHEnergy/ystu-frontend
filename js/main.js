@@ -41,6 +41,13 @@
                     clickable: true,
                 },
             });
+
+            let slides = slider.querySelectorAll('.slide__photo');
+            if(window.innerWidth < 768) {
+                slides.forEach((slide) => {
+                    slide.src = slide.dataset.mobile || slide.src;
+                });
+            }
         });
 
         /* Слайдеры с фракцией */
@@ -72,17 +79,69 @@
 
             new Swiper(slider, {
                 loop: false,
-                slidesPerView: 2,
-                slidesPerGroup: 2,
-                spaceBetween: 24,
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                spaceBetween: 16,
                 navigation: {
                     prevEl: slider.querySelector(".swiper-button-prev"),
                     nextEl: slider.querySelector(".swiper-button-next"),
+                },
+                grid: {
+                    rows: 2,
+                    fill: 'column',
                 },
                 pagination: {
                     el: slider.querySelector(".swiper-pagination"),
                     type: 'fraction',
                     clickable: true,
+                },
+                breakpoints: {
+                    769: {
+                        slidesPerView: 1,
+                        slidesPerGroup: 1,
+                        spaceBetween: 24,
+                        grid: {
+                            rows: 2,
+                            fill: 'row',
+                        },
+                    },
+                },
+            });
+        });
+
+        document.querySelectorAll('.js-init-banner-slider.banner-slider-3').forEach((slider) => {
+            if (slider.swiper || !slider.classList.contains('swiper')) {
+                return;
+            }
+
+            new Swiper(slider, {
+                loop: false,
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                spaceBetween: 16,
+                grid: {
+                    rows: 3,
+                    fill: 'column',
+                },
+                navigation: {
+                    prevEl: slider.querySelector('.swiper-button-prev'),
+                    nextEl: slider.querySelector('.swiper-button-next'),
+                },
+                pagination: {
+                    el: slider.querySelector('.swiper-pagination'),
+                    type: 'fraction',
+                    clickable: true,
+                },
+                breakpoints: {
+                    769: {
+                        slidesPerView: 1,
+                        slidesPerGroup: 1,
+                        spaceBetween: 24,
+                        grid: {
+                            rows: 3,
+                            fill: 'row',
+                        },
+                    },
                 },
             });
         });
@@ -179,7 +238,8 @@
             loadScript("header.js", "Header"),
             loadScript("dropdown.js", "Dropdown"),
             loadScript("filter-panel.js", "FilterPanel"),
-            loadScript("campus-map.js", "CampusMap")
+            loadScript("campus-map.js", "CampusMap"),
+            loadScript("modals.js", "Modals")
         ]);
 
         initSwiper();

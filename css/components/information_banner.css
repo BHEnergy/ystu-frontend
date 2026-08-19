@@ -42,3 +42,51 @@
     font-weight: 700;
     text-transform: uppercase;
 }
+
+@media(max-width: 768px) {
+    .information-banner__body {
+        display: grid;
+        grid-template: 'A C' 'B C';
+        gap: 8px 20px;
+        justify-content: space-between;
+    }
+
+    .information-banner__text {
+        font-size: 20px;
+        grid-area: A;
+    }
+
+    .information-banner__date {
+        grid-area: B;
+        gap: 24px;
+
+    }
+
+    .information-banner__body a {
+        grid-area: C;
+    }
+
+    .information-banner__body .btn {
+        max-width: 52px;
+        min-height: 52px;
+        color: transparent !important;
+        position: relative;
+    }
+
+    .information-banner__body .btn::after {
+        content: url(/images/svg/arrow-white.svg);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        line-height: 0;
+    }
+
+    .information-banner::before {
+        content: none;
+    }
+
+    .information-banner::after {
+        content: none;
+    }
+}

@@ -93,6 +93,7 @@
     .preparatory-courses {
         flex-direction: column;
         padding: 40px 11px 40px 16px;
+        margin: 60px 0;
     }
 
     .preparatory-courses::before {
@@ -115,5 +116,16 @@
     .preparatory-courses__image {
         min-height: unset;
         max-height: 230px;
+    }
+
+    .preparatory-courses__media::before {
+        left: -120px;
+        bottom: -85px;
+        transform: scale(0.6);
+    }
+
+    .preparatory-courses::after {
+        content: url(/images/svg/preparatory-courses-mobile.svg);
+        right: -120px;
     }
 }

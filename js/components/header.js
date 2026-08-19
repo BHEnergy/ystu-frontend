@@ -30,10 +30,13 @@
     };
 
     const resizeObserver = new ResizeObserver(() => {
+        const headerHeight = headerWrapper.getBoundingClientRect().height;
+
         document.documentElement.style.setProperty(
             '--header-height',
-            `${headerWrapper.getBoundingClientRect().height + 30}px`,
+            `${headerHeight + 30}px`,
         );
+        document.documentElement.style.setProperty('--header-panel-height', `${headerHeight}px`);
         requestPositionUpdate();
     });
 
@@ -51,6 +54,7 @@
     const openBtn = header.querySelector('[data-trigger="open-menu"]');
     const megaMenu = header.querySelector('.mega-menu');
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const mobileMenuMedia = window.matchMedia('(max-width: 768px)');
 
     if (openBtn && !openBtn.querySelector('.btn__menu-label')) {
         const labelNode = [...openBtn.childNodes].find(
@@ -69,27 +73,168 @@
         const menuItems = megaMenu.querySelectorAll(
             '.mega-menu__primary > li, .mega-menu__section, .mega-menu__additional > li',
         );
+        const navbarPanel = header.querySelector('.navbar__panel');
+        const mobileTools = document.createElement('div');
+
+        mobileTools.className = 'header__mobile-tools';
+        mobileTools.setAttribute('aria-label', 'Сервисы сайта');
+
+        if (navbarPanel) {
+            [...navbarPanel.children].forEach((item) => {
+                mobileTools.append(item.cloneNode(true));
+            });
+        }
+
+        openBtn.before(mobileTools);
+
+        const submenuLinks = [...megaMenu.querySelectorAll('[data-menu-section]')];
+        const submenuPanels = [...megaMenu.querySelectorAll('[data-menu-panel]')];
+
+        const resetSubmenu = () => {
+            megaMenu.classList.remove('mega-menu--submenu-open');
+            submenuLinks.forEach((link) => link.setAttribute('aria-expanded', 'false'));
+            submenuPanels.forEach((panel) => {
+                panel.classList.remove('is-open');
+                panel.setAttribute('aria-hidden', String(mobileMenuMedia.matches));
+            });
+            submenuLinks.forEach((link) => link.classList.remove('is-active'));
+        };
+
+        const openSubmenu = (trigger, panel) => {
+            resetSubmenu();
+            trigger.classList.add('is-active');
+            trigger.setAttribute('aria-expanded', 'true');
+            panel.classList.add('is-open');
+            panel.setAttribute('aria-hidden', 'false');
+            panel.scrollTop = 0;
+
+            if (mobileMenuMedia.matches) {
+                megaMenu.classList.add('mega-menu--submenu-open');
+            }
+        };
+
+        submenuPanels.forEach((panel, index) => {
+            const sectionName = panel.dataset.menuPanel;
+            const trigger = submenuLinks.find(
+                (link) => link.dataset.menuSection === sectionName,
+            );
+
+            panel.id ||= `mega-menu-panel-${sectionName || index}`;
+            panel.setAttribute('aria-hidden', String(mobileMenuMedia.matches));
+
+            if (!panel.querySelector('.mega-menu__back')) {
+                const backButton = document.createElement('button');
+
+                backButton.className = 'mega-menu__back';
+                backButton.type = 'button';
+                backButton.textContent = 'Назад';
+                backButton.addEventListener('click', () => {
+                    resetSubmenu();
+                    trigger?.focus();
+                });
+                panel.prepend(backButton);
+            }
+
+            if (!trigger) {
+                return;
+            }
+
+            trigger.classList.add('has-submenu');
+            trigger.setAttribute('aria-controls', panel.id);
+            trigger.setAttribute('aria-expanded', 'false');
+
+            const triggerRow = trigger.closest('li') || trigger;
+
+            triggerRow.addEventListener('click', (event) => {
+                if (trigger.classList.contains('is-muted') || trigger.contains(event.target)) {
+                    return;
+                }
+
+                event.preventDefault();
+                openSubmenu(trigger, panel);
+            });
+        });
+
+        const initialTrigger = submenuLinks.find((link) => link.classList.contains('is-active'))
+            || submenuLinks.find((link) => !link.classList.contains('is-muted'));
+        const initialPanel = initialTrigger && submenuPanels.find(
+            (panel) => panel.dataset.menuPanel === initialTrigger.dataset.menuSection,
+        );
+
+        if (!mobileMenuMedia.matches && initialTrigger && initialPanel) {
+            openSubmenu(initialTrigger, initialPanel);
+            megaMenu.classList.remove('mega-menu--submenu-open');
+        }
+
+        let lockedScrollX = 0;
+        let lockedScrollY = 0;
+
+        const setMobileScrollLock = (isLocked) => {
+            const root = document.documentElement;
+            const shouldLock = isLocked && mobileMenuMedia.matches;
+            const isCurrentlyLocked = root.classList.contains('mobile-menu-open');
+
+            if (shouldLock === isCurrentlyLocked) {
+                return;
+            }
+
+            if (shouldLock) {
+                lockedScrollX = window.scrollX;
+                lockedScrollY = window.scrollY;
+                root.style.setProperty('--mobile-menu-scroll-offset', `${-lockedScrollY}px`);
+                root.classList.add('mobile-menu-open');
+                return;
+            }
+
+            const previousScrollBehavior = root.style.scrollBehavior;
+
+            root.classList.remove('mobile-menu-open');
+            root.style.removeProperty('--mobile-menu-scroll-offset');
+            root.style.scrollBehavior = 'auto';
+            window.scrollTo(lockedScrollX, lockedScrollY);
+            root.style.scrollBehavior = previousScrollBehavior;
+        };
+
+        const setMenuState = (isOpen) => {
+            header.classList.toggle('header--menu-open', isOpen);
+            openBtn.setAttribute('aria-expanded', String(isOpen));
+            openBtn.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+            setMobileScrollLock(isOpen);
+
+            if (!isOpen) {
+                resetSubmenu();
+            } else if (!mobileMenuMedia.matches && initialTrigger && initialPanel) {
+                openSubmenu(initialTrigger, initialPanel);
+                megaMenu.classList.remove('mega-menu--submenu-open');
+            }
+        };
 
         openBtn.setAttribute(
             'aria-expanded',
             String(header.classList.contains('header--menu-open')),
         );
+        openBtn.setAttribute('aria-label', 'Открыть меню');
 
         openBtn.addEventListener('click', () => {
             const isOpen = header.classList.contains('header--menu-open');
             const gsapInstance = window.gsap;
 
-            if (!gsapInstance || prefersReducedMotion.matches) {
-                header.classList.toggle('header--menu-open', !isOpen);
-                openBtn.setAttribute('aria-expanded', String(!isOpen));
+            if (mobileMenuMedia.matches || !gsapInstance || prefersReducedMotion.matches) {
+                setMenuState(!isOpen);
+
+                if (!isOpen) {
+                    window.requestAnimationFrame(() => {
+                        megaMenu.querySelector('a:not(.is-muted)')?.focus();
+                    });
+                }
+
                 return;
             }
 
             gsapInstance.killTweensOf([megaMenu, ...menuItems]);
 
             if (!isOpen) {
-                header.classList.add('header--menu-open');
-                openBtn.setAttribute('aria-expanded', 'true');
+                setMenuState(true);
 
                 gsapInstance.fromTo(
                     megaMenu,
@@ -112,10 +257,65 @@
                 duration: 0.22,
                 ease: 'power2.in',
                 onComplete: () => {
-                    header.classList.remove('header--menu-open');
+                    setMenuState(false);
                     gsapInstance.set([megaMenu, ...menuItems], { clearProps: 'transform,opacity,visibility' });
                 },
             });
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (!header.classList.contains('header--menu-open')) {
+                return;
+            }
+
+            if (event.key === 'Tab' && mobileMenuMedia.matches) {
+                const focusableItems = [...header.querySelectorAll(
+                    'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+                )].filter((item) => (
+                    item.getClientRects().length > 0
+                    && !item.closest('[aria-hidden="true"]')
+                ));
+                const firstItem = focusableItems[0];
+                const lastItem = focusableItems.at(-1);
+
+                if (event.shiftKey && document.activeElement === firstItem) {
+                    event.preventDefault();
+                    lastItem?.focus();
+                } else if (!event.shiftKey && document.activeElement === lastItem) {
+                    event.preventDefault();
+                    firstItem?.focus();
+                }
+
+                return;
+            }
+
+            if (event.key !== 'Escape') {
+                return;
+            }
+
+            if (mobileMenuMedia.matches && megaMenu.classList.contains('mega-menu--submenu-open')) {
+                const activeTrigger = submenuLinks.find(
+                    (link) => link.getAttribute('aria-expanded') === 'true',
+                );
+
+                resetSubmenu();
+                activeTrigger?.focus();
+                return;
+            }
+
+            setMenuState(false);
+            openBtn.focus();
+        });
+
+        mobileMenuMedia.addEventListener('change', () => {
+            resetSubmenu();
+
+            if (!mobileMenuMedia.matches && initialTrigger && initialPanel) {
+                openSubmenu(initialTrigger, initialPanel);
+                megaMenu.classList.remove('mega-menu--submenu-open');
+            }
+
+            setMobileScrollLock(header.classList.contains('header--menu-open'));
         });
     }
 })();
