@@ -118,15 +118,15 @@
 }
 
 .footer__phone::before {
-    content: url(/images/svg/call-white.svg);
+    content: url(../../images/svg/call-white.svg);
 }
 
 .footer__mail::before {
-    content: url(/images/svg/mail-white.svg);
+    content: url(../../images/svg/mail-white.svg);
 }
 
 .footer__location::before {
-    content: url(/images/svg/location-white.svg);
+    content: url(../../images/svg/location-white.svg);
 }
 
 /* Шаблон для медиа-запросов */

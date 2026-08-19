@@ -54,7 +54,7 @@
     content: "";
     width: 24px;
     height: 24px;
-    background: url('/images/svg/triangle-down.svg') center / 24px 24px no-repeat;
+    background: url('../../images/svg/triangle-down.svg') center / 24px 24px no-repeat;
     transform: rotate(180deg);
 }
 

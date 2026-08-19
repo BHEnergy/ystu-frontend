@@ -93,7 +93,7 @@
 }
 
 .hero-banner__tag.accredit::before {
-    content: url(/images/svg/check-mark.svg);
+    content: url(../../images/svg/check-mark.svg);
     line-height: 0;
     margin-right: 8px;
 }

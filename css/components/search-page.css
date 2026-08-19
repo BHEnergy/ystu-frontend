@@ -10,7 +10,7 @@
 }
 
 .search-page-background::after {
-    content: url(/images/svg/big-ystu.svg);
+    content: url(../../images/svg/big-ystu.svg);
     position: absolute;
     top: 0;
     right: 0;

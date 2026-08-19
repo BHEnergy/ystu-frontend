@@ -140,7 +140,7 @@
 }
 
 .event__date::before {
-    content: url(/images/svg/calendar.svg);
+    content: url(../../images/svg/calendar.svg);
     line-height: 1;
     width: 24px;
     height: 24px;
@@ -150,7 +150,7 @@
 }
 
 .event__time::before {
-    content: url(/images/svg/time.svg);
+    content: url(../../images/svg/time.svg);
     line-height: 1;
     width: 24px;
     height: 24px;
@@ -160,7 +160,7 @@
 }
 
 .event__location::before {
-    content: url(/images/svg/location.svg);
+    content: url(../../images/svg/location.svg);
     line-height: 1;
     width: 24px;
     height: 24px;

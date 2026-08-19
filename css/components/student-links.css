@@ -55,8 +55,8 @@
     left: -50px;
     bottom: -135px;
     background-color: #B5C6DB;
-    -webkit-mask-image: url(/images/svg/sd-1.svg);
-    mask-image: url(/images/svg/sd-1.svg);
+    -webkit-mask-image: url(../../images/svg/sd-1.svg);
+    mask-image: url(../../images/svg/sd-1.svg);
 }
 
 .student-links__item:nth-child(4n + 2)::after {
@@ -65,8 +65,8 @@
     bottom: -60px;
     right: -40px;
     background-color: #F8AD80;
-    -webkit-mask-image: url(/images/svg/sd-2.svg);
-    mask-image: url(/images/svg/sd-2.svg);
+    -webkit-mask-image: url(../../images/svg/sd-2.svg);
+    mask-image: url(../../images/svg/sd-2.svg);
 } 
 
 .student-links__item:nth-child(4n + 3)::after {
@@ -75,8 +75,8 @@
     left: 0;
     bottom: -65px;
     background-color: #B5C6DB;
-    -webkit-mask-image: url(/images/svg/sd-3.svg);
-    mask-image: url(/images/svg/sd-3.svg);
+    -webkit-mask-image: url(../../images/svg/sd-3.svg);
+    mask-image: url(../../images/svg/sd-3.svg);
 } 
 
 .student-links__item:nth-child(4n + 4)::after {
@@ -85,8 +85,8 @@
     left: 0;
     bottom: -65px;
     background-color: #F8AD80;
-    -webkit-mask-image: url(/images/svg/sd-4.svg);
-    mask-image: url(/images/svg/sd-4.svg);
+    -webkit-mask-image: url(../../images/svg/sd-4.svg);
+    mask-image: url(../../images/svg/sd-4.svg);
 }
 
 @media (min-width: 992px) and (hover: hover) and (pointer: fine) {
@@ -197,7 +197,7 @@
         right: auto;
         bottom: auto;
         left: -16.75%;
-        background-image: url(/images/svg/sd-1.svg);
+        background-image: url(../../images/svg/sd-1.svg);
         background-size: cover;
         mask-image: unset;
         background-color: unset;
@@ -211,7 +211,7 @@
         right: -35px;
         bottom: auto;
         left: auto;
-        background-image: url(/images/svg/sd-2.svg);
+        background-image: url(../../images/svg/sd-2.svg);
         background-color: unset;
         mask-image: unset;
     }
@@ -228,14 +228,14 @@
     }
 
     .student-links__item:nth-child(4n + 3)::after {
-        background-image: url(/images/svg/sd-3.svg);
+        background-image: url(../../images/svg/sd-3.svg);
         background-size: cover;
         mask-image: unset;
         background-color: unset;
     }
 
     .student-links__item:nth-child(4n + 4)::after {
-        background-image: url(/images/svg/sd-4.svg);
+        background-image: url(../../images/svg/sd-4.svg);
         background-size: cover;
         mask-image: unset;
         background-color: unset;

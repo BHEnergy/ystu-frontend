@@ -27,13 +27,13 @@
 }
 
 .pagination__button-prev {
-    background: url(/images/svg/triangle-left-orange.svg) 50% 50%;
+    background: url(../../images/svg/triangle-left-orange.svg) 50% 50%;
     background-repeat: no-repeat;
 }
 
 
 .pagination__button-next {
-    background: url(/images/svg/triangle-right-orange.svg) 50% 50%;
+    background: url(../../images/svg/triangle-right-orange.svg) 50% 50%;
     background-repeat: no-repeat;
 }
 

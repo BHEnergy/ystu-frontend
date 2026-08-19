@@ -100,7 +100,7 @@
 }
 
 .modal-body::after {
-    content: url(/images/svg/modal-vector.svg);
+    content: url(../../images/svg/modal-vector.svg);
     position: absolute;
     z-index: -1;
     right: 0px;

@@ -34,7 +34,7 @@
 }
 
 .program-about__description__feacher::after {
-    content: url(/images/svg/ystu-feacher.svg);
+    content: url(../../images/svg/ystu-feacher.svg);
     position: absolute;
     z-index: -1;
     right: -95px;

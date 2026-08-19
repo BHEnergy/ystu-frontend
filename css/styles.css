@@ -1,75 +1,75 @@
 
 
 /* Подключение стилей сторонних библиотек */
-@import url('/css/components/swiper-bundle.css');
-/* @import url('/css/components/bootstrap.min.css'); */
-@import url('/css/components/bootstrap-grid.min.css');
+@import url('components/swiper-bundle.css');
+/* @import url('components/bootstrap.min.css'); */
+@import url('components/bootstrap-grid.min.css');
 
 /* Подключение стилей компонентов */
-@import url('/css/components/main.css');
-@import url('/css/components/header.css');
-@import url('/css/components/mega-menu.css');
-@import url('/css/components/body.css');
-@import url('/css/components/footer.css');
-@import url('/css/components/error-page.css');
-@import url('/css/components/buttons.css');
-@import url('/css/components/information_banner.css');
-@import url('/css/components/fichers.css');
-@import url('/css/components/slider.css');
-@import url('/css/components/events.css');
-@import url('/css/components/structure.css');
-@import url('/css/components/news.css');
+@import url('components/main.css');
+@import url('components/header.css');
+@import url('components/mega-menu.css');
+@import url('components/body.css');
+@import url('components/footer.css');
+@import url('components/error-page.css');
+@import url('components/buttons.css');
+@import url('components/information_banner.css');
+@import url('components/fichers.css');
+@import url('components/slider.css');
+@import url('components/events.css');
+@import url('components/structure.css');
+@import url('components/news.css');
 
 /* Основные компоненты */
-@import url('/css/components/breadcrumbs.css');
-@import url('/css/components/pagination.css');
-@import url('/css/components/dropdown.css');
-@import url('/css/components/hero-banner.css');
+@import url('components/breadcrumbs.css');
+@import url('components/pagination.css');
+@import url('components/dropdown.css');
+@import url('components/hero-banner.css');
 
 /* Страница поиска */
-@import url('/css/components/search-page.css');
+@import url('components/search-page.css');
 
 /* Страница программы */
-@import url('/css/components/program-about.css');
-@import url('/css/components/program-amissions.css');
-@import url('/css/components/program-exams.css');
-@import url('/css/components/program-education.css');
+@import url('components/program-about.css');
+@import url('components/program-amissions.css');
+@import url('components/program-exams.css');
+@import url('components/program-education.css');
 
-@import url('/css/components/preparatory-courses.css');
-@import url('/css/components/flagship-projects.css');
-@import url('/css/components/university-statistics.css');
+@import url('components/preparatory-courses.css');
+@import url('components/flagship-projects.css');
+@import url('components/university-statistics.css');
 
 /* Страница Студенческая жизнь */
-@import url('/css/components/student-directions.css');
-@import url('/css/components/student-links.css');
-@import url('/css/components/student-driving.css');
+@import url('components/student-directions.css');
+@import url('components/student-links.css');
+@import url('components/student-driving.css');
 
 
 /* Каталоги вакансий и образовательных программ */
-@import url('/css/components/listing-page.css');
-@import url('/css/components/catalog-filters.css');
-@import url('/css/components/vacancy-card.css');
-@import url('/css/components/program-card.css');
-@import url('/css/components/document-list.css');
-@import url('/css/components/mobile-filter-panel.css');
-@import url('/css/components/campus-map.css');
+@import url('components/listing-page.css');
+@import url('components/catalog-filters.css');
+@import url('components/vacancy-card.css');
+@import url('components/program-card.css');
+@import url('components/document-list.css');
+@import url('components/mobile-filter-panel.css');
+@import url('components/campus-map.css');
 
 /* Страница научной деятельности */
-@import url('/css/components/science.css');
+@import url('components/science.css');
 
 /* Детальная страница сотнрудника */
-@import url('/css/components/detail-sotrudnik.css');
-@import url('/css/components/detail-structure.css');
+@import url('components/detail-sotrudnik.css');
+@import url('components/detail-structure.css');
 
 /* Детальная страница вакансии */
-@import url('/css/components/detail-vacancy.css');
+@import url('components/detail-vacancy.css');
 
 /* Детальная страница вакансии */
-@import url('/css/components/cookie-banner.css');
+@import url('components/cookie-banner.css');
 
 /* Подключение формы и модалки */
-@import url('/css/components/modal.css');
-@import url('/css/components/form.css');
+@import url('components/modal.css');
+@import url('components/form.css');
 
 /* Подключение шрифта */
 @font-face {

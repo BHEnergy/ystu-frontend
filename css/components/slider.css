@@ -40,11 +40,11 @@
     }
 
     .swiper-button-next::after {
-        content: url(/images/svg/swiper-button-next.svg);
+        content: url(../../images/svg/swiper-button-next.svg);
     }
 
     .swiper-button-prev::after {
-        content: url(/images/svg/swiper-button-prev.svg);
+        content: url(../../images/svg/swiper-button-prev.svg);
     }
 
 }

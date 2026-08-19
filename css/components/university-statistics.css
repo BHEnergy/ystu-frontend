@@ -1,7 +1,7 @@
 .university-statistics {
     background-color: var(--subprimary-color-1);
     margin-bottom: 110px;
-    background-image: url(/images/svg/ystu.svg);
+    background-image: url(../../images/svg/ystu.svg);
     background-repeat: no-repeat;
     background-position: top right;
 }

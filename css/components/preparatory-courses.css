@@ -17,14 +17,14 @@
 }
 
 .preparatory-courses::before {
-    content: url(/images/svg/preparatory-courses-1.svg);
+    content: url(../../images/svg/preparatory-courses-1.svg);
     position: absolute;
     top: 0;
     left: 0;
 }
 
 .preparatory-courses::after {
-    content: url(/images/svg/preparatory-courses-line-2.svg);
+    content: url(../../images/svg/preparatory-courses-line-2.svg);
     position: absolute;
     right: -40px;
 }
@@ -73,7 +73,7 @@
 }
 
 .preparatory-courses__media::before {
-    content: url(/images/svg/preparatory-courses__media-line.svg);
+    content: url(../../images/svg/preparatory-courses__media-line.svg);
     position: absolute;
     left: -275px;
     bottom: -50px;
@@ -125,7 +125,7 @@
     }
 
     .preparatory-courses::after {
-        content: url(/images/svg/preparatory-courses-mobile.svg);
+        content: url(../../images/svg/preparatory-courses-mobile.svg);
         right: -120px;
     }
 }

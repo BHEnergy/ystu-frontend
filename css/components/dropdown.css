@@ -10,7 +10,7 @@
 }
 
 .dropdown--header::after {
-    content: url(/images/svg/triangle-down.svg);
+    content: url(../../images/svg/triangle-down.svg);
     width: 48px;
     height: 48px;
     text-align: center;

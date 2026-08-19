@@ -9,7 +9,7 @@
 
 .information-banner::before {
     display: block;
-    content: url(/images/svg/adv-before.svg);
+    content: url(../../images/svg/adv-before.svg);
     position: absolute;
     z-index: -1;
     top: -70%;
@@ -18,7 +18,7 @@
 
 .information-banner::after {
     display: block;
-    content: url(/images/svg/adv-after.svg);
+    content: url(../../images/svg/adv-after.svg);
     position: absolute;
     z-index: -1;
     right: -4%;
@@ -74,7 +74,7 @@
     }
 
     .information-banner__body .btn::after {
-        content: url(/images/svg/arrow-white.svg);
+        content: url(../../images/svg/arrow-white.svg);
         position: absolute;
         top: 50%;
         left: 50%;

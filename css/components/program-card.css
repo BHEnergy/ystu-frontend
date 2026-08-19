@@ -72,7 +72,7 @@
 }
 
 .program-card__tag--accreditation::before {
-    content: url('/images/svg/check-mark-blue.svg');
+    content: url('../../images/svg/check-mark-blue.svg');
     margin-right: 8px;
     line-height: 0;
 }

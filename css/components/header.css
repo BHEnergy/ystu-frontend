@@ -43,7 +43,7 @@
 }
 
 .navbar__phone::before {
-    content: url(/images/svg/call.svg);
+    content: url(../../images/svg/call.svg);
     display: inline-block;
     width: 22px;
     height: 22px;

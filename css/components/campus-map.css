@@ -100,7 +100,7 @@
     width: 24px;
     height: 24px;
     flex: 0 0 24px;
-    background: url('/images/svg/triangle-down.svg') center / 24px no-repeat;
+    background: url('../../images/svg/triangle-down.svg') center / 24px no-repeat;
     transition: transform 180ms ease;
 }
 
@@ -113,7 +113,7 @@
 }
 
 .campus-filter.is-selected:not([open]) .campus-filter__icon {
-    background-image: url('/images/svg/campus-close.svg');
+    background-image: url('../../images/svg/campus-close.svg');
 }
 
 .campus-filter__panel {
