@@ -34,12 +34,6 @@
     display: grid;
 }
 
-.mega-menu ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
 .mega-menu__primary,
 .mega-menu__section {
     height: 630px;
@@ -54,16 +48,15 @@
     gap: 24px;
 }
 
-.mega-menu__primary > li,
-.mega-menu__links > li {
+.mega-menu__primary > a,
+.mega-menu__links > a {
     position: relative;
     width: 100%;
 }
 
 .mega-menu__primary-link, .mega-menu__primary-link:visited {
     position: relative;
-    width: fit-content;
-    max-width: 100%;
+    width: 100%;
     padding: 2px 4px;
     display: block;
     color: var(--subprimary-color-1);
@@ -84,6 +77,15 @@
 }
 
 .mega-menu__primary-link.is-active {
+    isolation: isolate;
+}
+
+.mega-menu__primary-link.is-active::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0 auto 0 0;
+    width: var(--mega-menu-text-width, 0);
     background: var(--subprimary-color-5);
 }
 
@@ -211,20 +213,20 @@
         border-right: 0;
     }
 
-    .mega-menu__primary > li {
+    .mega-menu__primary > a {
         width: 100%;
     }
 
     .mega-menu__primary-link {
         position: relative;
-        width: fit-content;
+        width: 100%;
         padding: 0;
         color: var(--subprimary-color-1) !important;
         font-size: 16px;
     }
 
-    .mega-menu__primary > li:has(> .mega-menu__primary-link.has-submenu)::after,
-    .mega-menu__links > li:has(> a.has-submenu)::after {
+    .mega-menu__primary-link.has-submenu::after,
+    .mega-menu__links a.has-submenu::after {
         content: "";
         position: absolute;
         top: 50%;
@@ -245,7 +247,9 @@
         color: var(--subprimary-color-1);
     }
 
-    .mega-menu ul {
+    .mega-menu__primary,
+    .mega-menu__links,
+    .mega-menu__additional {
         margin-bottom: 20px;
     }
 

@@ -71,7 +71,7 @@
 
     if (openBtn && megaMenu) {
         const menuItems = megaMenu.querySelectorAll(
-            '.mega-menu__primary > li, .mega-menu__section, .mega-menu__additional > li',
+            '.mega-menu__primary > a, .mega-menu__section, .mega-menu__additional > a',
         );
         const navbarPanel = header.querySelector('.navbar__panel');
         const mobileTools = document.createElement('div');
@@ -90,6 +90,31 @@
         const submenuLinks = [...megaMenu.querySelectorAll('[data-menu-section]')];
         const submenuPanels = [...megaMenu.querySelectorAll('[data-menu-panel]')];
 
+        const getTextRect = (link) => {
+            const range = document.createRange();
+
+            range.selectNodeContents(link);
+            const textRect = range.getBoundingClientRect();
+            range.detach();
+
+            return textRect;
+        };
+
+        const updateTextHighlight = (link) => {
+            const textWidth = Math.ceil(getTextRect(link).width) + 8;
+
+            link.style.setProperty('--mega-menu-text-width', `${textWidth}px`);
+        };
+
+        const isTextClick = (link, event) => {
+            const textRect = getTextRect(link);
+
+            return event.clientX >= textRect.left
+                && event.clientX <= textRect.right
+                && event.clientY >= textRect.top
+                && event.clientY <= textRect.bottom;
+        };
+
         const resetSubmenu = () => {
             megaMenu.classList.remove('mega-menu--submenu-open');
             submenuLinks.forEach((link) => link.setAttribute('aria-expanded', 'false'));
@@ -103,6 +128,7 @@
         const openSubmenu = (trigger, panel) => {
             resetSubmenu();
             trigger.classList.add('is-active');
+            updateTextHighlight(trigger);
             trigger.setAttribute('aria-expanded', 'true');
             panel.classList.add('is-open');
             panel.setAttribute('aria-hidden', 'false');
@@ -143,10 +169,8 @@
             trigger.setAttribute('aria-controls', panel.id);
             trigger.setAttribute('aria-expanded', 'false');
 
-            const triggerRow = trigger.closest('li') || trigger;
-
-            triggerRow.addEventListener('click', (event) => {
-                if (trigger.classList.contains('is-muted') || trigger.contains(event.target)) {
+            trigger.addEventListener('click', (event) => {
+                if (trigger.classList.contains('is-muted') || isTextClick(trigger, event)) {
                     return;
                 }
 
