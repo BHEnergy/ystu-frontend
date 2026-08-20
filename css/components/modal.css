@@ -157,6 +157,24 @@
     font-size: 18px;
 }
 
+.modal-success {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.modal-success__title {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--subprimary-color-1);
+}
+
+.modal-success__text {
+    font-size: 18px;
+}
+
 @media (max-width: 768px) {
     .modal-body {
         padding: 24px 16px;

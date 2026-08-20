@@ -26,7 +26,7 @@
     width: 100%;
     max-height: 40px;
     padding: 10px 16px;
-    color: var(--subprimary-color-1);
+    color: var(--black-shade-1);
     background: var(--white-shade-1);
     border: 1px solid var(--subprimary-color-2);
     border-radius: 4px;
@@ -40,6 +40,20 @@
 .catalog-search__input::placeholder {
     color: var(--subprimary-color-1);
     opacity: 1;
+}
+
+.catalog-search__input::-webkit-search-cancel-button,
+.catalog-search__input::-webkit-search-decoration {
+    display: none;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.catalog-search__input::-ms-clear,
+.catalog-search__input::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
 }
 
 .catalog-search__button {

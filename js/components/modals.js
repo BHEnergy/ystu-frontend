@@ -47,6 +47,29 @@ document.querySelectorAll('.modal').forEach((modal) => {
     });
 });
 
+document.querySelectorAll('.modal-form').forEach((form) => {
+    const fileInput = form.querySelector('input[type="file"]');
+    const fileButton = form.querySelector('.modal-form__file-button');
+    let fileName = form.querySelector('.modal-form__file-name');
+
+    if (fileInput && fileButton && !fileName) {
+        fileName = document.createElement('span');
+        fileName.className = 'modal-form__file-name';
+        fileName.setAttribute('aria-live', 'polite');
+        fileName.hidden = true;
+        fileButton.after(fileName);
+    }
+
+    fileInput?.addEventListener('change', () => {
+        const selectedFile = fileInput.files?.[0];
+
+        if (!fileName) return;
+
+        fileName.textContent = selectedFile?.name || '';
+        fileName.hidden = !selectedFile;
+    });
+});
+
 document.addEventListener('keydown', (event) => {
     if (!activeModal) return;
 
@@ -69,3 +92,5 @@ document.addEventListener('keydown', (event) => {
         firstElement.focus();
     }
 });
+
+window.Modals = { close: closeModal };

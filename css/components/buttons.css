@@ -3,6 +3,7 @@
     border: none;
     font-family: 'GoogleSans', sans-serif;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
 .btn--default {
@@ -46,4 +47,22 @@
     color: var(--primary-color-2) !important;
     background: none;
     border: 1px solid var(--primary-color-2);
+}
+
+@media (hover: hover) {
+    .btn--default:hover {
+        background-color: var(--primary-color-3);
+    }
+
+    .btn--blue:hover {
+        background-color: var(--subprimary-color-2);
+    }
+
+    .btn--white:hover {
+        background-color: var(--subprimary-color-7);
+    }
+
+    .btn--reverse:hover {
+        background: var(--subprimary-color-7);
+    }
 }

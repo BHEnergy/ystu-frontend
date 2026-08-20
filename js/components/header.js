@@ -287,6 +287,17 @@
             });
         });
 
+        document.addEventListener('click', (event) => {
+            if (
+                !header.classList.contains('header--menu-open')
+                || header.contains(event.target)
+            ) {
+                return;
+            }
+
+            openBtn.click();
+        });
+
         document.addEventListener('keydown', (event) => {
             if (!header.classList.contains('header--menu-open')) {
                 return;

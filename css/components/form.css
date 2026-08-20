@@ -1,6 +1,12 @@
-/* Пару управляющий классов */
+/* Пару управляющих классов */
 .visually-hidden {
     display: none;
+}
+
+.error-text {
+    display: block;
+    font-size: 12px;
+    color: var(--error-color-2);
 }
 
 /* Форма в модальном окне */
@@ -9,7 +15,13 @@
     gap: 24px;
 }
 
-.modal-form > input,
+.input--container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.input--container input,
 .modal-form textarea {
     position: relative;
     z-index: 1;
@@ -24,7 +36,7 @@
     font-size: 16px;
 }
 
-.modal-form > input {
+.input--container input {
     height: 48px;
 }
 
@@ -34,13 +46,13 @@
     resize: none;
 }
 
-.modal-form > input::placeholder,
+.input--container input::placeholder,
 .modal-form textarea::placeholder {
     color: #4779b8;
     opacity: 1;
 }
 
-.modal-form > input:focus-visible,
+.input--container > input:focus-visible,
 .modal-form textarea:focus-visible,
 .modal-form__file:focus-within .modal-form__file-button {
     outline: 2px solid var(--subprimary-color-1);
@@ -79,6 +91,16 @@
     height: 18px;
 }
 
+.modal-form__file-name {
+    max-width: 100%;
+    overflow: hidden;
+    color: var(--black-shade-1);
+    font-size: 16px;
+    line-height: 1.2;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .modal-form__checkboxes {
     gap: 16px;
     margin-top: 24px;
@@ -94,6 +116,7 @@
 }
 
 .checkbox--container input {
+    position: relative;
     width: 18px;
     height: 18px;
     margin: 0;
@@ -102,16 +125,72 @@
     background: transparent;
     border: 1px solid #4779b8;
     border-radius: 2px;
+    transition: background-color 160ms ease, border-color 160ms ease;
+    cursor: pointer;
 }
 
 .checkbox--container input:checked {
-    background: var(--subprimary-color-1);
-    box-shadow: inset 0 0 0 3px var(--subprimary-color-7);
+    background-color: var(--subprimary-color-1);
+    border-color: var(--subprimary-color-1);
 }
 
-.checkbox--container a {
-    color: var(--primary-color-1);
+.checkbox--container input::after {
+    content: "";
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    width: 32%;
+    height: 58%;
+    border-right: 2px solid var(--white-shade-1);
+    border-bottom: 2px solid var(--white-shade-1);
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(45deg) scale(0.25);
+    transform-origin: center;
+    pointer-events: none;
+}
+
+.checkbox--container input:checked::after {
+    opacity: 1;
+    animation: modal-checkbox-check 260ms cubic-bezier(0.22, 1.45, 0.45, 1) both;
+}
+
+@keyframes modal-checkbox-check {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) rotate(45deg) scale(0.25);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translate(-50%, -50%) rotate(45deg) scale(1.12);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) rotate(45deg) scale(1);
+    }
+}
+
+.checkbox--container a, .checkbox--container a:visited {
+    color: var(--primary-color-1) !important;
     text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .checkbox--container input {
+        transition: none;
+    }
+
+    .checkbox--container input:checked::after {
+        animation: none;
+        transform: translate(-50%, -50%) rotate(45deg) scale(1);
+    }
+}
+
+@media (hover: hover) {
+    .checkbox--container input:hover {
+        border: 1px solid var(--subprimary-color-1);
+    }
 }
 
 @media(max-width: 768px) {
@@ -119,7 +198,7 @@
         gap: 16px;
     }
 
-    .modal-form > input {
+    .input--container > input {
         height: 44px;
         padding: 0 15px;
     }

@@ -228,21 +228,40 @@
         });
     };
 
-    /* Здесь инициализируем библиотеки */
+    const loadScripts = async (scripts) => {
+        const results = await Promise.allSettled(
+            scripts.map(([fileName, globalName]) => loadScript(fileName, globalName)),
+        );
+
+        results.forEach((result, index) => {
+            if (result.status === 'rejected') {
+                console.error(result.reason, { fileName: scripts[index][0] });
+            }
+        });
+    };
+
+    /* Здесь инициализируем библиотеки и независимые компоненты */
     const initLibraries = async () => {
-        await Promise.all([
-            loadScript("bootstrap.min.js", "bootstrap"),
-            loadScript("swiper-bundle.min.js", "Swiper"),
-            loadScript('gsap.min.js', "gsap"),
-            loadScript("tabs.js", "Tabs"),
-            loadScript("header.js", "Header"),
-            loadScript("dropdown.js", "Dropdown"),
-            loadScript("filter-panel.js", "FilterPanel"),
-            loadScript("campus-map.js", "CampusMap"),
-            loadScript("modals.js", "Modals")
+        await loadScripts([
+            ["bootstrap.min.js", "bootstrap"],
+            ["swiper-bundle.min.js", "Swiper"],
+            ["imask.js", "IMask"],
+            ['gsap.min.js', "gsap"],
         ]);
 
-        initSwiper();
+        await loadScripts([
+            ["tabs.js", "Tabs"],
+            ["header.js", "Header"],
+            ["dropdown.js", "Dropdown"],
+            ["filter-panel.js", "FilterPanel"],
+            ["campus-map.js", "CampusMap"],
+            ["modals.js", "Modals"],
+            ["validation.js", "Validation"],
+        ]);
+
+        if (typeof window.Swiper === 'function') {
+            initSwiper();
+        }
     };
 
     const start = () => {
