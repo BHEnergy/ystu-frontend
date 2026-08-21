@@ -50,24 +50,25 @@ document.querySelectorAll('.modal').forEach((modal) => {
 document.querySelectorAll('.modal-form').forEach((form) => {
     const fileInput = form.querySelector('input[type="file"]');
     const fileButton = form.querySelector('.modal-form__file-button');
-    let fileName = form.querySelector('.modal-form__file-name');
+    const fileLabel = fileButton?.querySelector('.modal-form__file-label');
+    const defaultFileLabel = fileLabel?.textContent.trim() || 'Прикрепить файл';
 
-    if (fileInput && fileButton && !fileName) {
-        fileName = document.createElement('span');
-        fileName.className = 'modal-form__file-name';
-        fileName.setAttribute('aria-live', 'polite');
-        fileName.hidden = true;
-        fileButton.after(fileName);
-    }
+    const updateFileLabel = () => {
+        const selectedFile = fileInput?.files?.[0];
 
-    fileInput?.addEventListener('change', () => {
-        const selectedFile = fileInput.files?.[0];
+        if (!fileLabel) return;
 
-        if (!fileName) return;
+        fileLabel.textContent = selectedFile?.name || defaultFileLabel;
 
-        fileName.textContent = selectedFile?.name || '';
-        fileName.hidden = !selectedFile;
-    });
+        if (selectedFile) {
+            fileButton.title = selectedFile.name;
+        } else {
+            fileButton.removeAttribute('title');
+        }
+    };
+
+    fileInput?.addEventListener('change', updateFileLabel);
+    form.addEventListener('reset', () => window.setTimeout(updateFileLabel));
 });
 
 document.addEventListener('keydown', (event) => {

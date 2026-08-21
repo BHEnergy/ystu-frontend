@@ -257,6 +257,7 @@
             ["campus-map.js", "CampusMap"],
             ["modals.js", "Modals"],
             ["validation.js", "Validation"],
+            ["cookie.js", "Cookie"],
         ]);
 
         if (typeof window.Swiper === 'function') {

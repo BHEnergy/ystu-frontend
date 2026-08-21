@@ -54,7 +54,7 @@
     const openBtn = header.querySelector('[data-trigger="open-menu"]');
     const megaMenu = header.querySelector('.mega-menu');
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const mobileMenuMedia = window.matchMedia('(max-width: 768px)');
+    const mobileMenuMedia = window.matchMedia('(max-width: 1100px)');
 
     if (openBtn && !openBtn.querySelector('.btn__menu-label')) {
         const labelNode = [...openBtn.childNodes].find(
@@ -89,6 +89,7 @@
 
         const submenuLinks = [...megaMenu.querySelectorAll('[data-menu-section]')];
         const submenuPanels = [...megaMenu.querySelectorAll('[data-menu-panel]')];
+        let primaryMenuScrollTop = 0;
 
         const getTextRect = (link) => {
             const range = document.createRange();
@@ -127,6 +128,12 @@
 
         const openSubmenu = (trigger, panel) => {
             resetSubmenu();
+
+            if (mobileMenuMedia.matches) {
+                primaryMenuScrollTop = megaMenu.scrollTop;
+                megaMenu.scrollTop = 0;
+            }
+
             trigger.classList.add('is-active');
             updateTextHighlight(trigger);
             trigger.setAttribute('aria-expanded', 'true');
@@ -156,6 +163,13 @@
                 backButton.textContent = 'Назад';
                 backButton.addEventListener('click', () => {
                     resetSubmenu();
+
+                    if (mobileMenuMedia.matches) {
+                        megaMenu.scrollTop = primaryMenuScrollTop;
+                        trigger?.focus({ preventScroll: true });
+                        return;
+                    }
+
                     trigger?.focus();
                 });
                 panel.prepend(backButton);
@@ -334,7 +348,8 @@
                 );
 
                 resetSubmenu();
-                activeTrigger?.focus();
+                megaMenu.scrollTop = primaryMenuScrollTop;
+                activeTrigger?.focus({ preventScroll: true });
                 return;
             }
 

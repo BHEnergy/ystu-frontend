@@ -158,6 +158,13 @@ img {
     min-height: 100%;
 }
 
+@media (max-width: 992px) {
+    :root {
+        --container-padding: 24px;
+    }
+}
+
+
 @media (max-width: 576px) { 
     :root {
         --container-padding: 16px;

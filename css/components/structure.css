@@ -34,7 +34,7 @@
 
 .structure__institutes {
     display: grid;
-    grid-template-columns: repeat(4, minmax(330px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     gap: 24px;
 }
 
@@ -105,10 +105,27 @@
 }
 
 /* Устройства X-Large (большие настольные компьютеры, 1200 пикселей и выше) */
-@media (max-width: 1200px) { }
+@media (max-width: 1200px) {
+    .structure__institutes {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .structure__institute-title {
+        font-size: 18px;
+    }
+}
 
 /* Устройства Large (настольные компьютеры, 992 пикселей и выше) */
-@media (max-width: 992px) { }
+@media (max-width: 992px) {
+    .structure__tags {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .structure__tag {
+        padding: 14px 24px;
+    }
+}
 
 /* Устройства Medium (планшеты, 768 пикселей и выше) */
 @media (max-width: 768px) { 
@@ -175,4 +192,3 @@
         gap: 16px;
     }
 }
-    

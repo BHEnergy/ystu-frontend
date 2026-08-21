@@ -70,6 +70,11 @@
     background: #fff;
 }
 
+.header__menu > a:first-child,
+.header__menu > .btn__menu {
+    flex-shrink: 0;
+}
+
 .main-nav {
     display: flex;
     color: var(--subprimary-color-1);
@@ -192,14 +197,45 @@
     }
 }
 
-/* Устройства X-Large (большие настольные компьютеры, 1200 пикселей и выше) */
-@media (max-width: 1200px) { }
+@media (max-width: 1420px) {
+    .navbar {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
 
-/* Устройства Large (настольные компьютеры, 992 пикселей и выше) */
-@media (max-width: 992px) { }
+    .secondary-nav {
+        font-size: 15px;
+        gap: 12px;
+    }
 
-/* Устройства Medium (планшеты, 768 пикселей и выше) */
-@media (max-width: 768px) {
+    .header__menu {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+    .main-nav {
+        gap: 10px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .secondary-nav {
+        gap: 8px;
+        font-size: 13px;
+    }
+
+    .navbar__phone,
+    .main-nav {
+        font-size: 13px;
+    }
+
+    .main-nav {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 1100px) {
     .header__top {
         display: none;
     }

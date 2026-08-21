@@ -223,6 +223,11 @@
         & .default-slider-controls {
             position: absolute;
             bottom: -20px;
+
+            & .swiper-button-next.big,
+            & .swiper-button-prev.big {
+                top: -244px;
+            }
         }
     }
 }

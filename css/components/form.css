@@ -74,6 +74,7 @@
 
 .modal-form__file-button {
     min-width: 220px;
+    max-width: 100%;
     height: 52px;
     padding: 0 24px;
     display: inline-flex;
@@ -87,16 +88,13 @@
 }
 
 .modal-form__file-button img {
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
 }
 
-.modal-form__file-name {
-    max-width: 100%;
+.modal-form__file-label {
+    min-width: 0;
     overflow: hidden;
-    color: var(--black-shade-1);
-    font-size: 16px;
-    line-height: 1.2;
     text-overflow: ellipsis;
     white-space: nowrap;
 }

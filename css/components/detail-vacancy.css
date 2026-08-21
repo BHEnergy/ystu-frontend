@@ -7,6 +7,7 @@
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
+    gap: 60px;
 }
 
 .detail-vacancy__content {
@@ -76,6 +77,12 @@
 .detail-vacancy__list.wyswig ul li::marker {
     content: '•';
     letter-spacing: 8px;
+}
+
+@media(max-width: 1440px) {
+    .detail-vacancy__resume {
+        flex: 1 1 auto;
+    }
 }
 
 @media (max-width: 576px) {

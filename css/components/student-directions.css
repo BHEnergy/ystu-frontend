@@ -82,6 +82,15 @@
     font-size: 18px;
 }
 
+
+@media(max-width: 1440px) {
+    .student-direction__content, .student-direction__gallery {
+        max-width: 708px;
+        flex: 0 0 49%;
+        min-height: unset;
+    }
+}
+
 @media (max-width: 991px) {
     .student-directions {
         margin-top: 80px;
