@@ -7,6 +7,7 @@
     background: var(--white-shade-4);
     border-radius: 10px;
     box-shadow: 0 4px 8px 3px rgb(0 0 0 / 30%);
+    z-index: 999;
 }
 
 .cookie-body {
