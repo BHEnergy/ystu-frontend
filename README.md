@@ -14,12 +14,12 @@ main.js - подключение сторонних библиотек и ком
 2. [404.html](https://bhenergy.github.io/ystu-frontend/pages/404.html) - Страница 404
 3. [detail-sotrudnik.html](https://bhenergy.github.io/ystu-frontend/pages/detail-sotrudnik.html) - Страница детальная сотрудника
 4. [detail-structure.html](https://bhenergy.github.io/ystu-frontend/pages/detail-structure.html) - Страница детальная структурного подразделения
-5. [detail-vacancy.html](https://bhenergy.github.io/ystu-frontend/pages/detail-structure.html) - Страница детальная вакансии
+5. [detail-vacancy.html](https://bhenergy.github.io/ystu-frontend/pages/detail-vacancy.html) - Страница детальная вакансии
 6. [map.html](https://bhenergy.github.io/ystu-frontend/pages/map.html) - Страница карты
 7. [nauka.html](https://bhenergy.github.io/ystu-frontend/pages/nauka.html) - Страница детальная науки и иноваций
 8. [news-events.html](https://bhenergy.github.io/ystu-frontend/pages/news-events.html) - Страница новостей и событий
 9. [program.html](https://bhenergy.github.io/ystu-frontend/pages/program.html) - Детальная страница программы
-10. [programs.html](https://bhenergy.github.io/ystu-frontend/pages/[programs.html) - Страница со списком программ
+10. [programs.html](https://bhenergy.github.io/ystu-frontend/pages/programs.html) - Страница со списком программ
 11. [search.html](https://bhenergy.github.io/ystu-frontend/pages/search.html) - Страница поиска
 12. [structure.html](https://bhenergy.github.io/ystu-frontend/pages/structure.html) - Страница структуры Университета
 13. [student-life.html](https://bhenergy.github.io/ystu-frontend/pages/student-life.html) - Страница "Студенческая жизнь"
