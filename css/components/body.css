@@ -1,6 +1,6 @@
 .main {
     flex: 1 1 auto;
-    padding-top: var(--header-height);
+    padding-top: calc(var(--header-height) - 5px);
 }
 
 .main--header-overlay {

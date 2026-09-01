@@ -7,7 +7,7 @@ tabs.forEach( (tab) => {
             let currentTab = tab.closest('.events__wrapper').querySelector('.active.tab');
             let activeTabContainer = tab.closest('.events__wrapper').querySelectorAll('.active[data-value="tab-container"]');
             let selectTabContainer = tab.closest('.events__wrapper').querySelectorAll(`[data-value="tab-container"][data-tab="${tab.dataset.tab}"]`);
-            
+
             clickTab.classList.replace('unactive', 'active');
             currentTab.classList.replace('active', 'unactive');
             activeTabContainer.forEach( (tabContainer) => {
@@ -17,5 +17,17 @@ tabs.forEach( (tab) => {
                 tabContainer.classList.replace('unactive', 'active');
             });
         }
+    })
+});
+
+/* Получаем все тэги */
+let tags = document.querySelectorAll('.tag');
+tags.forEach( (tag) => {
+    tag.addEventListener('click', () => {
+        let clickTag = tag;
+        let currentTag = tag.closest('.structure__tags').querySelector('.tag.select');
+
+        clickTag.classList.add('select');
+        currentTag.classList.remove('select');
     })
 });

@@ -1,6 +1,7 @@
 .error-page {
-    height: 65vh;
+    max-height: 600px;
     align-content: center;
+    padding: 182px 0;
 }
 
 .error-page__container {
@@ -14,6 +15,15 @@
     font-size: 18px;
 }
 
+.error-page .btn {
+    font-weight: 600;
+    font-size: 18px;
+    min-height: 54px;
+    max-width: 267px;
+    white-space: nowrap;
+    width: 100%;
+}
+
 /* Устройства X-Large (большие настольные компьютеры, 1200 пикселей и выше) */
 @media (max-width: 1200px) { }
 
@@ -25,6 +35,9 @@
 
 /* Устройства Small (телефоны с горизонтальной ориентацией, 576 пикселей и выше) */
 @media (max-width: 576px) { 
+    .error-page {
+        padding: 110px 0;
+    }
     .error-page__container {
         align-items: center;
     }
@@ -32,5 +45,14 @@
     .error-page__description {
         max-width: 340px;
         font-size: 16px;
+    }
+
+    .error-page .btn {
+        font-weight: 500;
+        font-size: 16px;
+        padding: 14px 24px;
+        min-height: 47px;
+        max-height: 47px;
+        max-width: 212px;
     }
 }

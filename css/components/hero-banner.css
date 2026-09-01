@@ -113,7 +113,19 @@
     }
 }
 
+@media (max-width: 992px) {
+    .program-page .hero-banner > .container {
+        padding-top: max(var(--header-height), 118px);
+    }
+}
+
 @media (max-width: 576px) {
+    .program-page .hero-banner > .container {
+        padding-top: max(var(--header-height), 102px);
+    }
+}
+
+@media (max-width: 768px) {
     .hero-banner,
     .hero-banner > .container {
         min-height: 590px;

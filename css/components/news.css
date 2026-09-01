@@ -12,10 +12,11 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    max-height: 588px;
 }
 
 .news__content {
-    padding: 24px 16px;
+    padding: 24px 16px 40px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -36,8 +37,9 @@
 
 .news__title {
     font-size: 24px;
-    color: var(--subprimary-color-1);
+    color: var(--subprimary-color-1) !important;
     font-weight: 700;
+    min-height: 120px;
 }
 
 .news__tags {
@@ -62,6 +64,14 @@
     display: block;
     width: 100%;
     height: auto;
+}
+
+.news__container > .btn {
+    font-weight: 600;
+    font-size: 18px;
+    max-width: 190px;
+    width: 100%;
+    min-height: 54px;
 }
 
 @media (max-width: 992px) {

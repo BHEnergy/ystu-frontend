@@ -1,10 +1,11 @@
 .information-banner {
     background-color: var(--subprimary-color-1);
-    padding: 9px 0;
+    padding: 10px 0 8px;
     color: var(--white-shade-1);
     position: relative;
     overflow: hidden;
     z-index: 1;
+    max-height: 60px;
 }
 
 .information-banner::before {
@@ -43,11 +44,16 @@
     text-transform: uppercase;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 1100px) {
+    .information-banner {
+        padding: 11px 0;
+        max-height: 80px;
+    }
+
     .information-banner__body {
         display: grid;
         grid-template: 'A C' 'B C';
-        gap: 8px 20px;
+        gap: 10px 20px;
         justify-content: space-between;
     }
 

@@ -95,6 +95,20 @@
     max-width: 1010px;
 }
 
+@media (max-width: 1200px) {
+    .sotrudnik {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .sotrudnik__info,
+    .sotrudnik__contacts {
+        width: 100%;
+        max-width: none;
+        flex-basis: auto;
+    }
+}
+
 @media (max-width: 768px) {
     .sotrudnik {
         flex-direction: column !important;

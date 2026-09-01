@@ -9,7 +9,7 @@
 .ficher {
     position: relative;
     isolation: isolate;
-    min-height: 276px;
+    min-height: 294px;
     padding: 36px 50px;
     overflow: hidden;
     border-radius: 16px;
@@ -48,20 +48,6 @@
     font-size: 28px;
     text-align: center;
     transition: color 240ms ease;
-}
-
-.ficher:hover::before {
-    transform: scaleY(1);
-}
-
-.ficher:hover .ficher__icon {
-    opacity: 0;
-    transform: translateY(-32px) scale(0.88);
-}
-
-.ficher:hover .ficher__text {
-    align-self: start;
-    color: var(--white-shade-1);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -122,5 +108,21 @@
     .ficher__text {
         font-size: 20px;
         width: 100%;
+    }
+}
+
+@media (hover: hover) {
+    .ficher:hover::before {
+        transform: scaleY(1);
+    }
+
+    .ficher:hover .ficher__icon {
+        opacity: 0;
+        transform: translateY(-32px) scale(0.88);
+    }
+
+    .ficher:hover .ficher__text {
+        align-self: start;
+        color: var(--white-shade-1);
     }
 }

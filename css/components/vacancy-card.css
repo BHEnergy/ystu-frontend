@@ -1,6 +1,7 @@
 .vacancy-card {
     position: relative;
     min-height: 304px;
+    max-height: 304px;
     overflow: hidden;
     padding: 40px;
     background: var(--white-shade-4);
@@ -52,6 +53,11 @@
 
 .vacancy-card__button {
     margin-top: 16px;
+    padding: 16px 32px;
+    max-height: 51px;
+    font-weight: 600;
+    max-width: 153px;
+    width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -65,6 +71,7 @@
 
     .vacancy-card {
         min-height: 243px;
+        max-height: 243px;
         padding: 24px 16px 20px;
         border-radius: 8px;
     }
@@ -102,8 +109,11 @@
     }
 
     .vacancy-card__button {
-        width: 100%;
+        width: calc(100% - 10px);
         margin-top: 8px;
         text-align: center;
+        max-width: unset;
+        max-height: 47px;
+        font-weight: 500;
     }
 }

@@ -4,6 +4,7 @@
     background-image: url(../../images/svg/ystu.svg);
     background-repeat: no-repeat;
     background-position: top right;
+    box-shadow: inset 20px 10px 70px 24px rgb(0 0 30 / 30%);
 }
 
 .university-statistics__container {
@@ -42,6 +43,10 @@
     color: var(--white-shade-1);
     font-weight: 700;
     margin-top: 40px;
+    font-size: 18px;
+    max-width: 234px;
+    width: 100%;
+    min-height: 54px;
 }
 
 .university-statistics__numbers {
@@ -67,12 +72,25 @@
     text-transform: uppercase;
 }
 
-@media(max-width: 768px) {
+
+
+@media (max-width: 1440px) {
+    .university-statistics__number {
+        font-size: 80px;
+    }
+}
+
+
+@media(max-width: 1100px) {
     .university-statistics {
         margin-bottom: 60px;
         background-size: 436px;
         background-position-x: 125px;
         background-position-y: -30px;
+    }
+
+    .university-statistics .structure__institutes {
+        padding-right: 8px;
     }
 
     .university-statistics__container {
@@ -101,11 +119,18 @@
 
     .university-statistics__button {
         padding: 14px 24px;
+        max-width: 181px;
+        min-height: 47px;
+        white-space: nowrap;
+        max-height: 47px;
+        font-size: 16px;
+        font-weight: 500;
     }
 
     .university-statistics__numbers {
-        gap: 16px 24px;
+        gap: 24px 16px;
         grid-template-columns: repeat(2, minmax(170px, 1fr));
+        height: 208px;
     }
 
     .university-statistics__number-item {
