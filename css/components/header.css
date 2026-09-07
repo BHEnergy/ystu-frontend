@@ -118,6 +118,8 @@
     opacity: 1;
     white-space: nowrap;
     transition: max-width 260ms cubic-bezier(.4, 0, .2, 1), opacity 180ms ease, display 260ms allow-discrete;
+    height: 20px;
+    align-content: end;
 }
 
 .btn__burger {
