@@ -22,11 +22,18 @@
 
 .student-driving__gallery {
     min-width: 0;
-    min-height: 518px;
+    max-height: 520px;
     flex: 0 0 60%;
     max-width: 832px;
     border-radius: 16px;
     overflow: hidden;
+}
+
+.student-driving__content .btn {
+    font-weight: 600;
+    height: 54px;
+    max-width: 180px;
+    width: 100%;
 }
 
 .student-driving__gallery img {
@@ -78,6 +85,13 @@
     .student-driving__content {
         font-size: 16px;
         line-height: 1.2;
+    }
+
+    .student-driving__content .btn {
+        height: 47px;
+        font-weight: 500;
+        max-width: 136px;
+        padding: 14px 24px;
     }
 
     .student-driving__gallery {

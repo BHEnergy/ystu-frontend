@@ -20,7 +20,7 @@
     background: var(--subprimary-color-7);
     border-radius: 12px;
     padding: 24px;
-    min-height: 200px;
+    min-height: 193px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -48,8 +48,9 @@
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    padding: 23px 0;
+    padding: 16px 0;
     border-bottom: 1px solid var(--subprimary-color-2);
+    max-height: 80px;
 }
 
 .program-exams__examples summary::marker, .program-exams__examples summary::-webkit-details-marker {
@@ -89,6 +90,7 @@
         min-height: 0;
         padding: 24px 16px;
         gap: 40px;
+        max-height: 141px;
     }
 
     .program-exams__item__title {

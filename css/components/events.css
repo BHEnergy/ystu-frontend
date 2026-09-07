@@ -354,7 +354,7 @@
 
     .event__card {
         border-radius: 8px;
-        min-height: unset;
+        min-height: 550px;
     }
 
     .event__photo {

@@ -108,6 +108,7 @@
     overflow: hidden;
     white-space: nowrap;
     transition: width 320ms cubic-bezier(.4, 0, .2, 1), height 320ms cubic-bezier(.4, 0, .2, 1), gap 260ms ease, padding 320ms cubic-bezier(.4, 0, .2, 1), border-radius 320ms ease;
+    align-items: center;
 }
 
 .btn__menu-label {
@@ -294,9 +295,36 @@
     .header__top {
         display: none;
     }
+
+    .header__menu > .btn__menu {
+        padding: 12px 18px;
+        max-width: 110px;
+    }
+
     .header__wrapper {
         margin-top: 0;
     }
+
+    .btn__burger {
+        width: 16px;
+        height: 12px;
+        flex: 0 0 16px;
+    }
+
+    .btn__burger__line:nth-child(2) {
+        top: 3.4px;
+        width: 10px;
+    }
+
+    .btn__burger__line:nth-child(3) {
+        top: 6px;
+    }
+
+    .btn__burger__line:nth-child(4) {
+        top: 9px;
+        width: 10px;
+    }
+
     .header__menu {
         min-height: 72px;
         width: calc(100% + var(--container-padding)*2);

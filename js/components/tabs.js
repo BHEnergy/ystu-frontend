@@ -31,3 +31,15 @@ tags.forEach( (tag) => {
         currentTag.classList.remove('select');
     })
 });
+
+/* Табы структуры */
+let structureTabs = document.querySelectorAll('.structure-detail__tab');
+structureTabs.forEach( (tab) => {
+    tab.addEventListener('click', () => {
+        let clickTab = tab;
+        let currentTab = tab.closest('.structure-detail__tabs').querySelector('.select');
+
+        clickTab.classList.add('select');
+        currentTab.classList.remove('select');
+    })
+});

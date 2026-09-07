@@ -18,6 +18,7 @@
     font-size: 16px;
     font-weight: 600;
     width: 52px;
+    height: 44px;
     text-align: center;
 }
 
@@ -53,7 +54,7 @@
 
     .pagination__button-prev,
     .pagination__button-next {
-        flex: 0 0 16px;
-        width: 16px;
+        flex: 0 0 20px;
+        height: 20px;
     }
 }

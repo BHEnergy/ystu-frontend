@@ -106,6 +106,7 @@
         width: calc(100% + var(--container-padding) / 2);
         margin-left: -4px;
         max-height: unset;
+        min-height: 578px;
     }
 
     .preparatory-courses::before {
@@ -122,10 +123,13 @@
 
     .preparatory-courses__title {
         font-size: 24px;
+        margin-bottom: 16px;
     }
 
     .preparatory-courses__description {
         font-size: 16px;
+        margin-bottom: 16px;
+        width: 85%;
     }
 
     .preparatory-courses__media {

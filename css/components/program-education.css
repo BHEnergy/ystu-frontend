@@ -51,6 +51,9 @@
 .program-education__caption .btn {
     border-radius: 10px;
     font-weight: 600;
+    max-height: 54px;
+    max-width: 276px;
+    white-space: nowrap;
 }
 
 @media(max-width: 768px) {
@@ -60,6 +63,7 @@
 
     .program-education__name {
         font-size: 20px;
+        flex: 0 1 72%;
     }
 
     .program-education__title {
@@ -88,7 +92,9 @@
     .program-education__caption .btn {
         order: 3;
         align-self: flex-start;
-        padding: 14px 24px;
+        padding: 14px 20px;
+        height: 47px;
+        max-width: 219px;
     }
 
     .program-exams__examples summary {

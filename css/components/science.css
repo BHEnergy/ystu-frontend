@@ -56,6 +56,13 @@
     font-size: 16px;
 }
 
+.science-detail__info .btn {
+    font-weight: 600;
+    max-width: 153px;
+    height: 51px;
+    width: 100%;
+}
+
 .science-detail__description {
     max-width: 835px;
     font-size: 18px;
@@ -105,11 +112,23 @@
         max-height: unset;
     }
 
+    .science-detail__info .btn {
+        max-width: 130px;
+        font-size: 15px;
+        height: 46px;
+        font-weight: 500;
+        padding: 14px 24px;
+    }
+
     .science-detail__info dt {
         font-size: 14px;
     }
 
     .science-detail__info dd {
         font-size: 15px;
+    }
+
+    .science-detail__title {
+        max-width: 276px;
     }
 }

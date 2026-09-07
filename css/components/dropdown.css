@@ -43,6 +43,6 @@
 
     .dropdown--header::after {
         height: 32px;
-        width: 32px;
+        max-width: 32px;
     }
 }
