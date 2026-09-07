@@ -102,32 +102,82 @@
               </div>
               Меню
             </button>
-            <nav class="mega-menu" id="main-mega-menu" aria-label="Основное меню">
+            <nav class="mega-menu" id="main-mega-menu" aria-label="Основное меню" data-hover-submenu>
               <div class="mega-menu__primary">
-                <a class="mega-menu__primary-link is-active" href="/pages/structure.html" data-menu-section="university" aria-current="true">Университет</a>
-                <a class="mega-menu__primary-link is-muted" href="/pages/student-life.html" data-menu-section="applicants">Поступающим</a>
-                <a class="mega-menu__primary-link is-muted" href="/pages/student-life.html" data-menu-section="students">Обучающимся</a>
-                <a class="mega-menu__primary-link is-muted" href="/pages/student-life.html" data-menu-section="school">Школьникам</a>
-                <a class="mega-menu__primary-link is-muted" href="/pages/student-life.html" data-menu-section="employees">Сотрудникам</a>
-                <a class="mega-menu__primary-link is-muted" href="/pages/student-life.html" data-menu-section="graduates">Выпускникам</a>
-                <a class="mega-menu__primary-link" href="vacancies.html" data-menu-section="vacancies">Работа в ЯГТУ</a>
-                <a class="mega-menu__primary-link" href="/pages/nauka.html" data-menu-section="education">Образование</a>
-                <a class="mega-menu__primary-link" href="/pages/nauka.html" data-menu-section="science">Наука и инновации</a>
-                <a class="mega-menu__primary-link" href="student-life.html" data-menu-section="student-life">Студенческая жизнь</a>
-                <a class="mega-menu__primary-link is-muted" href="/pages/news-events.html" data-menu-section="distance">Заочное обучение</a>
-                <a class="mega-menu__primary-link is-muted" href="/pages/news-events.html" data-menu-section="targeted">Целевое обучение</a>
+                <a class="mega-menu__primary-link has-submenu is-selected" href="/pages/structure.html" data-menu-section="university" aria-current="true">Университет</a>
+                <a class="mega-menu__primary-link has-submenu" href="/pages/student-life.html" data-menu-section="applicants">Поступающим</a>
+                <a class="mega-menu__primary-link has-submenu" href="/pages/student-life.html" data-menu-section="students">Обучающимся</a>
+                <a class="mega-menu__primary-link has-submenu" href="/pages/student-life.html" data-menu-section="school">Школьникам</a>
+                <a class="mega-menu__primary-link has-submenu" href="/pages/student-life.html" data-menu-section="employees">Сотрудникам</a>
+                <a class="mega-menu__primary-link has-submenu" href="/pages/student-life.html" data-menu-section="graduates">Выпускникам</a>
+                <a class="mega-menu__primary-link has-submenu" href="vacancies.html" data-menu-section="vacancies">Работа в ЯГТУ</a>
+                <a class="mega-menu__primary-link has-submenu" href="/pages/nauka.html" data-menu-section="education">Образование</a>
+                <a class="mega-menu__primary-link has-submenu" href="/pages/nauka.html" data-menu-section="science">Наука и инновации</a>
+                <a class="mega-menu__primary-link has-submenu" href="student-life.html" data-menu-section="student-life">Студенческая жизнь</a>
+                <a class="mega-menu__primary-link has-submenu" href="/pages/news-events.html" data-menu-section="distance">Заочное обучение</a>
+                <a class="mega-menu__primary-link has-submenu" href="/pages/news-events.html" data-menu-section="targeted">Целевое обучение</a>
               </div>
               <section class="mega-menu__section" data-menu-panel="university" aria-labelledby="mega-menu-university-title">
                 <h2 class="mega-menu__title" id="mega-menu-university-title">Университет</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="/pages/structure.html">Об университете</a>
                   <a class="is-muted" href="/pages/program.html">Программа развития</a>
-                  <a href="/pages/404.html">Органы управления (детальная)</a>
-                  <a href="/pages/404.html">Структура университета</a>
+                  <a class="is-muted" href="/pages/404.html">Органы управления (детальная)</a>
+                  <a class="is-muted" href="/pages/404.html">Структура университета</a>
                   <a class="is-muted" href="/pages/detail-sotrudnik.html">Все сотрудники</a>
                   <a class="is-muted" href="/pages/detail-sotrudnik.html">Научно-педагогический состав</a>
-                  <a href="/pages/map.html">Карта кампуса</a>
+                  <a class="is-muted" href="/pages/map.html">Карта кампуса</a>
                   <a class="is-muted" href="/pages/404.html">Партнеры</a>
+                </div>
+              </section>
+              <section class="mega-menu__section" data-menu-panel="applicants" aria-labelledby="mega-menu-applicants-title">
+                <h2 class="mega-menu__title" id="mega-menu-applicants-title">Поступающим</h2>
+                <div class="mega-menu__links">
+                  <a class="is-muted" href="#">Страница 1</a>
+                  <a class="is-muted" href="#">Страница 2</a>
+                  <a class="is-muted" href="#">Страница 3</a>
+                  <a class="is-muted" href="#">Страница 4</a>
+                  <a class="is-muted" href="#">Страница 5</a>
+                </div>
+              </section>
+              <section class="mega-menu__section" data-menu-panel="students" aria-labelledby="mega-menu-students-title">
+                <h2 class="mega-menu__title" id="mega-menu-students-title">Обучающимся</h2>
+                <div class="mega-menu__links">
+                  <a class="is-muted" href="#">Страница 1</a>
+                  <a class="is-muted" href="#">Страница 2</a>
+                  <a class="is-muted" href="#">Страница 3</a>
+                  <a class="is-muted" href="#">Страница 4</a>
+                  <a class="is-muted" href="#">Страница 5</a>
+                </div>
+              </section>
+              <section class="mega-menu__section" data-menu-panel="school" aria-labelledby="mega-menu-school-title">
+                <h2 class="mega-menu__title" id="mega-menu-school-title">Школьникам</h2>
+                <div class="mega-menu__links">
+                  <a class="is-muted" href="#">Страница 1</a>
+                  <a class="is-muted" href="#">Страница 2</a>
+                  <a class="is-muted" href="#">Страница 3</a>
+                  <a class="is-muted" href="#">Страница 4</a>
+                  <a class="is-muted" href="#">Страница 5</a>
+                </div>
+              </section>
+              <section class="mega-menu__section" data-menu-panel="employees" aria-labelledby="mega-menu-employees-title">
+                <h2 class="mega-menu__title" id="mega-menu-employees-title">Сотрудникам</h2>
+                <div class="mega-menu__links">
+                  <a class="is-muted" href="#">Страница 1</a>
+                  <a class="is-muted" href="#">Страница 2</a>
+                  <a class="is-muted" href="#">Страница 3</a>
+                  <a class="is-muted" href="#">Страница 4</a>
+                  <a class="is-muted" href="#">Страница 5</a>
+                </div>
+              </section>
+              <section class="mega-menu__section" data-menu-panel="graduates" aria-labelledby="mega-menu-graduates-title">
+                <h2 class="mega-menu__title" id="mega-menu-graduates-title">Выпускникам</h2>
+                <div class="mega-menu__links">
+                  <a class="is-muted" href="#">Страница 1</a>
+                  <a class="is-muted" href="#">Страница 2</a>
+                  <a class="is-muted" href="#">Страница 3</a>
+                  <a class="is-muted" href="#">Страница 4</a>
+                  <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
               <section class="mega-menu__section" data-menu-panel="vacancies" aria-labelledby="mega-menu-vacancies-title">
@@ -170,11 +220,31 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
+              <section class="mega-menu__section" data-menu-panel="distance" aria-labelledby="mega-menu-distance-title">
+                <h2 class="mega-menu__title" id="mega-menu-distance-title">Заочное обучение</h2>
+                <div class="mega-menu__links">
+                  <a class="is-muted" href="#">Страница 1</a>
+                  <a class="is-muted" href="#">Страница 2</a>
+                  <a class="is-muted" href="#">Страница 3</a>
+                  <a class="is-muted" href="#">Страница 4</a>
+                  <a class="is-muted" href="#">Страница 5</a>
+                </div>
+              </section>
+              <section class="mega-menu__section" data-menu-panel="targeted" aria-labelledby="mega-menu-targeted-title">
+                <h2 class="mega-menu__title" id="mega-menu-targeted-title">Целевое обучение</h2>
+                <div class="mega-menu__links">
+                  <a class="is-muted" href="#">Страница 1</a>
+                  <a class="is-muted" href="#">Страница 2</a>
+                  <a class="is-muted" href="#">Страница 3</a>
+                  <a class="is-muted" href="#">Страница 4</a>
+                  <a class="is-muted" href="#">Страница 5</a>
+                </div>
+              </section>
               <div class="mega-menu__additional">
-                <a href="#">Колледж</a>
-                <a href="#">ДПО</a>
-                <a href="vacancies.html">Работа в ЯГТУ</a>
-                <a href="news-events.html">Новости</a>
+                <a class="is-muted" href="#">Колледж</a>
+                <a class="is-muted" href="#">ДПО</a>
+                <a class="is-muted" href="vacancies.html">Работа в ЯГТУ</a>
+                <a class="is-muted" href="news-events.html">Новости</a>
                 <a class="is-muted" href="#">События</a>
                 <a class="is-muted" href="#">Партнерам</a>
                 <a class="is-muted" href="#">Контакты</a>
@@ -269,10 +339,10 @@
           <div class = "container">
             <div class="events">
               <div class="events__wrapper">
-                <div class="events__header">
-                    <div class="title events__title active tab" data-value="tab" data-tab="events">События</div>
+                <div class="events__header events__header--fade" role="group" aria-label="Новости и события">
+                    <button type="button" class="title events__title active tab" data-value="tab" data-tab="events" aria-pressed="true">События</button>
                     <div class="events__separator"></div>
-                    <div class="title events__title unactive tab" data-value="tab" data-tab="news">Новости</div>
+                    <button type="button" class="title events__title unactive tab" data-value="tab" data-tab="news" aria-pressed="false">Новости</button>
                 </div>
                 <div class = "events__container active" data-value="tab-container" data-tab="events">
                   <div class = "events__content ">

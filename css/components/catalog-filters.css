@@ -262,6 +262,11 @@
     .catalog-search {
         padding: 0;
         border: none;
+        height: unset;
+    }
+
+    .catalog-search__input {
+        min-height: 48px;
     }
 
     .catalog-search__button {

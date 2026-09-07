@@ -39,36 +39,20 @@
     align-items: flex-start;
     overflow: hidden;
     color: var(--white-shade-1);
-     background:
-        linear-gradient(
-            135deg,
-            rgb(255 255 255 / 13%) 0%,
-            rgb(255 255 255 / 4%) 38%,
-            rgb(9 65 136 / 12%) 100%
-        ),
-        rgb(9 65 136 / 22%);
-
-    border: 1px solid rgb(255 255 255 / 12%);
+    background: rgb(9 65 136 / 20%);
+    /* border: 1px solid rgb(255 255 255 / 10%); */
     border-bottom: 0;
     border-radius: 40px 40px 0 0;
 
-    box-shadow:
-        inset 0 2px 1px rgb(255 255 255 / 35%),
-        inset 2px 0 2px rgb(255 255 255 / 14%),
-        inset -2px 0 px rgb(75 145 255 / 16%),
-        inset 0 -18px 32px rgb(0 25 70 / 18%),
-        0 10px 35px rgb(0 20 55 / 16%);
-
      -webkit-backdrop-filter:
-        blur(18px)
-        saturate(125%)
-        contrast(108%);
+        blur(10px)
+        saturate(110%);
 
     backdrop-filter:
-        blur(18px)
-        saturate(125%)
-        contrast(108%);
+        blur(10px)
+        saturate(110%);
     min-height: 381px;
+    box-shadow: 0px -1px 26px 2px rgba(255, 255, 255, 0.1);
 }
 
 .hero-banner__content::before {
@@ -99,28 +83,14 @@
     z-index: -1;
     inset: 0;
     padding: 2px;
-    border-radius: inherit;
+    border-radius: 40px 0 0 0;
     pointer-events: none;
-
-    background: linear-gradient(
-        135deg,
-        rgb(95 220 255 / 30%) 0%,
-        rgb(255 255 255 / 18%) 30%,
-        rgb(255 110 185 / 22%) 70%,
-        rgb(255 215 105 / 18%) 100%
-    );
-
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
+    background: linear-gradient(135deg, rgb(255 255 255 / 30%) 0%, rgb(128 141 166 / 18%) 40%, rgb(255 255 255 / 22%) 70%, rgb(178 206 179 / 18%) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
-
-    mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
-
-    filter: blur(0.3px);
+    filter: blur(55px);
 }
 
 .hero-banner__content > * {

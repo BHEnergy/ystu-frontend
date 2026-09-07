@@ -91,6 +91,7 @@
     flex: 0 0 53%;
     justify-content: space-between;
     max-width: 431px;
+    height: 90px;
 }
 
 .footer__modal p {
@@ -215,6 +216,7 @@
 
     .footer__call,
     .footer__modal {
+        height: 70px;
         flex-basis: auto;
     }
 

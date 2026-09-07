@@ -59,12 +59,13 @@
 }
 
 .program-exams__examples summary::after {
-    content: url(../../images/svg/triangle-down.svg);
+    content: '';
     width: 48px;
     height: 48px;
     text-align: center;
     align-content: center;
     transition: transform 0.2s ease;
+    background: url(../../images/svg/triangle-down.svg) center / 16px 26px no-repeat;
 }
 
 .program-exams__examples[open] summary::after {

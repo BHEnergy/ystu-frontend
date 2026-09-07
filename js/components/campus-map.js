@@ -19,6 +19,7 @@
     let activeMarker = null;
     let pinnedMarker = null;
     let hideTimer = null;
+    const mobilePopup = window.matchMedia('(max-width: 768px), (hover: none)');
 
     const escapeHtml = (value) => String(value).replace(/[&<>'"]/g, (character) => ({
         '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
@@ -26,10 +27,10 @@
 
     const createPopupHtml = (item) => {
         const objects = item.objects.map(([icon, title]) => `<p class="campus-marker__object"><img src="../images/svg/${escapeHtml(icon)}" alt="" /><span>${escapeHtml(title)}</span></p>`).join('');
-        return `<article class="campus-marker__popup"><img class="campus-marker__photo" src="../images/fallback/campus-building-e.png" alt="${escapeHtml(item.title)}" /><div class="campus-marker__section"><p class="campus-marker__caption">Адрес</p><p class="campus-marker__text">${escapeHtml(item.address)}</p></div><div class="campus-marker__section"><p class="campus-marker__caption">Объекты в здании</p>${objects}</div></article>`;
+        return `<article class="campus-marker__popup"><button class="campus-marker__close" type="button" aria-label="Закрыть информацию об объекте"></button><img class="campus-marker__photo" src="../images/fallback/campus-building-e.png" alt="${escapeHtml(item.title)}" /><div class="campus-marker__section"><p class="campus-marker__caption">Адрес</p><p class="campus-marker__text">${escapeHtml(item.address)}</p></div><div class="campus-marker__section"><p class="campus-marker__caption">Объекты в здании</p>${objects}</div></article>`;
     };
 
-    const createMarkerHtml = (item) => `<div class="campus-marker" data-campus-marker="${escapeHtml(item.id)}" style="left:${item.position[0]}%;top:${item.position[1]}%"><div class="campus-marker__head"><button class="campus-marker__trigger" type="button" aria-label="Показать информацию: ${escapeHtml(item.title)}" aria-expanded="false"><img src="../images/svg/campus-pin.svg" alt="" /></button><span class="campus-marker__label">${escapeHtml(item.title)}</span></div><template class="campus-marker__popup-template">${createPopupHtml(item)}</template></div>`;
+    const createMarkerHtml = (item) => `<div class="campus-marker" data-campus-marker="${escapeHtml(item.id)}" style="left:${item.position[0]}%;top:${item.position[1]}%"><button class="campus-marker__head campus-marker__trigger" type="button" aria-label="Показать информацию: ${escapeHtml(item.title)}" aria-expanded="false"><img src="../images/svg/campus-pin.svg" alt="" /><span class="campus-marker__label">${escapeHtml(item.title)}</span></button><template class="campus-marker__popup-template">${createPopupHtml(item)}</template></div>`;
 
     mapElement.innerHTML = `<img class="campus-map-page__image" src="../images/fallback/campus-map.png" alt="Схема кампуса ЯГТУ" />${campusObjects.map(createMarkerHtml).join('')}`;
 
@@ -126,14 +127,28 @@
     });
 
     mapElement.querySelectorAll('.campus-marker').forEach((marker) => {
-        marker.addEventListener('mouseenter', () => showPopup(marker));
+        marker.addEventListener('mouseenter', () => {
+            if (!mobilePopup.matches) showPopup(marker);
+        });
         marker.addEventListener('mouseleave', scheduleHide);
-        marker.addEventListener('focusin', () => showPopup(marker));
+        marker.addEventListener('focusin', () => {
+            if (!mobilePopup.matches) showPopup(marker);
+        });
         marker.addEventListener('focusout', scheduleHide);
     });
 
     popupLayer.addEventListener('mouseenter', () => window.clearTimeout(hideTimer));
     popupLayer.addEventListener('mouseleave', scheduleHide);
+
+    popupLayer.addEventListener('click', (event) => {
+        if (!event.target.closest('.campus-marker__close')) return;
+        const trigger = activeMarker?.querySelector('.campus-marker__trigger');
+        window.clearTimeout(hideTimer);
+        pinnedMarker = null;
+        // Возвращаем фокус до закрытия, чтобы focusin не открыл окно повторно.
+        trigger?.focus({ preventScroll: true });
+        hidePopup(true);
+    });
 
     mapElement.addEventListener('click', (event) => {
         const trigger = event.target.closest('.campus-marker__trigger');

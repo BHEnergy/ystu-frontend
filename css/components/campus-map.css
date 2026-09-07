@@ -211,6 +211,7 @@
     width: 371px;
     transform: translate(-20px, -40px);
     font-family: 'GoogleSans', sans-serif;
+    pointer-events: none;
 }
 
 .campus-marker:hover,
@@ -226,18 +227,30 @@
 }
 
 .campus-marker__trigger {
-    display: block;
-    width: 40px;
+    display: flex;
+    width: fit-content;
+    max-width: 100%;
     height: 40px;
     padding: 0;
     flex: 0 0 40px;
     background: transparent;
     border: 0;
     cursor: pointer;
+    font-family: inherit;
+    font-weight: inherit;
+    text-align: left;
+    pointer-events: auto;
+}
+
+.campus-marker__trigger:focus-visible,
+.campus-marker__close:focus-visible {
+    outline: 2px solid var(--subprimary-color-1);
+    outline-offset: 3px;
 }
 
 .campus-marker__trigger img {
     display: block;
+    flex-shrink: 0;
     width: 40px;
     height: 40px;
 }
@@ -304,6 +317,44 @@
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
+}
+
+.campus-marker__close {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: 1px solid var(--primary-color-2);
+    border-radius: 50%;
+    background: var(--primary-color-2);
+    color: var(--white-shade-4);
+    cursor: pointer;
+}
+
+.campus-marker__close::before,
+.campus-marker__close::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 1px;
+    background: currentColor;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.campus-marker__close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+@media (max-width: 768px), (hover: none) {
+    .campus-marker__close {
+        display: block;
+    }
 }
 
 .campus-marker__photo {

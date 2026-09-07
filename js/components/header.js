@@ -89,6 +89,7 @@
 
         const submenuLinks = [...megaMenu.querySelectorAll('[data-menu-section]')];
         const submenuPanels = [...megaMenu.querySelectorAll('[data-menu-panel]')];
+        const hoverSubmenuEnabled = megaMenu.hasAttribute('data-hover-submenu');
         let primaryMenuScrollTop = 0;
 
         const getTextRect = (link) => {
@@ -102,9 +103,26 @@
         };
 
         const updateTextHighlight = (link) => {
-            const textWidth = Math.ceil(getTextRect(link).width) + 8;
+            const textRect = getTextRect(link);
+
+            if (!textRect.width) {
+                return;
+            }
+
+            const linkStyles = window.getComputedStyle(link);
+            const horizontalPadding = parseFloat(linkStyles.paddingLeft)
+                + parseFloat(linkStyles.paddingRight);
+            const textWidth = Math.ceil(textRect.width + horizontalPadding) + 2;
 
             link.style.setProperty('--mega-menu-text-width', `${textWidth}px`);
+        };
+
+        const refreshSelectedHighlight = () => {
+            const selectedLink = submenuLinks.find((link) => link.classList.contains('is-selected'));
+
+            if (selectedLink) {
+                updateTextHighlight(selectedLink);
+            }
         };
 
         const isTextClick = (link, event) => {
@@ -123,7 +141,6 @@
                 panel.classList.remove('is-open');
                 panel.setAttribute('aria-hidden', String(mobileMenuMedia.matches));
             });
-            submenuLinks.forEach((link) => link.classList.remove('is-active'));
         };
 
         const openSubmenu = (trigger, panel) => {
@@ -134,8 +151,10 @@
                 megaMenu.scrollTop = 0;
             }
 
-            trigger.classList.add('is-active');
-            updateTextHighlight(trigger);
+            if (trigger.classList.contains('is-selected')) {
+                updateTextHighlight(trigger);
+            }
+
             trigger.setAttribute('aria-expanded', 'true');
             panel.classList.add('is-open');
             panel.setAttribute('aria-hidden', 'false');
@@ -191,18 +210,34 @@
                 event.preventDefault();
                 openSubmenu(trigger, panel);
             });
+
+            if (hoverSubmenuEnabled) {
+                const openDesktopSubmenu = () => {
+                    if (!mobileMenuMedia.matches) {
+                        openSubmenu(trigger, panel);
+                        megaMenu.classList.remove('mega-menu--submenu-open');
+                    }
+                };
+
+                trigger.addEventListener('mouseenter', openDesktopSubmenu);
+                trigger.addEventListener('focus', openDesktopSubmenu);
+            }
         });
 
-        const initialTrigger = submenuLinks.find((link) => link.classList.contains('is-active'))
+        const selectedTrigger = submenuLinks.find((link) => link.classList.contains('is-selected'))
             || submenuLinks.find((link) => !link.classList.contains('is-muted'));
-        const initialPanel = initialTrigger && submenuPanels.find(
-            (panel) => panel.dataset.menuPanel === initialTrigger.dataset.menuSection,
+        const selectedPanel = selectedTrigger && submenuPanels.find(
+            (panel) => panel.dataset.menuPanel === selectedTrigger.dataset.menuSection,
         );
 
-        if (!mobileMenuMedia.matches && initialTrigger && initialPanel) {
-            openSubmenu(initialTrigger, initialPanel);
+        if (!mobileMenuMedia.matches && selectedTrigger && selectedPanel) {
+            updateTextHighlight(selectedTrigger);
+            openSubmenu(selectedTrigger, selectedPanel);
             megaMenu.classList.remove('mega-menu--submenu-open');
         }
+
+        document.fonts?.ready.then(refreshSelectedHighlight);
+        window.addEventListener('resize', refreshSelectedHighlight);
 
         let lockedScrollX = 0;
         let lockedScrollY = 0;
@@ -241,8 +276,8 @@
 
             if (!isOpen) {
                 resetSubmenu();
-            } else if (!mobileMenuMedia.matches && initialTrigger && initialPanel) {
-                openSubmenu(initialTrigger, initialPanel);
+            } else if (!mobileMenuMedia.matches && selectedTrigger && selectedPanel) {
+                openSubmenu(selectedTrigger, selectedPanel);
                 megaMenu.classList.remove('mega-menu--submenu-open');
             }
         };
@@ -360,8 +395,8 @@
         mobileMenuMedia.addEventListener('change', () => {
             resetSubmenu();
 
-            if (!mobileMenuMedia.matches && initialTrigger && initialPanel) {
-                openSubmenu(initialTrigger, initialPanel);
+            if (!mobileMenuMedia.matches && selectedTrigger && selectedPanel) {
+                openSubmenu(selectedTrigger, selectedPanel);
                 megaMenu.classList.remove('mega-menu--submenu-open');
             }
 
