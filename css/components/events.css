@@ -21,7 +21,8 @@
 
 .events__header--fade .events__title {
     /* Две постоянные позиции: первая учитывает размер активного текста. */
-    flex: 0 0 4.7em;
+    flex: 0 0 16%;
+    max-width: 223px;
     padding: 0;
     border: 0;
     background: transparent;
@@ -318,6 +319,8 @@
 
     .events__title.active {
         font-size: 44px;
+        flex: 1 1 20%;
+        max-width: 188px;
     }
 
     .events__title.unactive {
@@ -373,6 +376,7 @@
 
     .events__title.active {
         font-size: 32px;
+        max-width: 137px;
     }
 
     .events__title.unactive {
