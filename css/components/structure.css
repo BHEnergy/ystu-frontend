@@ -82,6 +82,34 @@
     z-index: 0;
 }
 
+/* Обе декоративные линии увеличиваются одновременно, не меняя размер карточки. */
+.structure__institute::before,
+.structure__institute::after {
+    pointer-events: none;
+    transform: scale(1);
+    transform-origin: center;
+    transition: transform 400ms ease-in-out;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .structure__institute:hover::before,
+    .structure__institute:hover::after {
+        transform: scale(1.08);
+    }
+}
+
+.structure__institute:focus-within::before,
+.structure__institute:focus-within::after {
+    transform: scale(1.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .structure__institute::before,
+    .structure__institute::after {
+        transition: none;
+    }
+}
+
 .structure__institute-title {
     font-size: 20px;
     color: var(--subprimary-color-1);

@@ -258,6 +258,7 @@
             ["modals.js", "Modals"],
             ["validation.js", "Validation"],
             ["cookie.js", "Cookie"],
+            ["university-statistics.js", "UniversityStatistics"],
         ]);
 
         if (typeof window.Swiper === 'function') {
