@@ -79,7 +79,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 24px;
+    padding: 0 24px;
     background: rgba(13, 46, 84, 0.12);
     backdrop-filter: blur(10px) saturate(1);
 }

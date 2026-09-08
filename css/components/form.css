@@ -36,6 +36,10 @@
     font-size: 16px;
 }
 
+.input--container.error input {
+    border: 1px solid var(--error-color-2);
+}
+
 .input--container input {
     height: 48px;
 }

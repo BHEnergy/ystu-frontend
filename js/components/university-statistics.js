@@ -41,7 +41,7 @@
             activeCounters.add(counter);
             counter.tween = gsap.to(counter, {
                 value: target,
-                duration: 4,
+                duration: 3,
                 ease: 'power1.out',
                 onUpdate: () => { visual.textContent = format(counter.value); },
                 onComplete: counter.finish,
@@ -55,7 +55,7 @@
             observer.unobserve(entry.target);
             animateGroup(entry.target);
         });
-    }, { threshold: 0.8 });
+    }, { threshold: 0.5 });
 
     groups.forEach((group) => observer.observe(group));
 

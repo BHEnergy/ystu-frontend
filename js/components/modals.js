@@ -12,7 +12,6 @@ const closeModal = (modal) => {
     const trigger = modalTrigger;
     const finishClosing = () => {
         modal.classList.remove('modal--active', 'modal--closing');
-        document.body.classList.remove('body--modal-open');
         activeModal = null;
         trigger?.focus();
         modalTrigger = null;
@@ -59,7 +58,6 @@ const openModal = (modal, trigger) => {
     }
     modal.classList.remove('modal--closing');
     modal.classList.add('modal--active');
-    document.body.classList.add('body--modal-open');
     modal.querySelector('.modal-close')?.focus();
 };
 
