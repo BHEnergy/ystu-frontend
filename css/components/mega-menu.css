@@ -414,6 +414,9 @@
 }
 
 @media (hover: hover) {
+    .mega-menu__additional .is-muted {
+        transition: 0.3s all ease-in-out;
+    }
     .mega-menu__additional .is-muted:hover {
         font-size: 20px;
         &::after {
