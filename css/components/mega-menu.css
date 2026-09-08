@@ -168,7 +168,7 @@
     gap: 24px;
     margin-left: calc(0px - var(--mega-menu-column-gap));
     padding-left: var(--mega-menu-column-gap);
-    border-left: 1px solid var(--subprimary-color-2);
+    border-left: 2px solid var(--subprimary-color-2);
 }
 
 .mega-menu__additional a,
