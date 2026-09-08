@@ -91,6 +91,8 @@
         const submenuPanels = [...megaMenu.querySelectorAll('[data-menu-panel]')];
         const hoverSubmenuEnabled = megaMenu.hasAttribute('data-hover-submenu');
         let primaryMenuScrollTop = 0;
+        const mobileMenuEntries = [];
+        let mobileAnchorTimer = 0;
 
         const getTextRect = (link) => {
             const range = document.createRange();
@@ -135,11 +137,18 @@
         };
 
         const resetSubmenu = () => {
+            window.clearTimeout(mobileAnchorTimer);
+            if (mobileMenuMedia.matches) {
+                mobileMenuEntries.forEach(({ trigger, panel }) => {
+                    trigger.setAttribute('href', `#${panel.id}`);
+                });
+            }
             megaMenu.classList.remove('mega-menu--submenu-open');
             submenuLinks.forEach((link) => link.setAttribute('aria-expanded', 'false'));
             submenuPanels.forEach((panel) => {
                 panel.classList.remove('is-open');
                 panel.setAttribute('aria-hidden', String(mobileMenuMedia.matches));
+                if (mobileMenuMedia.matches) panel.inert = true;
             });
         };
 
@@ -148,7 +157,6 @@
 
             if (mobileMenuMedia.matches) {
                 primaryMenuScrollTop = megaMenu.scrollTop;
-                megaMenu.scrollTop = 0;
             }
 
             if (trigger.classList.contains('is-selected')) {
@@ -158,10 +166,13 @@
             trigger.setAttribute('aria-expanded', 'true');
             panel.classList.add('is-open');
             panel.setAttribute('aria-hidden', 'false');
+            panel.inert = false;
             panel.scrollTop = 0;
 
             if (mobileMenuMedia.matches) {
                 megaMenu.classList.add('mega-menu--submenu-open');
+                const entry = mobileMenuEntries.find((item) => item.trigger === trigger);
+                if (entry) trigger.setAttribute('href', entry.href);
             }
         };
 
@@ -174,26 +185,6 @@
             panel.id ||= `mega-menu-panel-${sectionName || index}`;
             panel.setAttribute('aria-hidden', String(mobileMenuMedia.matches));
 
-            if (!panel.querySelector('.mega-menu__back')) {
-                const backButton = document.createElement('button');
-
-                backButton.className = 'mega-menu__back';
-                backButton.type = 'button';
-                backButton.textContent = 'Назад';
-                backButton.addEventListener('click', () => {
-                    resetSubmenu();
-
-                    if (mobileMenuMedia.matches) {
-                        megaMenu.scrollTop = primaryMenuScrollTop;
-                        trigger?.focus({ preventScroll: true });
-                        return;
-                    }
-
-                    trigger?.focus();
-                });
-                panel.prepend(backButton);
-            }
-
             if (!trigger) {
                 return;
             }
@@ -202,7 +193,32 @@
             trigger.setAttribute('aria-controls', panel.id);
             trigger.setAttribute('aria-expanded', 'false');
 
+            // Сохраняем исходные позиции и URL для возвращения к десктопному меню.
+            const placeholder = document.createComment(`menu-panel-${sectionName}`);
+            panel.before(placeholder);
+            const content = document.createElement('div');
+            content.className = 'mega-menu__accordion-content';
+            while (panel.firstChild) content.append(panel.firstChild);
+            panel.append(content);
+            mobileMenuEntries.push({ trigger, panel, placeholder, href: trigger.getAttribute('href') });
+
             trigger.addEventListener('click', (event) => {
+                if (mobileMenuMedia.matches) {
+                    // У раскрытого раздела уже восстановлен URL страницы.
+                    if (panel.classList.contains('is-open')) return;
+                    event.preventDefault();
+                    openSubmenu(trigger, panel);
+                    // Якорь прокручивает только меню: позиция страницы сохраняется.
+                    mobileAnchorTimer = window.setTimeout(() => {
+                        megaMenu.scrollTo({
+                            top: megaMenu.scrollTop + trigger.getBoundingClientRect().top
+                                - megaMenu.getBoundingClientRect().top - 16,
+                            behavior: prefersReducedMotion.matches ? 'instant' : 'smooth',
+                        });
+                    }, prefersReducedMotion.matches ? 0 : 250);
+                    return;
+                }
+
                 if (trigger.classList.contains('is-muted') || isTextClick(trigger, event)) {
                     return;
                 }
@@ -223,6 +239,23 @@
                 trigger.addEventListener('focus', openDesktopSubmenu);
             }
         });
+
+        const syncMobileAccordion = () => {
+            megaMenu.classList.toggle('mega-menu--accordion', mobileMenuMedia.matches);
+            mobileMenuEntries.forEach(({ trigger, panel, placeholder, href }) => {
+                if (mobileMenuMedia.matches) {
+                    trigger.after(panel);
+                    trigger.setAttribute('href', `#${panel.id}`);
+                    panel.inert = !panel.classList.contains('is-open');
+                } else {
+                    placeholder.after(panel);
+                    trigger.setAttribute('href', href);
+                    panel.inert = false;
+                }
+            });
+        };
+
+        syncMobileAccordion();
 
         const selectedTrigger = submenuLinks.find((link) => link.classList.contains('is-selected'))
             || submenuLinks.find((link) => !link.classList.contains('is-muted'));
@@ -273,6 +306,10 @@
             openBtn.setAttribute('aria-expanded', String(isOpen));
             openBtn.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
             setMobileScrollLock(isOpen);
+
+            if (isOpen) {
+                refreshSelectedHighlight();
+            }
 
             if (!isOpen) {
                 resetSubmenu();
@@ -393,6 +430,7 @@
         });
 
         mobileMenuMedia.addEventListener('change', () => {
+            syncMobileAccordion();
             resetSubmenu();
 
             if (!mobileMenuMedia.matches && selectedTrigger && selectedPanel) {
