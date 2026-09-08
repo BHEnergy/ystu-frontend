@@ -44,7 +44,28 @@
     text-transform: uppercase;
 }
 
-@media(max-width: 1100px) {
+@media(max-width: 1440px) {
+    .information-banner__body {
+        gap: 40px;
+    }
+    .information-banner::before {
+        content: url(../../images/svg/adv-before-1440.svg);
+        top: -5%;
+    }
+
+    .information-banner::after {
+        content: url(../../images/svg/adv-after-1440.svg);
+        top: 35%;
+    }
+}
+
+@media(max-width: 1240px) {
+    .information-banner__text {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 768px) {
     .information-banner {
         padding: 11px 0;
         max-height: 80px;

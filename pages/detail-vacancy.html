@@ -390,7 +390,7 @@
             <h2 class = "modal-header__title title" id="vacancy-modal-title">Отклик на вакансию</h2>
             <p class = "modal-header__subtitle">Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae.</p>
           </div>
-          <form class = "modal-form d-flex flex-column">
+          <form class="modal-form d-flex flex-column" data-modal-demo>
             <div class = "input--container">
               <input type = "text" name = "name" id = "vacancy-name" placeholder="Текст*">
               <label for="vacancy-name" class = "error-text">Заполните обязательное поле: Текст*</label>
@@ -426,10 +426,15 @@
               </div>
             </div>
           </form>
-          <!-- <div class = "modal-success">
-            <p class = "modal-success__title">Успешно!</p>
-            <p class = "modal-success__text">Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae.</p>
-          </div> -->
+                    <div class="modal-success" hidden tabindex="-1">
+            <div class="modal-success__heading">
+              <img class="modal-success__icon" src="../images/svg/modal-success-check.svg" width="120" height="120" alt="">
+              <h2 class="modal-success__title" id="vacancy-success-title">Ваша заявка принята</h2>
+            </div>
+            <p class="modal-success__text">Спасибо за обращение! Мы свяжемся с вами по указанным контактным данным.</p>
+            <button type="button" class="modal-success__back" data-modal-back>Назад</button>
+            <p class="modal-success__demo" data-demo-notice hidden>Демонстрационный режим: данные не отправлены.</p>
+          </div>
         </div>
       </div>
     </div>

@@ -315,7 +315,7 @@
                                         <p class = "event__location">Точка кипения</p>
                                     </div>
                                     <div class = "event__footer">
-                                        <a class = "btn btn--link btn--blue" href = "#">Зарегистрироваться</a>
+                                        <button type="button" class="btn btn--link btn--blue button-modal" data-modal="event">Зарегистрироваться</button>
                                         <a class = "btn btn--link btn--white" href = "#">Подробнее</a>
                                     </div>
                                 </div>
@@ -342,7 +342,7 @@
                                         <p class = "event__location">Точка кипения</p>
                                     </div>
                                     <div class = "event__footer">
-                                        <a class = "btn btn--link btn--blue" href = "#">Зарегистрироваться</a>
+                                        <button type="button" class="btn btn--link btn--blue button-modal" data-modal="event">Зарегистрироваться</button>
                                         <a class = "btn btn--link btn--white" href = "#">Подробнее</a>
                                     </div>
                                 </div>
@@ -369,7 +369,7 @@
                                         <p class = "event__location">Точка кипения</p>
                                     </div>
                                     <div class = "event__footer">
-                                        <a class = "btn btn--link btn--blue" href = "#">Зарегистрироваться</a>
+                                        <button type="button" class="btn btn--link btn--blue button-modal" data-modal="event">Зарегистрироваться</button>
                                         <a class = "btn btn--link btn--white" href = "#">Подробнее</a>
                                     </div>
                                 </div>
@@ -396,7 +396,7 @@
                                         <p class = "event__location">Точка кипения</p>
                                     </div>
                                     <div class = "event__footer">
-                                        <a class = "btn btn--link btn--blue" href = "#">Зарегистрироваться</a>
+                                        <button type="button" class="btn btn--link btn--blue button-modal" data-modal="event">Зарегистрироваться</button>
                                         <a class = "btn btn--link btn--white" href = "#">Подробнее</a>
                                     </div>
                                 </div>
@@ -423,7 +423,7 @@
                                         <p class = "event__location">Точка кипения</p>
                                     </div>
                                     <div class = "event__footer">
-                                        <a class = "btn btn--link btn--blue" href = "#">Зарегистрироваться</a>
+                                        <button type="button" class="btn btn--link btn--blue button-modal" data-modal="event">Зарегистрироваться</button>
                                         <a class = "btn btn--link btn--white" href = "#">Подробнее</a>
                                     </div>
                                 </div>
@@ -450,7 +450,7 @@
                                         <p class = "event__location">Точка кипения</p>
                                     </div>
                                     <div class = "event__footer">
-                                        <a class = "btn btn--link btn--blue" href = "#">Зарегистрироваться</a>
+                                        <button type="button" class="btn btn--link btn--blue button-modal" data-modal="event">Зарегистрироваться</button>
                                         <a class = "btn btn--link btn--white" href = "#">Подробнее</a>
                                     </div>
                                 </div>
@@ -682,6 +682,53 @@
       <div class="cookie-body">
         <div class="cookie-text">Продолжая работу с сайтом, вы даете согласие на использование <a href="#">файлов cookie</a></div>
         <button type="button" id="cookieAccept" class="cookie-btn btn btn--default">Принять</button>
+      </div>
+    </div>
+      <div class="modal modal--event" data-modal="event" role="dialog" aria-modal="true" aria-labelledby="event-modal-title">
+      <div class="modal-overlay">
+        <div class="modal-body">
+          <button type="button" class="modal-close btn btn--default" aria-label="Закрыть окно"><img src="../images/svg/close.svg" alt=""></button>
+          <div class="modal-header d-flex flex-column">
+            <h2 class="modal-header__title title" id="event-modal-title">Регистрация на мероприятие</h2>
+            <p class="modal-header__subtitle">Выберите мероприятие и укажите контактные данные для регистрации.</p>
+          </div>
+          <!-- Статическая демонстрация. Отправка подключается при интеграции с 1С-Битрикс. -->
+          <form class="modal-form d-flex flex-column" data-modal-demo>
+            <div class="modal-form__select">
+              <select name="event" aria-label="Выбор мероприятия" required>
+                <option value="" selected disabled>Выбор мероприятия</option>
+                <option value="event-1">Международная научно-практическая конференция «Экологическая безопасность водных объектов»</option>
+                <option value="event-2">Исторический квиз "Я помню! Я горжусь!"</option>
+                <option value="event-3">Акселератор «ПолиТех.Индустрия 5.0»</option>
+              </select>
+            </div>
+            <fieldset class="modal-form__classes">
+              <legend>Класс</legend>
+              <label><input type="radio" name="school-class" value="5-7" required>5–7 класс</label>
+              <label><input type="radio" name="school-class" value="8-9" required>8–9 класс</label>
+              <label><input type="radio" name="school-class" value="10-11" required>10–11 класс</label>
+            </fieldset>
+            <div class="input--container"><input type="text" name="name" placeholder="ФИО*" aria-label="ФИО" autocomplete="name" required></div>
+            <div class="input--container"><input type="email" name="email" placeholder="Email*" aria-label="Email" autocomplete="email" required></div>
+            <div class="input--container"><input type="tel" name="phone" placeholder="Телефон*" aria-label="Телефон" autocomplete="tel" required></div>
+            <div class="modal-form__footer">
+              <button type="submit" class="btn btn--default btn--m">Зарегистрироваться</button>
+              <div class="modal-form__checkboxes d-flex flex-column">
+                <div class="checkbox--container"><input type="checkbox" name="personal-data" id="event-personal-data" required><label for="event-personal-data">Я даю согласие на обработку персональных данных</label></div>
+                <div class="checkbox--container"><input type="checkbox" name="privacy-policy" id="event-privacy-policy" required><label for="event-privacy-policy">Я ознакомлен(а) с <a href="#">Политикой конфиденциальности</a></label></div>
+              </div>
+            </div>
+          </form>
+          <div class="modal-success" hidden tabindex="-1">
+            <div class="modal-success__heading">
+              <img class="modal-success__icon" src="../images/svg/modal-success-check.svg" width="120" height="120" alt="">
+              <h2 class="modal-success__title" id="event-success-title">Ваша заявка принята</h2>
+            </div>
+            <p class="modal-success__text">Спасибо за обращение! Мы свяжемся с вами по указанным контактным данным.</p>
+            <button type="button" class="modal-success__back" data-modal-back>Назад</button>
+            <p class="modal-success__demo" data-demo-notice hidden>Демонстрационный режим: данные не отправлены.</p>
+          </div>
+        </div>
       </div>
     </div>
   </body>

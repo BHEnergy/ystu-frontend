@@ -147,8 +147,7 @@
     }
 
     & .swiper-slide {
-        height: 124px;
-        min-height: 124px;
+        max-height: 390px;
         border-radius: 12px;
     }
 
@@ -167,8 +166,7 @@
     }
 
     & .swiper-slide {
-        height: 124px;
-        min-height: 124px;
+        max-height: 390px;
         border-radius: 12px;
     }
 
@@ -296,7 +294,7 @@
         }
     }
 
-    /* .js-init-banner-slider.banner-slider-2 {
+    .js-init-banner-slider.banner-slider-2 {
         height: 444px;
         min-height: 444px;
 
@@ -314,7 +312,7 @@
         & .default-slider-controls {
             bottom: 0;
         }
-    } */
+    }
 
     .js-init-banner-slider {
         & .banner__body {
@@ -331,7 +329,7 @@
         }
     }
 
-    /* .js-init-banner-slider.banner-slider-3 {
+    .js-init-banner-slider.banner-slider-3 {
         height: 444px;
         min-height: 444px;
 
@@ -349,7 +347,7 @@
         & .default-slider-controls {
             bottom: 0;
         }
-    } */
+    }
 
     .js-init-banner-slider {
         & .banner__body {

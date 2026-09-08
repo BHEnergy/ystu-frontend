@@ -81,7 +81,7 @@
                 loop: false,
                 slidesPerView: 1,
                 slidesPerGroup: 1,
-                spaceBetween: 16,
+                spaceBetween: 24,
                 navigation: {
                     prevEl: slider.querySelector(".swiper-button-prev"),
                     nextEl: slider.querySelector(".swiper-button-next"),
@@ -97,11 +97,11 @@
                 },
                 breakpoints: {
                     769: {
-                        slidesPerView: 1,
-                        slidesPerGroup: 1,
+                        slidesPerView: 2,
+                        slidesPerGroup: 2,
                         spaceBetween: 24,
                         grid: {
-                            rows: 2,
+                            rows: 1,
                             fill: 'row',
                         },
                     },
@@ -134,11 +134,11 @@
                 },
                 breakpoints: {
                     769: {
-                        slidesPerView: 1,
-                        slidesPerGroup: 1,
+                        slidesPerView: 3,
+                        slidesPerGroup: 3,
                         spaceBetween: 24,
                         grid: {
-                            rows: 3,
+                            rows: 1,
                             fill: 'row',
                         },
                     },
