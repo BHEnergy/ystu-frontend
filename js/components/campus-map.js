@@ -27,12 +27,12 @@
 
     const createPopupHtml = (item) => {
         const objects = item.objects.map(([icon, title]) => `<p class="campus-marker__object"><img src="../images/svg/${escapeHtml(icon)}" alt="" /><span>${escapeHtml(title)}</span></p>`).join('');
-        return `<article class="campus-marker__popup"><button class="campus-marker__close" type="button" aria-label="Закрыть информацию об объекте"></button><img class="campus-marker__photo" src="../images/fallback/campus-building-e.png" alt="${escapeHtml(item.title)}" /><div class="campus-marker__section"><p class="campus-marker__caption">Адрес</p><p class="campus-marker__text">${escapeHtml(item.address)}</p></div><div class="campus-marker__section"><p class="campus-marker__caption">Объекты в здании</p>${objects}</div></article>`;
+        return `<article class="campus-marker__popup"><button class="campus-marker__close" type="button" aria-label="Закрыть информацию об объекте"></button><img class="campus-marker__photo" src="../images/fallback/campus-building-e.png" alt="" /><div class="campus-marker__section"><p class="campus-marker__caption">Адрес</p><p class="campus-marker__text">${escapeHtml(item.address)}</p></div><div class="campus-marker__section"><p class="campus-marker__caption">Объекты в здании</p>${objects}</div></article>`;
     };
 
     const createMarkerHtml = (item) => `<div class="campus-marker" data-campus-marker="${escapeHtml(item.id)}" style="left:${item.position[0]}%;top:${item.position[1]}%"><button class="campus-marker__head campus-marker__trigger" type="button" aria-label="Показать информацию: ${escapeHtml(item.title)}" aria-expanded="false"><img src="../images/svg/campus-pin.svg" alt="" /><span class="campus-marker__label">${escapeHtml(item.title)}</span></button><template class="campus-marker__popup-template">${createPopupHtml(item)}</template></div>`;
 
-    mapElement.innerHTML = `<img class="campus-map-page__image" src="../images/fallback/campus-map.png" alt="Схема кампуса ЯГТУ" />${campusObjects.map(createMarkerHtml).join('')}`;
+    mapElement.innerHTML = `<img class="campus-map-page__image" src="../images/fallback/campus-map.png" alt="" />${campusObjects.map(createMarkerHtml).join('')}`;
 
     const popupLayer = document.createElement('div');
     popupLayer.className = 'campus-popup-layer';

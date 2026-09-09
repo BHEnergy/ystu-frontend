@@ -62,7 +62,7 @@
     text-transform: uppercase;
 }
 
-.program-admissions__contact address,
+.program-admissions__contact .program-admissions__address,
 .program-admissions__contact a,
 .program-admissions__contact p {
     font-style: normal;
@@ -70,7 +70,7 @@
     line-height: 1.4;
 }
 
-.program-admissions__contact:first-child address {
+.program-admissions__contact:first-child .program-admissions__address {
     max-width: 501px;
 }
 
