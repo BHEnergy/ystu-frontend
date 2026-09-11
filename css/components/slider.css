@@ -175,6 +175,39 @@
     }
 }
 
+.js-init-banner-slider.banner-slider-3--featured {
+    height: 720px;
+    min-height: 720px;
+
+    & .swiper-wrapper {
+        height: 680px;
+        min-height: 680px;
+    }
+
+    & .banner__group {
+        display: grid;
+        height: 680px;
+        min-height: 680px;
+        max-height: none;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: 1.2fr 1fr;
+        gap: 24px;
+        background: transparent;
+        border-radius: 0;
+    }
+
+    & .banner__body {
+        min-width: 0;
+        padding: 40px;
+        background-color: var(--subprimary-color-7);
+        border-radius: 12px;
+    }
+
+    & .banner__body:first-child {
+        grid-column: 1 / -1;
+    }
+}
+
 /* Слайдер "Студ. жизнь" */
 .student-direction__gallery {
     & .default-slider-controls {
@@ -346,6 +379,33 @@
 
         & .default-slider-controls {
             bottom: 0;
+        }
+    }
+
+    .js-init-banner-slider.banner-slider-3--featured {
+        height: 444px;
+        min-height: 444px;
+
+        & .swiper-wrapper {
+            height: 404px;
+            min-height: 404px;
+        }
+
+        & .banner__group {
+            display: grid;
+            height: 404px;
+            min-height: 404px;
+            grid-template-columns: minmax(0, 1fr);
+            grid-template-rows: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        & .banner__body {
+            padding: 24px 16px;
+        }
+
+        & .banner__body:first-child {
+            grid-column: auto;
         }
     }
 

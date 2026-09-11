@@ -4,9 +4,9 @@
 
 .listing-page__intro {
     display: flex;
-    margin-top: 64px;
+    margin-top: 60px;
     flex-direction: column;
-    gap: 24px;
+    gap: 40px;
 }
 
 .listing-page__title {
@@ -24,7 +24,6 @@
 
 .listing-page__body {
     display: grid;
-    margin-top: 64px;
     grid-template-columns: 342px minmax(0, 1fr);
     gap: 24px;
     align-items: start;
@@ -53,6 +52,7 @@
     }
     .listing-page__intro {
         margin-top: 40px;
+        gap: 24px;
     }
 
     .listing-page__title {

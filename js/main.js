@@ -114,12 +114,14 @@
                 return;
             }
 
+            const isFeaturedLayout = slider.classList.contains('banner-slider-3--featured');
+
             new Swiper(slider, {
                 loop: false,
                 slidesPerView: 1,
                 slidesPerGroup: 1,
                 spaceBetween: 16,
-                grid: {
+                grid: isFeaturedLayout ? undefined : {
                     rows: 3,
                     fill: 'column',
                 },
@@ -134,10 +136,10 @@
                 },
                 breakpoints: {
                     769: {
-                        slidesPerView: 3,
-                        slidesPerGroup: 3,
+                        slidesPerView: isFeaturedLayout ? 1 : 3,
+                        slidesPerGroup: isFeaturedLayout ? 1 : 3,
                         spaceBetween: 24,
-                        grid: {
+                        grid: isFeaturedLayout ? undefined : {
                             rows: 1,
                             fill: 'row',
                         },

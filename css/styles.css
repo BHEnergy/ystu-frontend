@@ -144,6 +144,9 @@ img {
     --black-shade-9: #E5E5E5;
     --black-shade-10: #F2F2F2;
 
+    /* Футер */
+    --footer-color: #063673;
+
     /* Контейнер */
     --container-padding: 40px;
     /* --header-height: 190px; */
