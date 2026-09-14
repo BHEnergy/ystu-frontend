@@ -194,6 +194,25 @@
     object-fit: cover;
 }
 
+#campus-map.campus-map--interactive {
+    min-width: 0;
+    min-height: 480px;
+}
+
+.campus-map__yandex {
+    position: absolute;
+    inset: 0;
+}
+
+.campus-map-page__image[hidden] {
+    display: none;
+}
+
+.campus-map--interactive .campus-marker {
+    left: 0;
+    top: 0;
+}
+
 .campus-map-page .visually-hidden {
     position: absolute;
     width: 1px;

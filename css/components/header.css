@@ -13,10 +13,11 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    transition: margin-top 320ms cubic-bezier(.4, 0, .2, 1);
 }
 
 .header--scrolled .header__wrapper {
-    margin-top: 15px;
+    margin-top: 0px;
 }
 
 .navbar {
@@ -71,7 +72,7 @@
     min-height: 96px;
     border: 1px solid var(--subprimary-color-1);
     border-radius: 12px;
-    padding: 23px 40px;
+    padding: 23px 40px 23px 24px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -93,6 +94,7 @@
     gap: 20px;
     font-weight: 700;
     text-transform: uppercase;
+    flex: 0 0 70%;
 }
 
 .btn__menu {
@@ -203,6 +205,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .header,
+    .header__wrapper,
     .btn__menu,
     .btn__menu-label,
     .btn__burger__line {

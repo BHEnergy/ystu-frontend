@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Проверка Яндекс.Карт — ЯГТУ</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: Arial, sans-serif; color: #00458a; }
+      main { padding: 16px; }
+      h1 { margin: 0 0 12px; font-size: 24px; }
+      p { margin: 0 0 12px; line-height: 1.5; }
+      #map { width: 100%; height: 70vh; min-height: 360px; background: #eef0f2; }
+      .marker { display: flex; align-items: center; gap: 6px; transform: translate(-20px, -40px); width: max-content; }
+      .marker img { width: 40px; height: 40px; }
+      .marker span { padding: 10px 24px; border-radius: 50px; background: #fafafa; font-size: 15px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Проверка Яндекс.Карт</h1>
+      <p>ЯГТУ: 57.586895, 39.855303. Страница без общих скриптов проекта и без статической подложки.</p>
+      <p id="status" role="status">Загрузка API…</p>
+      <div id="map" aria-label="Карта расположения ЯГТУ"></div>
+    </main>
+    <script>
+      (() => {
+        const status = document.getElementById('status');
+        const script = document.createElement('script');
+        let settled = false;
+        const timeout = window.setTimeout(() => {
+          settled = true;
+          status.textContent = 'API не ответил за 20 секунд. Проверьте сеть, ключ и ограничения HTTP Referer.';
+        }, 20000);
+
+        const fail = () => {
+          if (settled) return;
+          settled = true;
+          window.clearTimeout(timeout);
+          status.textContent = 'Не удалось загрузить карту. Проверьте ответ api-maps.yandex.ru во вкладке Network, ключ и ограничения HTTP Referer. Адрес страницы: ' + window.location.origin;
+        };
+
+        script.src = 'https://api-maps.yandex.ru/v3/?apikey=78e74d40-1f5f-4bf4-95de-2e6473aab959&lang=ru_RU';
+        script.onerror = fail;
+        script.onload = async () => {
+          try {
+            await window.ymaps3.ready;
+            if (settled) return;
+            const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker } = window.ymaps3;
+            const center = [39.855303, 57.586895];
+            const map = new YMap(document.getElementById('map'), {
+              location: { center, zoom: 16 },
+            });
+            map.addChild(new YMapDefaultSchemeLayer());
+            map.addChild(new YMapDefaultFeaturesLayer());
+
+            const marker = document.createElement('div');
+            marker.className = 'marker';
+            marker.innerHTML = '<img src="../images/svg/campus-pin.svg" alt=""><span>ЯГТУ</span>';
+            map.addChild(new YMapMarker({ coordinates: center }, marker));
+            settled = true;
+            window.clearTimeout(timeout);
+            status.textContent = 'API загружен, карта и метка инициализированы. Проверьте отображение подложки.';
+          } catch (error) {
+            console.error('Ошибка инициализации карты:', error);
+            fail();
+          }
+        };
+        document.head.append(script);
+      })();
+    </script>
+  </body>
+</html>

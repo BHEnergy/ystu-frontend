@@ -264,7 +264,7 @@
                 <div class="dropdown--content">
                   <section class = "science-detail__section">
                     <div class = "science-detail__content d-flex flex-row">
-                      <img class = "science-detail__photo" src = "../images/fallback/journal.png" alt="Тест">
+                      <img loading="lazy" decoding="async" class = "science-detail__photo" src = "../images/fallback/journal.png" alt="Тест">
                       <div class = "science-detail__info">
                         <dl>
                           <dt>Год основания</dt>
@@ -316,7 +316,7 @@
                 <div class="dropdown--content science-detail__content wyswig">
                   <section class = "science-detail__section">
                     <div class = "science-detail__content d-flex flex-row">
-                      <img class = "science-detail__photo" src = "../images/fallback/journal.png" alt="Тест">
+                      <img loading="lazy" decoding="async" class = "science-detail__photo" src = "../images/fallback/journal.png" alt="Тест">
                       <div class = "science-detail__info">
                         <dl>
                           <dt>Год основания</dt>
@@ -368,7 +368,7 @@
                 <div class="dropdown--content science-detail__content wyswig">
                   <section class = "science-detail__section">
                     <div class = "science-detail__content d-flex flex-row">
-                      <img class = "science-detail__photo" src = "../images/fallback/journal.png" alt="Тест">
+                      <img loading="lazy" decoding="async" class = "science-detail__photo" src = "../images/fallback/journal.png" alt="Тест">
                       <div class = "science-detail__info">
                         <dl>
                           <dt>Год основания</dt>
@@ -468,7 +468,7 @@
           </div>
         </section>
       </main>
-      <footer class="footer">
+<footer class="footer">
         <div class = "container">
           <div class = "footer__wrapper">
             <div class = "footer__links">
@@ -499,7 +499,7 @@
               </div>
               <div class = "footer__information">
                 <div class = "footer__emblem">
-                  <img src = "../images/fallback/emblem.png" alt="Тест">
+                  <img loading="lazy" decoding="async" src = "../images/fallback/emblem.png" alt="Тест">
                 </div>
                 <div class = "footer__consultation">
                   <div class = "footer__phones">
@@ -515,11 +515,13 @@
                   <div class = "footer__modals">
                     <div class = "footer__modal">
                       <p>Подать обращение<br> гражданина</p>
-                      <a href = "/pages/map.html">Подробнее</a>
+                      <a class = "desktop-text" href = "/pages/map.html">Подать обращение</a>
+                      <a class = "mobile-text" href = "/pages/map.html">Подробнее</a>
                     </div>
                     <div class = "footer__modal">
                       <p>Оставить мнение<br> об организации</p>
-                      <a href = "/pages/map.html">Подробнее</a>
+                      <a class = "desktop-text" href = "/pages/map.html">Оставить отзыв</a>
+                      <a class = "mobile-text" href = "/pages/map.html">Подробнее</a>
                     </div>
                   </div>
                 </div>
@@ -527,7 +529,7 @@
             </div>
             <div class = "footer__bottom">
               <p>© ФГБОУ ВО «ЯГТУ», 2026</p>
-              <a href = "https://redstaragency.ru" aria-label="Разработчик сайта — RedStar">
+              <a class = "redstar" href = "https://redstaragency.ru" aria-label="Разработчик сайта — RedStar">
                 <img src = "../images/svg/redstar.svg" alt="Тест">
               </a>
             </div>

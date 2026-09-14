@@ -14,7 +14,7 @@
 .student-directions__list {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 60px;
 }
 
 .student-direction {
@@ -249,5 +249,12 @@
         height: 40px;
         min-width: 40px;
         background-size: 33px 33px;
+    }
+}
+@media (min-width: 769px) {
+    .student-direction__controls .swiper-button-prev:not(.big),
+    .student-direction__controls .swiper-button-next:not(.big),
+    .student-direction__controls .swiper-pagination {
+        display: none;
     }
 }

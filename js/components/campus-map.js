@@ -16,6 +16,7 @@
     ];
 
     const activeFilters = { category: '', department: '' };
+    let interactiveMap = null;
     let activeMarker = null;
     let pinnedMarker = null;
     let hideTimer = null;
@@ -35,6 +36,8 @@
     mapElement.innerHTML = `<img class="campus-map-page__image" src="../images/fallback/campus-map.png" alt="Тест" />${campusObjects.map(createMarkerHtml).join('')}`;
 
     const popupLayer = document.createElement('div');
+    const markers = new Map([...mapElement.querySelectorAll('[data-campus-marker]')]
+        .map((marker) => [marker.dataset.campusMarker, marker]));
     popupLayer.className = 'campus-popup-layer';
     popupLayer.hidden = true;
     document.body.append(popupLayer);
@@ -81,7 +84,7 @@
         campusObjects.forEach((item) => {
             const matchesCategory = !activeFilters.category || item.categories.includes(activeFilters.category);
             const matchesDepartment = !activeFilters.department || item.departments.includes(activeFilters.department);
-            const marker = mapElement.querySelector(`[data-campus-marker="${item.id}"]`);
+            const marker = markers.get(item.id);
             marker.hidden = !(matchesCategory && matchesDepartment);
             if (marker.hidden && marker === activeMarker) {
                 pinnedMarker = null;
@@ -173,12 +176,19 @@
     };
 
     const focusObject = (objectId) => {
-        const marker = mapElement.querySelector(`[data-campus-marker="${objectId}"]`);
+        const marker = markers.get(objectId);
         if (!marker) return;
         clearFilters();
+        if (interactiveMap) {
+            const item = campusObjects.find((object) => object.id === objectId);
+            interactiveMap.setLocation({ center: [item.coordinates[1], item.coordinates[0]], zoom: 17 });
+        }
         pinnedMarker = marker;
         marker.querySelector('.campus-marker__trigger')?.focus({ preventScroll: true });
-        marker.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+        (interactiveMap ? mapElement : marker).scrollIntoView({
+            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
+            block: 'center', inline: 'center',
+        });
         window.setTimeout(() => showPopup(marker), 300);
     };
 
@@ -206,5 +216,93 @@
     window.addEventListener('resize', () => { if (activeMarker) positionPopup(activeMarker); });
     document.addEventListener('scroll', () => { if (activeMarker) positionPopup(activeMarker); }, true);
 
+    const initYandexMap = async () => {
+        if (mapElement.dataset.mapProvider !== 'yandex') return;
+        const apiKey = mapElement.dataset.yandexApiKey?.trim();
+        // Без ключа сохраняем рабочую статическую карту и не отправляем запрос к API.
+        if (!apiKey) {
+            mapElement.dataset.mapState = 'missing-key';
+            return;
+        }
+
+        const host = document.createElement('div');
+        host.className = 'campus-map__yandex';
+        let timeoutId;
+        let script;
+        mapElement.dataset.mapState = 'loading';
+        try {
+            await Promise.race([
+                (async () => {
+                    if (!window.ymaps3) {
+                        await new Promise((resolve, reject) => {
+                            script = document.createElement('script');
+                            const url = new URL('https://api-maps.yandex.ru/v3/');
+                            url.searchParams.set('apikey', apiKey);
+                            url.searchParams.set('lang', 'ru_RU');
+                            script.src = url.href;
+                            script.onload = resolve;
+                            script.onerror = () => reject(new Error('Не удалось загрузить Яндекс.Карты'));
+                            document.head.append(script);
+                        });
+                    }
+                    await window.ymaps3.ready;
+                })(),
+                new Promise((_, reject) => {
+                    timeoutId = window.setTimeout(() => reject(new Error('Истекло время ожидания Яндекс.Карт')), 15000);
+                }),
+            ]);
+
+            const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker, YMapListener } = window.ymaps3;
+            mapElement.append(host);
+            mapElement.classList.add('campus-map--interactive');
+            interactiveMap = new YMap(host, {
+                // В API v3 порядок координат: долгота, широта.
+                location: {
+                    center: [Number(mapElement.dataset.mapLon), Number(mapElement.dataset.mapLat)],
+                    zoom: Number(mapElement.dataset.mapZoom) || 16,
+                },
+            });
+            interactiveMap.addChild(new YMapDefaultSchemeLayer());
+            interactiveMap.addChild(new YMapDefaultFeaturesLayer());
+            campusObjects.forEach((item) => {
+                const marker = markers.get(item.id);
+                marker.style.removeProperty('left');
+                marker.style.removeProperty('top');
+                // Переиспользуем DOM метки вместе с обработчиками и разметкой popup.
+                interactiveMap.addChild(new YMapMarker({
+                    coordinates: [item.coordinates[1], item.coordinates[0]],
+                }, marker));
+            });
+            interactiveMap.addChild(new YMapListener({
+                onUpdate: () => {
+                    if (activeMarker) window.requestAnimationFrame(() => {
+                        if (activeMarker) positionPopup(activeMarker);
+                    });
+                },
+            }));
+            mapElement.querySelector('.campus-map-page__image').hidden = true;
+            applyFilters();
+            mapElement.dataset.mapState = 'ready';
+        } catch (error) {
+            interactiveMap?.destroy();
+            interactiveMap = null;
+            host.remove();
+            script?.remove();
+            mapElement.classList.remove('campus-map--interactive');
+            mapElement.querySelector('.campus-map-page__image').hidden = false;
+            campusObjects.forEach((item) => {
+                const marker = markers.get(item.id);
+                marker.style.left = `${item.position[0]}%`;
+                marker.style.top = `${item.position[1]}%`;
+                mapElement.append(marker);
+            });
+            mapElement.dataset.mapState = 'error';
+            console.warn('Используется статическая карта: подключение API не удалось.', error);
+        } finally {
+            window.clearTimeout(timeoutId);
+        }
+    };
+
     window.CampusMap = { campusObjects, focusObject, clearFilters };
+    initYandexMap();
 })();

@@ -54,7 +54,7 @@
     border: 1px solid var(--subprimary-color-1);
     border-radius: 100px;
     font-size: 14px;
-    max-width: 67px;
+    max-width: 75px;
 }
 
 .program-card__tag--outline {
@@ -118,7 +118,8 @@
 .program-card__stats {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px 20px;
+    gap: 16px;
+    padding-left: 5px;
 }
 
 .program-card__stat {

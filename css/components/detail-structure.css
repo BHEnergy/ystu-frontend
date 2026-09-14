@@ -1,3 +1,7 @@
+.detail-structure .breadcrumbs {
+    margin-top: 60px;
+}
+
 .structure-detail {
     padding: 60px 0 160px;
 }
@@ -38,7 +42,7 @@
 .structure-contact-card div {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
 .structure-contact-card h2,
@@ -75,29 +79,20 @@
 
 .structure-detail__tab {
     position: relative;
-    padding: 10px 16px;
+    padding: 16px 32px;
     color: var(--subprimary-color-1);
+    border: 1px solid var(--subprimary-color-1);
+    border-radius: 100px;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
     transition: color 0.25s ease-in-out;
 }
 
-.structure-detail__tab::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 2px;
-    background-color: currentColor;
-    transform: scaleX(0);
-    transform-origin: left center;
-    transition: transform 0.3s ease-in-out;
-}
-
 .structure-detail__tab.select {
-    color: var(--primary-color-2);
+    color: var(--white-shade-3);
+    background: var(--primary-color-2);
+    border: 1px solid var(--primary-color-2);
 }
 
 .structure-detail__tab.select::after {
@@ -122,38 +117,84 @@
 
 .training-program-card {
     display: flex;
-    min-height: 372px;
+    min-height: 368px;
     padding: 24px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 24px;
     background: var(--white-shade-1);
     border: 1px solid var(--subprimary-color-2);
     border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.training-program-card::before {
+    position: absolute;
+    bottom: -10%;
+    right: -33px;
+    content: "";
+    display: block;
+    width: 138px;
+    height: 195px;
+    background-color: var(--primary-color-2);
+    clip-path: polygon(0 0, 43% 0, 100% 50%, 43% 100%, 0 100%, 57% 50%);
+    z-index: 0;
+}
+
+.training-program-card::after {
+    position: absolute;
+    bottom: -1%;
+    right: 63px;
+    content: "";
+    display: block;
+    width: 89px;
+    height: 126px;
+    background-color: var(--primary-color-5);
+    clip-path: polygon(0 0, 43% 0, 100% 50%, 43% 100%, 0 100%, 57% 50%);
+    z-index: 0;
+}
+
+.training-program-card::before,
+.training-program-card::after {
+    pointer-events: none;
+    transform: scale(1);
+    transform-origin: center;
+    transition: transform 400ms ease-in-out;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .training-program-card:hover::before,
+    .training-program-card:hover::after {
+        transform: scale(1.08);
+    }
+}
+
+.training-program-card:focus-within::before,
+.training-program-card:focus-within::after {
+    transform: scale(1.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .training-program-card::before,
+    .training-program-card::after {
+        transition: none;
+    }
 }
 
 .training-program-card__tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
 }
 
-.training-program-card__tags .bakalavr {
-    color: var(--white-shade-1);
-    background: var(--subprimary-color-1);
-    border: none;
-    max-width: 123px;
+.training-program-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.training-program-card__tags .magistratura {
-    color: var(--white-shade-1);
-    background: var(--primary-color-2);
-    border: none;
-    max-width: 133px;
-    width: 100%;
-}
-
-.training-program-card__tags span {
+span.training-program-card__tag {
     padding: 6px 20px;
     color: var(--subprimary-color-1);
     background: transparent;
@@ -164,10 +205,26 @@
     max-width: 75px;
 }
 
+.training-program-card__header .bakalavr {
+    color: var(--white-shade-1);
+    background: var(--subprimary-color-1);
+    border: none;
+    max-width: 123px;
+}
+
+.training-program-card__header .magistratura {
+    color: var(--white-shade-1);
+    background: var(--primary-color-2);
+    border: none;
+    max-width: 133px;
+    width: 100%;
+}
+
 .training-program-card__body {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
+    width: 100%;
 }
 
 .training-program-card__code {
@@ -187,28 +244,19 @@
 }
 
 .training-program-card__footer {
-    margin-top: auto;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
-    gap: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 267px;
 }
 
 .training-program-card__footer-item {
-    display: flex;
-    gap: 8px;
-    flex-direction: column;
-}
-
-.training-program-card__footer-item span {
-    color: var(--subprimary-color-2);
-    font-size: 16px;
-    text-transform: uppercase;
-}
-
-.training-program-card__footer-item p {
+    padding: 10px 20px;
+    background: var(--subprimary-color-4);
+    border-radius: 100px;
+    font-style: italic;
+    font-size: 14px;
     color: var(--subprimary-color-1);
-    font-size: 28px;
-    font-weight: 600;
 }
 
 .training-program-card a {
@@ -472,6 +520,10 @@
 }
 
 @media (max-width: 768px) {
+    .detail-structure .breadcrumbs {
+        margin-top: 16px;
+    }
+
     .structure-detail {
         padding: 40px 0 80px;
     }
@@ -506,26 +558,42 @@
     }
 
     .structure-detail__tab {
-        padding: 8px 10px;
+        padding: 14px 24px;
         font-size: 16px;
     }
 
     .training-program-card {
-        padding: 24px 16px;
-        min-height: 291px;
+        padding: 16px;
+        min-height: 213px;
+        border-radius: 10px;
+        gap: 16px;
     }
 
-    .training-program-card__tags span {
+    .training-program-card::before {
+        height: 105px;
+        width: 78px;
+        right: -19px;
+        bottom: -25px;
+    }
+
+    .training-program-card::after {
+        height: 68px;
+        width: 51px;
+        right: 33px;
+        bottom: -6px;
+    }
+
+    span.training-program-card__tag {
         padding: 4px 16px;
         font-size: 12px;
         height: 23px;
         max-width: 62px;
 
-        & .bakalavr {
+        &.bakalavr {
             max-width: 103px;
         }
 
-        & .magistratura {
+        &.magistratura {
             max-width: 110px;
         }
     }
@@ -534,16 +602,18 @@
         font-size: 15px;
     }
 
-    .training-program-card__footer-item span {
-        font-size: 15px;
+    .training-program-card__footer {
+        flex-direction: column;
+        align-items: baseline;
     }
 
-    .training-program-card__footer-item p {
-        font-size: 24px;
+    .training-program-card__footer-item {
+        font-size: 12px;
+        padding: 6px 12px;
     }
 
     .training-program-card h3 {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .structure-detail__intro-grid,
@@ -621,7 +691,13 @@
 
 @media(hover: hover) {
     .structure-detail__tab:hover {
-        color: var(--primary-color-2);
+        color: var(--white-shade-3);
+        background: var(--primary-color-2);
+        border: 1px solid var(--primary-color-2);
+    }
+
+    .structure-detail__tab.select:hover {
+        color: var(--white-shade-3);
     }
 
     .structure-detail__tab:hover::after {

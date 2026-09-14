@@ -17,13 +17,14 @@
 
 .program-about__description__text {
     flex: 0 1 50%;
+    font-size: 18px;
 }
 
 .program-about__description__feacher {
     position: relative;
     flex: 0 1 41%;
     padding: 40px 24px;
-    background: var(--subprimary-color-7);
+    background: var(--subprimary-color-5);
     border-radius: 12px;
     display: flex;
     flex-direction: row;
@@ -76,13 +77,14 @@
     text-transform: uppercase;
 }
 
+.program-about__fact__title {
+    font-weight: 500;
+}
+
 .program-about__fact__description {
     color: var(--subprimary-color-1);
     font-size: 28px;
     font-weight: 600;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
     & span {
         color: var(--subprimary-color-2);
@@ -90,6 +92,18 @@
         text-transform: uppercase;
         font-weight: 400;
     }
+}
+
+.program-about__fact__description.program-about__fact--row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.program-about__fact__description.places {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 16px;
 }
 
 .program-about__link {
@@ -112,6 +126,23 @@
     letter-spacing: 5px;
 }
 
+
+.program-about__fact--accreditaion.program-about__fact--accreditaion {
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+}
+
+.program-about__fact--accreditaion {
+
+    & img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
 @media(max-width: 768px) {
     .program-about {
         margin: 60px 0;
@@ -128,6 +159,10 @@
     .program-about__facts {
         display: flex;
         flex-direction: column;
+    }
+
+    .program-about__description__text {
+        font-size: 16px;
     }
 
     .program-about__description__feacher {
@@ -167,10 +202,23 @@
     }
 
     .program-about__fact__description {
+        display: flex;
         flex-direction: column;
         align-items: stretch;
         gap: 16px;
         font-size: 24px;
+    }
+
+    .program-about__fact--accreditaion.program-about__fact--accreditaion {
+        height: 40px;
+        width: 40px;
+    }
+
+    .program-about__fact--accreditaion {
+        & img {
+            height: 33px;
+            width: 33px;
+        }
     }
 
     .program-about__fact--row {

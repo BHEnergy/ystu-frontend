@@ -291,12 +291,13 @@
           </div>
 
           <section class="campus-map-page__canvas" aria-label="Интерактивная карта кампуса">
-            <div id="campus-map" data-campus-map></div>
+            <!-- API v3: ключ с ограничением по домену вставляется в data-yandex-api-key. -->
+            <div id="campus-map" data-campus-map data-map-provider="yandex" data-yandex-api-key="78e74d40-1f5f-4bf4-95de-2e6473aab959" data-map-lat="57.586895" data-map-lon="39.855303" data-map-zoom="16"></div>
           </section>
         </div>
       </main>
 
-      <footer class="footer">
+<footer class="footer">
         <div class = "container">
           <div class = "footer__wrapper">
             <div class = "footer__links">
@@ -327,7 +328,7 @@
               </div>
               <div class = "footer__information">
                 <div class = "footer__emblem">
-                  <img src = "../images/fallback/emblem.png" alt="Тест">
+                  <img loading="lazy" decoding="async" src = "../images/fallback/emblem.png" alt="Тест">
                 </div>
                 <div class = "footer__consultation">
                   <div class = "footer__phones">
@@ -343,11 +344,13 @@
                   <div class = "footer__modals">
                     <div class = "footer__modal">
                       <p>Подать обращение<br> гражданина</p>
-                      <a href = "/pages/map.html">Подробнее</a>
+                      <a class = "desktop-text" href = "/pages/map.html">Подать обращение</a>
+                      <a class = "mobile-text" href = "/pages/map.html">Подробнее</a>
                     </div>
                     <div class = "footer__modal">
                       <p>Оставить мнение<br> об организации</p>
-                      <a href = "/pages/map.html">Подробнее</a>
+                      <a class = "desktop-text" href = "/pages/map.html">Оставить отзыв</a>
+                      <a class = "mobile-text" href = "/pages/map.html">Подробнее</a>
                     </div>
                   </div>
                 </div>
@@ -355,7 +358,7 @@
             </div>
             <div class = "footer__bottom">
               <p>© ФГБОУ ВО «ЯГТУ», 2026</p>
-              <a href = "https://redstaragency.ru" aria-label="Разработчик сайта — RedStar">
+              <a class = "redstar" href = "https://redstaragency.ru" aria-label="Разработчик сайта — RedStar">
                 <img src = "../images/svg/redstar.svg" alt="Тест">
               </a>
             </div>

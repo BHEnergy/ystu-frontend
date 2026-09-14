@@ -97,7 +97,7 @@
     padding: 24px 24px 26px 16px;
     border-radius: 8px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     flex: 0 0 53%;
     justify-content: space-between;
     max-width: 431px;
@@ -115,6 +115,10 @@
     font-weight: 600;
     border-bottom: 1px solid var(--primary-color-2);
     padding-bottom: 6px;
+}
+
+.footer__modal .mobile-text {
+    display: none;
 }
 
 .footer__messages {
@@ -296,6 +300,19 @@
     .footer__modal {
         flex-basis: auto;
         padding: 17px 16px;
+    }
+
+    .footer__modal a {
+        padding: 4px 8px;
+
+    }
+
+    .footer__modal .mobile-text {
+        display: block;
+    }
+
+    .footer__modal .desktop-text {
+        display: none;
     }
 }
 

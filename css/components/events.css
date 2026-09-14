@@ -68,6 +68,7 @@
 
 .events__tag.current {
     background-color: var(--subprimary-color-4);
+    border: 1px solid var(--subprimary-color-4);
 }
 
 .events__separator {

@@ -29,6 +29,29 @@
 
 .dropdown--item.open .dropdown--content {
     display: block;
+    animation: dropdown-content-enter 280ms cubic-bezier(.2, .7, .3, 1);
+}
+
+@keyframes dropdown-content-enter {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dropdown--item.open .dropdown--content {
+        animation: none;
+    }
+
+    .dropdown--header::after {
+        transition: none;
+    }
 }
 
 .dropdown--item__title {

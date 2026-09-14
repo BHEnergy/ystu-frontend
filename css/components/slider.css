@@ -175,6 +175,24 @@
     }
 }
 
+.banner-slider-3[data-pagination="bullets"] .default-slider-controls {
+    & .swiper-button-prev,
+    & .swiper-button-next,
+    & .swiper-pagination {
+        position: static;
+        margin: 0;
+        transform: none;
+        flex-shrink: 0;
+    }
+
+    & .swiper-pagination {
+        display: flex;
+        align-items: center;
+        width: auto;
+        line-height: 0;
+    }
+}
+
 .js-init-banner-slider.banner-slider-3--featured {
     height: 720px;
     min-height: 720px;

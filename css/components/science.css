@@ -101,11 +101,15 @@
 
 @media(max-width: 768px) {
     .science {
-        margin-bottom: 100px;
+        margin-bottom: 67px;
     }
 
     .science-detail__content {
         flex-direction: column !important;
+    }
+
+    .science-detail__section {
+        padding-bottom: 16px;
     }
 
     .science-detail__info {

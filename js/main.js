@@ -131,7 +131,7 @@
                 },
                 pagination: {
                     el: slider.querySelector('.swiper-pagination'),
-                    type: 'fraction',
+                    type: slider.dataset.pagination === 'bullets' ? 'bullets' : 'fraction',
                     clickable: true,
                 },
                 breakpoints: {
@@ -175,8 +175,8 @@
                 slidesPerView: 1,
                 spaceBetween: 24,
                 navigation: {
-                    prevEl: prevButton,
-                    nextEl: nextButton,
+                    prevEl: prevButton || prevButtonBig,
+                    nextEl: nextButton || nextButtonBig,
                 },
                 pagination: {
                     el: slider.querySelector(".swiper-pagination"),
@@ -201,8 +201,9 @@
                 },
             });
 
-            prevButtonBig.addEventListener("click", () => swiper.slidePrev());
-            nextButtonBig.addEventListener("click", () => swiper.slideNext());
+            // Если малых стрелок нет, большие уже подключены через navigation Swiper.
+            if (prevButton) prevButtonBig.addEventListener("click", () => swiper.slidePrev());
+            if (nextButton) nextButtonBig.addEventListener("click", () => swiper.slideNext());
         });
 
         document.querySelectorAll('.js-init-structure-gallery').forEach((slider) => {
@@ -249,6 +250,7 @@
             ["swiper-bundle.min.js", "Swiper"],
             ["imask.js", "IMask"],
             ['gsap.min.js', "gsap"],
+            ["lazyload.min.js", "LazyLoad"],
         ]);
 
         await loadScripts([
@@ -265,6 +267,14 @@
 
         if (typeof window.Swiper === 'function') {
             initSwiper();
+        }
+
+        if (typeof window.LazyLoad === 'function') {
+            // После динамического вывода карточек в Битрикс: window.imageLazyLoad.update().
+            window.imageLazyLoad = new window.LazyLoad({
+                elements_selector: 'img[loading="lazy"]',
+                use_native: true,
+            });
         }
     };
 

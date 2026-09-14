@@ -300,9 +300,10 @@
                 </div>
                 <div class="program-about__fact">
                   <div class = "program-about__fact__title">Количество мест</div>
-                  <div class = "program-about__fact__description">
-                    <p>25 <span>платные места</span></p>
+                  <div class = "program-about__fact__description places">
                     <p>16 <span>бюджетные места</span></p>
+                    <p>16 <span>целевые места</span></p>
+                    <p>25 <span>платные места</span></p>
                   </div>
                 </div>
                 <div class="program-about__fact">
@@ -314,13 +315,13 @@
                   <div class = "program-about__fact__description">76,3</div>
                 </div>
                 <div class="program-about__fact">
-                  <div class = "program-about__fact__title">Государственная аккредитация</div>
-                  <div class = "program-about__fact__description program-about__fact--row">Присутствует</div>
+                  <div class = "program-about__fact__title">Гос. аккредитация</div>
+                  <div class = "program-about__fact__description program-about__fact--accreditaion"><img src = "../images/svg/accreditaion.svg"></div>
                 </div>
                 <div class="program-about__fact">
                   <div class = "program-about__fact__title">Индивидуальные образовательные траектории</div>
                   <div class = "program-about__fact__description program-about__fact--row">
-                    Присутствует
+                    Да
                     <a class = "program-about__link" href="#">Подробнее</a>
                   </div>
                 </div>
@@ -348,7 +349,7 @@
               </div>
 
               <div class="preparatory-courses__media">
-                <img
+                <img loading="lazy" decoding="async"
                   class="preparatory-courses__image"
                   src="../images/fallback/banner-courses.png"
                   alt="Тест"
@@ -505,7 +506,7 @@
 
             <div class="program-admissions__body">
               <div class="program-admissions__map">
-                <img
+                <img loading="lazy" decoding="async"
                   src="../images/fallback/admissions-map.png"
                   alt="Тест"
                 />
@@ -550,7 +551,7 @@
 
       </main>
 
-      <footer class="footer">
+<footer class="footer">
         <div class = "container">
           <div class = "footer__wrapper">
             <div class = "footer__links">
@@ -581,7 +582,7 @@
               </div>
               <div class = "footer__information">
                 <div class = "footer__emblem">
-                  <img src = "../images/fallback/emblem.png" alt="Тест">
+                  <img loading="lazy" decoding="async" src = "../images/fallback/emblem.png" alt="Тест">
                 </div>
                 <div class = "footer__consultation">
                   <div class = "footer__phones">
@@ -597,11 +598,13 @@
                   <div class = "footer__modals">
                     <div class = "footer__modal">
                       <p>Подать обращение<br> гражданина</p>
-                      <a href = "/pages/map.html">Подробнее</a>
+                      <a class = "desktop-text" href = "/pages/map.html">Подать обращение</a>
+                      <a class = "mobile-text" href = "/pages/map.html">Подробнее</a>
                     </div>
                     <div class = "footer__modal">
                       <p>Оставить мнение<br> об организации</p>
-                      <a href = "/pages/map.html">Подробнее</a>
+                      <a class = "desktop-text" href = "/pages/map.html">Оставить отзыв</a>
+                      <a class = "mobile-text" href = "/pages/map.html">Подробнее</a>
                     </div>
                   </div>
                 </div>
@@ -609,7 +612,7 @@
             </div>
             <div class = "footer__bottom">
               <p>© ФГБОУ ВО «ЯГТУ», 2026</p>
-              <a href = "https://redstaragency.ru" aria-label="Разработчик сайта — RedStar">
+              <a class = "redstar" href = "https://redstaragency.ru" aria-label="Разработчик сайта — RedStar">
                 <img src = "../images/svg/redstar.svg" alt="Тест">
               </a>
             </div>
