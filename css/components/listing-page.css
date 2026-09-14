@@ -1,5 +1,9 @@
-.listing-page {
+.listing-page--vacancies {
     padding-bottom: 280px;
+}
+
+.listing-page--programs {
+    padding-bottom: 120px;
 }
 
 .listing-page__intro {
@@ -48,9 +52,10 @@
 }
 
 @media (max-width: 768px) {
-    .listing-page {
+    .listing-page--vacancies, .listing-page--programs {
         padding-bottom: 80px;
     }
+
     .listing-page__intro {
         margin-top: 40px;
         gap: 24px;
