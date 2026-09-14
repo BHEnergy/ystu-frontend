@@ -3,7 +3,7 @@
 }
 
 .structure-detail {
-    padding: 60px 0 160px;
+    padding: 60px 0 0;
 }
 
 .structure-detail__title {
@@ -418,7 +418,7 @@ span.training-program-card__tag {
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-    background: var(--white-shade-1);
+    background: var(--white-shade-4);
     border: 2px solid var(--subprimary-color-2);
     border-radius: 20px;
 }
@@ -524,9 +524,12 @@ span.training-program-card__tag {
         margin-top: 16px;
     }
 
-    .structure-detail {
-        padding: 40px 0 80px;
+    .structure-gallery {
+        margin-top: 40px;
     }
+
+    .structure-detail {
+        padding: 40px 0 0;    }
 
     .structure-detail__lead, .structure-detail__text {
         font-size: 16px;
@@ -627,7 +630,7 @@ span.training-program-card__tag {
     }
 
     .structure-detail__section-title {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .structure-about__video {
@@ -643,6 +646,7 @@ span.training-program-card__tag {
         padding: 24px 16px;
         gap: 24px;
         min-height: 488px;
+        border-radius: 8px;
     }
 
     .structure-person-card__person {

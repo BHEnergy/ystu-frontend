@@ -1,7 +1,7 @@
 .error-page {
-    max-height: 600px;
+    max-height: 640px;
     align-content: center;
-    padding: 182px 0;
+    padding: 120px 0 160px;
 }
 
 .error-page__container {
@@ -36,7 +36,7 @@
 /* Устройства Small (телефоны с горизонтальной ориентацией, 576 пикселей и выше) */
 @media (max-width: 576px) { 
     .error-page {
-        padding: 110px 0;
+        padding: 110px 0 0;
     }
     .error-page__container {
         align-items: center;

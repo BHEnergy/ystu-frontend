@@ -271,11 +271,38 @@
         background-color: unset;
     }
 
-    .student-links__item:nth-child(4n + 4)::after {
-        mask-image: url(../../images/svg/sd-3.svg);
-        -webkit-mask-image: url(../../images/svg/sd-3.svg);
+    .student-links__item:nth-child(6n + 4)::after {
+        mask-image: url(../../images/svg/sd-4.svg);
+        -webkit-mask-image: url(../../images/svg/sd-4.svg);
         background-size: cover;
         background-color: #F8AD80;
+        height: 128px;
+        width: 212px;
+        right: -35px;
+        bottom: -10px;
+        top: auto;
+        left: unset;
+    }
+
+    .student-links__item:nth-child(6n + 5)::after {
+        mask-image: url(../../images/svg/sd-5.svg);
+        -webkit-mask-image: url(../../images/svg/sd-5.svg);
+        background-size: cover;
+        background-color: #B5C6DB;
+        width: 245px;
+        height: 400px;
+        top: 5px;
+        right: -20px;
+        left: unset;
+    }
+
+    .student-links__item:nth-child(6n + 6)::after {
+        background: url(../../images/svg/sd-6.svg);
+        background-size: cover;
+        width: 115%;
+        right: -20px;
+        bottom: -75px;
+        top: unset;
     }
 }
 

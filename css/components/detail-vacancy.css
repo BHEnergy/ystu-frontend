@@ -1,6 +1,5 @@
 .detail-vacancy {
     margin-top: 60px;
-    margin-bottom: 130px;
 }
 
 .detail-vacancy__body {
@@ -101,7 +100,6 @@
 @media (max-width: 768px) {
     .detail-vacancy {
         margin-top: 40px;
-        margin-bottom: 128px;
     }
 
     .detail-vacancy .title {
@@ -195,7 +193,7 @@
     }
 
     .detail-vacancy .vacancy-documents__title {
-        margin-bottom: 60px;
+        margin-bottom: 24px;
         font-size: 24px;
         line-height: 1.2;
     }

@@ -1,6 +1,5 @@
 .detail-sotrudnik {
     margin-top: 60px;
-    margin-bottom: 165px;
     gap: 65px;
 }
 
@@ -115,6 +114,10 @@
 }
 
 @media (max-width: 768px) {
+    .detail-sotrudnik {
+        margin-top: 40px;
+    }
+
     .sotrudnik {
         flex-direction: column !important;
         gap: 24px;

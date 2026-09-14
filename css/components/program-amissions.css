@@ -118,8 +118,8 @@
     }
 
     .program-admissions__body {
-        grid-template-columns: 1fr;
-        gap: 32px;
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .program-admissions__contacts {

@@ -1,6 +1,5 @@
 .science {
     margin-top: 60px;
-    margin-bottom: 160px;
 }
 
 .science-list {
@@ -101,7 +100,6 @@
 
 @media(max-width: 768px) {
     .science {
-        margin-bottom: 67px;
     }
 
     .science-detail__content {

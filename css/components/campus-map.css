@@ -1,6 +1,5 @@
 .campus-map-page {
     padding-top: calc(var(--header-height) + 25px);
-    padding-bottom: 200px;
 }
 
 .campus-map-page__title {
@@ -444,7 +443,6 @@
 
 @media (max-width: 768px) {
     .campus-map-page {
-        padding-bottom: 80px;
     }
 
     .campus-map-page__title {
@@ -468,6 +466,24 @@
 
     .campus-popup-layer {
         width: min(320px, calc(100vw - 32px));
+    }
+}
+
+@media (max-width: 768px) {
+    .campus-map-page .campus-map-page__canvas {
+        width: calc(100% + var(--container-padding) * 2);
+        margin-left: calc(var(--container-padding) * -1);
+        height: 700px;
+        overflow: hidden;
+    }
+
+    #campus-map,
+    #campus-map.campus-map--interactive {
+        width: 100%;
+        min-width: 0;
+        height: 700px;
+        min-height: 700px;
+        aspect-ratio: auto;
     }
 }
 

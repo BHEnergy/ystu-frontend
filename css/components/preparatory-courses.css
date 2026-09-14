@@ -10,7 +10,7 @@
     padding: 32px 60px;
 
     color: #ffffff;
-    background-color: #08498f;
+    background-color: var(--subprimary-color-1);
     border-radius: 16px;
     overflow: hidden;
     margin-bottom: 110px;

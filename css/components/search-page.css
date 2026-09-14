@@ -1,8 +1,11 @@
 .search-page {
     min-height: 480px;
-    padding-bottom: 80px;
     position: relative;
     overflow: hidden;
+}
+
+.search-page .breadcrumbs {
+    margin-top: 52px;
 }
 
 .search-page-background {
@@ -61,6 +64,10 @@
         min-height: 460px;
     }
 
+    .search-page .breadcrumbs {
+        margin-top: 16px;
+    }
+
     .search-page__form {
         margin-top: 48px;
     }
@@ -87,7 +94,6 @@
 @media (max-width: 576px) {
     .search-page {
         min-height: 200px;
-        padding-bottom: 56px;
     }
 
     .search-page__form {
