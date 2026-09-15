@@ -204,6 +204,19 @@
 
             trigger.addEventListener('click', (event) => {
                 if (mobileMenuMedia.matches) {
+                    const triggerRect = trigger.getBoundingClientRect();
+                    // У псевдоэлемента-стрелки нет своего события: выделяем ей
+                    // правую область шириной 44px, удобную для касания.
+                    const isArrowClick = event.detail > 0
+                        && event.clientX >= triggerRect.right - 44
+                        && event.clientX <= triggerRect.right;
+
+                    if (panel.classList.contains('is-open') && isArrowClick) {
+                        event.preventDefault();
+                        resetSubmenu();
+                        return;
+                    }
+
                     // У раскрытого раздела уже восстановлен URL страницы.
                     if (panel.classList.contains('is-open')) return;
                     event.preventDefault();
