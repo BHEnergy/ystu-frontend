@@ -1,0 +1,22 @@
+{
+  "name": "ystu-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Статические шаблоны сайта ЯГТУ для интеграции в 1С-Битрикс",
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "start": "node scripts/serve.cjs",
+    "dev": "node scripts/dev.cjs",
+    "test": "node scripts/check.cjs",
+    "test:ui": "node scripts/check-ui.cjs",
+    "test:ui:legacy": "node scripts/check-ui.cjs --legacy"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "nunjucks": "3.2.4",
+    "parse5": "7.3.0",
+    "playwright-core": "1.63.0"
+  }
+}

@@ -1,0 +1,188 @@
+{% extends "layouts/base.njk" %}
+{% block head %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../styles/styles.css?v=3" rel="stylesheet" />
+    <script src = "../js/main.js" type="text/javascript"></script>
+    <title>Структура университета</title>
+  {% endblock %}
+{% block bodyAttributes %}{% endblock %}
+{% block content %}
+    <div class="wrapper">
+      {% include "components/header.njk" %}
+      <main class="main">
+        <div class = "container">
+            <div class = "breadcrumbs">
+                <a class = "breadcrumbs__item" href = "index.html">
+                    Главная
+                </a>
+                <div class = "breadcrumbs__separator"></div>
+                <a class = "breadcrumbs__item" href = "index.html">
+                    Университет
+                </a>
+                <div class = "breadcrumbs__separator"></div>
+                <span>Структура университета</span>
+            </div>
+        </div>    
+        <!-- События / новости -->
+        <section class = "structure">
+          <div class = "container structure__container">
+            <h1 class = "title">Структура университета</h1>
+            <div class = "structure__tags" role="group" aria-label="Раздел структуры">
+              <button type="button" class="structure__tag tag select" data-filter="institutes" aria-pressed="true">
+                Институты
+              </button>
+              <button type="button" class="structure__tag tag" data-filter="departments" aria-pressed="false">
+                Кафедры
+              </button>
+              <button type="button" class="structure__tag tag" data-filter="buildings" aria-pressed="false">
+                Корпуса и общежитие
+              </button>
+              <button type="button" class="structure__tag tag" data-filter="services" aria-pressed="false">
+                Службы и отделы
+              </button>
+            </div>
+            <ul class="structure__institutes" data-category="institutes">
+                <li class="structure__institute">
+                  <a class="structure__institute-link" href="#">
+                    <h2 class="structure__institute-title">
+                      Институт базовой инженерной подготовки
+                    </h2>
+
+                    <ul class="structure__programs">
+                      <li class="structure__program">
+                        Бакалавриат: 1 программа
+                      </li>
+                      <li class="structure__program">
+                        Магистратура: 1 программа
+                      </li>
+                    </ul>
+                  </a>
+                </li>
+
+                <li class="structure__institute">
+                  <a class="structure__institute-link" href="#">
+                    <h2 class="structure__institute-title">
+                      Институт цифровых систем
+                    </h2>
+
+                    <ul class="structure__programs">
+                      <li class="structure__program">
+                        Бакалавриат: 1 программа
+                      </li>
+                      <li class="structure__program">
+                        Магистратура: 1 программа
+                      </li>
+                    </ul>
+                  </a>
+                </li>
+
+                <li class="structure__institute">
+                  <a class="structure__institute-link" href="#">
+                    <h2 class="structure__institute-title">
+                      Институт экономики и менеджмента
+                    </h2>
+
+                    <ul class="structure__programs">
+                      <li class="structure__program">
+                        Бакалавриат: 1 программа
+                      </li>
+                      <li class="structure__program">
+                        Магистратура: 1 программа
+                      </li>
+                    </ul>
+                  </a>
+                </li>
+
+                <li class="structure__institute">
+                  <a class="structure__institute-link" href="#">
+                    <h2 class="structure__institute-title">
+                      Институт химии и химической технологии
+                    </h2>
+
+                    <ul class="structure__programs">
+                      <li class="structure__program">
+                        Бакалавриат: 1 программа
+                      </li>
+                      <li class="structure__program">
+                        Магистратура: 1 программа
+                      </li>
+                    </ul>
+                  </a>
+                </li>
+
+                <li class="structure__institute">
+                  <a class="structure__institute-link" href="#">
+                    <h2 class="structure__institute-title">
+                      Институт архитектуры и дизайна
+                    </h2>
+
+                    <ul class="structure__programs">
+                      <li class="structure__program">
+                        Бакалавриат: 1 программа
+                      </li>
+                      <li class="structure__program">
+                        Магистратура: 1 программа
+                      </li>
+                    </ul>
+                  </a>
+                </li>
+
+                <li class="structure__institute">
+                  <a class="structure__institute-link" href="#">
+                    <h2 class="structure__institute-title">
+                      Институт инженеров строительства и транспорта
+                    </h2>
+
+                    <ul class="structure__programs">
+                      <li class="structure__program">
+                        Бакалавриат: 1 программа
+                      </li>
+                      <li class="structure__program">
+                        Магистратура: 1 программа
+                      </li>
+                    </ul>
+                  </a>
+                </li>
+
+                <li class="structure__institute">
+                  <a class="structure__institute-link" href="#">
+                    <h2 class="structure__institute-title">
+                      Институт инженерии и машиностроения
+                    </h2>
+
+                    <ul class="structure__programs">
+                      <li class="structure__program">
+                        Бакалавриат: 1 программа
+                      </li>
+                      <li class="structure__program">
+                        Магистратура: 1 программа
+                      </li>
+                    </ul>
+                  </a>
+                </li>
+
+                <li class="structure__institute">
+                  <a class="structure__institute-link" href="#">
+                    <h2 class="structure__institute-title">
+                      Университетский колледж ЯГТУ «Политехник»
+                    </h2>
+
+                    <ul class="structure__programs">
+                      <li class="structure__program">
+                        Бакалавриат: 1 программа
+                      </li>
+                      <li class="structure__program">
+                        Магистратура: 1 программа
+                      </li>
+                    </ul>
+                  </a>
+                </li>
+              </ul>
+          </div>
+        </section>
+      </main>
+{% include "components/footer.njk" %}
+    </div>
+    {% include "components/cookie-banner.njk" %}
+  {% endblock %}

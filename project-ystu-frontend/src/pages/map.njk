@@ -1,0 +1,47 @@
+{% extends "layouts/base.njk" %}
+{% block head %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../styles/styles.css?v=3" rel="stylesheet" />
+    <script src="../js/main.js" type="text/javascript"></script>
+    <title>Карта кампуса — ЯГТУ</title>
+  {% endblock %}
+{% block bodyAttributes %}{% endblock %}
+{% block content %}
+    <div class="wrapper">
+      {% include "components/header.njk" %}
+
+      <main class="main campus-map-page">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a class="breadcrumbs__item" href="index.html">Главная</a>
+            <div class="breadcrumbs__separator"></div>
+            <a class="breadcrumbs__item" href="#">Университет</a>
+            <div class="breadcrumbs__separator"></div>
+            <span>Карта кампуса</span>
+          </nav>
+
+          <h1 class="campus-map-page__title">Карта кампуса</h1>
+
+          <div class="campus-map-page__toolbar">
+            <div class="campus-map-page__filters">
+              {% include "components/campus-filter.njk" %}
+              {% include "components/campus-filter-2.njk" %}
+            </div>
+            <form class="campus-map-page__control" data-campus-search role="search">
+              <input class="campus-map-page__search-input" type="search" name="campus-query" placeholder="поиск" aria-label="Поиск по карте кампуса" />
+              <button class="campus-map-page__search-button" type="submit" aria-label="Найти"><img src="../images/svg/vacancy-search.svg" alt="" /></button>
+            </form>
+          </div>
+
+          <section class="campus-map-page__canvas" aria-label="Интерактивная карта кампуса">
+            <!-- API v3: ключ с ограничением по домену вставляется в data-yandex-api-key. -->
+            <div id="campus-map" data-campus-map data-map-provider="yandex" data-yandex-api-key="78e74d40-1f5f-4bf4-95de-2e6473aab959" data-map-lat="57.586895" data-map-lon="39.855303" data-map-zoom="16"></div>
+          </section>
+        </div>
+      </main>
+
+{% include "components/footer.njk" %}
+    </div>
+    {% include "components/cookie-banner.njk" %}
+  {% endblock %}

@@ -211,3 +211,13 @@
         font-size: 22px;
     }
 }
+.program-card__title a:focus-visible {
+    outline: 2px solid var(--subprimary-color-1);
+    outline-offset: 3px;
+}
+
+@media (hover: hover) {
+    .program-card__title a:hover { text-decoration: underline; text-underline-offset: 4px; }
+}
+
+.program-card__title a:active { color: var(--primary-color-1); }

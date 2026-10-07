@@ -15,6 +15,8 @@
 }
 
 .structure__tag {
+    background: transparent;
+    font-family: inherit;
     color: var(--subprimary-color-1);
     border: 1px solid var(--subprimary-color-1);
     border-radius: 50px;
@@ -39,6 +41,9 @@
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     gap: 24px;
 }
+
+.structure__institutes[hidden],
+.content-filter-status[hidden] { display: none; }
 
 .structure__institutes.no-border .structure__institute {
     border: none;
@@ -170,15 +175,15 @@
 }
 
 /* Устройства Medium (планшеты, 768 пикселей и выше) */
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
     .structure {
         margin-bottom: 100px;
     }
-    
+
     .structure__container {
         gap: 24px;
     }
-    
+
     .structure__institutes {
         display: flex;
         flex-direction: column;
@@ -206,7 +211,7 @@
     .structure__institute-link {
         max-width: 310px;
     }
-    
+
     .structure__institute-title {
         font-size: 18px;
     }
@@ -236,7 +241,7 @@
 }
 
 /* Устройства Small (телефоны с горизонтальной ориентацией, 576 пикселей и выше) */
-@media (max-width: 576px) { 
+@media (max-width: 576px) {
     .structure__institutes {
         display: flex;
         flex-direction: column;

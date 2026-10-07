@@ -1,0 +1,121 @@
+{% extends "layouts/base.njk" %}
+{% block head %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../styles/styles.css?v=3" rel="stylesheet" />
+    <script src="../js/main.js" type="text/javascript"></script>
+    <title>Конструкторско-технологическое обеспечение машиностроительных производств</title>
+  {% endblock %}
+{% block bodyAttributes %} class="program-page"{% endblock %}
+{% block content %}
+    <div class="wrapper">
+      {% include "components/header.njk" %}
+
+      <main class="main main--header-overlay">
+        <!-- Баннер направления -->
+        <section class="hero-banner">
+        <div class = "hero-banner__image">
+          <img
+            class="hero-banner__image"
+            src="../images/fallback/program-banner.png"
+            alt="Учебная лаборатория с оборудованием и цифровыми моделями"
+          />
+        </div>
+          <div class="container">
+            <div class="breadcrumbs">
+              <a class="breadcrumbs__item" href="index.html">Главная</a>
+              <div class="breadcrumbs__separator"></div>
+              <a class="breadcrumbs__item" href="#">Образование</a>
+              <div class="breadcrumbs__separator"></div>
+              <span>Конструкторско-технологическое обеспечение</span>
+            </div>
+
+            <div class="hero-banner__content">
+              <p class="hero-banner__code">07.03.01</p>
+              <h1 class="hero-banner__title">
+                Конструкторско-технологическое обеспечение машиностроительных производств
+              </h1>
+              <p class="hero-banner__institute">
+                Институт базовой инженерной подготовки
+              </p>
+              <div class="hero-banner__tags">
+                <span class="hero-banner__tag">Бакалавриат</span>
+                <span class="hero-banner__tag">Очно</span>
+                <span class="hero-banner__tag accredit">Государственная аккредитация</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- О направлении -->
+        <section class="program-about container">
+            <h2 class="title program-about__title">О направлении</h2>
+            <div class="program-about__body">
+              <div class="program-about__description">
+                <p class="program-about__description__text">
+                  Lorem ipsum dolor sit amet consectetur. Faucibus in euismod consequat nunc porta eleifend. Nibh sit pharetra nisi fermentum amet commodo feugiat blandit semper. Orci aliquet pellentesque tellus aliquam feugiat a facilisi cursus. Gravida diam non bibendum eu vel consequat sit suscipit arcu. Arcu lacus aliquet vulputate vivamus. Purus laoreet tellus ultrices odio nulla auctor pretium adipiscing arcu.
+                </p>
+                <div class="program-about__description__feacher">
+                  <p>Подать заявление онлайн</p>
+                  <a class = "btn btn--default btn--sm" href = "#">Подать</a>
+                </div>
+              </div>
+
+              <div class="program-about__facts">
+                <div class="program-about__fact">
+                  <div class = "program-about__fact__title">Срок обучения</div>
+                  <div class = "program-about__fact__description">5 лет</div>
+                </div>
+                <div class="program-about__fact">
+                  <div class = "program-about__fact__title">Количество мест</div>
+                  <div class = "program-about__fact__description places">
+                    <p>16 <span>бюджетные места</span></p>
+                    <p>16 <span>целевые места</span></p>
+                    <p>25 <span>платные места</span></p>
+                  </div>
+                </div>
+                <div class="program-about__fact">
+                  <div class = "program-about__fact__title">Стоимость обучения (в год)</div>
+                  <div class = "program-about__fact__description">185 278 ₽</div>
+                </div>
+                <div class="program-about__fact">
+                  <div class = "program-about__fact__title">Средний балл</div>
+                  <div class = "program-about__fact__description">76,3</div>
+                </div>
+                <div class="program-about__fact">
+                  <div class = "program-about__fact__title">Гос. аккредитация</div>
+                  <div class = "program-about__fact__description program-about__fact--accreditaion"><img src = "../images/svg/accreditaion.svg" alt=""></div>
+                </div>
+                <div class="program-about__fact">
+                  <div class = "program-about__fact__title">Индивидуальные образовательные траектории</div>
+                  <div class = "program-about__fact__description program-about__fact--row">
+                    Да
+                    <a class = "program-about__link" href="#">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
+        <!-- Подготовительные курсы -->
+        <section>
+          <div class="container">
+            {% include "components/preparatory-courses.njk" %}
+          </div>
+        </section>
+
+        <!-- Образовательные программы -->
+        {% include "components/program-education.njk" %}
+
+        <!-- Вступительные испытания -->
+        {% include "components/program-exams.njk" %}
+
+        <!-- Приёмная комиссия -->
+        {% include "components/program-admissions.njk" %}
+
+      </main>
+
+{% include "components/footer.njk" %}
+    </div>
+    {% include "components/cookie-banner.njk" %}
+  {% endblock %}

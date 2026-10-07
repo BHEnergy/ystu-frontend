@@ -1,0 +1,2347 @@
+{% extends "layouts/base.njk" %}
+{% block head %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI-kit — ЯГТУ</title>
+    <link href="../styles/styles.css?v=3" rel="stylesheet" />
+    <script src="../js/main.js"></script>
+    <style>
+      /* Оформление каталога не изменяет исходные компоненты. */
+      .ui-kit-page .header {
+        position: relative;
+        top: auto;
+      }
+      @media (max-width: 1100px) {
+        .ui-kit-page .header--menu-open {
+          position: fixed;
+          top: 0;
+          background: #fff;
+        }
+        .ui-kit-page .header--menu-open .mega-menu {
+          top: var(--header-panel-height, 88px);
+          height: calc(100dvh - var(--header-panel-height, 88px));
+        }
+      }
+      .ui-kit-page .main {
+        padding-top: 0;
+      }
+      .ui-kit__meta {
+        padding-top: 28px;
+        padding-bottom: 24px;
+        border-top: 1px solid #ced9e7;
+        color: #094188;
+        scroll-margin-top: 24px;
+      }
+      .ui-kit__meta h2 {
+        font-size: 26px;
+        line-height: 1.25;
+        margin: 0 0 12px;
+      }
+      .ui-kit__meta p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 6px 0;
+        overflow-wrap: anywhere;
+      }
+      .ui-kit__meta a,
+      .ui-kit__toc a {
+        color: #094188;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+      .ui-kit__meta code {
+        background: #e6ecf3;
+        padding: 2px 5px;
+      }
+      .ui-kit__entry {
+        padding-bottom: 40px;
+        min-width: 0;
+      }
+      .ui-kit__sample {
+        min-width: 0;
+        display: flow-root;
+      }
+      .ui-kit__sample > .main-slider,
+      .ui-kit__sample > .fichers,
+      .ui-kit__sample > .events,
+      .ui-kit__sample > .preparatory-courses,
+      .ui-kit__sample > .events__tags,
+      .ui-kit__sample > .vacancy-card,
+      .ui-kit__sample > .vacancy-documents,
+      .ui-kit__sample > .breadcrumbs {
+        width: calc(100% - 48px);
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .ui-kit__sample .cookie-banner {
+        position: static;
+        transform: none;
+        margin-top: 20px;
+        width: fit-content;
+      }
+      .ui-kit__intro {
+        padding-top: 32px;
+        padding-bottom: 32px;
+      }
+      .ui-kit__intro h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #094188;
+      }
+      .ui-kit__intro p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      .ui-kit__toc {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 10px 24px;
+        list-style: none;
+        padding: 0;
+      }
+      .ui-kit__toc a {
+        font-size: 16px;
+        line-height: 1.4;
+      }
+      @media (max-width: 767px) {
+        .ui-kit__meta h2 {
+          font-size: 22px;
+        }
+        .ui-kit__entry {
+          padding-bottom: 24px;
+        }
+        .ui-kit__sample > .main-slider,
+        .ui-kit__sample > .fichers,
+        .ui-kit__sample > .events,
+        .ui-kit__sample > .preparatory-courses,
+        .ui-kit__sample > .events__tags,
+        .ui-kit__sample > .vacancy-card,
+        .ui-kit__sample > .vacancy-documents,
+        .ui-kit__sample > .breadcrumbs {
+          width: calc(100% - 30px);
+        }
+      }
+    </style>
+  {% endblock %}
+{% block bodyAttributes %} class="ui-kit-page"{% endblock %}
+{% block content %}
+    <div class="wrapper">
+      <!-- Информационный баннер: index.html -->
+      <section class="ui-kit__entry" data-ui-source="index.html">
+        <div class="ui-kit__meta container" id="ui-1">
+          <h2>Информационный баннер</h2>
+          <p>Объявление с датой и кнопкой.</p>
+          <p>Страницы: <a href="index.html">index.html</a></p>
+          <p>Компонент: <code>.information-banner</code></p>
+        </div>
+        <div class="ui-kit__sample">
+          {% include "components/information-banner.njk" %}
+        </div>
+      </section>
+      <!-- Шапка и мега-меню: index.html -->
+      <section class="ui-kit__entry" data-ui-source="index.html">
+        <div class="ui-kit__meta container" id="ui-2">
+          <h2>Шапка и мега-меню</h2>
+          <p>
+            Логотип, сервисные ссылки, десктопное мега-меню и мобильная
+            навигация.
+          </p>
+          <p>
+            Страницы: <a href="404.html">404.html</a>,
+            <a href="detail-sotrudnik.html">detail-sotrudnik.html</a>,
+            <a href="detail-structure.html">detail-structure.html</a>,
+            <a href="detail-vacancy.html">detail-vacancy.html</a>,
+            <a href="index.html">index.html</a>,
+            <a href="map.html">map.html</a>,
+            <a href="nauka.html">nauka.html</a>,
+            <a href="news-events.html">news-events.html</a>,
+            <a href="program.html">program.html</a>,
+            <a href="programs.html">programs.html</a>,
+            <a href="search.html">search.html</a>,
+            <a href="structure.html">structure.html</a>,
+            <a href="student-life.html">student-life.html</a>,
+            <a href="vacancies.html">vacancies.html</a>
+          </p>
+          <p>Компонент: <code>.header</code></p>
+        </div>
+        <div class="ui-kit__sample">
+          {% set headerIdPrefix = "ui-2-" %}{% set headerRowBreaks = false %}{% include "components/header.njk" %}
+        </div>
+      </section>
+      <main class="main">
+        <section class="ui-kit__intro container">
+          <h1>UI-kit ЯГТУ</h1>
+          <p>
+            Компоненты всех 14 страниц проекта. Общие блоки представлены один
+            раз. Отличающиеся варианты сохранены; карточки внутри сеток и
+            слайдеров оставлены для демонстрации компоновки.
+          </p>
+          <nav aria-label="Компоненты UI-kit">
+            <ul class="ui-kit__toc">
+              <li><a href="#ui-1">Информационный баннер</a></li>
+              <li><a href="#ui-2">Шапка и мега-меню</a></li>
+              <li><a href="#ui-3">Хлебные крошки</a></li>
+              <li><a href="#ui-4">Главный слайдер</a></li>
+              <li><a href="#ui-5">Преимущества</a></li>
+              <li><a href="#ui-6">Новости и события</a></li>
+              <li><a href="#ui-7">Тематические фильтры событий</a></li>
+              <li><a href="#ui-8">Флагманские проекты</a></li>
+              <li><a href="#ui-9">Университет в цифрах</a></li>
+              <li><a href="#ui-10">Подготовительные курсы школьникам</a></li>
+              <li><a href="#ui-11">Нижний баннерный слайдер</a></li>
+              <li><a href="#ui-12">Баннер студенческой жизни</a></li>
+              <li><a href="#ui-13">Направления студенческой жизни</a></li>
+              <li><a href="#ui-14">Центр подготовки водителей</a></li>
+              <li><a href="#ui-15">Полезные ссылки</a></li>
+              <li><a href="#ui-16">Студенческий офис</a></li>
+              <li><a href="#ui-17">Баннер образовательной программы</a></li>
+              <li><a href="#ui-18">О направлении</a></li>
+              <li><a href="#ui-19">Образовательные программы: аккордеон</a></li>
+              <li><a href="#ui-20">Вступительные испытания</a></li>
+              <li><a href="#ui-21">Приёмная комиссия</a></li>
+              <li><a href="#ui-22">Каталог образовательных программ</a></li>
+              <li><a href="#ui-23">Заголовок каталога вакансий</a></li>
+              <li><a href="#ui-24">Карточка вакансии</a></li>
+              <li><a href="#ui-25">Радиокнопки фильтра вакансий</a></li>
+              <li><a href="#ui-26">Детальная вакансия</a></li>
+              <li><a href="#ui-27">Документы</a></li>
+              <li><a href="#ui-28">Модальное окно отклика</a></li>
+              <li><a href="#ui-29">Структура университета</a></li>
+              <li><a href="#ui-30">Первый блок подразделения</a></li>
+              <li><a href="#ui-31">Программы подготовки</a></li>
+              <li><a href="#ui-32">О подразделении и фотогалерея</a></li>
+              <li><a href="#ui-33">Руководство подразделения</a></li>
+              <li><a href="#ui-34">Сотрудники подразделения</a></li>
+              <li><a href="#ui-35">Персональная страница сотрудника</a></li>
+              <li><a href="#ui-36">Научные журналы</a></li>
+              <li><a href="#ui-37">Карта кампуса</a></li>
+              <li><a href="#ui-38">Поиск по сайту</a></li>
+              <li><a href="#ui-39">Страница ошибки</a></li>
+              <li><a href="#ui-40">Уведомление о cookies</a></li>
+              <li><a href="#ui-bitrix-elements">Кастомные элементы для 1С-Битрикс</a></li>
+              <li><a href="#ui-41">Подвал</a></li>
+            </ul>
+          </nav>
+        </section>
+        <!-- Хлебные крошки: detail-sotrudnik.html -->
+        <section class="ui-kit__entry" data-ui-source="detail-sotrudnik.html">
+          <div class="ui-kit__meta container" id="ui-3">
+            <h2>Хлебные крошки</h2>
+            <p>Навигационная цепочка внутренней страницы.</p>
+            <p>
+              Страницы:
+              <a href="detail-sotrudnik.html">detail-sotrudnik.html</a>,
+              <a href="detail-structure.html">detail-structure.html</a>,
+              <a href="detail-vacancy.html">detail-vacancy.html</a>,
+              <a href="map.html">map.html</a>,
+              <a href="nauka.html">nauka.html</a>,
+              <a href="news-events.html">news-events.html</a>,
+              <a href="program.html">program.html</a>,
+              <a href="programs.html">programs.html</a>,
+              <a href="search.html">search.html</a>,
+              <a href="structure.html">structure.html</a>,
+              <a href="student-life.html">student-life.html</a>,
+              <a href="vacancies.html">vacancies.html</a>
+            </p>
+            <p>Компонент: <code>.breadcrumbs</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            {% include "components/breadcrumbs.njk" %}
+          </div>
+        </section>
+        <!-- Главный слайдер: index.html -->
+        <section class="ui-kit__entry" data-ui-source="index.html">
+          <div class="ui-kit__meta container" id="ui-4">
+            <h2>Главный слайдер</h2>
+            <p>Hero-карточки, изображения, кнопки, стрелки и пагинация.</p>
+            <p>Страницы: <a href="index.html">index.html</a></p>
+            <p>Компонент: <code>.main-slider</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            {% include "components/hero-slider.njk" %}
+          </div>
+        </section>
+        <!-- Преимущества: index.html -->
+        <section class="ui-kit__entry" data-ui-source="index.html">
+          <div class="ui-kit__meta container" id="ui-5">
+            <h2>Преимущества</h2>
+            <p>Сетка преимуществ с декоративными элементами.</p>
+            <p>Страницы: <a href="index.html">index.html</a></p>
+            <p>Компонент: <code>.fichers</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            {% include "components/fichers.njk" %}
+          </div>
+        </section>
+        <!-- Новости и события: index.html -->
+         <section class="ui-kit__entry">
+      <div class="ui-kit__meta container" id="ui-event-registration">
+        <h2>Регистрация на мероприятие</h2>
+        <p>
+          Форма регистрации и общее окно подтверждения. Демонстрация без
+          серверной отправки.
+        </p>
+        <p>
+          Страницы: <a href="index.html">Главная</a>,
+          <a href="news-events.html">Новости и события</a>
+        </p>
+      </div>
+      <div class="container d-flex flex-wrap gap-3" style = "gap: 25px;">
+        <button
+          type="button"
+          class="btn btn--default btn--m button-modal"
+          data-modal="event"
+        >
+          Регистрация на мероприятие</button
+        ><button
+          type="button"
+          class="btn btn--default btn--m button-modal"
+          data-modal="event"
+          data-modal-state="success"
+        >
+          Успешная отправка</button
+        >
+      </div>
+      {% set modalConsentLink = true %}{% include "components/event-modal.njk" %}
+    </section>
+        <section class="ui-kit__entry" data-ui-source="index.html">
+          <div class="ui-kit__meta container" id="ui-6">
+            <h2>Новости и события</h2>
+            <p>Переключаемые вкладки, карточки, даты, теги и навигация. При клике на кнопку "Зарегистрироваться" открывается ПопАп окно</p>
+            <p>
+              Страницы: <a href="index.html">index.html</a>,
+              <a href="news-events.html">news-events.html</a>
+            </p>
+            <p>Компонент: <code>.events</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            <div class="events">
+              <div class="events__wrapper">
+                <div
+                  class="events__header events__header--fade"
+                  role="group"
+                  aria-label="Новости и события"
+                >
+                  <button type="button"
+                    class="title events__title active tab"
+                    data-value="tab"
+                    data-tab="events"
+                    aria-pressed="true"
+                  >
+                    События
+                  </button>
+                  <div class="events__separator"></div>
+                  <button type="button"
+                    class="title events__title unactive tab"
+                    data-value="tab"
+                    data-tab="news"
+                    aria-pressed="false"
+                  >
+                    Новости
+                  </button>
+                </div>
+                <div
+                  class="events__container active"
+                  data-value="tab-container"
+                  data-tab="events"
+                >
+                  <div class="events__content">
+                    <div class="event__card">
+                      <div class="event__photo">
+                        <img loading="lazy" decoding="async" src="../images/fallback/banner1.png" alt="Выступление с презентацией анализа 3D-сканов деталей" />
+                      </div>
+                      <div class="event__content">
+                        <p class="event__title">
+                          Международная научно-практическая конференция
+                          «Экологическая безопасность водных объектов»
+                        </p>
+                        <div class="event__body">
+                          <div class="event__info">
+                            <p class="event__date">1-3 июля 2026</p>
+                            <p class="event__time">
+                              с&nbsp;11:00 до&nbsp;16:00
+                            </p>
+                            <p class="event__location">Точка кипения</p>
+                          </div>
+                          <div class="event__footer">
+                            {% include "components/btn--link.njk" %}
+                            {% include "components/btn--link-2.njk" %}
+                          </div>
+                        </div>
+                      </div>
+                      <div class="event__tags">
+                        <div class="event__tag">10-11 класс</div>
+                        <div class="event__tag">Онлайн</div>
+                      </div>
+                    </div>
+                    <div class="event__card">
+                      <div class="event__photo">
+                        <img loading="lazy" decoding="async" src="../images/fallback/banner1.png" alt="Выступление с презентацией анализа 3D-сканов деталей" />
+                      </div>
+                      <div class="event__content">
+                        <p class="event__title">
+                          Исторический квиз "Я помню! Я горжусь!"
+                        </p>
+                        <div class="event__body">
+                          <div class="event__info">
+                            <p class="event__date">1-3 июля 2026</p>
+                            <p class="event__time">
+                              с&nbsp;11:00 до&nbsp;16:00
+                            </p>
+                            <p class="event__location">Точка кипения</p>
+                          </div>
+                          <div class="event__footer">
+                            {% include "components/btn--link.njk" %}
+                            {% include "components/btn--link-2.njk" %}
+                          </div>
+                        </div>
+                      </div>
+                      <div class="event__tags">
+                        <div class="event__tag">10-11 класс</div>
+                        <div class="event__tag">Онлайн</div>
+                      </div>
+                    </div>
+                    <div class="event__card">
+                      <div class="event__photo">
+                        <img loading="lazy" decoding="async" src="../images/fallback/banner1.png" alt="Выступление с презентацией анализа 3D-сканов деталей" />
+                      </div>
+                      <div class="event__content">
+                        <p class="event__title">
+                          Акселератор «ПолиТех.Индустрия 5.0»
+                        </p>
+                        <div class="event__body">
+                          <div class="event__info">
+                            <p class="event__date">1-3 июля 2026</p>
+                            <p class="event__time">
+                              с&nbsp;11:00 до&nbsp;16:00
+                            </p>
+                            <p class="event__location">Точка кипения</p>
+                          </div>
+                          <div class="event__footer">
+                            {% include "components/btn--link.njk" %}
+                            {% include "components/btn--link-2.njk" %}
+                          </div>
+                        </div>
+                      </div>
+                      <div class="event__tags">
+                        <div class="event__tag">10-11 класс</div>
+                        <div class="event__tag">Онлайн</div>
+                      </div>
+                    </div>
+                  </div>
+                  <a
+                    class="btn btn--default btn--m"
+                    href="news-events.html"
+                  >
+                    Все события
+                  </a>
+                </div>
+                <div
+                  class="events__container unactive"
+                  data-value="tab-container"
+                  data-tab="news"
+                >
+                  <div class="events__content">
+                    <a class="news__card" href="news-events.html">
+                      <div class="news__photo">
+                        <img loading="lazy" decoding="async" src="../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета" />
+                      </div>
+                      <div class="news__content">
+                        <div class="news__header">
+                          <p class="news__date">26.02.2026</p>
+                          <p class="news__title"
+                            >Международная научно-практическая конференция
+                            «Экологическая безопасность водных объектов»</p
+                          >
+                        </div>
+                        <div class="news__tags">
+                          <p class="news__tag">приемная кампания</p>
+                          <p class="news__tag">поступающим</p>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="news__card">
+                      <div class="news__photo">
+                        <img loading="lazy" decoding="async" src="../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета" />
+                      </div>
+                      <div class="news__content">
+                        <div class="news__header">
+                          <p class="news__date">26.02.2026</p>
+                          <a href="news-events.html" class="news__title"
+                            >Социологическй опрос «Приоритет 2030»</a
+                          >
+                        </div>
+                        <div class="news__tags">
+                          <p class="news__tag">приемная кампания</p>
+                          <p class="news__tag">поступающим</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="news__card">
+                      <div class="news__photo">
+                        <img loading="lazy" decoding="async" src="../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета" />
+                      </div>
+                      <div class="news__content">
+                        <div class="news__header">
+                          <p class="news__date">26.02.2026</p>
+                          <a href="news-events.html" class="news__title"
+                            >Максим Татаров встретился <br />со студентами
+                            Института экономики и менеджмента</a
+                          >
+                        </div>
+                        <div class="news__tags">
+                          <p class="news__tag">приемная кампания</p>
+                          <p class="news__tag">поступающим</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a
+                    class="btn btn--default btn--m"
+                    href="news-events.html"
+                  >
+                    Все новости
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Тематические фильтры событий: news-events.html -->
+        <section class="ui-kit__entry" data-ui-source="news-events.html">
+          <div class="ui-kit__meta container" id="ui-7">
+            <h2>Тематические фильтры событий</h2>
+            <p>Переключатели категорий новостей на странице новостей.</p>
+            <p>Страницы: <a href="news-events.html">news-events.html</a></p>
+            <p>Компонент: <code>.events__tags</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            <div
+              class="events__tags"
+              data-value="tab-container"
+              data-tab="news"
+            >
+              <div class="events__tag current">#приемная компания</div>
+              <div class="events__tag">#приемная компания</div>
+              <div class="events__tag">#приемная компания</div>
+              <div class="events__tag">#приемная компания</div>
+              <div class="events__tag">#приемная компания</div>
+              <div class="events__tag">#приемная компания</div>
+              <div class="events__tag">#приемная компания</div>
+              <div class="events__tag">#приемная компания</div>
+              <div class="events__tag">#приемная компания</div>
+              <div class="events__tag">#приемная компания</div>
+              <div class="events__tag">#приемная компания</div>
+              <div class="events__tag">#приемная компания</div>
+            </div>
+          </div>
+        </section>
+        <!-- Флагманские проекты: index.html -->
+        <section class="ui-kit__entry" data-ui-source="index.html">
+          <div class="ui-kit__meta container" id="ui-8">
+            <h2>Флагманские проекты</h2>
+            <p>Карточки с декоративными линиями и hover-анимацией.</p>
+            <p>Страницы: <a href="index.html">index.html</a></p>
+            <p>Компонент: <code>.flagship-projects</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            <section class="flagship-projects">
+              <div class="container">
+                <h2 class="flagship-projects__title">
+                  Флагманские проекты - Сетка 8
+                </h2>
+                {% include "components/flagship-card.njk" %}
+
+                <h2 class="flagship-projects__title">
+                  Флагманские проекты - Сетка 7
+                </h2>
+                <div class="flagship-projects__grid card-7">
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">
+                      Очень очень Очень длиное название проекта
+                    </p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                    <div class="flagship-project__photo">
+                      <img loading="lazy" decoding="async" src="../images/fallback/prioritet.png" alt="Приоритет 2030. Лидерами становятся" />
+                    </div>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">
+                      Очень очень Очень длиное название проекта
+                    </p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                </div>
+
+                <h2 class="flagship-projects__title">
+                  Флагманские проекты - Сетка 6
+                </h2>
+                <div class="flagship-projects__grid card-6">
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">
+                      Очень очень Очень длиное название проекта
+                    </p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                    <div class="flagship-project__photo">
+                      <img loading="lazy" decoding="async" src="../images/fallback/prioritet.png" alt="Приоритет 2030. Лидерами становятся" />
+                    </div>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">
+                      Очень очень Очень длиное название проекта
+                    </p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                </div>
+
+                <h2 class="flagship-projects__title">
+                  Флагманские проекты - Сетка 5
+                </h2>
+                <div class="flagship-projects__grid card-5">
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">
+                      Очень очень Очень длиное название проекта
+                    </p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                    <div class="flagship-project__photo">
+                      <img loading="lazy" decoding="async" src="../images/fallback/prioritet.png" alt="Приоритет 2030. Лидерами становятся" />
+                    </div>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">
+                      Очень очень Очень длиное название проекта
+                    </p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                </div>
+
+                <h2 class="flagship-projects__title">
+                  Флагманские проекты - Сетка 4
+                </h2>
+                <div class="flagship-projects__grid card-4">
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">
+                      Очень очень Очень длиное название проекта
+                    </p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                    <div class="flagship-project__photo">
+                      <img loading="lazy" decoding="async" src="../images/fallback/prioritet.png" alt="Приоритет 2030. Лидерами становятся" />
+                    </div>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">
+                      Очень очень Очень длиное название проекта
+                    </p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                </div>
+
+                <h2 class="flagship-projects__title">
+                  Флагманские проекты - Сетка 3
+                </h2>
+                <div class="flagship-projects__grid card-3">
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">
+                      Очень очень Очень длиное название проекта
+                    </p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                    <div class="flagship-project__photo">
+                      <img loading="lazy" decoding="async" src="../images/fallback/prioritet.png" alt="Приоритет 2030. Лидерами становятся" />
+                    </div>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">
+                      Очень очень Очень длиное название проекта
+                    </p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                  <div class="flagship-project__card">
+                    <p class="flagship-project__title">Название проекта</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- Университет в цифрах: index.html -->
+        <section class="ui-kit__entry" data-ui-source="index.html">
+          <div class="ui-kit__meta container" id="ui-9">
+            <h2>Университет в цифрах</h2>
+            <p>Статистические показатели в общей сетке.</p>
+            <p>Страницы: <a href="index.html">index.html</a></p>
+            <p>Компонент: <code>.university-statistics</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            {% include "components/university-statistics.njk" %}
+          </div>
+        </section>
+        <!-- Подготовительные курсы школьникам: index.html -->
+        <section class="ui-kit__entry" data-ui-source="index.html">
+          <div class="ui-kit__meta container" id="ui-10">
+            <h2>Подготовительные курсы школьникам</h2>
+            <p>Общий рекламный баннер с изображением и кнопкой. Механика блока: в административной панели данный блок является динамичным. Это значит, что весь контент, визуал и кнопка перехода могут полностью заменяться. 
+Данный рекламный баннер может подсветить как на всех страницах, так и на конкретных, с возможность выбрать нужные страницы</p>
+            <p>
+              Страницы: <a href="index.html">index.html</a>,
+              <a href="program.html">program.html</a>,
+              <a href="student-life.html">student-life.html</a>
+            </p>
+            <p>Компонент: <code>.preparatory-courses</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            {% include "components/preparatory-courses.njk" %}
+          </div>
+        </section>
+        <!-- Нижний баннерный слайдер: index.html -->
+        <section class="ui-kit__entry" data-ui-source="index.html">
+          <div class="ui-kit__meta container" id="ui-11">
+            <h2>Нижний баннерный слайдер</h2>
+            <p>
+              Горизонтальная группа карточек на десктопе и колонка на мобильных.
+            </p>
+            <p>Страницы: <a href="index.html">index.html</a></p>
+            <p>Компонент: <code>.banner-slider</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            <section class="banner-slider">
+              <div class="container">
+                <div
+                  class="swiper js-init-banner-slider banner-slider-1 default-slider"
+                >
+                  {% include "components/banner-survey-slides.njk" %}
+                  {% include "components/default-slider-controls.njk" %}
+                </div>
+              </div>
+            </section>
+            <section class="banner-slider">
+              <div class="container">
+                <div
+                  class="swiper js-init-banner-slider banner-slider-2 default-slider"
+                >
+                  {% include "components/banner-survey-slides.njk" %}
+                  {% include "components/default-slider-controls.njk" %}
+                </div>
+              </div>
+            </section>
+            <section class="banner-slider">
+              <div class="container">
+                <div class = "swiper js-init-banner-slider banner-slider-3 banner-slider-3--featured default-slider">
+                {% include "components/banner-featured-slides.njk" %}
+                {% include "components/default-slider-controls.njk" %}
+              </div>
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- Баннер студенческой жизни: student-life.html -->
+        <section class="ui-kit__entry" data-ui-source="student-life.html">
+          <div class="ui-kit__meta container" id="ui-12">
+            <h2>Баннер студенческой жизни</h2>
+            <p>
+              Первый экран с фоновым изображением и коротким
+              заголовком.
+            </p>
+            <p>
+              Страницы: <a href="program.html">program.html</a>,
+              <a href="student-life.html">student-life.html</a>
+            </p>
+            <p>Компонент: <code>.hero-banner</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            <section class="hero-banner">
+              <img
+                class="hero-banner__image"
+                src="../images/fallback/student-life-hero.png"
+                alt="Студенты в пространстве для совместной работы"
+              />
+              <div class="container">
+                <div class="hero-banner__content hero-banner__content--student">
+                  <h1 class="hero-banner__title h1">Студенческая жизнь</h1>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- Направления студенческой жизни: student-life.html -->
+        <section class="ui-kit__entry" data-ui-source="student-life.html">
+          <div class="ui-kit__meta container" id="ui-13">
+            <h2>Направления студенческой жизни</h2>
+            <p>
+              Прямой и зеркальный варианты: описание, фотослайдер, две пары
+              стрелок.
+            </p>
+            <p>Страницы: <a href="student-life.html">student-life.html</a></p>
+            <p>Компонент: <code>.student-directions</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            <section class="student-directions container">
+              <h2 class="title student-directions__title">Направления</h2>
+              <div class="student-directions__list">
+                <article class="student-direction">
+                  <div class="student-direction__content">
+                    <h3 class="student-direction__title projects-svg">
+                      Проектная деятельность и предпринимательство
+                    </h3>
+                    <p class="student-direction__description">
+                      Lorem ipsum dolor sit amet consectetur. Eu augue fames
+                      felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec
+                      eu dui feugiat orci dui amet consectetur tortor sem. In
+                      malesuada vitae urna mattis tortor aenean porttitor
+                      aenean. Lorem ipsum dolor sit amet consectetur. Eu augue
+                      fames felis ultrices. Scelerisque ipsum nulla tempor
+                      vitae. Nec eu dui feugiat orci dui amet consectetur tortor
+                      sem. In malesuada vitae urna mattis tortor aenean
+                      porttitor aenean..
+                    </p>
+                    <a class="btn btn--default btn--m" href="#">Подробнее</a>
+                  </div>
+                  {% include "components/student-gallery-detailed.njk" %}
+                </article>
+
+                <article class="student-direction student-direction--reverse">
+                  <div class="student-direction__content">
+                    <h3 class="student-direction__title art-svg">Творчество</h3>
+                    <p class="student-direction__description">
+                      Lorem ipsum dolor sit amet consectetur. Eu augue fames
+                      felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec
+                      eu dui feugiat orci dui amet consectetur tortor sem. In
+                      malesuada vitae urna mattis tortor aenean porttitor
+                      aenean. Lorem ipsum dolor sit amet consectetur. Eu augue
+                      fames felis ultrices. Scelerisque ipsum nulla tempor
+                      vitae. Nec eu dui feugiat orci dui amet consectetur tortor
+                      sem. In malesuada vitae urna mattis tortor aenean
+                      porttitor aenean..
+                    </p>
+                    <a class="btn btn--default btn--m" href="#">Подробнее</a>
+                  </div>
+                  {% include "components/student-gallery-detailed.njk" %}
+                </article>
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- Центр подготовки водителей: student-life.html -->
+        <section class="ui-kit__entry" data-ui-source="student-life.html">
+          <div class="ui-kit__meta container" id="ui-14">
+            <h2>Центр подготовки водителей</h2>
+            <p>Информационный блок с фотографиями и ссылкой.</p>
+            <p>Страницы: <a href="student-life.html">student-life.html</a></p>
+            <p>Компонент: <code>.student-driving</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            {% include "components/student-driving.njk" %}
+          </div>
+        </section>
+        <!-- Полезные ссылки: student-life.html -->
+        <section class="ui-kit__entry" data-ui-source="student-life.html">
+          <div class="ui-kit__meta container" id="ui-15">
+            <h2>Полезные ссылки</h2>
+            <p>Сетка ссылок с индивидуальными декоративными линиями.</p>
+            <p>Страницы: <a href="student-life.html">student-life.html</a></p>
+            <p>Компонент: <code>.student-links</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            {% include "components/student-links.njk" %}
+          </div>
+        </section>
+        <!-- Студенческий офис: student-life.html -->
+        <section class="ui-kit__entry" data-ui-source="student-life.html">
+          <div class="ui-kit__meta container" id="ui-16">
+            <h2>Студенческий офис</h2>
+            <p>Контактный блок для студенческого офиса.</p>
+            <p>Страницы: <a href="student-life.html">student-life.html</a></p>
+            <p>Компонент: <code>.student-office</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            <section class="program-admissions student-office">
+              <div class="container">
+                <h2 class="title program-admissions__title">
+                  Студенческий офис
+                </h2>
+                <div class="program-admissions__body">
+                  <div class="program-admissions__map">
+                    <img loading="lazy" decoding="async"
+                      src="../images/fallback/admissions-map.png"
+                      alt="Приёмная комиссия ЯГТУ на Московском проспекте, рядом с корпусом Б"
+                    />
+                  </div>
+                  <div class="program-admissions__contacts">
+                    <div class="program-admissions__contact">
+                      <h3>Адрес</h3>
+                      <div class="program-admissions__address">
+                        150023, г. Ярославль, Московский проспект, 84, корпус
+                        «А», А-219
+                      </div>
+                    </div>
+                    <div class="program-admissions__contact">
+                      <h3>Телефон</h3>
+                      <a href="tel:+74852441739">+7 (4852) 44-17-39</a>
+                      <a href="tel:88002507677">8-800-250-76-77</a>
+                    </div>
+                    <div class="program-admissions__contact">
+                      <h3>Почта</h3>
+                      <a href="mailto:priem@ystu.ru">priem@ystu.ru</a>
+                    </div>
+                    <div class="program-admissions__contact">
+                      <h3>Часы работы</h3>
+                      <p>Пн–Сб: 9:00–18:00</p>
+                      <p>Вс: выходной</p>
+                    </div>
+                    <div class="program-admissions__contact">
+                      <h3>Часы работы в летний период</h3>
+                      <p>Пн–Пт: 10:00–18:00</p>
+                      <p>Сб: 10:00–15:00</p>
+                      <p>Вс: выходной</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- Баннер образовательной программы: program.html -->
+        <section class="ui-kit__entry" data-ui-source="program.html">
+          <div class="ui-kit__meta container" id="ui-17">
+            <h2>Баннер образовательной программы</h2>
+            <p>Первый экран с длинным заголовком и сведениями о программе.</p>
+            <p>
+              Страницы: <a href="program.html">program.html</a>,
+              <a href="student-life.html">student-life.html</a>
+            </p>
+            <p>Компонент: <code>.hero-banner</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            <section class="hero-banner">
+              <div class="hero-banner__image">
+                <img
+                  class="hero-banner__image"
+                  src="../images/fallback/program-banner.png"
+                  alt="Учебная лаборатория с оборудованием и цифровыми моделями"
+                />
+              </div>
+              <div class="container">
+                <div class="hero-banner__content">
+                  <p class="hero-banner__code">07.03.01</p>
+                  <h1 class="hero-banner__title">
+                    Конструкторско-технологическое обеспечение
+                    машиностроительных производств
+                  </h1>
+                  <p class="hero-banner__institute">
+                    Институт базовой инженерной подготовки
+                  </p>
+                  <div class="hero-banner__tags">
+                    <span class="hero-banner__tag">Бакалавриат</span>
+                    <span class="hero-banner__tag">Очно</span>
+                    <span class="hero-banner__tag accredit"
+                      >Государственная аккредитация</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- О направлении: program.html -->
+        <section class="ui-kit__entry" data-ui-source="program.html">
+          <div class="ui-kit__meta container" id="ui-18">
+            <h2>О направлении</h2>
+            <p>Описание программы и ключевые характеристики.</p>
+            <p>Страницы: <a href="program.html">program.html</a></p>
+            <p>Компонент: <code>.program-about</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            <section class="program-about container">
+              <h2 class="title program-about__title">О направлении</h2>
+              <div class="program-about__body">
+                <div class="program-about__description">
+                  <p class="program-about__description__text">
+                    Lorem ipsum dolor sit amet consectetur. Faucibus in euismod
+                    consequat nunc porta eleifend. Nibh sit pharetra nisi
+                    fermentum amet commodo feugiat blandit semper. Orci aliquet
+                    pellentesque tellus aliquam feugiat a facilisi cursus.
+                    Gravida diam non bibendum eu vel consequat sit suscipit
+                    arcu. Arcu lacus aliquet vulputate vivamus. Purus laoreet
+                    tellus ultrices odio nulla auctor pretium adipiscing arcu.
+                  </p>
+                  <div class="program-about__description__feacher">
+                    <p>Подать заявление онлайн</p>
+                    <a class="btn btn--default btn--sm" href="#">Подать</a>
+                  </div>
+                </div>
+
+                <div class="program-about__facts">
+                  <div class="program-about__fact">
+                    <div class="program-about__fact__title">Срок обучения</div>
+                    <div class="program-about__fact__description">5 лет</div>
+                  </div>
+                  <div class="program-about__fact">
+                    <div class="program-about__fact__title">
+                      Количество мест
+                    </div>
+                    <div class="program-about__fact__description">
+                      <p>25 <span>платные места</span></p>
+                      <p>16 <span>бюджетные места</span></p>
+                    </div>
+                  </div>
+                  <div class="program-about__fact">
+                    <div class="program-about__fact__title">
+                      Стоимость обучения
+                    </div>
+                    <div class="program-about__fact__description">
+                      185 278 ₽
+                    </div>
+                  </div>
+                  <div class="program-about__fact">
+                    <div class="program-about__fact__title">Средний балл</div>
+                    <div class="program-about__fact__description">76,3</div>
+                  </div>
+                  <div class="program-about__fact">
+                    <div class="program-about__fact__title">
+                      Государственная аккредитация
+                    </div>
+                    <div
+                      class="program-about__fact__description program-about__fact--row"
+                    >
+                      Присутствует
+                    </div>
+                  </div>
+                  <div class="program-about__fact">
+                    <div class="program-about__fact__title">
+                      Индивидуальные образовательные траектории
+                    </div>
+                    <div
+                      class="program-about__fact__description program-about__fact--row"
+                    >
+                      Присутствует
+                      <a class="program-about__link" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- Образовательные программы: аккордеон: program.html -->
+        <section class="ui-kit__entry" data-ui-source="program.html">
+          <div class="ui-kit__meta container" id="ui-19">
+            <h2>Образовательные программы: аккордеон</h2>
+            <p>
+              Раскрывающиеся описания дисциплин и скачивание учебного плана.
+            </p>
+            <p>Страницы: <a href="program.html">program.html</a></p>
+            <p>Компонент: <code>.program-education</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            {% include "components/program-education.njk" %}
+          </div>
+        </section>
+        <!-- Вступительные испытания: program.html -->
+        <section class="ui-kit__entry" data-ui-source="program.html">
+          <div class="ui-kit__meta container" id="ui-20">
+            <h2>Вступительные испытания</h2>
+            <p>
+              Предметы, проходные баллы, текстовые условия и раскрываемые
+              примеры.
+            </p>
+            <p>Страницы: <a href="program.html">program.html</a></p>
+            <p>Компонент: <code>.program-exams</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            {% include "components/program-exams.njk" %}
+          </div>
+        </section>
+        <!-- Приёмная комиссия: program.html -->
+        <section class="ui-kit__entry" data-ui-source="program.html">
+          <div class="ui-kit__meta container" id="ui-21">
+            <h2>Приёмная комиссия</h2>
+            <p>Контактный блок: адрес, телефоны и дополнительные сведения.</p>
+            <p>
+              Страницы: <a href="program.html">program.html</a>,
+              <a href="student-life.html">student-life.html</a>
+            </p>
+            <p>Компонент: <code>.program-admissions</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            {% include "components/program-admissions.njk" %}
+          </div>
+        </section>
+        <!-- Каталог образовательных программ: programs.html -->
+        <section class="ui-kit__entry" data-ui-source="programs.html">
+          <div class="ui-kit__meta container" id="ui-22">
+            <h2>Каталог образовательных программ</h2>
+            <p>
+              Поиск, фильтры, разные варианты карточек и мобильная панель
+              фильтрации.
+            </p>
+            <p>
+              Страницы: <a href="programs.html">programs.html</a>,
+              <a href="vacancies.html">vacancies.html</a>
+            </p>
+            <p>Компонент: <code>.listing-page__intro</code></p>
+          </div>
+          <div class="ui-kit__sample listing-page listing-page--programs">
+            <section class="listing-page__intro container">
+              <h1 class="listing-page__title">
+                Образовательные программы 2026
+              </h1>
+
+              <div class="listing-page__body">
+                <aside class="listing-page__sidebar">
+                  <h2 class="catalog-filters__title">Фильтры</h2>
+                  <form class="catalog-filters" method="get">
+                    {% include "components/catalog-search-2.njk" %}
+                    {% include "components/catalog-filter-group-2.njk" %}
+                    {% include "components/catalog-filter-group-3.njk" %}
+                    <div class="catalog-filter-group">
+                      <div class="catalog-filter-group__title">
+                        основа обучения
+                      </div>
+                      <div class="catalog-filter-group__options">
+                        {% set option = {"label":"Бюджет","name":"financing[]","value":"budget","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Целевое","name":"financing[]","value":"target","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Платное","name":"financing[]","value":"paid","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}
+                      </div>
+                    </div>
+                    {% include "components/catalog-filter-group.njk" %}
+                    <div class="catalog-filters__actions">
+                      {% include "components/btn--default.njk" %}<button class="btn catalog-filters__reset" type="reset">
+                        Очистить
+                      </button>
+                    </div>
+                  </form>
+                </aside>
+
+                <section aria-label="Список образовательных программ">
+                  <div class="listing-page__mobile-tools">
+                    {% include "components/catalog-search.njk" %}
+                    <button
+                      class="catalog-filters-trigger"
+                      type="button"
+                      data-open-filter-panel="ui-22-program-filter-panel"
+                      aria-controls="ui-22-program-filter-panel"
+                      aria-expanded="false"
+                    >
+                      Фильтры<img src="../images/svg/filters.svg" alt="" />
+                    </button>
+                  </div>
+                  <div class="listing-page__results">
+                    <article class="program-card">
+                      <div class="program-card__content">
+                        <div class="program-card__body">
+                          <div class="program-card__tags">
+                            <span
+                              class="program-card__tag program-card__tag--bacalavr"
+                              >Бакалавриат</span
+                            ><span
+                              class="program-card__tag program-card__tag--outline"
+                              >Очно</span
+                            ><span
+                              class="program-card__tag program-card__tag--outline program-card__tag--accreditation"
+                              >Государственная аккредитация</span
+                            >
+                          </div>
+                          <div class="program-card__heading">
+                            <p class="program-card__code">07.03.01</p>
+                            <h2 class="program-card__title"><a href="program.html">Архитектура</a></h2>
+                          </div>
+                        </div>
+                        <div class="program-card__profiles">
+                          <p class="program-card__profiles-title">Профили</p>
+                          <ul class="program-card__profiles-list">
+                            <li>Профиль 1</li>
+                            <li>Профиль 2</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <dl class="program-card__stats">
+                        <div class="program-card__stat">
+                          <dt>Бюджетных мест</dt>
+                          <dd>16</dd>
+                        </div>
+                        <div class="program-card__stat">
+                          <dt>Целевых мест</dt>
+                          <dd>16</dd>
+                        </div>
+                        <div class="program-card__stat">
+                          <dt>Платных мест</dt>
+                          <dd>50</dd>
+                        </div>
+                        <div class="program-card__stat">
+                          <dt>Срок обучения</dt>
+                          <dd>5 лет</dd>
+                        </div>
+                      </dl>
+                    </article>
+                    <article class="program-card">
+                      <div class="program-card__content">
+                        <div class="program-card__body">
+                          <div class="program-card__tags">
+                            <span
+                              class="program-card__tag program-card__tag--bacalavr"
+                              >Бакалавриат</span
+                            ><span
+                              class="program-card__tag program-card__tag--outline"
+                              >Очно</span
+                            ><span
+                              class="program-card__tag program-card__tag--outline program-card__tag--accreditation"
+                              >Государственная аккредитация</span
+                            >
+                          </div>
+                          <div class="program-card__heading">
+                            <p class="program-card__code">07.03.01</p>
+                            <h2 class="program-card__title"><a href="program.html">Дизайн</a></h2>
+                          </div>
+                        </div>
+                        <div class="program-card__profiles">
+                          <p class="program-card__profiles-title">Профили</p>
+                          <ul class="program-card__profiles-list">
+                            <li>Профиль 1</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <dl class="program-card__stats">
+                        <div class="program-card__stat">
+                          <dt>Бюджетных мест</dt>
+                          <dd>16</dd>
+                        </div>
+                        <div class="program-card__stat">
+                          <dt>Целевых мест</dt>
+                          <dd>16</dd>
+                        </div>
+                        <div class="program-card__stat">
+                          <dt>Платных мест</dt>
+                          <dd>50</dd>
+                        </div>
+                        <div class="program-card__stat">
+                          <dt>Срок обучения</dt>
+                          <dd>5 лет</dd>
+                        </div>
+                      </dl>
+                    </article>
+                    {% include "components/program-card.njk" %}
+                    {% include "components/program-card.njk" %}
+                    {% include "components/program-card.njk" %}
+                  </div>
+                </section>
+              </div>
+              <div
+                class="mobile-filter-panel"
+                id="ui-22-program-filter-panel"
+                data-filter-panel=""
+                aria-hidden="true"
+              >
+                <aside
+                  class="mobile-filter-panel__drawer"
+                  aria-label="Фильтры образовательных программ"
+                >
+                  <header class="mobile-filter-panel__header">
+                    <h2 class="mobile-filter-panel__title">Фильтры</h2>
+                    <button
+                      class="mobile-filter-panel__close"
+                      type="button"
+                      data-close-filter-panel=""
+                      aria-label="Закрыть фильтры"
+                    >
+                      <img src="../images/svg/close-white.svg" alt="" />
+                    </button>
+                  </header>
+                  <form
+                    class="mobile-filter-panel__form"
+
+                    method="get"
+                  >
+                    <details open="">
+                      <summary>уровень образования</summary>
+                      <div class="catalog-filter-group__options">
+                        {% set option = {"label":"Бакалавриат","name":"education_level[]","value":"bachelor","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Специалитет","name":"education_level[]","value":"specialist","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Магистратура","name":"education_level[]","value":"master","checked":true,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}
+                      </div>
+                    </details>
+                    <details open="">
+                      <summary>форма обучения</summary>
+                      <div class="catalog-filter-group__options">
+                        {% set option = {"label":"Очная","name":"study_form[]","value":"full_time","checked":true,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Заочная","name":"study_form[]","value":"extramural","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Очно-заочная","name":"study_form[]","value":"part_time","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}
+                      </div>
+                    </details>
+                    <details open="">
+                      <summary>основа обучения</summary>
+                      <div class="catalog-filter-group__options">
+                        {% set option = {"label":"Бюджет","name":"financing[]","value":"budget","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Целевое","name":"financing[]","value":"target","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Платное","name":"financing[]","value":"paid","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}
+                      </div>
+                    </details>
+                    <details>
+                      <summary>вступительные испытания</summary>
+                      <div class="catalog-filter-group__options">
+                        {% set option = {"label":"Русский язык","name":"entrance_exam[]","value":"russian","checked":true,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Математика","name":"entrance_exam[]","value":"mathematics","checked":true,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Физика","name":"entrance_exam[]","value":"physics","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Обществознание","name":"entrance_exam[]","value":"social_studies","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"История","name":"entrance_exam[]","value":"history","checked":true,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Информатика","name":"entrance_exam[]","value":"informatics","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Иностранный язык","name":"entrance_exam[]","value":"foreign_language","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Химия","name":"entrance_exam[]","value":"chemistry","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"География","name":"entrance_exam[]","value":"geography","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Творческое испытание","name":"entrance_exam[]","value":"creative","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}
+                      </div>
+                    </details>
+                    <div class="catalog-filters__actions">
+                      {% include "components/btn--default.njk" %}<button class="catalog-filters__reset" type="reset">
+                        Сбросить
+                      </button>
+                    </div>
+                  </form>
+                </aside>
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- Заголовок каталога вакансий: vacancies.html -->
+        <section class="ui-kit__entry" data-ui-source="vacancies.html">
+          <div class="ui-kit__meta container" id="ui-23">
+            <h2>Заголовок каталога вакансий</h2>
+            <p>Вводный блок <a href = "#ui-22">каталога с описанием.</a></p>
+            <p>
+              Страницы: <a href="programs.html">programs.html</a>,
+              <a href="vacancies.html">vacancies.html</a>
+            </p>
+            <p>Компонент: <code>.listing-page__intro</code></p>
+          </div>
+          <div
+            class="ui-kit__sample container listing-page listing-page--vacancies"
+          >
+            <section class="listing-page__intro">
+              <h1 class="listing-page__title">Работа в ЯГТУ</h1>
+              <p class="listing-page__description">
+                Lorem ipsum dolor sit amet consectetur. Eu augue fames felis
+                ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui
+                feugiat orci dui amet consectetur tortor sem. In malesuada vitae
+                urna mattis tortor aenean porttitor aenean. Lorem ipsum dolor
+                sit amet consectetur. Eu augue fames felis ultrices. Scelerisque
+                ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet
+                consectetur tortor sem. In malesuada vitae urna mattis tortor
+                aenean porttitor aenean.
+              </p>
+            </section>
+          </div>
+        </section>
+        <!-- Карточка вакансии: vacancies.html -->
+        <section class="ui-kit__entry" data-ui-source="vacancies.html">
+          <div class="ui-kit__meta container" id="ui-24">
+            <h2>Карточка вакансии</h2>
+            <p>Название должности, категория, описание и кнопка перехода.</p>
+            <p>Страницы: <a href="vacancies.html">vacancies.html</a></p>
+            <p>Компонент: <code>.vacancy-card</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            {% include "components/vacancy-card.njk" %}
+          </div>
+        </section>
+        <!-- Радиокнопки фильтра вакансий: vacancies.html -->
+        <section class="ui-kit__entry" data-ui-source="vacancies.html">
+          <div class="ui-kit__meta container" id="ui-25">
+            <h2>Радиокнопки фильтра вакансий</h2>
+            <p>
+              Выбор одного значения опыта работы. Чекбоксы и общая панель
+              фильтра показаны в каталоге программ.
+            </p>
+            <p>Страницы: <a href="vacancies.html">vacancies.html</a></p>
+            <p>
+              Компонент:
+              <code>.catalog-filter-group:has(input[type="radio"])</code>
+            </p>
+          </div>
+          <div class="ui-kit__sample container">
+            {% include "components/catalog-filter-group-4.njk" %}
+          </div>
+        </section>
+        <!-- Детальная вакансия: detail-vacancy.html -->
+        <section class="ui-kit__entry" data-ui-source="detail-vacancy.html">
+          <div class="ui-kit__meta container" id="ui-26">
+            <h2>Детальная вакансия</h2>
+            <p>
+              Сведения о вакансии, контакты, отправка резюме и списки
+              требований.
+            </p>
+            <p>
+              Страницы: <a href="detail-vacancy.html">detail-vacancy.html</a>
+            </p>
+            <p>Компонент: <code>.detail-vacancy</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            <section class="detail-vacancy container">
+              <h1 class="h1 title">Документовед</h1>
+              <div class="detail-vacancy__body">
+                {% include "components/vacancy-intro.njk" %}
+                {% include "components/vacancy-conditions.njk" %}
+              </div>
+              {% include "components/vacancy-description.njk" %}
+            </section>
+          </div>
+        </section>
+        <!-- Документы: detail-vacancy.html -->
+        <section class="ui-kit__entry" data-ui-source="detail-vacancy.html">
+          <div class="ui-kit__meta container" id="ui-27">
+            <h2>Документы</h2>
+            <p>Общий список файлов: иконка, название, формат и размер.</p>
+            <p>
+              Страницы:
+              <a href="detail-structure.html">detail-structure.html</a>,
+              <a href="detail-vacancy.html">detail-vacancy.html</a>,
+              <a href="vacancies.html">vacancies.html</a>
+            </p>
+            <p>Компонент: <code>.vacancy-documents</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            <div class="vacancy-documents">
+              <h2 class="vacancy-documents__title">Основные документы</h2>
+              {% include "components/document-list.njk" %}
+            </div>
+          </div>
+        </section>
+        <!-- Модальное окно отклика: detail-vacancy.html -->
+        <section class="ui-kit__entry" data-ui-source="detail-vacancy.html">
+          <div class="ui-kit__meta container" id="ui-28">
+            <h2>Модальное окно отклика</h2>
+            <p>Поля формы, загрузка резюме, согласие и анимация открытия.</p>
+            <p>
+              Страницы: <a href="detail-vacancy.html">detail-vacancy.html</a>
+            </p>
+            <p>Компонент: <code>.modal</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            <div class="container d-flex flex-row" style = "gap: 40px;">
+              <button
+                type="button"
+                class="btn btn--default btn--m button-modal"
+                data-modal="vacancy"
+              >
+                Открыть форму отклика
+              </button>
+              <button
+                type="button"
+                class="btn btn--default btn--m button-modal"
+                data-modal="vacancy"
+                data-modal-state="success"
+              >
+                Успешная отправка — вакансия
+              </button>
+            </div>
+            {% set modalIdPrefix = "ui-28-" %}{% set modalSuccessId = "ui-vacancy-success-title" %}{% set modalDemoError = true %}{% set modalConsentLink = true %}{% include "components/vacancy-modal.njk" %}
+          </div>
+        </section>
+        <!-- Структура университета: structure.html -->
+        <section class="ui-kit__entry" data-ui-source="structure.html">
+          <div class="ui-kit__meta container" id="ui-29">
+            <h2>Структура университета</h2>
+            <p>Категории и сетка ссылок на институты и подразделения.</p>
+            <p>Страницы: <a href="structure.html">structure.html</a></p>
+            <p>Компонент: <code>.structure</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            <section class="structure">
+              <div class="container structure__container">
+                <h1 class="title">Структура университета</h1>
+                <div class="structure__tags">
+                  <div class="structure__tag tag select">Институты</div>
+                  <div class="structure__tag tag">Кафедры</div>
+                  <div class="structure__tag tag">Корпуса и общежитие</div>
+                  <div class="structure__tag tag">Службы и отделы</div>
+                </div>
+                <ul class="structure__institutes">
+                  <li class="structure__institute">
+                    <a class="structure__institute-link" href="#">
+                      <h2 class="structure__institute-title">
+                        Институт базовой инженерной подготовки
+                      </h2>
+
+                      <ul class="structure__programs">
+                        <li class="structure__program">
+                          Бакалавриат: 1 программа
+                        </li>
+                        <li class="structure__program">
+                          Магистратура: 1 программа
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+
+                  <li class="structure__institute">
+                    <a class="structure__institute-link" href="#">
+                      <h2 class="structure__institute-title">
+                        Институт цифровых систем
+                      </h2>
+
+                      <ul class="structure__programs">
+                        <li class="structure__program">
+                          Бакалавриат: 1 программа
+                        </li>
+                        <li class="structure__program">
+                          Магистратура: 1 программа
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+
+                  <li class="structure__institute">
+                    <a class="structure__institute-link" href="#">
+                      <h2 class="structure__institute-title">
+                        Институт экономики и менеджмента
+                      </h2>
+
+                      <ul class="structure__programs">
+                        <li class="structure__program">
+                          Бакалавриат: 1 программа
+                        </li>
+                        <li class="structure__program">
+                          Магистратура: 1 программа
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+
+                  <li class="structure__institute">
+                    <a class="structure__institute-link" href="#">
+                      <h2 class="structure__institute-title">
+                        Институт химии и химической технологии
+                      </h2>
+
+                      <ul class="structure__programs">
+                        <li class="structure__program">
+                          Бакалавриат: 1 программа
+                        </li>
+                        <li class="structure__program">
+                          Магистратура: 1 программа
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+
+                  <li class="structure__institute">
+                    <a class="structure__institute-link" href="#">
+                      <h2 class="structure__institute-title">
+                        Институт архитектуры и дизайна
+                      </h2>
+
+                      <ul class="structure__programs">
+                        <li class="structure__program">
+                          Бакалавриат: 1 программа
+                        </li>
+                        <li class="structure__program">
+                          Магистратура: 1 программа
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+
+                  <li class="structure__institute">
+                    <a class="structure__institute-link" href="#">
+                      <h2 class="structure__institute-title">
+                        Институт инженеров строительства и транспорта
+                      </h2>
+
+                      <ul class="structure__programs">
+                        <li class="structure__program">
+                          Бакалавриат: 1 программа
+                        </li>
+                        <li class="structure__program">
+                          Магистратура: 1 программа
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+
+                  <li class="structure__institute">
+                    <a class="structure__institute-link" href="#">
+                      <h2 class="structure__institute-title">
+                        Институт инженерии и машиностроения
+                      </h2>
+
+                      <ul class="structure__programs">
+                        <li class="structure__program">
+                          Бакалавриат: 1 программа
+                        </li>
+                        <li class="structure__program">
+                          Магистратура: 1 программа
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+
+                  <li class="structure__institute">
+                    <a class="structure__institute-link" href="#">
+                      <h2 class="structure__institute-title">
+                        Университетский колледж ЯГТУ «Политехник»
+                      </h2>
+
+                      <ul class="structure__programs">
+                        <li class="structure__program">
+                          Бакалавриат: 1 программа
+                        </li>
+                        <li class="structure__program">
+                          Магистратура: 1 программа
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- Первый блок подразделения: detail-structure.html -->
+        <section class="ui-kit__entry" data-ui-source="detail-structure.html">
+          <div class="ui-kit__meta container" id="ui-30">
+            <h2>Первый блок подразделения</h2>
+            <p>Заголовок, описание и навигационные вкладки.</p>
+            <p>
+              Страницы:
+              <a href="detail-structure.html">detail-structure.html</a>
+            </p>
+            <p>Компонент: <code>.structure-detail__intro</code></p>
+          </div>
+          <div class="ui-kit__sample container structure-detail">
+            <section class="structure-detail__intro">
+              <h1 class="structure-detail__title">Институт цифровых систем</h1>
+              <div class="structure-detail__intro-grid">
+                <p class="structure-detail__lead">
+                  Lorem ipsum dolor sit amet consectetur. Eu augue fames felis
+                  ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui
+                  feugiat orci dui amet consectetur tortor sem. In malesuada
+                  vitae urna mattis tortor aenean porttitor aenean. Lorem ipsum
+                  dolor sit amet consectetur. Eu augue fames felis ultrices.
+                  Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci
+                  dui amet consectetur tortor sem. In malesuada vitae urna
+                  mattis tortor aenean porttitor aenean.
+                </p>
+                {% include "components/structure-contact-card.njk" %}
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- Программы подготовки: detail-structure.html -->
+        <section class="ui-kit__entry" data-ui-source="detail-structure.html">
+          <div class="ui-kit__meta container" id="ui-31">
+            <h2>Программы подготовки</h2>
+            <p>Направления подготовки внутри подразделения.</p>
+            <p>
+              Страницы:
+              <a href="detail-structure.html">detail-structure.html</a>
+            </p>
+            <p>
+              Компонент:
+              <code>.structure-detail__section:has(.training-programs)</code>
+            </p>
+          </div>
+          <div class="ui-kit__sample container structure-detail">
+            <section
+              class="structure-detail__section"
+              aria-labelledby="ui-31-training-programs-title"
+            >
+              <h2
+                class="structure-detail__section-title"
+                id="ui-31-training-programs-title"
+              >
+                Программы подготовки
+              </h2>
+              <div
+                class="structure-detail__tabs" role="group"
+                aria-label="Уровень образования"
+              >
+                <button class="btn structure-detail__tab select" type="button">
+                  Все</button
+                ><button class="btn structure-detail__tab" type="button">
+                  Бакалавриат</button
+                ><button class="btn structure-detail__tab" type="button">
+                  Магистратура
+                </button>
+              </div>
+              <div class="training-programs">
+                <article class="training-program-card">
+                  <div class="training-program-card__tags">
+                    <span class="bakalavr">Бакалавриат</span><span>Очно</span>
+                  </div>
+                  <div class="training-program-card__body">
+                    <p class="training-program-card__code">09.03.01</p>
+                    <h3>Информатика и вычислительная техника</h3>
+                  </div>
+                  <div class="training-program-card__footer">
+                    <div class="training-program-card__footer-item">
+                      <span>Бюджетные места</span>
+                      <p>16</p>
+                    </div>
+                    <div class="training-program-card__footer-item">
+                      <span>Целевые места</span>
+                      <p>16</p>
+                    </div>
+                    <div class="training-program-card__footer-item">
+                      <span>Платные места</span>
+                      <p>50</p>
+                    </div>
+                    <div class="training-program-card__footer-item">
+                      <span>Срок обучения</span>
+                      <p>5 лет</p>
+                    </div>
+                  </div>
+                </article>
+                <article class="training-program-card">
+                  <div class="training-program-card__tags">
+                    <span class="bakalavr">Бакалавриат</span><span>Очно</span>
+                  </div>
+                  <div class="training-program-card__body">
+                    <p class="training-program-card__code">09.03.02</p>
+                    <h3>Информационные системы и технологии</h3>
+                  </div>
+                  <div class="training-program-card__footer">
+                    <div class="training-program-card__footer-item">
+                      <span>Бюджетные места</span>
+                      <p>16</p>
+                    </div>
+                    <div class="training-program-card__footer-item">
+                      <span>Целевые места</span>
+                      <p>16</p>
+                    </div>
+                    <div class="training-program-card__footer-item">
+                      <span>Платные места</span>
+                      <p>50</p>
+                    </div>
+                    <div class="training-program-card__footer-item">
+                      <span>Срок обучения</span>
+                      <p>5 лет</p>
+                    </div>
+                  </div>
+                </article>
+                <article class="training-program-card">
+                  <div class="training-program-card__tags">
+                    <span class="magistratura">Магистратура</span
+                    ><span>Очно</span>
+                  </div>
+                  <div class="training-program-card__body">
+                    <p class="training-program-card__code">09.03.03</p>
+                    <h3>Прикладная информатика</h3>
+                  </div>
+                  <div class="training-program-card__footer">
+                    <div class="training-program-card__footer-item">
+                      <span>Бюджетные места</span>
+                      <p>16</p>
+                    </div>
+                    <div class="training-program-card__footer-item">
+                      <span>Целевые места</span>
+                      <p>16</p>
+                    </div>
+                    <div class="training-program-card__footer-item">
+                      <span>Платные места</span>
+                      <p>50</p>
+                    </div>
+                    <div class="training-program-card__footer-item">
+                      <span>Срок обучения</span>
+                      <p>5 лет</p>
+                    </div>
+                  </div>
+                </article>
+                <article class="training-program-card">
+                  <div class="training-program-card__tags">
+                    <span class="magistratura">Магистратура</span
+                    ><span>Очно</span>
+                  </div>
+                  <div class="training-program-card__body">
+                    <p class="training-program-card__code">09.04.01</p>
+                    <h3>Информатика и вычислительная техника</h3>
+                  </div>
+                  <div class="training-program-card__footer">
+                    <div class="training-program-card__footer-item">
+                      <span>Бюджетные места</span>
+                      <p>16</p>
+                    </div>
+                    <div class="training-program-card__footer-item">
+                      <span>Целевые места</span>
+                      <p>16</p>
+                    </div>
+                    <div class="training-program-card__footer-item">
+                      <span>Платные места</span>
+                      <p>50</p>
+                    </div>
+                    <div class="training-program-card__footer-item">
+                      <span>Срок обучения</span>
+                      <p>5 лет</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- О подразделении и фотогалерея: detail-structure.html -->
+        <section class="ui-kit__entry" data-ui-source="detail-structure.html">
+          <div class="ui-kit__meta container" id="ui-32">
+            <h2>О подразделении и фотогалерея</h2>
+            <p>Информационный блок и фотослайдер со стрелками и пагинацией.</p>
+            <p>
+              Страницы:
+              <a href="detail-structure.html">detail-structure.html</a>
+            </p>
+            <p>Компонент: <code>.structure-about</code></p>
+          </div>
+          <div class="ui-kit__sample container structure-detail">
+            <section
+              class="structure-detail__section structure-about"
+              aria-labelledby="ui-32-about-institute-title"
+            >
+              <h2
+                class="structure-detail__section-title"
+                id="ui-32-about-institute-title"
+              >
+                Об институте
+              </h2>
+              <p class="structure-detail__text">
+                Lorem ipsum dolor sit amet consectetur. Eu augue fames felis
+                ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui
+                feugiat orci dui amet consectetur tortor sem. In malesuada vitae
+                urna mattis tortor aenean porttitor aenean. Lorem ipsum dolor
+                sit amet consectetur. Eu augue fames felis ultrices. Scelerisque
+                ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet
+                consectetur tortor sem. In malesuada vitae urna mattis tortor
+                aenean porttitor aenean.
+              </p>
+              <a
+                class="structure-about__video"
+                href="#"
+                aria-label="Воспроизвести видео об институте"
+                ><img loading="lazy" decoding="async"
+                  src="../images/fallback/structure-video.png"
+                  alt="Участники встречи в библиотеке отвечают на вопросы ведущей" /><span
+                  ><img src="../images/svg/play-circle.svg" alt="" /></span
+              ></a>
+              <p class="structure-detail__text">
+                Lorem ipsum dolor sit amet consectetur. Eu augue fames felis
+                ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui
+                feugiat orci dui amet consectetur tortor sem. In malesuada vitae
+                urna mattis tortor aenean porttitor aenean. Lorem ipsum dolor
+                sit amet consectetur. Eu augue fames felis ultrices. Scelerisque
+                ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet
+                consectetur tortor sem. In malesuada vitae urna mattis tortor
+                aenean porttitor aenean.
+              </p>
+
+              <section
+                class="structure-gallery"
+                aria-labelledby="ui-32-structure-gallery-title"
+              >
+                <h3 id="ui-32-structure-gallery-title">Галерея</h3>
+                {% include "components/structure-gallery.njk" %}
+              </section>
+            </section>
+          </div>
+        </section>
+        <!-- Руководство подразделения: detail-structure.html -->
+        <section class="ui-kit__entry" data-ui-source="detail-structure.html">
+          <div class="ui-kit__meta container" id="ui-33">
+            <h2>Руководство подразделения</h2>
+            <p>Карточки руководителей с фотографией и контактами.</p>
+            <p>
+              Страницы:
+              <a href="detail-structure.html">detail-structure.html</a>
+            </p>
+            <p>
+              Компонент:
+              <code
+                >.structure-detail__section:has(.structure-person-card)</code
+              >
+            </p>
+          </div>
+          <div class="ui-kit__sample container structure-detail">
+            <section
+              class="structure-detail__section"
+              aria-labelledby="ui-33-management-title"
+            >
+              <h2
+                class="structure-detail__section-title"
+                id="ui-33-management-title"
+              >
+                Руководство
+              </h2>
+              {% include "components/structure-person-card.njk" %}
+            </section>
+          </div>
+        </section>
+        <!-- Сотрудники подразделения: detail-structure.html -->
+        <section class="ui-kit__entry" data-ui-source="detail-structure.html">
+          <div class="ui-kit__meta container" id="ui-34">
+            <h2>Сотрудники подразделения</h2>
+            <p>Перечень сотрудников и ссылки на персональные страницы.</p>
+            <p>
+              Страницы:
+              <a href="detail-structure.html">detail-structure.html</a>
+            </p>
+            <p>
+              Компонент:
+              <code
+                >.structure-detail__section[aria-labelledby="employees-title"]</code
+              >
+            </p>
+          </div>
+          <div class="ui-kit__sample container structure-detail">
+            <section
+              class="structure-detail__section"
+              aria-labelledby="ui-34-employees-title"
+            >
+              <h2
+                class="structure-detail__section-title"
+                id="ui-34-employees-title"
+              >
+                Сотрудники
+              </h2>
+              {% include "components/structure-employees.njk" %}
+            </section>
+          </div>
+        </section>
+        <!-- Персональная страница сотрудника: detail-sotrudnik.html -->
+        <section class="ui-kit__entry" data-ui-source="detail-sotrudnik.html">
+          <div class="ui-kit__meta container" id="ui-35">
+            <h2>Персональная страница сотрудника</h2>
+            <p>Фото, должность, контакты и информационные аккордеоны.</p>
+            <p>
+              Страницы:
+              <a href="detail-sotrudnik.html">detail-sotrudnik.html</a>
+            </p>
+            <p>Компонент: <code>.detail-sotrudnik</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            <section class="detail-sotrudnik d-flex flex-column container">
+              <div class="sotrudnik d-flex">
+                <div class="sotrudnik__info">
+                  <div class="sotrudnik__picture">
+                    <img loading="lazy" decoding="async" src="../images/fallback/stepanova.png" alt="Степанова Елена Олеговна" />
+                  </div>
+                  {% include "components/employee-summary.njk" %}
+                </div>
+                {% include "components/employee-contacts.njk" %}
+              </div>
+              <div class="sotrudnik__contents d-flex flex-column">
+                <div class="dropdown--item open">
+                  <div class="dropdown--header">
+                    <h3 class="dropdown--item__title"><button class="dropdown--trigger" type="button">Полномочия и функции</button></h3>
+                  </div>
+
+                  {% include "components/dropdown--content.njk" %}
+                </div>
+                <div class="dropdown--item">
+                  <div class="dropdown--header">
+                    <h3 class="dropdown--item__title"><button class="dropdown--trigger" type="button">О сотруднике</button></h3>
+                  </div>
+
+                  {% include "components/dropdown--content.njk" %}
+                </div>
+                <div class="dropdown--item">
+                  <div class="dropdown--header">
+                    <h3 class="dropdown--item__title"><button class="dropdown--trigger" type="button">Научные труды</button></h3>
+                  </div>
+
+                  {% include "components/dropdown--content.njk" %}
+                </div>
+                <div class="dropdown--item">
+                  <div class="dropdown--header">
+                    <h3 class="dropdown--item__title"><button class="dropdown--trigger" type="button">
+                      Дополнительные функции
+                    </button></h3>
+                  </div>
+
+                  {% include "components/dropdown--content.njk" %}
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- Научные журналы: nauka.html -->
+        <section class="ui-kit__entry" data-ui-source="nauka.html">
+          <div class="ui-kit__meta container" id="ui-36">
+            <h2>Научные журналы</h2>
+            <p>Аккордеоны: обложки, реквизиты, ссылки и описания журналов.</p>
+            <p>Страницы: <a href="nauka.html">nauka.html</a></p>
+            <p>Компонент: <code>.science</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            <section class="science">
+              <div class="science-list container d-flex flex-column">
+                <h1 class="title science-list__title">Научные журналы ЯГТУ</h1>
+                <div class="science-list__content d-flex flex-column">
+                  {% include "components/dropdown--item-3.njk" %}
+                  {% include "components/dropdown--item-2.njk" %}
+                  {% include "components/dropdown--item.njk" %}
+                  <div class="dropdown--item">
+                    <div class="science-detail dropdown--header">
+                      <h2 class="science-detail__title"><button class="dropdown--trigger" type="button">
+                        «Oт химии к технологии шаг за шагом»
+                      </button></h2>
+                    </div>
+
+                    <div
+                      class="dropdown--content science-detail__content wyswig"
+                    >
+                      <section class="science-detail__section">
+                        <div class="science-detail__content d-flex flex-row">
+                          <img loading="lazy" decoding="async"
+                            class="science-detail__photo"
+                            src="../images/fallback/journal.png" alt="Обложка научного журнала «Теоретическая экономика», № 10 (70), 2020"
+                          />
+                          <div class="science-detail__info">
+                            <dl>
+                              <dt>Год основания</dt>
+                              <dd>2020</dd>
+                            </dl>
+                            <dl>
+                              <dt>Главный редактор</dt>
+                              <dd>
+                                Федосов Сергей Викторович, доктор технических
+                                наук, академик РААСН, профессор.
+                              </dd>
+                            </dl>
+                            <dl>
+                              <dt>Индексация</dt>
+                              <dd>РИНЦ</dd>
+                            </dl>
+                            <dl>
+                              <dt>Доступность</dt>
+                              <dd>
+                                Открытый доступ, издается при финансовой
+                                поддержке Университета
+                              </dd>
+                            </dl>
+                            <dl>
+                              <dt>Лицензия</dt>
+                              <dd>Creative Commons: CC BY 4.0</dd>
+                            </dl>
+                            <dl>
+                              <dt>Периодичность выхода</dt>
+                              <dd>4 выпуска в год</dd>
+                            </dl>
+                            <dl>
+                              <dt>Рецензирование</dt>
+                              <dd>двойное слепое</dd>
+                            </dl>
+                            <dl>
+                              <dt>Язык</dt>
+                              <dd>русский, английский</dd>
+                            </dl>
+                            <a href="#" class="btn btn--default btn--sm"
+                              >Подробнее</a
+                            >
+                          </div>
+                        </div>
+                        <div class="science-detail__description">
+                          <p class="science-detail__code">ISSN 2782-1919</p>
+                          <p>
+                            Рецензируемый научно-практический журнал публикует
+                            работы преподавателей и сотрудников высших учебных
+                            заведений РФ, РАН, РААСН, других исследовательских
+                            подразделений, работающих в сфере промышленного и
+                            гражданского строительства и архитектуры, в том
+                            числе в странах стран СНГ и за рубежом. Рубрики
+                            журнала: строительные конструкции, здания и
+                            сооружения; строительные материалы и изделия;
+                            проектирование и строительство дорог,
+                            метрополитенов; архитектура зданий и сооружений;
+                            творческие концепции архитектурной деятельности.
+                          </p>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- Карта кампуса: map.html -->
+        <section class="ui-kit__entry" data-ui-source="map.html">
+          <div class="ui-kit__meta container" id="ui-37">
+            <h2>Карта кампуса</h2>
+            <p>
+              Демонстрационная карта, фильтры, поиск, пины и всплывающие карточки в качестве примера.
+            </p>
+            <p>Страницы: <a href="map.html">map.html</a></p>
+            <p>Компонент: <code>main</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            <section class="campus-map-page">
+              <div class="container">
+                <h1 class="campus-map-page__title">Карта кампуса</h1>
+
+                <div class="campus-map-page__toolbar">
+                  <div class="campus-map-page__filters">
+                    {% include "components/campus-filter.njk" %}
+                    {% include "components/campus-filter-2.njk" %}
+                  </div>
+                  <form
+                    class="campus-map-page__control"
+                    data-campus-search=""
+                    role="search"
+                  >
+                    <input
+                      class="campus-map-page__search-input"
+                      type="search"
+                      name="campus-query"
+                      placeholder="поиск"
+                      aria-label="Поиск по карте кампуса"
+                    />
+                    <button
+                      class="campus-map-page__search-button"
+                      type="submit"
+                      aria-label="Найти"
+                    >
+                      <img src="../images/svg/vacancy-search.svg" alt="" />
+                    </button>
+                  </form>
+                </div>
+
+                <section
+                  class="campus-map-page__canvas"
+                  aria-label="Интерактивная карта кампуса"
+                >
+                  <div id="ui-37-campus-map" data-campus-map=""></div>
+                </section>
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- Поиск по сайту: search.html -->
+        <section class="ui-kit__entry" data-ui-source="search.html">
+          <div class="ui-kit__meta container" id="ui-38">
+            <h2>Поиск по сайту</h2>
+            <p>Строка запроса и кнопка отправки формы.</p>
+            <p>Страницы: <a href="search.html">search.html</a></p>
+            <p>Компонент: <code>section.search-page</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            <section class="container search-page">
+              <form
+                class="search-page__form"
+                action="#"
+                method="get"
+                role="search"
+              >
+                <input
+                  class="search-page__input"
+                  id="ui-38-site-search"
+                  name="q"
+                  type="search"
+                  aria-label="Поиск по сайту"
+                  placeholder="Поиск"
+                  autocomplete="off"
+                />
+                <button
+                  class="btn btn--blue btn--xl search-page__submit"
+                  type="submit"
+                >
+                  Найти
+                </button>
+              </form>
+            </section>
+          </div>
+        </section>
+        <!-- Страница ошибки: 404.html -->
+        <section class="ui-kit__entry" data-ui-source="404.html">
+          <div class="ui-kit__meta container" id="ui-39">
+            <h2>Страница ошибки</h2>
+            <p>Сообщение об отсутствии страницы и кнопка возврата.</p>
+            <p>Страницы: <a href="404.html">404.html</a></p>
+            <p>Компонент: <code>.error-page</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            {% include "components/error-page.njk" %}
+          </div>
+        </section>
+        <!-- Уведомление о cookies: index.html -->
+        <section class="ui-kit__entry" data-ui-source="index.html">
+          <div class="ui-kit__meta container" id="ui-40">
+            <h2>Уведомление о cookies</h2>
+            <p>Общий баннер согласия; в каталоге показан в потоке.</p>
+            <p>
+              Страницы: <a href="404.html">404.html</a>,
+              <a href="detail-sotrudnik.html">detail-sotrudnik.html</a>,
+              <a href="detail-structure.html">detail-structure.html</a>,
+              <a href="detail-vacancy.html">detail-vacancy.html</a>,
+              <a href="index.html">index.html</a>,
+              <a href="map.html">map.html</a>,
+              <a href="nauka.html">nauka.html</a>,
+              <a href="news-events.html">news-events.html</a>,
+              <a href="program.html">program.html</a>,
+              <a href="programs.html">programs.html</a>,
+              <a href="search.html">search.html</a>,
+              <a href="structure.html">structure.html</a>,
+              <a href="student-life.html">student-life.html</a>,
+              <a href="vacancies.html">vacancies.html</a>
+            </p>
+            <p>Компонент: <code>.cookie-banner</code></p>
+          </div>
+          <div class="ui-kit__sample">
+            <div class="container">
+              <button
+                type="button"
+                class="btn btn--default btn--m"
+                data-ui-show-cookie=""
+              >
+                Показать уведомление повторно
+              </button>
+              <div class="cookie-banner">
+              <div class="cookie-body">
+                <div class="cookie-text">
+                  Продолжая работу с сайтом, вы даете согласие на использование
+                  <a href="#">файлов Куки (cookie)</a>
+                </div>
+                <button
+                  type="button"
+                  id="cookieAccept"
+                  class="cookie-btn btn btn--default"
+                >
+                  Принять
+                </button>
+              </div>
+            </div>
+            </div>
+          </div>
+        </section>
+        {% include "components/button-states.njk" %}
+      </main>
+      <!-- Кастомные элементы контента из редактора 1С-Битрикс -->
+      <section class="ui-kit__entry">
+        <div class="ui-kit__meta container" id="ui-bitrix-elements">
+          <h2>Кастомные элементы для 1С-Битрикс</h2>
+          <p>Оформление контента из визуального редактора: текст, списки и таблицы. Достаточно поместить разметку в контейнер с классом <code>wyswig</code>.</p>
+          <p>Страницы с текстовыми блоками: <a href="program.html">Образовательная программа</a>, <a href="detail-vacancy.html">Вакансия</a>. Таблица ниже — пример для интеграции.</p>
+          <p>Стили: <code>../styles/base/main.css</code>. Селекторы: <code>.wyswig table</code>, <code>.wyswig tbody</code>, <code>.wyswig tr</code>, <code>.wyswig td</code> и <code>.wyswig th</code>.</p>
+          <p>Цвета и отступы таблицы настраиваются переменными <code>--wyswig-table-border</code>, <code>--wyswig-table-background</code>, <code>--wyswig-table-heading</code>, <code>--wyswig-table-color</code>, <code>--wyswig-table-cell-padding</code>.</p>
+        </div>
+        <div class="ui-kit__sample container">
+          <div class="wyswig d-flex flex-column gap-4">
+            <h3>Текстовый блок</h3>
+            <p>Пример описания из редактора: <strong>важная информация</strong>, <em>примечание</em> и обычный текст. Содержимое может редактироваться в 1С-Битрикс без добавления классов каждому абзацу.</p>
+            <ul>
+              <li>Описание образовательной программы</li>
+              <li>Условия поступления</li>
+              <li>Дополнительная информация</li>
+            </ul>
+            <div class="wyswig__table-scroll" role="region" aria-label="Образовательные программы — таблица с прокруткой" tabindex="0">
+            <table>
+              <caption>Пример таблицы: образовательные программы</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Направление</th>
+                  <th scope="col">Форма обучения</th>
+                  <th scope="col">Срок обучения</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Архитектура</td><td>Очная</td><td>5 лет</td></tr>
+                <tr><td>Информатика и вычислительная техника</td><td>Очная</td><td>4 года</td></tr>
+                <tr><td>Экономика</td><td>Очно-заочная</td><td>5 лет</td></tr>
+              </tbody>
+            </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Подвал: index.html -->
+      <section class="ui-kit__entry" data-ui-source="index.html">
+        <div class="ui-kit__meta container" id="ui-41">
+          <h2>Подвал</h2>
+          <p>
+            Общие контакты, навигация, служебные ссылки и логотип разработчика.
+          </p>
+          <p>
+            Страницы: <a href="404.html">404.html</a>,
+            <a href="detail-sotrudnik.html">detail-sotrudnik.html</a>,
+            <a href="detail-structure.html">detail-structure.html</a>,
+            <a href="detail-vacancy.html">detail-vacancy.html</a>,
+            <a href="index.html">index.html</a>,
+            <a href="map.html">map.html</a>,
+            <a href="nauka.html">nauka.html</a>,
+            <a href="news-events.html">news-events.html</a>,
+            <a href="program.html">program.html</a>,
+            <a href="programs.html">programs.html</a>,
+            <a href="search.html">search.html</a>,
+            <a href="structure.html">structure.html</a>,
+            <a href="student-life.html">student-life.html</a>,
+            <a href="vacancies.html">vacancies.html</a>
+          </p>
+          <p>Компонент: <code>.footer</code></p>
+        </div>
+        <div class="ui-kit__sample">
+{% include "components/footer.njk" %}
+        </div>
+      </section>
+    </div>
+    <script>
+      document
+        .querySelector("[data-ui-show-cookie]")
+        .addEventListener("click", function () {
+          document.querySelector(".cookie-banner").style.display = "block";
+        });
+    </script>
+  {% endblock %}

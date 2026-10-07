@@ -1,0 +1,104 @@
+.program-education {
+    margin-bottom: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.program-education__title {
+    font-size: 44px;
+}
+
+.program-education__list {
+    display: flex;
+    flex-direction: column;
+    gap: inherit;
+}
+
+.program-education__name {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--subprimary-color-1);
+    text-transform: uppercase;
+}
+
+.program-education__content {
+    padding-top: 20px;
+}
+
+.program-education__section {
+    padding: 40px 0;
+    border-bottom: 1px solid var(--subprimary-color-4);
+    display: flex;
+    gap: 26px;
+    font-size: 18px;
+}
+
+.program-education__caption {
+    flex: 0 0 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 24px;
+}
+
+.program-education__caption h4 {
+    font-size: 24px;
+    color: var(--subprimary-color-1);
+    font-weight: 500;
+}
+
+.program-education__caption .btn {
+    border-radius: 10px;
+    font-weight: 600;
+    max-height: 54px;
+    max-width: 276px;
+    white-space: nowrap;
+}
+
+@media(max-width: 768px) {
+    .preparatory-courses {
+        margin: 60px 0;
+    }
+
+    .program-education__name {
+        font-size: 20px;
+        flex: 0 1 72%;
+    }
+
+    .program-education__title {
+        font-size: 32px;
+    }
+
+    .program-education__section {
+        flex-direction: column;
+        gap: 24px;
+        font-size: 16px;
+    }
+
+    .program-education__caption {
+        display: contents;
+    }
+
+    .program-education__caption h4 {
+        order: 1;
+        font-size: 20px;
+    }
+
+    .program-education__section > p {
+        order: 2;
+    }
+
+    .program-education__caption .btn {
+        order: 3;
+        align-self: flex-start;
+        padding: 14px 20px;
+        height: 47px;
+        max-width: 219px;
+    }
+
+    .program-exams__examples summary {
+        font-size: 20px;
+    }
+
+}

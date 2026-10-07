@@ -123,6 +123,27 @@ img {
     max-width: 100%;
 }
 
+:where(a[href], button, input, select, textarea, [tabindex="0"]):focus-visible {
+    outline: 2px solid var(--subprimary-color-1);
+    outline-offset: 3px;
+}
+
+@media (hover: hover) {
+    .secondary-nav a:hover,
+    .main-nav a:hover,
+    .navbar__phone:hover {
+        color: #002759;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+}
+
+.secondary-nav a:active,
+.main-nav a:active,
+.navbar__phone:active {
+    color: var(--primary-color-1);
+}
+
 /* Рут стили и правила для быстрой верстки */
 :root {
     /* Основные цвета из UI-кита */
@@ -187,7 +208,7 @@ img {
 }
 
 
-@media (max-width: 576px) { 
+@media (max-width: 576px) {
     :root {
         --container-padding: 16px;
     }

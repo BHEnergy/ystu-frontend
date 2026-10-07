@@ -1,0 +1,17 @@
+<section class="ui-kit__entry" aria-labelledby="ui-button-states">
+  <div class="ui-kit__meta container">
+    <h2 id="ui-button-states">Состояния кнопок и клавиатурный фокус</h2>
+    <p>Общие кнопки всех страниц. Цвета состояний — по Figma, фрейм 3029:1330. Существующие размеры кнопок сохранены.</p>
+    <p>Наведите курсор для Hover, удерживайте нажатие для Active, перейдите клавишей Tab для Focus. Неактивные кнопки используют настоящий атрибут disabled.</p>
+    <p>Шаблон: <code>components/button-states.njk</code>; стили: <code>styles/components/buttons.css</code>. Пример использования: <a href="programs.html">каталог программ</a>.</p>
+  </div>
+  <div class="container button-states">
+    {% for variant in [{"name":"Primary", "class":"btn--default"}, {"name":"Secondary", "class":"btn--blue"}, {"name":"Outline", "class":"btn--white"}, {"name":"Ghost", "class":"btn--ghost"}] %}
+    <div class="button-states__group">
+      <h3>{{ variant.name }}</h3>
+      <button type="button" class="btn btn--s {{ variant.class }}">Кнопка</button>
+      <button type="button" class="btn btn--s {{ variant.class }}" disabled>Кнопка</button>
+    </div>
+    {% endfor %}
+  </div>
+</section>

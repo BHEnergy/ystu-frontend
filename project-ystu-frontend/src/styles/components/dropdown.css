@@ -1,0 +1,104 @@
+.dropdown--trigger {
+    appearance: none;
+    display: block;
+    width: 100%;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: inherit;
+    cursor: pointer;
+}
+
+.dropdown--header:has(.dropdown--trigger:focus-visible) {
+    outline: 2px solid var(--subprimary-color-1);
+    outline-offset: 3px;
+}
+
+.dropdown--trigger:focus-visible {
+    outline: none;
+}
+
+.dropdown--header {
+    background: var(--subprimary-color-7);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 160ms ease;
+}
+
+@media (hover: hover) {
+    .dropdown--header:hover { background-color: var(--subprimary-color-5); }
+}
+
+.dropdown--header:active { background-color: var(--subprimary-color-4); }
+
+.dropdown--header::after {
+    content: '';
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    align-content: center;
+    transition: transform 0.2s ease;
+    background: url(../../images/svg/triangle-down.svg) center / 26px 26px no-repeat;
+}
+
+.dropdown--item.open .dropdown--header::after {
+    transform: rotate(180deg);
+} 
+
+.dropdown--content {
+    display: none;
+}
+
+.dropdown--item.open .dropdown--content {
+    display: block;
+    animation: dropdown-content-enter 280ms cubic-bezier(.2, .7, .3, 1);
+}
+
+@keyframes dropdown-content-enter {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dropdown--header { transition: none; }
+    .dropdown--item.open .dropdown--content {
+        animation: none;
+    }
+
+    .dropdown--header::after {
+        transition: none;
+    }
+}
+
+.dropdown--item__title {
+    font-size: 20px;
+    color: var(--subprimary-color-1);
+    font-weight: 600;
+}
+
+@media(max-width: 768px) {
+    .dropdown--header {
+        padding: 24px 16px;
+    }
+
+    .dropdown--header::after {
+        height: 32px;
+        max-width: 32px;
+        content: '';
+        background: url(../../images/svg/triangle-down.svg) center / 26px 12px no-repeat;
+    }
+}

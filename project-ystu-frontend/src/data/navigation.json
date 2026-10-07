@@ -1,0 +1,86 @@
+[
+  {
+    "href": "structure.html",
+    "class": "mega-menu__primary-link has-submenu is-selected",
+    "section": "university",
+    "current": "true",
+    "title": "Университет"
+  },
+  {
+    "href": "student-life.html",
+    "class": "mega-menu__primary-link has-submenu",
+    "section": "applicants",
+    "current": "",
+    "title": "Поступающим"
+  },
+  {
+    "href": "student-life.html",
+    "class": "mega-menu__primary-link has-submenu",
+    "section": "students",
+    "current": "",
+    "title": "Обучающимся"
+  },
+  {
+    "href": "student-life.html",
+    "class": "mega-menu__primary-link has-submenu",
+    "section": "school",
+    "current": "",
+    "title": "Школьникам"
+  },
+  {
+    "href": "student-life.html",
+    "class": "mega-menu__primary-link has-submenu",
+    "section": "employees",
+    "current": "",
+    "title": "Сотрудникам"
+  },
+  {
+    "href": "student-life.html",
+    "class": "mega-menu__primary-link has-submenu",
+    "section": "graduates",
+    "current": "",
+    "title": "Выпускникам"
+  },
+  {
+    "href": "vacancies.html",
+    "class": "mega-menu__primary-link has-submenu",
+    "section": "vacancies",
+    "current": "",
+    "title": "Работа в ЯГТУ"
+  },
+  {
+    "href": "nauka.html",
+    "class": "mega-menu__primary-link has-submenu",
+    "section": "education",
+    "current": "",
+    "title": "Образование"
+  },
+  {
+    "href": "nauka.html",
+    "class": "mega-menu__primary-link has-submenu",
+    "section": "science",
+    "current": "",
+    "title": "Наука и инновации"
+  },
+  {
+    "href": "student-life.html",
+    "class": "mega-menu__primary-link has-submenu",
+    "section": "student-life",
+    "current": "",
+    "title": "Студенческая жизнь"
+  },
+  {
+    "href": "news-events.html",
+    "class": "mega-menu__primary-link has-submenu",
+    "section": "distance",
+    "current": "",
+    "title": "Заочное обучение"
+  },
+  {
+    "href": "news-events.html",
+    "class": "mega-menu__primary-link has-submenu",
+    "section": "targeted",
+    "current": "",
+    "title": "Целевое обучение"
+  }
+]

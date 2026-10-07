@@ -1,0 +1,74 @@
+
+
+/* Подключение стилей сторонних библиотек */
+@import url('components/swiper-bundle.css');
+/* @import url('utilities/bootstrap.min.css'); */
+@import url('utilities/bootstrap-grid.min.css');
+
+/* Подключение стилей компонентов */
+@import url('base/main.css');
+@import url('layout/header.css');
+@import url('layout/mega-menu.css');
+@import url('layout/body.css');
+@import url('layout/footer.css');
+@import url('pages/error-page.css');
+@import url('components/buttons.css');
+@import url('layout/information_banner.css');
+@import url('components/fichers.css');
+@import url('components/slider.css');
+@import url('components/events.css');
+@import url('pages/structure.css');
+@import url('components/news.css');
+
+/* Основные компоненты */
+@import url('components/breadcrumbs.css');
+@import url('components/pagination.css');
+@import url('components/dropdown.css');
+@import url('components/hero-banner.css');
+
+/* Страница поиска */
+@import url('pages/search-page.css');
+
+/* Страница программы */
+@import url('pages/program-about.css');
+@import url('pages/program-amissions.css');
+@import url('pages/program-exams.css');
+@import url('pages/program-education.css');
+
+@import url('components/preparatory-courses.css');
+@import url('components/flagship-projects.css');
+@import url('components/university-statistics.css');
+
+/* Страница Студенческая жизнь */
+@import url('pages/student-directions.css');
+@import url('pages/student-links.css');
+@import url('pages/student-driving.css');
+
+
+/* Каталоги вакансий и образовательных программ */
+@import url('pages/listing-page.css');
+@import url('components/catalog-filters.css');
+@import url('components/vacancy-card.css');
+@import url('components/program-card.css');
+@import url('components/document-list.css');
+@import url('components/mobile-filter-panel.css');
+@import url('pages/campus-map.css');
+
+/* Страница научной деятельности */
+@import url('pages/science.css');
+
+/* Детальная страница сотнрудника */
+@import url('pages/detail-sotrudnik.css');
+@import url('pages/detail-structure.css');
+
+/* Детальная страница вакансии */
+@import url('pages/detail-vacancy.css');
+
+/* Детальная страница вакансии */
+@import url('components/cookie-banner.css');
+
+/* Подключение формы и модалки */
+@import url('components/modal.css');
+@import url('components/form.css');
+
+@import url('base/global.css');

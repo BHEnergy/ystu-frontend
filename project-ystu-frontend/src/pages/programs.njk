@@ -1,0 +1,247 @@
+{% extends "layouts/base.njk" %}
+{% block head %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../styles/styles.css?v=3" rel="stylesheet" />
+    <script src="../js/main.js" type="text/javascript"></script>
+    <title>Образовательные программы 2026</title>
+  {% endblock %}
+{% block bodyAttributes %}{% endblock %}
+{% block content %}
+    <div class="wrapper">
+      {% include "components/header.njk" %}
+
+      <main class="main listing-page listing-page--programs">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a class="breadcrumbs__item" href="index.html">Главная</a>
+            <div class="breadcrumbs__separator"></div>
+            <a class="breadcrumbs__item" href="#">Образование</a>
+            <div class="breadcrumbs__separator"></div>
+            <span>Образовательные программы</span>
+          </nav>
+
+          <section class="listing-page__intro">
+            <h1 class="listing-page__title">Образовательные программы 2026</h1>
+          </section>
+
+          <div class="listing-page__body">
+            <aside class="listing-page__sidebar">
+              <h2 class="catalog-filters__title">Фильтры</h2>
+              <form class="catalog-filters" method="get">
+                {% include "components/catalog-search-2.njk" %}
+                {% include "components/catalog-filter-group-2.njk" %}
+                {% include "components/catalog-filter-group-3.njk" %}
+                <div class="catalog-filter-group">
+                  <div class="catalog-filter-group__title">
+                    основа обучения
+                  </div>
+                  <div class="catalog-filter-group__options">
+                    <label class="catalog-filter-option"
+                      ><input
+                        type="checkbox"
+                        name="financing[]"
+                        value="budget"
+                      />Бюджетные места</label
+                    ><label class="catalog-filter-option"
+                      ><input
+                        type="checkbox"
+                        name="financing[]"
+                        value="target"
+                      />Целевые места</label
+                    ><label class="catalog-filter-option"
+                      ><input
+                        type="checkbox"
+                        name="financing[]"
+                        value="paid"
+                      />Платные места</label
+                    >
+                  </div>
+                </div>
+                {% include "components/catalog-filter-group.njk" %}
+                <div class="catalog-filters__actions">
+                  {% include "components/btn--default.njk" %}<button class="btn catalog-filters__reset" type="reset">
+                    Очистить
+                  </button>
+                </div>
+              </form>
+            </aside>
+
+            <section aria-label="Список образовательных программ">
+              <div class="listing-page__mobile-tools">
+                {% include "components/catalog-search.njk" %}
+                <button
+                  class="catalog-filters-trigger"
+                  type="button"
+                  data-open-filter-panel="program-filter-panel"
+                  aria-controls="program-filter-panel"
+                  aria-expanded="false"
+                >
+                  Фильтры<img src="../images/svg/filters.svg" alt="" />
+                </button>
+              </div>
+              <div class="listing-page__results">
+                <article class="program-card">
+                  <div class="program-card__content">
+                    <div class = "program-card__body">
+                      <div class="program-card__tags">
+                        <span class="program-card__tag program-card__tag--bacalavr"
+                          >Бакалавриат</span
+                        ><span
+                          class="program-card__tag program-card__tag--outline"
+                          >Очно</span
+                        ><span
+                          class="program-card__tag program-card__tag--outline program-card__tag--accreditation"
+                          >Государственная аккредитация</span
+                        >
+                      </div>
+                      <div class="program-card__heading">
+                        <p class="program-card__code">07.03.01</p>
+                        <h2 class="program-card__title"><a href="program.html">Архитектура</a></h2>
+                      </div>
+                    </div>
+                    <div class="program-card__profiles">
+                      <p class="program-card__profiles-title">Профили</p>
+                      <ul class="program-card__profiles-list">
+                        <li>Профиль 1</li>
+                        <li>Профиль 2</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <dl class="program-card__stats">
+                    <div class="program-card__stat">
+                      <dt>Бюджетные места</dt>
+                      <dd>16</dd>
+                    </div>
+                    <div class="program-card__stat">
+                      <dt>Целевые места</dt>
+                      <dd>16</dd>
+                    </div>
+                    <div class="program-card__stat">
+                      <dt>Платные места</dt>
+                      <dd>50</dd>
+                    </div>
+                    <div class="program-card__stat">
+                      <dt>Срок обучения</dt>
+                      <dd>5 лет</dd>
+                    </div>
+                  </dl>
+                </article>
+                <article class="program-card">
+                  <div class="program-card__content">
+                    <div class = "program-card__body">
+                    <div class="program-card__tags">
+                      <span class="program-card__tag program-card__tag--bacalavr"
+                        >Бакалавриат</span
+                      ><span
+                        class="program-card__tag program-card__tag--outline"
+                        >Очно</span
+                      ><span
+                        class="program-card__tag program-card__tag--outline program-card__tag--accreditation"
+                        >Государственная аккредитация</span
+                      >
+                    </div>
+                    <div class="program-card__heading">
+                      <p class="program-card__code">07.03.01</p>
+                      <h2 class="program-card__title"><a href="program.html">Дизайн</a></h2>
+                    </div>
+                    </div>
+                    <div class="program-card__profiles">
+                      <p class="program-card__profiles-title">Профили</p>
+                      <ul class="program-card__profiles-list">
+                        <li>Профиль 1</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <dl class="program-card__stats">
+                    <div class="program-card__stat">
+                      <dt>Бюджетные места</dt>
+                      <dd>16</dd>
+                    </div>
+                    <div class="program-card__stat">
+                      <dt>Целевые места</dt>
+                      <dd>16</dd>
+                    </div>
+                    <div class="program-card__stat">
+                      <dt>Платные места</dt>
+                      <dd>50</dd>
+                    </div>
+                    <div class="program-card__stat">
+                      <dt>Срок обучения</dt>
+                      <dd>5 лет</dd>
+                    </div>
+                  </dl>
+                </article>
+                {% include "components/program-card-2.njk" %}
+                {% include "components/program-card-2.njk" %}
+                {% include "components/program-card-2.njk" %}
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+
+{% include "components/footer.njk" %}
+    </div>
+
+    <div
+      class="mobile-filter-panel"
+      id="program-filter-panel"
+      data-filter-panel
+      aria-hidden="true"
+    >
+      <aside
+        class="mobile-filter-panel__drawer"
+        aria-label="Фильтры образовательных программ"
+      >
+        <header class="mobile-filter-panel__header">
+          <h2 class="mobile-filter-panel__title">Фильтры</h2>
+          <button
+            class="mobile-filter-panel__close"
+            type="button"
+            data-close-filter-panel
+            aria-label="Закрыть фильтры"
+          >
+            <img src="../images/svg/close-white.svg" alt="" />
+          </button>
+        </header>
+        <form class="mobile-filter-panel__form" method="get">
+          <details open>
+            <summary>уровень образования</summary>
+            <div class="catalog-filter-group__options">
+              {% set option = {"label":"Бакалавриат","name":"education_level[]","value":"bachelor","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Специалитет","name":"education_level[]","value":"specialist","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Магистратура","name":"education_level[]","value":"master","checked":true,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}
+            </div>
+          </details>
+          <details open>
+            <summary>форма обучения</summary>
+            <div class="catalog-filter-group__options">
+              {% set option = {"label":"Очная","name":"study_form[]","value":"full_time","checked":true,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Заочная","name":"study_form[]","value":"extramural","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Очно-заочная","name":"study_form[]","value":"part_time","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}
+            </div>
+          </details>
+          <details open>
+            <summary>основа обучения</summary>
+            <div class="catalog-filter-group__options">
+              {% set option = {"label":"Бюджет","name":"financing[]","value":"budget","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Целевое","name":"financing[]","value":"target","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Платное","name":"financing[]","value":"paid","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}
+            </div>
+          </details>
+          <details>
+            <summary>вступительные испытания</summary>
+            <div class="catalog-filter-group__options">
+              {% set option = {"label":"Русский язык","name":"entrance_exam[]","value":"russian","checked":true,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Математика","name":"entrance_exam[]","value":"mathematics","checked":true,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Физика","name":"entrance_exam[]","value":"physics","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Обществознание","name":"entrance_exam[]","value":"social_studies","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"История","name":"entrance_exam[]","value":"history","checked":true,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Информатика","name":"entrance_exam[]","value":"informatics","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Иностранный язык","name":"entrance_exam[]","value":"foreign_language","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Химия","name":"entrance_exam[]","value":"chemistry","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"География","name":"entrance_exam[]","value":"geography","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Творческое испытание","name":"entrance_exam[]","value":"creative","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}
+            </div>
+          </details>
+          <div class="catalog-filters__actions">
+            <button
+              class="btn btn--default btn--m catalog-filters__apply"
+              type="submit"
+            >
+              Применить</button
+            ><button class="catalog-filters__reset" type="reset">
+              Сбросить
+            </button>
+          </div>
+        </form>
+      </aside>
+    </div>
+    {% include "components/cookie-banner.njk" %}
+  {% endblock %}

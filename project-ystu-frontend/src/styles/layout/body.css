@@ -1,0 +1,27 @@
+.main {
+    flex: 1 1 auto;
+    padding-top: calc(var(--header-height) - 5px);
+}
+
+.main--header-overlay {
+    padding-top: 0;
+}
+
+/* Отступ перед подвалом задаёт .footer, а не последняя секция страницы. */
+.main > .banner-slider:last-child,
+.main > .structure:last-child,
+.main > .program-admissions:last-child,
+.main > .events-section:last-child .events {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .main {
+        padding-top: calc(var(--header-height) - 30px);
+    }
+}
+
+/* Кастомные классы */
+.grid-list-3 {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+}

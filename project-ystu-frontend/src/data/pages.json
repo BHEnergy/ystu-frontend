@@ -1,0 +1,42 @@
+{
+  "index": {
+    "courses": {
+      "title": "Подготовительные курсы школьникам",
+      "description": "Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae.",
+      "href": "programs.html",
+      "label": "Подробнее",
+      "image": "../images/fallback/banner-courses.png",
+      "alt": ""
+    }
+  },
+  "program": {
+    "courses": {
+      "title": "Подготовительные курсы школьникам",
+      "description": "Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae.",
+      "href": "#",
+      "label": "Подробнее",
+      "image": "../images/fallback/banner-courses.png",
+      "alt": ""
+    }
+  },
+  "student-life": {
+    "courses": {
+      "title": "Подготовительные курсы школьникам",
+      "description": "Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae.",
+      "href": "#",
+      "label": "Подробнее",
+      "image": "../images/fallback/banner-courses.png",
+      "alt": ""
+    }
+  },
+  "ui-kit": {
+    "courses": {
+      "title": "Подготовительные курсы школьникам",
+      "description": "Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae.",
+      "href": "programs.html",
+      "label": "Подробнее",
+      "image": "../images/fallback/banner-courses.png",
+      "alt": ""
+    }
+  }
+}

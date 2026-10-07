@@ -19,6 +19,16 @@
     };
 
     const initSwiper = () => {
+        Swiper.extendDefaults({
+            a11y: {
+                enabled: true,
+                prevSlideMessage: 'Предыдущий слайд',
+                nextSlideMessage: 'Следующий слайд',
+                firstSlideMessage: 'Первый слайд',
+                lastSlideMessage: 'Последний слайд',
+                paginationBulletMessage: 'Перейти к слайду {{index}}',
+            },
+        });
         /* Инициализация слайдеров */
 
         /* Слайдер на главной */
@@ -156,14 +166,14 @@
             const nextButtonBig = slider.querySelector('.swiper-button-next.big');
 
             const updateNavigationState = (swiper, prevBig, nextBig) => {
-                prevBig.classList.toggle('swiper-button-disabled', swiper.isBeginning);
-                nextBig.classList.toggle('swiper-button-disabled', swiper.isEnd);
-
-                prevBig.setAttribute('aria-disabled', String(swiper.isBeginning));
-                nextBig.setAttribute('aria-disabled', String(swiper.isEnd));
-
-                prevBig.tabIndex = swiper.isBeginning ? -1 : 0;
-                nextBig.tabIndex = swiper.isEnd ? -1 : 0;
+                [[prevBig, swiper.isBeginning], [nextBig, swiper.isEnd]].forEach(([button, atEdge]) => {
+                    if (!button) return;
+                    const disabled = atEdge || swiper.isLocked;
+                    button.classList.toggle('swiper-button-disabled', disabled);
+                    button.setAttribute('aria-disabled', String(disabled));
+                    button.disabled = disabled;
+                    button.tabIndex = disabled ? -1 : 0;
+                });
             };
 
             if (slider.swiper || !slider.classList.contains("swiper")) {
@@ -186,7 +196,7 @@
                     init(swiper) {
                         updateNavigationState(swiper, prevButtonBig, nextButtonBig);
                     },
-                
+
                     slideChange(swiper) {
                         updateNavigationState(swiper, prevButtonBig, nextButtonBig);
                     },
@@ -202,8 +212,8 @@
             });
 
             // Если малых стрелок нет, большие уже подключены через navigation Swiper.
-            if (prevButton) prevButtonBig.addEventListener("click", () => swiper.slidePrev());
-            if (nextButton) nextButtonBig.addEventListener("click", () => swiper.slideNext());
+            if (prevButton && prevButtonBig) prevButtonBig.addEventListener("click", () => swiper.slidePrev());
+            if (nextButton && nextButtonBig) nextButtonBig.addEventListener("click", () => swiper.slideNext());
         });
 
         document.querySelectorAll('.js-init-structure-gallery').forEach((slider) => {
@@ -258,6 +268,7 @@
             ["header.js", "Header"],
             ["dropdown.js", "Dropdown"],
             ["filter-panel.js", "FilterPanel"],
+            ["catalog-search.js", "CatalogSearch"],
             ["campus-map.js", "CampusMap"],
             ["modals.js", "Modals"],
             ["validation.js", "Validation"],

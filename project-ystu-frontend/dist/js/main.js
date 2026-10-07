@@ -1,0 +1,303 @@
+(() => {
+    const mainScript = document.currentScript;
+    const componentsUrl = new URL("./components/", mainScript?.src || window.location.href);
+
+    const loadScript = (fileName, globalName) => {
+        if (globalName && window[globalName]) {
+            return Promise.resolve(window[globalName]);
+        }
+
+        return new Promise((resolve, reject) => {
+            const script = document.createElement("script");
+
+            script.src = new URL(fileName, componentsUrl).href;
+            script.onload = () => resolve(globalName ? window[globalName] : undefined);
+            script.onerror = () => reject(new Error(`Не удалось загрузить ${fileName}`));
+
+            document.head.append(script);
+        });
+    };
+
+    const initSwiper = () => {
+        Swiper.extendDefaults({
+            a11y: {
+                enabled: true,
+                prevSlideMessage: 'Предыдущий слайд',
+                nextSlideMessage: 'Следующий слайд',
+                firstSlideMessage: 'Первый слайд',
+                lastSlideMessage: 'Последний слайд',
+                paginationBulletMessage: 'Перейти к слайду {{index}}',
+            },
+        });
+        /* Инициализация слайдеров */
+
+        /* Слайдер на главной */
+        document.querySelectorAll(".js-init-first-slider").forEach((slider) => {
+
+            if (slider.swiper || !slider.classList.contains("swiper")) {
+                return;
+            }
+
+            const swiper = new Swiper(slider, {
+                loop: false,
+                slidesPerView: 1,
+                spaceBetween: 24,
+                navigation: {
+                    prevEl: slider.querySelector(".swiper-button-prev"),
+                    nextEl: slider.querySelector(".swiper-button-next"),
+                },
+                pagination: {
+                    el: slider.querySelector(".swiper-pagination"),
+                    clickable: true,
+                },
+            });
+
+            let slides = slider.querySelectorAll('.slide__photo');
+            if(window.innerWidth < 768) {
+                slides.forEach((slide) => {
+                    slide.src = slide.dataset.mobile || slide.src;
+                });
+            }
+        });
+
+        /* Слайдеры с фракцией */
+        document.querySelectorAll('.js-init-banner-slider.banner-slider-1').forEach( (slider) => {
+            if (slider.swiper || !slider.classList.contains("swiper")) {
+                return;
+            }
+
+            new Swiper(slider, {
+                loop: false,
+                slidesPerView: 1,
+                spaceBetween: 24,
+                navigation: {
+                    prevEl: slider.querySelector(".swiper-button-prev"),
+                    nextEl: slider.querySelector(".swiper-button-next"),
+                },
+                pagination: {
+                    el: slider.querySelector(".swiper-pagination"),
+                    type: 'fraction',
+                    clickable: true,
+                },
+            });
+        });
+
+        document.querySelectorAll('.js-init-banner-slider.banner-slider-2').forEach( (slider) => {
+            if (slider.swiper || !slider.classList.contains("swiper")) {
+                return;
+            }
+
+            new Swiper(slider, {
+                loop: false,
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                spaceBetween: 24,
+                navigation: {
+                    prevEl: slider.querySelector(".swiper-button-prev"),
+                    nextEl: slider.querySelector(".swiper-button-next"),
+                },
+                grid: {
+                    rows: 2,
+                    fill: 'column',
+                },
+                pagination: {
+                    el: slider.querySelector(".swiper-pagination"),
+                    type: 'fraction',
+                    clickable: true,
+                },
+                breakpoints: {
+                    769: {
+                        slidesPerView: 2,
+                        slidesPerGroup: 2,
+                        spaceBetween: 24,
+                        grid: {
+                            rows: 1,
+                            fill: 'row',
+                        },
+                    },
+                },
+            });
+        });
+
+        document.querySelectorAll('.js-init-banner-slider.banner-slider-3').forEach((slider) => {
+            if (slider.swiper || !slider.classList.contains('swiper')) {
+                return;
+            }
+
+            const isFeaturedLayout = slider.classList.contains('banner-slider-3--featured');
+
+            new Swiper(slider, {
+                loop: false,
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                spaceBetween: 16,
+                grid: isFeaturedLayout ? undefined : {
+                    rows: 3,
+                    fill: 'column',
+                },
+                navigation: {
+                    prevEl: slider.querySelector('.swiper-button-prev'),
+                    nextEl: slider.querySelector('.swiper-button-next'),
+                },
+                pagination: {
+                    el: slider.querySelector('.swiper-pagination'),
+                    type: slider.dataset.pagination === 'bullets' ? 'bullets' : 'fraction',
+                    clickable: true,
+                },
+                breakpoints: {
+                    769: {
+                        slidesPerView: isFeaturedLayout ? 1 : 3,
+                        slidesPerGroup: isFeaturedLayout ? 1 : 3,
+                        spaceBetween: 24,
+                        grid: isFeaturedLayout ? undefined : {
+                            rows: 1,
+                            fill: 'row',
+                        },
+                    },
+                },
+            });
+        });
+
+        /* Слайдеры студенческая жизнь */
+        document.querySelectorAll(".js-init-student-slider").forEach((slider) => {
+            const prevButton = slider.querySelector('.swiper-button-prev:not(.big)');
+            const nextButton = slider.querySelector('.swiper-button-next:not(.big)');
+            const prevButtonBig = slider.querySelector('.swiper-button-prev.big');
+            const nextButtonBig = slider.querySelector('.swiper-button-next.big');
+
+            const updateNavigationState = (swiper, prevBig, nextBig) => {
+                [[prevBig, swiper.isBeginning], [nextBig, swiper.isEnd]].forEach(([button, atEdge]) => {
+                    if (!button) return;
+                    const disabled = atEdge || swiper.isLocked;
+                    button.classList.toggle('swiper-button-disabled', disabled);
+                    button.setAttribute('aria-disabled', String(disabled));
+                    button.disabled = disabled;
+                    button.tabIndex = disabled ? -1 : 0;
+                });
+            };
+
+            if (slider.swiper || !slider.classList.contains("swiper")) {
+                return;
+            }
+
+            const swiper = new Swiper(slider, {
+                loop: false,
+                slidesPerView: 1,
+                spaceBetween: 24,
+                navigation: {
+                    prevEl: prevButton || prevButtonBig,
+                    nextEl: nextButton || nextButtonBig,
+                },
+                pagination: {
+                    el: slider.querySelector(".swiper-pagination"),
+                    clickable: true,
+                },
+                on: {
+                    init(swiper) {
+                        updateNavigationState(swiper, prevButtonBig, nextButtonBig);
+                    },
+                
+                    slideChange(swiper) {
+                        updateNavigationState(swiper, prevButtonBig, nextButtonBig);
+                    },
+
+                    lock(swiper) {
+                        updateNavigationState(swiper, prevButtonBig, nextButtonBig);
+                    },
+
+                    unlock(swiper) {
+                        updateNavigationState(swiper, prevButtonBig, nextButtonBig);
+                    },
+                },
+            });
+
+            // Если малых стрелок нет, большие уже подключены через navigation Swiper.
+            if (prevButton && prevButtonBig) prevButtonBig.addEventListener("click", () => swiper.slidePrev());
+            if (nextButton && nextButtonBig) nextButtonBig.addEventListener("click", () => swiper.slideNext());
+        });
+
+        document.querySelectorAll('.js-init-structure-gallery').forEach((slider) => {
+            if (slider.swiper || !slider.classList.contains('swiper')) {
+                return;
+            }
+
+            new Swiper(slider, {
+                loop: false,
+                slidesPerView: 1,
+                spaceBetween: 24,
+                navigation: {
+                    prevEl: slider.querySelector('.swiper-button-prev'),
+                    nextEl: slider.querySelector('.swiper-button-next'),
+                },
+                pagination: {
+                    el: slider.querySelector('.swiper-pagination'),
+                    clickable: true,
+                },
+                breakpoints: {
+                    768: { slidesPerView: 2 },
+                    1200: { slidesPerView: 4 },
+                },
+            });
+        });
+    };
+
+    const loadScripts = async (scripts) => {
+        const results = await Promise.allSettled(
+            scripts.map(([fileName, globalName]) => loadScript(fileName, globalName)),
+        );
+
+        results.forEach((result, index) => {
+            if (result.status === 'rejected') {
+                console.error(result.reason, { fileName: scripts[index][0] });
+            }
+        });
+    };
+
+    /* Здесь инициализируем библиотеки и независимые компоненты */
+    const initLibraries = async () => {
+        await loadScripts([
+            ["bootstrap.min.js", "bootstrap"],
+            ["swiper-bundle.min.js", "Swiper"],
+            ["imask.js", "IMask"],
+            ['gsap.min.js', "gsap"],
+            ["lazyload.min.js", "LazyLoad"],
+        ]);
+
+        await loadScripts([
+            ["tabs.js", "Tabs"],
+            ["header.js", "Header"],
+            ["dropdown.js", "Dropdown"],
+            ["filter-panel.js", "FilterPanel"],
+            ["catalog-search.js", "CatalogSearch"],
+            ["campus-map.js", "CampusMap"],
+            ["modals.js", "Modals"],
+            ["validation.js", "Validation"],
+            ["cookie.js", "Cookie"],
+            ["university-statistics.js", "UniversityStatistics"],
+        ]);
+
+        if (typeof window.Swiper === 'function') {
+            initSwiper();
+        }
+
+        if (typeof window.LazyLoad === 'function') {
+            // После динамического вывода карточек в Битрикс: window.imageLazyLoad.update().
+            window.imageLazyLoad = new window.LazyLoad({
+                elements_selector: 'img[loading="lazy"]',
+                use_native: true,
+            });
+        }
+    };
+
+    const start = () => {
+        initLibraries().catch((error) => {
+            console.error("Ошибка инициализации библиотек:", error);
+        });
+    };
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", start, { once: true });
+    } else {
+        start();
+    }
+})();

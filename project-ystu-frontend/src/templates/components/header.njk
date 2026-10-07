@@ -1,0 +1,183 @@
+<header class="header">
+        <div class="header__wrapper container">
+          <div class="header__top">
+            {% include "components/navbar.njk" %}
+          </div>
+          <div class="header__menu header__menu--collapsed">
+            <a href="index.html" aria-label="ЯГТУ — главная страница">
+              <img src="../images/svg/logo.svg" alt="" />
+            </a>
+            <ul class="main-nav">
+              <li>
+                <a href = "detail-structure.html">Университет</a>
+              </li>
+              <li>
+                <a href = "detail-structure.html">Школьникам</a>
+              </li>
+              <li>
+                <a href = "detail-structure.html">Поступающим</a>
+              </li>
+              <li>
+                <a href = "detail-structure.html">Партнерам</a>
+              </li>
+              <li>
+                <a href = "detail-structure.html">Обучающимся</a>
+              </li>
+              <li>
+                <a href = "detail-structure.html">Сотрудникам</a>
+              </li>
+            </ul>
+            <button class="btn btn--default btn--s btn__menu" data-trigger="open-menu" aria-controls="{{ headerIdPrefix | default('') }}main-mega-menu" aria-expanded="false">
+              <span class = "btn__burger">
+                <span class = "btn__burger__line"></span>
+                <span class = "btn__burger__line"></span>
+                <span class = "btn__burger__line"></span>
+                <span class = "btn__burger__line"></span>
+              </span>
+              Меню
+            </button>
+            <nav class="mega-menu" id="{{ headerIdPrefix | default('') }}main-mega-menu" aria-label="Основное меню" data-hover-submenu>
+              <div class="mega-menu__primary">
+{% for item in navigation %}
+  <a class="{{ item.class }}" href="{{ item.href }}" data-menu-section="{{ item.section }}"{% if item.current %} aria-current="{{ item.current }}"{% endif %}>{{ item.title }}</a>
+{% endfor %}
+</div>
+              <section class="mega-menu__section" data-menu-panel="university" aria-labelledby="{{ headerIdPrefix | default('') }}mega-menu-university-title">
+                <h2 class="mega-menu__title" id="{{ headerIdPrefix | default('') }}mega-menu-university-title">Университет</h2>
+                <div class="mega-menu__links">
+                  <a class="is-muted" href="structure.html">Об университете</a>
+                  <a class="is-muted" href="program.html">Программа развития</a>
+                  <a class="is-muted" href="404.html">Органы управления (детальная)</a>
+                  <a class="is-muted" href="404.html">Структура университета</a>
+                  <a class="is-muted" href="detail-sotrudnik.html">Все сотрудники</a>
+                  <a class="is-muted" href="detail-sotrudnik.html">Научно-педагогический состав</a>
+                  <a class="is-muted" href="map.html">Карта кампуса</a>
+                  <a class="is-muted" href="404.html">Партнеры</a>
+                </div>
+              </section>
+              <section class="mega-menu__section" data-menu-panel="applicants" aria-labelledby="{{ headerIdPrefix | default('') }}mega-menu-applicants-title">
+                <h2 class="mega-menu__title" id="{{ headerIdPrefix | default('') }}mega-menu-applicants-title">Поступающим</h2>
+                <div class="mega-menu__links">
+                  <a class="is-muted" href="#">Страница 1</a>
+                  <a class="is-muted" href="#">Страница 2</a>
+                  <a class="is-muted" href="#">Страница 3</a>
+                  <a class="is-muted" href="#">Страница 4</a>
+                  <a class="is-muted" href="#">Страница 5</a>
+                </div>
+              </section>
+              <section class="mega-menu__section" data-menu-panel="students" aria-labelledby="{{ headerIdPrefix | default('') }}mega-menu-students-title">
+                <h2 class="mega-menu__title" id="{{ headerIdPrefix | default('') }}mega-menu-students-title">Обучающимся</h2>
+                <div class="mega-menu__links">
+                  <a class="is-muted" href="#">Страница 1</a>
+                  <a class="is-muted" href="#">Страница 2</a>
+                  <a class="is-muted" href="#">Страница 3</a>
+                  <a class="is-muted" href="#">Страница 4</a>
+                  <a class="is-muted" href="#">Страница 5</a>
+                </div>
+              </section>
+              <section class="mega-menu__section" data-menu-panel="school" aria-labelledby="{{ headerIdPrefix | default('') }}mega-menu-school-title">
+                <h2 class="mega-menu__title" id="{{ headerIdPrefix | default('') }}mega-menu-school-title">Школьникам</h2>
+                <div class="mega-menu__links">
+                  <a class="is-muted" href="#">Страница 1</a>
+                  <a class="is-muted" href="#">Страница 2</a>
+                  <a class="is-muted" href="#">Страница 3</a>
+                  <a class="is-muted" href="#">Страница 4</a>
+                  <a class="is-muted" href="#">Страница 5</a>
+                </div>
+              </section>
+              <section class="mega-menu__section" data-menu-panel="employees" aria-labelledby="{{ headerIdPrefix | default('') }}mega-menu-employees-title">
+                <h2 class="mega-menu__title" id="{{ headerIdPrefix | default('') }}mega-menu-employees-title">Сотрудникам</h2>
+                <div class="mega-menu__links">
+                  <a class="is-muted" href="#">Страница 1</a>
+                  <a class="is-muted" href="#">Страница 2</a>
+                  <a class="is-muted" href="#">Страница 3</a>
+                  <a class="is-muted" href="#">Страница 4</a>
+                  <a class="is-muted" href="#">Страница 5</a>
+                </div>
+              </section>
+              <section class="mega-menu__section" data-menu-panel="graduates" aria-labelledby="{{ headerIdPrefix | default('') }}mega-menu-graduates-title">
+                <h2 class="mega-menu__title" id="{{ headerIdPrefix | default('') }}mega-menu-graduates-title">Выпускникам</h2>
+                <div class="mega-menu__links">
+                  <a class="is-muted" href="#">Страница 1</a>
+                  <a class="is-muted" href="#">Страница 2</a>
+                  <a class="is-muted" href="#">Страница 3</a>
+                  <a class="is-muted" href="#">Страница 4</a>
+                  <a class="is-muted" href="#">Страница 5</a>
+                </div>
+              </section>
+              <section class="mega-menu__section" data-menu-panel="vacancies" aria-labelledby="{{ headerIdPrefix | default('') }}mega-menu-vacancies-title">
+                <h2 class="mega-menu__title" id="{{ headerIdPrefix | default('') }}mega-menu-vacancies-title">Работа в ЯГТУ</h2>
+                <div class="mega-menu__links">
+                  <a class="is-muted" href="#">Страница 1</a>
+                  <a class="is-muted" href="#">Страница 2</a>
+                  <a class="is-muted" href="#">Страница 3</a>
+                  <a class="is-muted" href="#">Страница 4</a>
+                  <a class="is-muted" href="#">Страница 5</a>
+                </div>
+              </section>
+              <section class="mega-menu__section" data-menu-panel="education" aria-labelledby="{{ headerIdPrefix | default('') }}mega-menu-education-title">
+                <h2 class="mega-menu__title" id="{{ headerIdPrefix | default('') }}mega-menu-education-title">Образование</h2>
+                <div class="mega-menu__links">
+                  <a class="is-muted" href="#">Страница 1</a>
+                  <a class="is-muted" href="#">Страница 2</a>
+                  <a class="is-muted" href="#">Страница 3</a>
+                  <a class="is-muted" href="#">Страница 4</a>
+                  <a class="is-muted" href="#">Страница 5</a>
+                </div>
+              </section>
+              <section class="mega-menu__section" data-menu-panel="science" aria-labelledby="{{ headerIdPrefix | default('') }}mega-menu-science-title">
+                <h2 class="mega-menu__title" id="{{ headerIdPrefix | default('') }}mega-menu-science-title">Наука и инновации</h2>
+                <div class="mega-menu__links">
+                  <a class="is-muted" href="#">Страница 1</a>
+                  <a class="is-muted" href="#">Страница 2</a>
+                  <a class="is-muted" href="#">Страница 3</a>
+                  <a class="is-muted" href="#">Страница 4</a>
+                  <a class="is-muted" href="#">Страница 5</a>
+                </div>
+              </section>
+              <section class="mega-menu__section" data-menu-panel="student-life" aria-labelledby="{{ headerIdPrefix | default('') }}mega-menu-student-life-title">
+                <h2 class="mega-menu__title" id="{{ headerIdPrefix | default('') }}mega-menu-student-life-title">Студенческая жизнь</h2>
+                <div class="mega-menu__links">
+                  <a class="is-muted" href="#">Страница 1</a>
+                  <a class="is-muted" href="#">Страница 2</a>
+                  <a class="is-muted" href="#">Страница 3</a>
+                  <a class="is-muted" href="#">Страница 4</a>
+                  <a class="is-muted" href="#">Страница 5</a>
+                </div>
+              </section>
+              <section class="mega-menu__section" data-menu-panel="distance" aria-labelledby="{{ headerIdPrefix | default('') }}mega-menu-distance-title">
+                <h2 class="mega-menu__title" id="{{ headerIdPrefix | default('') }}mega-menu-distance-title">Заочное обучение</h2>
+                <div class="mega-menu__links">
+                  <a class="is-muted" href="#">Страница 1</a>
+                  <a class="is-muted" href="#">Страница 2</a>
+                  <a class="is-muted" href="#">Страница 3</a>
+                  <a class="is-muted" href="#">Страница 4</a>
+                  <a class="is-muted" href="#">Страница 5</a>
+                </div>
+              </section>
+              <section class="mega-menu__section" data-menu-panel="targeted" aria-labelledby="{{ headerIdPrefix | default('') }}mega-menu-targeted-title">
+                <h2 class="mega-menu__title" id="{{ headerIdPrefix | default('') }}mega-menu-targeted-title">Целевое обучение</h2>
+                <div class="mega-menu__links">
+                  <a class="is-muted" href="#">Страница 1</a>
+                  <a class="is-muted" href="#">Страница 2</a>
+                  <a class="is-muted" href="#">Страница 3</a>
+                  <a class="is-muted" href="#">Страница 4</a>
+                  <a class="is-muted" href="#">Страница 5</a>
+                </div>
+              </section>
+              <div class="mega-menu__additional">
+                <a class="is-muted" href="#">Колледж</a>
+                <a class="is-muted" href="#">ДПО</a>
+                <a class="is-muted" href="vacancies.html">Работа в ЯГТУ</a>
+                <a class="is-muted" href="news-events.html">Новости</a>
+                <a class="is-muted" href="#">События</a>
+                <a class="is-muted" href="#">Партнерам</a>
+                <a class="is-muted" href="#">Контакты</a>
+                <a class="is-muted" href="#">Сведения об образовательной организации</a>
+                <a class="is-muted" href="#">Реквизиты</a>
+                <a class="is-muted" href="#">Противодействие коррупции</a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>

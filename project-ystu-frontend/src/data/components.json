@@ -1,0 +1,426 @@
+[
+  {
+    "template": "templates/components/banner-featured-slides.njk",
+    "usedBy": [
+      "pages/index.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/banner-survey-slides.njk",
+    "usedBy": [
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/breadcrumbs.njk",
+    "usedBy": [
+      "pages/detail-sotrudnik.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/btn--default.njk",
+    "usedBy": [
+      "pages/programs.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/btn--link-2.njk",
+    "usedBy": [
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/btn--link.njk",
+    "usedBy": [
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/button-states.njk",
+    "usedBy": [
+      "pages/ui-kit.njk",
+      "templates/components/button-states.njk"
+    ]
+  },
+  {
+    "template": "templates/components/campus-filter-2.njk",
+    "usedBy": [
+      "pages/map.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/campus-filter.njk",
+    "usedBy": [
+      "pages/map.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/catalog-filter-group-2.njk",
+    "usedBy": [
+      "pages/programs.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/catalog-filter-group-3.njk",
+    "usedBy": [
+      "pages/programs.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/catalog-filter-group-4.njk",
+    "usedBy": [
+      "pages/ui-kit.njk",
+      "pages/vacancies.njk"
+    ]
+  },
+  {
+    "template": "templates/components/catalog-filter-group.njk",
+    "usedBy": [
+      "pages/programs.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/catalog-filter-option.njk",
+    "usedBy": [
+      "pages/programs.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/catalog-search-2.njk",
+    "usedBy": [
+      "pages/programs.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/catalog-search.njk",
+    "usedBy": [
+      "pages/programs.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/cookie-banner.njk",
+    "usedBy": [
+      "pages/404.njk",
+      "pages/detail-sotrudnik.njk",
+      "pages/detail-structure.njk",
+      "pages/detail-vacancy.njk",
+      "pages/index.njk",
+      "pages/map.njk",
+      "pages/nauka.njk",
+      "pages/news-events.njk",
+      "pages/program.njk",
+      "pages/programs.njk",
+      "pages/search.njk",
+      "pages/structure.njk",
+      "pages/student-life.njk",
+      "pages/vacancies.njk"
+    ]
+  },
+  {
+    "template": "templates/components/default-slider-controls.njk",
+    "usedBy": [
+      "pages/index.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/document-list.njk",
+    "usedBy": [
+      "pages/detail-structure.njk",
+      "pages/detail-vacancy.njk",
+      "pages/ui-kit.njk",
+      "pages/vacancies.njk"
+    ]
+  },
+  {
+    "template": "templates/components/dropdown--content.njk",
+    "usedBy": [
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/dropdown--item-2.njk",
+    "usedBy": [
+      "pages/nauka.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/dropdown--item-3.njk",
+    "usedBy": [
+      "pages/nauka.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/dropdown--item.njk",
+    "usedBy": [
+      "pages/nauka.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/employee-contacts.njk",
+    "usedBy": [
+      "pages/detail-sotrudnik.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/employee-summary.njk",
+    "usedBy": [
+      "pages/detail-sotrudnik.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/error-page.njk",
+    "usedBy": [
+      "pages/404.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/event-modal.njk",
+    "usedBy": [
+      "pages/index.njk",
+      "pages/news-events.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/fichers.njk",
+    "usedBy": [
+      "pages/index.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/flagship-card.njk",
+    "usedBy": [
+      "pages/index.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/footer.njk",
+    "usedBy": [
+      "pages/404.njk",
+      "pages/detail-sotrudnik.njk",
+      "pages/detail-structure.njk",
+      "pages/detail-vacancy.njk",
+      "pages/index.njk",
+      "pages/map.njk",
+      "pages/nauka.njk",
+      "pages/news-events.njk",
+      "pages/program.njk",
+      "pages/programs.njk",
+      "pages/search.njk",
+      "pages/structure.njk",
+      "pages/student-life.njk",
+      "pages/ui-kit.njk",
+      "pages/vacancies.njk"
+    ]
+  },
+  {
+    "template": "templates/components/header.njk",
+    "usedBy": [
+      "pages/404.njk",
+      "pages/detail-sotrudnik.njk",
+      "pages/detail-structure.njk",
+      "pages/detail-vacancy.njk",
+      "pages/index.njk",
+      "pages/map.njk",
+      "pages/nauka.njk",
+      "pages/news-events.njk",
+      "pages/program.njk",
+      "pages/programs.njk",
+      "pages/search.njk",
+      "pages/structure.njk",
+      "pages/student-life.njk",
+      "pages/ui-kit.njk",
+      "pages/vacancies.njk"
+    ]
+  },
+  {
+    "template": "templates/components/hero-slider.njk",
+    "usedBy": [
+      "pages/index.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/information-banner.njk",
+    "usedBy": [
+      "pages/index.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/modal-close.njk",
+    "usedBy": [
+      "templates/components/vacancy-modal.njk"
+    ]
+  },
+  {
+    "template": "templates/components/navbar.njk",
+    "usedBy": [
+      "templates/components/header.njk"
+    ]
+  },
+  {
+    "template": "templates/components/pagination.njk",
+    "usedBy": [
+      "pages/news-events.njk"
+    ]
+  },
+  {
+    "template": "templates/components/preparatory-courses.njk",
+    "usedBy": [
+      "pages/index.njk",
+      "pages/program.njk",
+      "pages/student-life.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/program-admissions.njk",
+    "usedBy": [
+      "pages/program.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/program-card-2.njk",
+    "usedBy": [
+      "pages/programs.njk"
+    ]
+  },
+  {
+    "template": "templates/components/program-card.njk",
+    "usedBy": [
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/program-education.njk",
+    "usedBy": [
+      "pages/program.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/program-exams.njk",
+    "usedBy": [
+      "pages/program.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/structure-contact-card.njk",
+    "usedBy": [
+      "pages/detail-structure.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/structure-employees.njk",
+    "usedBy": [
+      "pages/detail-structure.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/structure-gallery.njk",
+    "usedBy": [
+      "pages/detail-structure.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/structure-person-card.njk",
+    "usedBy": [
+      "pages/detail-structure.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/student-driving.njk",
+    "usedBy": [
+      "pages/student-life.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/student-gallery-detailed.njk",
+    "usedBy": [
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/student-gallery.njk",
+    "usedBy": [
+      "pages/student-life.njk"
+    ]
+  },
+  {
+    "template": "templates/components/student-links.njk",
+    "usedBy": [
+      "pages/student-life.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/university-statistics.njk",
+    "usedBy": [
+      "pages/index.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/vacancy-card.njk",
+    "usedBy": [
+      "pages/ui-kit.njk",
+      "pages/vacancies.njk"
+    ]
+  },
+  {
+    "template": "templates/components/vacancy-conditions.njk",
+    "usedBy": [
+      "pages/detail-vacancy.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/vacancy-description.njk",
+    "usedBy": [
+      "pages/detail-vacancy.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/vacancy-intro.njk",
+    "usedBy": [
+      "pages/detail-vacancy.njk",
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
+    "template": "templates/components/vacancy-modal.njk",
+    "usedBy": [
+      "pages/detail-vacancy.njk",
+      "pages/ui-kit.njk"
+    ]
+  }
+]

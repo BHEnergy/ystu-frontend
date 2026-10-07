@@ -1,0 +1,174 @@
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1520px;
+    border-left: var(--container-padding) solid transparent;
+    border-right: var(--container-padding) solid transparent;
+    padding: 0;
+}
+
+/* Заголовки */
+.title {
+    font-size: 52px;
+    color: var(--subprimary-color-1);
+    font-weight: 600;
+}
+
+.title.h2 {
+    font-size: 44px;
+}
+
+/* Для кастомизирования того, что будет приходить с админки, специальный класс wyswig*/
+.wyswig ul {
+    list-style-position: inside;
+}
+
+.wyswig ul li::marker {
+    content: '-';
+    letter-spacing: 5px;
+}
+
+/* Таблицы из редактора 1С-Битрикс: оформление меняется через переменные. */
+.wyswig table {
+    --wyswig-table-border: var(--subprimary-color-3);
+    --wyswig-table-background: var(--white-shade-1);
+    --wyswig-table-heading: var(--subprimary-color-4);
+    --wyswig-table-color: var(--black-shade-1);
+    --wyswig-table-cell-padding: 16px;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    color: var(--wyswig-table-color);
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.wyswig table thead {
+    position: sticky;
+    top: var(--wyswig-table-sticky-top, 0px);
+    z-index: 2;
+    background-color: var(--wyswig-table-heading);
+    box-shadow: 0 1px 0 var(--wyswig-table-border);
+}
+
+.wyswig__table-scroll {
+    width: 100%;
+    min-width: 0;
+}
+
+.wyswig__table-scroll:focus-visible {
+    outline: 2px solid var(--subprimary-color-1);
+    outline-offset: 4px;
+}
+
+.wyswig table caption {
+    caption-side: top;
+    padding: 0 0 16px;
+    color: var(--subprimary-color-1);
+    font-weight: 600;
+    text-align: left;
+}
+
+.wyswig tbody {
+    background-color: var(--wyswig-table-background);
+}
+
+.wyswig tr {
+    border-bottom: 1px solid var(--wyswig-table-border);
+}
+
+.wyswig td,
+.wyswig th {
+    padding: var(--wyswig-table-cell-padding);
+    border: 1px solid var(--wyswig-table-border);
+    vertical-align: top;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.wyswig th {
+    background-color: var(--wyswig-table-heading);
+    color: var(--subprimary-color-1);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .wyswig__table-scroll {
+        max-height: 70vh;
+        max-height: 70dvh;
+        overflow: auto;
+    }
+
+    .wyswig__table-scroll thead {
+        top: 0;
+    }
+
+    .wyswig__table-scroll table {
+        min-width: 640px;
+    }
+
+    .wyswig table {
+        --wyswig-table-cell-padding: 10px 8px;
+        font-size: 14px;
+    }
+}
+
+/* Устройства X-Large (большие настольные компьютеры, 1200 пикселей и выше) */
+@media (max-width: 1200px) {
+    .title {
+        font-size: 44px;
+    }
+
+    .title.h2 {
+        font-size: 38px;
+    }
+}
+
+/* Устройства Large (настольные компьютеры, 992 пикселей и выше) */
+@media (max-width: 992px) {
+    .title {
+        font-size: 40px;
+    }
+
+    .title.h2 {
+        font-size: 36px;
+    }
+}
+
+/* Устройства Medium (планшеты, 768 пикселей и выше) */
+@media (max-width: 768px) {
+    .title {
+        font-size: 36px;
+    }
+
+    .title.h2 {
+        font-size: 32px;
+    }
+}
+
+/* Устройства Small (телефоны с горизонтальной ориентацией, 576 пикселей и выше) */
+@media (max-width: 576px) { 
+    .title {
+        font-size: 32px;
+    }
+
+    .title.h2 {
+        font-size: 28px;
+    }
+}
+
+/* Шаблон для медиа-запросов */
+/* Устройства X-Large (большие настольные компьютеры, 1200 пикселей и выше) */
+/* @media (max-width: 1200px) { } */
+
+/* Устройства Large (настольные компьютеры, 992 пикселей и выше) */
+/* @media (max-width: 992px) { } */
+
+/* Устройства Medium (планшеты, 768 пикселей и выше) */
+/* @media (max-width: 768px) { } */
+
+/* Устройства Small (телефоны с горизонтальной ориентацией, 576 пикселей и выше) */
+/* @media (max-width: 576px) { 
+
+} */

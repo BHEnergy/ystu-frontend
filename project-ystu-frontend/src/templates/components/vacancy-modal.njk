@@ -1,0 +1,56 @@
+<div class = "modal" data-modal="vacancy" role="dialog" aria-modal="true" aria-labelledby="{{ modalIdPrefix | default('') }}vacancy-modal-title">
+      <div class = "modal-overlay">
+        <div class = "modal-body">
+          {% include "components/modal-close.njk" %}
+          <div class = "modal-header d-flex flex-column">
+            <h2 class = "modal-header__title title" id="{{ modalIdPrefix | default('') }}vacancy-modal-title">Отклик на вакансию</h2>
+            <p class = "modal-header__subtitle">Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae.</p>
+          </div>
+          <form class="modal-form d-flex flex-column" data-modal-demo>
+            <div class = "input--container{% if modalDemoError %} error{% endif %}">
+              <input type = "text" name = "name" id = "{{ modalIdPrefix | default('') }}vacancy-name" placeholder="Текст*">
+              <label for="{{ modalIdPrefix | default('') }}vacancy-name" class = "error-text">Заполните обязательное поле: Текст*</label>
+            </div>
+            <div class = "input--container">
+              <input type = "email" name = "email" id = "{{ modalIdPrefix | default('') }}vacancy-email" placeholder="Текст*">
+              <label for="{{ modalIdPrefix | default('') }}vacancy-email" class = "error-text">Заполните обязательное поле: Текст*</label>
+            </div>
+            <div class = "input--container">
+              <input type = "text" name = "phone" id = "{{ modalIdPrefix | default('') }}vacancy-phone" placeholder="Текст*" data-validate="phone">
+              <label for="{{ modalIdPrefix | default('') }}vacancy-phone" class = "error-text">Заполните обязательное поле: Текст*</label>
+            </div>
+            <div class = "modal-form__file">
+              <span class = "modal-form__file-title">Резюме</span>
+              <input class = "visually-hidden" type = "file" name = "resume" id = "{{ modalIdPrefix | default('') }}vacancy-resume">
+              <label class = "modal-form__file-button" for = "{{ modalIdPrefix | default('') }}vacancy-resume">
+                <img src = "../images/svg/upload-file.svg" alt="">
+                <span class="modal-form__file-label" aria-live="polite">Прикрепить файл</span>
+              </label>
+            </div>
+            <textarea name = "comment" id = "{{ modalIdPrefix | default('') }}vacancy-comment" placeholder="Комментарии/Сопроводительное письмо"></textarea>
+            <div class = "modal-form__footer">
+              <button type = "submit" class = "btn btn--default btn--m">Откликнуться</button>
+              <div class = "modal-form__checkboxes d-flex flex-column">
+                <div class = "checkbox--container">
+                  <input type = "checkbox" name = "personal-data" id = "{{ modalIdPrefix | default('') }}vacancy-personal-data" required>
+                  <label for = "{{ modalIdPrefix | default('') }}vacancy-personal-data">Я даю согласие на {% if modalConsentLink %}<a href="#">обработку персональных данных</a>{% else %}обработку персональных данных{% endif %}</label>
+                </div>
+                <div class = "checkbox--container">
+                  <input type = "checkbox" name = "privacy-policy" id = "{{ modalIdPrefix | default('') }}vacancy-privacy-policy" required>
+                  <label for = "{{ modalIdPrefix | default('') }}vacancy-privacy-policy">Я ознакомлен(а) с <a href = "#">Политикой конфиденциальности</a></label>
+                </div>
+              </div>
+            </div>
+          </form>
+                    <div class="modal-success" hidden tabindex="-1">
+            <div class="modal-success__heading">
+              <img class="modal-success__icon" src="../images/svg/modal-success-check.svg" width="120" height="120" alt="">
+              <h2 class="modal-success__title" id="{{ modalSuccessId | default('vacancy-success-title') }}">Ваша заявка принята</h2>
+            </div>
+            <p class="modal-success__text">Спасибо за обращение! Мы свяжемся с вами по указанным контактным данным.</p>
+            <button type="button" class="modal-success__back" data-modal-back>Назад</button>
+            <p class="modal-success__demo" data-demo-notice hidden>Демонстрационный режим: данные не отправлены.</p>
+          </div>
+        </div>
+      </div>
+    </div>

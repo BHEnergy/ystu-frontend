@@ -1,0 +1,260 @@
+.student-directions {
+    margin-top: 100px;
+    margin-bottom: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.student-directions__title {
+    font-size: 44px;
+    font-weight: 500;
+}
+
+.student-directions__list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.student-direction {
+    display: flex;
+    gap: 24px;
+}
+
+.student-direction.student-direction--reverse {
+    flex-direction: row-reverse;
+}
+
+.student-direction__content, .student-direction__gallery {
+    max-width: 708px;
+    flex: 0 0 50%;
+    max-height: 477px;
+}
+
+.student-direction__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: baseline;
+    font-size: 18px;
+}
+
+.student-direction__content .btn {
+    font-weight: 600;
+    height: 54px;
+    max-width: 180px;
+    width: 100%;
+}
+
+.student-direction__gallery img {
+    border-radius: 16px;
+    min-height: 477px;
+}
+
+.student-direction__title {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--subprimary-color-1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.student-direction__title.projects-svg::before {
+    content: '';
+    height: 48px;
+    min-width: 48px;
+    background: url(../../images/svg/projects.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    line-height: 0;
+}
+
+.student-direction__title.art-svg::before {
+    content: '';
+    height: 48px;
+    min-width: 48px;
+    background: url(../../images/svg/art.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    line-height: 0;
+}
+
+.student-direction__title.sport-svg::before {
+    content: '';
+    height: 48px;
+    min-width: 48px;
+    background: url(../../images/svg/sport.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    line-height: 0;
+}
+
+.student-direction__title.volonter-svg::before {
+    content: '';
+    height: 48px;
+    min-width: 48px;
+    background: url(../../images/svg/volonter.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    line-height: 0;
+}
+
+.student-direction__title.science-svg::before {
+    content: '';
+    height: 48px;
+    min-width: 48px;
+    background: url(../../images/svg/science.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    line-height: 0;
+}
+
+.student-direction__description {
+    font-size: 18px;
+}
+
+
+@media(max-width: 1440px) {
+    .student-direction__content, .student-direction__gallery {
+        max-width: 708px;
+        flex: 0 0 49%;
+        min-height: unset;
+    }
+}
+
+@media (max-width: 991px) {
+    .student-directions {
+        margin-top: 80px;
+        margin-bottom: 80px;
+        gap: 48px;
+    }
+
+    .student-directions__list {
+        gap: 56px;
+    }
+
+    .student-direction,
+    .student-direction.student-direction--reverse {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .student-direction__content,
+    .student-direction__gallery {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: none;
+        min-height: 0;
+    }
+
+    .student-direction__content {
+        gap: 24px;
+    }
+
+    .student-direction__gallery {
+        height: 440px;
+    }
+
+    .student-direction__gallery .swiper-wrapper,
+    .student-direction__gallery .swiper-slide {
+        height: 392px;
+    }
+
+    .student-direction__gallery img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        min-height: unset;
+    }
+}
+
+@media (max-width: 576px) {
+    .student-directions {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        gap: 40px;
+    }
+
+    .student-directions__title {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .student-directions__list {
+        gap: 40px;
+    }
+
+    .student-direction,
+    .student-direction.student-direction--reverse {
+        gap: 24px;
+    }
+
+    .student-direction__content .btn {
+        height: 47px;
+        font-weight: 500;
+        max-width: 136px;
+        padding: 14px 24px;
+    }
+
+    .student-direction__content {
+        gap: 24px;
+        font-size: 16px;
+    }
+
+    .student-direction__title {
+        gap: 16px;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .student-direction__title::before {
+        display: block;
+        flex: 0 0 40px;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+    }
+
+    .student-direction__description {
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+    .student-direction__gallery {
+        height: 281px;
+    }
+
+    .student-direction__gallery .swiper-wrapper,
+    .student-direction__gallery .swiper-slide {
+        height: 241px;
+    }
+
+    .student-direction__gallery img {
+        border-radius: 10px;
+    }
+
+    .student-direction__gallery .swiper-button-prev.big,
+    .student-direction__gallery .swiper-button-next.big {
+        display: none;
+    }
+
+    .student-direction__title.projects-svg::before,
+    .student-direction__title.art-svg::before,
+    .student-direction__title.sport-svg::before,
+    .student-direction__title.volonter-svg::before,
+    .student-direction__title.science-svg::before {
+        height: 40px;
+        min-width: 40px;
+        background-size: 33px 33px;
+    }
+}
+@media (min-width: 769px) {
+    .student-direction__controls .swiper-button-prev:not(.big),
+    .student-direction__controls .swiper-button-next:not(.big),
+    .student-direction__controls .swiper-pagination {
+        display: none;
+    }
+}

@@ -1,0 +1,142 @@
+/* Подключение шрифта */
+@font-face {
+    font-family: 'GoogleSans';
+    src: url('../../fonts/GoogleSans-cyrillic.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'GoogleSans';
+    src: url('../../fonts/GoogleSans-latin.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'GoogleSans';
+    src: url('../../fonts/GoogleSans-latin-ext.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Обнуление стилей */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    line-height: 1.2;
+}
+
+html,
+body {
+    margin: 0;
+    font-family: 'GoogleSans', sans-serif;
+    height: 100%;
+}
+
+a, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+:where(a[href], button, input, select, textarea, [tabindex="0"]):focus-visible {
+    outline: 2px solid var(--subprimary-color-1);
+    outline-offset: 3px;
+}
+
+@media (hover: hover) {
+    .secondary-nav a:hover,
+    .main-nav a:hover,
+    .navbar__phone:hover {
+        color: #002759;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+}
+
+.secondary-nav a:active,
+.main-nav a:active,
+.navbar__phone:active {
+    color: var(--primary-color-1);
+}
+
+/* Рут стили и правила для быстрой верстки */
+:root {
+    /* Основные цвета из UI-кита */
+    --primary-color-1: #E55700;
+    --primary-color-2: #F4772B;
+    --primary-color-3: #F69255;
+    --primary-color-4: #F8AD80;
+    --primary-color-5: #FBC9AA;
+    --primary-color-6: #FDE4D5;
+    --primary-color-7: #FEF1EA;
+    --subprimary-color-1: #094188;
+    --subprimary-color-2: #537AAC;
+    --subprimary-color-3: #9DB3CF;
+    --subprimary-color-4: #CED9E7;
+    --subprimary-color-5: #E6ECF3;
+    --subprimary-color-6: #E5E9EE;
+    --subprimary-color-7: #EEF0F2;
+
+    /* Цвета ошибок */
+    --error-color-1: #FF3633;
+    --error-color-2: #FF5E5C;
+
+    /* Оттенки белого цвета */
+    --white-shade-1: #FFFFFF;
+    --white-shade-2: #FEFEFE;
+    --white-shade-3: #FBFBFB;
+    --white-shade-4: #FAFAFA;
+
+    /* Оттенки черного цвета */
+    --black-shade-1: #000000;
+    --black-shade-2: #333333;
+    --black-shade-3: #4C4C4C;
+    --black-shade-4: #666666;
+    --black-shade-5: #808080;
+    --black-shade-6: #999999;
+    --black-shade-7: #B3B3B3;
+    --black-shade-8: #CCCCCC;
+    --black-shade-9: #E5E5E5;
+    --black-shade-10: #F2F2F2;
+
+    /* Футер */
+    --footer-color: #063673;
+
+    /* Контейнер */
+    --container-padding: 40px;
+    /* --header-height: 190px; */
+    --header-height: 0px;
+    --header-top: 0px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    min-height: 100%;
+}
+
+@media (max-width: 992px) {
+    :root {
+        --container-padding: 24px;
+    }
+}
+
+
+@media (max-width: 576px) { 
+    :root {
+        --container-padding: 16px;
+    }
+}
