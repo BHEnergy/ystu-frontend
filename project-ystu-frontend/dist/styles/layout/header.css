@@ -162,8 +162,8 @@
 }
 
 .btn__menu[aria-expanded="true"] {
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     padding: 12px;
     align-items: center;
     justify-content: center;
