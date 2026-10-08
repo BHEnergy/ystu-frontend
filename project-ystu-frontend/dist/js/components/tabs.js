@@ -57,6 +57,7 @@ tabs.forEach( (tab) => {
             selectTabContainer.forEach( (tabContainer) => {
                 tabContainer.classList.replace('unactive', 'active');
             });
+            tab.closest('.events__wrapper').dispatchEvent(new CustomEvent('content-tab:change', {detail: {tab: tab.dataset.tab}}));
 
             if (header) {
                 clickTab.setAttribute('aria-pressed', 'true');
@@ -85,7 +86,7 @@ const initContentFilter = (group, selector, selectedClass, items, categoryOf) =>
         : null;
     if (newsPanel) newsPanel.prepend(status);
     else group.insertAdjacentElement('afterend', status);
-    const activate = (control) => {
+    const activate = (control, initial = false) => {
         controls.forEach((item) => {
             const selected = item === control;
             item.classList.toggle(selectedClass, selected);
@@ -97,10 +98,12 @@ const initContentFilter = (group, selector, selectedClass, items, categoryOf) =>
         items.forEach((item) => {
             const categories = categoryOf(item);
             item.hidden = category !== 'all' && category !== 'Все' && !categories.includes(category);
+            item.dataset.filterHidden = String(item.hidden);
             if (!item.hidden) visible++;
         });
         status.hidden = visible > 0;
         status.textContent = visible ? '' : 'В этом разделе пока нет материалов.';
+        if (newsPanel) group.closest('.events__wrapper').dispatchEvent(new CustomEvent('content-filter:change', {detail: {container: newsPanel, initial}}));
     };
     controls.forEach((control) => {
         if (control.tagName !== 'BUTTON') {
@@ -115,7 +118,7 @@ const initContentFilter = (group, selector, selectedClass, items, categoryOf) =>
         }
         control.addEventListener('click', () => activate(control));
     });
-    activate(controls.find((item) => item.classList.contains(selectedClass)) || controls[0]);
+    activate(controls.find((item) => item.classList.contains(selectedClass)) || controls[0], true);
 };
 
 document.querySelectorAll('.structure__tags').forEach((group) => {

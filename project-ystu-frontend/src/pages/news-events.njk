@@ -36,7 +36,7 @@
                   <button type="button" class="events__tag" data-filter="#поступающим" aria-pressed="false">#поступающим</button>
                   <button type="button" class="events__tag" data-filter="#наука" aria-pressed="false">#наука</button>
                 </div>
-                <div class = "events__container unactive" data-value="tab-container" data-tab="events">
+                <div class = "events__container unactive" data-value="tab-container" data-tab="events" data-pagination-size="6">
                   <div class = "events__content ">
                         <div class="event__card">
                             <div class = "event__photo">
@@ -202,9 +202,10 @@
                         </div>
                     </div>
                     <!-- Пагинация -->
+                    {% include "components/demo-extra-events.njk" %}
                     {% include "components/pagination.njk" %}
                 </div>
-                <div class = "events__container active" data-value="tab-container" data-tab="news">
+                <div class = "events__container active" data-value="tab-container" data-tab="news" data-pagination-size="6">
                   <div class = "events__content">
 <a class="news__card" href="#">
                             <div class = "news__photo">
@@ -298,6 +299,7 @@
                         </a>
                     </div>
                     <!-- Пагинация -->
+                    {% include "components/demo-extra-news.njk" %}
                     {% include "components/pagination.njk" %}
                 </div>
               </div>

@@ -1,0 +1,14 @@
+<!-- Дополнительные демонстрационные новости для второй страницы выдачи. -->
+<div class="events__content" hidden>
+{% for title in ["Студенты ЯГТУ представили новые научные проекты", "В университете прошла встреча с будущими абитуриентами"] %}
+  <a class="news__card" href="#">
+    <div class="news__photo">
+      <img loading="lazy" decoding="async" src="../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета">
+    </div>
+    <div class="news__content">
+      <div class="news__header"><p class="news__date">08.10.2026</p><p class="news__title">{{ title }}</p></div>
+      <div class="news__tags"><p class="news__tag">{{ "наука" if loop.first else "поступающим" }}</p></div>
+    </div>
+  </a>
+{% endfor %}
+</div>

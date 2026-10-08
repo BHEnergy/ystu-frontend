@@ -5,6 +5,11 @@
     align-items: center;
 }
 
+.pagination[hidden], .pagination [hidden],
+.events__content[hidden], .event__card[hidden] {
+    display: none;
+}
+
 .pagination .pagination__page.current {
     background-color: var(--subprimary-color-1);
     color: var(--white-shade-1);

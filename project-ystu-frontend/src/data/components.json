@@ -135,6 +135,18 @@
     ]
   },
   {
+    "template": "templates/components/demo-extra-events.njk",
+    "usedBy": [
+      "pages/news-events.njk"
+    ]
+  },
+  {
+    "template": "templates/components/demo-extra-news.njk",
+    "usedBy": [
+      "pages/news-events.njk"
+    ]
+  },
+  {
     "template": "templates/components/document-list.njk",
     "usedBy": [
       "pages/detail-structure.njk",

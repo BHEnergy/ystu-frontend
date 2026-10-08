@@ -6,7 +6,7 @@
     <link href="../styles/styles.css?v=3" rel="stylesheet" />
     <script src = "../js/main.js" type="text/javascript"></script>
     <title>Новости</title>
-  </head>
+  <link rel="icon" type="image/svg+xml" href="../images/svg/logo.svg"></head>
   <body>
     <div class="wrapper">
       <header class="header">
@@ -282,7 +282,7 @@
                   <button type="button" class="events__tag" data-filter="#поступающим" aria-pressed="false">#поступающим</button>
                   <button type="button" class="events__tag" data-filter="#наука" aria-pressed="false">#наука</button>
                 </div>
-                <div class = "events__container unactive" data-value="tab-container" data-tab="events">
+                <div class = "events__container unactive" data-value="tab-container" data-tab="events" data-pagination-size="6">
                   <div class = "events__content ">
                         <div class="event__card">
                             <div class = "event__photo">
@@ -448,6 +448,53 @@
                         </div>
                     </div>
                     <!-- Пагинация -->
+                    <!-- Дополнительные демонстрационные события для второй страницы выдачи. -->
+<div class="events__content" hidden>
+
+  <div class="event__card">
+    <div class="event__photo">
+      <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/banner1.webp"><img loading="lazy" decoding="async" src="../images/fallback/banner1.png" alt="Выступление с презентацией анализа 3D-сканов деталей" width="462" height="231"></picture>
+    </div>
+    <div class="event__content">
+      <p class="event__title">День открытых дверей ЯГТУ</p>
+      <div class="event__body">
+        <div class="event__info">
+          <p class="event__date">15 октября 2026</p>
+          <p class="event__time">с 12:00 до 15:00</p>
+          <p class="event__location">Точка кипения</p>
+        </div>
+        <div class="event__footer">
+          <button type="button" class="btn btn--link btn--blue button-modal" data-modal="event">Зарегистрироваться</button>
+          <a class="btn btn--link btn--white" href="#">Подробнее</a>
+        </div>
+      </div>
+    </div>
+    <div class="event__tags"><div class="event__tag">10-11 класс</div><div class="event__tag">Очно</div></div>
+  </div>
+
+  <div class="event__card">
+    <div class="event__photo">
+      <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/banner1.webp"><img loading="lazy" decoding="async" src="../images/fallback/banner1.png" alt="Выступление с презентацией анализа 3D-сканов деталей" width="462" height="231"></picture>
+    </div>
+    <div class="event__content">
+      <p class="event__title">Мастер-класс по инженерному проектированию</p>
+      <div class="event__body">
+        <div class="event__info">
+          <p class="event__date">15 октября 2026</p>
+          <p class="event__time">с 12:00 до 15:00</p>
+          <p class="event__location">Точка кипения</p>
+        </div>
+        <div class="event__footer">
+          <button type="button" class="btn btn--link btn--blue button-modal" data-modal="event">Зарегистрироваться</button>
+          <a class="btn btn--link btn--white" href="#">Подробнее</a>
+        </div>
+      </div>
+    </div>
+    <div class="event__tags"><div class="event__tag">10-11 класс</div><div class="event__tag">Очно</div></div>
+  </div>
+
+</div>
+
                     <div class = "pagination">
                       <a class = "pagination__button-prev" href = "?page=1" aria-label="Предыдущая страница"></a>
                       <a class = "pagination__page current" href = "?page=1" aria-current="page">
@@ -470,7 +517,7 @@
                     </div>
 
                 </div>
-                <div class = "events__container active" data-value="tab-container" data-tab="news">
+                <div class = "events__container active" data-value="tab-container" data-tab="news" data-pagination-size="6">
                   <div class = "events__content">
 <a class="news__card" href="#">
                             <div class = "news__photo">
@@ -564,6 +611,31 @@
                         </a>
                     </div>
                     <!-- Пагинация -->
+                    <!-- Дополнительные демонстрационные новости для второй страницы выдачи. -->
+<div class="events__content" hidden>
+
+  <a class="news__card" href="#">
+    <div class="news__photo">
+      <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/banner-news.webp"><img loading="lazy" decoding="async" src="../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета" width="462" height="339"></picture>
+    </div>
+    <div class="news__content">
+      <div class="news__header"><p class="news__date">08.10.2026</p><p class="news__title">Студенты ЯГТУ представили новые научные проекты</p></div>
+      <div class="news__tags"><p class="news__tag">наука</p></div>
+    </div>
+  </a>
+
+  <a class="news__card" href="#">
+    <div class="news__photo">
+      <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/banner-news.webp"><img loading="lazy" decoding="async" src="../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета" width="462" height="339"></picture>
+    </div>
+    <div class="news__content">
+      <div class="news__header"><p class="news__date">08.10.2026</p><p class="news__title">В университете прошла встреча с будущими абитуриентами</p></div>
+      <div class="news__tags"><p class="news__tag">поступающим</p></div>
+    </div>
+  </a>
+
+</div>
+
                     <div class = "pagination">
                       <a class = "pagination__button-prev" href = "?page=1" aria-label="Предыдущая страница"></a>
                       <a class = "pagination__page current" href = "?page=1" aria-current="page">

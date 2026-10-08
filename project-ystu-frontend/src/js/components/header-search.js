@@ -1,8 +1,8 @@
 /* Раскрываемый поиск. Без JS иконка остаётся ссылкой на страницу поиска. */
 (() => {
     document.querySelectorAll('.header').forEach((header, index) => {
-        const links = [...header.querySelectorAll('a[href="search.html"]')];
-        if (!links.length) return;
+        const links = () => [...header.querySelectorAll('a[href="search.html"]')];
+        if (!links().length || header.querySelector('.header-search')) return;
         const form = document.createElement('form');
         form.id = `header-search-${index}`;
         form.className = 'header-search';
@@ -14,17 +14,24 @@
         let trigger;
         const close = (restore = true) => {
             form.hidden = true;
-            links.forEach(link => link.setAttribute('aria-expanded', 'false'));
+            links().forEach(link => link.setAttribute('aria-expanded', 'false'));
             if (restore) trigger?.focus({preventScroll:true});
         };
-        links.forEach(link => {
+        links().forEach(link => {
             link.setAttribute('aria-controls', form.id); link.setAttribute('aria-expanded', 'false');
-            link.addEventListener('click', event => {
-                event.preventDefault(); trigger = link;
-                if (!form.hidden) return close();
-                form.hidden = false; links.forEach(item => item.setAttribute('aria-expanded', 'true'));
-                form.querySelector('input').focus({preventScroll:true});
+        });
+        // Делегирование охватывает и ссылки, которые header.js клонирует позднее.
+        header.addEventListener('click', event => {
+            const link = event.target.closest('a[href="search.html"]');
+            if (!link || !header.contains(link) || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+            event.preventDefault(); trigger = link;
+            if (!form.hidden) return close();
+            form.hidden = false;
+            links().forEach(item => {
+                item.setAttribute('aria-controls', form.id);
+                item.setAttribute('aria-expanded', 'true');
             });
+            form.querySelector('input').focus({preventScroll:true});
         });
         form.querySelector('.header-search__close').addEventListener('click', () => close());
         header.addEventListener('header:mobile-menu-close', () => close(false));

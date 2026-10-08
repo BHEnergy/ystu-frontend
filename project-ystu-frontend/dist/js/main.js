@@ -267,8 +267,10 @@
             ["lazyload.min.js", "LazyLoad"],
         ]);
 
+        // Пагинация учитывает набор, подготовленный обработчиками вкладок и тем.
+        await loadScripts([["tabs.js", "Tabs"]]);
+
         await loadScripts([
-            ["tabs.js", "Tabs"],
             ["pagination.js", "Pagination"],
             ["header.js", "Header"],
             ["dropdown.js", "Dropdown"],

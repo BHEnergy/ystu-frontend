@@ -1,0 +1,25 @@
+<!-- Дополнительные демонстрационные события для второй страницы выдачи. -->
+<div class="events__content" hidden>
+{% for title in ["День открытых дверей ЯГТУ", "Мастер-класс по инженерному проектированию"] %}
+  <div class="event__card">
+    <div class="event__photo">
+      <img loading="lazy" decoding="async" src="../images/fallback/banner1.png" alt="Выступление с презентацией анализа 3D-сканов деталей">
+    </div>
+    <div class="event__content">
+      <p class="event__title">{{ title }}</p>
+      <div class="event__body">
+        <div class="event__info">
+          <p class="event__date">15 октября 2026</p>
+          <p class="event__time">с 12:00 до 15:00</p>
+          <p class="event__location">Точка кипения</p>
+        </div>
+        <div class="event__footer">
+          <button type="button" class="btn btn--link btn--blue button-modal" data-modal="event">Зарегистрироваться</button>
+          <a class="btn btn--link btn--white" href="#">Подробнее</a>
+        </div>
+      </div>
+    </div>
+    <div class="event__tags"><div class="event__tag">10-11 класс</div><div class="event__tag">Очно</div></div>
+  </div>
+{% endfor %}
+</div>
