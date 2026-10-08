@@ -7,17 +7,17 @@
             <p class = "modal-header__subtitle">Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae.</p>
           </div>
           <form class="modal-form d-flex flex-column" data-modal-demo>
-            <div class = "input--container{% if modalDemoError %} error{% endif %}">
-              <input type = "text" name = "name" id = "{{ modalIdPrefix | default('') }}vacancy-name" placeholder="Текст*">
-              <label for="{{ modalIdPrefix | default('') }}vacancy-name" class = "error-text">Заполните обязательное поле: Текст*</label>
+            <div class = "input--container">
+              <input type="text" name="name" id="{{ modalIdPrefix | default('') }}vacancy-name" placeholder="ФИО*" aria-label="ФИО" autocomplete="name" required>
+              <span class="error-text">Укажите ФИО.</span>
             </div>
             <div class = "input--container">
-              <input type = "email" name = "email" id = "{{ modalIdPrefix | default('') }}vacancy-email" placeholder="Текст*">
-              <label for="{{ modalIdPrefix | default('') }}vacancy-email" class = "error-text">Заполните обязательное поле: Текст*</label>
+              <input type="email" name="email" id="{{ modalIdPrefix | default('') }}vacancy-email" placeholder="Email*" aria-label="Email" autocomplete="email" required>
+              <span class="error-text">Укажите корректный email.</span>
             </div>
             <div class = "input--container">
-              <input type = "text" name = "phone" id = "{{ modalIdPrefix | default('') }}vacancy-phone" placeholder="Текст*" data-validate="phone">
-              <label for="{{ modalIdPrefix | default('') }}vacancy-phone" class = "error-text">Заполните обязательное поле: Текст*</label>
+              <input type="text" name="phone" id="{{ modalIdPrefix | default('') }}vacancy-phone" placeholder="Телефон*" aria-label="Телефон" autocomplete="tel" inputmode="tel" data-validate="phone" required>
+              <span class="error-text">Укажите телефон полностью.</span>
             </div>
             <div class = "modal-form__file">
               <span class = "modal-form__file-title">Резюме</span>

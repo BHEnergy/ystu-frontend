@@ -35,7 +35,8 @@
 }
 
 .catalog-search__input:focus-visible {
-    outline: none;
+    outline: 2px solid var(--subprimary-color-1);
+    outline-offset: 2px;
 }
 
 .catalog-search__input::placeholder {

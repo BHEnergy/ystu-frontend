@@ -48,6 +48,7 @@
 }
 
 .student-direction__gallery img {
+    height: auto;
     border-radius: 16px;
     min-height: 477px;
 }

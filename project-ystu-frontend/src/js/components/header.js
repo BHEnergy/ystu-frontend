@@ -336,6 +336,7 @@
             }
 
             if (!isOpen) {
+                if (mobileMenuMedia.matches) header.dispatchEvent(new CustomEvent('header:mobile-menu-close'));
                 resetSubmenu();
             } else if (!mobileMenuMedia.matches && selectedTrigger && selectedPanel) {
                 openSubmenu(selectedTrigger, selectedPanel);

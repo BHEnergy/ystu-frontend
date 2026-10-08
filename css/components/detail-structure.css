@@ -281,7 +281,8 @@ span.training-program-card__tag {
     border-radius: 16px;
 }
 
-.structure-about__video > img {
+.structure-about__video > img,
+.structure-about__video > .responsive-picture > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -431,7 +432,8 @@ span.training-program-card__tag {
     gap: 40px;
 }
 
-.structure-person-card__person > img {
+.structure-person-card__person > img,
+.structure-person-card__person > .responsive-picture > img {
     width: 140px;
     height: 140px;
     flex: 0 0 140px;
@@ -668,7 +670,8 @@ span.training-program-card__tag {
         gap: 8px;
     }
 
-    .structure-person-card__person > img {
+    .structure-person-card__person > img,
+    .structure-person-card__person > .responsive-picture > img {
         width: 100px;
         height: 100px;
         flex: 0 0 100px;

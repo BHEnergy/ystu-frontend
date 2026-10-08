@@ -70,6 +70,8 @@
 /* Подключение формы и модалки */
 @import url('components/modal.css');
 @import url('components/form.css');
+@import url('components/header-search.css');
+@import url('components/touch-targets.css');
 
 /* Подключение шрифта */
 @font-face {

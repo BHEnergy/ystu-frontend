@@ -1,0 +1,86 @@
+{
+  "../images/fallback/admissions-map.png": {
+    "width": 1200,
+    "height": 906
+  },
+  "../images/fallback/banner-courses.png": {
+    "width": 553,
+    "height": 376
+  },
+  "../images/fallback/banner-news.png": {
+    "width": 462,
+    "height": 339
+  },
+  "../images/fallback/banner1.png": {
+    "width": 462,
+    "height": 231
+  },
+  "../images/fallback/campus-building-e.png": {
+    "width": 1280,
+    "height": 960
+  },
+  "../images/fallback/campus-map.png": {
+    "width": 2426,
+    "height": 1096
+  },
+  "../images/fallback/emblem.png": {
+    "width": 182,
+    "height": 198
+  },
+  "../images/fallback/journal.png": {
+    "width": 586,
+    "height": 330
+  },
+  "../images/fallback/main-slide-mobile.png": {
+    "width": 358,
+    "height": 500
+  },
+  "../images/fallback/main-slide.png": {
+    "width": 1440,
+    "height": 628
+  },
+  "../images/fallback/prioritet.png": {
+    "width": 313,
+    "height": 60
+  },
+  "../images/fallback/program-banner.png": {
+    "width": 1376,
+    "height": 768
+  },
+  "../images/fallback/stepanova.png": {
+    "width": 300,
+    "height": 302
+  },
+  "../images/fallback/structure-employee.png": {
+    "width": 200,
+    "height": 200
+  },
+  "../images/fallback/structure-gallery.png": {
+    "width": 1280,
+    "height": 853
+  },
+  "../images/fallback/structure-head.png": {
+    "width": 1600,
+    "height": 1067
+  },
+  "../images/fallback/structure-video.png": {
+    "width": 1280,
+    "height": 845
+  },
+  "../images/fallback/student-life-courses.png": {
+    "width": 1280,
+    "height": 871
+  },
+  "../images/fallback/student-life-direction.png": {
+    "width": 1280,
+    "height": 853
+  },
+  "../images/fallback/student-life-driving.png": {
+    "width": 1280,
+    "height": 848
+  },
+  "../images/fallback/student-life-hero.png": {
+    "width": 1376,
+    "height": 768
+  }
+}

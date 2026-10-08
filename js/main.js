@@ -52,12 +52,16 @@
                 },
             });
 
-            let slides = slider.querySelectorAll('.slide__photo');
-            if(window.innerWidth < 768) {
-                slides.forEach((slide) => {
-                    slide.src = slide.dataset.mobile || slide.src;
-                });
-            }
+            const mobileImages = window.matchMedia('(max-width: 767px)');
+            const slides = [...slider.querySelectorAll('.slide__photo')];
+            slides.forEach(slide => { slide.dataset.desktop ||= slide.getAttribute('src'); });
+            const updateImages = () => slides.forEach(slide => {
+                // picture самостоятельно выбирает источник до загрузки изображения.
+                if (slide.closest('picture')) return;
+                slide.src = mobileImages.matches && slide.dataset.mobile ? slide.dataset.mobile : slide.dataset.desktop;
+            });
+            updateImages();
+            mobileImages.addEventListener('change', updateImages);
         });
 
         /* Слайдеры с фракцией */
@@ -265,6 +269,7 @@
 
         await loadScripts([
             ["tabs.js", "Tabs"],
+            ["pagination.js", "Pagination"],
             ["header.js", "Header"],
             ["dropdown.js", "Dropdown"],
             ["filter-panel.js", "FilterPanel"],
@@ -272,6 +277,9 @@
             ["campus-map.js", "CampusMap"],
             ["modals.js", "Modals"],
             ["validation.js", "Validation"],
+            ["content.js", "Content"],
+            ["header-search.js", "HeaderSearch"],
+            ["site-search.js", "SiteSearch"],
             ["cookie.js", "Cookie"],
             ["university-statistics.js", "UniversityStatistics"],
         ]);

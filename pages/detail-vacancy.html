@@ -105,7 +105,7 @@
 
   <a class="mega-menu__primary-link has-submenu" href="vacancies.html" data-menu-section="vacancies">Работа в ЯГТУ</a>
 
-  <a class="mega-menu__primary-link has-submenu" href="nauka.html" data-menu-section="education">Образование</a>
+  <a class="mega-menu__primary-link has-submenu" href="programs.html" data-menu-section="education">Образование</a>
 
   <a class="mega-menu__primary-link has-submenu" href="nauka.html" data-menu-section="science">Наука и инновации</a>
 
@@ -122,7 +122,7 @@
                   <a class="is-muted" href="structure.html">Об университете</a>
                   <a class="is-muted" href="program.html">Программа развития</a>
                   <a class="is-muted" href="404.html">Органы управления (детальная)</a>
-                  <a class="is-muted" href="404.html">Структура университета</a>
+                  <a class="is-muted" href="structure.html">Структура университета</a>
                   <a class="is-muted" href="detail-sotrudnik.html">Все сотрудники</a>
                   <a class="is-muted" href="detail-sotrudnik.html">Научно-педагогический состав</a>
                   <a class="is-muted" href="map.html">Карта кампуса</a>
@@ -255,6 +255,7 @@
           </div>
         </div>
       </header>
+
       <main class="main detail-vacancy-page">
         <div class="container">
           <nav class="breadcrumbs" aria-label="Хлебные крошки">
@@ -262,7 +263,7 @@
             <div class="breadcrumbs__separator"></div>
             <a class="breadcrumbs__item" href="#">Университет</a>
             <div class="breadcrumbs__separator"></div>
-            <a class="breadcrumbs__item" href="index.html">Работа в ЯГТУ</a>
+            <a class="breadcrumbs__item" href="vacancies.html">Работа в ЯГТУ</a>
             <div class="breadcrumbs__separator"></div>
             <span>Документовед</span>
           </nav>
@@ -396,7 +397,7 @@
               </div>
               <div class = "footer__information">
                 <div class = "footer__emblem">
-                  <img loading="lazy" decoding="async" src = "../images/fallback/emblem.png" alt="Министерство науки и высшего образования Российской Федерации">
+                  <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/emblem.webp"><img loading="lazy" decoding="async" src = "../images/fallback/emblem.png" alt="Министерство науки и высшего образования Российской Федерации" width="182" height="198"></picture>
                 </div>
                 <div class = "footer__consultation">
                   <div class = "footer__phones">
@@ -446,16 +447,16 @@
           </div>
           <form class="modal-form d-flex flex-column" data-modal-demo>
             <div class = "input--container">
-              <input type = "text" name = "name" id = "vacancy-name" placeholder="Текст*">
-              <label for="vacancy-name" class = "error-text">Заполните обязательное поле: Текст*</label>
+              <input type="text" name="name" id="vacancy-name" placeholder="ФИО*" aria-label="ФИО" autocomplete="name" required>
+              <span class="error-text">Укажите ФИО.</span>
             </div>
             <div class = "input--container">
-              <input type = "email" name = "email" id = "vacancy-email" placeholder="Текст*">
-              <label for="vacancy-email" class = "error-text">Заполните обязательное поле: Текст*</label>
+              <input type="email" name="email" id="vacancy-email" placeholder="Email*" aria-label="Email" autocomplete="email" required>
+              <span class="error-text">Укажите корректный email.</span>
             </div>
             <div class = "input--container">
-              <input type = "text" name = "phone" id = "vacancy-phone" placeholder="Текст*" data-validate="phone">
-              <label for="vacancy-phone" class = "error-text">Заполните обязательное поле: Текст*</label>
+              <input type="text" name="phone" id="vacancy-phone" placeholder="Телефон*" aria-label="Телефон" autocomplete="tel" inputmode="tel" data-validate="phone" required>
+              <span class="error-text">Укажите телефон полностью.</span>
             </div>
             <div class = "modal-form__file">
               <span class = "modal-form__file-title">Резюме</span>

@@ -12,13 +12,13 @@ function getCookie(name) {
 
 const banner = document.querySelector('.cookie-banner');
 
-if (getCookie('cookieConsent') === 'accepted') {
+if (banner && getCookie('cookieConsent') === 'accepted') {
     banner.style.display = 'none'; // Убедимся, что баннер скрыт
-} else {
+} else if (banner) {
     banner.style.display = 'block'; // Или 'block', в зависимости от макета
 }
 
-document.getElementById('cookieAccept').addEventListener('click', function () {
+document.getElementById('cookieAccept')?.addEventListener('click', function () {
     setCookie('cookieConsent', 'accepted', 365);
-    banner.style.display = 'none';
+    if (banner) banner.style.display = 'none';
 });

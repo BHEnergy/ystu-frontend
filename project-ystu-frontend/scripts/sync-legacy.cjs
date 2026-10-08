@@ -24,6 +24,9 @@ if (!fs.existsSync(path.join(legacy, 'pages/index.html')) || !fs.existsSync(path
     throw new Error('Не найдена основная версия проекта рядом с компонентной');
 }
 require('./build.cjs')();
+if (fs.existsSync(path.join(source, 'images/webp'))) {
+    fs.cpSync(path.join(source, 'images/webp'), path.join(legacy, 'images/webp'), {recursive:true});
+}
 for (const file of files(path.join(source, 'styles'))) {
     if (!file.endsWith('.css') || ['styles.css', 'global.css'].includes(path.basename(file))) continue;
     write('css/components/' + path.basename(file), fs.readFileSync(file, 'utf8'));
@@ -37,6 +40,8 @@ for (const file of files(path.join(source, 'js'))) {
     write(path.relative(source, file), fs.readFileSync(file, 'utf8'));
 }
 for (const file of fs.readdirSync(path.join(root, 'dist/pages')).filter(f => f.endsWith('.html'))) {
+    // Не восстанавливаем страницы, удалённые пользователем из основной версии.
+    if (!fs.existsSync(path.join(legacy, 'pages', file))) continue;
     let html = fs.readFileSync(path.join(root, 'dist/pages', file), 'utf8');
     html = html.replaceAll('../styles/base/main.css', '../css/components/main.css').replaceAll('../styles/', '../css/');
     write('pages/' + file, html);

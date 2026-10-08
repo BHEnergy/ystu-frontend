@@ -105,7 +105,7 @@
 
   <a class="mega-menu__primary-link has-submenu" href="vacancies.html" data-menu-section="vacancies">Работа в ЯГТУ</a>
 
-  <a class="mega-menu__primary-link has-submenu" href="nauka.html" data-menu-section="education">Образование</a>
+  <a class="mega-menu__primary-link has-submenu" href="programs.html" data-menu-section="education">Образование</a>
 
   <a class="mega-menu__primary-link has-submenu" href="nauka.html" data-menu-section="science">Наука и инновации</a>
 
@@ -122,7 +122,7 @@
                   <a class="is-muted" href="structure.html">Об университете</a>
                   <a class="is-muted" href="program.html">Программа развития</a>
                   <a class="is-muted" href="404.html">Органы управления (детальная)</a>
-                  <a class="is-muted" href="404.html">Структура университета</a>
+                  <a class="is-muted" href="structure.html">Структура университета</a>
                   <a class="is-muted" href="detail-sotrudnik.html">Все сотрудники</a>
                   <a class="is-muted" href="detail-sotrudnik.html">Научно-педагогический состав</a>
                   <a class="is-muted" href="map.html">Карта кампуса</a>
@@ -345,7 +345,7 @@
                 <button class="catalog-filters-trigger" type="button" data-open-filter-panel="vacancy-filter-panel" aria-controls="vacancy-filter-panel" aria-expanded="false">Фильтры<img src="../images/svg/filters.svg" alt="" /></button>
               </div>
               <div class="listing-page__results">
-                <article class="vacancy-card">
+                <article class="vacancy-card" data-catalog-filters='{"category":["administrative"],"experience":["1-plus"],"employment":["full"],"work_format":["office"]}'>
               <img
                 class="vacancy-card__pattern"
                 src="../images/svg/vacancy-pattern.svg"
@@ -363,18 +363,18 @@
                   ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui
                   feugiat orci dui amet consectetur tortor sem.
                 </p>
-                <a class="btn btn--default btn--m vacancy-card__button" href="#"
+                <a class="btn btn--default btn--m vacancy-card__button" href="detail-vacancy.html"
                   >Подробнее</a
                 >
               </div>
             </article>
-                <article class="vacancy-card">
+                <article class="vacancy-card" data-catalog-filters='{"category":["administrative"],"experience":["1-plus"],"employment":["full"],"work_format":["office"]}'>
                   <img class="vacancy-card__pattern" src="../images/svg/vacancy-pattern.svg" alt="" />
-                  <div class="vacancy-card__content"><div class="vacancy-card__heading"><h2 class="vacancy-card__title">Инженер-конструктор</h2><p class="vacancy-card__category">Административный персонал</p></div><p class="vacancy-card__description">Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem.</p><a class="btn btn--default btn--m vacancy-card__button" href="#">Подробнее</a></div>
+                  <div class="vacancy-card__content"><div class="vacancy-card__heading"><h2 class="vacancy-card__title">Инженер-конструктор</h2><p class="vacancy-card__category">Административный персонал</p></div><p class="vacancy-card__description">Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem.</p><a class="btn btn--default btn--m vacancy-card__button" href="detail-vacancy.html">Подробнее</a></div>
                 </article>
-                <article class="vacancy-card">
+                <article class="vacancy-card" data-catalog-filters='{"category":["administrative"],"experience":["1-plus"],"employment":["full"],"work_format":["office"]}'>
                   <img class="vacancy-card__pattern" src="../images/svg/vacancy-pattern.svg" alt="" />
-                  <div class="vacancy-card__content"><div class="vacancy-card__heading"><h2 class="vacancy-card__title">Инженер-техник</h2><p class="vacancy-card__category">Административный персонал</p></div><p class="vacancy-card__description">Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem.</p><a class="btn btn--default btn--m vacancy-card__button" href="#">Подробнее</a></div>
+                  <div class="vacancy-card__content"><div class="vacancy-card__heading"><h2 class="vacancy-card__title">Инженер-техник</h2><p class="vacancy-card__category">Административный персонал</p></div><p class="vacancy-card__description">Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem.</p><a class="btn btn--default btn--m vacancy-card__button" href="detail-vacancy.html">Подробнее</a></div>
                 </article>
               </div>
             </section>
@@ -461,7 +461,7 @@
               </div>
               <div class = "footer__information">
                 <div class = "footer__emblem">
-                  <img loading="lazy" decoding="async" src = "../images/fallback/emblem.png" alt="Министерство науки и высшего образования Российской Федерации">
+                  <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/emblem.webp"><img loading="lazy" decoding="async" src = "../images/fallback/emblem.png" alt="Министерство науки и высшего образования Российской Федерации" width="182" height="198"></picture>
                 </div>
                 <div class = "footer__consultation">
                   <div class = "footer__phones">

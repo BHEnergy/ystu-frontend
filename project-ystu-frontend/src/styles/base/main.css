@@ -8,6 +8,9 @@
     padding: 0;
 }
 
+/* picture не меняет Flex/Grid-компоновку существующих карточек. */
+.responsive-picture { display: contents; }
+
 /* Заголовки */
 .title {
     font-size: 52px;
@@ -20,6 +23,17 @@
 }
 
 /* Для кастомизирования того, что будет приходить с админки, специальный класс wyswig*/
+.wyswig { min-width: 0; overflow-wrap: anywhere; line-height: 1.5; }
+.wyswig :is(h1,h2,h3,h4,h5,h6) { margin: 1.25em 0 .5em; line-height: 1.2; color: var(--subprimary-color-1); }
+.wyswig :is(p,ul,ol,blockquote,figure) { margin: 0 0 1em; }
+.wyswig a { text-decoration: underline; text-underline-offset: .15em; }
+.wyswig a:hover { color: var(--subprimary-color-2); }
+.wyswig a:active { color: var(--primary-color-1); }
+.wyswig :is(img,video,iframe) { max-width: 100%; }
+.wyswig :is(img,video) { height: auto; }
+.wyswig iframe { display: block; width: 100%; border: 0; }
+.wyswig ol { padding-left: 1.5em; list-style: decimal; }
+.wyswig ul ul, .wyswig ol ol { margin: .5em 0; padding-left: 1.5em; }
 .wyswig ul {
     list-style-position: inside;
 }

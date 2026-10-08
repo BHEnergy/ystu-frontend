@@ -37,7 +37,7 @@ function build() {
             filter: file => !file.split(path.sep).includes('check-in') });
     }
     fs.copyFileSync(path.join(source, 'index.html'), path.join(output, 'index.html'));
-    for (const [name, html] of rendered) fs.writeFileSync(path.join(output, 'pages', name), html);
+    for (const [name, html] of rendered) fs.writeFileSync(path.join(output, 'pages', name), require('./media.cjs').enhanceImages(html));
     console.log(`Сборка готова: ${rendered.length} страниц в dist/`);
 }
 if (require.main === module) build();
