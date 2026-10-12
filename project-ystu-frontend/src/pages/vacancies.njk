@@ -11,7 +11,7 @@
     <div class="wrapper">
       {% include "components/header.njk" %}
 
-      <main class="main listing-page listing-page--vacancies">
+      <main class="main listing-page listing-page--vacancies" data-ui="listing-page">
         <div class="container">
           <nav class="breadcrumbs" aria-label="Хлебные крошки">
             <a class="breadcrumbs__item" href="index.html">Главная</a>
@@ -32,8 +32,8 @@
               <form class="catalog-filters" method="get">
                 <div class="catalog-search">
                   <p>найти направление</p>
-                  <input class="catalog-search__input" name="query" type="search" aria-label="Найти вакансию" />
-                  <button class="catalog-search__button" type="submit" aria-label="Найти"><img src="../images/svg/vacancy-search.svg" alt="" /></button>
+                  <input class="catalog-search__input" data-ui="catalog-search__input" name="query" type="search" aria-label="Найти вакансию" />
+                  <button class="catalog-search__button" type="submit" aria-label="Найти"><svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#vacancy-search"></use></svg></button>
                 </div>
                 <div class="catalog-filter-group">
                   <p class="catalog-filter-group__title">категория</p>
@@ -67,20 +67,20 @@
             </aside>
 
             <section aria-label="Список вакансий">
-              <div class="listing-page__mobile-tools">
+              <div class="listing-page__mobile-tools" data-ui="listing-page__mobile-tools">
                 <form class="catalog-search" method="get" role="search">
-                  <input class="catalog-search__input" name="query" type="search" placeholder="найти вакансию" aria-label="Найти вакансию" />
-                  <button class="catalog-search__button" type="submit" aria-label="Найти"><img src="../images/svg/vacancy-search.svg" alt="" /></button>
+                  <input class="catalog-search__input" data-ui="catalog-search__input" name="query" type="search" placeholder="найти вакансию" aria-label="Найти вакансию" />
+                  <button class="catalog-search__button" type="submit" aria-label="Найти"><svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#vacancy-search"></use></svg></button>
                 </form>
-                <button class="catalog-filters-trigger" type="button" data-open-filter-panel="vacancy-filter-panel" aria-controls="vacancy-filter-panel" aria-expanded="false">Фильтры<img src="../images/svg/filters.svg" alt="" /></button>
+                <button class="catalog-filters-trigger" type="button" data-open-filter-panel="vacancy-filter-panel" aria-controls="vacancy-filter-panel" aria-expanded="false">Фильтры<svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#filters"></use></svg></button>
               </div>
-              <div class="listing-page__results">
+              <div class="listing-page__results" data-ui="listing-page__results">
                 {% include "components/vacancy-card.njk" %}
-                <article class="vacancy-card" data-catalog-filters='{"category":["administrative"],"experience":["1-plus"],"employment":["full"],"work_format":["office"]}'>
+                <article class="vacancy-card" data-ui="vacancy-card" data-catalog-filters='{"category":["administrative"],"experience":["1-plus"],"employment":["full"],"work_format":["office"]}'>
                   <img class="vacancy-card__pattern" src="../images/svg/vacancy-pattern.svg" alt="" />
                   <div class="vacancy-card__content"><div class="vacancy-card__heading"><h2 class="vacancy-card__title">Инженер-конструктор</h2><p class="vacancy-card__category">Административный персонал</p></div><p class="vacancy-card__description">Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem.</p><a class="btn btn--default btn--m vacancy-card__button" href="detail-vacancy.html">Подробнее</a></div>
                 </article>
-                <article class="vacancy-card" data-catalog-filters='{"category":["administrative"],"experience":["1-plus"],"employment":["full"],"work_format":["office"]}'>
+                <article class="vacancy-card" data-ui="vacancy-card" data-catalog-filters='{"category":["administrative"],"experience":["1-plus"],"employment":["full"],"work_format":["office"]}'>
                   <img class="vacancy-card__pattern" src="../images/svg/vacancy-pattern.svg" alt="" />
                   <div class="vacancy-card__content"><div class="vacancy-card__heading"><h2 class="vacancy-card__title">Инженер-техник</h2><p class="vacancy-card__category">Административный персонал</p></div><p class="vacancy-card__description">Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem.</p><a class="btn btn--default btn--m vacancy-card__button" href="detail-vacancy.html">Подробнее</a></div>
                 </article>
@@ -100,7 +100,7 @@
 
     <div class="mobile-filter-panel" id="vacancy-filter-panel" data-filter-panel aria-hidden="true">
       <aside class="mobile-filter-panel__drawer" aria-label="Фильтры вакансий">
-        <header class="mobile-filter-panel__header"><h2 class="mobile-filter-panel__title">Фильтры</h2><button class="mobile-filter-panel__close" type="button" data-close-filter-panel aria-label="Закрыть фильтры"><img src="../images/svg/close-white.svg" alt="" /></button></header>
+        <header class="mobile-filter-panel__header"><h2 class="mobile-filter-panel__title">Фильтры</h2><button class="mobile-filter-panel__close" type="button" data-close-filter-panel aria-label="Закрыть фильтры"><svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#close-white"></use></svg></button></header>
         <form class="mobile-filter-panel__form" method="get">
           <details open><summary>категория</summary><div class="catalog-filter-group__options"><label class="catalog-filter-option"><input type="checkbox" name="category[]" value="academic" />Научно-педагогические работники</label><label class="catalog-filter-option"><input type="checkbox" name="category[]" value="administrative" checked />Административный персонал</label></div></details>
           <details open><summary>опыт работы</summary><div class="catalog-filter-group__options"><label class="catalog-filter-option"><input type="radio" name="experience" value="none" />без опыта</label><label class="catalog-filter-option"><input type="radio" name="experience" value="1-plus" checked />от 1 года</label><label class="catalog-filter-option"><input type="radio" name="experience" value="3-6" />от 3 до 6 лет</label><label class="catalog-filter-option"><input type="radio" name="experience" value="6-plus" />более 6 лет</label></div></details>

@@ -1,11 +1,12 @@
 /* Поиск по карточкам демонстрационной страницы. Серверный поиск подключается в CMS. */
-document.querySelectorAll('.listing-page').forEach((page) => {
-    const results = page.querySelector('.listing-page__results');
+document.querySelectorAll('[data-ui~="listing-page"]').forEach((page) => {
+    const results = page.querySelector('[data-ui~="listing-page__results"]');
     if (!results) return;
-    const cards = [...results.querySelectorAll('.program-card, .vacancy-card')];
-    const inputs = [...page.querySelectorAll('.catalog-search__input')];
+    const cards = [...results.querySelectorAll('[data-ui~="program-card"], [data-ui~="vacancy-card"]')];
+    const inputs = [...page.querySelectorAll('[data-ui~="catalog-search__input"]')];
     const status = document.createElement('p');
     status.className = 'catalog-search-status';
+    status.setAttribute('data-ui', status.className);
     status.setAttribute('role', 'status');
     status.hidden = true;
     results.insertAdjacentElement('beforebegin', status);
@@ -44,7 +45,7 @@ document.querySelectorAll('.listing-page').forEach((page) => {
                 });
                 syncControls();
             }
-            search(form.querySelector('.catalog-search__input')?.value ?? inputs[0]?.value ?? '');
+            search(form.querySelector('[data-ui~="catalog-search__input"]')?.value ?? inputs[0]?.value ?? '');
         });
         form.addEventListener('reset', event => {
             event.preventDefault();

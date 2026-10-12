@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-between;
     gap: 60px;
+    align-items: flex-start;
 }
 
 .detail-vacancy__content {
@@ -14,7 +15,7 @@
 }
 
 .detail-vacancy__info {
-    font-size: 18px;
+    font-size: 1.125rem;
     align-items: baseline;
     gap: 40px;
     max-width: 830px;
@@ -23,7 +24,7 @@
 
 .detail-vacancy__info .btn {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.125rem;
     max-width: 203px;
     width: 100%;
     height: 54px;
@@ -46,12 +47,12 @@
 
 .resume-data p:first-child {
     color: var(--subprimary-color-2);
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .resume-data p:last-child {
     color: var(--subprimary-color-1);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
     line-height: 1.4;
 }
@@ -63,16 +64,20 @@
 
 .detail-vacancy__list {
     gap: 24px;
+    display: block;
 }
 
-.detail-vacancy__list__title {
-    font-size: 24px;
+.detail-vacancy__list > :is(h2, h3) {
+    font-size: 1.5rem;
     color: var(--subprimary-color-1);
     font-weight: 600;
 }
 
+.detail-vacancy__list.wyswig > :is(h2, h3) { margin: 0 0 24px; font-size: 1.5rem; }
+.detail-vacancy__list.wyswig > ul { margin: 0; }
+
 .detail-vacancy__list.wyswig ul {
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .detail-vacancy__list.wyswig ul li {
@@ -103,7 +108,7 @@
     }
 
     .detail-vacancy .title {
-        font-size: 32px;
+        font-size: 2rem;
         line-height: 1.2;
     }
 
@@ -118,7 +123,7 @@
         max-width: none;
         flex-basis: auto;
         gap: 24px;
-        font-size: 16px;
+        font-size: 1rem;
         line-height: 1.2;
     }
 
@@ -128,7 +133,7 @@
 
     .detail-vacancy__info .btn {
         padding: 14px 24px;
-        font-size: 16px;
+        font-size: 1rem;
         max-width: 155px;
         height: 47px;
         font-weight: 500;
@@ -149,11 +154,11 @@
     }
 
     .resume-data p:first-child {
-        font-size: 15px;
+        font-size: 0.9375rem;
     }
 
     .resume-data p:last-child {
-        font-size: 18px;
+        font-size: 1.125rem;
         line-height: 1.4;
     }
 
@@ -168,13 +173,14 @@
         gap: 16px;
     }
 
-    .detail-vacancy__list__title {
-        font-size: 20px;
+    .detail-vacancy__list.wyswig > :is(h2, h3) {
+        font-size: 1.25rem;
         line-height: 1.2;
+        margin-bottom: 16px;
     }
 
     .detail-vacancy__list.wyswig ul {
-        font-size: 16px;
+        font-size: 1rem;
         line-height: 1.2;
     }
 
@@ -185,7 +191,7 @@
 
     .detail-vacancy__list.wyswig ul li::before {
         letter-spacing: normal;
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
     .detail-vacancy .vacancy-documents {
@@ -194,7 +200,7 @@
 
     .detail-vacancy .vacancy-documents__title {
         margin-bottom: 24px;
-        font-size: 24px;
+        font-size: 1.5rem;
         line-height: 1.2;
     }
 }

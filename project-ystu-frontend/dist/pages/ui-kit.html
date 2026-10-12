@@ -137,7 +137,7 @@
           <p>Компонент: <code>.information-banner</code></p>
         </div>
         <div class="ui-kit__sample">
-          <div class="information-banner">
+          <div class="information-banner" data-ui="information-banner">
         <div class="container">
           <div class="information-banner__body">
             <p class="information-banner__text">День открытых дверей</p>
@@ -180,8 +180,8 @@
           <p>Компонент: <code>.header</code></p>
         </div>
         <div class="ui-kit__sample">
-          <header class="header">
-        <div class="header__wrapper container">
+          <header class="header" data-ui="header">
+        <div class="header__wrapper container" data-ui="header__wrapper">
           <div class="header__top">
             <nav class="navbar">
               <ul class="secondary-nav">
@@ -210,23 +210,23 @@
               <a href="tel:+74852402199" class="navbar__phone"
                 >+7 (4852) 40-21-99</a
               >
-              <div class="navbar__panel">
+              <div class="navbar__panel" data-ui="navbar__panel">
                 <a href="search.html" aria-label="Поиск по сайту">
-                  <img src="../images/svg/search.svg" alt="" />
+                  <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#search"></use></svg>
                 </a>
                 <a href="#" aria-label="Личный кабинет">
-                  <img src="../images/svg/portrait.svg" alt="" />
+                  <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#portrait"></use></svg>
                 </a>
                 <a href="#" aria-label="Выбор языка">
-                  <img src="../images/svg/translation.svg" alt="" />
+                  <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#translation"></use></svg>
                 </a>
                 <a href="#" aria-label="Версия для слабовидящих">
-                  <img src="../images/svg/eyeglases.svg" alt="" />
+                  <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#eyeglases"></use></svg>
                 </a>
               </div>
             </nav>
           </div>
-          <div class="header__menu header__menu--collapsed">
+          <div class="header__menu header__menu--collapsed" data-ui="header__menu--collapsed">
             <a href="index.html" aria-label="ЯГТУ — главная страница">
               <img src="../images/svg/logo.svg" alt="" />
             </a>
@@ -259,8 +259,8 @@
               </span>
               Меню
             </button>
-            <nav class="mega-menu" id="ui-2-main-mega-menu" aria-label="Основное меню" data-hover-submenu>
-              <div class="mega-menu__primary">
+            <nav class="mega-menu" data-ui="mega-menu" id="ui-2-main-mega-menu" aria-label="Основное меню" data-hover-submenu>
+              <div class="mega-menu__primary" data-ui="mega-menu__primary">
 
   <a class="mega-menu__primary-link has-submenu is-selected" href="structure.html" data-menu-section="university" aria-current="true">Университет</a>
 
@@ -287,7 +287,7 @@
   <a class="mega-menu__primary-link has-submenu" href="news-events.html" data-menu-section="targeted">Целевое обучение</a>
 
 </div>
-              <section class="mega-menu__section" data-menu-panel="university" aria-labelledby="ui-2-mega-menu-university-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="university" aria-labelledby="ui-2-mega-menu-university-title">
                 <h2 class="mega-menu__title" id="ui-2-mega-menu-university-title">Университет</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="structure.html">Об университете</a>
@@ -300,7 +300,7 @@
                   <a class="is-muted" href="404.html">Партнеры</a>
                 </div>
               </section>
-              <section class="mega-menu__section" data-menu-panel="applicants" aria-labelledby="ui-2-mega-menu-applicants-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="applicants" aria-labelledby="ui-2-mega-menu-applicants-title">
                 <h2 class="mega-menu__title" id="ui-2-mega-menu-applicants-title">Поступающим</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="#">Страница 1</a>
@@ -310,7 +310,7 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
-              <section class="mega-menu__section" data-menu-panel="students" aria-labelledby="ui-2-mega-menu-students-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="students" aria-labelledby="ui-2-mega-menu-students-title">
                 <h2 class="mega-menu__title" id="ui-2-mega-menu-students-title">Обучающимся</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="#">Страница 1</a>
@@ -320,7 +320,7 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
-              <section class="mega-menu__section" data-menu-panel="school" aria-labelledby="ui-2-mega-menu-school-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="school" aria-labelledby="ui-2-mega-menu-school-title">
                 <h2 class="mega-menu__title" id="ui-2-mega-menu-school-title">Школьникам</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="#">Страница 1</a>
@@ -330,7 +330,7 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
-              <section class="mega-menu__section" data-menu-panel="employees" aria-labelledby="ui-2-mega-menu-employees-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="employees" aria-labelledby="ui-2-mega-menu-employees-title">
                 <h2 class="mega-menu__title" id="ui-2-mega-menu-employees-title">Сотрудникам</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="#">Страница 1</a>
@@ -340,7 +340,7 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
-              <section class="mega-menu__section" data-menu-panel="graduates" aria-labelledby="ui-2-mega-menu-graduates-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="graduates" aria-labelledby="ui-2-mega-menu-graduates-title">
                 <h2 class="mega-menu__title" id="ui-2-mega-menu-graduates-title">Выпускникам</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="#">Страница 1</a>
@@ -350,7 +350,7 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
-              <section class="mega-menu__section" data-menu-panel="vacancies" aria-labelledby="ui-2-mega-menu-vacancies-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="vacancies" aria-labelledby="ui-2-mega-menu-vacancies-title">
                 <h2 class="mega-menu__title" id="ui-2-mega-menu-vacancies-title">Работа в ЯГТУ</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="#">Страница 1</a>
@@ -360,7 +360,7 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
-              <section class="mega-menu__section" data-menu-panel="education" aria-labelledby="ui-2-mega-menu-education-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="education" aria-labelledby="ui-2-mega-menu-education-title">
                 <h2 class="mega-menu__title" id="ui-2-mega-menu-education-title">Образование</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="#">Страница 1</a>
@@ -370,7 +370,7 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
-              <section class="mega-menu__section" data-menu-panel="science" aria-labelledby="ui-2-mega-menu-science-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="science" aria-labelledby="ui-2-mega-menu-science-title">
                 <h2 class="mega-menu__title" id="ui-2-mega-menu-science-title">Наука и инновации</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="#">Страница 1</a>
@@ -380,7 +380,7 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
-              <section class="mega-menu__section" data-menu-panel="student-life" aria-labelledby="ui-2-mega-menu-student-life-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="student-life" aria-labelledby="ui-2-mega-menu-student-life-title">
                 <h2 class="mega-menu__title" id="ui-2-mega-menu-student-life-title">Студенческая жизнь</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="#">Страница 1</a>
@@ -390,7 +390,7 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
-              <section class="mega-menu__section" data-menu-panel="distance" aria-labelledby="ui-2-mega-menu-distance-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="distance" aria-labelledby="ui-2-mega-menu-distance-title">
                 <h2 class="mega-menu__title" id="ui-2-mega-menu-distance-title">Заочное обучение</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="#">Страница 1</a>
@@ -400,7 +400,7 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
-              <section class="mega-menu__section" data-menu-panel="targeted" aria-labelledby="ui-2-mega-menu-targeted-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="targeted" aria-labelledby="ui-2-mega-menu-targeted-title">
                 <h2 class="mega-menu__title" id="ui-2-mega-menu-targeted-title">Целевое обучение</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="#">Страница 1</a>
@@ -410,7 +410,7 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
-              <div class="mega-menu__additional">
+              <div class="mega-menu__additional" data-ui="mega-menu__additional">
                 <a class="is-muted" href="#">Колледж</a>
                 <a class="is-muted" href="#">ДПО</a>
                 <a class="is-muted" href="vacancies.html">Работа в ЯГТУ</a>
@@ -530,7 +530,7 @@
             <div class = "swiper js-init-first-slider default-slider main-slider">
               <div class = "swiper-wrapper">
                 <div class="swiper-slide main-slide">
-                  <picture class="responsive-picture"><source media="(max-width: 767px)" type="image/webp" srcset="../images/webp/main-slide-mobile.webp"><source media="(max-width: 767px)" srcset="../images/fallback/main-slide-mobile.png"><source type="image/webp" srcset="../images/webp/main-slide.webp"><img class = "slide__photo" src = "../images/fallback/main-slide.png" data-mobile = "../images/fallback/main-slide-mobile.png" alt="" width="1440" height="628"></picture>
+                  <picture class="responsive-picture"><source media="(max-width: 767px)" type="image/webp" srcset="../images/webp/main-slide-mobile.webp"><source media="(max-width: 767px)" srcset="../images/fallback/main-slide-mobile.png"><source type="image/webp" srcset="../images/webp/main-slide.webp"><img class = "slide__photo" data-ui="slide__photo" src = "../images/fallback/main-slide.png" data-mobile = "../images/fallback/main-slide-mobile.png" alt="" width="1440" height="628"></picture>
                   <div class = "slide__info">
                     <p class = "slide__title">Добро пожаловать в ЯГТУ!</p>
                     <p class = "slide__description">ЯГТУ - крупный российский технический вуз, где учатся<br> более 5000 студентов и аспирантов!</p>
@@ -538,7 +538,7 @@
                   </div>
                 </div>
                 <div class="swiper-slide main-slide">
-                  <picture class="responsive-picture"><source media="(max-width: 767px)" type="image/webp" srcset="../images/webp/main-slide-mobile.webp"><source media="(max-width: 767px)" srcset="../images/fallback/main-slide-mobile.png"><source type="image/webp" srcset="../images/webp/main-slide.webp"><img class = "slide__photo" src = "../images/fallback/main-slide.png" data-mobile = "../images/fallback/main-slide-mobile.png" alt="" width="1440" height="628"></picture>
+                  <picture class="responsive-picture"><source media="(max-width: 767px)" type="image/webp" srcset="../images/webp/main-slide-mobile.webp"><source media="(max-width: 767px)" srcset="../images/fallback/main-slide-mobile.png"><source type="image/webp" srcset="../images/webp/main-slide.webp"><img class = "slide__photo" data-ui="slide__photo" src = "../images/fallback/main-slide.png" data-mobile = "../images/fallback/main-slide-mobile.png" alt="" width="1440" height="628"></picture>
                   <div class = "slide__info">
                     <p class = "slide__title">Добро пожаловать в ЯГТУ!</p>
                     <p class = "slide__description">ЯГТУ - крупный российский технический вуз, где учатся<br> более 5000 студентов и аспирантов!</p>
@@ -546,7 +546,7 @@
                   </div>
                 </div>
                 <div class="swiper-slide main-slide">
-                  <picture class="responsive-picture"><source media="(max-width: 767px)" type="image/webp" srcset="../images/webp/main-slide-mobile.webp"><source media="(max-width: 767px)" srcset="../images/fallback/main-slide-mobile.png"><source type="image/webp" srcset="../images/webp/main-slide.webp"><img class = "slide__photo" src = "../images/fallback/main-slide.png" data-mobile = "../images/fallback/main-slide-mobile.png" alt="" width="1440" height="628"></picture>
+                  <picture class="responsive-picture"><source media="(max-width: 767px)" type="image/webp" srcset="../images/webp/main-slide-mobile.webp"><source media="(max-width: 767px)" srcset="../images/fallback/main-slide-mobile.png"><source type="image/webp" srcset="../images/webp/main-slide.webp"><img class = "slide__photo" data-ui="slide__photo" src = "../images/fallback/main-slide.png" data-mobile = "../images/fallback/main-slide-mobile.png" alt="" width="1440" height="628"></picture>
                   <div class = "slide__info">
                     <p class = "slide__title">Добро пожаловать в ЯГТУ!</p>
                     <p class = "slide__description">ЯГТУ - крупный российский технический вуз, где учатся<br> более 5000 студентов и аспирантов!</p>
@@ -554,7 +554,7 @@
                   </div>
                 </div>
                 <div class="swiper-slide main-slide">
-                  <picture class="responsive-picture"><source media="(max-width: 767px)" type="image/webp" srcset="../images/webp/main-slide-mobile.webp"><source media="(max-width: 767px)" srcset="../images/fallback/main-slide-mobile.png"><source type="image/webp" srcset="../images/webp/main-slide.webp"><img class = "slide__photo" src = "../images/fallback/main-slide.png" data-mobile = "../images/fallback/main-slide-mobile.png" alt="" width="1440" height="628"></picture>
+                  <picture class="responsive-picture"><source media="(max-width: 767px)" type="image/webp" srcset="../images/webp/main-slide-mobile.webp"><source media="(max-width: 767px)" srcset="../images/fallback/main-slide-mobile.png"><source type="image/webp" srcset="../images/webp/main-slide.webp"><img class = "slide__photo" data-ui="slide__photo" src = "../images/fallback/main-slide.png" data-mobile = "../images/fallback/main-slide-mobile.png" alt="" width="1440" height="628"></picture>
                   <div class = "slide__info">
                     <p class = "slide__title">Добро пожаловать в ЯГТУ!</p>
                     <p class = "slide__description">ЯГТУ - крупный российский технический вуз, где учатся<br> более 5000 студентов и аспирантов!</p>
@@ -621,29 +621,29 @@
       <div class="container d-flex flex-wrap gap-3" style = "gap: 25px;">
         <button
           type="button"
-          class="btn btn--default btn--m button-modal"
+          class="btn btn--default btn--m button-modal" data-ui="button-modal"
           data-modal="event"
         >
           Регистрация на мероприятие</button
         ><button
           type="button"
-          class="btn btn--default btn--m button-modal"
+          class="btn btn--default btn--m button-modal" data-ui="button-modal"
           data-modal="event"
           data-modal-state="success"
         >
           Успешная отправка</button
         >
       </div>
-      <div class="modal modal--event" data-modal="event" role="dialog" aria-modal="true" aria-labelledby="event-modal-title">
-      <div class="modal-overlay">
+      <div class="modal modal--event" data-ui="modal" data-modal="event" role="dialog" aria-modal="true" aria-labelledby="event-modal-title">
+      <div class="modal-overlay" data-ui="modal-overlay">
         <div class="modal-body">
-          <button type="button" class="modal-close btn btn--default" aria-label="Закрыть окно"><img src="../images/svg/close.svg" alt=""></button>
-          <div class="modal-header d-flex flex-column">
-            <h2 class="modal-header__title title" id="event-modal-title">Регистрация на мероприятие</h2>
+          <button type="button" class="modal-close btn btn--default" data-ui="modal-close" aria-label="Закрыть окно"><svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#close"></use></svg></button>
+          <div class="modal-header d-flex flex-column" data-ui="modal-header">
+            <h2 class="modal-header__title title" data-ui="modal-header__title" id="event-modal-title">Регистрация на мероприятие</h2>
             <p class="modal-header__subtitle">Выберите мероприятие и укажите контактные данные для регистрации.</p>
           </div>
           <!-- Статическая демонстрация. Отправка подключается при интеграции с 1С-Битрикс. -->
-          <form class="modal-form d-flex flex-column" data-modal-demo>
+          <form class="modal-form d-flex flex-column" data-ui="modal-form" data-modal-demo>
             <div class="modal-form__select">
               <select name="event" aria-label="Выбор мероприятия" required>
                 <option value="" selected disabled>Выбор мероприятия</option>
@@ -658,9 +658,9 @@
               <label><input type="radio" name="school-class" value="8-9" required>8–9 класс</label>
               <label><input type="radio" name="school-class" value="10-11" required>10–11 класс</label>
             </fieldset>
-            <div class="input--container"><input type="text" name="name" placeholder="ФИО*" aria-label="ФИО" autocomplete="name" required></div>
-            <div class="input--container"><input type="email" name="email" placeholder="Email*" aria-label="Email" autocomplete="email" required></div>
-            <div class="input--container"><input type="text" data-validate="phone" name="phone" placeholder="Телефон*" aria-label="Телефон" autocomplete="tel" required></div>
+            <div class="input--container" data-ui="input--container"><input type="text" name="name" placeholder="ФИО*" aria-label="ФИО" autocomplete="name" required></div>
+            <div class="input--container" data-ui="input--container"><input type="email" name="email" placeholder="Email*" aria-label="Email" autocomplete="email" required></div>
+            <div class="input--container" data-ui="input--container"><input type="text" data-validate="phone" name="phone" placeholder="Телефон*" aria-label="Телефон" autocomplete="tel" required></div>
             <div class="modal-form__footer">
               <button type="submit" class="btn btn--default btn--m">Зарегистрироваться</button>
               <div class="modal-form__checkboxes d-flex flex-column">
@@ -669,10 +669,10 @@
               </div>
             </div>
           </form>
-          <div class="modal-success" hidden tabindex="-1">
+          <div class="modal-success" data-ui="modal-success" hidden tabindex="-1">
             <div class="modal-success__heading">
               <img class="modal-success__icon" src="../images/svg/modal-success-check.svg" width="120" height="120" alt="">
-              <h2 class="modal-success__title" id="event-success-title">Ваша заявка принята</h2>
+              <h2 class="modal-success__title" data-ui="modal-success__title" id="event-success-title">Ваша заявка принята</h2>
             </div>
             <p class="modal-success__text">Спасибо за обращение! Мы свяжемся с вами по указанным контактным данным.</p>
             <button type="button" class="modal-success__back" data-modal-back>Назад</button>
@@ -694,14 +694,14 @@
           </div>
           <div class="ui-kit__sample">
             <div class="events">
-              <div class="events__wrapper">
+              <div class="events__wrapper" data-ui="events__wrapper">
                 <div
-                  class="events__header events__header--fade"
+                  class="events__header events__header--fade" data-ui="events__header--fade"
                   role="group"
                   aria-label="Новости и события"
                 >
                   <button type="button"
-                    class="title events__title active tab"
+                    class="title events__title active tab" data-ui="tab"
                     data-value="tab"
                     data-tab="events"
                     aria-pressed="true"
@@ -710,7 +710,7 @@
                   </button>
                   <div class="events__separator"></div>
                   <button type="button"
-                    class="title events__title unactive tab"
+                    class="title events__title unactive tab" data-ui="tab"
                     data-value="tab"
                     data-tab="news"
                     aria-pressed="false"
@@ -719,17 +719,17 @@
                   </button>
                 </div>
                 <div
-                  class="events__container active"
+                  class="events__container active" data-ui="events__container"
                   data-value="tab-container"
                   data-tab="events"
                 >
-                  <div class="events__content">
-                    <div class="event__card">
+                  <div class="events__content" data-ui="events__content">
+                    <div class="event__card" data-ui="event__card">
                       <div class="event__photo">
                         <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/banner1.webp"><img loading="lazy" decoding="async" src="../images/fallback/banner1.png" alt="Выступление с презентацией анализа 3D-сканов деталей" width="462" height="231"></picture>
                       </div>
                       <div class="event__content">
-                        <p class="event__title">
+                        <p class="event__title" data-ui="event__title">
                           Международная научно-практическая конференция
                           «Экологическая безопасность водных объектов»
                         </p>
@@ -744,7 +744,7 @@
                           <div class="event__footer">
                             <button
                               type="button"
-                              class="btn btn--link btn--blue button-modal"
+                              class="btn btn--link btn--blue button-modal" data-ui="button-modal"
                               data-modal="event"
                             >
                               Зарегистрироваться
@@ -762,12 +762,12 @@
                         <div class="event__tag">Онлайн</div>
                       </div>
                     </div>
-                    <div class="event__card">
+                    <div class="event__card" data-ui="event__card">
                       <div class="event__photo">
                         <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/banner1.webp"><img loading="lazy" decoding="async" src="../images/fallback/banner1.png" alt="Выступление с презентацией анализа 3D-сканов деталей" width="462" height="231"></picture>
                       </div>
                       <div class="event__content">
-                        <p class="event__title">
+                        <p class="event__title" data-ui="event__title">
                           Исторический квиз "Я помню! Я горжусь!"
                         </p>
                         <div class="event__body">
@@ -781,7 +781,7 @@
                           <div class="event__footer">
                             <button
                               type="button"
-                              class="btn btn--link btn--blue button-modal"
+                              class="btn btn--link btn--blue button-modal" data-ui="button-modal"
                               data-modal="event"
                             >
                               Зарегистрироваться
@@ -799,12 +799,12 @@
                         <div class="event__tag">Онлайн</div>
                       </div>
                     </div>
-                    <div class="event__card">
+                    <div class="event__card" data-ui="event__card">
                       <div class="event__photo">
                         <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/banner1.webp"><img loading="lazy" decoding="async" src="../images/fallback/banner1.png" alt="Выступление с презентацией анализа 3D-сканов деталей" width="462" height="231"></picture>
                       </div>
                       <div class="event__content">
-                        <p class="event__title">
+                        <p class="event__title" data-ui="event__title">
                           Акселератор «ПолиТех.Индустрия 5.0»
                         </p>
                         <div class="event__body">
@@ -818,7 +818,7 @@
                           <div class="event__footer">
                             <button
                               type="button"
-                              class="btn btn--link btn--blue button-modal"
+                              class="btn btn--link btn--blue button-modal" data-ui="button-modal"
                               data-modal="event"
                             >
                               Зарегистрироваться
@@ -845,13 +845,14 @@
                   </a>
                 </div>
                 <div
-                  class="events__container unactive"
+                  class="events__container unactive" data-ui="events__container"
                   data-value="tab-container"
                   data-tab="news"
                 >
-                  <div class="events__content">
-                    <a class="news__card" href="news-events.html">
-                      <div class="news__photo">
+                  <div class="events__content" data-ui="events__content">
+                    <a class="news__card" data-ui="news__card" href="news-events.html">
+                      <div class="news__photo"><svg class="news__arrow ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#arrow-white"></use></svg>
+
                         <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/banner-news.webp"><img loading="lazy" decoding="async" src="../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета" width="462" height="339"></picture>
                       </div>
                       <div class="news__content">
@@ -863,13 +864,14 @@
                           >
                         </div>
                         <div class="news__tags">
-                          <p class="news__tag">приемная кампания</p>
-                          <p class="news__tag">поступающим</p>
+                          <p class="news__tag" data-ui="news__tag">приемная кампания</p>
+                          <p class="news__tag" data-ui="news__tag">поступающим</p>
                         </div>
                       </div>
                     </a>
-                    <div class="news__card">
-                      <div class="news__photo">
+                    <div class="news__card" data-ui="news__card">
+                      <div class="news__photo"><svg class="news__arrow ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#arrow-white"></use></svg>
+
                         <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/banner-news.webp"><img loading="lazy" decoding="async" src="../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета" width="462" height="339"></picture>
                       </div>
                       <div class="news__content">
@@ -880,13 +882,14 @@
                           >
                         </div>
                         <div class="news__tags">
-                          <p class="news__tag">приемная кампания</p>
-                          <p class="news__tag">поступающим</p>
+                          <p class="news__tag" data-ui="news__tag">приемная кампания</p>
+                          <p class="news__tag" data-ui="news__tag">поступающим</p>
                         </div>
                       </div>
                     </div>
-                    <div class="news__card">
-                      <div class="news__photo">
+                    <div class="news__card" data-ui="news__card">
+                      <div class="news__photo"><svg class="news__arrow ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#arrow-white"></use></svg>
+
                         <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/banner-news.webp"><img loading="lazy" decoding="async" src="../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета" width="462" height="339"></picture>
                       </div>
                       <div class="news__content">
@@ -898,8 +901,8 @@
                           >
                         </div>
                         <div class="news__tags">
-                          <p class="news__tag">приемная кампания</p>
-                          <p class="news__tag">поступающим</p>
+                          <p class="news__tag" data-ui="news__tag">приемная кампания</p>
+                          <p class="news__tag" data-ui="news__tag">поступающим</p>
                         </div>
                       </div>
                     </div>
@@ -925,7 +928,7 @@
           </div>
           <div class="ui-kit__sample">
             <div
-              class="events__tags"
+              class="events__tags" data-ui="events__tags"
               data-value="tab-container"
               data-tab="news"
             >
@@ -1206,30 +1209,30 @@
                   </a>
                 </div>
 
-                <dl class="university-statistics__numbers">
+                <dl class="university-statistics__numbers" data-ui="university-statistics__numbers">
                   <div class="university-statistics__number-item">
-                    <dt class="university-statistics__number">1944</dt>
+                    <dt class="university-statistics__number" data-ui="university-statistics__number">1944</dt>
                     <dd class="university-statistics__number-label">
                       Год основания
                     </dd>
                   </div>
 
                   <div class="university-statistics__number-item">
-                    <dt class="university-statistics__number">&gt;5 000</dt>
+                    <dt class="university-statistics__number" data-ui="university-statistics__number">&gt;5 000</dt>
                     <dd class="university-statistics__number-label">
                       Студентов
                     </dd>
                   </div>
 
                   <div class="university-statistics__number-item">
-                    <dt class="university-statistics__number">900</dt>
+                    <dt class="university-statistics__number" data-ui="university-statistics__number">900</dt>
                     <dd class="university-statistics__number-label">
                       Бюджетных мест
                     </dd>
                   </div>
 
                   <div class="university-statistics__number-item">
-                    <dt class="university-statistics__number">&gt;50</dt>
+                    <dt class="university-statistics__number" data-ui="university-statistics__number">&gt;50</dt>
                     <dd class="university-statistics__number-label">
                       Направлений подготовки
                     </dd>
@@ -1237,7 +1240,7 @@
                 </dl>
               </div>
 
-              <ul class="structure__institutes no-border">
+              <ul class="structure__institutes no-border" data-ui="structure__institutes">
                 <li class="structure__institute">
                   <a class="structure__institute-link" href="detail-structure.html">
                     <h2 class="structure__institute-title">
@@ -1419,7 +1422,7 @@
             <section class="banner-slider">
               <div class="container">
                 <div
-                  class="swiper js-init-banner-slider banner-slider-1 default-slider"
+                  class="swiper js-init-banner-slider banner-slider-1 default-slider" data-slider-kind="1"
                 >
                   <div class="swiper-wrapper">
                     <div class="swiper-slide banner__body">
@@ -1464,7 +1467,7 @@
             <section class="banner-slider">
               <div class="container">
                 <div
-                  class="swiper js-init-banner-slider banner-slider-2 default-slider"
+                  class="swiper js-init-banner-slider banner-slider-2 default-slider" data-slider-kind="2"
                 >
                   <div class="swiper-wrapper">
                     <div class="swiper-slide banner__body">
@@ -1508,7 +1511,7 @@
             </section>
             <section class="banner-slider">
               <div class="container">
-                <div class = "swiper js-init-banner-slider banner-slider-3 banner-slider-3--featured default-slider">
+                <div class = "swiper js-init-banner-slider banner-slider-3 banner-slider-3--featured default-slider" data-slider-kind="3">
                 <div class = "swiper-wrapper">
                   <div class="swiper-slide banner__group">
 <a class="banner__body" href="#">
@@ -1668,10 +1671,10 @@
                     </div>
                     <div class="default-slider-controls">
                       <button type="button" class="swiper-button-prev" aria-label="Предыдущий слайд"></button>
-                      <button type="button" class="swiper-button-prev big" aria-label="Предыдущий слайд"></button>
+                      <button type="button" class="swiper-button-prev big" data-slider-control="prev-big" data-ui="big" aria-label="Предыдущий слайд"></button>
                       <div class="swiper-pagination"></div>
                       <button type="button" class="swiper-button-next" aria-label="Следующий слайд"></button>
-                      <button type="button" class="swiper-button-next big" aria-label="Следующий слайд"></button>
+                      <button type="button" class="swiper-button-next big" data-slider-control="next-big" data-ui="big" aria-label="Следующий слайд"></button>
                     </div>
                   </div>
                 </article>
@@ -1719,10 +1722,10 @@
                     </div>
                     <div class="default-slider-controls">
                       <button type="button" class="swiper-button-prev" aria-label="Предыдущий слайд"></button>
-                      <button type="button" class="swiper-button-prev big" aria-label="Предыдущий слайд"></button>
+                      <button type="button" class="swiper-button-prev big" data-slider-control="prev-big" data-ui="big" aria-label="Предыдущий слайд"></button>
                       <div class="swiper-pagination"></div>
                       <button type="button" class="swiper-button-next" aria-label="Следующий слайд"></button>
-                      <button type="button" class="swiper-button-next big" aria-label="Следующий слайд"></button>
+                      <button type="button" class="swiper-button-next big" data-slider-control="next-big" data-ui="big" aria-label="Следующий слайд"></button>
                     </div>
                   </div>
                 </article>
@@ -1971,14 +1974,14 @@
             </h2>
 
             <div class="program-education__list">
-              <div class="program-education__item dropdown--item open">
-                <div class="program-education__header dropdown--header">
-                  <h3 class="program-education__name"><button class="dropdown--trigger" type="button">
+              <div class="program-education__item dropdown--item open" data-ui="dropdown--item">
+                <div class="program-education__header dropdown--header" data-ui="dropdown--header">
+                  <h3 class="program-education__name"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="true" type="button">
                     Архитектурное проектирование
                   </button></h3>
                 </div>
 
-                <div class="program-education__content dropdown--content">
+                <div class="program-education__content dropdown--content" data-ui="dropdown--content">
                   <section class="program-education__section">
                     <div class="program-education__caption">
                       <h4>Основные дисциплины</h4>
@@ -2011,14 +2014,14 @@
                 </div>
               </div>
 
-              <div class="program-education__item dropdown--item">
-                <div class="program-education__header dropdown--header">
-                  <h3 class="program-education__name"><button class="dropdown--trigger" type="button">
+              <div class="program-education__item dropdown--item" data-ui="dropdown--item">
+                <div class="program-education__header dropdown--header" data-ui="dropdown--header">
+                  <h3 class="program-education__name"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="false" type="button">
                     Дизайн городской среды
                   </button></h3>
                 </div>
 
-                <div class="program-education__content dropdown--content">
+                <div class="program-education__content dropdown--content" data-ui="dropdown--content">
                   <section class="program-education__section">
                     <div class="program-education__caption">
                       <h4>Основные дисциплины</h4>
@@ -2052,6 +2055,7 @@
               </div>
             </div>
         </section>
+
           </div>
         </section>
         <!-- Вступительные испытания: program.html -->
@@ -2090,7 +2094,7 @@
               </li>
             </ul>
 
-            <div class="program-exams__description wyswig">
+            <div class="program-exams__description wyswig" data-ui="wyswig">
               <p>
                 Для приема на направление 07.03.01 «Архитектура» предусмотрены
                 два дополнительных вступительных<br> испытания творческой направленности:
@@ -2192,7 +2196,7 @@
             </p>
             <p>Компонент: <code>.listing-page__intro</code></p>
           </div>
-          <div class="ui-kit__sample listing-page listing-page--programs">
+          <div class="ui-kit__sample listing-page listing-page--programs" data-ui="listing-page">
             <section class="listing-page__intro container">
               <h1 class="listing-page__title">
                 Образовательные программы 2026
@@ -2205,7 +2209,7 @@
                     <div class="catalog-search">
                   <p>найти направление</p>
                   <input
-                    class="catalog-search__input"
+                    class="catalog-search__input" data-ui="catalog-search__input"
                     name="query"
                     type="search"
                     aria-label="Найти направление"
@@ -2214,7 +2218,7 @@
                     type="submit"
                     aria-label="Найти"
                   >
-                    <img src="../images/svg/vacancy-search.svg" alt="" />
+                    <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#vacancy-search"></use></svg>
                   </button>
                 </div>
                     <div class="catalog-filter-group">
@@ -2364,10 +2368,10 @@
                 </aside>
 
                 <section aria-label="Список образовательных программ">
-                  <div class="listing-page__mobile-tools">
+                  <div class="listing-page__mobile-tools" data-ui="listing-page__mobile-tools">
                     <form class="catalog-search" method="get" role="search">
                   <input
-                    class="catalog-search__input"
+                    class="catalog-search__input" data-ui="catalog-search__input"
                     name="query"
                     type="search"
                     placeholder="найти направление"
@@ -2377,7 +2381,7 @@
                     type="submit"
                     aria-label="Найти"
                   >
-                    <img src="../images/svg/vacancy-search.svg" alt="" />
+                    <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#vacancy-search"></use></svg>
                   </button>
                 </form>
 
@@ -2388,11 +2392,11 @@
                       aria-controls="ui-22-program-filter-panel"
                       aria-expanded="false"
                     >
-                      Фильтры<img src="../images/svg/filters.svg" alt="" />
+                      Фильтры<svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#filters"></use></svg>
                     </button>
                   </div>
-                  <div class="listing-page__results">
-                    <article class="program-card" data-catalog-filters='{"education_level":["bachelor"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","creative"]}'>
+                  <div class="listing-page__results" data-ui="listing-page__results">
+                    <article class="program-card" data-ui="program-card" data-catalog-filters='{"education_level":["bachelor"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","creative"]}'>
                       <div class="program-card__content">
                         <div class="program-card__body">
                           <div class="program-card__tags">
@@ -2439,7 +2443,7 @@
                         </div>
                       </dl>
                     </article>
-                    <article class="program-card" data-catalog-filters='{"education_level":["bachelor"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
+                    <article class="program-card" data-ui="program-card" data-catalog-filters='{"education_level":["bachelor"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
                       <div class="program-card__content">
                         <div class="program-card__body">
                           <div class="program-card__tags">
@@ -2485,7 +2489,7 @@
                         </div>
                       </dl>
                     </article>
-                    <article class="program-card" data-catalog-filters='{"education_level":["master"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
+                    <article class="program-card" data-ui="program-card" data-catalog-filters='{"education_level":["master"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
                       <div class="program-card__content">
                         <div class="program-card__body">
                           <div class="program-card__tags">
@@ -2535,7 +2539,7 @@
                         </div>
                       </dl>
                     </article>
-                    <article class="program-card" data-catalog-filters='{"education_level":["master"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
+                    <article class="program-card" data-ui="program-card" data-catalog-filters='{"education_level":["master"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
                       <div class="program-card__content">
                         <div class="program-card__body">
                           <div class="program-card__tags">
@@ -2585,7 +2589,7 @@
                         </div>
                       </dl>
                     </article>
-                    <article class="program-card" data-catalog-filters='{"education_level":["master"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
+                    <article class="program-card" data-ui="program-card" data-catalog-filters='{"education_level":["master"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
                       <div class="program-card__content">
                         <div class="program-card__body">
                           <div class="program-card__tags">
@@ -2656,7 +2660,7 @@
                       data-close-filter-panel=""
                       aria-label="Закрыть фильтры"
                     >
-                      <img src="../images/svg/close-white.svg" alt="" />
+                      <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#close-white"></use></svg>
                     </button>
                   </header>
                   <form
@@ -2716,7 +2720,7 @@
             <p>Компонент: <code>.listing-page__intro</code></p>
           </div>
           <div
-            class="ui-kit__sample container listing-page listing-page--vacancies"
+            class="ui-kit__sample container listing-page listing-page--vacancies" data-ui="listing-page"
           >
             <section class="listing-page__intro">
               <h1 class="listing-page__title">Работа в ЯГТУ</h1>
@@ -2742,7 +2746,7 @@
             <p>Компонент: <code>.vacancy-card</code></p>
           </div>
           <div class="ui-kit__sample">
-            <article class="vacancy-card" data-catalog-filters='{"category":["administrative"],"experience":["1-plus"],"employment":["full"],"work_format":["office"]}'>
+            <article class="vacancy-card" data-ui="vacancy-card" data-catalog-filters='{"category":["administrative"],"experience":["1-plus"],"employment":["full"],"work_format":["office"]}'>
               <img
                 class="vacancy-card__pattern"
                 src="../images/svg/vacancy-pattern.svg"
@@ -2828,7 +2832,7 @@
               <div class="detail-vacancy__body">
                 <div class = "detail-vacancy__info d-flex flex-column">
               <p>Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem. In malesuada vitae urna mattis tortor aenean porttitor aenean. Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem. In malesuada vitae urna mattis tortor aenean porttitor aenean.</p>
-              <button type = "button" class = "btn btn--default btn--m button-modal" data-modal="vacancy">Откликнуться</button>
+              <button type = "button" class = "btn btn--default btn--m button-modal" data-ui="button-modal" data-modal="vacancy">Откликнуться</button>
             </div>
                 <div class = "detail-vacancy__resume d-flex flex-column">
               <div class = "resume-data d-flex flex-column">
@@ -2846,24 +2850,24 @@
             </div>
               </div>
               <div class = "detail-vacancy__content d-flex flex-column">
-            <div class = "detail-vacancy__list wyswig d-flex flex-column">
-              <p class = "detail-vacancy__list__title">Обязанности</p>
+            <div class = "detail-vacancy__list wyswig" data-ui="wyswig">
+              <h2>Обязанности</h2>
               <ul>
                 <li>Ведение электронного документооборота в программном обеспечении.</li>
                 <li>Работа с таблицами и отчетами по профилю деятельности подразделения.</li>
                 <li>Рассмотрение и сортировка документов.</li>
               </ul>
             </div>
-            <div class = "detail-vacancy__list wyswig d-flex flex-column">
-              <p class = "detail-vacancy__list__title">Требования</p>
+            <div class = "detail-vacancy__list wyswig" data-ui="wyswig">
+              <h2>Требования</h2>
               <ul>
                 <li>Образование высшее техническое</li>
                 <li>Опыт оформления технической документации</li>
                 <li>Опыт работы от 1 года</li>
               </ul>
             </div>
-            <div class = "detail-vacancy__list wyswig d-flex flex-column">
-              <p class = "detail-vacancy__list__title">Условия</p>
+            <div class = "detail-vacancy__list wyswig" data-ui="wyswig">
+              <h2>Условия</h2>
               <ul>
                 <li>Релевантный опыт позволяет обсуждать заработную плату на собеседовании</li>
                 <li>График работы дневной с 8.3 до 17.00, 5/2</li>
@@ -2951,49 +2955,49 @@
             <div class="container d-flex flex-row" style = "gap: 40px;">
               <button
                 type="button"
-                class="btn btn--default btn--m button-modal"
+                class="btn btn--default btn--m button-modal" data-ui="button-modal"
                 data-modal="vacancy"
               >
                 Открыть форму отклика
               </button>
               <button
                 type="button"
-                class="btn btn--default btn--m button-modal"
+                class="btn btn--default btn--m button-modal" data-ui="button-modal"
                 data-modal="vacancy"
                 data-modal-state="success"
               >
                 Успешная отправка — вакансия
               </button>
             </div>
-            <div class = "modal" data-modal="vacancy" role="dialog" aria-modal="true" aria-labelledby="ui-28-vacancy-modal-title">
-      <div class = "modal-overlay">
+            <div class = "modal" data-ui="modal" data-modal="vacancy" role="dialog" aria-modal="true" aria-labelledby="ui-28-vacancy-modal-title">
+      <div class = "modal-overlay" data-ui="modal-overlay">
         <div class = "modal-body">
-          <button type = "button" class = "modal-close btn btn--default" data-modal="vacancy" aria-label="Закрыть окно">
-            <img src = "../images/svg/close.svg" alt="">
+          <button type = "button" class = "modal-close btn btn--default" data-ui="modal-close" data-modal="vacancy" aria-label="Закрыть окно">
+            <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#close"></use></svg>
           </button>
-          <div class = "modal-header d-flex flex-column">
-            <h2 class = "modal-header__title title" id="ui-28-vacancy-modal-title">Отклик на вакансию</h2>
+          <div class = "modal-header d-flex flex-column" data-ui="modal-header">
+            <h2 class = "modal-header__title title" data-ui="modal-header__title" id="ui-28-vacancy-modal-title">Отклик на вакансию</h2>
             <p class = "modal-header__subtitle">Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae.</p>
           </div>
-          <form class="modal-form d-flex flex-column" data-modal-demo>
-            <div class = "input--container">
+          <form class="modal-form d-flex flex-column" data-ui="modal-form" data-modal-demo>
+            <div class = "input--container" data-ui="input--container">
               <input type="text" name="name" id="ui-28-vacancy-name" placeholder="ФИО*" aria-label="ФИО" autocomplete="name" required>
-              <span class="error-text">Укажите ФИО.</span>
+              <span class="error-text" data-ui="error-text">Укажите ФИО.</span>
             </div>
-            <div class = "input--container">
+            <div class = "input--container" data-ui="input--container">
               <input type="email" name="email" id="ui-28-vacancy-email" placeholder="Email*" aria-label="Email" autocomplete="email" required>
-              <span class="error-text">Укажите корректный email.</span>
+              <span class="error-text" data-ui="error-text">Укажите корректный email.</span>
             </div>
-            <div class = "input--container">
+            <div class = "input--container" data-ui="input--container">
               <input type="text" name="phone" id="ui-28-vacancy-phone" placeholder="Телефон*" aria-label="Телефон" autocomplete="tel" inputmode="tel" data-validate="phone" required>
-              <span class="error-text">Укажите телефон полностью.</span>
+              <span class="error-text" data-ui="error-text">Укажите телефон полностью.</span>
             </div>
             <div class = "modal-form__file">
               <span class = "modal-form__file-title">Резюме</span>
               <input class = "visually-hidden" type = "file" name = "resume" id = "ui-28-vacancy-resume">
-              <label class = "modal-form__file-button" for = "ui-28-vacancy-resume">
+              <label class = "modal-form__file-button" data-ui="modal-form__file-button" for = "ui-28-vacancy-resume">
                 <img src = "../images/svg/upload-file.svg" alt="">
-                <span class="modal-form__file-label" aria-live="polite">Прикрепить файл</span>
+                <span class="modal-form__file-label" data-ui="modal-form__file-label" aria-live="polite">Прикрепить файл</span>
               </label>
             </div>
             <textarea name = "comment" id = "ui-28-vacancy-comment" placeholder="Комментарии/Сопроводительное письмо"></textarea>
@@ -3011,10 +3015,10 @@
               </div>
             </div>
           </form>
-                    <div class="modal-success" hidden tabindex="-1">
+                    <div class="modal-success" data-ui="modal-success" hidden tabindex="-1">
             <div class="modal-success__heading">
               <img class="modal-success__icon" src="../images/svg/modal-success-check.svg" width="120" height="120" alt="">
-              <h2 class="modal-success__title" id="ui-vacancy-success-title">Ваша заявка принята</h2>
+              <h2 class="modal-success__title" data-ui="modal-success__title" id="ui-vacancy-success-title">Ваша заявка принята</h2>
             </div>
             <p class="modal-success__text">Спасибо за обращение! Мы свяжемся с вами по указанным контактным данным.</p>
             <button type="button" class="modal-success__back" data-modal-back>Назад</button>
@@ -3036,15 +3040,15 @@
           </div>
           <div class="ui-kit__sample">
             <section class="structure">
-              <div class="container structure__container">
+              <div class="container structure__container" data-ui="structure__container">
                 <h1 class="title">Структура университета</h1>
-                <div class="structure__tags">
+                <div class="structure__tags" data-ui="structure__tags">
                   <div class="structure__tag tag select">Институты</div>
                   <div class="structure__tag tag">Кафедры</div>
                   <div class="structure__tag tag">Корпуса и общежитие</div>
                   <div class="structure__tag tag">Службы и отделы</div>
                 </div>
-                <ul class="structure__institutes">
+                <ul class="structure__institutes" data-ui="structure__institutes">
                   <li class="structure__institute">
                     <a class="structure__institute-link" href="#">
                       <h2 class="structure__institute-title">
@@ -3247,7 +3251,7 @@
           </div>
           <div class="ui-kit__sample container structure-detail">
             <section
-              class="structure-detail__section"
+              class="structure-detail__section" data-ui="structure-detail__section"
               aria-labelledby="ui-31-training-programs-title"
             >
               <h2
@@ -3257,7 +3261,7 @@
                 Программы подготовки
               </h2>
               <div
-                class="structure-detail__tabs" role="group"
+                class="structure-detail__tabs" data-ui="structure-detail__tabs" role="group"
                 aria-label="Уровень образования"
               >
                 <button class="btn structure-detail__tab select" type="button">
@@ -3269,7 +3273,7 @@
                 </button>
               </div>
               <div class="training-programs">
-                <article class="training-program-card">
+                <article class="training-program-card" data-ui="training-program-card">
                   <div class="training-program-card__tags">
                     <span class="bakalavr">Бакалавриат</span><span>Очно</span>
                   </div>
@@ -3296,7 +3300,7 @@
                     </div>
                   </div>
                 </article>
-                <article class="training-program-card">
+                <article class="training-program-card" data-ui="training-program-card">
                   <div class="training-program-card__tags">
                     <span class="bakalavr">Бакалавриат</span><span>Очно</span>
                   </div>
@@ -3323,7 +3327,7 @@
                     </div>
                   </div>
                 </article>
-                <article class="training-program-card">
+                <article class="training-program-card" data-ui="training-program-card">
                   <div class="training-program-card__tags">
                     <span class="magistratura">Магистратура</span
                     ><span>Очно</span>
@@ -3351,7 +3355,7 @@
                     </div>
                   </div>
                 </article>
-                <article class="training-program-card">
+                <article class="training-program-card" data-ui="training-program-card">
                   <div class="training-program-card__tags">
                     <span class="magistratura">Магистратура</span
                     ><span>Очно</span>
@@ -3396,7 +3400,7 @@
           </div>
           <div class="ui-kit__sample container structure-detail">
             <section
-              class="structure-detail__section structure-about"
+              class="structure-detail__section structure-about" data-ui="structure-detail__section"
               aria-labelledby="ui-32-about-institute-title"
             >
               <h2
@@ -3515,7 +3519,7 @@
           </div>
           <div class="ui-kit__sample container structure-detail">
             <section
-              class="structure-detail__section"
+              class="structure-detail__section" data-ui="structure-detail__section"
               aria-labelledby="ui-33-management-title"
             >
               <h2
@@ -3526,9 +3530,9 @@
               </h2>
               <div class="structure-person-card">
                 <div class="structure-person-card__person">
-                  <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/structure-head.webp"><img loading="lazy" decoding="async"
-                    src="../images/fallback/structure-head.png"
-                    alt="Степанова Елена Олеговна" width="1600" height="1067"></picture>
+                  <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/stepanova.webp"><img loading="lazy" decoding="async"
+                    src="../images/fallback/stepanova.png"
+                    alt="Степанова Елена Олеговна" width="300" height="302"></picture>
                   <div>
                     <h3>Степанова Елена Олеговна</h3>
                     <p>Ректор, к.э.н., доцент</p>
@@ -3570,7 +3574,7 @@
           </div>
           <div class="ui-kit__sample container structure-detail">
             <section
-              class="structure-detail__section"
+              class="structure-detail__section" data-ui="structure-detail__section"
               aria-labelledby="ui-34-employees-title"
             >
               <h2
@@ -3709,12 +3713,12 @@
               </div>
               </div>
               <div class="sotrudnik__contents d-flex flex-column">
-                <div class="dropdown--item open">
-                  <div class="dropdown--header">
-                    <h3 class="dropdown--item__title"><button class="dropdown--trigger" type="button">Полномочия и функции</button></h3>
+                <div class="dropdown--item open" data-ui="dropdown--item">
+                  <div class="dropdown--header" data-ui="dropdown--header">
+                    <h3 class="dropdown--item__title"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="true" type="button">Полномочия и функции</button></h3>
                   </div>
 
-                  <div class="dropdown--content sotrudnik__content wyswig">
+                  <div class="dropdown--content sotrudnik__content wyswig" data-ui="dropdown--content wyswig">
                     <b>Ректор университета:</b>
                     <br /><br />
                     <ul>
@@ -3872,12 +3876,12 @@
                     </p>
                   </div>
                 </div>
-                <div class="dropdown--item">
-                  <div class="dropdown--header">
-                    <h3 class="dropdown--item__title"><button class="dropdown--trigger" type="button">О сотруднике</button></h3>
+                <div class="dropdown--item" data-ui="dropdown--item">
+                  <div class="dropdown--header" data-ui="dropdown--header">
+                    <h3 class="dropdown--item__title"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="false" type="button">О сотруднике</button></h3>
                   </div>
 
-                  <div class="dropdown--content sotrudnik__content wyswig">
+                  <div class="dropdown--content sotrudnik__content wyswig" data-ui="dropdown--content wyswig">
                     <b>Ректор университета:</b>
                     <br /><br />
                     <ul>
@@ -4035,12 +4039,12 @@
                     </p>
                   </div>
                 </div>
-                <div class="dropdown--item">
-                  <div class="dropdown--header">
-                    <h3 class="dropdown--item__title"><button class="dropdown--trigger" type="button">Научные труды</button></h3>
+                <div class="dropdown--item" data-ui="dropdown--item">
+                  <div class="dropdown--header" data-ui="dropdown--header">
+                    <h3 class="dropdown--item__title"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="false" type="button">Научные труды</button></h3>
                   </div>
 
-                  <div class="dropdown--content sotrudnik__content wyswig">
+                  <div class="dropdown--content sotrudnik__content wyswig" data-ui="dropdown--content wyswig">
                     <b>Ректор университета:</b>
                     <br /><br />
                     <ul>
@@ -4198,14 +4202,14 @@
                     </p>
                   </div>
                 </div>
-                <div class="dropdown--item">
-                  <div class="dropdown--header">
-                    <h3 class="dropdown--item__title"><button class="dropdown--trigger" type="button">
+                <div class="dropdown--item" data-ui="dropdown--item">
+                  <div class="dropdown--header" data-ui="dropdown--header">
+                    <h3 class="dropdown--item__title"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="false" type="button">
                       Дополнительные функции
                     </button></h3>
                   </div>
 
-                  <div class="dropdown--content sotrudnik__content wyswig">
+                  <div class="dropdown--content sotrudnik__content wyswig" data-ui="dropdown--content wyswig">
                     <b>Ректор университета:</b>
                     <br /><br />
                     <ul>
@@ -4380,12 +4384,12 @@
               <div class="science-list container d-flex flex-column">
                 <h1 class="title science-list__title">Научные журналы ЯГТУ</h1>
                 <div class="science-list__content d-flex flex-column">
-                  <div class="dropdown--item open">
-                <div class="science-detail dropdown--header">
-                  <h2 class="science-detail__title"><button class="dropdown--trigger" type="button">Журнал: «Теоретическая экономика»</button></h2>
+                  <div class="dropdown--item open" data-ui="dropdown--item">
+                <div class="science-detail dropdown--header" data-ui="dropdown--header">
+                  <h2 class="science-detail__title"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="true" type="button">Журнал: «Теоретическая экономика»</button></h2>
                 </div>
 
-                <div class="dropdown--content">
+                <div class="dropdown--content" data-ui="dropdown--content">
                   <section class = "science-detail__section">
                     <div class = "science-detail__content d-flex flex-row">
                       <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/journal.webp"><img loading="lazy" decoding="async" class = "science-detail__photo" src = "../images/fallback/journal.png" alt="Обложка научного журнала «Теоретическая экономика», № 10 (70), 2020" width="586" height="330"></picture>
@@ -4432,12 +4436,13 @@
                   </section>
                 </div>
               </div>
-                  <div class="dropdown--item">
-                <div class="science-detail dropdown--header">
-                  <h2 class="science-detail__title"><button class="dropdown--trigger" type="button">Журнал «Journal of regional and international competitiveness»</button></h2>
+
+                  <div class="dropdown--item" data-ui="dropdown--item">
+                <div class="science-detail dropdown--header" data-ui="dropdown--header">
+                  <h2 class="science-detail__title"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="false" type="button">Журнал «Journal of regional and international competitiveness»</button></h2>
                 </div>
 
-                <div class="dropdown--content science-detail__content wyswig">
+                <div class="dropdown--content science-detail__content wyswig" data-ui="dropdown--content wyswig">
                   <section class = "science-detail__section">
                     <div class = "science-detail__content d-flex flex-row">
                       <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/journal.webp"><img loading="lazy" decoding="async" class = "science-detail__photo" src = "../images/fallback/journal.png" alt="Обложка научного журнала «Теоретическая экономика», № 10 (70), 2020" width="586" height="330"></picture>
@@ -4478,18 +4483,19 @@
                       </div>
                     </div>
                     <div class = "science-detail__description">
-                      <p class = "science-detail__code">ISSN 2782-1919</p>
+                      <p >ISSN 2782-1919</p>
                       <p>Рецензируемый научно-практический журнал публикует работы преподавателей и сотрудников высших учебных заведений РФ, РАН, РААСН, других исследовательских подразделений, работающих в сфере промышленного и гражданского строительства и архитектуры, в том числе в странах стран СНГ и за рубежом. Рубрики журнала: строительные конструкции, здания и сооружения; строительные материалы и изделия; проектирование и строительство дорог, метрополитенов; архитектура зданий и сооружений; творческие концепции архитектурной деятельности.</p>
                     </div>
                   </section>
                 </div>
               </div>
-                  <div class="dropdown--item">
-                <div class="science-detail dropdown--header">
-                  <h2 class="science-detail__title"><button class="dropdown--trigger" type="button">Журнал: «Умные композиты в строительстве Smart Composite in Construction»</button></h2>
+
+                  <div class="dropdown--item" data-ui="dropdown--item">
+                <div class="science-detail dropdown--header" data-ui="dropdown--header">
+                  <h2 class="science-detail__title"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="false" type="button">Журнал: «Умные композиты в строительстве Smart Composite in Construction»</button></h2>
                 </div>
 
-                <div class="dropdown--content science-detail__content wyswig">
+                <div class="dropdown--content science-detail__content wyswig" data-ui="dropdown--content wyswig">
                   <section class = "science-detail__section">
                     <div class = "science-detail__content d-flex flex-row">
                       <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/journal.webp"><img loading="lazy" decoding="async" class = "science-detail__photo" src = "../images/fallback/journal.png" alt="Обложка научного журнала «Теоретическая экономика», № 10 (70), 2020" width="586" height="330"></picture>
@@ -4530,21 +4536,22 @@
                       </div>
                     </div>
                     <div class = "science-detail__description">
-                      <p class = "science-detail__code">ISSN 2782-1919</p>
+                      <p >ISSN 2782-1919</p>
                       <p>Рецензируемый научно-практический журнал публикует работы преподавателей и сотрудников высших учебных заведений РФ, РАН, РААСН, других исследовательских подразделений, работающих в сфере промышленного и гражданского строительства и архитектуры, в том числе в странах стран СНГ и за рубежом. Рубрики журнала: строительные конструкции, здания и сооружения; строительные материалы и изделия; проектирование и строительство дорог, метрополитенов; архитектура зданий и сооружений; творческие концепции архитектурной деятельности.</p>
                     </div>
                   </section>
                 </div>
               </div>
-                  <div class="dropdown--item">
-                    <div class="science-detail dropdown--header">
-                      <h2 class="science-detail__title"><button class="dropdown--trigger" type="button">
+
+                  <div class="dropdown--item" data-ui="dropdown--item">
+                    <div class="science-detail dropdown--header" data-ui="dropdown--header">
+                      <h2 class="science-detail__title"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="false" type="button">
                         «Oт химии к технологии шаг за шагом»
                       </button></h2>
                     </div>
 
                     <div
-                      class="dropdown--content science-detail__content wyswig"
+                      class="dropdown--content science-detail__content wyswig" data-ui="dropdown--content wyswig"
                     >
                       <section class="science-detail__section">
                         <div class="science-detail__content d-flex flex-row">
@@ -4596,7 +4603,7 @@
                           </div>
                         </div>
                         <div class="science-detail__description">
-                          <p class="science-detail__code">ISSN 2782-1919</p>
+                          <p >ISSN 2782-1919</p>
                           <p>
                             Рецензируемый научно-практический журнал публикует
                             работы преподавателей и сотрудников высших учебных
@@ -4680,7 +4687,7 @@
                       type="submit"
                       aria-label="Найти"
                     >
-                      <img src="../images/svg/vacancy-search.svg" alt="" />
+                      <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#vacancy-search"></use></svg>
                     </button>
                   </form>
                 </div>
@@ -4706,7 +4713,7 @@
           <div class="ui-kit__sample">
             <section class="container search-page">
               <form
-                class="search-page__form"
+                class="search-page__form" data-ui="search-page__form"
                 action="#"
                 method="get"
                 role="search"
@@ -4780,7 +4787,7 @@
               >
                 Показать уведомление повторно
               </button>
-              <div class="cookie-banner">
+              <div class="cookie-banner" data-ui="cookie-banner">
               <div class="cookie-body">
                 <div class="cookie-text">
                   Продолжая работу с сайтом, вы даете согласие на использование
@@ -4845,7 +4852,7 @@
           <p>Цвета и отступы таблицы настраиваются переменными <code>--wyswig-table-border</code>, <code>--wyswig-table-background</code>, <code>--wyswig-table-heading</code>, <code>--wyswig-table-color</code>, <code>--wyswig-table-cell-padding</code>.</p>
         </div>
         <div class="ui-kit__sample container">
-          <div class="wyswig d-flex flex-column gap-4">
+          <div class="wyswig d-flex flex-column gap-4" data-ui="wyswig">
             <h3>Текстовый блок</h3>
             <p>Пример описания из редактора: <strong>важная информация</strong>, <em>примечание</em> и обычный текст. Содержимое может редактироваться в 1С-Битрикс без добавления классов каждому абзацу.</p>
             <ul>
@@ -4874,7 +4881,30 @@
         </div>
       </section>
       <!-- Подвал: index.html -->
-      <section class="ui-kit__entry" data-ui-source="index.html">
+      <section class="ui-kit__section" id="hero-variants">
+  <div class="ui-kit__intro"><h2>Варианты баннера направления</h2><p>Страницы: <a href="program.html">программа</a>, <a href="student-life.html">студенческая жизнь</a>. Модификаторы подложки: стеклянная и сплошная синяя.</p></div>
+
+  <section class="hero-banner" aria-label="Стеклянная подложка">
+    <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/program-banner.webp"><img class="hero-banner__image" loading="lazy" src="../images/fallback/program-banner.png" alt="Учебное пространство университета" width="1376" height="768"></picture>
+    <div class="container"><div class="hero-banner__content hero-banner__content--glass">
+      <p class="hero-banner__code">07.03.01</p><h2 class="hero-banner__title">Архитектура</h2>
+      <p class="hero-banner__institute">Институт архитектуры и дизайна</p>
+      <div class="hero-banner__tags"><span class="hero-banner__tag">Бакалавриат</span><span class="hero-banner__tag">Очно</span></div>
+    </div></div>
+  </section>
+
+  <section class="hero-banner" aria-label="Синяя подложка">
+    <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/program-banner.webp"><img class="hero-banner__image" loading="lazy" src="../images/fallback/program-banner.png" alt="Учебное пространство университета" width="1376" height="768"></picture>
+    <div class="container"><div class="hero-banner__content hero-banner__content--solid">
+      <p class="hero-banner__code">07.03.01</p><h2 class="hero-banner__title">Архитектура</h2>
+      <p class="hero-banner__institute">Институт архитектуры и дизайна</p>
+      <div class="hero-banner__tags"><span class="hero-banner__tag">Бакалавриат</span><span class="hero-banner__tag">Очно</span></div>
+    </div></div>
+  </section>
+
+</section>
+
+<section class="ui-kit__entry" data-ui-source="index.html">
         <div class="ui-kit__meta container" id="ui-41">
           <h2>Подвал</h2>
           <p>
@@ -4911,19 +4941,19 @@
             <div class = "footer__body">
               <div class = "footer__header">
                 <div class = "footer__contacts">
-                  <a href = "tel:74852402199" class = "footer__phone">+7 (4852) 40-21-99</a>
-                  <a href = "mailto:info@ystu.ru" class = "footer__mail">info@ystu.ru</a>
-                  <a href = "https://yandex.ru/maps/-/CTTAVEP3" class = "footer__location">г. Ярославль, Московский проспект, 88</a>
+                  <a href = "tel:74852402199" class = "footer__phone"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#call-white"></use></svg>+7 (4852) 40-21-99</a>
+                  <a href = "mailto:info@ystu.ru" class = "footer__mail"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#mail-white"></use></svg>info@ystu.ru</a>
+                  <a href = "https://yandex.ru/maps/-/CTTAVEP3" class = "footer__location"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#location-white"></use></svg>г. Ярославль, Московский проспект, 88</a>
                 </div>
                 <div class = "footer__messages">
                   <a href = "#" aria-label="Telegram">
-                    <img src = "../images/svg/tg.svg" alt="">
+                    <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#tg"></use></svg>
                   </a>
                   <a href = "#" aria-label="ВКонтакте">
-                    <img src = "../images/svg/vk.svg" alt="">
+                    <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#vk"></use></svg>
                   </a>
                   <a href = "#" aria-label="Одноклассники">
-                    <img src = "../images/svg/ok.svg" alt="">
+                    <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#ok"></use></svg>
                   </a>
                 </div>
                 <a href =  "#">Обработка персональных данных</a>
@@ -4967,6 +4997,7 @@
           </div>
         </div>
       </footer>
+
         </div>
       </section>
     </div>

@@ -12,12 +12,12 @@
 }
 
 .error-page__description {
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .error-page .btn {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.125rem;
     min-height: 54px;
     max-width: 267px;
     white-space: nowrap;
@@ -44,12 +44,12 @@
 
     .error-page__description {
         max-width: 340px;
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .error-page .btn {
         font-weight: 500;
-        font-size: 16px;
+        font-size: 1rem;
         padding: 14px 24px;
         min-height: 47px;
         max-height: 47px;

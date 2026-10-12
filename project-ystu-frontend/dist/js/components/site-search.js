@@ -1,11 +1,12 @@
 /* Демонстрационный поиск по страницам комплекта, не по базе CMS. */
 (() => {
-    const form = document.querySelector('.search-page__form');
+    const form = document.querySelector('[data-ui~="search-page__form"]');
     if (!form) return;
     const input = form.querySelector('input');
     const pages = [['index','Главная ЯГТУ'],['programs','Образовательные программы'],['program','Архитектура — образовательная программа'],['nauka','Наука и инновации'],['student-life','Студенческая жизнь'],['news-events','Новости и события'],['detail-sotrudnik','Сотрудник университета'],['structure','Структура университета'],['detail-structure','Подразделение университета'],['map','Карта кампуса'],['vacancies','Работа в ЯГТУ — вакансии'],['detail-vacancy','Отклик на вакансию']];
     const results = document.createElement('div');
     results.className = 'search-page__results wyswig';
+    results.setAttribute('data-ui', results.className);
     results.setAttribute('aria-live','polite');
     form.after(results);
     const render = () => {

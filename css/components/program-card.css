@@ -53,8 +53,9 @@
     background: var(--subprimary-color-1);
     border: 1px solid var(--subprimary-color-1);
     border-radius: 100px;
-    font-size: 14px;
+    font-size: 0.875rem;
     max-width: 75px;
+    flex-shrink: 0;
 }
 
 .program-card__tag--outline {
@@ -89,26 +90,27 @@
 .program-card__profiles-title,
 .program-card__stat dt {
     color: var(--subprimary-color-2);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     text-transform: uppercase;
 }
 
 .program-card__code {
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .program-card__title {
     color: var(--subprimary-color-1);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 500;
     line-height: 1.2;
+    overflow-wrap: anywhere;
 }
 
 .program-card__profiles-list {
     padding-left: 24px;
     color: var(--subprimary-color-1);
-    font-size: 16px;
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -132,7 +134,7 @@
 
 .program-card__stat dd {
     color: var(--subprimary-color-1);
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 700;
 }
 
@@ -168,8 +170,9 @@
     .program-card__tag {
         padding: 5px 12px;
         white-space: normal;
-        font-size: 12px;
-        height: 24px;
+        font-size: 0.75rem;
+        min-height: 24px;
+        height: auto;
         max-width: 62px;
     }
 
@@ -183,11 +186,12 @@
 
     .program-card__tag--accreditation {
         max-width: 242px;
-        padding: 0px 16px;
+        padding: 4px 12px;
+        max-width: 100%;
     }
 
     .program-card__title {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     .program-card__stats {
@@ -200,15 +204,15 @@
     }
 
     .program-card__profiles-list {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
     .program-card__code, .program-card__profiles-title, .program-card__stat dt {
-        font-size: 15px;
+        font-size: 0.9375rem;
     }
 
     .program-card__stat dd {
-        font-size: 22px;
+        font-size: 1.375rem;
     }
 }
 .program-card__title a:focus-visible {
@@ -221,3 +225,9 @@
 }
 
 .program-card__title a:active { color: var(--primary-color-1); }
+
+@media (max-width: 420px) {
+    .program-card { display: flex; flex-direction: column; align-items: stretch; }
+    .program-card__stats { width: 100%; padding-left: 0; }
+    .program-card__profiles-list { overflow-wrap: anywhere; }
+}

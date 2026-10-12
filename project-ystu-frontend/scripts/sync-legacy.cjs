@@ -27,6 +27,9 @@ require('./build.cjs')();
 if (fs.existsSync(path.join(source, 'images/webp'))) {
     fs.cpSync(path.join(source, 'images/webp'), path.join(legacy, 'images/webp'), {recursive:true});
 }
+if (fs.existsSync(path.join(source, 'images/svg/sprite.svg'))) {
+    fs.copyFileSync(path.join(source, 'images/svg/sprite.svg'), path.join(legacy, 'images/svg/sprite.svg'));
+}
 for (const file of files(path.join(source, 'styles'))) {
     if (!file.endsWith('.css') || ['styles.css', 'global.css'].includes(path.basename(file))) continue;
     write('css/components/' + path.basename(file), fs.readFileSync(file, 'utf8'));

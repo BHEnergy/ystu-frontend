@@ -53,7 +53,7 @@
             });
 
             const mobileImages = window.matchMedia('(max-width: 767px)');
-            const slides = [...slider.querySelectorAll('.slide__photo')];
+            const slides = [...slider.querySelectorAll('[data-ui~="slide__photo"]')];
             slides.forEach(slide => { slide.dataset.desktop ||= slide.getAttribute('src'); });
             const updateImages = () => slides.forEach(slide => {
                 // picture самостоятельно выбирает источник до загрузки изображения.
@@ -65,7 +65,7 @@
         });
 
         /* Слайдеры с фракцией */
-        document.querySelectorAll('.js-init-banner-slider.banner-slider-1').forEach( (slider) => {
+        document.querySelectorAll('.js-init-banner-slider[data-slider-kind="1"]').forEach( (slider) => {
             if (slider.swiper || !slider.classList.contains("swiper")) {
                 return;
             }
@@ -86,7 +86,7 @@
             });
         });
 
-        document.querySelectorAll('.js-init-banner-slider.banner-slider-2').forEach( (slider) => {
+        document.querySelectorAll('.js-init-banner-slider[data-slider-kind="2"]').forEach( (slider) => {
             if (slider.swiper || !slider.classList.contains("swiper")) {
                 return;
             }
@@ -123,7 +123,7 @@
             });
         });
 
-        document.querySelectorAll('.js-init-banner-slider.banner-slider-3').forEach((slider) => {
+        document.querySelectorAll('.js-init-banner-slider[data-slider-kind="3"]').forEach((slider) => {
             if (slider.swiper || !slider.classList.contains('swiper')) {
                 return;
             }
@@ -164,10 +164,10 @@
 
         /* Слайдеры студенческая жизнь */
         document.querySelectorAll(".js-init-student-slider").forEach((slider) => {
-            const prevButton = slider.querySelector('.swiper-button-prev:not(.big)');
-            const nextButton = slider.querySelector('.swiper-button-next:not(.big)');
-            const prevButtonBig = slider.querySelector('.swiper-button-prev.big');
-            const nextButtonBig = slider.querySelector('.swiper-button-next.big');
+            const prevButton = slider.querySelector('.swiper-button-prev:not([data-ui~="big"])');
+            const nextButton = slider.querySelector('.swiper-button-next:not([data-ui~="big"])');
+            const prevButtonBig = slider.querySelector('[data-slider-control="prev-big"]');
+            const nextButtonBig = slider.querySelector('[data-slider-control="next-big"]');
 
             const updateNavigationState = (swiper, prevBig, nextBig) => {
                 [[prevBig, swiper.isBeginning], [nextBig, swiper.isEnd]].forEach(([button, atEdge]) => {

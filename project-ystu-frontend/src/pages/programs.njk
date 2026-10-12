@@ -11,7 +11,7 @@
     <div class="wrapper">
       {% include "components/header.njk" %}
 
-      <main class="main listing-page listing-page--programs">
+      <main class="main listing-page listing-page--programs" data-ui="listing-page">
         <div class="container">
           <nav class="breadcrumbs" aria-label="Хлебные крошки">
             <a class="breadcrumbs__item" href="index.html">Главная</a>
@@ -68,7 +68,7 @@
             </aside>
 
             <section aria-label="Список образовательных программ">
-              <div class="listing-page__mobile-tools">
+              <div class="listing-page__mobile-tools" data-ui="listing-page__mobile-tools">
                 {% include "components/catalog-search.njk" %}
                 <button
                   class="catalog-filters-trigger"
@@ -77,11 +77,11 @@
                   aria-controls="program-filter-panel"
                   aria-expanded="false"
                 >
-                  Фильтры<img src="../images/svg/filters.svg" alt="" />
+                  Фильтры<svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#filters"></use></svg>
                 </button>
               </div>
-              <div class="listing-page__results">
-                <article class="program-card" data-catalog-filters='{"education_level":["bachelor"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","creative"]}'>
+              <div class="listing-page__results" data-ui="listing-page__results">
+                <article class="program-card" data-ui="program-card" data-catalog-filters='{"education_level":["bachelor"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","creative"]}'>
                   <div class="program-card__content">
                     <div class = "program-card__body">
                       <div class="program-card__tags">
@@ -127,7 +127,7 @@
                     </div>
                   </dl>
                 </article>
-                <article class="program-card" data-catalog-filters='{"education_level":["bachelor"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
+                <article class="program-card" data-ui="program-card" data-catalog-filters='{"education_level":["bachelor"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
                   <div class="program-card__content">
                     <div class = "program-card__body">
                     <div class="program-card__tags">
@@ -202,7 +202,7 @@
             data-close-filter-panel
             aria-label="Закрыть фильтры"
           >
-            <img src="../images/svg/close-white.svg" alt="" />
+            <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#close-white"></use></svg>
           </button>
         </header>
         <form class="mobile-filter-panel__form" method="get">

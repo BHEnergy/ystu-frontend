@@ -1,7 +1,7 @@
-document.querySelectorAll('.dropdown--item').forEach((item, index) => {
-    const header = item.querySelector('.dropdown--header');
-    const trigger = header?.querySelector('.dropdown--trigger');
-    const content = item.querySelector('.dropdown--content');
+document.querySelectorAll('[data-ui~="dropdown--item"]').forEach((item, index) => {
+    const header = item.querySelector('[data-ui~="dropdown--header"]');
+    const trigger = header?.querySelector('[data-ui~="dropdown--trigger"]');
+    const content = item.querySelector('[data-ui~="dropdown--content"]');
     if (!header || !trigger || !content) return;
 
     if (!content.id) {
@@ -11,14 +11,14 @@ document.querySelectorAll('.dropdown--item').forEach((item, index) => {
     }
     trigger.setAttribute('aria-controls', content.id);
     const syncState = () => {
-        const expanded = item.classList.contains('open');
-        trigger.setAttribute('aria-expanded', String(expanded));
+        const expanded = trigger.getAttribute('aria-expanded') === 'true';
+        item.classList.toggle('open', expanded);
         content.hidden = !expanded;
     };
     syncState();
     // Нативная кнопка поддерживает Enter/Space; вся область заголовка также кликабельна.
     header.addEventListener('click', () => {
-        item.classList.toggle('open');
+        trigger.setAttribute('aria-expanded', String(trigger.getAttribute('aria-expanded') !== 'true'));
         syncState();
     });
 });

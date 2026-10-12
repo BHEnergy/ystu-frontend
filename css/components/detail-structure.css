@@ -8,7 +8,7 @@
 
 .structure-detail__title {
     color: var(--subprimary-color-1);
-    font-size: 52px;
+    font-size: 3.25rem;
     font-weight: 600;
 }
 
@@ -24,7 +24,7 @@
 .structure-detail__lead,
 .structure-detail__text {
     max-width: 830px;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.4;
 }
 
@@ -48,14 +48,14 @@
 .structure-contact-card h2,
 .structure-person-card__contacts span {
     color: var(--subprimary-color-1);
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
     text-transform: uppercase;
 }
 
 .structure-contact-card p,
 .structure-contact-card a {
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.4;
 }
 
@@ -66,7 +66,7 @@
 
 .structure-detail__section-title {
     color: var(--subprimary-color-1);
-    font-size: 44px;
+    font-size: 2.75rem;
     font-weight: 500;
 }
 
@@ -86,7 +86,7 @@
     border: 1px solid var(--subprimary-color-1);
     border-radius: 100px;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     transition: color 0.25s ease-in-out;
 }
@@ -202,7 +202,7 @@ span.training-program-card__tag {
     background: transparent;
     border: 1px solid var(--subprimary-color-1);
     border-radius: 100px;
-    font-size: 14px;
+    font-size: 0.875rem;
     height: 30px;
     max-width: 75px;
 }
@@ -231,17 +231,17 @@ span.training-program-card__tag {
 
 .training-program-card__code {
     color: var(--subprimary-color-2);
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .training-program-card h3 {
     color: var(--subprimary-color-1);
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 500;
 }
 
 .training-program-card > p:last-of-type {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.4;
 }
 
@@ -257,15 +257,18 @@ span.training-program-card__tag {
     background: var(--subprimary-color-4);
     border-radius: 100px;
     font-style: italic;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: var(--subprimary-color-1);
 }
 
 .training-program-card a {
     margin-top: auto;
     color: var(--primary-color-2);
-    border-bottom: 1px solid currentColor;
     font-weight: 600;
+}
+
+.content-filter-status {
+    margin-top: 24px;
 }
 
 .structure-about > .structure-detail__text {
@@ -281,8 +284,8 @@ span.training-program-card__tag {
     border-radius: 16px;
 }
 
-.structure-about__video > img,
-.structure-about__video > .responsive-picture > img {
+.structure-about__video > :is(img, .ui-icon),
+.structure-about__video > .responsive-picture > :is(img, .ui-icon) {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -367,7 +370,7 @@ span.training-program-card__tag {
 
 .structure-gallery h3 {
     color: var(--subprimary-color-1);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 500;
 }
 
@@ -382,12 +385,12 @@ span.training-program-card__tag {
 }
 
 .structure-gallery__list .swiper-slide,
-.structure-gallery__list img {
+.structure-gallery__list :is(img, .ui-icon) {
     width: 100%;
     height: 248px;
 }
 
-.structure-gallery__list img {
+.structure-gallery__list :is(img, .ui-icon) {
     object-fit: cover;
     border-radius: 12px;
 }
@@ -432,8 +435,8 @@ span.training-program-card__tag {
     gap: 40px;
 }
 
-.structure-person-card__person > img,
-.structure-person-card__person > .responsive-picture > img {
+.structure-person-card__person > :is(img, .ui-icon),
+.structure-person-card__person > .responsive-picture > :is(img, .ui-icon) {
     width: 140px;
     height: 140px;
     flex: 0 0 140px;
@@ -443,20 +446,21 @@ span.training-program-card__tag {
 
 .structure-person-card__person h3 {
     color: var(--subprimary-color-1);
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 600;
 }
 
 .structure-person-card__person p {
     margin-top: 16px;
     color: var(--subprimary-color-2);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
 }
 
 .structure-person-card__contacts {
     display: grid;
-    width: 370px;
+    width: 430px;
+    flex: 0 0 430px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
     font-style: normal;
@@ -478,7 +482,7 @@ span.training-program-card__tag {
 
 .structure-person-card__contacts p,
 .structure-person-card__contacts a {
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.4;
 }
 
@@ -520,6 +524,7 @@ span.training-program-card__tag {
 
     .structure-person-card__contacts {
         width: 100%;
+        flex-basis: auto;
     }
 }
 
@@ -536,11 +541,11 @@ span.training-program-card__tag {
         padding: 40px 0 0;    }
 
     .structure-detail__lead, .structure-detail__text {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .structure-detail__title {
-        font-size: 32px;
+        font-size: 2rem;
     }
 
     .structure-contact-card {
@@ -553,11 +558,11 @@ span.training-program-card__tag {
     }
 
     .structure-contact-card h2 {
-        font-size: 15px;
+        font-size: 0.9375rem;
     }
 
     .structure-contact-card p, .structure-contact-card a {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .structure-detail__tabs {
@@ -566,7 +571,7 @@ span.training-program-card__tag {
 
     .structure-detail__tab {
         padding: 14px 24px;
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .training-program-card {
@@ -592,7 +597,7 @@ span.training-program-card__tag {
 
     span.training-program-card__tag {
         padding: 4px 16px;
-        font-size: 12px;
+        font-size: 0.75rem;
         height: 23px;
         max-width: 62px;
 
@@ -606,7 +611,7 @@ span.training-program-card__tag {
     }
 
     .training-program-card__code {
-        font-size: 15px;
+        font-size: 0.9375rem;
     }
 
     .training-program-card__footer {
@@ -615,12 +620,12 @@ span.training-program-card__tag {
     }
 
     .training-program-card__footer-item {
-        font-size: 12px;
+        font-size: 0.75rem;
         padding: 6px 12px;
     }
 
     .training-program-card h3 {
-        font-size: 22px;
+        font-size: 1.375rem;
     }
 
     .structure-detail__intro-grid,
@@ -634,7 +639,7 @@ span.training-program-card__tag {
     }
 
     .structure-detail__section-title {
-        font-size: 32px;
+        font-size: 2rem;
     }
 
     .structure-about__video {
@@ -647,7 +652,7 @@ span.training-program-card__tag {
     }
 
     .structure-person-card {
-        padding: 24px 16px;
+        padding: 40px 16px;
         gap: 24px;
         min-height: 488px;
         border-radius: 8px;
@@ -659,7 +664,7 @@ span.training-program-card__tag {
     }
 
     .structure-person-card__person h3 {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 
     .structure-person-card__person p {
@@ -670,8 +675,8 @@ span.training-program-card__tag {
         gap: 8px;
     }
 
-    .structure-person-card__person > img,
-    .structure-person-card__person > .responsive-picture > img {
+    .structure-person-card__person > :is(img, .ui-icon),
+    .structure-person-card__person > .responsive-picture > :is(img, .ui-icon) {
         width: 100px;
         height: 100px;
         flex: 0 0 100px;

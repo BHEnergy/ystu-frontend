@@ -32,7 +32,7 @@
     border-radius: 50%;
 }
 
-.sotrudnik__picture img {
+.sotrudnik__picture :is(img, .ui-icon) {
     display: block;
     width: 100%;
     height: 100%;
@@ -41,7 +41,7 @@
 
 .sotrudnik__qualification {
     margin-top: 16px;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: var(--subprimary-color-2);
 }
 
@@ -54,12 +54,12 @@
 
 .sotrudnik__division {
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 1.25rem;
     color: var(--subprimary-color-2);
 }
 
 .sotrudnik__division-position {
-    font-size: 24px;
+    font-size: 1.5rem;
     border-bottom: 1px solid var(--subprimary-color-1);
     color: var(--subprimary-color-1);
     font-weight: 500;
@@ -75,7 +75,7 @@
 }
 
 .sotrudnik__contact-item {
-    font-size: 18px;
+    font-size: 1.125rem;
     gap: 10px;
 }
 
@@ -95,7 +95,7 @@
 
 .sotrudnik__content {
     padding-top: 24px;
-    font-size: 20px;
+    font-size: 1.25rem;
     max-width: 1010px;
 }
 
@@ -139,19 +139,19 @@
     }
     
     .sotrudnik__name .title {
-        font-size: 28px;
+        font-size: 1.75rem;
     }
 
     .sotrudnik__qualification {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 
     .sotrudnik__division {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .sotrudnik__division-position {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 
     .sotrudnik__contacts {
@@ -159,16 +159,16 @@
     }
 
     .sotrudnik__contact-item p:first-child {
-        font-size: 15px;
+        font-size: 0.9375rem;
     }
 
     .sotrudnik__contact-item{
-        font-size: 16px;
+        font-size: 1rem;
         gap: 8px;
     }
 
     .sotrudnik__content {
         padding-top: 16px;
-        font-size: 16px;
+        font-size: 1rem;
     }
 }

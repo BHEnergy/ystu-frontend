@@ -13,7 +13,7 @@
 
 .error-text {
     display: none;
-    font-size: 12px;
+    font-size: 0.75rem;
     color: var(--error-color-2);
 }
 
@@ -47,7 +47,7 @@
     border-radius: 8px;
     outline: none;
     font-family: 'GoogleSans';
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .input--container.error input {
@@ -86,7 +86,7 @@
 
 .modal-form__file-title {
     color: #111;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.2;
 }
 
@@ -105,7 +105,7 @@
     cursor: pointer;
 }
 
-.modal-form__file-button img {
+.modal-form__file-button :is(img, .ui-icon) {
     width: 24px;
     height: 24px;
 }
@@ -127,7 +127,7 @@
     align-items: flex-start;
     gap: 16px;
     color: #3f3f41;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.2;
 }
 
@@ -222,7 +222,7 @@
     .modal-form textarea {
         height: 178px;
         padding: 14px 16px;
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
     .modal-form__file-button {
@@ -244,6 +244,6 @@
         gap: 16px;
         align-items: center;
         padding-right: 12px;
-        font-size: 15px;
+        font-size: 0.9375rem;
     }
 }

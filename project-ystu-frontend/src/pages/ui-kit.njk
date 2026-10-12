@@ -291,13 +291,13 @@
       <div class="container d-flex flex-wrap gap-3" style = "gap: 25px;">
         <button
           type="button"
-          class="btn btn--default btn--m button-modal"
+          class="btn btn--default btn--m button-modal" data-ui="button-modal"
           data-modal="event"
         >
           Регистрация на мероприятие</button
         ><button
           type="button"
-          class="btn btn--default btn--m button-modal"
+          class="btn btn--default btn--m button-modal" data-ui="button-modal"
           data-modal="event"
           data-modal-state="success"
         >
@@ -318,14 +318,14 @@
           </div>
           <div class="ui-kit__sample">
             <div class="events">
-              <div class="events__wrapper">
+              <div class="events__wrapper" data-ui="events__wrapper">
                 <div
-                  class="events__header events__header--fade"
+                  class="events__header events__header--fade" data-ui="events__header--fade"
                   role="group"
                   aria-label="Новости и события"
                 >
                   <button type="button"
-                    class="title events__title active tab"
+                    class="title events__title active tab" data-ui="tab"
                     data-value="tab"
                     data-tab="events"
                     aria-pressed="true"
@@ -334,7 +334,7 @@
                   </button>
                   <div class="events__separator"></div>
                   <button type="button"
-                    class="title events__title unactive tab"
+                    class="title events__title unactive tab" data-ui="tab"
                     data-value="tab"
                     data-tab="news"
                     aria-pressed="false"
@@ -343,17 +343,17 @@
                   </button>
                 </div>
                 <div
-                  class="events__container active"
+                  class="events__container active" data-ui="events__container"
                   data-value="tab-container"
                   data-tab="events"
                 >
-                  <div class="events__content">
-                    <div class="event__card">
+                  <div class="events__content" data-ui="events__content">
+                    <div class="event__card" data-ui="event__card">
                       <div class="event__photo">
                         <img loading="lazy" decoding="async" src="../images/fallback/banner1.png" alt="Выступление с презентацией анализа 3D-сканов деталей" />
                       </div>
                       <div class="event__content">
-                        <p class="event__title">
+                        <p class="event__title" data-ui="event__title">
                           Международная научно-практическая конференция
                           «Экологическая безопасность водных объектов»
                         </p>
@@ -376,12 +376,12 @@
                         <div class="event__tag">Онлайн</div>
                       </div>
                     </div>
-                    <div class="event__card">
+                    <div class="event__card" data-ui="event__card">
                       <div class="event__photo">
                         <img loading="lazy" decoding="async" src="../images/fallback/banner1.png" alt="Выступление с презентацией анализа 3D-сканов деталей" />
                       </div>
                       <div class="event__content">
-                        <p class="event__title">
+                        <p class="event__title" data-ui="event__title">
                           Исторический квиз "Я помню! Я горжусь!"
                         </p>
                         <div class="event__body">
@@ -403,12 +403,12 @@
                         <div class="event__tag">Онлайн</div>
                       </div>
                     </div>
-                    <div class="event__card">
+                    <div class="event__card" data-ui="event__card">
                       <div class="event__photo">
                         <img loading="lazy" decoding="async" src="../images/fallback/banner1.png" alt="Выступление с презентацией анализа 3D-сканов деталей" />
                       </div>
                       <div class="event__content">
-                        <p class="event__title">
+                        <p class="event__title" data-ui="event__title">
                           Акселератор «ПолиТех.Индустрия 5.0»
                         </p>
                         <div class="event__body">
@@ -439,13 +439,13 @@
                   </a>
                 </div>
                 <div
-                  class="events__container unactive"
+                  class="events__container unactive" data-ui="events__container"
                   data-value="tab-container"
                   data-tab="news"
                 >
-                  <div class="events__content">
-                    <a class="news__card" href="news-events.html">
-                      <div class="news__photo">
+                  <div class="events__content" data-ui="events__content">
+                    <a class="news__card" data-ui="news__card" href="news-events.html">
+                      <div class="news__photo">{% include "components/news-arrow.njk" %}
                         <img loading="lazy" decoding="async" src="../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета" />
                       </div>
                       <div class="news__content">
@@ -457,13 +457,13 @@
                           >
                         </div>
                         <div class="news__tags">
-                          <p class="news__tag">приемная кампания</p>
-                          <p class="news__tag">поступающим</p>
+                          <p class="news__tag" data-ui="news__tag">приемная кампания</p>
+                          <p class="news__tag" data-ui="news__tag">поступающим</p>
                         </div>
                       </div>
                     </a>
-                    <div class="news__card">
-                      <div class="news__photo">
+                    <div class="news__card" data-ui="news__card">
+                      <div class="news__photo">{% include "components/news-arrow.njk" %}
                         <img loading="lazy" decoding="async" src="../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета" />
                       </div>
                       <div class="news__content">
@@ -474,13 +474,13 @@
                           >
                         </div>
                         <div class="news__tags">
-                          <p class="news__tag">приемная кампания</p>
-                          <p class="news__tag">поступающим</p>
+                          <p class="news__tag" data-ui="news__tag">приемная кампания</p>
+                          <p class="news__tag" data-ui="news__tag">поступающим</p>
                         </div>
                       </div>
                     </div>
-                    <div class="news__card">
-                      <div class="news__photo">
+                    <div class="news__card" data-ui="news__card">
+                      <div class="news__photo">{% include "components/news-arrow.njk" %}
                         <img loading="lazy" decoding="async" src="../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета" />
                       </div>
                       <div class="news__content">
@@ -492,8 +492,8 @@
                           >
                         </div>
                         <div class="news__tags">
-                          <p class="news__tag">приемная кампания</p>
-                          <p class="news__tag">поступающим</p>
+                          <p class="news__tag" data-ui="news__tag">приемная кампания</p>
+                          <p class="news__tag" data-ui="news__tag">поступающим</p>
                         </div>
                       </div>
                     </div>
@@ -519,7 +519,7 @@
           </div>
           <div class="ui-kit__sample">
             <div
-              class="events__tags"
+              class="events__tags" data-ui="events__tags"
               data-value="tab-container"
               data-tab="news"
             >
@@ -785,7 +785,7 @@
             <section class="banner-slider">
               <div class="container">
                 <div
-                  class="swiper js-init-banner-slider banner-slider-1 default-slider"
+                  class="swiper js-init-banner-slider banner-slider-1 default-slider" data-slider-kind="1"
                 >
                   {% include "components/banner-survey-slides.njk" %}
                   {% include "components/default-slider-controls.njk" %}
@@ -795,7 +795,7 @@
             <section class="banner-slider">
               <div class="container">
                 <div
-                  class="swiper js-init-banner-slider banner-slider-2 default-slider"
+                  class="swiper js-init-banner-slider banner-slider-2 default-slider" data-slider-kind="2"
                 >
                   {% include "components/banner-survey-slides.njk" %}
                   {% include "components/default-slider-controls.njk" %}
@@ -804,7 +804,7 @@
             </section>
             <section class="banner-slider">
               <div class="container">
-                <div class = "swiper js-init-banner-slider banner-slider-3 banner-slider-3--featured default-slider">
+                <div class = "swiper js-init-banner-slider banner-slider-3 banner-slider-3--featured default-slider" data-slider-kind="3">
                 {% include "components/banner-featured-slides.njk" %}
                 {% include "components/default-slider-controls.njk" %}
               </div>
@@ -1158,7 +1158,7 @@
             </p>
             <p>Компонент: <code>.listing-page__intro</code></p>
           </div>
-          <div class="ui-kit__sample listing-page listing-page--programs">
+          <div class="ui-kit__sample listing-page listing-page--programs" data-ui="listing-page">
             <section class="listing-page__intro container">
               <h1 class="listing-page__title">
                 Образовательные программы 2026
@@ -1189,7 +1189,7 @@
                 </aside>
 
                 <section aria-label="Список образовательных программ">
-                  <div class="listing-page__mobile-tools">
+                  <div class="listing-page__mobile-tools" data-ui="listing-page__mobile-tools">
                     {% include "components/catalog-search.njk" %}
                     <button
                       class="catalog-filters-trigger"
@@ -1198,11 +1198,11 @@
                       aria-controls="ui-22-program-filter-panel"
                       aria-expanded="false"
                     >
-                      Фильтры<img src="../images/svg/filters.svg" alt="" />
+                      Фильтры<svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#filters"></use></svg>
                     </button>
                   </div>
-                  <div class="listing-page__results">
-                    <article class="program-card" data-catalog-filters='{"education_level":["bachelor"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","creative"]}'>
+                  <div class="listing-page__results" data-ui="listing-page__results">
+                    <article class="program-card" data-ui="program-card" data-catalog-filters='{"education_level":["bachelor"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","creative"]}'>
                       <div class="program-card__content">
                         <div class="program-card__body">
                           <div class="program-card__tags">
@@ -1249,7 +1249,7 @@
                         </div>
                       </dl>
                     </article>
-                    <article class="program-card" data-catalog-filters='{"education_level":["bachelor"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
+                    <article class="program-card" data-ui="program-card" data-catalog-filters='{"education_level":["bachelor"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
                       <div class="program-card__content">
                         <div class="program-card__body">
                           <div class="program-card__tags">
@@ -1319,7 +1319,7 @@
                       data-close-filter-panel=""
                       aria-label="Закрыть фильтры"
                     >
-                      <img src="../images/svg/close-white.svg" alt="" />
+                      <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#close-white"></use></svg>
                     </button>
                   </header>
                   <form
@@ -1374,7 +1374,7 @@
             <p>Компонент: <code>.listing-page__intro</code></p>
           </div>
           <div
-            class="ui-kit__sample container listing-page listing-page--vacancies"
+            class="ui-kit__sample container listing-page listing-page--vacancies" data-ui="listing-page"
           >
             <section class="listing-page__intro">
               <h1 class="listing-page__title">Работа в ЯГТУ</h1>
@@ -1479,14 +1479,14 @@
             <div class="container d-flex flex-row" style = "gap: 40px;">
               <button
                 type="button"
-                class="btn btn--default btn--m button-modal"
+                class="btn btn--default btn--m button-modal" data-ui="button-modal"
                 data-modal="vacancy"
               >
                 Открыть форму отклика
               </button>
               <button
                 type="button"
-                class="btn btn--default btn--m button-modal"
+                class="btn btn--default btn--m button-modal" data-ui="button-modal"
                 data-modal="vacancy"
                 data-modal-state="success"
               >
@@ -1506,15 +1506,15 @@
           </div>
           <div class="ui-kit__sample">
             <section class="structure">
-              <div class="container structure__container">
+              <div class="container structure__container" data-ui="structure__container">
                 <h1 class="title">Структура университета</h1>
-                <div class="structure__tags">
+                <div class="structure__tags" data-ui="structure__tags">
                   <div class="structure__tag tag select">Институты</div>
                   <div class="structure__tag tag">Кафедры</div>
                   <div class="structure__tag tag">Корпуса и общежитие</div>
                   <div class="structure__tag tag">Службы и отделы</div>
                 </div>
-                <ul class="structure__institutes">
+                <ul class="structure__institutes" data-ui="structure__institutes">
                   <li class="structure__institute">
                     <a class="structure__institute-link" href="#">
                       <h2 class="structure__institute-title">
@@ -1701,7 +1701,7 @@
           </div>
           <div class="ui-kit__sample container structure-detail">
             <section
-              class="structure-detail__section"
+              class="structure-detail__section" data-ui="structure-detail__section"
               aria-labelledby="ui-31-training-programs-title"
             >
               <h2
@@ -1711,7 +1711,7 @@
                 Программы подготовки
               </h2>
               <div
-                class="structure-detail__tabs" role="group"
+                class="structure-detail__tabs" data-ui="structure-detail__tabs" role="group"
                 aria-label="Уровень образования"
               >
                 <button class="btn structure-detail__tab select" type="button">
@@ -1723,7 +1723,7 @@
                 </button>
               </div>
               <div class="training-programs">
-                <article class="training-program-card">
+                <article class="training-program-card" data-ui="training-program-card">
                   <div class="training-program-card__tags">
                     <span class="bakalavr">Бакалавриат</span><span>Очно</span>
                   </div>
@@ -1750,7 +1750,7 @@
                     </div>
                   </div>
                 </article>
-                <article class="training-program-card">
+                <article class="training-program-card" data-ui="training-program-card">
                   <div class="training-program-card__tags">
                     <span class="bakalavr">Бакалавриат</span><span>Очно</span>
                   </div>
@@ -1777,7 +1777,7 @@
                     </div>
                   </div>
                 </article>
-                <article class="training-program-card">
+                <article class="training-program-card" data-ui="training-program-card">
                   <div class="training-program-card__tags">
                     <span class="magistratura">Магистратура</span
                     ><span>Очно</span>
@@ -1805,7 +1805,7 @@
                     </div>
                   </div>
                 </article>
-                <article class="training-program-card">
+                <article class="training-program-card" data-ui="training-program-card">
                   <div class="training-program-card__tags">
                     <span class="magistratura">Магистратура</span
                     ><span>Очно</span>
@@ -1850,7 +1850,7 @@
           </div>
           <div class="ui-kit__sample container structure-detail">
             <section
-              class="structure-detail__section structure-about"
+              class="structure-detail__section structure-about" data-ui="structure-detail__section"
               aria-labelledby="ui-32-about-institute-title"
             >
               <h2
@@ -1917,7 +1917,7 @@
           </div>
           <div class="ui-kit__sample container structure-detail">
             <section
-              class="structure-detail__section"
+              class="structure-detail__section" data-ui="structure-detail__section"
               aria-labelledby="ui-33-management-title"
             >
               <h2
@@ -1948,7 +1948,7 @@
           </div>
           <div class="ui-kit__sample container structure-detail">
             <section
-              class="structure-detail__section"
+              class="structure-detail__section" data-ui="structure-detail__section"
               aria-labelledby="ui-34-employees-title"
             >
               <h2
@@ -1984,30 +1984,30 @@
                 {% include "components/employee-contacts.njk" %}
               </div>
               <div class="sotrudnik__contents d-flex flex-column">
-                <div class="dropdown--item open">
-                  <div class="dropdown--header">
-                    <h3 class="dropdown--item__title"><button class="dropdown--trigger" type="button">Полномочия и функции</button></h3>
+                <div class="dropdown--item open" data-ui="dropdown--item">
+                  <div class="dropdown--header" data-ui="dropdown--header">
+                    <h3 class="dropdown--item__title"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="true" type="button">Полномочия и функции</button></h3>
                   </div>
 
                   {% include "components/dropdown--content.njk" %}
                 </div>
-                <div class="dropdown--item">
-                  <div class="dropdown--header">
-                    <h3 class="dropdown--item__title"><button class="dropdown--trigger" type="button">О сотруднике</button></h3>
+                <div class="dropdown--item" data-ui="dropdown--item">
+                  <div class="dropdown--header" data-ui="dropdown--header">
+                    <h3 class="dropdown--item__title"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="false" type="button">О сотруднике</button></h3>
                   </div>
 
                   {% include "components/dropdown--content.njk" %}
                 </div>
-                <div class="dropdown--item">
-                  <div class="dropdown--header">
-                    <h3 class="dropdown--item__title"><button class="dropdown--trigger" type="button">Научные труды</button></h3>
+                <div class="dropdown--item" data-ui="dropdown--item">
+                  <div class="dropdown--header" data-ui="dropdown--header">
+                    <h3 class="dropdown--item__title"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="false" type="button">Научные труды</button></h3>
                   </div>
 
                   {% include "components/dropdown--content.njk" %}
                 </div>
-                <div class="dropdown--item">
-                  <div class="dropdown--header">
-                    <h3 class="dropdown--item__title"><button class="dropdown--trigger" type="button">
+                <div class="dropdown--item" data-ui="dropdown--item">
+                  <div class="dropdown--header" data-ui="dropdown--header">
+                    <h3 class="dropdown--item__title"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="false" type="button">
                       Дополнительные функции
                     </button></h3>
                   </div>
@@ -2034,15 +2034,15 @@
                   {% include "components/dropdown--item-3.njk" %}
                   {% include "components/dropdown--item-2.njk" %}
                   {% include "components/dropdown--item.njk" %}
-                  <div class="dropdown--item">
-                    <div class="science-detail dropdown--header">
-                      <h2 class="science-detail__title"><button class="dropdown--trigger" type="button">
+                  <div class="dropdown--item" data-ui="dropdown--item">
+                    <div class="science-detail dropdown--header" data-ui="dropdown--header">
+                      <h2 class="science-detail__title"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="false" type="button">
                         «Oт химии к технологии шаг за шагом»
                       </button></h2>
                     </div>
 
                     <div
-                      class="dropdown--content science-detail__content wyswig"
+                      class="dropdown--content science-detail__content wyswig" data-ui="dropdown--content wyswig"
                     >
                       <section class="science-detail__section">
                         <div class="science-detail__content d-flex flex-row">
@@ -2095,7 +2095,7 @@
                           </div>
                         </div>
                         <div class="science-detail__description">
-                          <p class="science-detail__code">ISSN 2782-1919</p>
+                          <p >ISSN 2782-1919</p>
                           <p>
                             Рецензируемый научно-практический журнал публикует
                             работы преподавателей и сотрудников высших учебных
@@ -2155,7 +2155,7 @@
                       type="submit"
                       aria-label="Найти"
                     >
-                      <img src="../images/svg/vacancy-search.svg" alt="" />
+                      <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#vacancy-search"></use></svg>
                     </button>
                   </form>
                 </div>
@@ -2181,7 +2181,7 @@
           <div class="ui-kit__sample">
             <section class="container search-page">
               <form
-                class="search-page__form"
+                class="search-page__form" data-ui="search-page__form"
                 action="#"
                 method="get"
                 role="search"
@@ -2249,7 +2249,7 @@
               >
                 Показать уведомление повторно
               </button>
-              <div class="cookie-banner">
+              <div class="cookie-banner" data-ui="cookie-banner">
               <div class="cookie-body">
                 <div class="cookie-text">
                   Продолжая работу с сайтом, вы даете согласие на использование
@@ -2279,7 +2279,7 @@
           <p>Цвета и отступы таблицы настраиваются переменными <code>--wyswig-table-border</code>, <code>--wyswig-table-background</code>, <code>--wyswig-table-heading</code>, <code>--wyswig-table-color</code>, <code>--wyswig-table-cell-padding</code>.</p>
         </div>
         <div class="ui-kit__sample container">
-          <div class="wyswig d-flex flex-column gap-4">
+          <div class="wyswig d-flex flex-column gap-4" data-ui="wyswig">
             <h3>Текстовый блок</h3>
             <p>Пример описания из редактора: <strong>важная информация</strong>, <em>примечание</em> и обычный текст. Содержимое может редактироваться в 1С-Битрикс без добавления классов каждому абзацу.</p>
             <ul>
@@ -2308,7 +2308,8 @@
         </div>
       </section>
       <!-- Подвал: index.html -->
-      <section class="ui-kit__entry" data-ui-source="index.html">
+      {% include "components/hero-variants.njk" %}
+<section class="ui-kit__entry" data-ui-source="index.html">
         <div class="ui-kit__meta container" id="ui-41">
           <h2>Подвал</h2>
           <p>

@@ -53,7 +53,7 @@
 .search-page__submit {
     min-width: 150px;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
     cursor: pointer;
     height: 58px;
@@ -85,7 +85,7 @@
         padding: 14px 0;
         min-height: 44px;
         line-height: 1;
-        font-size: 16px;
+        font-size: 1rem;
         width: 100%;
         min-height: 44px;
     }

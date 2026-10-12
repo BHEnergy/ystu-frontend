@@ -7,7 +7,7 @@
 }
 
 .student-directions__title {
-    font-size: 44px;
+    font-size: 2.75rem;
     font-weight: 500;
 }
 
@@ -37,7 +37,7 @@
     flex-direction: column;
     gap: 40px;
     align-items: baseline;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .student-direction__content .btn {
@@ -47,14 +47,17 @@
     width: 100%;
 }
 
-.student-direction__gallery img {
-    height: auto;
+.student-direction__gallery :is(img, .ui-icon) {
+    display: block;
+    width: 100%;
+    height: 477px;
+    object-fit: cover;
     border-radius: 16px;
     min-height: 477px;
 }
 
 .student-direction__title {
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 600;
     color: var(--subprimary-color-1);
     display: flex;
@@ -113,7 +116,7 @@
 }
 
 .student-direction__description {
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 
@@ -163,7 +166,7 @@
         height: 392px;
     }
 
-    .student-direction__gallery img {
+    .student-direction__gallery :is(img, .ui-icon) {
         display: block;
         width: 100%;
         height: 100%;
@@ -180,7 +183,7 @@
     }
 
     .student-directions__title {
-        font-size: 32px;
+        font-size: 2rem;
         line-height: 1.2;
     }
 
@@ -202,12 +205,12 @@
 
     .student-direction__content {
         gap: 24px;
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .student-direction__title {
         gap: 16px;
-        font-size: 20px;
+        font-size: 1.25rem;
         line-height: 1.2;
     }
 
@@ -220,7 +223,7 @@
     }
 
     .student-direction__description {
-        font-size: 16px;
+        font-size: 1rem;
         line-height: 1.2;
     }
 
@@ -233,7 +236,7 @@
         height: 241px;
     }
 
-    .student-direction__gallery img {
+    .student-direction__gallery :is(img, .ui-icon) {
         border-radius: 10px;
     }
 

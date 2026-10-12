@@ -273,6 +273,12 @@
     ]
   },
   {
+    "template": "templates/components/hero-variants.njk",
+    "usedBy": [
+      "pages/ui-kit.njk"
+    ]
+  },
+  {
     "template": "templates/components/information-banner.njk",
     "usedBy": [
       "pages/index.njk",
@@ -289,6 +295,15 @@
     "template": "templates/components/navbar.njk",
     "usedBy": [
       "templates/components/header.njk"
+    ]
+  },
+  {
+    "template": "templates/components/news-arrow.njk",
+    "usedBy": [
+      "pages/index.njk",
+      "pages/news-events.njk",
+      "pages/ui-kit.njk",
+      "templates/components/demo-extra-news.njk"
     ]
   },
   {

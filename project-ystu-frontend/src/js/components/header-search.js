@@ -1,14 +1,15 @@
 /* Раскрываемый поиск. Без JS иконка остаётся ссылкой на страницу поиска. */
 (() => {
-    document.querySelectorAll('.header').forEach((header, index) => {
+    document.querySelectorAll('[data-ui~="header"]').forEach((header, index) => {
         const links = () => [...header.querySelectorAll('a[href="search.html"]')];
-        if (!links().length || header.querySelector('.header-search')) return;
+        if (!links().length || header.querySelector('[data-ui~="header-search"]')) return;
         const form = document.createElement('form');
         form.id = `header-search-${index}`;
         form.className = 'header-search';
+    form.setAttribute('data-ui', form.className);
         form.hidden = true;
         form.action = 'search.html'; form.method = 'get'; form.setAttribute('role', 'search');
-        form.innerHTML = '<input type="search" name="query" aria-label="Поиск по сайту" placeholder="Поиск по сайту" required><button type="submit" class="btn btn--blue">Найти</button><button type="button" class="header-search__close" aria-label="Закрыть поиск">×</button>';
+        form.innerHTML = '<input type="search" name="query" aria-label="Поиск по сайту" placeholder="Поиск по сайту" required><button type="submit" class="btn btn--blue">Найти</button><button type="button" class="header-search__close" data-ui="header-search__close" aria-label="Закрыть поиск">×</button>';
         header.append(form);
         form.querySelector('input').name = 'q';
         let trigger;
@@ -33,7 +34,7 @@
             });
             form.querySelector('input').focus({preventScroll:true});
         });
-        form.querySelector('.header-search__close').addEventListener('click', () => close());
+        form.querySelector('[data-ui~="header-search__close"]').addEventListener('click', () => close());
         header.addEventListener('header:mobile-menu-close', () => close(false));
         header.addEventListener('keydown', event => { if (event.key === 'Escape' && !form.hidden) { event.stopPropagation(); close(); } });
         document.addEventListener('click', event => { if (!header.contains(event.target)) close(false); });

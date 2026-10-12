@@ -2,7 +2,7 @@
     margin-top: 24px;
     display: flex;
     gap: 8px;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: var(--subprimary-color-2);
     align-items: center;
 }
@@ -27,7 +27,7 @@
     .breadcrumbs__item,
     .breadcrumbs span {
         flex: 0 0 auto;
-        font-size: 12px;
+        font-size: 0.75rem;
     }
 
     .breadcrumbs__separator {

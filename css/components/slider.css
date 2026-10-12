@@ -1,3 +1,56 @@
+/* Управление галереями располагается под изображением с отступом 16px. */
+@media (max-width: 768px) {
+    .student-direction__gallery.swiper {
+        height: calc(var(--gallery-image-height) + 60px);
+        max-height: none;
+    }
+
+    .student-direction__gallery.swiper .student-direction__controls {
+        margin-top: 16px;
+        height: 44px;
+    }
+
+    .student-direction__gallery.swiper .student-direction__controls :is(.swiper-button-prev, .swiper-button-next):not(.big),
+    .student-direction__gallery.swiper .student-direction__controls .swiper-pagination {
+        position: static;
+        margin: 0;
+        transform: none;
+        flex-shrink: 0;
+    }
+
+    .student-direction__gallery.swiper .student-direction__controls .swiper-pagination {
+        display: flex;
+        align-items: center;
+        width: auto;
+        line-height: 0;
+    }
+}
+
+.structure-gallery__slider:has(.structure-gallery__controls) {
+    padding-bottom: 0;
+}
+
+.structure-gallery__slider .structure-gallery__controls {
+    position: static;
+    transform: none;
+    margin: 16px auto 0;
+    width: max-content;
+    height: 44px;
+}
+
+.structure-gallery__slider .structure-gallery__controls :is(.swiper-button-prev, .swiper-button-next, .swiper-pagination) {
+    position: static;
+    margin: 0;
+    transform: none;
+}
+
+.structure-gallery__slider .structure-gallery__controls .swiper-pagination {
+    display: flex;
+    align-items: center;
+    width: auto;
+    line-height: 0;
+}
+
 button.swiper-button-prev,
 button.swiper-button-next {
     appearance: none;
@@ -8,6 +61,15 @@ button.swiper-button-next {
     color: inherit;
     cursor: pointer;
 }
+
+/* Большие стрелки привязаны к центру фотографии, а не к строке пагинации. */
+.student-direction__gallery { --gallery-image-height: 477px; }
+.student-direction__gallery.swiper .default-slider-controls { position: static; }
+.student-direction__gallery.swiper .default-slider-controls :is(.swiper-button-prev.big, .swiper-button-next.big) {
+    top: calc(var(--gallery-image-height) / 2); transform: translateY(-50%); margin-top: 0;
+}
+@media (max-width: 991px) { .student-direction__gallery { --gallery-image-height: 392px; } }
+@media (max-width: 576px) { .student-direction__gallery { --gallery-image-height: 241px; } }
 
 .swiper-button-prev:focus-visible,
 .swiper-button-next:focus-visible,
@@ -31,7 +93,7 @@ button.swiper-button-next {
         top: 0;
         bottom: 0;
         color: var(--primary-color-2);
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: 600;
     }
 
@@ -97,13 +159,13 @@ button.swiper-button-next {
     }
 
     & .slide__title {
-        font-size: 60px;
+        font-size: 3.75rem;
         color: var(--subprimary-color-1);
         font-weight: 700;
     }
 
     & .slide__description {
-        font-size: 20px;
+        font-size: 1.25rem;
         color: var(--subprimary-color-1);
     }
 
@@ -149,7 +211,7 @@ button.swiper-button-next {
 
     & .banner__title {
         text-transform: uppercase;
-        font-size: 24px;
+        font-size: 1.5rem;
         color: var(--subprimary-color-1);
         font-weight: 600;
     }
@@ -277,6 +339,21 @@ button.swiper-button-next {
 }
 
 /* Слайдер "Галерея" */
+.student-direction__gallery .swiper-button-prev.big,
+.student-direction__gallery .swiper-button-next.big {
+    top: 238.5px;
+}
+
+@media (max-width: 991px) {
+    .student-direction__gallery .default-slider-controls .swiper-button-prev.big,
+    .student-direction__gallery .default-slider-controls .swiper-button-next.big { top: 196px; }
+}
+
+@media (max-width: 576px) {
+    .student-direction__gallery .default-slider-controls .swiper-button-prev.big,
+    .student-direction__gallery .default-slider-controls .swiper-button-next.big { top: 120.5px; }
+}
+
 .structure-gallery__slider {
     & .default-slider-controls {
         bottom: 0;
@@ -338,13 +415,13 @@ button.swiper-button-next {
 
         & .slide__title {
             max-width: 326px;
-            font-size: 32px;
+            font-size: 2rem;
             line-height: 1.2;
         }
 
         & .slide__description {
             max-width: 300px;
-            font-size: 16px;
+            font-size: 1rem;
             line-height: 1.2;
         }
 
@@ -388,7 +465,7 @@ button.swiper-button-next {
             padding: 24px 16px;
         }
         & .banner__title {
-            font-size: 18px;
+            font-size: 1.125rem;
         }
     }
     .default-slider-controls {
@@ -450,7 +527,7 @@ button.swiper-button-next {
             padding: 24px 16px;
         }
         & .banner__title {
-            font-size: 18px;
+            font-size: 1.125rem;
         }
     }
     .default-slider-controls {

@@ -1,0 +1,34 @@
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const {chromium}=require('playwright-core');
+const root=path.resolve(__dirname,'../..');
+(async()=>{const browser=await chromium.launch({channel:'chrome',headless:true});
+try{const page=await browser.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.route('**/*',r=>{const u=new URL(r.request().url());if(u.hostname!=='ystu.test')return r.abort();const f=path.resolve(root,'.'+decodeURIComponent(u.pathname));return fs.existsSync(f)?r.fulfill({body:fs.readFileSync(f),contentType:({'.html':'text/html','.css':'text/css','.js':'application/javascript','.svg':'image/svg+xml','.woff2':'font/woff2','.webp':'image/webp','.png':'image/png'})[path.extname(f)]||'application/octet-stream'}):r.fulfill({status:404,body:''});});
+const visit=async(name,width,height=900)=>{await page.setViewportSize({width,height});await page.goto('http://ystu.test/pages/'+name+'.html');await page.evaluate(()=>document.fonts.ready);await page.waitForTimeout(400);};
+for(const width of [320,390,600,768,800,1000,1440]){
+ await visit('index',width);
+ const ratio=await page.locator('.footer__emblem img').evaluate(e=>{const r=e.getBoundingClientRect();return r.width/r.height});assert(Math.abs(ratio-182/198)<.01,'emblem '+width);
+ const banner=await page.locator('.information-banner').evaluate(e=>{const r=e.getBoundingClientRect();return [...e.querySelectorAll('.information-banner__text,.information-banner__body a')].every(c=>c.getBoundingClientRect().bottom<=r.bottom+1)});assert(banner,'information banner clipped '+width);
+ assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'index overflow '+width);
+ await visit('programs',width);
+ await page.locator('.program-card__title').first().evaluate(e=>e.textContent='Технологические машины и оборудование для инновационного промышленного производства');
+ await page.locator('.program-card__profiles-list').first().evaluate(e=>e.firstElementChild.textContent='Проектирование и эксплуатация современных роботизированных производственных систем');
+ assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'long program overflow '+width);
+ await visit('detail-vacancy',width);
+ assert.equal(await page.locator('.detail-vacancy__list h2').count(),3);
+ assert.equal(await page.locator('.detail-vacancy__list :is(h2,p,li,ul)[class]').count(),0);
+ if(width>768)assert(await page.locator('.detail-vacancy__resume').evaluate(e=>getComputedStyle(e).alignSelf==='auto'&&getComputedStyle(e.parentElement).alignItems==='flex-start'));
+ console.log('OK: banner, emblem, long programs, vacancy',width);
+}
+await visit('index',1440,600);await page.locator('.btn__menu').click();await page.waitForTimeout(500);
+const columns=await page.locator('.mega-menu > .mega-menu__primary').evaluate(e=>({client:e.clientHeight,scroll:e.scrollHeight,overflow:getComputedStyle(e).overflowY}));assert(columns.scroll>columns.client&&columns.overflow==='auto');
+await page.locator('.mega-menu__primary-link').last().focus();assert(await page.locator('.mega-menu__primary-link').last().evaluate(e=>e.getBoundingClientRect().bottom<=innerHeight));
+await visit('index',390,600);await page.locator('.btn__menu').click();await page.locator('.mega-menu__primary-link').first().click();await page.waitForTimeout(350);
+await page.locator('.mega-menu__primary-link').last().focus();assert(await page.locator('.mega-menu__primary-link').last().evaluate(e=>e.getBoundingClientRect().bottom<=innerHeight));
+await visit('student-life',1440);const img=page.locator('.student-direction__gallery img').first();assert.equal(await img.evaluate(e=>Math.round(e.getBoundingClientRect().height)),477);
+const arrow=page.locator('.student-direction__gallery .swiper-button-next.big').first();const delta=await arrow.evaluate(e=>{const r=e.getBoundingClientRect(),i=e.closest('.student-direction__gallery').querySelector('img').getBoundingClientRect();return Math.abs((r.top+r.height/2)-(i.top+i.height/2))});assert(delta<2,'arrow center '+delta);
+await visit('index',1440);await page.locator('.btn__menu').click();await page.waitForTimeout(40);const intermediate=await page.locator('.btn__menu').evaluate(e=>e.getBoundingClientRect().width);assert(intermediate>44&&intermediate<124,'menu animation '+intermediate);
+assert.equal(await page.locator('.navbar__panel svg use').count(),4);
+await visit('program',390);const trigger=page.locator('[data-ui~="dropdown--trigger"]').first();const before=await trigger.getAttribute('aria-expanded');await page.locator('[data-ui~="dropdown--item"]').first().evaluate(e=>e.classList.remove('dropdown--item'));await trigger.click();assert.notEqual(await trigger.getAttribute('aria-expanded'),before);
+assert.deepEqual(errors,[]);console.log('OK: independent columns, mobile scroll, slider geometry, menu animation, sprite, independent JS hooks');
+}finally{await browser.close()}})().catch(e=>{console.error(e);process.exitCode=1});

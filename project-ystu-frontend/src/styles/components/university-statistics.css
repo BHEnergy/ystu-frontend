@@ -28,12 +28,12 @@
 }
 
 .university-statistics__title {
-    font-size: 52px;
+    font-size: 3.25rem;
     font-weight: 700;
 }
 
 .university-statistics__description {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 400;
     line-height: 1.4;
     margin-top: 16px;
@@ -43,7 +43,7 @@
     color: var(--white-shade-1);
     font-weight: 700;
     margin-top: 40px;
-    font-size: 18px;
+    font-size: 1.125rem;
     max-width: 234px;
     width: 100%;
     min-height: 54px;
@@ -62,12 +62,12 @@
 }
 
 .university-statistics__number {
-    font-size: 90px;
+    font-size: 5.625rem;
     font-weight: 700;
 }
 
 .university-statistics__number-label {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -76,7 +76,7 @@
 
 @media (max-width: 1440px) {
     .university-statistics__number {
-        font-size: 80px;
+        font-size: 5rem;
     }
 }
 
@@ -109,11 +109,11 @@
     }
 
     .university-statistics__title {
-        font-size: 32px;
+        font-size: 2rem;
     }
 
     .university-statistics__description {
-        font-size: 16px;
+        font-size: 1rem;
         margin-top: 16px;
     }
 
@@ -123,7 +123,7 @@
         min-height: 47px;
         white-space: nowrap;
         max-height: 47px;
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 500;
     }
 
@@ -138,11 +138,11 @@
     }
 
     .university-statistics__number {
-        font-size: 44px;
+        font-size: 2.75rem;
     }
 
     .university-statistics__number-label {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
 }

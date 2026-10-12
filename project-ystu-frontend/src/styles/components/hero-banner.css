@@ -55,6 +55,10 @@
     box-shadow: 0px -1px 26px 2px rgba(255, 255, 255, 0.1);
 }
 
+.hero-banner__content.hero-banner__content--solid { background: var(--subprimary-color-1); backdrop-filter: none; -webkit-backdrop-filter: none; box-shadow: none; }
+.hero-banner__content--solid::before, .hero-banner__content--solid::after { content: none; }
+.hero-banner__content--glass { background-color: rgb(9 65 136 / 20%); }
+
 .hero-banner__content::before {
     content: "";
     position: absolute;
@@ -106,7 +110,7 @@
 
 .hero-banner__code {
     color: var(--subprimary-color-5);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.4;
 }
@@ -114,20 +118,20 @@
 .hero-banner__title {
     max-width: 840px;
     margin-top: 4px;
-    font-size: 44px;
+    font-size: 2.75rem;
     font-weight: 600;
     line-height: 1.2;
 }
 
 .hero-banner__title.h1 {
-    font-size: 60px;
+    font-size: 3.75rem;
 }
 
 .hero-banner__institute {
     max-width: 560px;
     margin-top: 4px;
     color: var(--subprimary-color-5);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.4;
 }
@@ -148,7 +152,7 @@
     justify-content: center;
     border: 1px solid currentColor;
     border-radius: 100px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.2;
     white-space: nowrap;
@@ -171,7 +175,7 @@
     }
 
     .hero-banner__title {
-        font-size: 38px;
+        font-size: 2.375rem;
     }
 }
 
@@ -211,20 +215,20 @@
     }
 
     .hero-banner__title.h1 {
-        font-size: 32px;
+        font-size: 2rem;
     }
 
     .hero-banner__code {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 
     .hero-banner__title {
-        font-size: 24px;
+        font-size: 1.5rem;
         margin-top: 8px;
     }
 
     .hero-banner__institute {
-        font-size: 16px;
+        font-size: 1rem;
         margin-top: 8px;
     }
 
@@ -235,7 +239,7 @@
 
     .hero-banner__tag {
         padding: 6px 16px;
-        font-size: 14px;
+        font-size: 0.875rem;
         height: 30px;
         white-space: normal;
     }

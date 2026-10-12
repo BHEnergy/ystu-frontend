@@ -20,7 +20,7 @@
     border: 1px solid var(--subprimary-color-1);
     border-radius: 6px;
     color: var(--subprimary-color-1);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     width: 52px;
     height: 44px;
@@ -35,13 +35,13 @@
 }
 
 .pagination__button-prev {
-    background: url(../../images/svg/triangle-left-orange.svg) 50% 50%;
+    background: url("data:image/svg+xml,%3Csvg%20width%3D%229%22%20height%3D%2212%22%20viewBox%3D%220%200%209%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M9%2012L5.60226%206.00014L9%20-2.38419e-07L0%206.00014L9%2012Z%22%20fill%3D%22%23F4772B%22%2F%3E%0A%3C%2Fsvg%3E%0A") 50% 50%;
     background-repeat: no-repeat;
 }
 
 
 .pagination__button-next {
-    background: url(../../images/svg/triangle-right-orange.svg) 50% 50%;
+    background: url("data:image/svg+xml,%3Csvg%20width%3D%229%22%20height%3D%2212%22%20viewBox%3D%220%200%209%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M0%2012L3.39774%206.00014L0%20-2.38419e-07L9%206.00014L0%2012Z%22%20fill%3D%22%23F4772B%22%2F%3E%0A%3C%2Fsvg%3E%0A") 50% 50%;
     background-repeat: no-repeat;
 }
 
@@ -57,7 +57,7 @@
         width: 44px;
         height: 44px;
         padding: 12px 0;
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
     .pagination__button-prev,

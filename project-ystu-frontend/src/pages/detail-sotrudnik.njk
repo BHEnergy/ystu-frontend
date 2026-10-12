@@ -26,12 +26,12 @@
               {% include "components/employee-contacts.njk" %}
             </div>
             <div class="sotrudnik__contents d-flex flex-column">
-              <div class="dropdown--item open">
-                <div class="dropdown--header">
-                  <h3 class="dropdown--item__title"><button class="dropdown--trigger" type="button">Полномочия и функции</button></h3>
+              <div class="dropdown--item open" data-ui="dropdown--item">
+                <div class="dropdown--header" data-ui="dropdown--header">
+                  <h3 class="dropdown--item__title"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="true" type="button">Полномочия и функции</button></h3>
                 </div>
 
-                <div class="dropdown--content sotrudnik__content wyswig">
+                <div class="dropdown--content sotrudnik__content wyswig" data-ui="dropdown--content wyswig">
                   <b>Ректор университета:</b>
                   <br/><br/>
                   <ul>
@@ -185,26 +185,26 @@
                   </p>
                 </div>
               </div>
-              <div class="dropdown--item">
-                <div class="dropdown--header">
-                  <h3 class="dropdown--item__title"><button class="dropdown--trigger" type="button">О сотруднике</button></h3>
+              <div class="dropdown--item" data-ui="dropdown--item">
+                <div class="dropdown--header" data-ui="dropdown--header">
+                  <h3 class="dropdown--item__title"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="false" type="button">О сотруднике</button></h3>
                 </div>
 
-                <div class="dropdown--content sotrudnik__content wyswig"></div>
+                <div class="dropdown--content sotrudnik__content wyswig" data-ui="dropdown--content wyswig"></div>
               </div>
-              <div class="dropdown--item">
-                <div class="dropdown--header">
-                  <h3 class="dropdown--item__title"><button class="dropdown--trigger" type="button">Научные труды</button></h3>
+              <div class="dropdown--item" data-ui="dropdown--item">
+                <div class="dropdown--header" data-ui="dropdown--header">
+                  <h3 class="dropdown--item__title"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="false" type="button">Научные труды</button></h3>
                 </div>
 
-                <div class="dropdown--content sotrudnik__content wyswig"></div>
+                <div class="dropdown--content sotrudnik__content wyswig" data-ui="dropdown--content wyswig"></div>
               </div>
-              <div class="dropdown--item">
-                <div class="dropdown--header">
-                  <h3 class="dropdown--item__title"><button class="dropdown--trigger" type="button">Дополнительные функции</button></h3>
+              <div class="dropdown--item" data-ui="dropdown--item">
+                <div class="dropdown--header" data-ui="dropdown--header">
+                  <h3 class="dropdown--item__title"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="false" type="button">Дополнительные функции</button></h3>
                 </div>
 
-                <div class="dropdown--content sotrudnik__content wyswig"></div>
+                <div class="dropdown--content sotrudnik__content wyswig" data-ui="dropdown--content wyswig"></div>
               </div>
             </div>
           </section>

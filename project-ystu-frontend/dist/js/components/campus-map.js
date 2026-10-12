@@ -28,22 +28,23 @@
 
     const createPopupHtml = (item) => {
         const objects = item.objects.map(([icon, title]) => `<p class="campus-marker__object"><img src="../images/svg/${escapeHtml(icon)}" alt="" /><span>${escapeHtml(title)}</span></p>`).join('');
-        return `<article class="campus-marker__popup"><button class="campus-marker__close" type="button" aria-label="Закрыть информацию об объекте"></button><img class="campus-marker__photo" src="../images/fallback/campus-building-e.png" alt="Учебный корпус ЯГТУ — демонстрационная фотография" /><div class="campus-marker__section"><p class="campus-marker__caption">Адрес</p><p class="campus-marker__text">${escapeHtml(item.address)}</p></div><div class="campus-marker__section"><p class="campus-marker__caption">Объекты в здании</p>${objects}</div></article>`;
+        return `<article class="campus-marker__popup"><button class="campus-marker__close" data-ui="campus-marker__close" type="button" aria-label="Закрыть информацию об объекте"></button><img class="campus-marker__photo" src="../images/fallback/campus-building-e.png" alt="Учебный корпус ЯГТУ — демонстрационная фотография" /><div class="campus-marker__section"><p class="campus-marker__caption">Адрес</p><p class="campus-marker__text">${escapeHtml(item.address)}</p></div><div class="campus-marker__section"><p class="campus-marker__caption">Объекты в здании</p>${objects}</div></article>`;
     };
 
-    const createMarkerHtml = (item) => `<div class="campus-marker" data-campus-marker="${escapeHtml(item.id)}" style="left:${item.position[0]}%;top:${item.position[1]}%"><button class="campus-marker__head campus-marker__trigger" type="button" aria-label="Показать информацию: ${escapeHtml(item.title)}" aria-expanded="false"><img src="../images/svg/campus-pin.svg" alt="" /><span class="campus-marker__label">${escapeHtml(item.title)}</span></button><template class="campus-marker__popup-template">${createPopupHtml(item)}</template></div>`;
+    const createMarkerHtml = (item) => `<div class="campus-marker" data-ui="campus-marker" data-campus-marker="${escapeHtml(item.id)}" style="left:${item.position[0]}%;top:${item.position[1]}%"><button class="campus-marker__head campus-marker__trigger" data-ui="campus-marker__trigger" type="button" aria-label="Показать информацию: ${escapeHtml(item.title)}" aria-expanded="false"><img src="../images/svg/campus-pin.svg" alt="" /><span class="campus-marker__label">${escapeHtml(item.title)}</span></button><template class="campus-marker__popup-template" data-ui="campus-marker__popup-template">${createPopupHtml(item)}</template></div>`;
 
-    mapElement.innerHTML = `<img class="campus-map-page__image" src="../images/fallback/campus-map.png" alt="Карта кампуса ЯГТУ с учебными корпусами и стадионом" />${campusObjects.map(createMarkerHtml).join('')}`;
+    mapElement.innerHTML = `<img class="campus-map-page__image" data-ui="campus-map-page__image" src="../images/fallback/campus-map.png" alt="Карта кампуса ЯГТУ с учебными корпусами и стадионом" />${campusObjects.map(createMarkerHtml).join('')}`;
 
     const popupLayer = document.createElement('div');
     const markers = new Map([...mapElement.querySelectorAll('[data-campus-marker]')]
         .map((marker) => [marker.dataset.campusMarker, marker]));
     popupLayer.className = 'campus-popup-layer';
+    popupLayer.setAttribute('data-ui', popupLayer.className);
     popupLayer.hidden = true;
     document.body.append(popupLayer);
 
     const positionPopup = (marker) => {
-        const triggerRect = marker.querySelector('.campus-marker__trigger').getBoundingClientRect();
+        const triggerRect = marker.querySelector('[data-ui~="campus-marker__trigger"]').getBoundingClientRect();
         const popupRect = popupLayer.getBoundingClientRect();
         const gap = 10;
         const left = Math.min(Math.max(16, triggerRect.left), window.innerWidth - popupRect.width - 16);
@@ -58,18 +59,18 @@
     const showPopup = (marker) => {
         window.clearTimeout(hideTimer);
         if (activeMarker !== marker) {
-            activeMarker?.querySelector('.campus-marker__trigger')?.setAttribute('aria-expanded', 'false');
-            popupLayer.innerHTML = marker.querySelector('.campus-marker__popup-template').innerHTML;
+            activeMarker?.querySelector('[data-ui~="campus-marker__trigger"]')?.setAttribute('aria-expanded', 'false');
+            popupLayer.innerHTML = marker.querySelector('[data-ui~="campus-marker__popup-template"]').innerHTML;
             activeMarker = marker;
         }
-        marker.querySelector('.campus-marker__trigger')?.setAttribute('aria-expanded', 'true');
+        marker.querySelector('[data-ui~="campus-marker__trigger"]')?.setAttribute('aria-expanded', 'true');
         popupLayer.hidden = false;
         positionPopup(marker);
     };
 
     const hidePopup = (force = false) => {
         if (pinnedMarker && !force) return;
-        activeMarker?.querySelector('.campus-marker__trigger')?.setAttribute('aria-expanded', 'false');
+        activeMarker?.querySelector('[data-ui~="campus-marker__trigger"]')?.setAttribute('aria-expanded', 'false');
         activeMarker = null;
         popupLayer.hidden = true;
         popupLayer.innerHTML = '';
@@ -97,6 +98,9 @@
         const type = filter.dataset.campusFilter;
         const label = filter.querySelector('[data-campus-filter-label]');
         const initialLabel = label.textContent;
+        filter.querySelectorAll('[data-filter-value]').forEach((option) => {
+            option.setAttribute('aria-pressed', 'false');
+        });
 
         filter.addEventListener('toggle', () => {
             if (!filter.open) return;
@@ -108,19 +112,25 @@
         filter.addEventListener('click', (event) => {
             const option = event.target.closest('[data-filter-value]');
             if (!option) {
-                if (filter.classList.contains('is-selected') && !filter.open && event.target.closest('summary')) {
+                if (activeFilters[type] && !filter.open && event.target.closest('summary')) {
                     event.preventDefault();
                     activeFilters[type] = '';
                     filter.classList.remove('is-selected');
-                    filter.querySelector('.is-selected')?.classList.remove('is-selected');
+                    filter.querySelectorAll('[data-filter-value]').forEach((item) => {
+                        item.classList.remove('is-selected');
+                        item.setAttribute('aria-pressed', 'false');
+                    });
                     label.textContent = initialLabel;
                     applyFilters();
                 }
                 return;
             }
 
-            filter.querySelector('.is-selected')?.classList.remove('is-selected');
-            option.classList.add('is-selected');
+            filter.querySelectorAll('[data-filter-value]').forEach((item) => {
+                const selected = item === option;
+                item.classList.toggle('is-selected', selected);
+                item.setAttribute('aria-pressed', String(selected));
+            });
             activeFilters[type] = option.dataset.filterValue;
             label.textContent = option.textContent.trim();
             filter.classList.add('is-selected');
@@ -129,7 +139,7 @@
         });
     });
 
-    mapElement.querySelectorAll('.campus-marker').forEach((marker) => {
+    mapElement.querySelectorAll('[data-ui~="campus-marker"]').forEach((marker) => {
         marker.addEventListener('mouseenter', () => {
             if (!mobilePopup.matches) showPopup(marker);
         });
@@ -144,8 +154,8 @@
     popupLayer.addEventListener('mouseleave', scheduleHide);
 
     popupLayer.addEventListener('click', (event) => {
-        if (!event.target.closest('.campus-marker__close')) return;
-        const trigger = activeMarker?.querySelector('.campus-marker__trigger');
+        if (!event.target.closest('[data-ui~="campus-marker__close"]')) return;
+        const trigger = activeMarker?.querySelector('[data-ui~="campus-marker__trigger"]');
         window.clearTimeout(hideTimer);
         pinnedMarker = null;
         // Возвращаем фокус до закрытия, чтобы focusin не открыл окно повторно.
@@ -154,8 +164,8 @@
     });
 
     mapElement.addEventListener('click', (event) => {
-        const trigger = event.target.closest('.campus-marker__trigger');
-        const marker = trigger?.closest('.campus-marker');
+        const trigger = event.target.closest('[data-ui~="campus-marker__trigger"]');
+        const marker = trigger?.closest('[data-ui~="campus-marker"]');
         if (!marker) {
             pinnedMarker = null;
             hidePopup(true);
@@ -169,7 +179,10 @@
         document.querySelectorAll('[data-campus-filter]').forEach((filter) => {
             activeFilters[filter.dataset.campusFilter] = '';
             filter.classList.remove('is-selected');
-            filter.querySelector('.is-selected')?.classList.remove('is-selected');
+            filter.querySelectorAll('[data-filter-value]').forEach((item) => {
+                item.classList.remove('is-selected');
+                item.setAttribute('aria-pressed', 'false');
+            });
             filter.querySelector('[data-campus-filter-label]').textContent = filter.dataset.campusFilter === 'category' ? 'выбрать объект' : 'выбрать подразделение';
         });
         applyFilters();
@@ -184,7 +197,7 @@
             interactiveMap.setLocation({ center: [item.coordinates[1], item.coordinates[0]], zoom: 17 });
         }
         pinnedMarker = marker;
-        marker.querySelector('.campus-marker__trigger')?.focus({ preventScroll: true });
+        marker.querySelector('[data-ui~="campus-marker__trigger"]')?.focus({ preventScroll: true });
         (interactiveMap ? mapElement : marker).scrollIntoView({
             behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
             block: 'center', inline: 'center',
@@ -227,6 +240,7 @@
 
         const host = document.createElement('div');
         host.className = 'campus-map__yandex';
+    host.setAttribute('data-ui', host.className);
         let timeoutId;
         let script;
         mapElement.dataset.mapState = 'loading';
@@ -280,7 +294,7 @@
                     });
                 },
             }));
-            mapElement.querySelector('.campus-map-page__image').hidden = true;
+            mapElement.querySelector('[data-ui~="campus-map-page__image"]').hidden = true;
             applyFilters();
             mapElement.dataset.mapState = 'ready';
         } catch (error) {
@@ -289,7 +303,7 @@
             host.remove();
             script?.remove();
             mapElement.classList.remove('campus-map--interactive');
-            mapElement.querySelector('.campus-map-page__image').hidden = false;
+            mapElement.querySelector('[data-ui~="campus-map-page__image"]').hidden = false;
             campusObjects.forEach((item) => {
                 const marker = markers.get(item.id);
                 marker.style.left = `${item.position[0]}%`;

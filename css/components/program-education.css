@@ -6,7 +6,7 @@
 }
 
 .program-education__title {
-    font-size: 44px;
+    font-size: 2.75rem;
 }
 
 .program-education__list {
@@ -16,7 +16,7 @@
 }
 
 .program-education__name {
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 600;
     color: var(--subprimary-color-1);
     text-transform: uppercase;
@@ -31,7 +31,7 @@
     border-bottom: 1px solid var(--subprimary-color-4);
     display: flex;
     gap: 26px;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .program-education__caption {
@@ -43,7 +43,7 @@
 }
 
 .program-education__caption h4 {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: var(--subprimary-color-1);
     font-weight: 500;
 }
@@ -62,18 +62,18 @@
     }
 
     .program-education__name {
-        font-size: 20px;
+        font-size: 1.25rem;
         flex: 0 1 72%;
     }
 
     .program-education__title {
-        font-size: 32px;
+        font-size: 2rem;
     }
 
     .program-education__section {
         flex-direction: column;
         gap: 24px;
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .program-education__caption {
@@ -82,7 +82,7 @@
 
     .program-education__caption h4 {
         order: 1;
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 
     .program-education__section > p {
@@ -98,7 +98,7 @@
     }
 
     .program-exams__examples summary {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 
 }

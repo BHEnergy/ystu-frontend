@@ -1,5 +1,5 @@
 (() => {
-    const groups = document.querySelectorAll('.university-statistics__numbers');
+    const groups = document.querySelectorAll('[data-ui~="university-statistics__numbers"]');
     const gsap = window.gsap;
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const activeCounters = new Set();
@@ -11,7 +11,7 @@
     const animateGroup = (group) => {
         if (reducedMotion.matches) return;
 
-        group.querySelectorAll('.university-statistics__number').forEach((element) => {
+        group.querySelectorAll('[data-ui~="university-statistics__number"]').forEach((element) => {
             const original = element.textContent.trim();
             const match = original.match(/^(\D*)(\d[\d\s\u00a0\u202f]*)(\D*)$/);
             if (!match) return;

@@ -1,13 +1,13 @@
 (() => {
-    const header = document.querySelector('.header');
+    const header = document.querySelector('[data-ui~="header"]');
 
     if (!header) {
         window.Header = {};
         return;
     }
 
-    const headerWrapper = header.querySelector('.header__wrapper') || header;
-    const informationBanner = document.querySelector('.information-banner');
+    const headerWrapper = header.querySelector('[data-ui~="header__wrapper"]') || header;
+    const informationBanner = document.querySelector('[data-ui~="information-banner"]');
     let frameId = 0;
 
     const updateHeaderPosition = () => {
@@ -20,7 +20,7 @@
             'header--scrolled',
             window.scrollY > (informationBanner?.offsetHeight || 0),
         );
-        const menuAnchor = header.querySelector('.header__menu--collapsed');
+        const menuAnchor = header.querySelector('[data-ui~="header__menu--collapsed"]');
         if (menuAnchor) {
             const availableHeight = window.innerHeight - menuAnchor.getBoundingClientRect().bottom - 16;
             header.style.setProperty('--mega-menu-available-height', `${Math.max(0, availableHeight)}px`);
@@ -61,11 +61,11 @@
 
     /* Кнопка раскрытия меню */
     const openBtn = header.querySelector('[data-trigger="open-menu"]');
-    const megaMenu = header.querySelector('.mega-menu');
+    const megaMenu = header.querySelector('[data-ui~="mega-menu"]');
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const mobileMenuMedia = window.matchMedia('(max-width: 1100px)');
 
-    if (openBtn && !openBtn.querySelector('.btn__menu-label')) {
+    if (openBtn && !openBtn.querySelector('[data-ui~="btn__menu-label"]')) {
         const labelNode = [...openBtn.childNodes].find(
             (node) => node.nodeType === Node.TEXT_NODE && node.textContent.trim(),
         );
@@ -73,19 +73,20 @@
         if (labelNode) {
             const label = document.createElement('span');
             label.className = 'btn__menu-label';
+    label.setAttribute('data-ui', label.className);
             label.textContent = labelNode.textContent.trim();
             labelNode.replaceWith(label);
         }
     }
 
     if (openBtn && megaMenu) {
-        const menuItems = megaMenu.querySelectorAll(
-            '.mega-menu__primary > a, .mega-menu__section, .mega-menu__additional > a',
+        const menuItems = megaMenu.querySelectorAll('[data-ui~="mega-menu__primary"] > a, [data-ui~="mega-menu__section"], [data-ui~="mega-menu__additional"] > a',
         );
-        const navbarPanel = header.querySelector('.navbar__panel');
+        const navbarPanel = header.querySelector('[data-ui~="navbar__panel"]');
         const mobileTools = document.createElement('div');
 
         mobileTools.className = 'header__mobile-tools';
+    mobileTools.setAttribute('data-ui', mobileTools.className);
         mobileTools.setAttribute('aria-label', 'Сервисы сайта');
 
         if (navbarPanel) {
@@ -207,6 +208,7 @@
             panel.before(placeholder);
             const content = document.createElement('div');
             content.className = 'mega-menu__accordion-content';
+    content.setAttribute('data-ui', content.className);
             while (panel.firstChild) content.append(panel.firstChild);
             panel.append(content);
             mobileMenuEntries.push({ trigger, panel, placeholder, href: trigger.getAttribute('href') });
@@ -415,8 +417,7 @@
             }
 
             if (event.key === 'Tab' && mobileMenuMedia.matches) {
-                const focusableItems = [...header.querySelectorAll(
-                    'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+                const focusableItems = [...header.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
                 )].filter((item) => (
                     item.getClientRects().length > 0
                     && !item.closest('[aria-hidden="true"]')

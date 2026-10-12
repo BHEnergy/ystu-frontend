@@ -1,5 +1,5 @@
 /* Получаем все табы */
-let tabs = document.querySelectorAll('.tab');
+let tabs = document.querySelectorAll('[data-ui~="tab"]');
 const eventsReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const eventsTabAnimations = new Set();
 
@@ -29,17 +29,18 @@ const fadeEventsTitles = async (items, keyframes, duration) => {
 
 tabs.forEach( (tab) => {
     tab.addEventListener('click', async () => {
-        const header = tab.closest('.events__header--fade');
+        const header = tab.closest('[data-ui~="events__header--fade"]');
 
         if (header?.hasAttribute('aria-busy')) {
             return;
         }
 
-        if(tab.classList.contains('unactive')) {
+        const wrapper = tab.closest('[data-ui~="events__wrapper"]');
+        if (!wrapper) return;
+        const currentTab = wrapper.querySelector('[data-ui~="tab"][aria-pressed="true"]');
+        if (currentTab && currentTab !== tab) {
             let clickTab = tab;
-            let currentTab = tab.closest('.events__wrapper').querySelector('.active.tab');
-            let activeTabContainer = tab.closest('.events__wrapper').querySelectorAll('.active[data-value="tab-container"]');
-            let selectTabContainer = tab.closest('.events__wrapper').querySelectorAll(`[data-value="tab-container"][data-tab="${tab.dataset.tab}"]`);
+            const tabContainers = wrapper.querySelectorAll('[data-value="tab-container"]');
 
             if (header) {
                 header.setAttribute('aria-busy', 'true');
@@ -49,15 +50,19 @@ tabs.forEach( (tab) => {
                 ], 120);
             }
 
-            clickTab.classList.replace('unactive', 'active');
-            currentTab.classList.replace('active', 'unactive');
-            activeTabContainer.forEach( (tabContainer) => {
-                tabContainer.classList.replace('active', 'unactive');
+            clickTab.setAttribute('aria-pressed', 'true');
+            currentTab.setAttribute('aria-pressed', 'false');
+            clickTab.classList.add('active');
+            clickTab.classList.remove('unactive');
+            currentTab.classList.add('unactive');
+            currentTab.classList.remove('active');
+            tabContainers.forEach((tabContainer) => {
+                const selected = tabContainer.dataset.tab === tab.dataset.tab;
+                tabContainer.classList.toggle('active', selected);
+                tabContainer.classList.toggle('unactive', !selected);
+                tabContainer.setAttribute('aria-hidden', String(!selected));
             });
-            selectTabContainer.forEach( (tabContainer) => {
-                tabContainer.classList.replace('unactive', 'active');
-            });
-            tab.closest('.events__wrapper').dispatchEvent(new CustomEvent('content-tab:change', {detail: {tab: tab.dataset.tab}}));
+            tab.closest('[data-ui~="events__wrapper"]').dispatchEvent(new CustomEvent('content-tab:change', {detail: {tab: tab.dataset.tab}}));
 
             if (header) {
                 clickTab.setAttribute('aria-pressed', 'true');
@@ -79,10 +84,11 @@ const initContentFilter = (group, selector, selectedClass, items, categoryOf) =>
     if (!controls.length) return;
     const status = document.createElement('p');
     status.className = 'content-filter-status';
+    status.setAttribute('data-ui', 'content-filter-status');
     status.setAttribute('role', 'status');
     status.hidden = true;
-    const newsPanel = group.matches('.events__tags')
-        ? group.closest('.events__wrapper')?.querySelector('.events__container[data-tab="news"]')
+    const newsPanel = group.matches('[data-ui~="events__tags"]')
+        ? group.closest('[data-ui~="events__wrapper"]')?.querySelector('[data-ui~="events__container"][data-tab="news"]')
         : null;
     if (newsPanel) newsPanel.prepend(status);
     else group.insertAdjacentElement('afterend', status);
@@ -103,7 +109,7 @@ const initContentFilter = (group, selector, selectedClass, items, categoryOf) =>
         });
         status.hidden = visible > 0;
         status.textContent = visible ? '' : 'В этом разделе пока нет материалов.';
-        if (newsPanel) group.closest('.events__wrapper').dispatchEvent(new CustomEvent('content-filter:change', {detail: {container: newsPanel, initial}}));
+        if (newsPanel) group.closest('[data-ui~="events__wrapper"]').dispatchEvent(new CustomEvent('content-filter:change', {detail: {container: newsPanel, initial}}));
     };
     controls.forEach((control) => {
         if (control.tagName !== 'BUTTON') {
@@ -118,25 +124,25 @@ const initContentFilter = (group, selector, selectedClass, items, categoryOf) =>
         }
         control.addEventListener('click', () => activate(control));
     });
-    activate(controls.find((item) => item.classList.contains(selectedClass)) || controls[0], true);
+    activate(controls.find((item) => item.getAttribute('aria-pressed') === 'true') || controls[0], true);
 };
 
-document.querySelectorAll('.structure__tags').forEach((group) => {
-    const scope = group.closest('.structure__container') || group.parentElement;
-    initContentFilter(group, '.tag', 'select', [...scope.querySelectorAll('.structure__institutes')],
+document.querySelectorAll('[data-ui~="structure__tags"]').forEach((group) => {
+    const scope = group.closest('[data-ui~="structure__container"]') || group.parentElement;
+    initContentFilter(group, '[data-filter]', 'select', [...scope.querySelectorAll('[data-ui~="structure__institutes"]')],
         (item) => [item.dataset.category || 'Институты']);
 });
 
-document.querySelectorAll('.structure-detail__tabs').forEach((group) => {
-    const scope = group.closest('.structure-detail__section') || group.parentElement;
-    initContentFilter(group, '.structure-detail__tab', 'select', [...scope.querySelectorAll('.training-program-card')],
-        (item) => [item.dataset.category || item.querySelector('.training-program-card__tag')?.textContent.trim()]);
+document.querySelectorAll('[data-ui~="structure-detail__tabs"]').forEach((group) => {
+    const scope = group.closest('[data-ui~="structure-detail__section"]') || group.parentElement;
+    initContentFilter(group, 'button', 'select', [...scope.querySelectorAll('[data-ui~="training-program-card"]')],
+        (item) => [item.dataset.category || item.querySelector('[data-ui~="training-program-card__tag"]')?.textContent.trim()]);
 });
 
-document.querySelectorAll('.events__tags').forEach((group) => {
-    const scope = group.closest('.events__wrapper');
-    const container = scope?.querySelector('.events__container[data-tab="news"]');
-    initContentFilter(group, '.events__tag', 'current', [...(container?.querySelectorAll('.news__card') || [])],
+document.querySelectorAll('[data-ui~="events__tags"]').forEach((group) => {
+    const scope = group.closest('[data-ui~="events__wrapper"]');
+    const container = scope?.querySelector('[data-ui~="events__container"][data-tab="news"]');
+    initContentFilter(group, '[data-filter]', 'current', [...(container?.querySelectorAll('[data-ui~="news__card"]') || [])],
         (item) => item.dataset.category ? item.dataset.category.split(' ') :
-            [...item.querySelectorAll('.news__tag')].map((tag) => '#' + tag.textContent.trim()));
+            [...item.querySelectorAll('[data-ui~="news__tag"]')].map((tag) => '#' + tag.textContent.trim()));
 });

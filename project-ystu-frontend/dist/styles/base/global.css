@@ -46,9 +46,13 @@ a, a:visited {
     text-decoration: none;
 }
 
-img {
+:is(img, .ui-icon) {
     max-width: 100%;
+    vertical-align: middle;
 }
+
+.ui-icon { display: inline-block; width: 24px; height: 24px; flex-shrink: 0; vertical-align: middle; }
+:where(a, button, input, label, [role="button"]) { -webkit-tap-highlight-color: transparent; }
 
 :where(a[href], button, input, select, textarea, [tabindex="0"]):focus-visible {
     outline: 2px solid var(--subprimary-color-1);

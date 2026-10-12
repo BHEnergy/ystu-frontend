@@ -31,12 +31,12 @@
 }
 
 .news__date {
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--subprimary-color-2);
 }
 
 .news__title {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: var(--subprimary-color-1) !important;
     font-weight: 700;
     min-height: 120px;
@@ -48,7 +48,7 @@
 }
 
 .news__tag {
-    font-size: 15px;
+    font-size: 0.9375rem;
     color: var(--subprimary-color-1);
 }
 
@@ -76,15 +76,17 @@
     height: 100%;
     -webkit-backdrop-filter: blur(0) saturate(1);
     backdrop-filter: blur(0) saturate(1);
-    transition: opacity 100ms ease-in-out, backdrop-filter 100ms ease-in-out, -webkit-backdrop-filter 100ms ease-in-out;
+    transition: opacity 400ms ease-in-out, backdrop-filter 400ms ease-in-out, -webkit-backdrop-filter 400ms ease-in-out;
 }
 
 .news__photo::after {
     content: "";
     width: 80px;
     height: 80px;
-    transform: scale(0.9);
-    background: url('../../images/svg/arrow-white.svg') center / 25px 25px no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
     background-color: rgb(255 255 255 / 30%);
     border-radius: 10px;
 }
@@ -96,15 +98,27 @@
     }
 }
 
-.news__photo img {
+.news__photo :is(img, .ui-icon) {
     display: block;
     width: 100%;
     height: auto;
 }
 
+.news__photo svg.news__arrow {
+    position: absolute; top: 50%; left: 50%; z-index: 2;
+    width: 25px; height: 25px; opacity: 0;
+    transform: translate(-50%, -50%) scale(.9);
+    pointer-events: none;
+    transition: opacity 400ms ease-in-out, transform 400ms ease-in-out;
+}
+@media (hover: hover) {
+    .news__photo:hover .news__arrow { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) { .news__photo svg.news__arrow { transition: none; } }
+
 .news__container > .btn {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.125rem;
     max-width: 190px;
     width: 100%;
     min-height: 54px;
@@ -132,11 +146,11 @@
     }
 
     .news__date {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
     .news__title {
-        font-size: 20px;
+        font-size: 1.25rem;
         line-height: 1.2;
     }
 
@@ -146,7 +160,7 @@
     }
 
     .news__tag {
-        font-size: 12px;
+        font-size: 0.75rem;
     }
 }
 
@@ -162,6 +176,6 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: scale(1) translateY(-50%) translateX(-50%);
+        transform: translate(-50%, -50%) scale(1);
     }
 }

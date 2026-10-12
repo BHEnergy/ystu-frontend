@@ -7,7 +7,7 @@
 
 .catalog-filters__title {
     color: var(--subprimary-color-2);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
@@ -73,7 +73,7 @@
     cursor: pointer;
 }
 
-.catalog-search__button img {
+.catalog-search__button :is(img, .ui-icon) {
     width: 24px;
     height: 24px;
 }
@@ -88,7 +88,7 @@
 .catalog-filter-group__title {
     margin-bottom: 12px;
     color: var(--subprimary-color-1);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
 }
 
@@ -102,7 +102,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.2;
     cursor: pointer;
 }
@@ -216,7 +216,7 @@
     width: 100%;
     border: 0;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .catalog-filters__apply {
@@ -227,7 +227,7 @@
     padding: 10px 16px;
     color: var(--subprimary-color-1);
     background: transparent;
-    font-size: 16px;
+    font-size: 1rem;
     max-height: 39px;
 }
 
@@ -245,17 +245,17 @@
     border-radius: 4px;
     font-weight: 500;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: 'GoogleSans', sans-serif;
 }
 
-.catalog-filters-trigger img {
+.catalog-filters-trigger :is(img, .ui-icon) {
     width: 24px;
     height: 24px;
     transition: transform 280ms ease;
 }
 
-.catalog-filters-trigger[aria-expanded="true"] img {
+.catalog-filters-trigger[aria-expanded="true"] :is(img, .ui-icon) {
     transform: rotate(180deg);
 }
 

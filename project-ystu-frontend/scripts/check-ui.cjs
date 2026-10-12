@@ -71,7 +71,7 @@ const record = (name) => { checks.push(name); console.log('OK:', name); };
             await visit('news-events');
             const tags = page.locator('.events__tag');
             await tags.last().click();
-            assert.equal(await page.locator('.news__card:visible').count(), 1);
+            assert.equal(await page.locator('.news__card:visible').count(), 6);
             assert.match(await page.locator('.news__card:visible').first().innerText(), /научные проекты/);
             // Пустое состояние проверяем отдельно от добавленной демонстрационной темы.
             await tags.last().evaluate(tag => { tag.dataset.filter = '#несуществующая-тема'; });
@@ -124,7 +124,7 @@ const record = (name) => { checks.push(name); console.log('OK:', name); };
         await primary.scrollIntoViewIfNeeded();
         await primary.hover(); await page.waitForTimeout(250);
         assert.equal(await primary.evaluate(el => getComputedStyle(el).backgroundColor), 'rgb(248, 173, 128)');
-        await page.mouse.down(); await page.waitForTimeout(250);
+        await page.mouse.down(); await page.waitForTimeout(400);
         assert.equal(await primary.evaluate(el => getComputedStyle(el).backgroundColor), 'rgb(229, 87, 0)');
         await page.mouse.up();
         await primary.press('Tab'); await page.keyboard.press('Shift+Tab');

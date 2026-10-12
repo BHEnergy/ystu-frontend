@@ -20,6 +20,7 @@
     gap: 10px;
     transition: grid-template-rows 420ms cubic-bezier(.22, 1, .36, 1), gap 420ms cubic-bezier(.22, 1, .36, 1);
     cursor: pointer;
+    width: 100%;
 }
 
 .ficher::before {
@@ -33,6 +34,15 @@
     transition: transform 420ms cubic-bezier(.22, 1, .36, 1);
 }
 
+.ficher::after {
+    content: ''; position: absolute; right: 0; bottom: -45px; width: 286px; height: 178px;
+    background: url('../../images/svg/ficher-line.svg') center bottom / 100% 100% no-repeat;
+    transform: translateY(100%) rotate(355deg); transition: transform 420ms cubic-bezier(.22, 1, .36, 1); pointer-events: none;
+}
+@media (hover: hover) and (min-width: 769px) { .ficher:hover::after { transform: translateY(0) rotate(355deg); } }
+@media (max-width: 768px) { .ficher:hover .ficher__text { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .ficher::after { transition: none; } }
+
 .ficher__icon {
     min-height: 0;
     max-width: 120px;
@@ -45,9 +55,9 @@
 .ficher__text {
     position: relative;
     color: var(--subprimary-color-1);
-    font-size: 28px;
+    font-size: 1.75rem;
     text-align: center;
-    transition: color 240ms ease;
+    transition: color 240ms ease, transform 420ms cubic-bezier(.22, 1, .36, 1);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -66,7 +76,7 @@
     }
 
     .ficher__text {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 }
 
@@ -78,8 +88,7 @@
 
 @media(hover: hover) {
     .ficher:hover {
-        grid-template-rows: minmax(0, 0fr) auto;
-        gap: 0;
+        box-shadow: 0 8px 20px rgb(9 65 136 / 18%);
     }
 }
 
@@ -94,6 +103,7 @@
         display: flex;
         padding: 24px 16px;
         min-height: 0;
+        align-items: center;
     }
 
     .ficher:hover .ficher__text {
@@ -106,12 +116,12 @@
     }
 
     .ficher__text {
-        font-size: 20px;
+        font-size: 1.25rem;
         width: 100%;
     }
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (min-width: 769px) {
     .ficher:hover::before {
         transform: scaleY(1);
     }
@@ -123,6 +133,12 @@
 
     .ficher:hover .ficher__text {
         align-self: start;
+        transform: none;
         color: var(--white-shade-1);
+    }
+
+    .ficher:hover {
+        grid-template-rows: minmax(0, 0fr) auto;
+        gap: 0;
     }
 }

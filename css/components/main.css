@@ -10,16 +10,17 @@
 
 /* picture не меняет Flex/Grid-компоновку существующих карточек. */
 .responsive-picture { display: contents; }
+.responsive-picture > source { display: none; }
 
 /* Заголовки */
 .title {
-    font-size: 52px;
+    font-size: 3.25rem;
     color: var(--subprimary-color-1);
     font-weight: 600;
 }
 
 .title.h2 {
-    font-size: 44px;
+    font-size: 2.75rem;
 }
 
 /* Для кастомизирования того, что будет приходить с админки, специальный класс wyswig*/
@@ -29,8 +30,8 @@
 .wyswig a { text-decoration: underline; text-underline-offset: .15em; }
 .wyswig a:hover { color: var(--subprimary-color-2); }
 .wyswig a:active { color: var(--primary-color-1); }
-.wyswig :is(img,video,iframe) { max-width: 100%; }
-.wyswig :is(img,video) { height: auto; }
+.wyswig :is(:is(img, .ui-icon),video,iframe) { max-width: 100%; }
+.wyswig :is(:is(img, .ui-icon),video) { height: auto; }
 .wyswig iframe { display: block; width: 100%; border: 0; }
 .wyswig ol { padding-left: 1.5em; list-style: decimal; }
 .wyswig ul ul, .wyswig ol ol { margin: .5em 0; padding-left: 1.5em; }
@@ -54,7 +55,7 @@
     border-collapse: collapse;
     table-layout: fixed;
     color: var(--wyswig-table-color);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.4;
 }
 
@@ -124,51 +125,51 @@
 
     .wyswig table {
         --wyswig-table-cell-padding: 10px 8px;
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 }
 
 /* Устройства X-Large (большие настольные компьютеры, 1200 пикселей и выше) */
 @media (max-width: 1200px) {
     .title {
-        font-size: 44px;
+        font-size: 2.75rem;
     }
 
     .title.h2 {
-        font-size: 38px;
+        font-size: 2.375rem;
     }
 }
 
 /* Устройства Large (настольные компьютеры, 992 пикселей и выше) */
 @media (max-width: 992px) {
     .title {
-        font-size: 40px;
+        font-size: 2.5rem;
     }
 
     .title.h2 {
-        font-size: 36px;
+        font-size: 2.25rem;
     }
 }
 
 /* Устройства Medium (планшеты, 768 пикселей и выше) */
 @media (max-width: 768px) {
     .title {
-        font-size: 36px;
+        font-size: 2.25rem;
     }
 
     .title.h2 {
-        font-size: 32px;
+        font-size: 2rem;
     }
 }
 
 /* Устройства Small (телефоны с горизонтальной ориентацией, 576 пикселей и выше) */
 @media (max-width: 576px) {
     .title {
-        font-size: 32px;
+        font-size: 2rem;
     }
 
     .title.h2 {
-        font-size: 28px;
+        font-size: 1.75rem;
     }
 }
 

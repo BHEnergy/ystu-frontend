@@ -5,7 +5,7 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
-    max-height: 60px;
+    min-height: 60px;
 }
 
 .information-banner::before {
@@ -39,7 +39,7 @@
 }
 
 .information-banner__text {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -61,31 +61,33 @@
 
 @media(max-width: 1240px) {
     .information-banner__text {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 }
 
-@media(max-width: 768px) {
+@media(max-width: 1100px) {
     .information-banner {
         padding: 11px 0;
-        max-height: 80px;
+        min-height: 80px;
     }
 
     .information-banner__body {
         display: grid;
-        grid-template: 'A C' 'B C';
+        grid-template: 'A C' 'B C' / minmax(0, 1fr) 52px;
         gap: 10px 20px;
         justify-content: space-between;
     }
 
     .information-banner__text {
-        font-size: 20px;
+        font-size: 1.25rem;
         grid-area: A;
     }
 
     .information-banner__date {
         grid-area: B;
         gap: 24px;
+        flex-wrap: wrap;
+        row-gap: 4px;
 
     }
 
@@ -101,7 +103,7 @@
     }
 
     .information-banner__body .btn::after {
-        content: url(../../images/svg/arrow-white.svg);
+        content: ''; display: inline-block; width: 9px; height: 12px; background: url("data:image/svg+xml,%3Csvg%20width%3D%229%22%20height%3D%2212%22%20viewBox%3D%220%200%209%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M0%2012L3.39774%206.00014L0%200L9%206.00014L0%2012Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E%0A") center / contain no-repeat;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -116,4 +118,9 @@
     .information-banner::after {
         content: none;
     }
+}
+
+@media (max-width: 400px) {
+    .information-banner__text { font-size: 1rem; }
+    .information-banner__date { gap: 4px 12px; }
 }

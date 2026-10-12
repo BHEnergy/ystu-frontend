@@ -2,11 +2,18 @@
     display: contents;
 }
 
-/* Прокручивается всё меню: все три колонки доступны в невысоком окне. */
+@media (min-width: 1101px) {
+    .header .mega-menu { height: min(710px, var(--mega-menu-available-height, calc(100dvh - 220px))); grid-template-rows: minmax(0, 1fr); }
+    .header .mega-menu > :is(.mega-menu__primary, .mega-menu__section, .mega-menu__additional) {
+        min-height: 0; height: 100%; overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain;
+    }
+}
+
+/* Колонки прокручиваются независимо в пределах доступной высоты. */
 @media (min-width: 1101px) {
     .header .mega-menu {
         max-height: var(--mega-menu-available-height, calc(100dvh - 220px));
-        overflow-y: auto;
+        overflow-y: hidden;
         overflow-x: hidden;
         overscroll-behavior-y: contain;
         scrollbar-gutter: stable;
@@ -79,7 +86,7 @@
     padding: 2px 4px;
     display: block;
     color: var(--subprimary-color-1);
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
     line-height: 1.2;
     text-transform: uppercase;
@@ -143,7 +150,7 @@
 
 .mega-menu__title {
     color: var(--subprimary-color-1);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.2;
     text-transform: uppercase;
@@ -161,7 +168,7 @@
 .mega-menu__additional a {
     position: relative;
     color: var(--black-shade-1);
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
     line-height: 1.2;
     transition: color 200ms ease, font-size 200ms ease;
@@ -207,7 +214,7 @@
     .mega-menu__primary-link,
     .mega-menu__links a,
     .mega-menu__additional a {
-        font-size: 16px;
+        font-size: 1rem;
     }
 }
 
@@ -235,7 +242,7 @@
         left: 0;
         width: 100vw;
         height: calc(100dvh - var(--header-top, 0px) - var(--header-panel-height, 88px));
-        padding: 16px 0px 80px;
+        padding: 16px 0px 32px;
         overflow-x: hidden;
         overflow-y: auto;
         border: 0;
@@ -268,7 +275,7 @@
         width: 100%;
         padding: 0;
         color: var(--subprimary-color-1) !important;
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .mega-menu__primary-link.has-submenu::after,
@@ -279,7 +286,7 @@
         width: 24px;
         height: 24px;
         pointer-events: none;
-        background: url('../../images/svg/triangle-right-orange.svg');
+        background: url("data:image/svg+xml,%3Csvg%20width%3D%229%22%20height%3D%2212%22%20viewBox%3D%220%200%209%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M0%2012L3.39774%206.00014L0%20-2.38419e-07L9%206.00014L0%2012Z%22%20fill%3D%22%23F4772B%22%2F%3E%0A%3C%2Fsvg%3E%0A");
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -322,7 +329,7 @@
     .mega-menu__additional a,
     .mega-menu .mega-menu__additional .is-muted {
         color: var(--subprimary-color-1);
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 500;
     }
 
@@ -364,7 +371,7 @@
         background: transparent;
         color: var(--subprimary-color-1);
         font: inherit;
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 500;
         cursor: pointer;
         height: 28px;
@@ -384,14 +391,14 @@
         width: 20px;
         height: 20px;
         pointer-events: none;
-        background: url('../../images/svg/triangle-right-orange.svg');
+        background: url("data:image/svg+xml,%3Csvg%20width%3D%229%22%20height%3D%2212%22%20viewBox%3D%220%200%209%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M0%2012L3.39774%206.00014L0%20-2.38419e-07L9%206.00014L0%2012Z%22%20fill%3D%22%23F4772B%22%2F%3E%0A%3C%2Fsvg%3E%0A");
         background-repeat: no-repeat;
         background-position: center;
         transform: rotate(180deg);
     }
 
     .mega-menu__title {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 
     .mega-menu__links {
@@ -402,7 +409,7 @@
     .mega-menu__links a,
     .mega-menu .mega-menu__links .is-muted {
         color: var(--black-shade-1);
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 500;
     }
 }
@@ -426,9 +433,9 @@
 
 @media (hover: hover) {
     .mega-menu__additional .is-muted:hover {
-        font-size: 20px;
+        font-size: 1.25rem;
         &::after {
-            content: url('../../images/svg/triangle-right-orange.svg');
+            content: ''; display: inline-block; width: 9px; height: 12px; background: url("data:image/svg+xml,%3Csvg%20width%3D%229%22%20height%3D%2212%22%20viewBox%3D%220%200%209%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M0%2012L3.39774%206.00014L0%20-2.38419e-07L9%206.00014L0%2012Z%22%20fill%3D%22%23F4772B%22%2F%3E%0A%3C%2Fsvg%3E%0A") center / contain no-repeat;
             line-height: 0;
             padding-left: 12px;
         }
@@ -441,7 +448,7 @@
     }
 
     .mega-menu[data-hover-submenu] .mega-menu__primary-link::after {
-        content: url('../../images/svg/triangle-right-orange.svg');
+        content: ''; display: inline-block; width: 9px; height: 12px; background: url("data:image/svg+xml,%3Csvg%20width%3D%229%22%20height%3D%2212%22%20viewBox%3D%220%200%209%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M0%2012L3.39774%206.00014L0%20-2.38419e-07L9%206.00014L0%2012Z%22%20fill%3D%22%23F4772B%22%2F%3E%0A%3C%2Fsvg%3E%0A") center / contain no-repeat;
         display: inline-block;
         padding-left: 12px;
         opacity: 0;
@@ -510,7 +517,7 @@
         min-height: 52px;
         padding: 14px 28px 14px 12px;
         border-bottom: 1px solid var(--subprimary-color-4);
-        font-size: 16px;
+        font-size: 1rem;
         line-height: 1.35;
         transition: background-color 160ms ease;
     }
@@ -531,7 +538,7 @@
         width: 12px;
         height: 12px;
         padding: 0;
-        background: url('../../images/svg/triangle-right-orange.svg') center / contain no-repeat;
+        background: url("data:image/svg+xml,%3Csvg%20width%3D%229%22%20height%3D%2212%22%20viewBox%3D%220%200%209%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M0%2012L3.39774%206.00014L0%20-2.38419e-07L9%206.00014L0%2012Z%22%20fill%3D%22%23F4772B%22%2F%3E%0A%3C%2Fsvg%3E%0A") center / contain no-repeat;
         opacity: 0;
         transform: translateY(-50%);
     }
@@ -550,7 +557,7 @@
         padding: 12px 14px;
         border-bottom: 1px solid var(--subprimary-color-4);
         background: var(--subprimary-color-5);
-        font-size: 18px;
+        font-size: 1.125rem;
         line-height: 1.35;
     }
 
@@ -565,7 +572,7 @@
         min-height: 49px;
         padding: 13px 14px;
         border-bottom: 1px solid var(--subprimary-color-6);
-        font-size: 16px;
+        font-size: 1rem;
         line-height: 1.4;
         transition: background-color 160ms ease, font-size 0.1s ease-in-out;
     }
@@ -616,7 +623,7 @@
         height: auto;
         padding: 14px 40px 14px 12px;
         border-bottom: 1px solid var(--subprimary-color-4);
-        font-size: 16px;
+        font-size: 1rem;
         line-height: 1.4;
         scroll-margin-top: 16px;
         transition: background-color 200ms ease;
@@ -691,7 +698,7 @@
         min-height: 44px;
         padding: 12px;
         border-bottom: 1px solid var(--subprimary-color-6);
-        font-size: 16px;
+        font-size: 1rem;
         line-height: 1.4;
     }
 

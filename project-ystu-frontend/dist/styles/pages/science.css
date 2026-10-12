@@ -7,7 +7,7 @@
 }
 
 .science-detail__title {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: var(--subprimary-color-1);
     font-weight: 600;
 }
@@ -45,14 +45,14 @@
 }
 
 .science-detail__info dt {
-    font-size: 15px;
+    font-size: 0.9375rem;
     color: var(--subprimary-color-2);
     text-transform: uppercase;
     font-weight: 500;
 }
 
 .science-detail__info dd {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .science-detail__info .btn {
@@ -64,7 +64,7 @@
 
 .science-detail__description {
     max-width: 835px;
-    font-size: 18px;
+    font-size: 1.125rem;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -72,7 +72,7 @@
 
 .science-detail__code {
     color: var(--subprimary-color-2);
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 @media(max-width: 1440px) {
@@ -116,18 +116,18 @@
 
     .science-detail__info .btn {
         max-width: 130px;
-        font-size: 15px;
+        font-size: 0.9375rem;
         height: 46px;
         font-weight: 500;
         padding: 14px 24px;
     }
 
     .science-detail__info dt {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
     .science-detail__info dd {
-        font-size: 15px;
+        font-size: 0.9375rem;
     }
 
     .science-detail__title {

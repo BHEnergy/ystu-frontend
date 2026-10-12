@@ -9,8 +9,8 @@
   <link rel="icon" type="image/svg+xml" href="../images/svg/logo.svg"></head>
   <body class = "search-page-background">
     <div class="wrapper">
-      <header class="header">
-        <div class="header__wrapper container">
+      <header class="header" data-ui="header">
+        <div class="header__wrapper container" data-ui="header__wrapper">
           <div class="header__top">
             <nav class="navbar">
               <ul class="secondary-nav">
@@ -39,23 +39,23 @@
               <a href="tel:+74852402199" class="navbar__phone"
                 >+7 (4852) 40-21-99</a
               >
-              <div class="navbar__panel">
+              <div class="navbar__panel" data-ui="navbar__panel">
                 <a href="search.html" aria-label="Поиск по сайту">
-                  <img src="../images/svg/search.svg" alt="" />
+                  <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#search"></use></svg>
                 </a>
                 <a href="#" aria-label="Личный кабинет">
-                  <img src="../images/svg/portrait.svg" alt="" />
+                  <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#portrait"></use></svg>
                 </a>
                 <a href="#" aria-label="Выбор языка">
-                  <img src="../images/svg/translation.svg" alt="" />
+                  <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#translation"></use></svg>
                 </a>
                 <a href="#" aria-label="Версия для слабовидящих">
-                  <img src="../images/svg/eyeglases.svg" alt="" />
+                  <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#eyeglases"></use></svg>
                 </a>
               </div>
             </nav>
           </div>
-          <div class="header__menu header__menu--collapsed">
+          <div class="header__menu header__menu--collapsed" data-ui="header__menu--collapsed">
             <a href="index.html" aria-label="ЯГТУ — главная страница">
               <img src="../images/svg/logo.svg" alt="" />
             </a>
@@ -88,8 +88,8 @@
               </span>
               Меню
             </button>
-            <nav class="mega-menu" id="main-mega-menu" aria-label="Основное меню" data-hover-submenu>
-              <div class="mega-menu__primary">
+            <nav class="mega-menu" data-ui="mega-menu" id="main-mega-menu" aria-label="Основное меню" data-hover-submenu>
+              <div class="mega-menu__primary" data-ui="mega-menu__primary">
 
   <a class="mega-menu__primary-link has-submenu is-selected" href="structure.html" data-menu-section="university" aria-current="true">Университет</a>
 
@@ -116,7 +116,7 @@
   <a class="mega-menu__primary-link has-submenu" href="news-events.html" data-menu-section="targeted">Целевое обучение</a>
 
 </div>
-              <section class="mega-menu__section" data-menu-panel="university" aria-labelledby="mega-menu-university-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="university" aria-labelledby="mega-menu-university-title">
                 <h2 class="mega-menu__title" id="mega-menu-university-title">Университет</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="structure.html">Об университете</a>
@@ -129,7 +129,7 @@
                   <a class="is-muted" href="404.html">Партнеры</a>
                 </div>
               </section>
-              <section class="mega-menu__section" data-menu-panel="applicants" aria-labelledby="mega-menu-applicants-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="applicants" aria-labelledby="mega-menu-applicants-title">
                 <h2 class="mega-menu__title" id="mega-menu-applicants-title">Поступающим</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="#">Страница 1</a>
@@ -139,7 +139,7 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
-              <section class="mega-menu__section" data-menu-panel="students" aria-labelledby="mega-menu-students-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="students" aria-labelledby="mega-menu-students-title">
                 <h2 class="mega-menu__title" id="mega-menu-students-title">Обучающимся</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="#">Страница 1</a>
@@ -149,7 +149,7 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
-              <section class="mega-menu__section" data-menu-panel="school" aria-labelledby="mega-menu-school-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="school" aria-labelledby="mega-menu-school-title">
                 <h2 class="mega-menu__title" id="mega-menu-school-title">Школьникам</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="#">Страница 1</a>
@@ -159,7 +159,7 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
-              <section class="mega-menu__section" data-menu-panel="employees" aria-labelledby="mega-menu-employees-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="employees" aria-labelledby="mega-menu-employees-title">
                 <h2 class="mega-menu__title" id="mega-menu-employees-title">Сотрудникам</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="#">Страница 1</a>
@@ -169,7 +169,7 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
-              <section class="mega-menu__section" data-menu-panel="graduates" aria-labelledby="mega-menu-graduates-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="graduates" aria-labelledby="mega-menu-graduates-title">
                 <h2 class="mega-menu__title" id="mega-menu-graduates-title">Выпускникам</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="#">Страница 1</a>
@@ -179,7 +179,7 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
-              <section class="mega-menu__section" data-menu-panel="vacancies" aria-labelledby="mega-menu-vacancies-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="vacancies" aria-labelledby="mega-menu-vacancies-title">
                 <h2 class="mega-menu__title" id="mega-menu-vacancies-title">Работа в ЯГТУ</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="#">Страница 1</a>
@@ -189,7 +189,7 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
-              <section class="mega-menu__section" data-menu-panel="education" aria-labelledby="mega-menu-education-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="education" aria-labelledby="mega-menu-education-title">
                 <h2 class="mega-menu__title" id="mega-menu-education-title">Образование</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="#">Страница 1</a>
@@ -199,7 +199,7 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
-              <section class="mega-menu__section" data-menu-panel="science" aria-labelledby="mega-menu-science-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="science" aria-labelledby="mega-menu-science-title">
                 <h2 class="mega-menu__title" id="mega-menu-science-title">Наука и инновации</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="#">Страница 1</a>
@@ -209,7 +209,7 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
-              <section class="mega-menu__section" data-menu-panel="student-life" aria-labelledby="mega-menu-student-life-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="student-life" aria-labelledby="mega-menu-student-life-title">
                 <h2 class="mega-menu__title" id="mega-menu-student-life-title">Студенческая жизнь</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="#">Страница 1</a>
@@ -219,7 +219,7 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
-              <section class="mega-menu__section" data-menu-panel="distance" aria-labelledby="mega-menu-distance-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="distance" aria-labelledby="mega-menu-distance-title">
                 <h2 class="mega-menu__title" id="mega-menu-distance-title">Заочное обучение</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="#">Страница 1</a>
@@ -229,7 +229,7 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
-              <section class="mega-menu__section" data-menu-panel="targeted" aria-labelledby="mega-menu-targeted-title">
+              <section class="mega-menu__section" data-ui="mega-menu__section" data-menu-panel="targeted" aria-labelledby="mega-menu-targeted-title">
                 <h2 class="mega-menu__title" id="mega-menu-targeted-title">Целевое обучение</h2>
                 <div class="mega-menu__links">
                   <a class="is-muted" href="#">Страница 1</a>
@@ -239,7 +239,7 @@
                   <a class="is-muted" href="#">Страница 5</a>
                 </div>
               </section>
-              <div class="mega-menu__additional">
+              <div class="mega-menu__additional" data-ui="mega-menu__additional">
                 <a class="is-muted" href="#">Колледж</a>
                 <a class="is-muted" href="#">ДПО</a>
                 <a class="is-muted" href="vacancies.html">Работа в ЯГТУ</a>
@@ -266,7 +266,7 @@
           </nav>
         </div>
         <section class="container search-page">
-          <form class="search-page__form" action="#" method="get" role="search">
+          <form class="search-page__form" data-ui="search-page__form" action="#" method="get" role="search">
             <input
               class="search-page__input"
               id="site-search"
@@ -295,19 +295,19 @@
             <div class = "footer__body">
               <div class = "footer__header">
                 <div class = "footer__contacts">
-                  <a href = "tel:74852402199" class = "footer__phone">+7 (4852) 40-21-99</a>
-                  <a href = "mailto:info@ystu.ru" class = "footer__mail">info@ystu.ru</a>
-                  <a href = "https://yandex.ru/maps/-/CTTAVEP3" class = "footer__location">г. Ярославль, Московский проспект, 88</a>
+                  <a href = "tel:74852402199" class = "footer__phone"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#call-white"></use></svg>+7 (4852) 40-21-99</a>
+                  <a href = "mailto:info@ystu.ru" class = "footer__mail"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#mail-white"></use></svg>info@ystu.ru</a>
+                  <a href = "https://yandex.ru/maps/-/CTTAVEP3" class = "footer__location"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#location-white"></use></svg>г. Ярославль, Московский проспект, 88</a>
                 </div>
                 <div class = "footer__messages">
                   <a href = "#" aria-label="Telegram">
-                    <img src = "../images/svg/tg.svg" alt="">
+                    <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#tg"></use></svg>
                   </a>
                   <a href = "#" aria-label="ВКонтакте">
-                    <img src = "../images/svg/vk.svg" alt="">
+                    <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#vk"></use></svg>
                   </a>
                   <a href = "#" aria-label="Одноклассники">
-                    <img src = "../images/svg/ok.svg" alt="">
+                    <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#ok"></use></svg>
                   </a>
                 </div>
                 <a href =  "#">Обработка персональных данных</a>
@@ -351,8 +351,9 @@
           </div>
         </div>
       </footer>
+
     </div>
-    <div class="cookie-banner">
+    <div class="cookie-banner" data-ui="cookie-banner">
       <div class="cookie-body">
         <div class="cookie-text">Продолжая работу с сайтом, вы даете согласие на использование <a href="#">файлов cookie</a></div>
         <button type="button" id="cookieAccept" class="cookie-btn btn btn--default">Принять</button>

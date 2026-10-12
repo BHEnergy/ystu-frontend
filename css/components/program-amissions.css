@@ -5,7 +5,7 @@
 .program-admissions__title {
     margin-bottom: 40px;
     color: var(--subprimary-color-1);
-    font-size: 44px;
+    font-size: 2.75rem;
     font-weight: 500;
     line-height: 1.2;
 }
@@ -24,7 +24,7 @@
     border-radius: 16px;
 }
 
-.program-admissions__map img {
+.program-admissions__map :is(img, .ui-icon) {
     display: block;
     width: 100%;
     height: 100%;
@@ -36,7 +36,7 @@
     grid-template-columns: 356px minmax(0, 1fr);
     gap: 24px;
     align-items: start;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .program-admissions__contact {
@@ -56,7 +56,7 @@
     flex-basis: 100%;
     margin-bottom: 4px;
     color: var(--subprimary-color-2);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
     line-height: 1.2;
     text-transform: uppercase;
@@ -140,7 +140,7 @@
 
     .program-admissions__title {
         margin-bottom: 24px;
-        font-size: 32px;
+        font-size: 2rem;
     }
 
     .program-admissions__map {
@@ -150,7 +150,7 @@
 
     .program-admissions__contacts {
         grid-template-columns: 1fr;
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 
     .program-admissions__contact,
@@ -160,6 +160,6 @@
     }
 
     .program-admissions__contact h3 {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 }

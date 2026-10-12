@@ -1,14 +1,16 @@
-<!-- Дополнительные демонстрационные новости для второй страницы выдачи. -->
-<div class="events__content" hidden>
-{% for title in ["Студенты ЯГТУ представили новые научные проекты", "В университете прошла встреча с будущими абитуриентами"] %}
-  <a class="news__card" href="#">
-    <div class="news__photo">
+<!-- Демонстрационные записи для страниц 2–16; реальные материалы подключает CMS. -->
+<div class="events__content" data-ui="events__content" hidden>
+{% for demoPage in range(2, 17) %}
+{% for title in ["Студенты ЯГТУ представили новые научные проекты", "В университете прошла встреча с будущими абитуриентами", "Новые образовательные программы университета", "Встреча студентов с работодателями", "Университетские проекты и инициативы", "Подготовка к новому учебному году"] %}
+  <a class="news__card" data-ui="news__card" href="#">
+    <div class="news__photo">{% include "components/news-arrow.njk" %}
       <img loading="lazy" decoding="async" src="../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета">
     </div>
     <div class="news__content">
-      <div class="news__header"><p class="news__date">08.10.2026</p><p class="news__title">{{ title }}</p></div>
-      <div class="news__tags"><p class="news__tag">{{ "наука" if loop.first else "поступающим" }}</p></div>
+      <div class="news__header"><p class="news__date">08.10.2026</p><p class="news__title">{{ title }} — {{ (demoPage - 1) * 6 + loop.index }}</p></div>
+      <div class="news__tags"><p class="news__tag" data-ui="news__tag">{{ "наука" if loop.first else "поступающим" }}</p></div>
     </div>
   </a>
+{% endfor %}
 {% endfor %}
 </div>

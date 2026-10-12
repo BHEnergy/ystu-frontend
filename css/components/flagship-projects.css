@@ -3,7 +3,7 @@
 }
 
 .flagship-projects__title {
-  font-size: 52px;
+  font-size: 3.25rem;
   font-weight: 600;
   color: var(--subprimary-color-1);
 }
@@ -16,7 +16,7 @@
   min-height: 0;
   overflow: hidden;
   padding: 28px 40px 28px 24px;
-  font-size: 24px;
+  font-size: 1.5rem;
   position: relative;
   transition: all 0.3s ease-in-out;
   display: flex;
@@ -38,6 +38,10 @@
 .flagship-project__photo {
   text-align: end;
 }
+
+.flagship-project__card::after { pointer-events: none; line-height: 0; }
+.flagship-project__title { position: relative; z-index: 1; overflow-wrap: anywhere; }
+@media (hover: hover) { .flagship-project__card:hover { box-shadow: 0 8px 20px rgb(9 65 136 / 18%); } }
 
 .flagship-projects__grid {
   display: grid;
@@ -287,7 +291,7 @@
     bottom: -10px;
     left: 0;
   }
- 
+
   /* Левая карточка третьего ряда */
   & .flagship-project__card:nth-child(6) {
     background: var(--subprimary-color-1);
@@ -476,12 +480,12 @@
 
 @media (min-width: 1101px) and (max-width: 1440px) {
   .flagship-projects__title {
-    font-size: 44px;
+    font-size: 2.75rem;
   }
 
   .flagship-project__card {
     padding: 24px 28px 24px 20px;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 
@@ -495,11 +499,11 @@
     flex-direction: column;
   }
 
-  .flagship-projects__grid.card-8, 
-  .flagship-projects__grid.card-7, 
-  .flagship-projects__grid.card-6, 
-  .flagship-projects__grid.card-5, 
-  .flagship-projects__grid.card-4, 
+  .flagship-projects__grid.card-8,
+  .flagship-projects__grid.card-7,
+  .flagship-projects__grid.card-6,
+  .flagship-projects__grid.card-5,
+  .flagship-projects__grid.card-4,
   .flagship-projects__grid.card-3 {
     gap: 16px;
 
@@ -517,7 +521,7 @@
       content: "";
       position: absolute;
       bottom: -70px;
-      left: -30px;
+      left: -40px;
       width: 115%;
       height: 225px;
       background-image: url(../../images/svg/line-2-mobile.svg);
@@ -545,7 +549,7 @@
     & .flagship-project__card:nth-child(6)::after {
       content: "";
       bottom: -70px;
-      left: -30px;
+      left: -40px;
       width: 115%;
       height: 225px;
       background-image: url(../../images/svg/line-2-mobile.svg);
@@ -578,15 +582,15 @@
   }
 
   .flagship-projects__title {
-    font-size: 32px;
+    font-size: 2rem;
   }
 
   .flagship-project__title {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   .flagship-project__photo {
-    & img {
+    & :is(img, .ui-icon) {
       max-height: 32px;
       max-width: 169px;
       width: 100%;

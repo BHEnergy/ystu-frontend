@@ -10,8 +10,7 @@
 
     panels.forEach((panel) => {
         const panelId = panel.id;
-        const openButtons = document.querySelectorAll(
-            `[data-open-filter-panel="${panelId}"]`
+        const openButtons = document.querySelectorAll(`[data-open-filter-panel="${panelId}"]`
         );
         const closeButtons = panel.querySelectorAll('[data-close-filter-panel]');
         const form = panel.querySelector('form');
@@ -25,7 +24,7 @@
             panel.setAttribute('aria-hidden', String(!isOpen));
             openButtons.forEach((button) => {
                 button.setAttribute('aria-expanded', String(isOpen));
-                button.closest('.listing-page__mobile-tools')?.classList.toggle(
+                button.closest('[data-ui~="listing-page__mobile-tools"]')?.classList.toggle(
                     'is-filter-open',
                     isOpen,
                 );

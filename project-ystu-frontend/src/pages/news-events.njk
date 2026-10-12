@@ -24,26 +24,26 @@
         <section class = "events-section">
           <div class = "container">
             <div class="events">
-              <div class="events__wrapper">
-                <div class="events__header events__header--fade" role="group" aria-label="Новости и события">
-                    <button type="button" class="title events__title unactive tab" data-value="tab" data-tab="events" aria-pressed="false">События</button>
+              <div class="events__wrapper" data-ui="events__wrapper">
+                <div class="events__header events__header--fade" data-ui="events__header--fade" role="group" aria-label="Новости и события">
+                    <button type="button" class="title events__title unactive tab" data-ui="tab" data-value="tab" data-tab="events" aria-pressed="false">События</button>
                     <div class="events__separator"></div>
-                    <button type="button" class="title events__title active tab" data-value="tab" data-tab="news" aria-pressed="true">Новости</button>
+                    <button type="button" class="title events__title active tab" data-ui="tab" data-value="tab" data-tab="news" aria-pressed="true">Новости</button>
                 </div>
-                <div class = "events__tags active" data-value="tab-container" data-tab="news">
+                <div class = "events__tags active" data-ui="events__tags" data-value="tab-container" data-tab="news">
                   <button type="button" class="events__tag current" data-filter="all" aria-pressed="true">Все</button>
                   <button type="button" class="events__tag" data-filter="#приемная кампания" aria-pressed="false">#приемная кампания</button>
                   <button type="button" class="events__tag" data-filter="#поступающим" aria-pressed="false">#поступающим</button>
                   <button type="button" class="events__tag" data-filter="#наука" aria-pressed="false">#наука</button>
                 </div>
-                <div class = "events__container unactive" data-value="tab-container" data-tab="events" data-pagination-size="6">
-                  <div class = "events__content ">
-                        <div class="event__card">
+                <div class = "events__container unactive" data-ui="events__container" data-value="tab-container" data-tab="events" data-pagination-size="6">
+                  <div class = "events__content " data-ui="events__content">
+                        <div class="event__card" data-ui="event__card">
                             <div class = "event__photo">
                                 <img loading="lazy" decoding="async" src = "../images/fallback/banner1.png" alt="Выступление с презентацией анализа 3D-сканов деталей">
                             </div>
                             <div class = "event__content">
-                                <p class = "event__title">Международная научно-практическая конференция «Экологическая безопасность водных объектов»</p>
+                                <p class = "event__title" data-ui="event__title">Международная научно-практическая конференция «Экологическая безопасность водных объектов»</p>
                                 <div class = "event__body">
                                     <div class = "event__info">
                                         <p class = "event__date">1-3 июля 2026</p>
@@ -51,7 +51,7 @@
                                         <p class = "event__location">Точка кипения</p>
                                     </div>
                                     <div class = "event__footer">
-                                        <button type="button" class="btn btn--link btn--blue button-modal" data-modal="event">Зарегистрироваться</button>
+                                        <button type="button" class="btn btn--link btn--blue button-modal" data-ui="button-modal" data-modal="event">Зарегистрироваться</button>
                                         <a class = "btn btn--link btn--white" href = "#">Подробнее</a>
                                     </div>
                                 </div>
@@ -65,12 +65,12 @@
                               </div>
                             </div>
                         </div>
-                        <div class="event__card">
+                        <div class="event__card" data-ui="event__card">
                             <div class = "event__photo">
                                 <img loading="lazy" decoding="async" src = "../images/fallback/banner1.png" alt="Выступление с презентацией анализа 3D-сканов деталей">
                             </div>
                             <div class = "event__content">
-                                <p class = "event__title">Исторический квиз "Я помню! Я горжусь!"</p>
+                                <p class = "event__title" data-ui="event__title">Исторический квиз "Я помню! Я горжусь!"</p>
                                 <div class = "event__body">
                                     <div class = "event__info">
                                         <p class = "event__date">1-3 июля 2026</p>
@@ -78,7 +78,7 @@
                                         <p class = "event__location">Точка кипения</p>
                                     </div>
                                     <div class = "event__footer">
-                                        <button type="button" class="btn btn--link btn--blue button-modal" data-modal="event">Зарегистрироваться</button>
+                                        <button type="button" class="btn btn--link btn--blue button-modal" data-ui="button-modal" data-modal="event">Зарегистрироваться</button>
                                         <a class = "btn btn--link btn--white" href = "#">Подробнее</a>
                                     </div>
                                 </div>
@@ -92,12 +92,12 @@
                               </div>
                             </div>
                         </div>
-                        <div class="event__card">
+                        <div class="event__card" data-ui="event__card">
                             <div class = "event__photo">
                                 <img loading="lazy" decoding="async" src = "../images/fallback/banner1.png" alt="Выступление с презентацией анализа 3D-сканов деталей">
                             </div>
                             <div class = "event__content">
-                                <p class = "event__title">Акселератор «ПолиТех.Индустрия 5.0»</p>
+                                <p class = "event__title" data-ui="event__title">Акселератор «ПолиТех.Индустрия 5.0»</p>
                                 <div class = "event__body">
                                     <div class = "event__info">
                                         <p class = "event__date">1-3 июля 2026</p>
@@ -105,7 +105,7 @@
                                         <p class = "event__location">Точка кипения</p>
                                     </div>
                                     <div class = "event__footer">
-                                        <button type="button" class="btn btn--link btn--blue button-modal" data-modal="event">Зарегистрироваться</button>
+                                        <button type="button" class="btn btn--link btn--blue button-modal" data-ui="button-modal" data-modal="event">Зарегистрироваться</button>
                                         <a class = "btn btn--link btn--white" href = "#">Подробнее</a>
                                     </div>
                                 </div>
@@ -119,12 +119,12 @@
                               </div>
                             </div>
                         </div>
-                        <div class="event__card">
+                        <div class="event__card" data-ui="event__card">
                             <div class = "event__photo">
                                 <img loading="lazy" decoding="async" src = "../images/fallback/banner1.png" alt="Выступление с презентацией анализа 3D-сканов деталей">
                             </div>
                             <div class = "event__content">
-                                <p class = "event__title">Международная научно-практическая конференция «Экологическая безопасность водных объектов»</p>
+                                <p class = "event__title" data-ui="event__title">Международная научно-практическая конференция «Экологическая безопасность водных объектов»</p>
                                 <div class = "event__body">
                                     <div class = "event__info">
                                         <p class = "event__date">1-3 июля 2026</p>
@@ -132,7 +132,7 @@
                                         <p class = "event__location">Точка кипения</p>
                                     </div>
                                     <div class = "event__footer">
-                                        <button type="button" class="btn btn--link btn--blue button-modal" data-modal="event">Зарегистрироваться</button>
+                                        <button type="button" class="btn btn--link btn--blue button-modal" data-ui="button-modal" data-modal="event">Зарегистрироваться</button>
                                         <a class = "btn btn--link btn--white" href = "#">Подробнее</a>
                                     </div>
                                 </div>
@@ -146,12 +146,12 @@
                               </div>
                             </div>
                         </div>
-                        <div class="event__card">
+                        <div class="event__card" data-ui="event__card">
                             <div class = "event__photo">
                                 <img loading="lazy" decoding="async" src = "../images/fallback/banner1.png" alt="Выступление с презентацией анализа 3D-сканов деталей">
                             </div>
                             <div class = "event__content">
-                                <p class = "event__title">Исторический квиз "Я помню! Я горжусь!"</p>
+                                <p class = "event__title" data-ui="event__title">Исторический квиз "Я помню! Я горжусь!"</p>
                                 <div class = "event__body">
                                     <div class = "event__info">
                                         <p class = "event__date">1-3 июля 2026</p>
@@ -159,7 +159,7 @@
                                         <p class = "event__location">Точка кипения</p>
                                     </div>
                                     <div class = "event__footer">
-                                        <button type="button" class="btn btn--link btn--blue button-modal" data-modal="event">Зарегистрироваться</button>
+                                        <button type="button" class="btn btn--link btn--blue button-modal" data-ui="button-modal" data-modal="event">Зарегистрироваться</button>
                                         <a class = "btn btn--link btn--white" href = "#">Подробнее</a>
                                     </div>
                                 </div>
@@ -173,12 +173,12 @@
                               </div>
                             </div>
                         </div>
-                        <div class="event__card">
+                        <div class="event__card" data-ui="event__card">
                             <div class = "event__photo">
                                 <img src = "../images/fallback/banner1.png" alt="Выступление с презентацией анализа 3D-сканов деталей">
                             </div>
                             <div class = "event__content">
-                                <p class = "event__title">Акселератор «ПолиТех.Индустрия 5.0»</p>
+                                <p class = "event__title" data-ui="event__title">Акселератор «ПолиТех.Индустрия 5.0»</p>
                                 <div class = "event__body">
                                     <div class = "event__info">
                                         <p class = "event__date">1-3 июля 2026</p>
@@ -186,7 +186,7 @@
                                         <p class = "event__location">Точка кипения</p>
                                     </div>
                                     <div class = "event__footer">
-                                        <button type="button" class="btn btn--link btn--blue button-modal" data-modal="event">Зарегистрироваться</button>
+                                        <button type="button" class="btn btn--link btn--blue button-modal" data-ui="button-modal" data-modal="event">Зарегистрироваться</button>
                                         <a class = "btn btn--link btn--white" href = "#">Подробнее</a>
                                     </div>
                                 </div>
@@ -205,10 +205,10 @@
                     {% include "components/demo-extra-events.njk" %}
                     {% include "components/pagination.njk" %}
                 </div>
-                <div class = "events__container active" data-value="tab-container" data-tab="news" data-pagination-size="6">
-                  <div class = "events__content">
-<a class="news__card" href="#">
-                            <div class = "news__photo">
+                <div class = "events__container active" data-ui="events__container" data-value="tab-container" data-tab="news" data-pagination-size="6">
+                  <div class = "events__content" data-ui="events__content">
+<a class="news__card" data-ui="news__card" href="#">
+                            <div class = "news__photo">{% include "components/news-arrow.njk" %}
                               <img loading="lazy" decoding="async" src = "../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета">
                             </div>
                             <div class = "news__content">
@@ -217,13 +217,13 @@
                                   <p class = "news__title">Международная научно-практическая конференция «Экологическая безопасность водных объектов»</p>
                               </div>
                               <div class = "news__tags">
-                                  <p class = "news__tag">приемная кампания</p>
-                                  <p class = "news__tag">поступающим</p>
+                                  <p class = "news__tag" data-ui="news__tag">приемная кампания</p>
+                                  <p class = "news__tag" data-ui="news__tag">поступающим</p>
                               </div>
                             </div>
                         </a>
-<a class="news__card" href="#">
-                            <div class = "news__photo">
+<a class="news__card" data-ui="news__card" href="#">
+                            <div class = "news__photo">{% include "components/news-arrow.njk" %}
                               <img loading="lazy" decoding="async" src = "../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета">
                             </div>
                             <div class = "news__content">
@@ -232,13 +232,13 @@
                                   <p class = "news__title">Социологическй опрос «Приоритет 2030»</p>
                               </div>
                               <div class = "news__tags">
-                                  <p class = "news__tag">приемная кампания</p>
-                                  <p class = "news__tag">поступающим</p>
+                                  <p class = "news__tag" data-ui="news__tag">приемная кампания</p>
+                                  <p class = "news__tag" data-ui="news__tag">поступающим</p>
                               </div>
                             </div>
                         </a>
-<a class="news__card" href="#">
-                            <div class = "news__photo">
+<a class="news__card" data-ui="news__card" href="#">
+                            <div class = "news__photo">{% include "components/news-arrow.njk" %}
                               <img loading="lazy" decoding="async" src = "../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета">
                             </div>
                             <div class = "news__content">
@@ -247,13 +247,13 @@
                                   <p class = "news__title">Максим Татаров встретился <br>со студентами Института экономики и менеджмента</p>
                               </div>
                               <div class = "news__tags">
-                                  <p class = "news__tag">приемная кампания</p>
-                                  <p class = "news__tag">поступающим</p>
+                                  <p class = "news__tag" data-ui="news__tag">приемная кампания</p>
+                                  <p class = "news__tag" data-ui="news__tag">поступающим</p>
                               </div>
                             </div>
                         </a>
-<a class="news__card" href="#">
-                            <div class = "news__photo">
+<a class="news__card" data-ui="news__card" href="#">
+                            <div class = "news__photo">{% include "components/news-arrow.njk" %}
                               <img loading="lazy" decoding="async" src = "../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета">
                             </div>
                             <div class = "news__content">
@@ -262,13 +262,13 @@
                                   <p class = "news__title">Международная научно-практическая конференция «Экологическая безопасность водных объектов»</p>
                               </div>
                               <div class = "news__tags">
-                                  <p class = "news__tag">приемная кампания</p>
-                                  <p class = "news__tag">поступающим</p>
+                                  <p class = "news__tag" data-ui="news__tag">приемная кампания</p>
+                                  <p class = "news__tag" data-ui="news__tag">поступающим</p>
                               </div>
                             </div>
                         </a>
-<a class="news__card" href="#">
-                            <div class = "news__photo">
+<a class="news__card" data-ui="news__card" href="#">
+                            <div class = "news__photo">{% include "components/news-arrow.njk" %}
                               <img loading="lazy" decoding="async" src = "../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета">
                             </div>
                             <div class = "news__content">
@@ -277,13 +277,13 @@
                                   <p class = "news__title">Социологическй опрос «Приоритет 2030»</p>
                               </div>
                               <div class = "news__tags">
-                                  <p class = "news__tag">приемная кампания</p>
-                                  <p class = "news__tag">поступающим</p>
+                                  <p class = "news__tag" data-ui="news__tag">приемная кампания</p>
+                                  <p class = "news__tag" data-ui="news__tag">поступающим</p>
                               </div>
                             </div>
                         </a>
-<a class="news__card" href="#">
-                            <div class = "news__photo">
+<a class="news__card" data-ui="news__card" href="#">
+                            <div class = "news__photo">{% include "components/news-arrow.njk" %}
                               <img loading="lazy" decoding="async" src = "../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета">
                             </div>
                             <div class = "news__content">
@@ -292,8 +292,8 @@
                                   <p class = "news__title">Максим Татаров встретился <br>со студентами Института экономики и менеджмента</p>
                               </div>
                               <div class = "news__tags">
-                                  <p class = "news__tag">приемная кампания</p>
-                                  <p class = "news__tag">поступающим</p>
+                                  <p class = "news__tag" data-ui="news__tag">приемная кампания</p>
+                                  <p class = "news__tag" data-ui="news__tag">поступающим</p>
                               </div>
                             </div>
                         </a>

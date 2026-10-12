@@ -18,11 +18,12 @@
         }));
         validate();
     });
-    document.querySelectorAll('.modal-form').forEach(form => {
-        form.querySelectorAll('.input--container input').forEach(input => {
-            const group = input.closest('.input--container');
-            let error = group.querySelector('.error-text');
-            if (!error) { error = document.createElement('span'); error.className = 'error-text'; group.append(error); }
+    document.querySelectorAll('[data-ui~="modal-form"]').forEach(form => {
+        form.querySelectorAll('[data-ui~="input--container"] input').forEach(input => {
+            const group = input.closest('[data-ui~="input--container"]');
+            let error = group.querySelector('[data-ui~="error-text"]');
+            if (!error) { error = document.createElement('span'); error.className = 'error-text';
+    error.setAttribute('data-ui', error.className); group.append(error); }
             error.id ||= `form-field-error-${++id}`;
             input.setAttribute('aria-describedby', [input.getAttribute('aria-describedby'), error.id].filter(Boolean).join(' '));
             if (input.name === 'name') input.addEventListener('input', () => {

@@ -3,7 +3,8 @@
     border: none;
     font-family: 'GoogleSans', sans-serif;
     cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease, transform 200ms ease;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .btn--default {
@@ -95,6 +96,7 @@
 .btn:focus-visible {
     outline: 2px solid var(--subprimary-color-1);
     outline-offset: 3px;
+    box-shadow: 0 0 0 3px var(--white-shade-1), 0 0 0 5px var(--subprimary-color-1);
 }
 
 .btn:is(:disabled, [aria-disabled="true"]) {
@@ -152,6 +154,6 @@
 }
 
 .button-states__group .btn {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
 }

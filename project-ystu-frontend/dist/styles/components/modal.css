@@ -123,7 +123,7 @@
     cursor: pointer;
 }
 
-.modal-close img {
+.modal-close :is(img, .ui-icon) {
     width: 18px;
     height: 18px;
 }
@@ -135,7 +135,7 @@
 
 .modal-header__title {
     margin: 0;
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 1.2;
 }
 
@@ -143,7 +143,7 @@
     max-width: 540px;
     margin: 0;
     color: #5b5b5d;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.2;
 }
 
@@ -154,7 +154,7 @@
 .modal-form__footer > .btn {
     width: 100%;
     height: 58px;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .modal-success {
@@ -166,13 +166,13 @@
 }
 
 .modal-success__title {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 600;
     color: var(--subprimary-color-1);
 }
 
 .modal-success__text {
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 @media (max-width: 768px) {
@@ -201,7 +201,7 @@
         height: 28px;
     }
 
-    .modal-close img {
+    .modal-close :is(img, .ui-icon) {
         width: 14px;
         height: 14px;
     }
@@ -212,11 +212,11 @@
     }
 
     .modal-header__title {
-        font-size: 22px;
+        font-size: 1.375rem;
     }
 
     .modal-header__subtitle {
-        font-size: 16px;
+        font-size: 1rem;
     }
 }
 
@@ -263,17 +263,17 @@
     border-radius: 8px;
     background: transparent;
     font: inherit;
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--black-shade-1);
 }
 .modal--event select:invalid { color: #537aac; }
 .modal-form__select { position: relative; }
-.modal-form__select::after { content: ""; position: absolute; right: 18px; top: 50%; width: 24px; height: 24px; background: url("../../images/svg/event-modal-arrow.svg") center / contain no-repeat; transform: translateY(-50%) rotate(90deg); pointer-events: none; }
+.modal-form__select::after { content: ""; position: absolute; right: 18px; top: 50%; width: 24px; height: 24px; background: url("data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%22none%22%20overflow%3D%22visible%22%20style%3D%22display%3A%20block%3B%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cg%20id%3D%22arrow_right%22%3E%0A%3Cpath%20id%3D%22Vector%22%20d%3D%22M7.5%2018L10.8977%2012.0001L7.5%206L16.5%2012.0001L7.5%2018Z%22%20fill%3D%22%23F4772B%22%2F%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A") center / contain no-repeat; transform: translateY(-50%) rotate(90deg); pointer-events: none; }
 .modal--event select option { color: var(--black-shade-1); background: #eef0f2; }
 .modal--event input::placeholder { color: #537aac; }
 .modal-form__classes { margin: 0; padding: 0; border: 0; min-width: 0; }
-.modal-form__classes legend { float: none; width: auto; margin: 0 0 10px; font-size: 16px; color: #537aac; }
-.modal-form__classes label { display: flex; align-items: center; gap: 14px; font-size: 18px; line-height: 1.2; cursor: pointer; }
+.modal-form__classes legend { float: none; width: auto; margin: 0 0 10px; font-size: 1rem; color: #537aac; }
+.modal-form__classes label { display: flex; align-items: center; gap: 14px; font-size: 1.125rem; line-height: 1.2; cursor: pointer; }
 .modal-form__classes label + label { margin-top: 10px; }
 .modal-form__classes input { margin: 0; width: 18px; height: 18px; accent-color: #094188; flex-shrink: 0; }
 .modal--event .modal-form__footer { margin-top: 16px; }
@@ -308,10 +308,10 @@
 .modal-success { margin: 0 auto; width: 100%; max-width: 435px; gap: 24px; text-align: center; }
 .modal-success__heading { display: flex; flex-direction: column; align-items: center; gap: 10px; }
 .modal-success__icon { width: 120px; height: 120px; }
-.modal-success__title { margin: 0; font-size: 40px; font-weight: 700; line-height: 1.2; }
-.modal-success__text { margin: 0; color: #5b5b5d; font-size: 18px; line-height: 1.2; }
-.modal-success__back { padding: 14px 40px; border: 0; border-radius: 10px; background: #094188; color: #fbfbfb; font: inherit; font-size: 16px; line-height: 1; cursor: pointer; }
-.modal-success__demo { margin: 0; font-size: 12px; line-height: 1.2; color: #5b5b5d; }
+.modal-success__title { margin: 0; font-size: 2.5rem; font-weight: 700; line-height: 1.2; }
+.modal-success__text { margin: 0; color: #5b5b5d; font-size: 1.125rem; line-height: 1.2; }
+.modal-success__back { padding: 14px 40px; border: 0; border-radius: 10px; background: #094188; color: #fbfbfb; font: inherit; font-size: 1rem; line-height: 1; cursor: pointer; }
+.modal-success__demo { margin: 0; font-size: 0.75rem; line-height: 1.2; color: #5b5b5d; }
 
 @media (max-width: 768px) {
     .modal--event .modal-body { min-height: 757px; padding: 24px 16px; gap: 24px; border-radius: 10px 10px 0 0; }
@@ -319,11 +319,11 @@
     .modal--event .modal-form { gap: 16px; }
     .modal--event select { height: 50px; padding: 14px 44px 14px 16px; border-radius: 4px; }
     .modal--event .input--container input { border-radius: 4px; }
-    .modal-form__classes legend { font-size: 14px; }
-    .modal-form__classes label { gap: 10px; font-size: 16px; }
+    .modal-form__classes legend { font-size: 0.875rem; }
+    .modal-form__classes label { gap: 10px; font-size: 1rem; }
     .modal-form__classes input { width: 16px; height: 16px; }
     .modal--event .modal-form__footer { margin-top: 8px; }
-    .modal--event .modal-form__footer > .btn { height: 44px; font-size: 16px; }
+    .modal--event .modal-form__footer > .btn { height: 44px; font-size: 1rem; }
     .modal--event .modal-form__checkboxes { margin-top: 16px; }
     .modal--event .modal-body::after { bottom: -127px; }
     .modal--success .modal-body { min-height: 342px; padding: 32px; border-radius: 10px; }
@@ -332,7 +332,7 @@
     .modal-success { max-width: 326px; gap: 16px; }
     .modal-success__heading { gap: 4px; }
     .modal-success__icon { width: 80px; height: 80px; }
-    .modal-success__title { font-size: 24px; }
-    .modal-success__text { max-width: 303px; font-size: 16px; }
+    .modal-success__title { font-size: 1.5rem; }
+    .modal-success__text { max-width: 303px; font-size: 1rem; }
     .modal-success__back { padding: 14px 24px; }
 }

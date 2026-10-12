@@ -1,12 +1,12 @@
 /* Демонстрационная выдача; данные и серверные URL подключаются при интеграции. */
 (() => {
     const parameters = () => new URLSearchParams(location.search);
-    document.querySelectorAll('.pagination').forEach(container => {
+    document.querySelectorAll('[data-ui~="pagination"]').forEach(container => {
         const panel = container.closest('[data-pagination-size]');
-        const wrapper = panel?.closest('.events__wrapper');
-        const cards = panel ? [...panel.querySelectorAll('.news__card, .event__card')] : [];
+        const wrapper = panel?.closest('[data-ui~="events__wrapper"]');
+        const cards = panel ? [...panel.querySelectorAll('[data-ui~="news__card"], [data-ui~="event__card"]')] : [];
         const size = Math.max(1, Number(panel?.dataset.paginationSize) || 6);
-        const links = [...container.querySelectorAll('.pagination__page')];
+        const links = [...container.querySelectorAll('[data-ui~="pagination__page"]')];
         if (!links.length) return;
         const fallbackLast = Math.max(...links.map(link => Number(link.textContent.trim()) || 1));
         const eligible = () => cards.filter(card => card.dataset.filterHidden !== 'true');
@@ -15,6 +15,7 @@
         let current = Number.isInteger(fromUrl()) ? fromUrl() : 1;
         const status = document.createElement('p');
         status.className = 'visually-hidden';
+    status.setAttribute('data-ui', status.className);
         status.setAttribute('role', 'status');
         container.after(status);
         const href = page => {
@@ -36,8 +37,8 @@
             if (cards.length) {
                 const visible = new Set(shown.slice((current - 1) * size, current * size));
                 cards.forEach(card => { card.hidden = !visible.has(card); });
-                panel.querySelectorAll('.events__content').forEach(grid => {
-                    grid.hidden = ![...grid.querySelectorAll('.news__card, .event__card')].some(card => !card.hidden);
+                panel.querySelectorAll('[data-ui~="events__content"]').forEach(grid => {
+                    grid.hidden = ![...grid.querySelectorAll('[data-ui~="news__card"], [data-ui~="event__card"]')].some(card => !card.hidden);
                 });
             }
             const middleCount = Math.max(0, links.length - 2);
@@ -54,7 +55,7 @@
                 link.textContent = number;
                 link.href = href(number);
             });
-            const ellipsis = container.querySelector('.pagination__ellipsis');
+            const ellipsis = container.querySelector('[data-ui~="pagination__ellipsis"]');
             if (ellipsis) ellipsis.hidden = last <= links.length || numbers.at(-2) === last - 1;
             [['.pagination__button-prev', current - 1], ['.pagination__button-next', current + 1]].forEach(([selector, page]) => {
                 const link = container.querySelector(selector);
@@ -91,11 +92,11 @@
         window.addEventListener('popstate', () => {
             current = Number.isInteger(fromUrl()) ? fromUrl() : 1;
             const tab = parameters().get('tab') || 'news';
-            if (wrapper && panel.dataset.tab === tab) wrapper.querySelector(`.tab[data-tab="${tab}"]`)?.click();
+            if (wrapper && panel.dataset.tab === tab) wrapper.querySelector(`[data-ui~="tab"][data-tab="${tab}"]`)?.click();
             render(true);
         });
         render();
-        if (panel && parameters().get('tab') === panel.dataset.tab) wrapper.querySelector(`.tab[data-tab="${panel.dataset.tab}"]`)?.click();
+        if (panel && parameters().get('tab') === panel.dataset.tab) wrapper.querySelector(`[data-ui~="tab"][data-tab="${panel.dataset.tab}"]`)?.click();
         if (parameters().has('page') && (!panel || !parameters().has('tab') || parameters().get('tab') === panel.dataset.tab)) updateUrl();
     });
     window.Pagination = {};

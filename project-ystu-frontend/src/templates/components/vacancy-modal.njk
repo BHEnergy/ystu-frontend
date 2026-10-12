@@ -1,30 +1,30 @@
-<div class = "modal" data-modal="vacancy" role="dialog" aria-modal="true" aria-labelledby="{{ modalIdPrefix | default('') }}vacancy-modal-title">
-      <div class = "modal-overlay">
+<div class = "modal" data-ui="modal" data-modal="vacancy" role="dialog" aria-modal="true" aria-labelledby="{{ modalIdPrefix | default('') }}vacancy-modal-title">
+      <div class = "modal-overlay" data-ui="modal-overlay">
         <div class = "modal-body">
           {% include "components/modal-close.njk" %}
-          <div class = "modal-header d-flex flex-column">
-            <h2 class = "modal-header__title title" id="{{ modalIdPrefix | default('') }}vacancy-modal-title">Отклик на вакансию</h2>
+          <div class = "modal-header d-flex flex-column" data-ui="modal-header">
+            <h2 class = "modal-header__title title" data-ui="modal-header__title" id="{{ modalIdPrefix | default('') }}vacancy-modal-title">Отклик на вакансию</h2>
             <p class = "modal-header__subtitle">Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae.</p>
           </div>
-          <form class="modal-form d-flex flex-column" data-modal-demo>
-            <div class = "input--container">
+          <form class="modal-form d-flex flex-column" data-ui="modal-form" data-modal-demo>
+            <div class = "input--container" data-ui="input--container">
               <input type="text" name="name" id="{{ modalIdPrefix | default('') }}vacancy-name" placeholder="ФИО*" aria-label="ФИО" autocomplete="name" required>
-              <span class="error-text">Укажите ФИО.</span>
+              <span class="error-text" data-ui="error-text">Укажите ФИО.</span>
             </div>
-            <div class = "input--container">
+            <div class = "input--container" data-ui="input--container">
               <input type="email" name="email" id="{{ modalIdPrefix | default('') }}vacancy-email" placeholder="Email*" aria-label="Email" autocomplete="email" required>
-              <span class="error-text">Укажите корректный email.</span>
+              <span class="error-text" data-ui="error-text">Укажите корректный email.</span>
             </div>
-            <div class = "input--container">
+            <div class = "input--container" data-ui="input--container">
               <input type="text" name="phone" id="{{ modalIdPrefix | default('') }}vacancy-phone" placeholder="Телефон*" aria-label="Телефон" autocomplete="tel" inputmode="tel" data-validate="phone" required>
-              <span class="error-text">Укажите телефон полностью.</span>
+              <span class="error-text" data-ui="error-text">Укажите телефон полностью.</span>
             </div>
             <div class = "modal-form__file">
               <span class = "modal-form__file-title">Резюме</span>
               <input class = "visually-hidden" type = "file" name = "resume" id = "{{ modalIdPrefix | default('') }}vacancy-resume">
-              <label class = "modal-form__file-button" for = "{{ modalIdPrefix | default('') }}vacancy-resume">
+              <label class = "modal-form__file-button" data-ui="modal-form__file-button" for = "{{ modalIdPrefix | default('') }}vacancy-resume">
                 <img src = "../images/svg/upload-file.svg" alt="">
-                <span class="modal-form__file-label" aria-live="polite">Прикрепить файл</span>
+                <span class="modal-form__file-label" data-ui="modal-form__file-label" aria-live="polite">Прикрепить файл</span>
               </label>
             </div>
             <textarea name = "comment" id = "{{ modalIdPrefix | default('') }}vacancy-comment" placeholder="Комментарии/Сопроводительное письмо"></textarea>
@@ -42,10 +42,10 @@
               </div>
             </div>
           </form>
-                    <div class="modal-success" hidden tabindex="-1">
+                    <div class="modal-success" data-ui="modal-success" hidden tabindex="-1">
             <div class="modal-success__heading">
               <img class="modal-success__icon" src="../images/svg/modal-success-check.svg" width="120" height="120" alt="">
-              <h2 class="modal-success__title" id="{{ modalSuccessId | default('vacancy-success-title') }}">Ваша заявка принята</h2>
+              <h2 class="modal-success__title" data-ui="modal-success__title" id="{{ modalSuccessId | default('vacancy-success-title') }}">Ваша заявка принята</h2>
             </div>
             <p class="modal-success__text">Спасибо за обращение! Мы свяжемся с вами по указанным контактным данным.</p>
             <button type="button" class="modal-success__back" data-modal-back>Назад</button>

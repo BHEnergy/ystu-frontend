@@ -7,7 +7,7 @@
 }
 
 .program-about__title {
-    font-size: 44px;
+    font-size: 2.75rem;
 }
 
 .program-about__description {
@@ -17,7 +17,7 @@
 
 .program-about__description__text {
     flex: 0 1 50%;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .program-about__description__feacher {
@@ -46,7 +46,7 @@
 }
 
 .program-about__description__feacher > p {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: var(--subprimary-color-1);
     font-weight: 600;
     text-transform: uppercase;
@@ -73,7 +73,7 @@
     flex-direction: column;
     justify-content: space-between;
     color: var(--subprimary-color-2);
-    font-size: 20px;
+    font-size: 1.25rem;
     text-transform: uppercase;
 }
 
@@ -83,12 +83,12 @@
 
 .program-about__fact__description {
     color: var(--subprimary-color-1);
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 600;
 
     & span {
         color: var(--subprimary-color-2);
-        font-size: 16px;
+        font-size: 1rem;
         text-transform: uppercase;
         font-weight: 400;
     }
@@ -108,13 +108,13 @@
 
 .program-about__link {
     color: var(--primary-color-2) !important;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     text-transform: capitalize;
 }
 
 .program-exams__description {
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .program-exams__description.wyswig ul {
@@ -137,7 +137,7 @@
 
 .program-about__fact--accreditaion {
 
-    & img {
+    & :is(img, .ui-icon) {
         height: 40px;
         width: 40px;
     }
@@ -153,7 +153,7 @@
     }
 
     .program-about__title {
-        font-size: 32px;
+        font-size: 2rem;
     }
 
     .program-about__facts {
@@ -162,10 +162,14 @@
     }
 
     .program-about__description__text {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .program-about__description__feacher {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        flex: none;
         flex-direction: column;
         align-items: flex-start;
         gap: 24px;
@@ -174,8 +178,9 @@
     }
 
     .program-about__description__feacher > p {
-        font-size: 20px;
-        max-width: 265px;
+        font-size: 1.25rem;
+        max-width: none;
+        width: 100%;
     }
 
     .program-about__description__feacher .btn {
@@ -198,7 +203,7 @@
     }
 
     .program-about__fact__title {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 
     .program-about__fact__description {
@@ -206,7 +211,7 @@
         flex-direction: column;
         align-items: stretch;
         gap: 16px;
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     .program-about__fact--accreditaion.program-about__fact--accreditaion {
@@ -215,14 +220,14 @@
     }
 
     .program-about__fact--accreditaion {
-        & img {
+        & :is(img, .ui-icon) {
             height: 33px;
             width: 33px;
         }
     }
 
     .program-about__fact--row {
-        font-size: 20px;
+        font-size: 1.25rem;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;

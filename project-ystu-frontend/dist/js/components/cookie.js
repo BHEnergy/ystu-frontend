@@ -10,7 +10,7 @@ function getCookie(name) {
     return document.cookie.split(';').find(c => c.trim().startsWith(cookieName))?.split('=')[1] || '';
 }
 
-const banner = document.querySelector('.cookie-banner');
+const banner = document.querySelector('[data-ui~="cookie-banner"]');
 
 if (banner && getCookie('cookieConsent') === 'accepted') {
     banner.style.display = 'none'; // Убедимся, что баннер скрыт
