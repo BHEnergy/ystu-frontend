@@ -1,0 +1,263 @@
+[
+  {
+    "file": "breadcrumbs.css",
+    "name": "breadcrumb-separator",
+    "selector": ".breadcrumbs__separator",
+    "before": "background: url('../../images/svg/breadcrumb-separator.svg') 50% 50%;\nbackground-repeat: no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + 3840px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 24,
+    "height": 24
+  },
+  {
+    "file": "campus-map.css",
+    "name": "triangle-down",
+    "selector": ".campus-filter__icon",
+    "before": "background: url('../../images/svg/triangle-down.svg') center / 12px no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 4480px 128px;\nbackground-position: calc(50% + -1536px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 24,
+    "height": 24
+  },
+  {
+    "file": "campus-map.css",
+    "name": "campus-close",
+    "selector": ".campus-filter.is-selected:not([open]) .campus-filter__icon",
+    "before": "background-image: url('../../images/svg/campus-close.svg');\nbackground-size: 12px auto;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8271.08735px 236.316781px;\nbackground-position: calc(50% + 2599.484596px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 48,
+    "height": 48
+  },
+  {
+    "file": "dropdown.css",
+    "name": "triangle-down",
+    "selector": ".dropdown--header::after",
+    "before": "background: url('../../images/svg/triangle-down.svg') center / 26px 26px no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 9706.666667px 369.777778px;\nbackground-position: calc(50% + -3328px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 48,
+    "height": 48
+  },
+  {
+    "file": "dropdown.css",
+    "name": "triangle-down",
+    "selector": ".dropdown--header::after",
+    "before": "background: url('../../images/svg/triangle-down.svg') center / 26px 12px no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 9706.666667px 170.666667px;\nbackground-position: calc(50% + -3328px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 48,
+    "height": 32
+  },
+  {
+    "file": "events.css",
+    "name": "calendar",
+    "selector": ".event__date::before",
+    "before": "background: url('../../images/svg/calendar.svg');\nbackground-repeat: no-repeat;\nbackground-position: center;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + 3584px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 24,
+    "height": 24
+  },
+  {
+    "file": "events.css",
+    "name": "time",
+    "selector": ".event__time::before",
+    "before": "background: url('../../images/svg/time.svg');\nbackground-repeat: no-repeat;\nbackground-position: center;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + -2560px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 24,
+    "height": 24
+  },
+  {
+    "file": "events.css",
+    "name": "location",
+    "selector": ".event__location::before",
+    "before": "background: url('../../images/svg/location.svg');\nbackground-repeat: no-repeat;\nbackground-position: center;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + 512px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 24,
+    "height": 24
+  },
+  {
+    "file": "header.css",
+    "name": "call",
+    "selector": ".navbar__phone::before",
+    "before": "background: url('../../images/svg/call.svg') center / contain no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + 3328px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 22,
+    "height": 22
+  },
+  {
+    "file": "hero-banner.css",
+    "name": "check-mark",
+    "selector": ".hero-banner__tag.accredit::before",
+    "before": "background: url('../../images/svg/check-mark.svg') center no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + 2560px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 17,
+    "height": 17
+  },
+  {
+    "file": "information_banner.css",
+    "name": "arrow-white",
+    "selector": ".information-banner__body .btn::after",
+    "before": "background: url('../../images/svg/arrow-white.svg') center / contain no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + 4352px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 9,
+    "height": 12
+  },
+  {
+    "file": "mega-menu.css",
+    "name": "triangle-right-orange",
+    "selector": ".mega-menu__primary-link.has-submenu::after,\n    .mega-menu__links a.has-submenu::after",
+    "before": "background: url('../../images/svg/triangle-right-orange.svg');\nbackground-repeat: no-repeat;\nbackground-position: center;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + -3584px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 24,
+    "height": 24
+  },
+  {
+    "file": "mega-menu.css",
+    "name": "triangle-right-orange",
+    "selector": ".mega-menu__back::before",
+    "before": "background: url('../../images/svg/triangle-right-orange.svg');\nbackground-repeat: no-repeat;\nbackground-position: center;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + -3584px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 20,
+    "height": 20
+  },
+  {
+    "file": "mega-menu.css",
+    "name": "triangle-right-orange",
+    "selector": "font-size: 1.25rem;\n        &::after",
+    "before": "background: url('../../images/svg/triangle-right-orange.svg') center / contain no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + -3584px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 9,
+    "height": 12
+  },
+  {
+    "file": "mega-menu.css",
+    "name": "triangle-right-orange",
+    "selector": ".mega-menu[data-hover-submenu] .mega-menu__primary-link::after",
+    "before": "background: url('../../images/svg/triangle-right-orange.svg') center / contain no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + -3584px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 9,
+    "height": 12
+  },
+  {
+    "file": "mega-menu.css",
+    "name": "triangle-right-orange",
+    "selector": ".mega-menu[data-hover-submenu] .mega-menu__primary-link::after",
+    "before": "background: url('../../images/svg/triangle-right-orange.svg') center / contain no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + -3584px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 12,
+    "height": 12
+  },
+  {
+    "file": "mobile-filter-panel.css",
+    "name": "triangle-down",
+    "selector": ".mobile-filter-panel summary::after",
+    "before": "background: url('../../images/svg/triangle-down.svg') center / 12px 12px no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 4480px 170.666667px;\nbackground-position: calc(50% + -1536px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 24,
+    "height": 24
+  },
+  {
+    "file": "modal.css",
+    "name": "event-modal-arrow",
+    "selector": ".modal-form__select::after",
+    "before": "background: url('../../images/svg/event-modal-arrow.svg') center / contain no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + 1536px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 24,
+    "height": 24
+  },
+  {
+    "file": "pagination.css",
+    "name": "triangle-left-orange",
+    "selector": ".pagination__button-prev",
+    "before": "background: url('../../images/svg/triangle-left-orange.svg') 50% 50%;\nbackground-repeat: no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + -3328px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 48,
+    "height": 48
+  },
+  {
+    "file": "pagination.css",
+    "name": "triangle-right-orange",
+    "selector": ".pagination__button-next",
+    "before": "background: url('../../images/svg/triangle-right-orange.svg') 50% 50%;\nbackground-repeat: no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + -3584px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 48,
+    "height": 48
+  },
+  {
+    "file": "program-card.css",
+    "name": "check-mark-blue",
+    "selector": ".program-card__tag--accreditation::before",
+    "before": "background: url('../../images/svg/check-mark-blue.svg') center no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + 2304px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 15,
+    "height": 15
+  },
+  {
+    "file": "program-exams.css",
+    "name": "triangle-down",
+    "selector": ".program-exams__examples summary::after",
+    "before": "background: url('../../images/svg/triangle-down.svg') center / 16px 26px no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 5973.333333px 369.777778px;\nbackground-position: calc(50% + -2048px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 48,
+    "height": 48
+  },
+  {
+    "file": "slider.css",
+    "name": "swiper-button-next",
+    "selector": ".swiper-button-next::after",
+    "before": "background: url('../../images/svg/swiper-button-next.svg') center no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + -1792px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 9,
+    "height": 12
+  },
+  {
+    "file": "slider.css",
+    "name": "swiper-button-prev",
+    "selector": ".swiper-button-prev::after",
+    "before": "background: url('../../images/svg/swiper-button-prev.svg') center no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + -2048px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 9,
+    "height": 12
+  },
+  {
+    "file": "student-directions.css",
+    "name": "projects",
+    "selector": ".student-direction__title.projects-svg::before",
+    "before": "background: url('../../images/svg/projects.svg');\nbackground-position: center;\nbackground-repeat: no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + -768px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 48,
+    "height": 48
+  },
+  {
+    "file": "student-directions.css",
+    "name": "art",
+    "selector": ".student-direction__title.art-svg::before",
+    "before": "background: url('../../images/svg/art.svg');\nbackground-position: center;\nbackground-repeat: no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + 4096px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 48,
+    "height": 48
+  },
+  {
+    "file": "student-directions.css",
+    "name": "sport",
+    "selector": ".student-direction__title.sport-svg::before",
+    "before": "background: url('../../images/svg/sport.svg');\nbackground-position: center;\nbackground-repeat: no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + -1536px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 48,
+    "height": 48
+  },
+  {
+    "file": "student-directions.css",
+    "name": "volonter",
+    "selector": ".student-direction__title.volonter-svg::before",
+    "before": "background: url('../../images/svg/volonter.svg');\nbackground-position: center;\nbackground-repeat: no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + -4352px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 48,
+    "height": 48
+  },
+  {
+    "file": "student-directions.css",
+    "name": "science",
+    "selector": ".student-direction__title.science-svg::before",
+    "before": "background: url('../../images/svg/science.svg');\nbackground-position: center;\nbackground-repeat: no-repeat;",
+    "after": "background-image: url('../../images/svg/sprite.svg');\nbackground-size: 8960px 256px;\nbackground-position: calc(50% + -1024px) 50%;\nbackground-repeat: no-repeat;",
+    "width": 48,
+    "height": 48
+  }
+]

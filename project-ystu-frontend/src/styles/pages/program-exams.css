@@ -65,7 +65,12 @@
     text-align: center;
     align-content: center;
     transition: transform 0.2s ease;
-    background: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2218%22%20viewBox%3D%220%200%2024%2018%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0D%0A%3Cpath%20d%3D%22M24%200L12.0003%206.79548L-4.76837e-07%200L12.0003%2018L24%200Z%22%20fill%3D%22%23F4772B%22%2F%3E%0D%0A%3C%2Fsvg%3E%0D%0A") center / 16px 26px no-repeat;
+
+/* UI sprite: triangle-down */
+    background-image: url('../../images/svg/sprite.svg');
+    background-size: 341.333333px 1664.000001px;
+    background-position: calc(50% + 42.666667px) calc(50% + -554.666667px);
+    background-repeat: no-repeat;
 }
 
 .program-exams__examples[open] summary::after {

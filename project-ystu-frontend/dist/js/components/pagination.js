@@ -15,7 +15,7 @@
         let current = Number.isInteger(fromUrl()) ? fromUrl() : 1;
         const status = document.createElement('p');
         status.className = 'visually-hidden';
-    status.setAttribute('data-ui', status.className);
+        status.setAttribute('data-ui', 'pagination-status');
         status.setAttribute('role', 'status');
         container.after(status);
         const href = page => {
@@ -25,7 +25,10 @@
             return url.pathname + url.search + url.hash;
         };
         const updateUrl = (push = false) => {
-            if (panel && !panel.classList.contains('active')) return;
+            if (panel) {
+                const selectedTab = wrapper?.querySelector('[data-ui~="tab"][aria-pressed="true"]');
+                if (wrapper ? selectedTab?.dataset.tab !== panel.dataset.tab : panel.getAttribute('aria-hidden') === 'true') return;
+            }
             const target = href(current);
             if (target === location.pathname + location.search + location.hash) return;
             history[push ? 'pushState' : 'replaceState'](null, '', target);
@@ -57,7 +60,7 @@
             });
             const ellipsis = container.querySelector('[data-ui~="pagination__ellipsis"]');
             if (ellipsis) ellipsis.hidden = last <= links.length || numbers.at(-2) === last - 1;
-            [['.pagination__button-prev', current - 1], ['.pagination__button-next', current + 1]].forEach(([selector, page]) => {
+            [['[data-ui~="pagination-prev"]', current - 1], ['[data-ui~="pagination-next"]', current + 1]].forEach(([selector, page]) => {
                 const link = container.querySelector(selector);
                 if (!link) return;
                 link.setAttribute('aria-disabled', String(page < 1 || page > last));

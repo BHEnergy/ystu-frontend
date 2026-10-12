@@ -120,11 +120,21 @@ button.swiper-button-next {
     }
 
     .swiper-button-next::after {
-        content: url(../../images/svg/swiper-button-next.svg);
+    content: ''; display: inline-block; width: 9px; height: 12px;
+/* UI sprite: swiper-button-next */
+    background-image: url('../../images/svg/sprite.svg');
+    background-size: 512px 1152px;
+    background-position: calc(50% + 192px) calc(50% + -256px);
+    background-repeat: no-repeat;
     }
 
     .swiper-button-prev::after {
-        content: url(../../images/svg/swiper-button-prev.svg);
+    content: ''; display: inline-block; width: 9px; height: 12px;
+/* UI sprite: swiper-button-prev */
+    background-image: url('../../images/svg/sprite.svg');
+    background-size: 512px 1152px;
+    background-position: calc(50% + 64px) calc(50% + -256px);
+    background-repeat: no-repeat;
     }
 
 }
@@ -352,14 +362,6 @@ button.swiper-button-next {
 @media (max-width: 576px) {
     .student-direction__gallery .default-slider-controls .swiper-button-prev.big,
     .student-direction__gallery .default-slider-controls .swiper-button-next.big { top: 120.5px; }
-}
-
-.structure-gallery__slider {
-    & .default-slider-controls {
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-    }
 }
 
 @media(max-width: 768px) {

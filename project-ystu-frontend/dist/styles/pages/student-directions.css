@@ -69,9 +69,14 @@
     content: '';
     height: 48px;
     min-width: 48px;
-    background: url(../../images/svg/projects.svg);
-    background-position: center;
+
+/* UI sprite: projects */
+    background-image: url('../../images/svg/sprite.svg');
+    background-size: 512px 1152px;
+    background-position: calc(50% + 192px) calc(50% + -128px);
     background-repeat: no-repeat;
+
+
     line-height: 0;
 }
 
@@ -79,9 +84,14 @@
     content: '';
     height: 48px;
     min-width: 48px;
-    background: url(../../images/svg/art.svg);
-    background-position: center;
+
+/* UI sprite: art */
+    background-image: url('../../images/svg/sprite.svg');
+    background-size: 512px 1152px;
+    background-position: calc(50% + 64px) calc(50% + 512px);
     background-repeat: no-repeat;
+
+
     line-height: 0;
 }
 
@@ -89,9 +99,14 @@
     content: '';
     height: 48px;
     min-width: 48px;
-    background: url(../../images/svg/sport.svg);
-    background-position: center;
+
+/* UI sprite: sport */
+    background-image: url('../../images/svg/sprite.svg');
+    background-size: 512px 1152px;
+    background-position: calc(50% + -192px) calc(50% + -128px);
     background-repeat: no-repeat;
+
+
     line-height: 0;
 }
 
@@ -99,9 +114,14 @@
     content: '';
     height: 48px;
     min-width: 48px;
-    background: url(../../images/svg/volonter.svg);
-    background-position: center;
+
+/* UI sprite: volonter */
+    background-image: url('../../images/svg/sprite.svg');
+    background-size: 512px 1152px;
+    background-position: calc(50% + -64px) calc(50% + -512px);
     background-repeat: no-repeat;
+
+
     line-height: 0;
 }
 
@@ -109,9 +129,14 @@
     content: '';
     height: 48px;
     min-width: 48px;
-    background: url(../../images/svg/science.svg);
-    background-position: center;
+
+/* UI sprite: science */
+    background-image: url('../../images/svg/sprite.svg');
+    background-size: 512px 1152px;
+    background-position: calc(50% + 64px) calc(50% + -128px);
     background-repeat: no-repeat;
+
+
     line-height: 0;
 }
 

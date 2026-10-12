@@ -393,10 +393,7 @@ span.training-program-card__tag {
 }
 
 .structure-gallery__controls {
-    bottom: 0;
-    left: 50%;
     gap: 16px;
-    transform: translateX(-50%);
 }
 
 .structure-gallery__controls .swiper-pagination {

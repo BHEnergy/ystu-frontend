@@ -1,4 +1,4 @@
-param([ValidateRange(1, 999)][int]$Version = 11)
+param([ValidateRange(1, 999)][int]$Version = 12)
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.IO.Compression
 Add-Type -AssemblyName System.IO.Compression.FileSystem
@@ -8,7 +8,7 @@ $destination = (Resolve-Path (Join-Path $repoPath '..')).Path
 $stamp = Get-Date -Format 'yyyyMMdd-HHmmss'
 $packages = @(
     @{ Name=("ystu-frontend-$Version.zip"); Prefix=("ystu-frontend-$Version/"); Source=$repoPath; Items=@('css','fonts','images','js','pages','project-ystu-frontend','README.md','THIRD-PARTY-NOTICES.md','.nojekyll') },
-    @{ Name=("ystu-frontend-handoff-$Version.zip"); Prefix='ystu-frontend/'; Source=$projectPath; Items=@('src','dist','scripts','.gitignore','package.json','package-lock.json','README.md','INTEGRATION.md','THIRD-PARTY-NOTICES.md','TESTING-CHECKLIST.md','HANDOFF.md','AUDIT-RESPONSE-2026-10-08.md','V9-RECHECK-REPORT-2026-10-08.md','V10-FIXES-2026-10-12.md','V10-RECHECK-2026-10-12.md','RELEASE-11-REPORT.md','BEHAVIOR-HOOKS.md','PACKAGING.md') }
+    @{ Name=("ystu-frontend-handoff-$Version.zip"); Prefix='ystu-frontend/'; Source=$projectPath; Items=@('src','dist','scripts','.gitignore','package.json','package-lock.json','README.md','INTEGRATION.md','THIRD-PARTY-NOTICES.md','TESTING-CHECKLIST.md','HANDOFF.md','AUDIT-RESPONSE-2026-10-08.md','V9-RECHECK-REPORT-2026-10-08.md','V10-FIXES-2026-10-12.md','V10-RECHECK-2026-10-12.md','RELEASE-11-REPORT.md','RELEASE-12-REPORT.md','BEHAVIOR-HOOKS.md','UI-SPRITE.md','PACKAGING.md') }
 )
 $hashes = @()
 foreach ($package in $packages) {

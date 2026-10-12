@@ -54,7 +54,12 @@
     content: "";
     width: 24px;
     height: 24px;
-    background: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2218%22%20viewBox%3D%220%200%2024%2018%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0D%0A%3Cpath%20d%3D%22M24%200L12.0003%206.79548L-4.76837e-07%200L12.0003%2018L24%200Z%22%20fill%3D%22%23F4772B%22%2F%3E%0D%0A%3C%2Fsvg%3E%0D%0A") center / 12px 12px no-repeat;
+
+/* UI sprite: triangle-down */
+    background-image: url('../../images/svg/sprite.svg');
+    background-size: 256px 768.000001px;
+    background-position: calc(50% + 32px) calc(50% + -256px);
+    background-repeat: no-repeat;
     transform: rotate(180deg);
 }
 

@@ -159,7 +159,12 @@
 }
 
 .hero-banner__tag.accredit::before {
-    content: url(../../images/svg/check-mark.svg);
+    content: ''; display: inline-block; width: 17px; height: 17px;
+/* UI sprite: check-mark */
+    background-image: url('../../images/svg/sprite.svg');
+    background-size: 512px 1152px;
+    background-position: calc(50% + -192px) calc(50% + 384px);
+    background-repeat: no-repeat;
     line-height: 0;
     margin-right: 8px;
 }

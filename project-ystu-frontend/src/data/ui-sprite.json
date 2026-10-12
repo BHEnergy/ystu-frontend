@@ -1,0 +1,287 @@
+{
+  "cell": 128,
+  "width": 512,
+  "height": 1152,
+  "icons": [
+    {
+      "name": "arrow-white",
+      "width": 9,
+      "height": 12,
+      "center": 64,
+      "viewBox": "0 0 9 12",
+      "centerY": 64
+    },
+    {
+      "name": "art",
+      "width": 40,
+      "height": 40,
+      "center": 192,
+      "viewBox": "0 0 40 40",
+      "centerY": 64
+    },
+    {
+      "name": "breadcrumb-separator",
+      "width": 9,
+      "height": 12,
+      "center": 320,
+      "viewBox": "0 0 9 12",
+      "centerY": 64
+    },
+    {
+      "name": "calendar",
+      "width": 18,
+      "height": 20,
+      "center": 448,
+      "viewBox": "0 0 18 20",
+      "centerY": 64
+    },
+    {
+      "name": "call",
+      "width": 22,
+      "height": 22,
+      "center": 64,
+      "viewBox": "0 0 22 22",
+      "centerY": 192
+    },
+    {
+      "name": "call-white",
+      "width": 18,
+      "height": 18,
+      "center": 192,
+      "viewBox": "0 0 18 18",
+      "centerY": 192
+    },
+    {
+      "name": "campus-close",
+      "width": 12.9995,
+      "height": 13.0004,
+      "center": 320,
+      "viewBox": "0 0 12.9995 13.0004",
+      "centerY": 192
+    },
+    {
+      "name": "check-mark",
+      "width": 17,
+      "height": 17,
+      "center": 448,
+      "viewBox": "0 0 17 17",
+      "centerY": 192
+    },
+    {
+      "name": "check-mark-blue",
+      "width": 15,
+      "height": 15,
+      "center": 64,
+      "viewBox": "0 0 15 15",
+      "centerY": 320
+    },
+    {
+      "name": "close",
+      "width": 18,
+      "height": 18,
+      "center": 192,
+      "viewBox": "0 0 18 18",
+      "centerY": 320
+    },
+    {
+      "name": "close-white",
+      "width": 9.75034,
+      "height": 9.75034,
+      "center": 320,
+      "viewBox": "0 0 9.75034 9.75034",
+      "centerY": 320
+    },
+    {
+      "name": "event-modal-arrow",
+      "width": 24,
+      "height": 24,
+      "center": 448,
+      "viewBox": "0 0 24 24",
+      "centerY": 320
+    },
+    {
+      "name": "eyeglases",
+      "width": 32,
+      "height": 32,
+      "center": 64,
+      "viewBox": "0 0 32 32",
+      "centerY": 448
+    },
+    {
+      "name": "filters",
+      "width": 24,
+      "height": 24,
+      "center": 192,
+      "viewBox": "0 0 24 24",
+      "centerY": 448
+    },
+    {
+      "name": "link-arrow",
+      "width": 24,
+      "height": 19,
+      "center": 320,
+      "viewBox": "0 0 24 19",
+      "centerY": 448
+    },
+    {
+      "name": "location",
+      "width": 14,
+      "height": 20,
+      "center": 448,
+      "viewBox": "0 0 14 20",
+      "centerY": 448
+    },
+    {
+      "name": "location-white",
+      "width": 14,
+      "height": 20,
+      "center": 64,
+      "viewBox": "0 0 14 20",
+      "centerY": 576
+    },
+    {
+      "name": "mail-white",
+      "width": 20,
+      "height": 16,
+      "center": 192,
+      "viewBox": "0 0 20 16",
+      "centerY": 576
+    },
+    {
+      "name": "ok",
+      "width": 24,
+      "height": 24,
+      "center": 320,
+      "viewBox": "0 0 24 24",
+      "centerY": 576
+    },
+    {
+      "name": "portrait",
+      "width": 32,
+      "height": 32,
+      "center": 448,
+      "viewBox": "0 0 32 32",
+      "centerY": 576
+    },
+    {
+      "name": "projects",
+      "width": 44,
+      "height": 36,
+      "center": 64,
+      "viewBox": "0 0 44 36",
+      "centerY": 704
+    },
+    {
+      "name": "science",
+      "width": 36,
+      "height": 36,
+      "center": 192,
+      "viewBox": "0 0 36 36",
+      "centerY": 704
+    },
+    {
+      "name": "search",
+      "width": 32,
+      "height": 32,
+      "center": 320,
+      "viewBox": "0 0 32 32",
+      "centerY": 704
+    },
+    {
+      "name": "sport",
+      "width": 40,
+      "height": 40,
+      "center": 448,
+      "viewBox": "0 0 40 40",
+      "centerY": 704
+    },
+    {
+      "name": "swiper-button-next",
+      "width": 9,
+      "height": 12,
+      "center": 64,
+      "viewBox": "0 0 9 12",
+      "centerY": 832
+    },
+    {
+      "name": "swiper-button-prev",
+      "width": 9,
+      "height": 12,
+      "center": 192,
+      "viewBox": "0 0 9 12",
+      "centerY": 832
+    },
+    {
+      "name": "tg",
+      "width": 24,
+      "height": 24,
+      "center": 320,
+      "viewBox": "0 0 24 24",
+      "centerY": 832
+    },
+    {
+      "name": "time",
+      "width": 20,
+      "height": 20,
+      "center": 448,
+      "viewBox": "0 0 20 20",
+      "centerY": 832
+    },
+    {
+      "name": "translation",
+      "width": 32,
+      "height": 32,
+      "center": 64,
+      "viewBox": "0 0 32 32",
+      "centerY": 960
+    },
+    {
+      "name": "triangle-down",
+      "width": 24,
+      "height": 18,
+      "center": 192,
+      "viewBox": "0 0 24 18",
+      "centerY": 960
+    },
+    {
+      "name": "triangle-left-orange",
+      "width": 9,
+      "height": 12,
+      "center": 320,
+      "viewBox": "0 0 9 12",
+      "centerY": 960
+    },
+    {
+      "name": "triangle-right-orange",
+      "width": 9,
+      "height": 12,
+      "center": 448,
+      "viewBox": "0 0 9 12",
+      "centerY": 960
+    },
+    {
+      "name": "vacancy-search",
+      "width": 19,
+      "height": 19,
+      "center": 64,
+      "viewBox": "0 0 19 19",
+      "centerY": 1088
+    },
+    {
+      "name": "vk",
+      "width": 24,
+      "height": 24,
+      "center": 192,
+      "viewBox": "0 0 24 24",
+      "centerY": 1088
+    },
+    {
+      "name": "volonter",
+      "width": 42,
+      "height": 41,
+      "center": 320,
+      "viewBox": "0 0 42 41",
+      "centerY": 1088
+    }
+  ]
+}

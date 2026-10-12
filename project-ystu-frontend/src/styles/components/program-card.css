@@ -81,7 +81,12 @@
 }
 
 .program-card__tag--accreditation::before {
-    content: url('../../images/svg/check-mark-blue.svg');
+    content: ''; display: inline-block; width: 15px; height: 15px;
+/* UI sprite: check-mark-blue */
+    background-image: url('../../images/svg/sprite.svg');
+    background-size: 512px 1152px;
+    background-position: calc(50% + 192px) calc(50% + 256px);
+    background-repeat: no-repeat;
     margin-right: 8px;
     line-height: 0;
 }

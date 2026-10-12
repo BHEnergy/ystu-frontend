@@ -8,10 +8,15 @@
 }
 
 .breadcrumbs__separator {
-    background: url(../../images/svg/breadcrumb-separator.svg) 50% 50%;
+
+/* UI sprite: breadcrumb-separator */
+    background-image: url('../../images/svg/sprite.svg');
+    background-size: 512px 1152px;
+    background-position: calc(50% + -64px) calc(50% + 512px);
+    background-repeat: no-repeat;
     width: 24px;
     height: 24px;
-    background-repeat: no-repeat;
+
 }
 
 @media(max-width: 576px) {

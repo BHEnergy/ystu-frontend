@@ -12,6 +12,7 @@ function listFiles(directory) {
 }
 
 function build() {
+    require('node:child_process').execFileSync(process.execPath, [path.join(__dirname, 'build-ui-sprite.cjs')], { stdio: 'inherit' });
     const env = new nunjucks.Environment(new nunjucks.FileSystemLoader([
         path.join(source, 'pages'), path.join(source, 'templates'),
     ], { noCache: true }), { autoescape: true, throwOnUndefined: true });

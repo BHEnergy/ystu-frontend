@@ -268,7 +268,13 @@
 }
 .modal--event select:invalid { color: #537aac; }
 .modal-form__select { position: relative; }
-.modal-form__select::after { content: ""; position: absolute; right: 18px; top: 50%; width: 24px; height: 24px; background: url("data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%22none%22%20overflow%3D%22visible%22%20style%3D%22display%3A%20block%3B%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cg%20id%3D%22arrow_right%22%3E%0A%3Cpath%20id%3D%22Vector%22%20d%3D%22M7.5%2018L10.8977%2012.0001L7.5%206L16.5%2012.0001L7.5%2018Z%22%20fill%3D%22%23F4772B%22%2F%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A") center / contain no-repeat; transform: translateY(-50%) rotate(90deg); pointer-events: none; }
+.modal-form__select::after { content: ""; position: absolute; right: 18px; top: 50%; width: 24px; height: 24px;
+
+/* UI sprite: event-modal-arrow */
+    background-image: url('../../images/svg/sprite.svg');
+    background-size: 512px 1152px;
+    background-position: calc(50% + -192px) calc(50% + 256px);
+    background-repeat: no-repeat; transform: translateY(-50%) rotate(90deg); pointer-events: none; }
 .modal--event select option { color: var(--black-shade-1); background: #eef0f2; }
 .modal--event input::placeholder { color: #537aac; }
 .modal-form__classes { margin: 0; padding: 0; border: 0; min-width: 0; }

@@ -34,6 +34,33 @@ const withoutStylingClasses = (html) => html.replace(/class\s*=\s*"([^"]*)"/g, (
             };
 
             await visit('news-events');
+            const newsPanel = page.locator('[data-ui~="events__container"][data-tab="news"]');
+            await newsPanel.evaluate(element => {
+                element.classList.remove('active');
+                element.setAttribute('aria-hidden', 'false');
+            });
+            const nextPage = newsPanel.locator('[data-ui~="pagination-next"]');
+            await nextPage.evaluate(element => element.classList.remove('pagination__button-next'));
+            const initialCard = await newsPanel.locator('[data-ui~="news__card"]').evaluateAll(elements => elements.find(element => !element.hidden).textContent);
+            for (const number of [2, 3]) {
+                await nextPage.evaluate(element => element.click());
+                assert.equal(new URL(page.url()).searchParams.get('page'), String(number));
+                assert.equal(new URL(page.url()).searchParams.get('tab'), 'news');
+                assert.equal((await newsPanel.locator('[aria-current="page"]').textContent()).trim(), String(number));
+                assert.equal(await newsPanel.locator('[data-ui~="news__card"]').evaluateAll(elements => elements.filter(element => !element.hidden).length), 6);
+                assert.notEqual(await newsPanel.locator('[data-ui~="news__card"]').evaluateAll(elements => elements.find(element => !element.hidden).textContent), initialCard);
+                assert.equal(new URL(await nextPage.getAttribute('href'), page.url()).searchParams.get('page'), String(number + 1));
+            }
+            const previousPage = newsPanel.locator('[data-ui~="pagination-prev"]');
+            await previousPage.evaluate(element => {
+                element.classList.remove('pagination__button-prev');
+                element.click();
+            });
+            assert.equal(new URL(page.url()).searchParams.get('page'), '2');
+            await newsPanel.locator('[data-ui~="pagination__page"]').first().evaluate(element => element.click());
+            await newsPanel.locator('[data-ui~="pagination__page"]').nth(1).evaluate(element => element.click());
+            assert.equal(new URL(page.url()).searchParams.get('page'), '2', 'Номер меняет URL без класса active');
+            await visit('news-events');
             for (const tab of ['events', 'news', 'events']) {
                 const control = page.locator(`[data-ui~="tab"][data-tab="${tab}"]`);
                 await control.evaluate(element => element.click());
@@ -72,7 +99,7 @@ const withoutStylingClasses = (html) => html.replace(/class\s*=\s*"([^"]*)"/g, (
             await page.locator('[data-ui~="campus-marker__close"]').evaluate(element => element.click());
             assert.equal(await marker.getAttribute('aria-expanded'), 'false');
             assert.deepEqual(errors, []);
-            console.log(`${path.basename(root)}: табы, аккордеон, модальное окно и метки работают без CSS-классов`);
+            console.log(`${path.basename(root)}: табы, аккордеон, модальное окно, метки и пагинация (карточки/URL/повторные стрелки) работают без CSS-классов`);
             await page.close();
         }
     } finally {
