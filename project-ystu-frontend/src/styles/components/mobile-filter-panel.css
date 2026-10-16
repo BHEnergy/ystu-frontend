@@ -54,11 +54,12 @@
     content: "";
     width: 24px;
     height: 24px;
+    flex: 0 0 24px;
 
 /* UI sprite: triangle-down */
     background-image: url('../../images/svg/sprite.svg');
-    background-size: 256px 768.000001px;
-    background-position: calc(50% + 32px) calc(50% + -256px);
+    background-size: 384px 864px;
+    background-position: calc(50% + 48px) calc(50% - 288px);
     background-repeat: no-repeat;
     transform: rotate(180deg);
 }

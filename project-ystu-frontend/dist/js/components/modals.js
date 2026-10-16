@@ -9,21 +9,24 @@ const lockModalScroll = () => {
     const body = document.body;
     modalScrollState = { x: window.scrollX, y: window.scrollY,
         position: body.style.position, top: body.style.top, width: body.style.width,
-        paddingRight: body.style.paddingRight };
-    const scrollbar = window.innerWidth - document.documentElement.clientWidth;
-    body.style.paddingRight = `${parseFloat(getComputedStyle(body).paddingRight) + scrollbar}px`;
+        paddingRight: body.style.paddingRight,
+        header: document.querySelector('.header'), headerWidth: document.querySelector('.header')?.style.width };
+    const contentWidth = document.documentElement.clientWidth;
+    if (modalScrollState.header) modalScrollState.header.style.width = `${contentWidth}px`;
     body.style.position = 'fixed';
     body.style.top = `-${modalScrollState.y}px`;
-    body.style.width = '100%';
+    body.style.width = `${contentWidth}px`;
     body.classList.add('body--modal-open');
 };
 
 const unlockModalScroll = () => {
     if (!modalScrollState) return;
-    const { x, y, ...styles } = modalScrollState;
+    const { x, y, header, headerWidth, ...styles } = modalScrollState;
+    if (header) header.style.width = headerWidth;
     Object.assign(document.body.style, styles);
     document.body.classList.remove('body--modal-open');
     window.scrollTo({ left: x, top: y, behavior: 'instant' });
+    window.Header?.update();
     modalScrollState = null;
 };
 
@@ -87,7 +90,7 @@ const openModal = (modal, trigger) => {
     closingModals.delete(modal);
     modal.classList.remove('modal--closing');
     modal.classList.add('modal--active');
-    modal.querySelector('[data-ui~="modal-close"]')?.focus();
+    modal.querySelector('[data-ui~="modal-close"]')?.focus({ preventScroll: true });
 };
 
 buttonsModal.forEach((button) => {

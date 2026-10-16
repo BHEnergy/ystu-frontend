@@ -139,8 +139,39 @@ a, a:visited {
 }
 
 
-@media (max-width: 576px) { 
+@media (max-width: 576px) {
     :root {
         --container-padding: 16px;
     }
+}
+
+/* Двухцветное кольцо видно и на белом, и на синем фоне. */
+:where(a[href], button, input, select, textarea, [tabindex="0"]):focus-visible {
+    outline: 3px solid var(--subprimary-color-1);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px var(--white-shade-1);
+}
+.information-banner a:has(.btn) { border-radius: 100px; }
+:is(.ficher, .flagship-project__card, .training-program-card, .structure__institute,
+    .student-links__item, .news__card, .event__card, .program-card, .vacancy-card) {
+    isolation: isolate;
+}
+:is(.ficher, .flagship-project__card, .training-program-card, .structure__institute,
+    .student-links__item, .news__card, .event__card, .program-card, .vacancy-card):is(:active, :is(:focus-visible, :has(:focus-visible))) {
+    outline: 2px solid var(--subprimary-color-2);
+    outline-offset: -2px;
+    box-shadow: 0 4px 12px rgb(9 65 136 / 18%);
+}
+:is(.ficher, .flagship-project__card, .training-program-card, .structure__institute,
+    .student-links__item)::before,
+:is(.ficher, .flagship-project__card, .training-program-card, .structure__institute,
+    .student-links__item)::after {
+    z-index: -1;
+}
+:is(.flagship-project__card, .training-program-card, .structure__institute):is(:active, :is(:focus-visible, :has(:focus-visible)))::before,
+:is(.flagship-project__card, .training-program-card, .structure__institute):is(:active, :is(:focus-visible, :has(:focus-visible)))::after {
+    transform: scale(1.08);
+}
+@media (prefers-reduced-motion: reduce) {
+    .training-program-card h3 a { transition: none; }
 }

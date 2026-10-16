@@ -1,6 +1,6 @@
 <section class="ui-kit__section" id="hero-variants">
-  <div class="ui-kit__intro"><h2>Варианты баннера направления</h2><p>Страницы: <a href="program.html">программа</a>, <a href="student-life.html">студенческая жизнь</a>. Модификаторы подложки: стеклянная и сплошная синяя.</p></div>
-{% for theme in ["glass", "solid"] %}
+  <div class="ui-kit__intro"><h2>Баннер направления — жидкое стекло</h2><p>Страницы: <a href="program.html">программа</a>, <a href="student-life.html">студенческая жизнь</a>. Согласованная стеклянная подложка.</p></div>
+{% for theme in ["glass"] %}
   <section class="hero-banner" aria-label="{{ 'Стеклянная подложка' if theme == 'glass' else 'Синяя подложка' }}">
     <img class="hero-banner__image" loading="lazy" src="../images/fallback/program-banner.png" alt="Учебное пространство университета">
     <div class="container"><div class="hero-banner__content hero-banner__content--{{ theme }}">

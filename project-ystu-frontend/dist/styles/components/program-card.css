@@ -2,7 +2,7 @@
     display: grid;
     padding: 40px;
     grid-template-columns: minmax(0, 1fr) 367px;
-    gap: 60px;
+    gap: 24px 60px;
     align-items: end;
     overflow: hidden;
     background: var(--white-shade-4);
@@ -37,6 +37,7 @@
 }
 
 .program-card__tags {
+    grid-column: 1 / -1;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -76,8 +77,9 @@
 }
 
 .program-card__tag--accreditation {
-    max-width: 275px;
-    width: 100%;
+    max-width: 100%;
+    width: auto;
+    flex-shrink: 1;
 }
 
 .program-card__tag--accreditation::before {
@@ -88,6 +90,7 @@
     background-position: calc(50% + 192px) calc(50% + 256px);
     background-repeat: no-repeat;
     margin-right: 8px;
+    flex: 0 0 15px;
     line-height: 0;
 }
 
@@ -144,6 +147,8 @@
 }
 
 @media (max-width: 1200px) {
+    .program-card__tags { gap: 8px; }
+
     .program-card {
         grid-template-columns: minmax(0, 1fr) 300px;
         gap: 32px;
@@ -190,7 +195,6 @@
     }
 
     .program-card__tag--accreditation {
-        max-width: 242px;
         padding: 4px 12px;
         max-width: 100%;
     }

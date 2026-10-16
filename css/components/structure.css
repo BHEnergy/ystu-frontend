@@ -103,8 +103,8 @@
     }
 }
 
-.structure__institute:focus-within::before,
-.structure__institute:focus-within::after {
+.structure__institute:is(:focus-visible, :has(:focus-visible))::before,
+.structure__institute:is(:focus-visible, :has(:focus-visible))::after {
     transform: scale(1.08);
 }
 

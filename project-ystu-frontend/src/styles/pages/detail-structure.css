@@ -1,5 +1,5 @@
 .detail-structure .breadcrumbs {
-    margin-top: 60px;
+    margin-top: 24px;
 }
 
 .structure-detail {
@@ -36,7 +36,7 @@
     background: var(--subprimary-color-7);
     border-radius: 16px;
     font-style: normal;
-    min-height: 297px;
+    min-height: 0;
 }
 
 .structure-contact-card div {
@@ -51,6 +51,7 @@
     font-size: 1.125rem;
     font-weight: 500;
     text-transform: uppercase;
+    line-height: 1;
 }
 
 .structure-contact-card p,
@@ -129,6 +130,7 @@
     border-radius: 16px;
     position: relative;
     overflow: hidden;
+    z-index: 0;
 }
 
 .training-program-card::before {
@@ -141,7 +143,7 @@
     height: 195px;
     background-color: var(--primary-color-2);
     clip-path: polygon(0 0, 43% 0, 100% 50%, 43% 100%, 0 100%, 57% 50%);
-    z-index: 0;
+    z-index: -1;
 }
 
 .training-program-card::after {
@@ -154,7 +156,7 @@
     height: 126px;
     background-color: var(--primary-color-5);
     clip-path: polygon(0 0, 43% 0, 100% 50%, 43% 100%, 0 100%, 57% 50%);
-    z-index: 0;
+    z-index: -1;
 }
 
 .training-program-card::before,
@@ -172,8 +174,8 @@
     }
 }
 
-.training-program-card:focus-within::before,
-.training-program-card:focus-within::after {
+.training-program-card:is(:focus-visible, :has(:focus-visible))::before,
+.training-program-card:is(:focus-visible, :has(:focus-visible))::after {
     transform: scale(1.08);
 }
 
@@ -186,6 +188,7 @@
 
 .training-program-card__tags {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: 6px;
 }
@@ -207,14 +210,14 @@ span.training-program-card__tag {
     max-width: 75px;
 }
 
-.training-program-card__header .bakalavr {
+.training-program-card :is(.training-program-card__header, .training-program-card__tags) .bakalavr {
     color: var(--white-shade-1);
     background: var(--subprimary-color-1);
     border: none;
     max-width: 123px;
 }
 
-.training-program-card__header .magistratura {
+.training-program-card :is(.training-program-card__header, .training-program-card__tags) .magistratura {
     color: var(--white-shade-1);
     background: var(--primary-color-2);
     border: none;
@@ -261,11 +264,24 @@ span.training-program-card__tag {
     color: var(--subprimary-color-1);
 }
 
-.training-program-card a {
+.training-program-card h3 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 200ms ease;
+}
+
+.training-program-card h3 a:is(:hover, :focus-visible, :active) {
+    color: var(--primary-color-2);
+}
+
+.training-program-card > a {
     margin-top: auto;
     color: var(--primary-color-2);
-    border-bottom: 1px solid currentColor;
     font-weight: 600;
+}
+
+.content-filter-status {
+    margin-top: 24px;
 }
 
 .structure-about > .structure-detail__text {
@@ -544,7 +560,7 @@ span.training-program-card__tag {
 
     .structure-contact-card {
         padding: 24px 16px;
-        min-height: 287px;
+        min-height: 0;
     }
 
     .structure-contact-card div {
@@ -646,7 +662,7 @@ span.training-program-card__tag {
     }
 
     .structure-person-card {
-        padding: 24px 16px;
+        padding: 40px 16px;
         gap: 24px;
         min-height: 488px;
         border-radius: 8px;
@@ -681,7 +697,11 @@ span.training-program-card__tag {
     }
 
     .training-program-card__tags .magistratura {
-        max-width: 113px;
+        max-width: 110px;
+    }
+
+    .training-program-card :is(.training-program-card__header, .training-program-card__tags) .magistratura {
+        max-width: 110px;
     }
 
     .training-program-card__tags {
@@ -718,4 +738,11 @@ span.training-program-card__tag {
     .structure-detail__tab::after {
         transition: none;
     }
+}
+
+@media (max-width: 768px) {
+    .detail-structure .breadcrumbs { margin-top: 16px; }
+    .structure-contact-card a[href^="tel:"] { display: block; }
+    .training-program-card__footer { flex-direction: row; flex-wrap: wrap; align-items: center; }
+    .training-program-card__footer-item { padding: 6px 12px; }
 }

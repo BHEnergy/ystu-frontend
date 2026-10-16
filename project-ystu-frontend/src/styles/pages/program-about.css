@@ -180,7 +180,7 @@
     .program-about__description__feacher > p {
         font-size: 1.25rem;
         max-width: none;
-        width: 100%;
+        width: 65%;
     }
 
     .program-about__description__feacher .btn {

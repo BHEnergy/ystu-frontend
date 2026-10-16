@@ -11,6 +11,11 @@
     let frameId = 0;
 
     const updateHeaderPosition = () => {
+        // Фиксация body для popup сбрасывает scrollY, но не положение страницы.
+        if (document.body.classList.contains('body--modal-open')) {
+            frameId = 0;
+            return;
+        }
         const bannerBottom = informationBanner
             ? Math.max(0, informationBanner.getBoundingClientRect().bottom)
             : 0;

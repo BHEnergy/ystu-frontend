@@ -7,6 +7,18 @@
     align-items: center;
 }
 
+.breadcrumbs__item { transition: color 0.3s ease, text-decoration-color 0.3s ease; }
+
+.breadcrumbs__item:is(:hover, :focus-visible, :active) {
+    color: var(--primary-color-2);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .breadcrumbs__item { transition: none; }
+}
+
 .breadcrumbs__separator {
 
 /* UI sprite: breadcrumb-separator */

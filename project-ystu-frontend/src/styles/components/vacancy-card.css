@@ -1,7 +1,7 @@
 .vacancy-card {
     position: relative;
     min-height: 304px;
-    max-height: 304px;
+    max-height: none;
     overflow: hidden;
     padding: 40px;
     background: var(--white-shade-4);
@@ -71,7 +71,7 @@
 
     .vacancy-card {
         min-height: 243px;
-        max-height: 243px;
+        max-height: none;
         padding: 24px 16px 20px;
         border-radius: 8px;
     }

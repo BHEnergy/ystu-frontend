@@ -165,7 +165,7 @@
     .detail-vacancy__content {
         width: 100%;
         max-width: none;
-        margin-top: 60px;
+        margin-top: 40px;
         gap: 24px;
     }
 
@@ -195,7 +195,7 @@
     }
 
     .detail-vacancy .vacancy-documents {
-        margin-top: 98px;
+        margin-top: 40px;
     }
 
     .detail-vacancy .vacancy-documents__title {
@@ -203,4 +203,9 @@
         font-size: 1.5rem;
         line-height: 1.2;
     }
+}
+
+.detail-vacancy .vacancy-documents { margin-top: 60px; }
+@media (max-width: 768px) {
+    .detail-vacancy .vacancy-documents { margin-top: 40px; }
 }

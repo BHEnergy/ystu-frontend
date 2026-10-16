@@ -82,6 +82,7 @@
 
 .footer__call {
     flex: 0 0 35%;
+    max-width: 257px;
 }
 
 .footer__call a {
@@ -142,10 +143,17 @@
     content: none;
 }
 
+.footer__contacts > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+}
+
 .footer__contacts .ui-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 11px;
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    margin-right: 0;
     vertical-align: middle;
 }
 

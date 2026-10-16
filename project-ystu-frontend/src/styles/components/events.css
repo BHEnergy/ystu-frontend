@@ -375,12 +375,13 @@
     .event__date::before, .event__time::before, .event__location::before {
         width: 18px;
         height: 18px;
-        background-size: 15px;
+        flex: 0 0 18px;
+        background-size: 384px 864px;
     }
 
-    .event__location::before {
-        background-size: 11.5px;
-    }
+    .event__date::before { background-position: calc(50% - 144px) calc(50% + 384px); }
+    .event__time::before { background-position: calc(50% - 144px) calc(50% - 192px); }
+    .event__location::before { background-position: calc(50% - 144px) calc(50% + 96px); }
 
     .events-section {
         margin-top: 40px;

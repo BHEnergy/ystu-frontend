@@ -28,11 +28,11 @@
 .flagship-project__card::after {
   transform: scale(1);
   transform-origin: center bottom;
-  transition: transform 0.45s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
-.flagship-project__card:hover::after {
-  transform: scale(1.08);
+@media (hover: hover) and (pointer: fine) {
+  .flagship-project__card:hover::after { transform: scale(1.08); }
 }
 
 .flagship-project__photo {
@@ -291,7 +291,7 @@
     bottom: -10px;
     left: 0;
   }
- 
+
   /* Левая карточка третьего ряда */
   & .flagship-project__card:nth-child(6) {
     background: var(--subprimary-color-1);
@@ -499,11 +499,11 @@
     flex-direction: column;
   }
 
-  .flagship-projects__grid.card-8, 
-  .flagship-projects__grid.card-7, 
-  .flagship-projects__grid.card-6, 
-  .flagship-projects__grid.card-5, 
-  .flagship-projects__grid.card-4, 
+  .flagship-projects__grid.card-8,
+  .flagship-projects__grid.card-7,
+  .flagship-projects__grid.card-6,
+  .flagship-projects__grid.card-5,
+  .flagship-projects__grid.card-4,
   .flagship-projects__grid.card-3 {
     gap: 16px;
 

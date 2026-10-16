@@ -142,3 +142,12 @@
         gap: 0;
     }
 }
+
+.ficher:is(:active, :is(:focus-visible, :has(:focus-visible)))::before { transform: scaleY(1); }
+.ficher:is(:active, :is(:focus-visible, :has(:focus-visible)))::after { transform: translateY(0) rotate(355deg); }
+.ficher:is(:active, :is(:focus-visible, :has(:focus-visible))) .ficher__icon { opacity: 0; transform: translateY(-32px) scale(.88); }
+.ficher:is(:active, :is(:focus-visible, :has(:focus-visible))) .ficher__text { color: var(--white-shade-1); }
+@media (min-width: 769px) {
+    .ficher:is(:active, :is(:focus-visible, :has(:focus-visible))) { grid-template-rows: minmax(0, 0fr) auto; gap: 0; }
+    .ficher:is(:active, :is(:focus-visible, :has(:focus-visible))) .ficher__text { align-self: start; transform: none; }
+}

@@ -58,7 +58,7 @@
     color: var(--subprimary-color-2);
     font-size: 1.25rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1;
     text-transform: uppercase;
 }
 
@@ -162,4 +162,9 @@
     .program-admissions__contact h3 {
         font-size: 1.125rem;
     }
+}
+
+@media (max-width: 576px) {
+    .program-admissions__contact:nth-child(2) { flex-direction: column; align-items: flex-start; }
+    .program-admissions__contact:nth-child(2) a + a::before { content: none; }
 }

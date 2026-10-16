@@ -24,7 +24,7 @@
 }
 
 /* Для кастомизирования того, что будет приходить с админки, специальный класс wyswig*/
-.wyswig { min-width: 0; overflow-wrap: anywhere; line-height: 1.5; }
+.wyswig { min-width: 0; max-width: 100%; overflow-wrap: anywhere; line-height: 1.5; }
 .wyswig :is(h1,h2,h3,h4,h5,h6) { margin: 1.25em 0 .5em; line-height: 1.2; color: var(--subprimary-color-1); }
 .wyswig :is(p,ul,ol,blockquote,figure) { margin: 0 0 1em; }
 .wyswig a { text-decoration: underline; text-underline-offset: .15em; }
@@ -67,9 +67,13 @@
     box-shadow: 0 1px 0 var(--wyswig-table-border);
 }
 
+.wyswig__table { min-width: 0; max-width: 100%; }
+
 .wyswig__table-scroll {
     width: 100%;
     min-width: 0;
+    max-width: 100%;
+    overflow: auto;
 }
 
 .wyswig__table-scroll:focus-visible {
@@ -77,7 +81,8 @@
     outline-offset: 4px;
 }
 
-.wyswig table caption {
+.wyswig table caption,
+.wyswig__table-caption {
     caption-side: top;
     padding: 0 0 16px;
     color: var(--subprimary-color-1);
@@ -163,7 +168,7 @@
 }
 
 /* Устройства Small (телефоны с горизонтальной ориентацией, 576 пикселей и выше) */
-@media (max-width: 576px) { 
+@media (max-width: 576px) {
     .title {
         font-size: 2rem;
     }
@@ -184,6 +189,6 @@
 /* @media (max-width: 768px) { } */
 
 /* Устройства Small (телефоны с горизонтальной ориентацией, 576 пикселей и выше) */
-/* @media (max-width: 576px) { 
+/* @media (max-width: 576px) {
 
 } */
