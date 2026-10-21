@@ -1,9 +1,10 @@
 .main {
     flex: 1 1 auto;
-    padding-top: calc(var(--header-height) - 5px);
+    --header-flow-height: calc(var(--header-height) - 5px);
+    padding-top: var(--header-flow-height);
 }
 
-.main--header-overlay {
+.main.main--header-overlay {
     padding-top: 0;
 }
 
@@ -15,9 +16,9 @@
     margin-bottom: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     .main {
-        padding-top: calc(var(--header-height) - 30px);
+        --header-flow-height: calc(var(--header-height) - 30px);
     }
 }
 

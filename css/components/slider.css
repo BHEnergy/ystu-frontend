@@ -53,6 +53,7 @@
 
 button.swiper-button-prev,
 button.swiper-button-next {
+    -webkit-appearance: none;
     appearance: none;
     border: 0;
     padding: 0;

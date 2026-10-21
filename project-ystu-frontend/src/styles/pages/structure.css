@@ -21,7 +21,7 @@
     border: 1px solid var(--subprimary-color-1);
     border-radius: 50px;
     padding: 16px 32px;
-    transition: 0.3s all ease-in-out;
+    transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
@@ -33,6 +33,24 @@
     background-color: var(--primary-color-2);
     color: var(--white-shade-1);
     border: 1px solid var(--primary-color-2);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .structure__tag:hover {
+        background-color: var(--primary-color-2);
+        border-color: var(--primary-color-2);
+        color: var(--white-shade-1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .structure__tag { transition: none; }
+}
+
+.structure__tag:active {
+    background-color: var(--primary-color-1);
+    border-color: var(--primary-color-1);
+    color: var(--white-shade-1);
 }
 
 
@@ -147,6 +165,11 @@
     text-transform: lowercase;
     font-style: italic;
     z-index: 1;
+}
+
+.university-statistics .structure__program {
+    color: #000;
+    font-style: normal;
 }
 
 /* Устройства X-Large (большие настольные компьютеры, 1200 пикселей и выше) */

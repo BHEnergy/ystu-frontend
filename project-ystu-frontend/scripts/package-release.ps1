@@ -11,6 +11,7 @@ $packages = @(
     @{ Name=("ystu-frontend-handoff-$Version.zip"); Prefix='ystu-frontend/'; Source=$projectPath; Items=@('src','dist','scripts','.gitignore','package.json','package-lock.json','README.md','INTEGRATION.md','THIRD-PARTY-NOTICES.md','TESTING-CHECKLIST.md','HANDOFF.md','AUDIT-RESPONSE-2026-10-08.md','V9-RECHECK-REPORT-2026-10-08.md','V10-FIXES-2026-10-12.md','V10-RECHECK-2026-10-12.md','RELEASE-11-REPORT.md','RELEASE-12-REPORT.md','BEHAVIOR-HOOKS.md','UI-SPRITE.md','PACKAGING.md') }
 )
 $packages[1].Items += @('V12-FIXES-2026-10-16.md', 'RELEASE-13-REPORT.md')
+$packages[1].Items += @('V13-FIXES-2026-10-21.md', 'RELEASE-14-REPORT.md')
 $hashes = @()
 foreach ($package in $packages) {
     $target = Join-Path $destination $package.Name

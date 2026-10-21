@@ -250,7 +250,7 @@
     justify-content: center;
     align-items: center;
     min-width: 0;
-    font-size: clamp(0.875rem, 1.2vw, 1.125rem);
+    font-size: clamp(0.875rem, 1.15vw, 1.125rem);
     white-space: normal;
 }
 
@@ -445,7 +445,7 @@
 
     .event__card {
         border-radius: 8px;
-        min-height: 550px;
+        min-height: 0;
     }
 
     .event__photo {
@@ -462,6 +462,8 @@
     } */
 
     .event__content {
+        height: auto;
+        justify-content: flex-start;
         padding: 16px 16px 24px;
     }
 

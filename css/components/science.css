@@ -131,6 +131,6 @@
     }
 
     .science-detail__title {
-        max-width: 276px;
+        max-width: none;
     }
 }

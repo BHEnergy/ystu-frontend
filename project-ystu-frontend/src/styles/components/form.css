@@ -137,6 +137,7 @@
     height: 18px;
     margin: 0;
     flex: 0 0 18px;
+    -webkit-appearance: none;
     appearance: none;
     background: transparent;
     border: 1px solid #4779b8;

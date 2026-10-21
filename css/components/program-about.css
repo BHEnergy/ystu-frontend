@@ -121,10 +121,6 @@
     list-style-position: inside;
 }
 
-.program-exams__description.wyswig ul li::marker {
-    content: '-';
-    letter-spacing: 5px;
-}
 
 
 .program-about__fact--accreditaion.program-about__fact--accreditaion {

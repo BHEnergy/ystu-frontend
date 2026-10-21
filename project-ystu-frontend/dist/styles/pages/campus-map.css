@@ -480,7 +480,7 @@
 }
 
 @media (max-width: 768px) {
-    .campus-map-page .campus-map-page__canvas {
+    .campus-map-page__canvas {
         width: calc(100% + var(--container-padding) * 2);
         margin-left: calc(var(--container-padding) * -1);
         height: 700px;

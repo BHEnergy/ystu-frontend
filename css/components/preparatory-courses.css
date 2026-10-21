@@ -44,7 +44,7 @@
     color: #ffffff;
     font-size: clamp(1.75rem, 2.5vw, 2.75rem);
     font-weight: 700;
-    line-height: 1.05;
+    line-height: 1.2;
     text-transform: uppercase;
 
     overflow-wrap: break-word;
@@ -100,7 +100,7 @@
     border-radius: 12px;
     object-fit: cover;
     object-position: center;
-    max-width: 553px;
+    max-width: none;
 }
 
 .preparatory-courses .btn {
@@ -135,6 +135,7 @@
     }
 
     .preparatory-courses__title {
+        font-weight: 600;
         font-size: 1.5rem;
         margin-bottom: 16px;
     }
@@ -146,6 +147,8 @@
     }
 
     .preparatory-courses__media {
+        width: 100%;
+        max-width: none;
         min-height: 231px;
         max-height: 231px;
     }

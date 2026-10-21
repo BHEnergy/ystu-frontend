@@ -3,7 +3,8 @@
     margin-bottom: 110px;
     background-image: url(../../images/svg/ystu.svg);
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: right -6px top -8px;
+    background-size: 48%;
     box-shadow: inset 20px 10px 70px 24px rgb(0 0 30 / 30%);
 }
 

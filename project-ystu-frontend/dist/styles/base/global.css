@@ -34,6 +34,13 @@
     line-height: 1.2;
 }
 
+/* Не позволяем мобильному Safari самовольно увеличивать отдельные фрагменты текста.
+   Масштабирование страницы пользователем остаётся доступным. */
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
 html,
 body {
     margin: 0;
@@ -155,10 +162,14 @@ a, a:visited {
 :is(.ficher, .flagship-project__card, .training-program-card, .structure__institute,
     .student-links__item, .news__card, .event__card, .program-card, .vacancy-card) {
     isolation: isolate;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    -webkit-tap-highlight-color: transparent;
+    transition: outline-color 200ms ease, box-shadow 200ms ease, background-color 200ms ease, color 200ms ease, transform 420ms ease, grid-template-rows 420ms ease, gap 420ms ease;
 }
 :is(.ficher, .flagship-project__card, .training-program-card, .structure__institute,
-    .student-links__item, .news__card, .event__card, .program-card, .vacancy-card):is(:active, :is(:focus-visible, :has(:focus-visible))) {
-    outline: 2px solid var(--subprimary-color-2);
+    .student-links__item, .news__card, .event__card, .program-card, .vacancy-card):is(:active, :focus-visible, :has(:focus-visible)) {
+    outline: 2px solid var(--card-focus-color, var(--subprimary-color-1));
     outline-offset: -2px;
     box-shadow: 0 4px 12px rgb(9 65 136 / 18%);
 }
@@ -174,4 +185,6 @@ a, a:visited {
 }
 @media (prefers-reduced-motion: reduce) {
     .training-program-card h3 a { transition: none; }
+    :is(.ficher, .flagship-project__card, .training-program-card, .structure__institute,
+        .student-links__item, .news__card, .event__card, .program-card, .vacancy-card) { transition: none; }
 }

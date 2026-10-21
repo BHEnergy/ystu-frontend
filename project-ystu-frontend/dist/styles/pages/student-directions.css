@@ -277,7 +277,28 @@
     .student-direction__title.science-svg::before {
         height: 40px;
         min-width: 40px;
-        background-size: 33px 33px;
+        /* Иконка 48px уменьшается до 33px вместе со всем атласом. */
+        background-size: 352px 792px;
+    }
+
+    .student-direction__title.projects-svg::before {
+        background-position: calc(50% + 132px) calc(50% - 88px);
+    }
+
+    .student-direction__title.art-svg::before {
+        background-position: calc(50% + 44px) calc(50% + 352px);
+    }
+
+    .student-direction__title.sport-svg::before {
+        background-position: calc(50% - 132px) calc(50% - 88px);
+    }
+
+    .student-direction__title.volonter-svg::before {
+        background-position: calc(50% - 44px) calc(50% - 352px);
+    }
+
+    .student-direction__title.science-svg::before {
+        background-position: calc(50% + 44px) calc(50% - 88px);
     }
 }
 @media (min-width: 769px) {

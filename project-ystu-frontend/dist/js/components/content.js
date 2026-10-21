@@ -1,11 +1,11 @@
 /* Обычный HTML редактора не требует специальных классов у таблиц. */
 (() => {
     const prepare = (scope = document) => scope.querySelectorAll('[data-ui~="wyswig"] table').forEach(table => {
-        const wrapped = table.parentElement.classList.contains('wyswig__table-scroll');
+        const wrapped = table.parentElement.matches('[data-ui~="wyswig__table-scroll"]');
         const wrapper = wrapped ? table.parentElement : document.createElement('div');
         if (!wrapped) {
             wrapper.className = 'wyswig__table-scroll';
-            wrapper.setAttribute('data-ui', wrapper.className);
+            wrapper.setAttribute('data-ui', 'wyswig__table-scroll');
             wrapper.tabIndex = 0;
             wrapper.setAttribute('role', 'region');
             wrapper.setAttribute('aria-label', table.caption?.textContent.trim() || 'Таблица — горизонтальная прокрутка');

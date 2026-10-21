@@ -47,8 +47,8 @@
 .catalog-search__input::-webkit-search-cancel-button,
 .catalog-search__input::-webkit-search-decoration {
     display: none;
-    appearance: none;
     -webkit-appearance: none;
+    appearance: none;
 }
 
 .catalog-search__input::-ms-clear,
@@ -112,6 +112,7 @@
     width: 18px;
     height: 18px;
     flex: 0 0 18px;
+    -webkit-appearance: none;
     appearance: none;
     background-color: var(--white-shade-1);
     border: 1px solid var(--subprimary-color-2);

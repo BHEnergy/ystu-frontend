@@ -7,6 +7,8 @@
 }
 
 .ficher {
+    --card-focus-color: var(--primary-color-2);
+    -webkit-user-drag: none;
     position: relative;
     isolation: isolate;
     min-height: 294px;
@@ -44,6 +46,7 @@
 @media (prefers-reduced-motion: reduce) { .ficher::after { transition: none; } }
 
 .ficher__icon {
+    -webkit-user-drag: none;
     min-height: 0;
     max-width: 120px;
     max-height: 120px;

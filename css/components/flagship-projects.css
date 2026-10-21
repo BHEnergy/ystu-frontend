@@ -9,6 +9,7 @@
 }
 
 .flagship-project__card {
+  -webkit-user-drag: none;
   background: var(--subprimary-color-7);
   color: var(--subprimary-color-1);
   border-radius: 16px;
@@ -23,6 +24,24 @@
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+}
+
+.flagship-project__card:any-link {
+  color: var(--subprimary-color-1);
+}
+
+/* Окантовка не должна сливаться с синим фоном карточки. */
+.flagship-projects__grid:is(.card-8, .card-7, .card-6, .card-4) .flagship-project__card:nth-child(4),
+.flagship-projects__grid.card-8 .flagship-project__card:nth-child(8),
+.flagship-projects__grid.card-7 .flagship-project__card:nth-child(7),
+.flagship-projects__grid.card-6 .flagship-project__card:nth-child(6),
+.flagship-projects__grid.card-5 .flagship-project__card:nth-child(5),
+.flagship-projects__grid.card-3 .flagship-project__card:nth-child(2) {
+  --card-focus-color: var(--primary-color-2);
+}
+
+.flagship-project__photo img {
+  -webkit-user-drag: none;
 }
 
 .flagship-project__card::after {
@@ -41,7 +60,11 @@
 
 .flagship-project__card::after { pointer-events: none; line-height: 0; }
 .flagship-project__title { position: relative; z-index: 1; overflow-wrap: anywhere; }
-@media (hover: hover) { .flagship-project__card:hover { box-shadow: 0 8px 20px rgb(9 65 136 / 18%); } }
+@media (hover: hover) {
+  .flagship-project__card:hover {
+    box-shadow: 0 8px 20px rgb(9 65 136 / 18%);
+  }
+}
 
 .flagship-projects__grid {
   display: grid;
@@ -566,6 +589,9 @@
     }
   }
 
+  /* Контрастный мобильный декор всех синих карточек с петлёй. */
+  .flagship-projects__grid.card-8 .flagship-project__card:nth-child(8)::after,
+  .flagship-projects__grid.card-7 .flagship-project__card:nth-child(7)::after,
   .flagship-projects__grid.card-3 .flagship-project__card:nth-child(2)::after {
     content: "";
     bottom: -10px;
@@ -573,6 +599,8 @@
     height: 128px;
     width: 212px;
     background-image: url(../../images/svg/line-4-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
     left: unset;
   }
 

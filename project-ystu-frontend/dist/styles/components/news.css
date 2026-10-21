@@ -136,6 +136,7 @@
     .news__container {
         grid-template-columns: 1fr;
         gap: 24px;
+        align-items: start;
     }
 
     .news__card {
@@ -152,6 +153,7 @@
     }
 
     .news__title {
+        min-height: 0;
         font-size: 1.25rem;
         line-height: 1.2;
     }

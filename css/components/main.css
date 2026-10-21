@@ -36,12 +36,24 @@
 .wyswig ol { padding-left: 1.5em; list-style: decimal; }
 .wyswig ul ul, .wyswig ol ol { margin: .5em 0; padding-left: 1.5em; }
 .wyswig ul {
-    list-style-position: inside;
+    list-style: none;
+    padding-left: 0;
 }
 
-.wyswig ul li::marker {
+.wyswig ul > li {
+    list-style: none;
+    position: relative;
+    padding-left: 1em;
+}
+
+.wyswig ul > li::marker {
+    content: '';
+}
+
+.wyswig ul > li::before {
     content: '-';
-    letter-spacing: 5px;
+    position: absolute;
+    left: 0;
 }
 
 /* Таблицы из редактора 1С-Битрикс: оформление меняется через переменные. */
@@ -74,6 +86,8 @@
     min-width: 0;
     max-width: 100%;
     overflow: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
 }
 
 .wyswig__table-scroll:focus-visible {

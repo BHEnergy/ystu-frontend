@@ -85,12 +85,8 @@
     position: relative;
 }
 
-.detail-vacancy__list.wyswig ul li::marker {
-    content: none;
-}
-
 .detail-vacancy__list.wyswig ul li::before {
-    content: '•';
+    content: '-';
     letter-spacing: 8px;
     position: absolute;
     left: 8px;
