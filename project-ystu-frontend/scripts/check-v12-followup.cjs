@@ -34,7 +34,9 @@ const output = path.join(project, 'test-results-v12', process.argv.includes('--l
             await page.waitForTimeout(450);
             assert(await institutes.evaluateAll(cards => cards.every(card => {
                 const style = getComputedStyle(card);
-                return style.outlineStyle === 'none' && getComputedStyle(card, '::after').transform === 'matrix(1, 0, 0, 1, 0, 0)';
+                // С версии 14 прозрачный outline сохраняется для плавного перехода цвета.
+                const noVisibleOutline = style.outlineStyle === 'none' || style.outlineColor === 'rgba(0, 0, 0, 0)';
+                return noVisibleOutline && getComputedStyle(card, '::after').transform === 'matrix(1, 0, 0, 1, 0, 0)';
             })), 'touch focus must not keep card highlights or enlarged arrows');
         }
         await page.keyboard.press('Tab');

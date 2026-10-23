@@ -10,16 +10,13 @@
     border-radius: 16px;
 }
 
-/* Длинное название не делит узкую колонку со статистикой. */
-.program-card--wide {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
-
-.program-card--wide .program-card__stats {
-    width: 100%;
-    padding-left: 0;
+/* Во всех карточках статистика начинается на уровне профилей. */
+@media (min-width: 993px) {
+    .program-card .program-card__content,
+    .program-card .program-card__body { display: contents; }
+    .program-card__heading { grid-column: 1 / -1; }
+    .program-card__profiles { grid-column: 1; align-self: start; }
+    .program-card__stats { grid-column: 2; align-self: start; }
 }
 
 .program-card__content {

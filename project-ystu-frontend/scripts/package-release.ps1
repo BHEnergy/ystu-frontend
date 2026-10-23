@@ -12,6 +12,7 @@ $packages = @(
 )
 $packages[1].Items += @('V12-FIXES-2026-10-16.md', 'RELEASE-13-REPORT.md')
 $packages[1].Items += @('V13-FIXES-2026-10-21.md', 'RELEASE-14-REPORT.md')
+$packages[1].Items += @('V14-FIXES-2026-10-23.md', 'RELEASE-15-REPORT.md')
 $hashes = @()
 foreach ($package in $packages) {
     $target = Join-Path $destination $package.Name

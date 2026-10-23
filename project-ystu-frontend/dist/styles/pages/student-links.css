@@ -44,15 +44,16 @@
     transition: background-color 320ms ease, transform 420ms cubic-bezier(.2, .7, .2, 1);
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: 100% 100%;
+    -webkit-mask-size: contain;
     mask-position: center;
     mask-repeat: no-repeat;
-    mask-size: 100% 100%;
+    mask-size: contain;
 }
 
 .student-links__item:nth-child(6n + 1)::after {
     width: 543px;
-    height: 290px;
+    height: auto;
+    aspect-ratio: 543 / 290;
     left: -50px;
     bottom: -135px;
     background-color: #B5C6DB;
@@ -62,7 +63,8 @@
 
 .student-links__item:nth-child(6n + 2)::after {
     width: 369px;
-    height: 216px;
+    height: auto;
+    aspect-ratio: 369 / 216;
     bottom: -57px;
     right: -40px;
     background-color: #F8AD80;
@@ -72,7 +74,8 @@
 
 .student-links__item:nth-child(6n + 3)::after {
     width: 489px;
-    height: 246px;
+    height: auto;
+    aspect-ratio: 489 / 246;
     left: 0;
     bottom: -65px;
     background-color: #B5C6DB;
@@ -82,9 +85,10 @@
 
 .student-links__item:nth-child(6n + 4)::after {
     width: 305px;
-    height: 387px;
+    height: auto;
+    aspect-ratio: 326 / 197;
     right: -29px;
-    bottom: -115px;
+    bottom: -25px;
     background-color: #F8AD80;
     -webkit-mask-image: url(../../images/svg/sd-4.svg);
     mask-image: url(../../images/svg/sd-4.svg);
@@ -92,7 +96,8 @@
 
 .student-links__item:nth-child(6n + 5)::after {
     width: 403px;
-    height: 370px;
+    height: auto;
+    aspect-ratio: 393 / 324;
     right: -90px;
     bottom: -165px;
     background-color: #B5C6DB;
@@ -128,13 +133,12 @@
 
     .student-links__item:first-child:hover::after {
         transform: translate(33%, 140px) rotate(-25deg) scale(1.18);
-        height: 535px;
     }
 }
 
 @media (min-width: 992px) {
     .student-links__item:first-child::after {
-        transition: background-color 600ms cubic-bezier(.2, .7, .2, 1), transform 600ms cubic-bezier(.2, .7, .2, 1), height 600ms cubic-bezier(.2, .7, .2, 1);
+        transition: background-color 600ms cubic-bezier(.2, .7, .2, 1), transform 600ms cubic-bezier(.2, .7, .2, 1);
     }
 
     .student-links__item:first-child:is(:focus-visible, :has(:focus-visible))::after {
@@ -221,12 +225,12 @@
     }
 
     /* На телефоне используются те же SVG-маски, что и на десктопе. */
-    .student-links__item:nth-child(6n + 1)::after { width: 122%; left: -17%; bottom: -130px; }
-    .student-links__item:nth-child(6n + 2)::after { width: 304px; height: 184px; right: -35px; bottom: -54px; }
-    .student-links__item:nth-child(6n + 3)::after { width: 100%; height: 180px; bottom: -50px; }
-    .student-links__item:nth-child(6n + 4)::after { width: 212px; height: 128px; right: -35px; bottom: -10px; }
-    .student-links__item:nth-child(6n + 5)::after { width: 245px; height: 400px; right: -20px; bottom: -175px; }
-    .student-links__item:nth-child(6n + 6)::after { width: calc(100% + 40px); right: -20px; bottom: -70px; }
+    .student-links__item:nth-child(6n + 1)::after { width: 122%; left: -17%; top: 80px; bottom: auto; }
+    .student-links__item:nth-child(6n + 2)::after { width: 304px; right: -35px; bottom: -54px; }
+    .student-links__item:nth-child(6n + 3)::after { width: 100%; bottom: -50px; }
+    .student-links__item:nth-child(6n + 4)::after { width: 212px; right: -35px; bottom: -10px; }
+    .student-links__item:nth-child(6n + 5)::after { width: 245px; right: -35px; bottom: -70px; }
+    .student-links__item:nth-child(6n + 6)::after { width: calc(100% + 40px); right: -20px; top: 80px; bottom: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
