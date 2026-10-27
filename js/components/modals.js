@@ -1,8 +1,30 @@
-const buttonsModal = document.querySelectorAll('[data-ui~="button-modal"]');
+(() => {
+if (window.Modals?.init) { window.Modals.init(); return; }
+const initializedModals = new WeakSet();
+const initializedForms = new WeakSet();
 let activeModal = null;
 let modalTrigger = null;
 let modalScrollState = null;
 const closingModals = new WeakSet();
+const closingTimers = new WeakMap();
+const find = (scope, selector) => [
+    ...(scope.matches?.(selector) ? [scope] : []), ...scope.querySelectorAll(selector),
+];
+
+const resolveModal = trigger => {
+    // Явный target — ID окна (с # или без); прежний data-modal остаётся совместимым.
+    const target = trigger.dataset.modalTarget || trigger.getAttribute('aria-controls');
+    if (target) {
+        const modal = document.getElementById(target.replace(/^#/, ''));
+        return modal?.matches('[data-ui~="modal"]') ? modal : null;
+    }
+    const key = trigger.dataset.modal;
+    if (!key) return null;
+    const scope = trigger.closest('[data-ui~="modal-scope"]');
+    const matches = root => find(root, '[data-ui~="modal"]').find(modal => modal.dataset.modal === key);
+    // В явной локальной области не открываем случайно одноимённое внешнее окно.
+    return matches(scope || document) || null;
+};
 
 const lockModalScroll = () => {
     if (modalScrollState) return;
@@ -41,14 +63,18 @@ const closeModal = (modal) => {
     const finishClosing = () => {
         modal.classList.remove('modal--active', 'modal--closing');
         closingModals.delete(modal);
-        activeModal = null;
-        unlockModalScroll();
-        trigger?.focus({ preventScroll: true });
-        modalTrigger = null;
+        closingTimers.delete(modal);
+        if (activeModal === modal) {
+            activeModal = null;
+            unlockModalScroll();
+            if (trigger?.isConnected) trigger.focus({ preventScroll: true });
+            modalTrigger = null;
+        }
     };
 
     modal.classList.add('modal--closing');
-    window.setTimeout(finishClosing, 220);
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) finishClosing();
+    else closingTimers.set(modal, window.setTimeout(finishClosing, 220));
 };
 
 const resetModalState = (modal) => {
@@ -76,7 +102,15 @@ const showSuccess = (modal, { demo = false } = {}) => {
 
 const openModal = (modal, trigger) => {
     if (!modal) return;
-
+    init(modal);
+    if (activeModal && activeModal !== modal) {
+        clearTimeout(closingTimers.get(activeModal));
+        closingTimers.delete(activeModal);
+        closingModals.delete(activeModal);
+        activeModal.classList.remove('modal--active', 'modal--closing');
+    }
+    clearTimeout(closingTimers.get(modal));
+    closingTimers.delete(modal);
     activeModal = modal;
     modalTrigger = trigger;
     lockModalScroll();
@@ -93,18 +127,21 @@ const openModal = (modal, trigger) => {
     modal.querySelector('[data-ui~="modal-close"]')?.focus({ preventScroll: true });
 };
 
-buttonsModal.forEach((button) => {
-    button.addEventListener('click', (event) => {
-        event.preventDefault();
-        const modal = document.querySelector(`[data-ui~="modal"][data-modal="${button.dataset.modal}"]`);
-        openModal(modal, button);
-        if (button.dataset.modalState === 'success') {
-            showSuccess(modal, { demo: true });
-        }
-    });
+// Делегирование поддерживает триггеры, добавленные после загрузки страницы.
+document.addEventListener('click', event => {
+    const button = event.target.closest('[data-ui~="button-modal"]');
+    if (!button) return;
+    const modal = resolveModal(button);
+    if (!modal) return;
+    event.preventDefault();
+    openModal(modal, button);
+    if (button.dataset.modalState === 'success') showSuccess(modal, { demo: true });
 });
 
-document.querySelectorAll('[data-ui~="modal"]').forEach((modal) => {
+const init = (scope = document) => {
+find(scope, '[data-ui~="modal"]').forEach((modal) => {
+    if (initializedModals.has(modal)) return;
+    initializedModals.add(modal);
     modal.querySelector('[data-modal-back]')?.addEventListener('click', () => closeModal(modal));
     modal.querySelector('[data-ui~="modal-close"]')?.addEventListener('click', () => closeModal(modal));
 
@@ -113,7 +150,9 @@ document.querySelectorAll('[data-ui~="modal"]').forEach((modal) => {
     });
 });
 
-document.querySelectorAll('[data-ui~="modal-form"]').forEach((form) => {
+find(scope, '[data-ui~="modal-form"]').forEach((form) => {
+    if (initializedForms.has(form)) return;
+    initializedForms.add(form);
     // Статическая демонстрация. Интеграция перехватывает modal:submit через preventDefault().
     if (form.hasAttribute('data-modal-demo')) {
         form.addEventListener('submit', (event) => {
@@ -149,6 +188,7 @@ document.querySelectorAll('[data-ui~="modal-form"]').forEach((form) => {
     fileInput?.addEventListener('change', updateFileLabel);
     form.addEventListener('reset', () => window.setTimeout(updateFileLabel));
 });
+};
 
 document.addEventListener('keydown', (event) => {
     if (!activeModal) return;
@@ -175,4 +215,6 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-window.Modals = { close: closeModal, open: openModal, showSuccess };
+window.Modals = { init, close: closeModal, open: openModal, showSuccess, resolve: resolveModal };
+init();
+})();

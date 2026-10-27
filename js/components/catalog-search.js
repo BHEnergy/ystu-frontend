@@ -1,8 +1,14 @@
 /* Поиск по карточкам демонстрационной страницы. Серверный поиск подключается в CMS. */
-document.querySelectorAll('[data-ui~="listing-page"]').forEach((page) => {
+(() => {
+const initialized = new WeakSet();
+const init = (scope = document) => {
+const pages = [...(scope.matches?.('[data-ui~="listing-page"]') ? [scope] : []), ...scope.querySelectorAll('[data-ui~="listing-page"]')];
+pages.forEach((page) => {
+    if (initialized.has(page)) return;
     const results = page.querySelector('[data-ui~="listing-page__results"]');
     if (!results) return;
-    const cards = [...results.querySelectorAll('[data-ui~="program-card"], [data-ui~="vacancy-card"]')];
+    initialized.add(page);
+    const cards = () => [...results.querySelectorAll('[data-ui~="program-card"], [data-ui~="vacancy-card"]')];
     const inputs = [...page.querySelectorAll('[data-ui~="catalog-search__input"]')];
     const status = document.createElement('p');
     status.className = 'catalog-search-status';
@@ -22,7 +28,7 @@ document.querySelectorAll('[data-ui~="listing-page"]').forEach((page) => {
         inputs.forEach((input) => { input.value = query; });
         const words = normalize(query).split(/\s+/).filter(Boolean);
         let count = 0;
-        cards.forEach((card) => {
+        cards().forEach((card) => {
             const text = normalize(card.textContent);
             let filters = {};
             try { filters = JSON.parse(card.dataset.catalogFilters || '{}'); } catch { /* Неизвестные данные не ломают каталог. */ }
@@ -61,3 +67,7 @@ document.querySelectorAll('[data-ui~="listing-page"]').forEach((page) => {
     // Начальная демонстрация показывает полный набор без скрытых предвыбранных условий.
     syncControls();
 });
+};
+window.CatalogSearch = { init };
+init();
+})();

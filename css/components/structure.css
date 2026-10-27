@@ -167,7 +167,7 @@
     z-index: 1;
 }
 
-.university-statistics .structure__program {
+.structure__program--plain {
     color: #000;
     font-style: normal;
 }

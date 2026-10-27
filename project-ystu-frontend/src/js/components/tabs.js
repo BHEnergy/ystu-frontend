@@ -1,5 +1,8 @@
 /* Получаем все табы */
-let tabs = document.querySelectorAll('[data-ui~="tab"]');
+(() => {
+const tabInitialized = new WeakSet();
+const groupInitialized = new WeakSet();
+const select = (scope, selector) => [...(scope.matches?.(selector) ? [scope] : []), ...scope.querySelectorAll(selector)];
 const eventsReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const eventsTabAnimations = new Set();
 
@@ -27,7 +30,10 @@ const fadeEventsTitles = async (items, keyframes, duration) => {
     });
 };
 
-tabs.forEach( (tab) => {
+const initTabButtons = (scope = document) => {
+select(scope, '[data-ui~="tab"]').forEach((tab) => {
+    if (tabInitialized.has(tab)) return;
+    tabInitialized.add(tab);
     tab.addEventListener('click', async () => {
         const header = tab.closest('[data-ui~="events__header--fade"]');
 
@@ -77,11 +83,14 @@ tabs.forEach( (tab) => {
     })
 });
 
+};
+
 /* Общая логика фильтров: повторный клик не сбрасывает выбранную кнопку.
    CMS может передать категории через data-filter / data-category. */
 const initContentFilter = (group, selector, selectedClass, items, categoryOf) => {
     const controls = [...group.querySelectorAll(selector)];
-    if (!controls.length) return;
+    if (!controls.length || groupInitialized.has(group)) return;
+    groupInitialized.add(group);
     const status = document.createElement('p');
     status.className = 'content-filter-status';
     status.setAttribute('data-ui', 'content-filter-status');
@@ -127,22 +136,28 @@ const initContentFilter = (group, selector, selectedClass, items, categoryOf) =>
     activate(controls.find((item) => item.getAttribute('aria-pressed') === 'true') || controls[0], true);
 };
 
-document.querySelectorAll('[data-ui~="structure__tags"]').forEach((group) => {
+const initFilters = (scope = document) => {
+select(scope, '[data-ui~="structure__tags"]').forEach((group) => {
     const scope = group.closest('[data-ui~="structure__container"]') || group.parentElement;
     initContentFilter(group, '[data-filter]', 'select', [...scope.querySelectorAll('[data-ui~="structure__institutes"]')],
         (item) => [item.dataset.category || 'Институты']);
 });
 
-document.querySelectorAll('[data-ui~="structure-detail__tabs"]').forEach((group) => {
+select(scope, '[data-ui~="structure-detail__tabs"]').forEach((group) => {
     const scope = group.closest('[data-ui~="structure-detail__section"]') || group.parentElement;
     initContentFilter(group, 'button', 'select', [...scope.querySelectorAll('[data-ui~="training-program-card"]')],
         (item) => [item.dataset.category || item.querySelector('[data-ui~="training-program-card__tag"]')?.textContent.trim()]);
 });
 
-document.querySelectorAll('[data-ui~="events__tags"]').forEach((group) => {
+select(scope, '[data-ui~="events__tags"]').forEach((group) => {
     const scope = group.closest('[data-ui~="events__wrapper"]');
     const container = scope?.querySelector('[data-ui~="events__container"][data-tab="news"]');
     initContentFilter(group, '[data-filter]', 'current', [...(container?.querySelectorAll('[data-ui~="news__card"]') || [])],
         (item) => item.dataset.category ? item.dataset.category.split(' ') :
             [...item.querySelectorAll('[data-ui~="news__tag"]')].map((tag) => '#' + tag.textContent.trim()));
 });
+};
+const init = (scope = document) => { initTabButtons(scope); initFilters(scope); };
+window.Tabs = { init };
+init();
+})();

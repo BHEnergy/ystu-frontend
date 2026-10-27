@@ -32,7 +32,7 @@
 /* Страница программы */
 @import url('pages/program-about.css');
 @import url('pages/program-amissions.css');
-@import url('pages/program-exams.css');
+@import url('components/program-exams.css');
 @import url('pages/program-education.css');
 
 @import url('components/preparatory-courses.css');
@@ -40,8 +40,8 @@
 @import url('components/university-statistics.css');
 
 /* Страница Студенческая жизнь */
-@import url('pages/student-directions.css');
-@import url('pages/student-links.css');
+@import url('components/student-directions.css');
+@import url('components/student-links.css');
 @import url('pages/student-driving.css');
 
 

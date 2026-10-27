@@ -1,9 +1,9 @@
-<div class="modal modal--event" data-ui="modal" data-modal="event" role="dialog" aria-modal="true" aria-labelledby="event-modal-title">
+<div{% if eventModalId %} id="{{ eventModalId }}"{% endif %} class="modal modal--event" data-ui="modal" data-modal="{{ eventModalKey | default('event') }}" role="dialog" aria-modal="true" aria-labelledby="{{ modalIdPrefix | default('') }}event-modal-title">
       <div class="modal-overlay" data-ui="modal-overlay">
         <div class="modal-body">
           <button type="button" class="modal-close btn btn--default" data-ui="modal-close" aria-label="Закрыть окно"><svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#close"></use></svg></button>
           <div class="modal-header d-flex flex-column" data-ui="modal-header">
-            <h2 class="modal-header__title title" data-ui="modal-header__title" id="event-modal-title">Регистрация на мероприятие</h2>
+            <h2 class="modal-header__title title" data-ui="modal-header__title" id="{{ modalIdPrefix | default('') }}event-modal-title">Регистрация на мероприятие</h2>
             <p class="modal-header__subtitle">Выберите мероприятие и укажите контактные данные для регистрации.</p>
           </div>
           <!-- Статическая демонстрация. Отправка подключается при интеграции с 1С-Битрикс. -->
@@ -28,15 +28,15 @@
             <div class="modal-form__footer">
               <button type="submit" class="btn btn--default btn--m">Зарегистрироваться</button>
               <div class="modal-form__checkboxes d-flex flex-column">
-                <div class="checkbox--container"><input type="checkbox" name="personal-data" id="event-personal-data" required><label for="event-personal-data">Я даю согласие на {% if modalConsentLink %}<a href="#">обработку персональных данных</a>{% else %}обработку персональных данных{% endif %}</label></div>
-                <div class="checkbox--container"><input type="checkbox" name="privacy-policy" id="event-privacy-policy" required><label for="event-privacy-policy">Я ознакомлен(а) с <a href="#">Политикой конфиденциальности</a></label></div>
+                <div class="checkbox--container"><input type="checkbox" name="personal-data" id="{{ modalIdPrefix | default('') }}event-personal-data" required><label for="{{ modalIdPrefix | default('') }}event-personal-data">Я даю согласие на {% if modalConsentLink %}<a href="#">обработку персональных данных</a>{% else %}обработку персональных данных{% endif %}</label></div>
+                <div class="checkbox--container"><input type="checkbox" name="privacy-policy" id="{{ modalIdPrefix | default('') }}event-privacy-policy" required><label for="{{ modalIdPrefix | default('') }}event-privacy-policy">Я ознакомлен(а) с <a href="#">Политикой конфиденциальности</a></label></div>
               </div>
             </div>
           </form>
           <div class="modal-success" data-ui="modal-success" hidden tabindex="-1">
             <div class="modal-success__heading">
               <img class="modal-success__icon" src="../images/svg/modal-success-check.svg" width="120" height="120" alt="">
-              <h2 class="modal-success__title" data-ui="modal-success__title" id="event-success-title">Ваша заявка принята</h2>
+              <h2 class="modal-success__title" data-ui="modal-success__title" id="{{ modalIdPrefix | default('') }}event-success-title">Ваша заявка принята</h2>
             </div>
             <p class="modal-success__text">Спасибо за обращение! Мы свяжемся с вами по указанным контактным данным.</p>
             <button type="button" class="modal-success__back" data-modal-back>Назад</button>

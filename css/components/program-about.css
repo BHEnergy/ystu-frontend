@@ -113,13 +113,6 @@
     text-transform: capitalize;
 }
 
-.program-exams__description {
-    font-size: 1.125rem;
-}
-
-.program-exams__description.wyswig ul {
-    list-style-position: inside;
-}
 
 
 

@@ -1,4 +1,5 @@
 (() => {
+    if (window.SiteUI?.init) return;
     const mainScript = document.currentScript;
     const componentsUrl = new URL("./components/", mainScript?.src || window.location.href);
 
@@ -18,7 +19,11 @@
         });
     };
 
-    const initSwiper = () => {
+    const initSwiper = (scope = document) => {
+        const find = selector => [
+            ...(scope.matches?.(selector) ? [scope] : []),
+            ...scope.querySelectorAll(selector)
+        ];
         Swiper.extendDefaults({
             a11y: {
                 enabled: true,
@@ -32,7 +37,7 @@
         /* Инициализация слайдеров */
 
         /* Слайдер на главной */
-        document.querySelectorAll(".js-init-first-slider").forEach((slider) => {
+        find(".js-init-first-slider").forEach((slider) => {
 
             if (slider.swiper || !slider.classList.contains("swiper")) {
                 return;
@@ -65,7 +70,7 @@
         });
 
         /* Слайдеры с фракцией */
-        document.querySelectorAll('.js-init-banner-slider[data-slider-kind="1"]').forEach( (slider) => {
+        find('.js-init-banner-slider[data-slider-kind="1"]').forEach( (slider) => {
             if (slider.swiper || !slider.classList.contains("swiper")) {
                 return;
             }
@@ -86,7 +91,7 @@
             });
         });
 
-        document.querySelectorAll('.js-init-banner-slider[data-slider-kind="2"]').forEach( (slider) => {
+        find('.js-init-banner-slider[data-slider-kind="2"]').forEach( (slider) => {
             if (slider.swiper || !slider.classList.contains("swiper")) {
                 return;
             }
@@ -123,7 +128,7 @@
             });
         });
 
-        document.querySelectorAll('.js-init-banner-slider[data-slider-kind="3"]').forEach((slider) => {
+        find('.js-init-banner-slider[data-slider-kind="3"]').forEach((slider) => {
             if (slider.swiper || !slider.classList.contains('swiper')) {
                 return;
             }
@@ -163,7 +168,7 @@
         });
 
         /* Слайдеры студенческая жизнь */
-        document.querySelectorAll(".js-init-student-slider").forEach((slider) => {
+        find(".js-init-student-slider").forEach((slider) => {
             const prevButton = slider.querySelector('.swiper-button-prev:not([data-ui~="big"])');
             const nextButton = slider.querySelector('.swiper-button-next:not([data-ui~="big"])');
             const prevButtonBig = slider.querySelector('[data-slider-control="prev-big"]');
@@ -220,7 +225,7 @@
             if (nextButton && nextButtonBig) nextButtonBig.addEventListener("click", () => swiper.slideNext());
         });
 
-        document.querySelectorAll('.js-init-structure-gallery').forEach((slider) => {
+        find('.js-init-structure-gallery').forEach((slider) => {
             if (slider.swiper || !slider.classList.contains('swiper')) {
                 return;
             }
@@ -299,8 +304,27 @@
         }
     };
 
+    let resolveReady;
+    let rejectReady;
+    const ready = new Promise((resolve, reject) => { resolveReady = resolve; rejectReady = reject; });
+    ready.catch(() => {});
+    window.Galleries = { async init(scope = document) { await ready; initSwiper(scope); } };
+    window.SiteUI = {
+        ready,
+        async init(scope = document) {
+            await ready;
+            for (const name of ['Tabs', 'Pagination', 'Dropdown', 'FilterPanel', 'CatalogSearch', 'Modals', 'Validation']) {
+                window[name]?.init?.(scope);
+            }
+            window.Content?.prepare?.(scope);
+            initSwiper(scope);
+            window.imageLazyLoad?.update();
+        }
+    };
+
     const start = () => {
-        initLibraries().catch((error) => {
+        initLibraries().then(resolveReady).catch((error) => {
+            rejectReady(error);
             console.error("Ошибка инициализации библиотек:", error);
         });
     };

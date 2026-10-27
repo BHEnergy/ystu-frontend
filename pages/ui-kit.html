@@ -603,6 +603,7 @@
                 <p class="ficher__text">Партнерам</p>
               </a>
             </div>
+
           </div>
         </section>
         <!-- Новости и события: index.html -->
@@ -922,7 +923,7 @@
         <section class="ui-kit__entry" data-ui-source="news-events.html">
           <div class="ui-kit__meta container" id="ui-7">
             <h2>Тематические фильтры событий</h2>
-            <p>Переключатели категорий новостей на странице новостей.</p>
+            <p>Состояния переключателей категорий. Фильтрация карточек показана в полном блоке новостей выше.</p>
             <p>Страницы: <a href="news-events.html">news-events.html</a></p>
             <p>Компонент: <code>.events__tags</code></p>
           </div>
@@ -932,15 +933,10 @@
               data-value="tab-container"
               data-tab="news"
             >
-              <div class="events__tag current">#приемная компания</div>
-              <div class="events__tag">#приемная компания</div>
-              <div class="events__tag">#приемная компания</div>
-              <div class="events__tag">#приемная компания</div>
-              <div class="events__tag">#приемная компания</div>
-              <div class="events__tag">#приемная компания</div>
-              <div class="events__tag">#приемная компания</div>
-              <div class="events__tag">#приемная компания</div>
-              <div class="events__tag">#приемная компания</div>
+              <button type="button" class="events__tag current" data-filter="all">Все</button>
+              <button type="button" class="events__tag" data-filter="admission">#поступление</button>
+              <button type="button" class="events__tag" data-filter="science">#наука</button>
+              <button type="button" class="events__tag" data-filter="sport">#спорт</button>
               <div class="events__tag">#приемная компания</div>
               <div class="events__tag">#приемная компания</div>
               <div class="events__tag">#приемная компания</div>
@@ -990,6 +986,7 @@
                   <p class = "flagship-project__title">Название проекта</p>
                 </a>
             </div>
+
 
                 <h2 class="flagship-projects__title">
                   Флагманские проекты - Сетка 7
@@ -1248,10 +1245,10 @@
                     </h2>
 
                     <ul class="structure__programs">
-                      <li class="structure__program">
+                      <li class="structure__program structure__program--plain">
                         Бакалавриат: 1 программа
                       </li>
-                      <li class="structure__program">
+                      <li class="structure__program structure__program--plain">
                         Магистратура: 1 программа
                       </li>
                     </ul>
@@ -1265,10 +1262,10 @@
                     </h2>
 
                     <ul class="structure__programs">
-                      <li class="structure__program">
+                      <li class="structure__program structure__program--plain">
                         Бакалавриат: 1 программа
                       </li>
-                      <li class="structure__program">
+                      <li class="structure__program structure__program--plain">
                         Магистратура: 1 программа
                       </li>
                     </ul>
@@ -1282,10 +1279,10 @@
                     </h2>
 
                     <ul class="structure__programs">
-                      <li class="structure__program">
+                      <li class="structure__program structure__program--plain">
                         Бакалавриат: 1 программа
                       </li>
-                      <li class="structure__program">
+                      <li class="structure__program structure__program--plain">
                         Магистратура: 1 программа
                       </li>
                     </ul>
@@ -1299,10 +1296,10 @@
                     </h2>
 
                     <ul class="structure__programs">
-                      <li class="structure__program">
+                      <li class="structure__program structure__program--plain">
                         Бакалавриат: 1 программа
                       </li>
-                      <li class="structure__program">
+                      <li class="structure__program structure__program--plain">
                         Магистратура: 1 программа
                       </li>
                     </ul>
@@ -1316,10 +1313,10 @@
                     </h2>
 
                     <ul class="structure__programs">
-                      <li class="structure__program">
+                      <li class="structure__program structure__program--plain">
                         Бакалавриат: 1 программа
                       </li>
-                      <li class="structure__program">
+                      <li class="structure__program structure__program--plain">
                         Магистратура: 1 программа
                       </li>
                     </ul>
@@ -1333,10 +1330,10 @@
                     </h2>
 
                     <ul class="structure__programs">
-                      <li class="structure__program">
+                      <li class="structure__program structure__program--plain">
                         Бакалавриат: 1 программа
                       </li>
-                      <li class="structure__program">
+                      <li class="structure__program structure__program--plain">
                         Магистратура: 1 программа
                       </li>
                     </ul>
@@ -1350,10 +1347,10 @@
                     </h2>
 
                     <ul class="structure__programs">
-                      <li class="structure__program">
+                      <li class="structure__program structure__program--plain">
                         Бакалавриат: 1 программа
                       </li>
-                      <li class="structure__program">
+                      <li class="structure__program structure__program--plain">
                         Магистратура: 1 программа
                       </li>
                     </ul>
@@ -1367,10 +1364,10 @@
                     </h2>
 
                     <ul class="structure__programs">
-                      <li class="structure__program">
+                      <li class="structure__program structure__program--plain">
                         Бакалавриат: 1 программа
                       </li>
-                      <li class="structure__program">
+                      <li class="structure__program structure__program--plain">
                         Магистратура: 1 программа
                       </li>
                     </ul>
@@ -1644,39 +1641,21 @@
                     </p>
                     <a class="btn btn--default btn--m" href="#">Подробнее</a>
                   </div>
-                  <div
-                    class="student-direction__gallery swiper js-init-student-slider"
-                  >
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/student-life-direction.webp"><img loading="lazy" decoding="async"
-                          src="../images/fallback/student-life-direction.png"
-                          alt="Посетители знакомятся с лабораторным оборудованием на выставке" width="1280" height="853"></picture>
-                      </div>
-                      <div class="swiper-slide">
-                        <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/student-life-direction.webp"><img loading="lazy" decoding="async"
-                          src="../images/fallback/student-life-direction.png"
-                          alt="Посетители знакомятся с лабораторным оборудованием на выставке" width="1280" height="853"></picture>
-                      </div>
-                      <div class="swiper-slide">
-                        <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/student-life-direction.webp"><img loading="lazy" decoding="async"
-                          src="../images/fallback/student-life-direction.png"
-                          alt="Посетители знакомятся с лабораторным оборудованием на выставке" width="1280" height="853"></picture>
-                      </div>
-                      <div class="swiper-slide">
-                        <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/student-life-direction.webp"><img loading="lazy" decoding="async"
-                          src="../images/fallback/student-life-direction.png"
-                          alt="Посетители знакомятся с лабораторным оборудованием на выставке" width="1280" height="853"></picture>
-                      </div>
-                    </div>
-                    <div class="default-slider-controls">
-                      <button type="button" class="swiper-button-prev" aria-label="Предыдущий слайд"></button>
-                      <button type="button" class="swiper-button-prev big" data-slider-control="prev-big" data-ui="big" aria-label="Предыдущий слайд"></button>
-                      <div class="swiper-pagination"></div>
-                      <button type="button" class="swiper-button-next" aria-label="Следующий слайд"></button>
-                      <button type="button" class="swiper-button-next big" data-slider-control="next-big" data-ui="big" aria-label="Следующий слайд"></button>
-                    </div>
+                  <div class="student-direction__gallery swiper js-init-student-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/student-life-direction.webp"><img loading="lazy" decoding="async" src="../images/fallback/student-life-direction.png" alt="Посетители знакомятся с лабораторным оборудованием на выставке" width="1280" height="853"></picture></div>
+                    <div class="swiper-slide"><picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/student-life-direction.webp"><img loading="lazy" decoding="async" src="../images/fallback/student-life-direction.png" alt="Посетители знакомятся с лабораторным оборудованием на выставке" width="1280" height="853"></picture></div>
+                    <div class="swiper-slide"><picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/student-life-direction.webp"><img loading="lazy" decoding="async" src="../images/fallback/student-life-direction.png" alt="Посетители знакомятся с лабораторным оборудованием на выставке" width="1280" height="853"></picture></div>
+                    <div class="swiper-slide"><picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/student-life-direction.webp"><img loading="lazy" decoding="async" src="../images/fallback/student-life-direction.png" alt="Посетители знакомятся с лабораторным оборудованием на выставке" width="1280" height="853"></picture></div>
                   </div>
+                  <div class="default-slider-controls student-direction__controls">
+                    <button type="button" class="swiper-button-prev" aria-label="Предыдущий слайд"></button>
+                    <button type="button" class="swiper-button-prev big" data-slider-control="prev-big" data-ui="big" aria-label="Предыдущий слайд"></button>
+                    <div class="swiper-pagination"></div>
+                    <button type="button" class="swiper-button-next" aria-label="Следующий слайд"></button>
+                    <button type="button" class="swiper-button-next big" data-slider-control="next-big" data-ui="big" aria-label="Следующий слайд"></button>
+                  </div>
+                </div>
                 </article>
 
                 <article class="student-direction student-direction--reverse">
@@ -1695,39 +1674,21 @@
                     </p>
                     <a class="btn btn--default btn--m" href="#">Подробнее</a>
                   </div>
-                  <div
-                    class="student-direction__gallery swiper js-init-student-slider"
-                  >
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/student-life-direction.webp"><img loading="lazy" decoding="async"
-                          src="../images/fallback/student-life-direction.png"
-                          alt="Посетители знакомятся с лабораторным оборудованием на выставке" width="1280" height="853"></picture>
-                      </div>
-                      <div class="swiper-slide">
-                        <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/student-life-direction.webp"><img loading="lazy" decoding="async"
-                          src="../images/fallback/student-life-direction.png"
-                          alt="Посетители знакомятся с лабораторным оборудованием на выставке" width="1280" height="853"></picture>
-                      </div>
-                      <div class="swiper-slide">
-                        <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/student-life-direction.webp"><img loading="lazy" decoding="async"
-                          src="../images/fallback/student-life-direction.png"
-                          alt="Посетители знакомятся с лабораторным оборудованием на выставке" width="1280" height="853"></picture>
-                      </div>
-                      <div class="swiper-slide">
-                        <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/student-life-direction.webp"><img loading="lazy" decoding="async"
-                          src="../images/fallback/student-life-direction.png"
-                          alt="Посетители знакомятся с лабораторным оборудованием на выставке" width="1280" height="853"></picture>
-                      </div>
-                    </div>
-                    <div class="default-slider-controls">
-                      <button type="button" class="swiper-button-prev" aria-label="Предыдущий слайд"></button>
-                      <button type="button" class="swiper-button-prev big" data-slider-control="prev-big" data-ui="big" aria-label="Предыдущий слайд"></button>
-                      <div class="swiper-pagination"></div>
-                      <button type="button" class="swiper-button-next" aria-label="Следующий слайд"></button>
-                      <button type="button" class="swiper-button-next big" data-slider-control="next-big" data-ui="big" aria-label="Следующий слайд"></button>
-                    </div>
+                  <div class="student-direction__gallery swiper js-init-student-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/student-life-direction.webp"><img loading="lazy" decoding="async" src="../images/fallback/student-life-direction.png" alt="Посетители знакомятся с лабораторным оборудованием на выставке" width="1280" height="853"></picture></div>
+                    <div class="swiper-slide"><picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/student-life-direction.webp"><img loading="lazy" decoding="async" src="../images/fallback/student-life-direction.png" alt="Посетители знакомятся с лабораторным оборудованием на выставке" width="1280" height="853"></picture></div>
+                    <div class="swiper-slide"><picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/student-life-direction.webp"><img loading="lazy" decoding="async" src="../images/fallback/student-life-direction.png" alt="Посетители знакомятся с лабораторным оборудованием на выставке" width="1280" height="853"></picture></div>
+                    <div class="swiper-slide"><picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/student-life-direction.webp"><img loading="lazy" decoding="async" src="../images/fallback/student-life-direction.png" alt="Посетители знакомятся с лабораторным оборудованием на выставке" width="1280" height="853"></picture></div>
                   </div>
+                  <div class="default-slider-controls student-direction__controls">
+                    <button type="button" class="swiper-button-prev" aria-label="Предыдущий слайд"></button>
+                    <button type="button" class="swiper-button-prev big" data-slider-control="prev-big" data-ui="big" aria-label="Предыдущий слайд"></button>
+                    <div class="swiper-pagination"></div>
+                    <button type="button" class="swiper-button-next" aria-label="Следующий слайд"></button>
+                    <button type="button" class="swiper-button-next big" data-slider-control="next-big" data-ui="big" aria-label="Следующий слайд"></button>
+                  </div>
+                </div>
                 </article>
               </div>
             </section>
@@ -2055,6 +2016,7 @@
               </div>
             </div>
         </section>
+
           </div>
         </section>
         <!-- Вступительные испытания: program.html -->
@@ -2109,13 +2071,14 @@
               </p>
             </div>
 
-            <details class="program-exams__examples">
+            <details data-ui="disclosure" class="program-exams__examples">
               <summary>Примеры экзаменационных работ</summary>
               <div class ="program-exams__details">
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               </div>
             </details>
         </section>
+
           </div>
         </section>
         <!-- Приёмная комиссия: program.html -->
@@ -2179,6 +2142,7 @@
             </div>
           </div>
         </section>
+
           </div>
         </section>
         <!-- Каталог образовательных программ: programs.html -->
@@ -2488,7 +2452,7 @@
                         </div>
                       </dl>
                     </article>
-<article class="program-card program-card--wide" data-ui="program-card" data-catalog-filters='{"education_level":["master"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
+                    <article class="program-card program-card--wide" data-ui="program-card" data-catalog-filters='{"education_level":["master"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
 <div class="program-card__tags">
                             <span
                               class="program-card__tag program-card__tag--magistratura"
@@ -2538,7 +2502,8 @@
                         </div>
                       </dl>
                     </article>
-<article class="program-card program-card--wide" data-ui="program-card" data-catalog-filters='{"education_level":["master"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
+
+                    <article class="program-card program-card--wide" data-ui="program-card" data-catalog-filters='{"education_level":["master"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
 <div class="program-card__tags">
                             <span
                               class="program-card__tag program-card__tag--magistratura"
@@ -2588,7 +2553,8 @@
                         </div>
                       </dl>
                     </article>
-<article class="program-card program-card--wide" data-ui="program-card" data-catalog-filters='{"education_level":["master"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
+
+                    <article class="program-card program-card--wide" data-ui="program-card" data-catalog-filters='{"education_level":["master"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
 <div class="program-card__tags">
                             <span
                               class="program-card__tag program-card__tag--magistratura"
@@ -2638,6 +2604,7 @@
                         </div>
                       </dl>
                     </article>
+
                   </div>
                 </section>
               </div>
@@ -2667,25 +2634,25 @@
 
                     method="get"
                   >
-                    <details open="">
+                    <details data-ui="disclosure" open="">
                       <summary>уровень образования</summary>
                       <div class="catalog-filter-group__options">
                         <label class="catalog-filter-option"><input type="checkbox" name="education_level[]" value="bachelor">Бакалавриат</label><label class="catalog-filter-option"><input type="checkbox" name="education_level[]" value="specialist">Специалитет</label><label class="catalog-filter-option"><input type="checkbox" name="education_level[]" value="master" checked>Магистратура</label>
                       </div>
                     </details>
-                    <details open="">
+                    <details data-ui="disclosure" open="">
                       <summary>форма обучения</summary>
                       <div class="catalog-filter-group__options">
                         <label class="catalog-filter-option"><input type="checkbox" name="study_form[]" value="full_time" checked>Очная</label><label class="catalog-filter-option"><input type="checkbox" name="study_form[]" value="extramural">Заочная</label><label class="catalog-filter-option"><input type="checkbox" name="study_form[]" value="part_time">Очно-заочная</label>
                       </div>
                     </details>
-                    <details open="">
+                    <details data-ui="disclosure" open="">
                       <summary>основа обучения</summary>
                       <div class="catalog-filter-group__options">
                         <label class="catalog-filter-option"><input type="checkbox" name="financing[]" value="budget">Бюджет</label><label class="catalog-filter-option"><input type="checkbox" name="financing[]" value="target">Целевое</label><label class="catalog-filter-option"><input type="checkbox" name="financing[]" value="paid">Платное</label>
                       </div>
                     </details>
-                    <details>
+                    <details data-ui="disclosure">
                       <summary>вступительные испытания</summary>
                       <div class="catalog-filter-group__options">
                         <label class="catalog-filter-option"><input type="checkbox" name="entrance_exam[]" value="russian" checked>Русский язык</label><label class="catalog-filter-option"><input type="checkbox" name="entrance_exam[]" value="mathematics" checked>Математика</label><label class="catalog-filter-option"><input type="checkbox" name="entrance_exam[]" value="physics">Физика</label><label class="catalog-filter-option"><input type="checkbox" name="entrance_exam[]" value="social_studies">Обществознание</label><label class="catalog-filter-option"><input type="checkbox" name="entrance_exam[]" value="history" checked>История</label><label class="catalog-filter-option"><input type="checkbox" name="entrance_exam[]" value="informatics">Информатика</label><label class="catalog-filter-option"><input type="checkbox" name="entrance_exam[]" value="foreign_language">Иностранный язык</label><label class="catalog-filter-option"><input type="checkbox" name="entrance_exam[]" value="chemistry">Химия</label><label class="catalog-filter-option"><input type="checkbox" name="entrance_exam[]" value="geography">География</label><label class="catalog-filter-option"><input type="checkbox" name="entrance_exam[]" value="creative">Творческое испытание</label>
@@ -3230,6 +3197,7 @@
                     <a href="mailto:info@ystu.ru">info@ystu.ru</a>
                   </div>
                 </div>
+
               </div>
             </section>
           </div>
@@ -3272,7 +3240,7 @@
                 </button>
               </div>
               <div class="training-programs">
-<article class="training-program-card" data-ui="training-program-card">
+                <article class="training-program-card" data-ui="training-program-card">
                   <div class="training-program-card__body">
                     <div class="training-program-card__header">
                       <p class="training-program-card__code">09.03.01</p>
@@ -3292,7 +3260,7 @@
                     </div>
                   </div>
                 </article>
-<article class="training-program-card" data-ui="training-program-card">
+                <article class="training-program-card" data-ui="training-program-card">
                   <div class="training-program-card__body">
                     <div class="training-program-card__header">
                       <p class="training-program-card__code">09.03.02</p>
@@ -3309,7 +3277,7 @@
                     </div>
                   </div>
                 </article>
-<article class="training-program-card" data-ui="training-program-card">
+                <article class="training-program-card" data-ui="training-program-card">
                   <div class="training-program-card__body">
                     <div class="training-program-card__header">
                       <p class="training-program-card__code">09.03.03</p>
@@ -3471,6 +3439,7 @@
                     <button type="button" class="swiper-button-next" aria-label="Следующий слайд"></button>
                   </div>
                 </div>
+
               </section>
             </section>
           </div>
@@ -3527,6 +3496,7 @@
                   </div>
                 </div>
               </div>
+
             </section>
           </div>
         </section>
@@ -3634,6 +3604,7 @@
                   </div>
                 </div>
               </div>
+
             </section>
           </div>
         </section>
@@ -3685,6 +3656,7 @@
                   <a href="mailto:info@ystu.ru">info@ystu.ru</a>
                 </div>
               </div>
+
               </div>
               <div class="sotrudnik__contents d-flex flex-column">
                 <div class="dropdown--item open" data-ui="dropdown--item">
@@ -4410,6 +4382,7 @@
                   </section>
                 </div>
               </div>
+
                   <div class="dropdown--item" data-ui="dropdown--item">
                 <div class="science-detail dropdown--header" data-ui="dropdown--header">
                   <h2 class="science-detail__title"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="false" type="button">Журнал «Journal of regional and international competitiveness»</button></h2>
@@ -4462,6 +4435,7 @@
                   </section>
                 </div>
               </div>
+
                   <div class="dropdown--item" data-ui="dropdown--item">
                 <div class="science-detail dropdown--header" data-ui="dropdown--header">
                   <h2 class="science-detail__title"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="false" type="button">Журнал: «Умные композиты в строительстве Smart Composite in Construction»</button></h2>
@@ -4514,6 +4488,7 @@
                   </section>
                 </div>
               </div>
+
                   <div class="dropdown--item" data-ui="dropdown--item">
                     <div class="science-detail dropdown--header" data-ui="dropdown--header">
                       <h2 class="science-detail__title"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="false" type="button">
@@ -4629,6 +4604,7 @@
                   <button type="button" data-filter-value="library"><img src="../images/svg/campus-library.svg" alt="" />Библиотека</button>
                 </div>
               </details>
+
                     <details class="campus-filter campus-filter--department" data-campus-filter="department">
                 <summary><span data-campus-filter-label>выбрать подразделение</span><span class="campus-filter__icon" aria-hidden="true"></span></summary>
                 <div class="campus-filter__panel campus-filter__panel--grouped">
@@ -4640,6 +4616,7 @@
                   <button type="button" data-filter-value="service-1">1</button><button type="button" data-filter-value="service-2">2</button><button type="button" data-filter-value="service-3">3</button>
                 </div>
               </details>
+
                   </div>
                   <form
                     class="campus-map-page__control"
@@ -4819,7 +4796,7 @@
           <h2>Кастомные элементы для 1С-Битрикс</h2>
           <p>Оформление контента из визуального редактора: текст, списки и таблицы. Достаточно поместить разметку в контейнер с классом <code>wyswig</code>.</p>
           <p>Страницы с текстовыми блоками: <a href="program.html">Образовательная программа</a>, <a href="detail-vacancy.html">Вакансия</a>. Таблица ниже — пример для интеграции.</p>
-          <p>Стили: <code>../css/components/main.css</code>. Селекторы: <code>.wyswig table</code>, <code>.wyswig tbody</code>, <code>.wyswig tr</code>, <code>.wyswig td</code> и <code>.wyswig th</code>.</p>
+          <p>Стили: <code>../styles/base/main.css</code>. Селекторы: <code>.wyswig table</code>, <code>.wyswig tbody</code>, <code>.wyswig tr</code>, <code>.wyswig td</code> и <code>.wyswig th</code>.</p>
           <p>Цвета и отступы таблицы настраиваются переменными <code>--wyswig-table-border</code>, <code>--wyswig-table-background</code>, <code>--wyswig-table-heading</code>, <code>--wyswig-table-color</code>, <code>--wyswig-table-cell-padding</code>.</p>
         </div>
         <div class="ui-kit__sample container">
@@ -4852,7 +4829,7 @@
         </div>
       </section>
       <!-- Подвал: index.html -->
-<section class="ui-kit__section" id="hero-variants">
+      <section class="ui-kit__section" id="hero-variants">
   <div class="ui-kit__intro"><h2>Баннер направления — жидкое стекло</h2><p>Страницы: <a href="program.html">программа</a>, <a href="student-life.html">студенческая жизнь</a>. Согласованная стеклянная подложка.</p></div>
 
   <section class="hero-banner" aria-label="Стеклянная подложка">

@@ -391,14 +391,14 @@
   },
   {
     "template": "templates/components/student-gallery-detailed.njk",
-    "usedBy": [
-      "pages/ui-kit.njk"
-    ]
+    "usedBy": []
   },
   {
     "template": "templates/components/student-gallery.njk",
     "usedBy": [
-      "pages/student-life.njk"
+      "pages/student-life.njk",
+      "pages/ui-kit.njk",
+      "templates/components/student-gallery-detailed.njk"
     ]
   },
   {

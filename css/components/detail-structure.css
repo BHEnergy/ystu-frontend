@@ -103,8 +103,9 @@
 }
 
 .structure-detail__tab:focus-visible {
-    color: var(--primary-color-2);
-    outline: none;
+    outline: 3px solid var(--subprimary-color-1);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px var(--white-shade-1);
 }
 
 .structure-detail__tab:focus-visible::after {

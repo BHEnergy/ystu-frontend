@@ -86,8 +86,7 @@
     .university-statistics {
         margin-bottom: 60px;
         background-size: 436px;
-        background-position-x: 125px;
-        background-position-y: -30px;
+        background-position: right -6px top -8px;
     }
 
     .university-statistics .structure__institutes {

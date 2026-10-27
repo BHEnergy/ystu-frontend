@@ -1,16 +1,13 @@
 (() => {
-    const panels = document.querySelectorAll('[data-filter-panel]');
-
-    if (!panels.length) {
-        window.FilterPanel = {};
-        return;
-    }
-
     const controllers = [];
-
+    const initialized = new WeakSet();
+    const init = (scope = document) => {
+    const panels = [...(scope.matches?.('[data-filter-panel]') ? [scope] : []), ...scope.querySelectorAll('[data-filter-panel]')];
     panels.forEach((panel) => {
+        if (initialized.has(panel)) return;
         const panelId = panel.id;
-        const openButtons = document.querySelectorAll(`[data-open-filter-panel="${panelId}"]`
+        const owner = panel.closest('[data-ui~="listing-page"]') || (scope === panel ? panel.parentElement : scope);
+        const openButtons = owner.querySelectorAll(`[data-open-filter-panel="${CSS.escape(panelId)}"]`
         );
         const closeButtons = panel.querySelectorAll('[data-close-filter-panel]');
         const form = panel.querySelector('form');
@@ -18,6 +15,7 @@
         if (!panelId || !openButtons.length) {
             return;
         }
+        initialized.add(panel);
 
         const setOpen = (isOpen) => {
             panel.classList.toggle('is-open', isOpen);
@@ -49,6 +47,7 @@
 
         controllers.push({ panel, setOpen });
     });
+    };
 
     document.addEventListener('keydown', (event) => {
         if (event.key !== 'Escape') {
@@ -62,5 +61,6 @@
         });
     });
 
-    window.FilterPanel = { controllers };
+    window.FilterPanel = { controllers, init };
+    init();
 })();

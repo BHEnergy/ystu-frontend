@@ -513,7 +513,7 @@
         <section class="ui-kit__entry" data-ui-source="news-events.html">
           <div class="ui-kit__meta container" id="ui-7">
             <h2>Тематические фильтры событий</h2>
-            <p>Переключатели категорий новостей на странице новостей.</p>
+            <p>Состояния переключателей категорий. Фильтрация карточек показана в полном блоке новостей выше.</p>
             <p>Страницы: <a href="news-events.html">news-events.html</a></p>
             <p>Компонент: <code>.events__tags</code></p>
           </div>
@@ -523,15 +523,10 @@
               data-value="tab-container"
               data-tab="news"
             >
-              <div class="events__tag current">#приемная компания</div>
-              <div class="events__tag">#приемная компания</div>
-              <div class="events__tag">#приемная компания</div>
-              <div class="events__tag">#приемная компания</div>
-              <div class="events__tag">#приемная компания</div>
-              <div class="events__tag">#приемная компания</div>
-              <div class="events__tag">#приемная компания</div>
-              <div class="events__tag">#приемная компания</div>
-              <div class="events__tag">#приемная компания</div>
+              <button type="button" class="events__tag current" data-filter="all">Все</button>
+              <button type="button" class="events__tag" data-filter="admission">#поступление</button>
+              <button type="button" class="events__tag" data-filter="science">#наука</button>
+              <button type="button" class="events__tag" data-filter="sport">#спорт</button>
               <div class="events__tag">#приемная компания</div>
               <div class="events__tag">#приемная компания</div>
               <div class="events__tag">#приемная компания</div>
@@ -758,7 +753,7 @@
         <section class="ui-kit__entry" data-ui-source="index.html">
           <div class="ui-kit__meta container" id="ui-10">
             <h2>Подготовительные курсы школьникам</h2>
-            <p>Общий рекламный баннер с изображением и кнопкой. Механика блока: в административной панели данный блок является динамичным. Это значит, что весь контент, визуал и кнопка перехода могут полностью заменяться. 
+            <p>Общий рекламный баннер с изображением и кнопкой. Механика блока: в административной панели данный блок является динамичным. Это значит, что весь контент, визуал и кнопка перехода могут полностью заменяться.
 Данный рекламный баннер может подсветить как на всех страницах, так и на конкретных, с возможность выбрать нужные страницы</p>
             <p>
               Страницы: <a href="index.html">index.html</a>,
@@ -874,7 +869,7 @@
                     </p>
                     <a class="btn btn--default btn--m" href="#">Подробнее</a>
                   </div>
-                  {% include "components/student-gallery-detailed.njk" %}
+                  {% include "components/student-gallery.njk" %}
                 </article>
 
                 <article class="student-direction student-direction--reverse">
@@ -893,7 +888,7 @@
                     </p>
                     <a class="btn btn--default btn--m" href="#">Подробнее</a>
                   </div>
-                  {% include "components/student-gallery-detailed.njk" %}
+                  {% include "components/student-gallery.njk" %}
                 </article>
               </div>
             </section>
@@ -1327,25 +1322,25 @@
 
                     method="get"
                   >
-                    <details open="">
+                    <details data-ui="disclosure" open="">
                       <summary>уровень образования</summary>
                       <div class="catalog-filter-group__options">
                         {% set option = {"label":"Бакалавриат","name":"education_level[]","value":"bachelor","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Специалитет","name":"education_level[]","value":"specialist","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Магистратура","name":"education_level[]","value":"master","checked":true,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}
                       </div>
                     </details>
-                    <details open="">
+                    <details data-ui="disclosure" open="">
                       <summary>форма обучения</summary>
                       <div class="catalog-filter-group__options">
                         {% set option = {"label":"Очная","name":"study_form[]","value":"full_time","checked":true,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Заочная","name":"study_form[]","value":"extramural","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Очно-заочная","name":"study_form[]","value":"part_time","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}
                       </div>
                     </details>
-                    <details open="">
+                    <details data-ui="disclosure" open="">
                       <summary>основа обучения</summary>
                       <div class="catalog-filter-group__options">
                         {% set option = {"label":"Бюджет","name":"financing[]","value":"budget","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Целевое","name":"financing[]","value":"target","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Платное","name":"financing[]","value":"paid","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}
                       </div>
                     </details>
-                    <details>
+                    <details data-ui="disclosure">
                       <summary>вступительные испытания</summary>
                       <div class="catalog-filter-group__options">
                         {% set option = {"label":"Русский язык","name":"entrance_exam[]","value":"russian","checked":true,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Математика","name":"entrance_exam[]","value":"mathematics","checked":true,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Физика","name":"entrance_exam[]","value":"physics","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Обществознание","name":"entrance_exam[]","value":"social_studies","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"История","name":"entrance_exam[]","value":"history","checked":true,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Информатика","name":"entrance_exam[]","value":"informatics","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Иностранный язык","name":"entrance_exam[]","value":"foreign_language","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Химия","name":"entrance_exam[]","value":"chemistry","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"География","name":"entrance_exam[]","value":"geography","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Творческое испытание","name":"entrance_exam[]","value":"creative","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}

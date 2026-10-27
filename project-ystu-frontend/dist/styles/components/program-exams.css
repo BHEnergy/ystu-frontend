@@ -1,3 +1,4 @@
+/* Переиспользуемый блок показателей и disclosure, не привязан к странице. */
 .program-exams {
     margin-bottom: 110px;
     display: flex;
@@ -8,6 +9,9 @@
 .program-exams__title {
     font-size: 2.75rem;
 }
+
+.program-exams__description { font-size: 1.125rem; }
+.program-exams__description.wyswig ul { list-style-position: inside; }
 
 .program-exams__list {
     list-style: none;
@@ -74,7 +78,8 @@
     background-repeat: no-repeat;
 }
 
-.program-exams__examples[open] summary::after {
+.program-exams__examples > summary[aria-expanded="true"]::after,
+.program-exams__examples[open] > summary:not([aria-expanded])::after {
     transform: rotate(180deg);
 }
 
