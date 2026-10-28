@@ -69,7 +69,7 @@
             mobileImages.addEventListener('change', updateImages);
         });
 
-        /* Слайдеры с фракцией */
+        /* Баннерные слайдеры: цифры по умолчанию, буллеты через data-pagination. */
         find('.js-init-banner-slider[data-slider-kind="1"]').forEach( (slider) => {
             if (slider.swiper || !slider.classList.contains("swiper")) {
                 return;
@@ -85,7 +85,7 @@
                 },
                 pagination: {
                     el: slider.querySelector(".swiper-pagination"),
-                    type: 'fraction',
+                    type: slider.dataset.pagination === 'bullets' ? 'bullets' : 'fraction',
                     clickable: true,
                 },
             });
@@ -111,7 +111,7 @@
                 },
                 pagination: {
                     el: slider.querySelector(".swiper-pagination"),
-                    type: 'fraction',
+                    type: slider.dataset.pagination === 'bullets' ? 'bullets' : 'fraction',
                     clickable: true,
                 },
                 breakpoints: {

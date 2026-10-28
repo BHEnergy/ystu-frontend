@@ -16,8 +16,9 @@
             return;
         }
         initialized.add(panel);
+        let openingButton = openButtons[0];
 
-        const setOpen = (isOpen) => {
+        const setOpen = (isOpen, restoreFocus = false) => {
             panel.classList.toggle('is-open', isOpen);
             panel.setAttribute('aria-hidden', String(!isOpen));
             openButtons.forEach((button) => {
@@ -27,19 +28,22 @@
                     isOpen,
                 );
             });
+            if (!isOpen && restoreFocus) {
+                openingButton?.focus();
+            }
         };
 
         openButtons.forEach((button) => {
             button.insertAdjacentElement('afterend', panel);
             button.addEventListener('click', () => {
+                openingButton = button;
                 setOpen(!panel.classList.contains('is-open'));
             });
         });
 
         closeButtons.forEach((button) => {
             button.addEventListener('click', () => {
-                setOpen(false);
-                openButtons[0]?.focus();
+                setOpen(false, true);
             });
         });
 
@@ -56,7 +60,7 @@
 
         controllers.forEach(({ panel, setOpen }) => {
             if (panel.classList.contains('is-open')) {
-                setOpen(false);
+                setOpen(false, panel.contains(document.activeElement));
             }
         });
     });
