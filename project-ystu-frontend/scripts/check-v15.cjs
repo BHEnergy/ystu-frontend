@@ -71,6 +71,24 @@ const { chromium, webkit } = require('playwright-core');
                 assert(await page.locator('.js-init-student-slider').count() >= 2);
                 await page.locator('.js-init-student-slider').first().evaluate(el => el.swiper.slideTo(1, 0));
                 assert.equal(await page.locator('.js-init-student-slider').nth(1).evaluate(el => el.swiper.activeIndex), 0);
+                // Пункт 8: примеры UI-Kit должны сохранять контракт рабочих компонентов.
+                assert(await page.locator('.news__card').evaluateAll(cards => cards.length === 3
+                    && cards.every(card => card.tagName === 'A' && card.hasAttribute('href') && !card.querySelector('a'))),
+                'Все карточки новостей UI-Kit должны быть целыми ссылками без вложенных ссылок');
+                const structure = page.locator('[data-ui~="structure__tags"]').first();
+                assert.equal(await structure.locator('button[data-filter]').count(), 4);
+                const category = structure.locator('button').nth(1);
+                await structure.locator('button').first().focus();
+                await page.keyboard.press('Tab');
+                assert(await category.evaluate(el => document.activeElement === el));
+                assert.notEqual(await category.evaluate(el => getComputedStyle(el).outlineStyle), 'none');
+                await category.press('Enter');
+                assert.equal(await category.getAttribute('aria-pressed'), 'true');
+                const structureScope = page.locator('[data-ui~="structure__container"]').first();
+                assert(await structureScope.locator('[data-ui~="structure__institutes"]').isHidden());
+                assert(await structureScope.locator('[data-ui~="content-filter-status"]').isVisible());
+                await structure.locator('button').first().press('Enter');
+                assert(await structureScope.locator('[data-ui~="structure__institutes"]').isVisible());
                 for (const width of [1100, 800, 390]) {
                     await page.setViewportSize({ width, height: 1000 });
                     await page.goto(base + '/pages/index.html');

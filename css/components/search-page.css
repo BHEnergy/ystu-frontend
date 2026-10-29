@@ -60,6 +60,10 @@
     height: 58px;
 }
 
+.search-page__results {
+    margin-top: 20px;
+}
+
 @media (max-width: 768px) {
     .search-page {
         min-height: 460px;

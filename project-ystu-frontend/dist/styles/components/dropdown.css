@@ -25,6 +25,7 @@
 
 .dropdown--trigger:focus-visible {
     outline: none;
+    box-shadow: none;
 }
 
 .dropdown--header {

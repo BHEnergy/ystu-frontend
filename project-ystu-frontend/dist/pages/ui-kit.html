@@ -871,7 +871,7 @@
                         </div>
                       </div>
                     </a>
-                    <div class="news__card" data-ui="news__card">
+                    <a class="news__card" data-ui="news__card" href="news-events.html">
                       <div class="news__photo"><svg class="news__arrow ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#arrow-white"></use></svg>
 
                         <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/banner-news.webp"><img loading="lazy" decoding="async" src="../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета" width="462" height="339"></picture>
@@ -879,8 +879,8 @@
                       <div class="news__content">
                         <div class="news__header">
                           <p class="news__date">26.02.2026</p>
-                          <a href="news-events.html" class="news__title"
-                            >Социологическй опрос «Приоритет 2030»</a
+                          <p class="news__title"
+                            >Социологическй опрос «Приоритет 2030»</p
                           >
                         </div>
                         <div class="news__tags">
@@ -888,8 +888,8 @@
                           <p class="news__tag" data-ui="news__tag">поступающим</p>
                         </div>
                       </div>
-                    </div>
-                    <div class="news__card" data-ui="news__card">
+                    </a>
+                    <a class="news__card" data-ui="news__card" href="news-events.html">
                       <div class="news__photo"><svg class="news__arrow ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#arrow-white"></use></svg>
 
                         <picture class="responsive-picture"><source type="image/webp" srcset="../images/webp/banner-news.webp"><img loading="lazy" decoding="async" src="../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета" width="462" height="339"></picture>
@@ -897,9 +897,9 @@
                       <div class="news__content">
                         <div class="news__header">
                           <p class="news__date">26.02.2026</p>
-                          <a href="news-events.html" class="news__title"
+                          <p class="news__title"
                             >Максим Татаров встретился <br />со студентами
-                            Института экономики и менеджмента</a
+                            Института экономики и менеджмента</p
                           >
                         </div>
                         <div class="news__tags">
@@ -907,7 +907,7 @@
                           <p class="news__tag" data-ui="news__tag">поступающим</p>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                   <a
                     class="btn btn--default btn--m"
@@ -3178,13 +3178,13 @@
             <section class="structure">
               <div class="container structure__container" data-ui="structure__container">
                 <h1 class="title">Структура университета</h1>
-                <div class="structure__tags" data-ui="structure__tags">
-                  <div class="structure__tag tag select">Институты</div>
-                  <div class="structure__tag tag">Кафедры</div>
-                  <div class="structure__tag tag">Корпуса и общежитие</div>
-                  <div class="structure__tag tag">Службы и отделы</div>
+                <div class="structure__tags" data-ui="structure__tags" role="group" aria-label="Раздел структуры">
+                  <button type="button" class="structure__tag tag select" data-filter="institutes" aria-pressed="true">Институты</button>
+                  <button type="button" class="structure__tag tag" data-filter="departments" aria-pressed="false">Кафедры</button>
+                  <button type="button" class="structure__tag tag" data-filter="buildings" aria-pressed="false">Корпуса и общежитие</button>
+                  <button type="button" class="structure__tag tag" data-filter="services" aria-pressed="false">Службы и отделы</button>
                 </div>
-                <ul class="structure__institutes" data-ui="structure__institutes">
+                <ul class="structure__institutes" data-ui="structure__institutes" data-category="institutes">
                   <li class="structure__institute">
                     <a class="structure__institute-link" href="#">
                       <h2 class="structure__institute-title">
