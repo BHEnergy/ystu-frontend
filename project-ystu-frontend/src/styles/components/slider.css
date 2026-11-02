@@ -266,7 +266,7 @@ button.swiper-button-next {
     }
 }
 
-.banner-slider-3[data-pagination="bullets"] .default-slider-controls {
+.js-init-banner-slider[data-pagination="bullets"] .default-slider-controls {
     & .swiper-button-prev,
     & .swiper-button-next,
     & .swiper-pagination {
