@@ -19,8 +19,18 @@ function build() {
     // Ошибка шаблона не уничтожает предыдущую сборку.
     const pages = fs.readdirSync(path.join(source, 'pages')).filter(f => f.endsWith('.njk'));
     const pageData = JSON.parse(fs.readFileSync(path.join(source, 'data/pages.json'), 'utf8'));
+    const seo = JSON.parse(fs.readFileSync(path.join(source, 'data/seo.json'), 'utf8'));
     env.addGlobal('navigation', JSON.parse(fs.readFileSync(path.join(source, 'data/navigation.json'), 'utf8')));
-    const rendered = pages.map(name => [name.replace(/\.njk$/, '.html'), env.render(name, pageData[name.replace(/\.njk$/, '')] || {})]);
+    const rendered = pages.map(name => {
+        const key = name.replace(/\.njk$/, '');
+        const page = seo.pages[key];
+        if (!page) throw new Error('Missing page metadata: ' + key);
+        const metadata = { ...seo, ...page, url: new URL('pages/' + key + '.html', seo.siteUrl).href,
+            image: new URL(page.image || seo.image, seo.siteUrl).href };
+        const html = env.render(name, { ...pageData[key], metadata })
+            .replace(/<head\b[^>]*>[\s\S]*?<\/head>/, head => head.replace(/[ \t]+(?=\r?$)/gm, ''));
+        return [key + '.html', html.replace(/<title>[\s\S]*?<\/title>/, '<title>' + nunjucks.lib.escape(metadata.title) + '</title>')];
+    });
     const templates = listFiles(source).filter(file => file.endsWith('.njk'));
     const inventory = fs.readdirSync(path.join(source, 'templates/components')).map(name => ({
         template: 'templates/components/' + name,
@@ -33,11 +43,17 @@ function build() {
         fs.rmSync(output, { recursive: true });
     }
     fs.mkdirSync(path.join(output, 'pages'), { recursive: true });
-    for (const directory of ['styles', 'js', 'images', 'fonts']) {
+    for (const directory of ['styles', 'js', 'images', 'fonts', 'favicon']) {
         fs.cpSync(path.join(source, directory), path.join(output, directory), { recursive: true,
             filter: file => !file.split(path.sep).includes('check-in') });
     }
-    fs.copyFileSync(path.join(source, 'index.html'), path.join(output, 'index.html'));
+    const homeMetadata = { ...seo, ...seo.pages.index,
+        url: new URL('pages/index.html', seo.siteUrl).href,
+        image: new URL(seo.pages.index.image || seo.image, seo.siteUrl).href };
+    fs.writeFileSync(path.join(output, 'index.html'), env.renderString(
+        fs.readFileSync(path.join(source, 'index.html'), 'utf8'), { metadata: homeMetadata, assetPrefix: '' })
+        .replace(/<head\b[^>]*>[\s\S]*?<\/head>/, head => head.replace(/[ \t]+(?=\r?$)/gm, '')));
+    for (const name of ['manifest.json', 'browserconfig.xml']) fs.copyFileSync(path.join(source, name), path.join(output, name));
     for (const [name, html] of rendered) fs.writeFileSync(path.join(output, 'pages', name), require('./media.cjs').enhanceImages(html));
     console.log(`Сборка готова: ${rendered.length} страниц в dist/`);
 }

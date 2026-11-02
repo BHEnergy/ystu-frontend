@@ -4,6 +4,8 @@
 
 ## Полный комплект — ystu-frontend-N.zip
 
+В комплект также включаются корневые `favicon/`, `manifest.json` и `browserconfig.xml`. В handoff их копии находятся в `src/` и `dist/`; инструкция — `HEAD-METADATA.md`.
+
 Внутренняя корневая папка: `ystu-frontend-N/`.
 
 Включаются основные `css/`, `fonts/`, `images/`, `js/`, `pages/`, папка `project-ystu-frontend/`, корневые `README.md`, `THIRD-PARTY-NOTICES.md` и `.nojekyll`. В компонентной папке присутствуют исходники, готовая сборка, скрипты, package/lock-файлы и сопроводительные отчёты.

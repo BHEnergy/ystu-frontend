@@ -1,0 +1,37 @@
+{% set iconPrefix = assetPrefix | default("../") %}
+{% if metadata is defined %}
+    <meta name="description" content="{{ metadata.description }}">
+    <!-- schema.org -->
+    <meta itemprop="url" content="{{ metadata.url }}">
+    <meta itemprop="image" content="{{ metadata.image }}">
+    <meta itemprop="name" content="{{ metadata.title }}">
+    <meta itemprop="description" content="{{ metadata.description }}">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ metadata.url }}">
+    <meta property="og:image" content="{{ metadata.image }}">
+    <meta property="og:title" content="{{ metadata.title }}">
+    <meta property="og:description" content="{{ metadata.description }}">
+    <meta property="og:site_name" content="{{ metadata.siteName }}">
+    <meta property="og:locale" content="ru_RU">
+{% if metadata.facebookAppId %}    <meta property="fb:app_id" content="{{ metadata.facebookAppId }}">{% endif %}
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="{{ metadata.url }}">
+    <meta name="twitter:image" content="{{ metadata.image }}">
+    <meta name="twitter:title" content="{{ metadata.title }}">
+    <meta name="twitter:description" content="{{ metadata.description }}">
+{% if metadata.twitterSite %}    <meta name="twitter:site" content="{{ metadata.twitterSite }}">{% endif %}
+{% if metadata.twitterCreator %}    <meta name="twitter:creator" content="{{ metadata.twitterCreator }}">{% endif %}
+{% endif %}
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ iconPrefix }}favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ iconPrefix }}favicon/favicon-32x32.png?v=4">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ iconPrefix }}favicon/favicon-16x16.png?v=4">
+    <link rel="shortcut icon" href="{{ iconPrefix }}favicon/favicon.ico?v=4">
+{% if metadata is defined and metadata.maskIcon %}    <link rel="mask-icon" href="{{ iconPrefix }}favicon/{{ metadata.maskIcon }}" color="#2C2C2C">{% endif %}
+    <!-- Manifest -->
+    <link rel="manifest" href="{{ iconPrefix }}manifest.json">
+    <meta name="msapplication-config" content="{{ iconPrefix }}browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="theme-color" content="#FFFFFF">

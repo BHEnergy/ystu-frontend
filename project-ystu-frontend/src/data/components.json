@@ -246,6 +246,12 @@
     ]
   },
   {
+    "template": "templates/components/head-metadata.njk",
+    "usedBy": [
+      "templates/layouts/base.njk"
+    ]
+  },
+  {
     "template": "templates/components/header.njk",
     "usedBy": [
       "pages/404.njk",

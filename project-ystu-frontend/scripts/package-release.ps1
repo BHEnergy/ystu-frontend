@@ -10,6 +10,8 @@ $packages = @(
     @{ Name=("ystu-frontend-$Version.zip"); Prefix=("ystu-frontend-$Version/"); Source=$repoPath; Items=@('css','fonts','images','js','pages','project-ystu-frontend','README.md','THIRD-PARTY-NOTICES.md','.nojekyll') },
     @{ Name=("ystu-frontend-handoff-$Version.zip"); Prefix='ystu-frontend/'; Source=$projectPath; Items=@('src','dist','scripts','.gitignore','package.json','package-lock.json','README.md','INTEGRATION.md','THIRD-PARTY-NOTICES.md','TESTING-CHECKLIST.md','HANDOFF.md','AUDIT-RESPONSE-2026-10-08.md','V9-RECHECK-REPORT-2026-10-08.md','V10-FIXES-2026-10-12.md','V10-RECHECK-2026-10-12.md','RELEASE-11-REPORT.md','RELEASE-12-REPORT.md','BEHAVIOR-HOOKS.md','UI-SPRITE.md','PACKAGING.md') }
 )
+$packages[0].Items += @('favicon', 'manifest.json', 'browserconfig.xml')
+$packages[1].Items += @('HEAD-METADATA.md')
 $packages[1].Items += @('V12-FIXES-2026-10-16.md', 'RELEASE-13-REPORT.md')
 $packages[1].Items += @('V13-FIXES-2026-10-21.md', 'RELEASE-14-REPORT.md')
 $packages[1].Items += @('COMPONENTS.md', 'COMPONENT-REUSE-AUDIT-2026-10-27.md', 'COMPONENT-REUSE-FIXES-2026-10-27.md')
