@@ -1,0 +1,2712 @@
+{
+  "programCards": {
+    "programCards-1": {
+      "classes": "program-card",
+      "filters": {
+        "education_level": [
+          "bachelor"
+        ],
+        "study_form": [
+          "full_time"
+        ],
+        "financing": [
+          "budget",
+          "target",
+          "paid"
+        ],
+        "entrance_exam": [
+          "russian",
+          "mathematics",
+          "creative"
+        ]
+      },
+      "tags": [
+        {
+          "classes": "program-card__tag program-card__tag--bacalavr",
+          "text": "Бакалавриат"
+        },
+        {
+          "classes": "program-card__tag program-card__tag--outline",
+          "text": "Очно"
+        },
+        {
+          "classes": "program-card__tag program-card__tag--outline program-card__tag--accreditation",
+          "text": "Государственная аккредитация"
+        }
+      ],
+      "code": "07.03.01",
+      "title": "Архитектура",
+      "href": "program.html",
+      "profilesTitle": "Профили",
+      "profiles": [
+        "Профиль 1",
+        "Профиль 2"
+      ],
+      "stats": [
+        {
+          "label": "Бюджетные места",
+          "value": "16"
+        },
+        {
+          "label": "Целевые места",
+          "value": "16"
+        },
+        {
+          "label": "Платные места",
+          "value": "50"
+        },
+        {
+          "label": "Срок обучения",
+          "value": "5 лет"
+        }
+      ]
+    },
+    "programCards-2": {
+      "classes": "program-card",
+      "filters": {
+        "education_level": [
+          "bachelor"
+        ],
+        "study_form": [
+          "full_time"
+        ],
+        "financing": [
+          "budget",
+          "target",
+          "paid"
+        ],
+        "entrance_exam": [
+          "russian",
+          "mathematics",
+          "physics"
+        ]
+      },
+      "tags": [
+        {
+          "classes": "program-card__tag program-card__tag--bacalavr",
+          "text": "Бакалавриат"
+        },
+        {
+          "classes": "program-card__tag program-card__tag--outline",
+          "text": "Очно"
+        },
+        {
+          "classes": "program-card__tag program-card__tag--outline program-card__tag--accreditation",
+          "text": "Государственная аккредитация"
+        }
+      ],
+      "code": "07.03.01",
+      "title": "Дизайн",
+      "href": "program.html",
+      "profilesTitle": "Профили",
+      "profiles": [
+        "Профиль 1"
+      ],
+      "stats": [
+        {
+          "label": "Бюджетные места",
+          "value": "16"
+        },
+        {
+          "label": "Целевые места",
+          "value": "16"
+        },
+        {
+          "label": "Платные места",
+          "value": "50"
+        },
+        {
+          "label": "Срок обучения",
+          "value": "5 лет"
+        }
+      ]
+    },
+    "programCards-3": {
+      "classes": "program-card",
+      "filters": {
+        "education_level": [
+          "bachelor"
+        ],
+        "study_form": [
+          "full_time"
+        ],
+        "financing": [
+          "budget",
+          "target",
+          "paid"
+        ],
+        "entrance_exam": [
+          "russian",
+          "mathematics",
+          "creative"
+        ]
+      },
+      "tags": [
+        {
+          "classes": "program-card__tag program-card__tag--bacalavr",
+          "text": "Бакалавриат"
+        },
+        {
+          "classes": "program-card__tag program-card__tag--outline",
+          "text": "Очно"
+        },
+        {
+          "classes": "program-card__tag program-card__tag--outline program-card__tag--accreditation",
+          "text": "Государственная аккредитация"
+        }
+      ],
+      "code": "07.03.01",
+      "title": "Архитектура",
+      "href": "program.html",
+      "profilesTitle": "Профили",
+      "profiles": [
+        "Профиль 1",
+        "Профиль 2"
+      ],
+      "stats": [
+        {
+          "label": "Бюджетных мест",
+          "value": "16"
+        },
+        {
+          "label": "Целевых мест",
+          "value": "16"
+        },
+        {
+          "label": "Платных мест",
+          "value": "50"
+        },
+        {
+          "label": "Срок обучения",
+          "value": "5 лет"
+        }
+      ]
+    },
+    "programCards-4": {
+      "classes": "program-card",
+      "filters": {
+        "education_level": [
+          "bachelor"
+        ],
+        "study_form": [
+          "full_time"
+        ],
+        "financing": [
+          "budget",
+          "target",
+          "paid"
+        ],
+        "entrance_exam": [
+          "russian",
+          "mathematics",
+          "physics"
+        ]
+      },
+      "tags": [
+        {
+          "classes": "program-card__tag program-card__tag--bacalavr",
+          "text": "Бакалавриат"
+        },
+        {
+          "classes": "program-card__tag program-card__tag--outline",
+          "text": "Очно"
+        },
+        {
+          "classes": "program-card__tag program-card__tag--outline program-card__tag--accreditation",
+          "text": "Государственная аккредитация"
+        }
+      ],
+      "code": "07.03.01",
+      "title": "Дизайн",
+      "href": "program.html",
+      "profilesTitle": "Профили",
+      "profiles": [
+        "Профиль 1"
+      ],
+      "stats": [
+        {
+          "label": "Бюджетных мест",
+          "value": "16"
+        },
+        {
+          "label": "Целевых мест",
+          "value": "16"
+        },
+        {
+          "label": "Платных мест",
+          "value": "50"
+        },
+        {
+          "label": "Срок обучения",
+          "value": "5 лет"
+        }
+      ]
+    },
+    "programCards-5": {
+      "classes": "program-card program-card--wide",
+      "filters": {
+        "education_level": [
+          "master"
+        ],
+        "study_form": [
+          "full_time"
+        ],
+        "financing": [
+          "budget",
+          "target",
+          "paid"
+        ],
+        "entrance_exam": [
+          "russian",
+          "mathematics",
+          "physics"
+        ]
+      },
+      "tags": [
+        {
+          "classes": "program-card__tag program-card__tag--magistratura",
+          "text": "Магистратура"
+        },
+        {
+          "classes": "program-card__tag program-card__tag--outline",
+          "text": "Очно"
+        },
+        {
+          "classes": "program-card__tag program-card__tag--outline program-card__tag--accreditation",
+          "text": "Государственная аккредитация"
+        }
+      ],
+      "code": "15.04.02",
+      "title": "Технологические машины и оборудование",
+      "href": "program.html",
+      "profilesTitle": "Профили",
+      "profiles": [
+        "Профиль 1",
+        "Профиль 2",
+        "Профиль 3"
+      ],
+      "stats": [
+        {
+          "label": "Бюджетные места",
+          "value": "16"
+        },
+        {
+          "label": "Целевые места",
+          "value": "16"
+        },
+        {
+          "label": "Платные места",
+          "value": "50"
+        },
+        {
+          "label": "Срок обучения",
+          "value": "2 года"
+        }
+      ]
+    },
+    "programCards-6": {
+      "classes": "program-card program-card--wide",
+      "filters": {
+        "education_level": [
+          "master"
+        ],
+        "study_form": [
+          "full_time"
+        ],
+        "financing": [
+          "budget",
+          "target",
+          "paid"
+        ],
+        "entrance_exam": [
+          "russian",
+          "mathematics",
+          "physics"
+        ]
+      },
+      "tags": [
+        {
+          "classes": "program-card__tag program-card__tag--magistratura",
+          "text": "Магистратура"
+        },
+        {
+          "classes": "program-card__tag program-card__tag--outline",
+          "text": "Очно"
+        },
+        {
+          "classes": "program-card__tag program-card__tag--outline program-card__tag--accreditation",
+          "text": "Государственная аккредитация"
+        }
+      ],
+      "code": "15.04.02",
+      "title": "Технологические машины и оборудование",
+      "href": "program.html",
+      "profilesTitle": "Профили",
+      "profiles": [
+        "Профиль 1",
+        "Профиль 2",
+        "Профиль 3"
+      ],
+      "stats": [
+        {
+          "label": "Бюджетных мест",
+          "value": "16"
+        },
+        {
+          "label": "Целевых мест",
+          "value": "16"
+        },
+        {
+          "label": "Платных мест",
+          "value": "50"
+        },
+        {
+          "label": "Срок обучения",
+          "value": "2 года"
+        }
+      ]
+    }
+  },
+  "features": {
+    "features-1": {
+      "classes": "feature-section",
+      "title": "Проектная деятельность и предпринимательство",
+      "titleClasses": "feature-section__title projects-svg",
+      "descriptionHtml": "Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem. In malesuada vitae urna mattis tortor aenean porttitor aenean. Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem. In malesuada vitae urna mattis tortor aenean porttitor aenean..",
+      "button": {
+        "href": "#",
+        "classes": "btn btn--default btn--m",
+        "text": "Подробнее"
+      },
+      "images": [
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        },
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        },
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        },
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        }
+      ]
+    },
+    "features-2": {
+      "classes": "feature-section feature-section--reverse",
+      "title": "Творчество",
+      "titleClasses": "feature-section__title art-svg",
+      "descriptionHtml": "Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem. In malesuada vitae urna mattis tortor aenean porttitor aenean. Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem. In malesuada vitae urna mattis tortor aenean porttitor aenean..",
+      "button": {
+        "href": "#",
+        "classes": "btn btn--default btn--m",
+        "text": "Подробнее"
+      },
+      "images": [
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        },
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        },
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        },
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        }
+      ]
+    },
+    "features-3": {
+      "classes": "feature-section",
+      "title": "Спорт",
+      "titleClasses": "feature-section__title sport-svg",
+      "descriptionHtml": "Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem. In malesuada vitae urna mattis tortor aenean porttitor aenean. Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem. In malesuada vitae urna mattis tortor aenean porttitor aenean..",
+      "button": {
+        "href": "#",
+        "classes": "btn btn--default btn--m",
+        "text": "Подробнее"
+      },
+      "images": [
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        },
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        },
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        },
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        }
+      ]
+    },
+    "features-4": {
+      "classes": "feature-section feature-section--reverse",
+      "title": "Волонтерство",
+      "titleClasses": "feature-section__title volonter-svg",
+      "descriptionHtml": "Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem. In malesuada vitae urna mattis tortor aenean porttitor aenean. Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem. In malesuada vitae urna mattis tortor aenean porttitor aenean..",
+      "button": {
+        "href": "#",
+        "classes": "btn btn--default btn--m",
+        "text": "Подробнее"
+      },
+      "images": [
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        },
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        },
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        },
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        }
+      ]
+    },
+    "features-5": {
+      "classes": "feature-section",
+      "title": "Наука",
+      "titleClasses": "feature-section__title science-svg",
+      "descriptionHtml": "Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem. In malesuada vitae urna mattis tortor aenean porttitor aenean. Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem. In malesuada vitae urna mattis tortor aenean porttitor aenean..",
+      "button": {
+        "href": "#",
+        "classes": "btn btn--default btn--m",
+        "text": "Подробнее"
+      },
+      "images": [
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        },
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        },
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        },
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        }
+      ]
+    },
+    "features-6": {
+      "classes": "feature-section",
+      "title": "Проектная деятельность и предпринимательство",
+      "titleClasses": "feature-section__title projects-svg",
+      "descriptionHtml": "\n                      Lorem ipsum dolor sit amet consectetur. Eu augue fames\n                      felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec\n                      eu dui feugiat orci dui amet consectetur tortor sem. In\n                      malesuada vitae urna mattis tortor aenean porttitor\n                      aenean. Lorem ipsum dolor sit amet consectetur. Eu augue\n                      fames felis ultrices. Scelerisque ipsum nulla tempor\n                      vitae. Nec eu dui feugiat orci dui amet consectetur tortor\n                      sem. In malesuada vitae urna mattis tortor aenean\n                      porttitor aenean..\n                    ",
+      "button": {
+        "href": "#",
+        "classes": "btn btn--default btn--m",
+        "text": "Подробнее"
+      },
+      "images": [
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        },
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        },
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        },
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        }
+      ]
+    },
+    "features-7": {
+      "classes": "feature-section feature-section--reverse",
+      "title": "Творчество",
+      "titleClasses": "feature-section__title art-svg",
+      "descriptionHtml": "\n                      Lorem ipsum dolor sit amet consectetur. Eu augue fames\n                      felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec\n                      eu dui feugiat orci dui amet consectetur tortor sem. In\n                      malesuada vitae urna mattis tortor aenean porttitor\n                      aenean. Lorem ipsum dolor sit amet consectetur. Eu augue\n                      fames felis ultrices. Scelerisque ipsum nulla tempor\n                      vitae. Nec eu dui feugiat orci dui amet consectetur tortor\n                      sem. In malesuada vitae urna mattis tortor aenean\n                      porttitor aenean..\n                    ",
+      "button": {
+        "href": "#",
+        "classes": "btn btn--default btn--m",
+        "text": "Подробнее"
+      },
+      "images": [
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        },
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        },
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        },
+        {
+          "loading": "lazy",
+          "decoding": "async",
+          "src": "../images/fallback/student-life-direction.png",
+          "alt": "Посетители знакомятся с лабораторным оборудованием на выставке"
+        }
+      ]
+    }
+  },
+  "contacts": {
+    "contacts-1": {
+      "classes": "contact-section",
+      "title": "Студенческий офис",
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/admissions-map.png",
+        "alt": "Приёмная комиссия ЯГТУ на Московском проспекте, рядом с корпусом Б"
+      },
+      "groups": [
+        {
+          "title": "Адрес",
+          "modifier": "address",
+          "contentHtml": "\n                  \n                  <div class=\"contact-section__address\">150023, г. Ярославль, Московский проспект, 84, корпус «А», А-219</div>\n                "
+        },
+        {
+          "title": "Телефон",
+          "modifier": "phones",
+          "contentHtml": "\n                  \n                  <a href=\"tel:+74852441739\">+7 (4852) 44-17-39</a>\n                  <a href=\"tel:88002507677\">8-800-250-76-77</a>\n                "
+        },
+        {
+          "title": "Почта",
+          "modifier": "",
+          "contentHtml": "\n                  \n                  <a href=\"mailto:priem@ystu.ru\">priem@ystu.ru</a>\n                "
+        },
+        {
+          "title": "Часы работы",
+          "modifier": "schedule",
+          "contentHtml": "\n                  \n                  <p>Пн-Сб: 9:00 - 18:00</p>\n                  <p>Вс: выходной</p>\n                "
+        },
+        {
+          "title": "Часы работы в летний период",
+          "modifier": "schedule",
+          "contentHtml": "\n                  \n                  <p>Пн-Пт: 10:00 - 18:00</p>\n                  <p>Сб: 10:00 - 15:00</p>\n                  <p>Вс: выходной</p>\n                "
+        }
+      ]
+    },
+    "contacts-2": {
+      "classes": "contact-section contact-section--office",
+      "title": "Студенческий офис",
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/admissions-map.png",
+        "alt": "Приёмная комиссия ЯГТУ на Московском проспекте, рядом с корпусом Б"
+      },
+      "groups": [
+        {
+          "title": "Адрес",
+          "modifier": "address",
+          "contentHtml": "\n                      \n                      <div class=\"contact-section__address\">\n                        150023, г. Ярославль, Московский проспект, 84, корпус\n                        «А», А-219\n                      </div>\n                    "
+        },
+        {
+          "title": "Телефон",
+          "modifier": "phones",
+          "contentHtml": "\n                      \n                      <a href=\"tel:+74852441739\">+7 (4852) 44-17-39</a>\n                      <a href=\"tel:88002507677\">8-800-250-76-77</a>\n                    "
+        },
+        {
+          "title": "Почта",
+          "modifier": "",
+          "contentHtml": "\n                      \n                      <a href=\"mailto:priem@ystu.ru\">priem@ystu.ru</a>\n                    "
+        },
+        {
+          "title": "Часы работы",
+          "modifier": "schedule",
+          "contentHtml": "\n                      \n                      <p>Пн-Сб: 9:00 - 18:00</p>\n                      <p>Вс: выходной</p>\n                    "
+        },
+        {
+          "title": "Часы работы в летний период",
+          "modifier": "schedule",
+          "contentHtml": "\n                      \n                      <p>Пн-Пт: 10:00 - 18:00</p>\n                      <p>Сб: 10:00 - 15:00</p>\n                      <p>Вс: выходной</p>\n                    "
+        }
+      ]
+    },
+    "contacts-3": {
+      "classes": "contact-section",
+      "title": "Приёмная комиссия",
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/admissions-map.png",
+        "alt": "Приёмная комиссия ЯГТУ на Московском проспекте, рядом с корпусом Б"
+      },
+      "groups": [
+        {
+          "title": "Адрес",
+          "modifier": "address",
+          "contentHtml": "\n                  \n                  <div class=\"contact-section__address\">\n                    150023, г. Ярославль, Московский проспект, 84,\n                    корпус «А», А-219\n                  </div>\n                "
+        },
+        {
+          "title": "Телефон",
+          "modifier": "phones",
+          "contentHtml": "\n                  \n                  <a href=\"tel:+74852441739\">+7 (4852) 44-17-39</a>\n                  <a href=\"tel:88002507677\">8-800-250-76-77</a>\n                "
+        },
+        {
+          "title": "Почта",
+          "modifier": "",
+          "contentHtml": "\n                  \n                  <a href=\"mailto:priem@ystu.ru\">priem@ystu.ru</a>\n                "
+        },
+        {
+          "title": "Часы работы",
+          "modifier": "schedule",
+          "contentHtml": "\n                  \n                  <p>Пн-Сб: 9:00 - 18:00</p>\n                  <p>Вс: выходной</p>\n                "
+        },
+        {
+          "title": "Часы работы в летний период",
+          "modifier": "schedule",
+          "contentHtml": "\n                  \n                  <p>Пн-Пт: 10:00 - 18:00</p>\n                  <p>Сб: 10:00 - 15:00</p>\n                  <p>Вс: выходной</p>\n                "
+        }
+      ]
+    }
+  },
+  "journals": {
+    "journals-1": {
+      "title": "«Oт химии к технологии шаг за шагом»",
+      "expanded": false,
+      "headerClasses": "journal-card",
+      "titleClasses": "journal-card__title",
+      "image": {
+        "class": "journal-card__photo",
+        "src": "../images/fallback/journal.png",
+        "alt": "Обложка научного журнала «Теоретическая экономика», № 10 (70), 2020"
+      },
+      "columns": [
+        [
+          {
+            "label": "Год основания",
+            "value": "2020"
+          },
+          {
+            "label": "Главный редактор",
+            "value": "Федосов Сергей Викторович, доктор технических наук, академик РААСН, профессор."
+          },
+          {
+            "label": "Индексация",
+            "value": "РИНЦ"
+          },
+          {
+            "label": "Доступность",
+            "value": "Открытый доступ, издается при финансовой поддержке Университета"
+          }
+        ],
+        [
+          {
+            "label": "Лицензия",
+            "value": "Creative Commons: CC BY 4.0"
+          },
+          {
+            "label": "Периодичность выхода",
+            "value": "4 выпуска в год"
+          },
+          {
+            "label": "Рецензирование",
+            "value": "двойное слепое"
+          },
+          {
+            "label": "Язык",
+            "value": "русский, английский"
+          }
+        ]
+      ],
+      "button": {
+        "href": "#",
+        "classes": "btn btn--default btn--sm",
+        "text": "Подробнее"
+      },
+      "descriptionHtml": "\n                      <p >ISSN 2782-1919</p>\n                      <p>Рецензируемый научно-практический журнал публикует работы преподавателей и сотрудников высших учебных заведений РФ, РАН, РААСН, других исследовательских подразделений, работающих в сфере промышленного и гражданского строительства и архитектуры, в том числе в странах стран СНГ и за рубежом. Рубрики журнала: строительные конструкции, здания и сооружения; строительные материалы и изделия; проектирование и строительство дорог, метрополитенов; архитектура зданий и сооружений; творческие концепции архитектурной деятельности.</p>\n                    "
+    },
+    "journals-2": {
+      "title": "«Oт химии к технологии шаг за шагом»",
+      "expanded": false,
+      "headerClasses": "journal-card",
+      "titleClasses": "journal-card__title",
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "class": "journal-card__photo",
+        "src": "../images/fallback/journal.png",
+        "alt": "Обложка научного журнала «Теоретическая экономика», № 10 (70), 2020"
+      },
+      "columns": [
+        [
+          {
+            "label": "Год основания",
+            "value": "2020"
+          },
+          {
+            "label": "Главный редактор",
+            "value": "Федосов Сергей Викторович, доктор технических наук, академик РААСН, профессор."
+          },
+          {
+            "label": "Индексация",
+            "value": "РИНЦ"
+          },
+          {
+            "label": "Доступность",
+            "value": "Открытый доступ, издается при финансовой поддержке Университета"
+          }
+        ],
+        [
+          {
+            "label": "Лицензия",
+            "value": "Creative Commons: CC BY 4.0"
+          },
+          {
+            "label": "Периодичность выхода",
+            "value": "4 выпуска в год"
+          },
+          {
+            "label": "Рецензирование",
+            "value": "двойное слепое"
+          },
+          {
+            "label": "Язык",
+            "value": "русский, английский"
+          }
+        ]
+      ],
+      "button": {
+        "href": "#",
+        "classes": "btn btn--default btn--sm",
+        "text": "Подробнее"
+      },
+      "descriptionHtml": "\n                          <p >ISSN 2782-1919</p>\n                          <p>\n                            Рецензируемый научно-практический журнал публикует\n                            работы преподавателей и сотрудников высших учебных\n                            заведений РФ, РАН, РААСН, других исследовательских\n                            подразделений, работающих в сфере промышленного и\n                            гражданского строительства и архитектуры, в том\n                            числе в странах стран СНГ и за рубежом. Рубрики\n                            журнала: строительные конструкции, здания и\n                            сооружения; строительные материалы и изделия;\n                            проектирование и строительство дорог,\n                            метрополитенов; архитектура зданий и сооружений;\n                            творческие концепции архитектурной деятельности.\n                          </p>\n                        "
+    },
+    "journals-3": {
+      "title": "Журнал «Journal of regional and international competitiveness»",
+      "expanded": false,
+      "headerClasses": "journal-card",
+      "titleClasses": "journal-card__title",
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "class": "journal-card__photo",
+        "src": "../images/fallback/journal.png",
+        "alt": "Обложка научного журнала «Теоретическая экономика», № 10 (70), 2020"
+      },
+      "columns": [
+        [
+          {
+            "label": "Год основания",
+            "value": "2020"
+          },
+          {
+            "label": "Главный редактор",
+            "value": "Федосов Сергей Викторович, доктор технических наук, академик РААСН, профессор."
+          },
+          {
+            "label": "Индексация",
+            "value": "РИНЦ"
+          },
+          {
+            "label": "Доступность",
+            "value": "Открытый доступ, издается при финансовой поддержке Университета"
+          }
+        ],
+        [
+          {
+            "label": "Лицензия",
+            "value": "Creative Commons: CC BY 4.0"
+          },
+          {
+            "label": "Периодичность выхода",
+            "value": "4 выпуска в год"
+          },
+          {
+            "label": "Рецензирование",
+            "value": "двойное слепое"
+          },
+          {
+            "label": "Язык",
+            "value": "русский, английский"
+          }
+        ]
+      ],
+      "button": {
+        "href": "#",
+        "classes": "btn btn--default btn--sm",
+        "text": "Подробнее"
+      },
+      "descriptionHtml": "\n                      <p >ISSN 2782-1919</p>\n                      <p>Рецензируемый научно-практический журнал публикует работы преподавателей и сотрудников высших учебных заведений РФ, РАН, РААСН, других исследовательских подразделений, работающих в сфере промышленного и гражданского строительства и архитектуры, в том числе в странах стран СНГ и за рубежом. Рубрики журнала: строительные конструкции, здания и сооружения; строительные материалы и изделия; проектирование и строительство дорог, метрополитенов; архитектура зданий и сооружений; творческие концепции архитектурной деятельности.</p>\n                    "
+    },
+    "journals-4": {
+      "title": "Журнал: «Теоретическая экономика»",
+      "expanded": true,
+      "headerClasses": "journal-card",
+      "titleClasses": "journal-card__title",
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "class": "journal-card__photo",
+        "src": "../images/fallback/journal.png",
+        "alt": "Обложка научного журнала «Теоретическая экономика», № 10 (70), 2020"
+      },
+      "columns": [
+        [
+          {
+            "label": "Год основания",
+            "value": "2020"
+          },
+          {
+            "label": "Главный редактор",
+            "value": "Федосов Сергей Викторович, доктор технических наук, академик РААСН, профессор."
+          },
+          {
+            "label": "Индексация",
+            "value": "РИНЦ"
+          },
+          {
+            "label": "Доступность",
+            "value": "Открытый доступ, издается при финансовой поддержке Университета"
+          }
+        ],
+        [
+          {
+            "label": "Лицензия",
+            "value": "Creative Commons: CC BY 4.0"
+          },
+          {
+            "label": "Периодичность выхода",
+            "value": "4 выпуска в год"
+          },
+          {
+            "label": "Рецензирование",
+            "value": "двойное слепое"
+          },
+          {
+            "label": "Язык",
+            "value": "русский, английский"
+          }
+        ]
+      ],
+      "button": {
+        "href": "#",
+        "classes": "btn btn--default btn--sm",
+        "text": "Подробнее"
+      },
+      "descriptionHtml": "\n                      <p class = \"journal-card__code\">ISSN 2782-1919</p>\n                      <p>Рецензируемый научно-практический журнал публикует работы преподавателей и сотрудников высших учебных заведений РФ, РАН, РААСН, других исследовательских подразделений, работающих в сфере промышленного и гражданского строительства и архитектуры, в том числе в странах стран СНГ и за рубежом. Рубрики журнала: строительные конструкции, здания и сооружения; строительные материалы и изделия; проектирование и строительство дорог, метрополитенов; архитектура зданий и сооружений; творческие концепции архитектурной деятельности.</p>\n                    "
+    },
+    "journals-5": {
+      "title": "Журнал: «Умные композиты в строительстве Smart Composite in Construction»",
+      "expanded": false,
+      "headerClasses": "journal-card",
+      "titleClasses": "journal-card__title",
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "class": "journal-card__photo",
+        "src": "../images/fallback/journal.png",
+        "alt": "Обложка научного журнала «Теоретическая экономика», № 10 (70), 2020"
+      },
+      "columns": [
+        [
+          {
+            "label": "Год основания",
+            "value": "2020"
+          },
+          {
+            "label": "Главный редактор",
+            "value": "Федосов Сергей Викторович, доктор технических наук, академик РААСН, профессор."
+          },
+          {
+            "label": "Индексация",
+            "value": "РИНЦ"
+          },
+          {
+            "label": "Доступность",
+            "value": "Открытый доступ, издается при финансовой поддержке Университета"
+          }
+        ],
+        [
+          {
+            "label": "Лицензия",
+            "value": "Creative Commons: CC BY 4.0"
+          },
+          {
+            "label": "Периодичность выхода",
+            "value": "4 выпуска в год"
+          },
+          {
+            "label": "Рецензирование",
+            "value": "двойное слепое"
+          },
+          {
+            "label": "Язык",
+            "value": "русский, английский"
+          }
+        ]
+      ],
+      "button": {
+        "href": "#",
+        "classes": "btn btn--default btn--sm",
+        "text": "Подробнее"
+      },
+      "descriptionHtml": "\n                      <p >ISSN 2782-1919</p>\n                      <p>Рецензируемый научно-практический журнал публикует работы преподавателей и сотрудников высших учебных заведений РФ, РАН, РААСН, других исследовательских подразделений, работающих в сфере промышленного и гражданского строительства и архитектуры, в том числе в странах стран СНГ и за рубежом. Рубрики журнала: строительные конструкции, здания и сооружения; строительные материалы и изделия; проектирование и строительство дорог, метрополитенов; архитектура зданий и сооружений; творческие концепции архитектурной деятельности.</p>\n                    "
+    }
+  },
+  "filters": {
+    "filters-1": {
+      "title": "основа обучения",
+      "titleTag": "div",
+      "options": [
+        {
+          "text": "Бюджетные места",
+          "type": "checkbox",
+          "name": "financing[]",
+          "value": "budget",
+          "checked": false
+        },
+        {
+          "text": "Целевые места",
+          "type": "checkbox",
+          "name": "financing[]",
+          "value": "target",
+          "checked": false
+        },
+        {
+          "text": "Платные места",
+          "type": "checkbox",
+          "name": "financing[]",
+          "value": "paid",
+          "checked": false
+        }
+      ]
+    },
+    "filters-2": {
+      "title": "основа обучения",
+      "titleTag": "div",
+      "options": [
+        {
+          "text": "Бюджет",
+          "type": "checkbox",
+          "name": "financing[]",
+          "value": "budget",
+          "checked": false
+        },
+        {
+          "text": "Целевое",
+          "type": "checkbox",
+          "name": "financing[]",
+          "value": "target",
+          "checked": false
+        },
+        {
+          "text": "Платное",
+          "type": "checkbox",
+          "name": "financing[]",
+          "value": "paid",
+          "checked": false
+        }
+      ]
+    },
+    "filters-3": {
+      "title": "категория",
+      "titleTag": "p",
+      "options": [
+        {
+          "text": "Научно-педагогические работники",
+          "type": "checkbox",
+          "name": "category[]",
+          "value": "academic",
+          "checked": false
+        },
+        {
+          "text": "Административный персонал",
+          "type": "checkbox",
+          "name": "category[]",
+          "value": "administrative",
+          "checked": true
+        }
+      ]
+    },
+    "filters-4": {
+      "title": "тип занятости",
+      "titleTag": "p",
+      "options": [
+        {
+          "text": "полная",
+          "type": "checkbox",
+          "name": "employment[]",
+          "value": "full",
+          "checked": true
+        },
+        {
+          "text": "частичная",
+          "type": "checkbox",
+          "name": "employment[]",
+          "value": "part",
+          "checked": false
+        },
+        {
+          "text": "стажировка",
+          "type": "checkbox",
+          "name": "employment[]",
+          "value": "internship",
+          "checked": false
+        }
+      ]
+    },
+    "filters-5": {
+      "title": "формат работы",
+      "titleTag": "p",
+      "options": [
+        {
+          "text": "Офис",
+          "type": "checkbox",
+          "name": "work_format[]",
+          "value": "office",
+          "checked": false
+        },
+        {
+          "text": "Гибрид",
+          "type": "checkbox",
+          "name": "work_format[]",
+          "value": "hybrid",
+          "checked": false
+        },
+        {
+          "text": "Удалённо",
+          "type": "checkbox",
+          "name": "work_format[]",
+          "value": "remote",
+          "checked": false
+        }
+      ]
+    },
+    "filters-6": {
+      "title": "уровень образования",
+      "titleTag": "div",
+      "options": [
+        {
+          "text": "Бакалавриат",
+          "type": "checkbox",
+          "name": "education_level[]",
+          "value": "bachelor",
+          "checked": false
+        },
+        {
+          "text": "Специалитет",
+          "type": "checkbox",
+          "name": "education_level[]",
+          "value": "specialist",
+          "checked": false
+        },
+        {
+          "text": "Магистратура",
+          "type": "checkbox",
+          "name": "education_level[]",
+          "value": "master",
+          "checked": true
+        }
+      ]
+    },
+    "filters-7": {
+      "title": "форма обучения",
+      "titleTag": "div",
+      "options": [
+        {
+          "text": "Очная",
+          "type": "checkbox",
+          "name": "study_form[]",
+          "value": "full_time",
+          "checked": true
+        },
+        {
+          "text": "Заочная",
+          "type": "checkbox",
+          "name": "study_form[]",
+          "value": "extramural",
+          "checked": false
+        },
+        {
+          "text": "Очно-заочная",
+          "type": "checkbox",
+          "name": "study_form[]",
+          "value": "part_time",
+          "checked": false
+        }
+      ]
+    },
+    "filters-8": {
+      "title": "опыт работы",
+      "titleTag": "p",
+      "options": [
+        {
+          "text": "без опыта",
+          "type": "radio",
+          "name": "experience",
+          "value": "none",
+          "checked": false
+        },
+        {
+          "text": "от 1 года",
+          "type": "radio",
+          "name": "experience",
+          "value": "1-plus",
+          "checked": true
+        },
+        {
+          "text": "от 3 до 6 лет",
+          "type": "radio",
+          "name": "experience",
+          "value": "3-6",
+          "checked": false
+        },
+        {
+          "text": "более 6 лет",
+          "type": "radio",
+          "name": "experience",
+          "value": "6-plus",
+          "checked": false
+        }
+      ]
+    },
+    "filters-9": {
+      "title": "вступительные испытания",
+      "titleTag": "div",
+      "options": [
+        {
+          "text": "Русский язык",
+          "type": "checkbox",
+          "name": "entrance_exam[]",
+          "value": "russian",
+          "checked": true
+        },
+        {
+          "text": "Математика",
+          "type": "checkbox",
+          "name": "entrance_exam[]",
+          "value": "mathematics",
+          "checked": true
+        },
+        {
+          "text": "Физика",
+          "type": "checkbox",
+          "name": "entrance_exam[]",
+          "value": "physics",
+          "checked": false
+        },
+        {
+          "text": "Обществознание",
+          "type": "checkbox",
+          "name": "entrance_exam[]",
+          "value": "social_studies",
+          "checked": false
+        },
+        {
+          "text": "История",
+          "type": "checkbox",
+          "name": "entrance_exam[]",
+          "value": "history",
+          "checked": true
+        },
+        {
+          "text": "Информатика",
+          "type": "checkbox",
+          "name": "entrance_exam[]",
+          "value": "informatics",
+          "checked": false
+        },
+        {
+          "text": "Иностранный язык",
+          "type": "checkbox",
+          "name": "entrance_exam[]",
+          "value": "foreign_language",
+          "checked": false
+        },
+        {
+          "text": "Химия",
+          "type": "checkbox",
+          "name": "entrance_exam[]",
+          "value": "chemistry",
+          "checked": false
+        },
+        {
+          "text": "География",
+          "type": "checkbox",
+          "name": "entrance_exam[]",
+          "value": "geography",
+          "checked": false
+        },
+        {
+          "text": "Творческое испытание",
+          "type": "checkbox",
+          "name": "entrance_exam[]",
+          "value": "creative",
+          "checked": false
+        }
+      ]
+    }
+  },
+  "metrics": {
+    "metrics-1": {
+      "label": "Русский язык (ЕГЭ)",
+      "value": "40"
+    },
+    "metrics-2": {
+      "label": "Профильная математика (ЕГЭ)",
+      "value": "40"
+    },
+    "metrics-3": {
+      "label": "Композиция в графике (ДВИ)",
+      "value": "40"
+    },
+    "metrics-4": {
+      "label": "Рисунок (ДВИ)",
+      "value": "40"
+    }
+  },
+  "campusFilters": {
+    "campusFilters-1": {
+      "classes": "campus-filter campus-filter--department",
+      "type": "department",
+      "label": "выбрать подразделение",
+      "panelClasses": "campus-filter__panel campus-filter__panel--grouped",
+      "items": [
+        {
+          "type": "p",
+          "value": "",
+          "contentHtml": "Институты"
+        },
+        {
+          "type": "button",
+          "value": "institute-1",
+          "contentHtml": "Институт 1"
+        },
+        {
+          "type": "button",
+          "value": "institute-2",
+          "contentHtml": "Институт 2"
+        },
+        {
+          "type": "button",
+          "value": "institute-3",
+          "contentHtml": "Институт 3"
+        },
+        {
+          "type": "button",
+          "value": "institute-4",
+          "contentHtml": "Институт 4"
+        },
+        {
+          "type": "button",
+          "value": "institute-5",
+          "contentHtml": "Институт 5"
+        },
+        {
+          "type": "button",
+          "value": "institute-6",
+          "contentHtml": "Институт 6"
+        },
+        {
+          "type": "button",
+          "value": "institute-7",
+          "contentHtml": "Институт 7"
+        },
+        {
+          "type": "button",
+          "value": "institute-8",
+          "contentHtml": "Институт 8"
+        },
+        {
+          "type": "button",
+          "value": "institute-9",
+          "contentHtml": "Институт 9"
+        },
+        {
+          "type": "p",
+          "value": "",
+          "contentHtml": "Кафедры"
+        },
+        {
+          "type": "button",
+          "value": "department-1",
+          "contentHtml": "Кафедра 1"
+        },
+        {
+          "type": "button",
+          "value": "department-2",
+          "contentHtml": "Кафедра 2"
+        },
+        {
+          "type": "button",
+          "value": "department-3",
+          "contentHtml": "Кафедра 3"
+        },
+        {
+          "type": "p",
+          "value": "",
+          "contentHtml": "Службы и отделы"
+        },
+        {
+          "type": "button",
+          "value": "service-1",
+          "contentHtml": "1"
+        },
+        {
+          "type": "button",
+          "value": "service-2",
+          "contentHtml": "2"
+        },
+        {
+          "type": "button",
+          "value": "service-3",
+          "contentHtml": "3"
+        }
+      ]
+    },
+    "campusFilters-2": {
+      "classes": "campus-filter campus-filter--object",
+      "type": "category",
+      "label": "выбрать объект",
+      "panelClasses": "campus-filter__panel",
+      "items": [
+        {
+          "type": "button",
+          "value": "admissions",
+          "contentHtml": "<img src=\"../images/svg/campus-admissions.svg\" alt=\"\" />Приемная комиссия"
+        },
+        {
+          "type": "button",
+          "value": "administration",
+          "contentHtml": "<img src=\"../images/svg/campus-administration.svg\" alt=\"\" />Администрация"
+        },
+        {
+          "type": "button",
+          "value": "food",
+          "contentHtml": "<img src=\"../images/svg/campus-food.svg\" alt=\"\" />Объекты питания"
+        },
+        {
+          "type": "button",
+          "value": "education",
+          "contentHtml": "<img src=\"../images/svg/campus-school.svg\" alt=\"\" />Учебные корпуса"
+        },
+        {
+          "type": "button",
+          "value": "dormitory",
+          "contentHtml": "<img src=\"../images/svg/campus-dormitory.svg\" alt=\"\" />Общежития"
+        },
+        {
+          "type": "button",
+          "value": "sport",
+          "contentHtml": "<img src=\"../images/svg/campus-sport.svg\" alt=\"\" />Спорт"
+        },
+        {
+          "type": "button",
+          "value": "driving",
+          "contentHtml": "<img src=\"../images/svg/campus-driving.svg\" alt=\"\" />Автодром"
+        },
+        {
+          "type": "button",
+          "value": "laboratory",
+          "contentHtml": "<img src=\"../images/svg/campus-lab.svg\" alt=\"\" />Лаборатории"
+        },
+        {
+          "type": "button",
+          "value": "military",
+          "contentHtml": "<img src=\"../images/svg/campus-military.svg\" alt=\"\" />Военный учебный центр"
+        },
+        {
+          "type": "button",
+          "value": "library",
+          "contentHtml": "<img src=\"../images/svg/campus-library.svg\" alt=\"\" />Библиотека"
+        }
+      ]
+    }
+  },
+  "searches": {
+    "searches-1": {
+      "form": false,
+      "caption": "найти направление",
+      "placeholder": "",
+      "label": "Найти вакансию",
+      "name": "query"
+    },
+    "searches-2": {
+      "form": true,
+      "caption": "",
+      "placeholder": "найти вакансию",
+      "label": "Найти вакансию",
+      "name": "query"
+    },
+    "searches-3": {
+      "form": false,
+      "caption": "найти направление",
+      "placeholder": "",
+      "label": "Найти направление",
+      "name": "query"
+    },
+    "searches-4": {
+      "form": true,
+      "caption": "",
+      "placeholder": "найти направление",
+      "label": "Найти направление",
+      "name": "query"
+    }
+  },
+  "actions": {
+    "actions-1": {
+      "classes": "btn btn--default btn--m catalog-filters__apply",
+      "label": "Применить",
+      "href": "",
+      "type": "submit",
+      "modal": "",
+      "ui": ""
+    },
+    "actions-2": {
+      "classes": "btn btn--link btn--white",
+      "label": "Подробнее",
+      "href": "news-events.html",
+      "type": "",
+      "modal": "",
+      "ui": ""
+    },
+    "actions-3": {
+      "classes": "btn btn--link btn--blue button-modal",
+      "label": "Зарегистрироваться",
+      "href": "",
+      "type": "button",
+      "modal": "event",
+      "ui": "button-modal"
+    }
+  },
+  "news": {
+    "news-1": {
+      "href": "#",
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/banner-news.png",
+        "alt": "Студенты с табличкой Ярославского государственного технического университета"
+      },
+      "date": "26.02.2026",
+      "title": "Международная научно-практическая конференция «Экологическая безопасность водных объектов»",
+      "tags": [
+        "приемная кампания",
+        "поступающим"
+      ]
+    },
+    "news-2": {
+      "href": "#",
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/banner-news.png",
+        "alt": "Студенты с табличкой Ярославского государственного технического университета"
+      },
+      "date": "26.02.2026",
+      "title": "Социологическй опрос «Приоритет 2030»",
+      "tags": [
+        "приемная кампания",
+        "поступающим"
+      ]
+    },
+    "news-3": {
+      "href": "#",
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/banner-news.png",
+        "alt": "Студенты с табличкой Ярославского государственного технического университета"
+      },
+      "date": "26.02.2026",
+      "title": "Максим Татаров встретилсясо студентами Института экономики и менеджмента",
+      "tags": [
+        "приемная кампания",
+        "поступающим"
+      ],
+      "titleHtml": "Максим Татаров встретился <br />со студентами\r\n                            Института экономики и менеджмента"
+    },
+    "news-4": {
+      "href": "news-events.html",
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/banner-news.png",
+        "alt": "Студенты с табличкой Ярославского государственного технического университета"
+      },
+      "date": "26.02.2026",
+      "title": "Международная научно-практическая конференция «Экологическая безопасность водных объектов»",
+      "tags": [
+        "приемная кампания",
+        "поступающим"
+      ]
+    },
+    "news-5": {
+      "href": "news-events.html",
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/banner-news.png",
+        "alt": "Студенты с табличкой Ярославского государственного технического университета"
+      },
+      "date": "26.02.2026",
+      "title": "Социологическй опрос «Приоритет 2030»",
+      "tags": [
+        "приемная кампания",
+        "поступающим"
+      ]
+    },
+    "news-6": {
+      "href": "news-events.html",
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/banner-news.png",
+        "alt": "Студенты с табличкой Ярославского государственного технического университета"
+      },
+      "date": "26.02.2026",
+      "title": "Максим Татаров встретилсясо студентами Института экономики и менеджмента",
+      "tags": [
+        "приемная кампания",
+        "поступающим"
+      ],
+      "titleHtml": "Максим Татаров встретился <br />со студентами\r\n                            Института экономики и менеджмента"
+    },
+    "news-7": {
+      "href": "#",
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/banner-news.png",
+        "alt": "Студенты с табличкой Ярославского государственного технического университета"
+      },
+      "date": "08.10.2026",
+      "title": "",
+      "tags": []
+    }
+  },
+  "events": {
+    "events-1": {
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/banner1.png",
+        "alt": "Выступление с презентацией анализа 3D-сканов деталей"
+      },
+      "title": "Международная научно-практическая конференция «Экологическая безопасность водных объектов»",
+      "date": "1-3 июля 2026",
+      "time": "с 11:00 до 16:00",
+      "location": "Точка кипения",
+      "register": {
+        "classes": "btn btn--link btn--blue button-modal",
+        "label": "Зарегистрироваться",
+        "type": "button",
+        "modal": "event",
+        "ui": "button-modal"
+      },
+      "details": {
+        "classes": "btn btn--link btn--white",
+        "label": "Подробнее",
+        "href": "news-events.html"
+      },
+      "tags": [
+        "10-11 класс",
+        "Онлайн"
+      ]
+    },
+    "events-2": {
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/banner1.png",
+        "alt": "Выступление с презентацией анализа 3D-сканов деталей"
+      },
+      "title": "Исторический квиз \"Я помню! Я горжусь!\"",
+      "date": "1-3 июля 2026",
+      "time": "с 11:00 до 16:00",
+      "location": "Точка кипения",
+      "register": {
+        "classes": "btn btn--link btn--blue button-modal",
+        "label": "Зарегистрироваться",
+        "type": "button",
+        "modal": "event",
+        "ui": "button-modal"
+      },
+      "details": {
+        "classes": "btn btn--link btn--white",
+        "label": "Подробнее",
+        "href": "news-events.html"
+      },
+      "tags": [
+        "10-11 класс",
+        "Онлайн"
+      ]
+    },
+    "events-3": {
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/banner1.png",
+        "alt": "Выступление с презентацией анализа 3D-сканов деталей"
+      },
+      "title": "Акселератор «ПолиТех.Индустрия 5.0»",
+      "date": "1-3 июля 2026",
+      "time": "с 11:00 до 16:00",
+      "location": "Точка кипения",
+      "register": {
+        "classes": "btn btn--link btn--blue button-modal",
+        "label": "Зарегистрироваться",
+        "type": "button",
+        "modal": "event",
+        "ui": "button-modal"
+      },
+      "details": {
+        "classes": "btn btn--link btn--white",
+        "label": "Подробнее",
+        "href": "news-events.html"
+      },
+      "tags": [
+        "10-11 класс",
+        "Онлайн"
+      ]
+    },
+    "events-4": {
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/banner1.png",
+        "alt": "Выступление с презентацией анализа 3D-сканов деталей"
+      },
+      "title": "Международная научно-практическая конференция «Экологическая безопасность водных объектов»",
+      "date": "1-3 июля 2026",
+      "time": "с 11:00 до 16:00",
+      "location": "Точка кипения",
+      "register": {
+        "classes": "btn btn--link btn--blue button-modal",
+        "label": "Зарегистрироваться",
+        "type": "button",
+        "modal": "event",
+        "ui": "button-modal"
+      },
+      "details": {
+        "classes": "btn btn--link btn--white",
+        "label": "Подробнее",
+        "href": "#"
+      },
+      "tags": [
+        "10-11 класс",
+        "Онлайн"
+      ]
+    },
+    "events-5": {
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/banner1.png",
+        "alt": "Выступление с презентацией анализа 3D-сканов деталей"
+      },
+      "title": "Исторический квиз \"Я помню! Я горжусь!\"",
+      "date": "1-3 июля 2026",
+      "time": "с 11:00 до 16:00",
+      "location": "Точка кипения",
+      "register": {
+        "classes": "btn btn--link btn--blue button-modal",
+        "label": "Зарегистрироваться",
+        "type": "button",
+        "modal": "event",
+        "ui": "button-modal"
+      },
+      "details": {
+        "classes": "btn btn--link btn--white",
+        "label": "Подробнее",
+        "href": "#"
+      },
+      "tags": [
+        "10-11 класс",
+        "Онлайн"
+      ]
+    },
+    "events-6": {
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/banner1.png",
+        "alt": "Выступление с презентацией анализа 3D-сканов деталей"
+      },
+      "title": "Акселератор «ПолиТех.Индустрия 5.0»",
+      "date": "1-3 июля 2026",
+      "time": "с 11:00 до 16:00",
+      "location": "Точка кипения",
+      "register": {
+        "classes": "btn btn--link btn--blue button-modal",
+        "label": "Зарегистрироваться",
+        "type": "button",
+        "modal": "event",
+        "ui": "button-modal"
+      },
+      "details": {
+        "classes": "btn btn--link btn--white",
+        "label": "Подробнее",
+        "href": "#"
+      },
+      "tags": [
+        "10-11 класс",
+        "Онлайн"
+      ]
+    },
+    "events-7": {
+      "image": {
+        "src": "../images/fallback/banner1.png",
+        "alt": "Выступление с презентацией анализа 3D-сканов деталей"
+      },
+      "title": "Акселератор «ПолиТех.Индустрия 5.0»",
+      "date": "1-3 июля 2026",
+      "time": "с 11:00 до 16:00",
+      "location": "Точка кипения",
+      "register": {
+        "classes": "btn btn--link btn--blue button-modal",
+        "label": "Зарегистрироваться",
+        "type": "button",
+        "modal": "event",
+        "ui": "button-modal"
+      },
+      "details": {
+        "classes": "btn btn--link btn--white",
+        "label": "Подробнее",
+        "href": "#"
+      },
+      "tags": [
+        "10-11 класс",
+        "Онлайн"
+      ]
+    },
+    "events-8": {
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/banner1.png",
+        "alt": "Выступление с презентацией анализа 3D-сканов деталей"
+      },
+      "title": "Международная научно-практическая конференция «Экологическая безопасность водных объектов»",
+      "date": "1-3 июля 2026",
+      "time": "с 11:00 до 16:00",
+      "location": "Точка кипения",
+      "register": {
+        "classes": "btn btn--link btn--blue button-modal",
+        "label": "Зарегистрироваться",
+        "href": "",
+        "type": "button",
+        "modal": "event",
+        "ui": "button-modal"
+      },
+      "details": {
+        "classes": "btn btn--link btn--white",
+        "label": "Подробнее",
+        "href": "news-events.html",
+        "type": "",
+        "modal": "",
+        "ui": ""
+      },
+      "tags": [
+        "10-11 класс",
+        "Онлайн"
+      ]
+    },
+    "events-9": {
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/banner1.png",
+        "alt": "Выступление с презентацией анализа 3D-сканов деталей"
+      },
+      "title": "Исторический квиз \"Я помню! Я горжусь!\"",
+      "date": "1-3 июля 2026",
+      "time": "с 11:00 до 16:00",
+      "location": "Точка кипения",
+      "register": {
+        "classes": "btn btn--link btn--blue button-modal",
+        "label": "Зарегистрироваться",
+        "href": "",
+        "type": "button",
+        "modal": "event",
+        "ui": "button-modal"
+      },
+      "details": {
+        "classes": "btn btn--link btn--white",
+        "label": "Подробнее",
+        "href": "news-events.html",
+        "type": "",
+        "modal": "",
+        "ui": ""
+      },
+      "tags": [
+        "10-11 класс",
+        "Онлайн"
+      ]
+    },
+    "events-10": {
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/banner1.png",
+        "alt": "Выступление с презентацией анализа 3D-сканов деталей"
+      },
+      "title": "Акселератор «ПолиТех.Индустрия 5.0»",
+      "date": "1-3 июля 2026",
+      "time": "с 11:00 до 16:00",
+      "location": "Точка кипения",
+      "register": {
+        "classes": "btn btn--link btn--blue button-modal",
+        "label": "Зарегистрироваться",
+        "href": "",
+        "type": "button",
+        "modal": "event",
+        "ui": "button-modal"
+      },
+      "details": {
+        "classes": "btn btn--link btn--white",
+        "label": "Подробнее",
+        "href": "news-events.html",
+        "type": "",
+        "modal": "",
+        "ui": ""
+      },
+      "tags": [
+        "10-11 класс",
+        "Онлайн"
+      ]
+    },
+    "events-11": {
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/banner1.png",
+        "alt": "Выступление с презентацией анализа 3D-сканов деталей"
+      },
+      "title": "",
+      "date": "15 октября 2026",
+      "time": "с 12:00 до 15:00",
+      "location": "Точка кипения",
+      "register": {
+        "classes": "btn btn--link btn--blue button-modal",
+        "label": "Зарегистрироваться",
+        "type": "button",
+        "modal": "event",
+        "ui": "button-modal"
+      },
+      "details": {
+        "classes": "btn btn--link btn--white",
+        "label": "Подробнее",
+        "href": "#"
+      },
+      "tags": [
+        "10-11 класс",
+        "Очно"
+      ]
+    }
+  },
+  "vacancies": {
+    "vacancies-1": {
+      "filters": {
+        "category": [
+          "administrative"
+        ],
+        "experience": [
+          "1-plus"
+        ],
+        "employment": [
+          "full"
+        ],
+        "work_format": [
+          "office"
+        ]
+      },
+      "pattern": {
+        "class": "vacancy-card__pattern",
+        "src": "../images/svg/vacancy-pattern.svg",
+        "alt": ""
+      },
+      "title": "Инженер-конструктор",
+      "category": "Административный персонал",
+      "description": "Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem.",
+      "button": {
+        "classes": "btn btn--default btn--m vacancy-card__button",
+        "href": "detail-vacancy.html",
+        "label": "Подробнее"
+      }
+    },
+    "vacancies-2": {
+      "filters": {
+        "category": [
+          "administrative"
+        ],
+        "experience": [
+          "1-plus"
+        ],
+        "employment": [
+          "full"
+        ],
+        "work_format": [
+          "office"
+        ]
+      },
+      "pattern": {
+        "class": "vacancy-card__pattern",
+        "src": "../images/svg/vacancy-pattern.svg",
+        "alt": ""
+      },
+      "title": "Инженер-техник",
+      "category": "Административный персонал",
+      "description": "Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem.",
+      "button": {
+        "classes": "btn btn--default btn--m vacancy-card__button",
+        "href": "detail-vacancy.html",
+        "label": "Подробнее"
+      }
+    },
+    "vacancies-3": {
+      "filters": {
+        "category": [
+          "administrative"
+        ],
+        "experience": [
+          "1-plus"
+        ],
+        "employment": [
+          "full"
+        ],
+        "work_format": [
+          "office"
+        ]
+      },
+      "pattern": {
+        "class": "vacancy-card__pattern",
+        "src": "../images/svg/vacancy-pattern.svg",
+        "alt": ""
+      },
+      "title": "Документовед",
+      "category": "Административный персонал",
+      "description": "Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem.",
+      "button": {
+        "classes": "btn btn--default btn--m vacancy-card__button",
+        "href": "detail-vacancy.html",
+        "label": "Подробнее"
+      }
+    }
+  },
+  "people": {
+    "people-1": {
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/stepanova.png",
+        "alt": "Степанова Елена Олеговна"
+      },
+      "name": "Степанова Елена Олеговна",
+      "role": "Ректор, к.э.н., доцент",
+      "href": "",
+      "contacts": [
+        {
+          "label": "Адрес",
+          "values": [
+            {
+              "text": "Ярославль, Московский пр., д. 88, каб. Г-401",
+              "href": ""
+            }
+          ]
+        },
+        {
+          "label": "Телефон",
+          "values": [
+            {
+              "text": "+7 (4852) 44-15-30",
+              "href": "tel:+74852441530"
+            }
+          ]
+        },
+        {
+          "label": "Почта",
+          "values": [
+            {
+              "text": "rector@ystu.ru",
+              "href": "mailto:rector@ystu.ru"
+            }
+          ]
+        }
+      ]
+    },
+    "people-2": {
+      "image": {
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/structure-employee.png",
+        "alt": "Наумов Денис Владимирович"
+      },
+      "name": "Наумов Денис Владимирович",
+      "role": "Первый проректор, к.т.н., доцент",
+      "href": "",
+      "contacts": [
+        {
+          "label": "Адрес",
+          "values": [
+            {
+              "text": "Ярославль, Московский пр., д. 88, каб. Г-401",
+              "href": ""
+            }
+          ]
+        },
+        {
+          "label": "Телефон",
+          "values": [
+            {
+              "text": "+7 (4852) 44-15-30",
+              "href": "tel:+74852441530"
+            }
+          ]
+        },
+        {
+          "label": "Почта",
+          "values": [
+            {
+              "text": "rector@ystu.ru",
+              "href": "mailto:rector@ystu.ru"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "contactCards": {
+    "contactCards-1": {
+      "groups": [
+        {
+          "label": "Адрес",
+          "values": [
+            {
+              "text": "150023, Ярославская область, г. Ярославль, Московский просп., д. 88, корпус «Г», 4 этаж",
+              "href": ""
+            }
+          ]
+        },
+        {
+          "label": "Телефон",
+          "values": [
+            {
+              "text": "+7 (4852) 44-15-30",
+              "href": "tel:+74852441530"
+            }
+          ]
+        },
+        {
+          "label": "Почта",
+          "values": [
+            {
+              "text": "info@ystu.ru",
+              "href": "mailto:info@ystu.ru"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "departments": {
+    "departments-1": {
+      "category": "",
+      "href": "#",
+      "titleHtml": "\n                      Институт базовой инженерной подготовки\n                    ",
+      "badges": [
+        {
+          "classes": "education-badge",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-2": {
+      "category": "",
+      "href": "#",
+      "titleHtml": "\n                      Институт цифровых систем\n                    ",
+      "badges": [
+        {
+          "classes": "education-badge",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-3": {
+      "category": "",
+      "href": "#",
+      "titleHtml": "\n                      Институт экономики и менеджмента\n                    ",
+      "badges": [
+        {
+          "classes": "education-badge",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-4": {
+      "category": "",
+      "href": "#",
+      "titleHtml": "\n                      Институт химии и химической технологии\n                    ",
+      "badges": [
+        {
+          "classes": "education-badge",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-5": {
+      "category": "",
+      "href": "#",
+      "titleHtml": "\n                      Институт архитектуры и дизайна\n                    ",
+      "badges": [
+        {
+          "classes": "education-badge",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-6": {
+      "category": "",
+      "href": "#",
+      "titleHtml": "\n                      Институт инженеров строительства и транспорта\n                    ",
+      "badges": [
+        {
+          "classes": "education-badge",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-7": {
+      "category": "",
+      "href": "#",
+      "titleHtml": "\n                      Институт инженерии и машиностроения\n                    ",
+      "badges": [
+        {
+          "classes": "education-badge",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-8": {
+      "category": "",
+      "href": "#",
+      "titleHtml": "\n                      Университетский колледж ЯГТУ «Политехник»\n                    ",
+      "badges": [
+        {
+          "classes": "education-badge",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-9": {
+      "category": "",
+      "href": "#",
+      "titleHtml": "\n                        Институт базовой инженерной подготовки\n                      ",
+      "badges": [
+        {
+          "classes": "education-badge",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-10": {
+      "category": "",
+      "href": "#",
+      "titleHtml": "\n                        Институт цифровых систем\n                      ",
+      "badges": [
+        {
+          "classes": "education-badge",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-11": {
+      "category": "",
+      "href": "#",
+      "titleHtml": "\n                        Институт экономики и менеджмента\n                      ",
+      "badges": [
+        {
+          "classes": "education-badge",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-12": {
+      "category": "",
+      "href": "#",
+      "titleHtml": "\n                        Институт химии и химической технологии\n                      ",
+      "badges": [
+        {
+          "classes": "education-badge",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-13": {
+      "category": "",
+      "href": "#",
+      "titleHtml": "\n                        Институт архитектуры и дизайна\n                      ",
+      "badges": [
+        {
+          "classes": "education-badge",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-14": {
+      "category": "",
+      "href": "#",
+      "titleHtml": "\n                        Институт инженеров строительства и транспорта\n                      ",
+      "badges": [
+        {
+          "classes": "education-badge",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-15": {
+      "category": "",
+      "href": "#",
+      "titleHtml": "\n                        Институт инженерии и машиностроения\n                      ",
+      "badges": [
+        {
+          "classes": "education-badge",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-16": {
+      "category": "",
+      "href": "#",
+      "titleHtml": "\n                        Университетский колледж ЯГТУ «Политехник»\n                      ",
+      "badges": [
+        {
+          "classes": "education-badge",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-17": {
+      "category": "",
+      "href": "detail-structure.html",
+      "titleHtml": "\n                      Институт базовой инженерной подготовки\n                    ",
+      "badges": [
+        {
+          "classes": "education-badge education-badge--plain",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge education-badge--plain",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-18": {
+      "category": "",
+      "href": "detail-structure.html",
+      "titleHtml": "\n                      Институт цифровых систем\n                    ",
+      "badges": [
+        {
+          "classes": "education-badge education-badge--plain",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge education-badge--plain",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-19": {
+      "category": "",
+      "href": "detail-structure.html",
+      "titleHtml": "\n                      Институт экономики и менеджмента\n                    ",
+      "badges": [
+        {
+          "classes": "education-badge education-badge--plain",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge education-badge--plain",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-20": {
+      "category": "",
+      "href": "detail-structure.html",
+      "titleHtml": "\n                      Институт химии и химической технологии\n                    ",
+      "badges": [
+        {
+          "classes": "education-badge education-badge--plain",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge education-badge--plain",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-21": {
+      "category": "",
+      "href": "detail-structure.html",
+      "titleHtml": "\n                      Институт архитектуры и дизайна\n                    ",
+      "badges": [
+        {
+          "classes": "education-badge education-badge--plain",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge education-badge--plain",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-22": {
+      "category": "",
+      "href": "detail-structure.html",
+      "titleHtml": "\n                      Институт инженеров строительства и транспорта\n                    ",
+      "badges": [
+        {
+          "classes": "education-badge education-badge--plain",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge education-badge--plain",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-23": {
+      "category": "",
+      "href": "detail-structure.html",
+      "titleHtml": "\n                      Институт инженерии и машиностроения\n                    ",
+      "badges": [
+        {
+          "classes": "education-badge education-badge--plain",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge education-badge--plain",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    },
+    "departments-24": {
+      "category": "",
+      "href": "detail-structure.html",
+      "titleHtml": "\n                      Университетский колледж ЯГТУ «Политехник»\n                    ",
+      "badges": [
+        {
+          "classes": "education-badge education-badge--plain",
+          "text": "Бакалавриат: 1 программа"
+        },
+        {
+          "classes": "education-badge education-badge--plain",
+          "text": "Магистратура: 1 программа"
+        }
+      ]
+    }
+  },
+  "training": {
+    "training-1": {
+      "code": "09.03.01",
+      "tagClasses": "training-program-card__tag bakalavr",
+      "level": "Бакалавриат",
+      "titleHtml": "Информатика и вычислительная техника",
+      "href": "program.html",
+      "footer": [
+        "Очно",
+        "20 бюджетных мест",
+        "40 платных мест"
+      ]
+    },
+    "training-2": {
+      "code": "09.03.02",
+      "tagClasses": "training-program-card__tag bakalavr",
+      "level": "Бакалавриат",
+      "titleHtml": "Информационные системы и технологии",
+      "href": "program.html",
+      "footer": [
+        "Очно",
+        "20 бюджетных мест"
+      ]
+    },
+    "training-3": {
+      "code": "09.03.03",
+      "tagClasses": "training-program-card__tag magistratura",
+      "level": "Магистратура",
+      "titleHtml": "Прикладная информатика",
+      "href": "program.html",
+      "footer": [
+        "Очно",
+        "20 бюджетных мест",
+        "40 платных мест"
+      ]
+    },
+    "training-4": {
+      "code": "09.04.01",
+      "tagClasses": "training-program-card__tag magistratura",
+      "level": "Магистратура",
+      "titleHtml": "Информатика и вычислительная техника",
+      "href": "program.html",
+      "footer": [
+        "Очно",
+        "20 бюджетных мест",
+        "40 платных мест"
+      ]
+    },
+    "training-5": {
+      "code": "09.04.01",
+      "tagClasses": "training-program-card__tag magistratura",
+      "level": "Магистратура",
+      "titleHtml": "Информатика и вычислительная техника",
+      "href": "program.html",
+      "footer": [
+        "Очно",
+        "16 бюджетных мест",
+        "16 целевых мест",
+        "50 платных мест",
+        "Срок обучения: 5 лет"
+      ]
+    }
+  },
+  "linkCards": {
+    "linkCards-1": {
+      "classes": "link-cards container",
+      "title": "Полезные ссылки",
+      "links": [
+        {
+          "href": "#",
+          "label": "Общежития ЯГТУ"
+        },
+        {
+          "href": "#",
+          "label": "Центр карьеры"
+        },
+        {
+          "href": "#",
+          "label": "Социальная поддержка"
+        },
+        {
+          "href": "#",
+          "label": "Профком студентов"
+        },
+        {
+          "href": "#",
+          "label": "Оценка качества образования"
+        },
+        {
+          "href": "#",
+          "label": "Психологическая помощь"
+        }
+      ]
+    }
+  },
+  "projects": {
+    "projects-1": {
+      "href": "#",
+      "titleHtml": "Название проекта",
+      "image": null
+    },
+    "projects-2": {
+      "href": "#",
+      "titleHtml": "\n                      Очень очень Очень длиное название проекта\n                    ",
+      "image": null
+    },
+    "projects-3": {
+      "href": "#",
+      "titleHtml": "Название проекта",
+      "image": {
+        "draggable": "false",
+        "loading": "lazy",
+        "decoding": "async",
+        "src": "../images/fallback/prioritet.png",
+        "alt": "Приоритет 2030. Лидерами становятся"
+      }
+    },
+    "projects-4": {
+      "href": "#",
+      "titleHtml": "Очень очень Очень длиное название проекта",
+      "image": null
+    }
+  },
+  "teasers": {
+    "teasers-1": {
+      "href": "programs.html",
+      "titleHtml": "Абитуриентам 2026",
+      "image": {
+        "draggable": "false",
+        "class": "ficher__icon",
+        "src": "../images/svg/abt.svg",
+        "alt": ""
+      }
+    },
+    "teasers-2": {
+      "href": "student-life.html",
+      "titleHtml": "\n                  Возможности<br />\n                  для школьников\n                ",
+      "image": {
+        "draggable": "false",
+        "class": "ficher__icon",
+        "src": "../images/svg/lifelong-learning.svg",
+        "alt": ""
+      }
+    },
+    "teasers-3": {
+      "href": "student-life.html",
+      "titleHtml": "Студенческая жизнь",
+      "image": {
+        "draggable": "false",
+        "class": "ficher__icon",
+        "src": "../images/svg/stud-life.svg",
+        "alt": ""
+      }
+    },
+    "teasers-4": {
+      "href": "map.html",
+      "titleHtml": "Партнерам",
+      "image": {
+        "draggable": "false",
+        "class": "ficher__icon",
+        "src": "../images/svg/partners.svg",
+        "alt": ""
+      }
+    }
+  }
+}

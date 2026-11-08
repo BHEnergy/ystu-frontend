@@ -1,0 +1,134 @@
+.journal-list {
+    gap: 40px;
+}
+
+.journal-card__title {
+    font-size: 1.25rem;
+    color: var(--subprimary-color-1);
+    font-weight: 600;
+}
+
+.journal-card__section {
+    padding-top: 24px;
+    padding-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.journal-list__content {
+    gap: 24px;
+}
+
+.journal-card__content {
+    gap: 24px;
+}
+
+.journal-card__info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 340px));
+    gap: 16px 40px;
+    min-width: 0;
+    flex: 1;
+    align-items: start;
+    overflow-wrap: anywhere;
+}
+
+.journal-card__column {
+    display: grid;
+    gap: 16px;
+    min-width: 0;
+    align-content: start;
+    justify-items: start;
+}
+
+.journal-card__info dl {
+    min-width: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.journal-card__info dt {
+    font-size: 0.9375rem;
+    color: var(--subprimary-color-2);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.journal-card__info dd {
+    font-size: 1rem;
+}
+
+.journal-card__info .btn {
+    font-weight: 600;
+    max-width: 153px;
+    min-height: 51px;
+    width: 100%;
+}
+
+.journal-card__description {
+    max-width: 835px;
+    font-size: 1.125rem;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.journal-card__code {
+    color: var(--subprimary-color-2);
+    font-size: 1rem;
+}
+
+@media(max-width: 1440px) {
+    .journal-card__content {
+        flex-direction: column !important;
+    }
+
+    .journal-card__photo {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .journal-card__info {
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .journal-card__info dl {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media(max-width: 768px) {
+    .journal-card__content {
+        flex-direction: column !important;
+    }
+
+    .journal-card__section {
+        padding-bottom: 16px;
+    }
+
+    .journal-card__info .btn {
+        max-width: 130px;
+        font-size: 0.9375rem;
+        min-height: 46px;
+        font-weight: 500;
+        padding: 14px 24px;
+    }
+
+    .journal-card__info dt {
+        font-size: 0.875rem;
+    }
+
+    .journal-card__info dd {
+        font-size: 0.9375rem;
+    }
+
+    .journal-card__title {
+        max-width: none;
+    }
+}

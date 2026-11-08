@@ -1,0 +1,20 @@
+{% macro contactSection(contact) %}
+<section class="{{ contact.classes }}">
+  <div class="container">
+    <h2 class="title contact-section__title">{{ contact.title }}</h2>
+    <div class="contact-section__body">
+      <div class="contact-section__map">
+        <img{% if contact.image.loading %} loading="{{ contact.image.loading }}"{% endif %}{% if contact.image.decoding %} decoding="{{ contact.image.decoding }}"{% endif %} src="{{ contact.image.src }}" alt="{{ contact.image.alt }}">
+      </div>
+      <div class="contact-section__contacts">
+        {% for group in contact.groups %}
+        <div class="contact-section__contact{% if group.modifier %} contact-section__contact--{{ group.modifier }}{% endif %}">
+          <h3>{{ group.title }}</h3>
+          {{ group.contentHtml | safe }}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endmacro %}

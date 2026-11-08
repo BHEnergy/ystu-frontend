@@ -1,0 +1,14 @@
+{% macro mediaGallery(images) %}
+<div class="media-gallery swiper js-init-media-gallery" data-ui="media-gallery">
+  <div class="swiper-wrapper">
+    {% for image in images %}<div class="swiper-slide"><img{% if image.loading %} loading="{{ image.loading }}"{% endif %}{% if image.decoding %} decoding="{{ image.decoding }}"{% endif %} src="{{ image.src }}" alt="{{ image.alt }}"></div>{% endfor %}
+  </div>
+  <div class="default-slider-controls media-gallery__controls">
+    <button type="button" class="swiper-button-prev" aria-label="Предыдущий слайд"></button>
+    <button type="button" class="swiper-button-prev big" data-slider-control="prev-big" data-ui="big" aria-label="Предыдущий слайд"></button>
+    <div class="swiper-pagination"></div>
+    <button type="button" class="swiper-button-next" aria-label="Следующий слайд"></button>
+    <button type="button" class="swiper-button-next big" data-slider-control="next-big" data-ui="big" aria-label="Следующий слайд"></button>
+  </div>
+</div>
+{% endmacro %}

@@ -25,159 +25,47 @@
             </div>
         </div>    
         <!-- События / новости -->
-        <section class = "structure">
-          <div class = "container structure__container" data-ui="structure__container">
+        <section class = "department-directory">
+          <div class = "container department-directory__container" data-ui="structure__container">
             <h1 class = "title">Структура университета</h1>
-            <div class = "structure__tags" data-ui="structure__tags" role="group" aria-label="Раздел структуры">
-              <button type="button" class="structure__tag tag select" data-filter="institutes" aria-pressed="true">
+            <div class = "department-directory__tags" data-ui="structure__tags" role="group" aria-label="Раздел структуры">
+              <button type="button" class="filter-tag tag select" data-filter="institutes" aria-pressed="true">
                 Институты
               </button>
-              <button type="button" class="structure__tag tag" data-filter="departments" aria-pressed="false">
+              <button type="button" class="filter-tag tag" data-filter="departments" aria-pressed="false">
                 Кафедры
               </button>
-              <button type="button" class="structure__tag tag" data-filter="buildings" aria-pressed="false">
+              <button type="button" class="filter-tag tag" data-filter="buildings" aria-pressed="false">
                 Корпуса и общежитие
               </button>
-              <button type="button" class="structure__tag tag" data-filter="services" aria-pressed="false">
+              <button type="button" class="filter-tag tag" data-filter="services" aria-pressed="false">
                 Службы и отделы
               </button>
             </div>
-            <ul class="structure__institutes" data-ui="structure__institutes" data-category="institutes">
-                <li class="structure__institute">
-                  <a class="structure__institute-link" href="#">
-                    <h2 class="structure__institute-title">
-                      Институт базовой инженерной подготовки
-                    </h2>
+            <ul class="department-directory__institutes" data-ui="structure__institutes" data-category="institutes">
+{% from "components/department-card.njk" import departmentCard %}
+{{ departmentCard(componentExamples.departments["departments-1"]) }}
 
-                    <ul class="structure__programs">
-                      <li class="structure__program">
-                        Бакалавриат: 1 программа
-                      </li>
-                      <li class="structure__program">
-                        Магистратура: 1 программа
-                      </li>
-                    </ul>
-                  </a>
-                </li>
+{% from "components/department-card.njk" import departmentCard %}
+{{ departmentCard(componentExamples.departments["departments-2"]) }}
 
-                <li class="structure__institute">
-                  <a class="structure__institute-link" href="#">
-                    <h2 class="structure__institute-title">
-                      Институт цифровых систем
-                    </h2>
+{% from "components/department-card.njk" import departmentCard %}
+{{ departmentCard(componentExamples.departments["departments-3"]) }}
 
-                    <ul class="structure__programs">
-                      <li class="structure__program">
-                        Бакалавриат: 1 программа
-                      </li>
-                      <li class="structure__program">
-                        Магистратура: 1 программа
-                      </li>
-                    </ul>
-                  </a>
-                </li>
+{% from "components/department-card.njk" import departmentCard %}
+{{ departmentCard(componentExamples.departments["departments-4"]) }}
 
-                <li class="structure__institute">
-                  <a class="structure__institute-link" href="#">
-                    <h2 class="structure__institute-title">
-                      Институт экономики и менеджмента
-                    </h2>
+{% from "components/department-card.njk" import departmentCard %}
+{{ departmentCard(componentExamples.departments["departments-5"]) }}
 
-                    <ul class="structure__programs">
-                      <li class="structure__program">
-                        Бакалавриат: 1 программа
-                      </li>
-                      <li class="structure__program">
-                        Магистратура: 1 программа
-                      </li>
-                    </ul>
-                  </a>
-                </li>
+{% from "components/department-card.njk" import departmentCard %}
+{{ departmentCard(componentExamples.departments["departments-6"]) }}
 
-                <li class="structure__institute">
-                  <a class="structure__institute-link" href="#">
-                    <h2 class="structure__institute-title">
-                      Институт химии и химической технологии
-                    </h2>
+{% from "components/department-card.njk" import departmentCard %}
+{{ departmentCard(componentExamples.departments["departments-7"]) }}
 
-                    <ul class="structure__programs">
-                      <li class="structure__program">
-                        Бакалавриат: 1 программа
-                      </li>
-                      <li class="structure__program">
-                        Магистратура: 1 программа
-                      </li>
-                    </ul>
-                  </a>
-                </li>
-
-                <li class="structure__institute">
-                  <a class="structure__institute-link" href="#">
-                    <h2 class="structure__institute-title">
-                      Институт архитектуры и дизайна
-                    </h2>
-
-                    <ul class="structure__programs">
-                      <li class="structure__program">
-                        Бакалавриат: 1 программа
-                      </li>
-                      <li class="structure__program">
-                        Магистратура: 1 программа
-                      </li>
-                    </ul>
-                  </a>
-                </li>
-
-                <li class="structure__institute">
-                  <a class="structure__institute-link" href="#">
-                    <h2 class="structure__institute-title">
-                      Институт инженеров строительства и транспорта
-                    </h2>
-
-                    <ul class="structure__programs">
-                      <li class="structure__program">
-                        Бакалавриат: 1 программа
-                      </li>
-                      <li class="structure__program">
-                        Магистратура: 1 программа
-                      </li>
-                    </ul>
-                  </a>
-                </li>
-
-                <li class="structure__institute">
-                  <a class="structure__institute-link" href="#">
-                    <h2 class="structure__institute-title">
-                      Институт инженерии и машиностроения
-                    </h2>
-
-                    <ul class="structure__programs">
-                      <li class="structure__program">
-                        Бакалавриат: 1 программа
-                      </li>
-                      <li class="structure__program">
-                        Магистратура: 1 программа
-                      </li>
-                    </ul>
-                  </a>
-                </li>
-
-                <li class="structure__institute">
-                  <a class="structure__institute-link" href="#">
-                    <h2 class="structure__institute-title">
-                      Университетский колледж ЯГТУ «Политехник»
-                    </h2>
-
-                    <ul class="structure__programs">
-                      <li class="structure__program">
-                        Бакалавриат: 1 программа
-                      </li>
-                      <li class="structure__program">
-                        Магистратура: 1 программа
-                      </li>
-                    </ul>
-                  </a>
-                </li>
+{% from "components/department-card.njk" import departmentCard %}
+{{ departmentCard(componentExamples.departments["departments-8"]) }}
               </ul>
           </div>
         </section>

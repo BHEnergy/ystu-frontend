@@ -1,0 +1,10 @@
+{% from "components/contact-list.njk" import contactList %}
+{% macro personCard(person) %}
+<div class="person-card">
+  <div class="person-card__person">
+    <img{% if person.image.loading %} loading="{{ person.image.loading }}"{% endif %}{% if person.image.decoding %} decoding="{{ person.image.decoding }}"{% endif %} src="{{ person.image.src }}" alt="{{ person.image.alt }}">
+    <div><h3>{% if person.href %}<a href="{{ person.href }}">{{ person.name }}</a>{% else %}{{ person.name }}{% endif %}</h3><p>{{ person.role }}</p></div>
+  </div>
+  <div class="person-card__contacts">{{ contactList(person.contacts, "span") }}</div>
+</div>
+{% endmacro %}

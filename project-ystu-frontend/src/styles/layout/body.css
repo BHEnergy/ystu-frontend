@@ -10,8 +10,8 @@
 
 /* Отступ перед подвалом задаёт .footer, а не последняя секция страницы. */
 .main > .banner-slider:last-child,
-.main > .structure:last-child,
-.main > .program-admissions:last-child,
+.main > .department-directory:last-child,
+.main > .contact-section:last-child,
 .main > .events-section:last-child .events {
     margin-bottom: 0;
 }

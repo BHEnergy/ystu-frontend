@@ -1,0 +1,137 @@
+.person-card__contacts span {
+    color: var(--subprimary-color-1);
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.person-card {
+    display: flex;
+    min-height: 222px;
+    padding: 40px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: var(--white-shade-4);
+    border: 2px solid var(--subprimary-color-2);
+    border-radius: 20px;
+}
+
+.person-card__person {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.person-card__person > :is(img, .ui-icon),
+.person-card__person > .responsive-picture > :is(img, .ui-icon) {
+    width: 140px;
+    height: 140px;
+    flex: 0 0 140px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.person-card__person h3 {
+    color: var(--subprimary-color-1);
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.person-card__person p {
+    margin-top: 16px;
+    color: var(--subprimary-color-2);
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.person-card__contacts {
+    display: grid;
+    width: 430px;
+    flex: 0 0 430px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    font-style: normal;
+}
+
+.person-card__contacts div:first-child {
+    grid-column: 1 / -1;
+}
+
+
+.person-card__contacts span {
+    color: var(--subprimary-color-2);
+}
+
+.person-card__contacts p,
+.person-card__contacts a {
+    font-size: 1.125rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 1200px) {
+
+    .person-card {
+        align-items: flex-start;
+    }
+
+    .person-card__person {
+        align-items: flex-start;
+    }
+}
+
+
+
+@media (max-width: 992px) {
+
+    .person-card {
+        flex-direction: column;
+    }
+
+    .person-card__contacts {
+        width: 100%;
+        flex-basis: auto;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .person-card {
+        padding: 40px 16px;
+        gap: 24px;
+        min-height: 488px;
+        border-radius: 8px;
+    }
+
+    .person-card__person {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .person-card__person h3 {
+        font-size: 1.25rem;
+    }
+
+    .person-card__person p {
+        margin-top: 8px;
+    }
+
+
+    .person-card__person > :is(img, .ui-icon),
+    .person-card__person > .responsive-picture > :is(img, .ui-icon) {
+        width: 100px;
+        height: 100px;
+        flex: 0 0 100px;
+    }
+
+    .person-card__contacts {
+        grid-template-columns: 1fr;
+    }
+
+    .person-card__contacts div:first-child {
+        grid-column: auto;
+    }
+}

@@ -1,0 +1,2 @@
+{% from "components/contact-list.njk" import contactList %}
+{% macro contactCard(contact) %}<div class="contact-card">{{ contactList(contact.groups) }}</div>{% endmacro %}

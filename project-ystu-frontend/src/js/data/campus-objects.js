@@ -1,0 +1,8 @@
+window.CampusMapData = [
+        { id: 'building-e', title: 'Корпус Е', coordinates: [57.58468, 39.85582], position: [24.93, 9.2], address: 'Московский проспект, 84А', categories: ['education', 'laboratory'], departments: ['institute-1', 'department-1'], objects: [['campus-school.svg', 'Институт химии и химической технологии'], ['campus-lab.svg', 'Лаборатории']] },
+        { id: 'building-a', title: 'Корпус А', coordinates: [57.58548, 39.85529], position: [32.92, 18.77], address: 'Московский проспект, 88', categories: ['admissions', 'administration'], departments: ['service-1'], objects: [['campus-school.svg', 'Учебный корпус']] },
+        { id: 'building-g', title: 'Корпус Г', coordinates: [57.58496, 39.85454], position: [29.38, 37.3], address: 'Московский проспект, 88', categories: ['education', 'library'], departments: ['institute-2'], objects: [['campus-school.svg', 'Учебный корпус']] },
+        { id: 'building-s', title: 'Корпус С', coordinates: [57.58345, 39.85817], position: [56.25, 60.12], address: 'Московский проспект, 88', categories: ['education', 'laboratory'], departments: ['institute-3'], objects: [['campus-school.svg', 'Учебный корпус']] },
+        { id: 'education-building', title: 'Учебный корпус', coordinates: [57.58276, 39.85918], position: [62.64, 71.78], address: 'Московский проспект, 88', categories: ['education', 'military'], departments: ['department-2'], objects: [['campus-school.svg', 'Учебные аудитории']] },
+        { id: 'stadium', title: 'Стадион', coordinates: [57.58438, 39.85289], position: [13.75, 24.3], address: 'Московский проспект, 88', categories: ['sport', 'driving'], departments: ['service-2'], objects: [['campus-school.svg', 'Спортивный комплекс']] }
+    ];

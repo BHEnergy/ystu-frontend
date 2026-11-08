@@ -114,7 +114,7 @@
     transition: opacity 400ms ease-in-out, transform 400ms ease-in-out;
 }
 @media (hover: hover) {
-    .news__photo:hover .news__arrow { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    .news__card:hover .news__photo .news__arrow { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 }
 @media (prefers-reduced-motion: reduce) { .news__photo svg.news__arrow { transition: none; } }
 
@@ -169,13 +169,13 @@
 }
 
 @media(hover: hover) {
-    .news__photo:hover::before {
+    .news__card:hover .news__photo::before {
         opacity: 1;
         -webkit-backdrop-filter: blur(10px) saturate(1.2);
         backdrop-filter: blur(10px) saturate(1.2);
     }
 
-    .news__photo:hover::after {
+    .news__card:hover .news__photo::after {
         opacity: 1;
         position: absolute;
         top: 50%;

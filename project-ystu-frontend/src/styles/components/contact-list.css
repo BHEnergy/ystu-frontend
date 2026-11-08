@@ -1,0 +1,2 @@
+.contact-list__item { display: flex; flex-direction: column; gap: 12px; }
+@media (max-width: 768px) { .contact-list__item { gap: 8px; } }

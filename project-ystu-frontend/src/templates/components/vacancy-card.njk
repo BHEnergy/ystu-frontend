@@ -1,23 +1,10 @@
-<article class="vacancy-card" data-ui="vacancy-card" data-catalog-filters='{"category":["administrative"],"experience":["1-plus"],"employment":["full"],"work_format":["office"]}'>
-              <img
-                class="vacancy-card__pattern"
-                src="../images/svg/vacancy-pattern.svg"
-                alt=""
-              />
-              <div class="vacancy-card__content">
-                <div class="vacancy-card__heading">
-                  <h2 class="vacancy-card__title">Документовед</h2>
-                  <p class="vacancy-card__category">
-                    Административный персонал
-                  </p>
-                </div>
-                <p class="vacancy-card__description">
-                  Lorem ipsum dolor sit amet consectetur. Eu augue fames felis
-                  ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui
-                  feugiat orci dui amet consectetur tortor sem.
-                </p>
-                <a class="btn btn--default btn--m vacancy-card__button" href="detail-vacancy.html"
-                  >Подробнее</a
-                >
-              </div>
-            </article>
+{% macro vacancyCard(card) %}
+<article class="vacancy-card" data-ui="vacancy-card" data-catalog-filters="{{ card.filters | dump }}">
+  <img class="vacancy-card__pattern" src="{{ card.pattern.src }}" alt="{{ card.pattern.alt }}">
+  <div class="vacancy-card__content">
+    <div class="vacancy-card__heading"><h2 class="vacancy-card__title">{{ card.title }}</h2><p class="vacancy-card__category">{{ card.category }}</p></div>
+    <p class="vacancy-card__description">{{ card.description }}</p>
+    <a class="{{ card.button.classes }}" href="{{ card.button.href }}">{{ card.button.label }}</a>
+  </div>
+</article>
+{% endmacro %}

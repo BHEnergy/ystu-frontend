@@ -294,7 +294,7 @@
       </header>
 
 
-      <main class="main">
+      <main class="main" data-campus-map-component>
         <div class="container">
           <nav class="breadcrumbs" aria-label="Хлебные крошки">
             <a class="breadcrumbs__item" href="index.html">Главная</a>
@@ -304,46 +304,36 @@
             <span>Карта кампуса</span>
           </nav>
 
-          <h1 class="campus-map-page__title">Карта кампуса</h1>
+          <h1 class="campus-map__title">Карта кампуса</h1>
 
-          <div class="campus-map-page__toolbar">
-            <div class="campus-map-page__filters">
-              <details class="campus-filter campus-filter--object" data-campus-filter="category">
-                <summary><span data-campus-filter-label>выбрать объект</span><span class="campus-filter__icon" aria-hidden="true"></span></summary>
-                <div class="campus-filter__panel">
-                  <button type="button" data-filter-value="admissions"><img src="../images/svg/campus-admissions.svg" alt="" />Приемная комиссия</button>
-                  <button type="button" data-filter-value="administration"><img src="../images/svg/campus-administration.svg" alt="" />Администрация</button>
-                  <button type="button" data-filter-value="food"><img src="../images/svg/campus-food.svg" alt="" />Объекты питания</button>
-                  <button type="button" data-filter-value="education"><img src="../images/svg/campus-school.svg" alt="" />Учебные корпуса</button>
-                  <button type="button" data-filter-value="dormitory"><img src="../images/svg/campus-dormitory.svg" alt="" />Общежития</button>
-                  <button type="button" data-filter-value="sport"><img src="../images/svg/campus-sport.svg" alt="" />Спорт</button>
-                  <button type="button" data-filter-value="driving"><img src="../images/svg/campus-driving.svg" alt="" />Автодром</button>
-                  <button type="button" data-filter-value="laboratory"><img src="../images/svg/campus-lab.svg" alt="" />Лаборатории</button>
-                  <button type="button" data-filter-value="military"><img src="../images/svg/campus-military.svg" alt="" />Военный учебный центр</button>
-                  <button type="button" data-filter-value="library"><img src="../images/svg/campus-library.svg" alt="" />Библиотека</button>
-                </div>
-              </details>
+          <div class="campus-map__toolbar">
+            <div class="campus-map__filters">
 
-              <details class="campus-filter campus-filter--department" data-campus-filter="department">
-                <summary><span data-campus-filter-label>выбрать подразделение</span><span class="campus-filter__icon" aria-hidden="true"></span></summary>
-                <div class="campus-filter__panel campus-filter__panel--grouped">
-                  <p class="campus-filter__group-title">Институты</p>
-                  <button type="button" data-filter-value="institute-1">Институт 1</button><button type="button" data-filter-value="institute-2">Институт 2</button><button type="button" data-filter-value="institute-3">Институт 3</button><button type="button" data-filter-value="institute-4">Институт 4</button><button type="button" data-filter-value="institute-5">Институт 5</button><button type="button" data-filter-value="institute-6">Институт 6</button><button type="button" data-filter-value="institute-7">Институт 7</button><button type="button" data-filter-value="institute-8">Институт 8</button><button type="button" data-filter-value="institute-9">Институт 9</button>
-                  <p class="campus-filter__group-title">Кафедры</p>
-                  <button type="button" data-filter-value="department-1">Кафедра 1</button><button type="button" data-filter-value="department-2">Кафедра 2</button><button type="button" data-filter-value="department-3">Кафедра 3</button>
-                  <p class="campus-filter__group-title">Службы и отделы</p>
-                  <button type="button" data-filter-value="service-1">1</button><button type="button" data-filter-value="service-2">2</button><button type="button" data-filter-value="service-3">3</button>
-                </div>
-              </details>
+
+<details class="campus-filter campus-filter--object" data-campus-filter="category">
+  <summary><span data-campus-filter-label>выбрать объект</span><span class="campus-filter__icon" aria-hidden="true"></span></summary>
+  <div class="campus-filter__panel">
+    <button type="button" data-filter-value="admissions"><img src="../images/svg/campus-admissions.svg" alt="" />Приемная комиссия</button><button type="button" data-filter-value="administration"><img src="../images/svg/campus-administration.svg" alt="" />Администрация</button><button type="button" data-filter-value="food"><img src="../images/svg/campus-food.svg" alt="" />Объекты питания</button><button type="button" data-filter-value="education"><img src="../images/svg/campus-school.svg" alt="" />Учебные корпуса</button><button type="button" data-filter-value="dormitory"><img src="../images/svg/campus-dormitory.svg" alt="" />Общежития</button><button type="button" data-filter-value="sport"><img src="../images/svg/campus-sport.svg" alt="" />Спорт</button><button type="button" data-filter-value="driving"><img src="../images/svg/campus-driving.svg" alt="" />Автодром</button><button type="button" data-filter-value="laboratory"><img src="../images/svg/campus-lab.svg" alt="" />Лаборатории</button><button type="button" data-filter-value="military"><img src="../images/svg/campus-military.svg" alt="" />Военный учебный центр</button><button type="button" data-filter-value="library"><img src="../images/svg/campus-library.svg" alt="" />Библиотека</button>
+  </div>
+</details>
+
+
+
+<details class="campus-filter campus-filter--department" data-campus-filter="department">
+  <summary><span data-campus-filter-label>выбрать подразделение</span><span class="campus-filter__icon" aria-hidden="true"></span></summary>
+  <div class="campus-filter__panel campus-filter__panel--grouped">
+    <p class="campus-filter__group-title">Институты</p><button type="button" data-filter-value="institute-1">Институт 1</button><button type="button" data-filter-value="institute-2">Институт 2</button><button type="button" data-filter-value="institute-3">Институт 3</button><button type="button" data-filter-value="institute-4">Институт 4</button><button type="button" data-filter-value="institute-5">Институт 5</button><button type="button" data-filter-value="institute-6">Институт 6</button><button type="button" data-filter-value="institute-7">Институт 7</button><button type="button" data-filter-value="institute-8">Институт 8</button><button type="button" data-filter-value="institute-9">Институт 9</button><p class="campus-filter__group-title">Кафедры</p><button type="button" data-filter-value="department-1">Кафедра 1</button><button type="button" data-filter-value="department-2">Кафедра 2</button><button type="button" data-filter-value="department-3">Кафедра 3</button><p class="campus-filter__group-title">Службы и отделы</p><button type="button" data-filter-value="service-1">1</button><button type="button" data-filter-value="service-2">2</button><button type="button" data-filter-value="service-3">3</button>
+  </div>
+</details>
 
             </div>
-            <form class="campus-map-page__control" data-campus-search role="search">
-              <input class="campus-map-page__search-input" type="search" name="campus-query" placeholder="поиск" aria-label="Поиск по карте кампуса" />
-              <button class="campus-map-page__search-button" type="submit" aria-label="Найти"><svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#vacancy-search"></use></svg></button>
+            <form class="campus-map__control" data-campus-search role="search">
+              <input class="campus-map__search-input" type="search" name="campus-query" placeholder="поиск" aria-label="Поиск по карте кампуса" />
+              <button class="campus-map__search-button" type="submit" aria-label="Найти"><svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#vacancy-search"></use></svg></button>
             </form>
           </div>
 
-          <section class="campus-map-page__canvas" aria-label="Интерактивная карта кампуса">
+          <section class="campus-map__canvas" aria-label="Интерактивная карта кампуса">
             <!-- API v3: ключ с ограничением по домену вставляется в data-yandex-api-key. -->
             <div id="campus-map" data-campus-map data-map-provider="yandex" data-yandex-api-key="78e74d40-1f5f-4bf4-95de-2e6473aab959" data-map-lat="57.586895" data-map-lon="39.855303" data-map-zoom="16"></div>
           </section>

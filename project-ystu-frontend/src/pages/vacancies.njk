@@ -30,35 +30,16 @@
             <aside class="listing-page__sidebar">
               <h2 class="catalog-filters__title">Фильтры</h2>
               <form class="catalog-filters" method="get">
-                <div class="catalog-search">
-                  <p>найти направление</p>
-                  <input class="catalog-search__input" data-ui="catalog-search__input" name="query" type="search" aria-label="Найти вакансию" />
-                  <button class="catalog-search__button" type="submit" aria-label="Найти"><svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#vacancy-search"></use></svg></button>
-                </div>
-                <div class="catalog-filter-group">
-                  <p class="catalog-filter-group__title">категория</p>
-                  <div class="catalog-filter-group__options">
-                    <label class="catalog-filter-option"><input type="checkbox" name="category[]" value="academic" />Научно-педагогические работники</label>
-                    <label class="catalog-filter-option"><input type="checkbox" name="category[]" value="administrative" checked />Административный персонал</label>
-                  </div>
-                </div>
-                {% include "components/catalog-filter-group-4.njk" %}
-                <div class="catalog-filter-group">
-                  <p class="catalog-filter-group__title">тип занятости</p>
-                  <div class="catalog-filter-group__options">
-                    <label class="catalog-filter-option"><input type="checkbox" name="employment[]" value="full" checked />полная</label>
-                    <label class="catalog-filter-option"><input type="checkbox" name="employment[]" value="part" />частичная</label>
-                    <label class="catalog-filter-option"><input type="checkbox" name="employment[]" value="internship" />стажировка</label>
-                  </div>
-                </div>
-                <div class="catalog-filter-group">
-                  <p class="catalog-filter-group__title">формат работы</p>
-                  <div class="catalog-filter-group__options">
-                    <label class="catalog-filter-option"><input type="checkbox" name="work_format[]" value="office" />Офис</label>
-                    <label class="catalog-filter-option"><input type="checkbox" name="work_format[]" value="hybrid" />Гибрид</label>
-                    <label class="catalog-filter-option"><input type="checkbox" name="work_format[]" value="remote" />Удалённо</label>
-                  </div>
-                </div>
+{% from "components/catalog-search.njk" import catalogSearch %}
+{{ catalogSearch(componentExamples.searches["searches-1"]) }}
+{% from "components/catalog-filter-group.njk" import filterGroup %}
+{{ filterGroup(componentExamples.filters["filters-3"]) }}
+{% from "components/catalog-filter-group.njk" import filterGroup %}
+{{ filterGroup(componentExamples.filters["filters-8"]) }}
+{% from "components/catalog-filter-group.njk" import filterGroup %}
+{{ filterGroup(componentExamples.filters["filters-4"]) }}
+{% from "components/catalog-filter-group.njk" import filterGroup %}
+{{ filterGroup(componentExamples.filters["filters-5"]) }}
                 <div class="catalog-filters__actions">
                   <button class="btn btn--default btn--m catalog-filters__apply" type="submit">Применить</button>
                   <button class="btn catalog-filters__reset" type="reset">Очистить</button>
@@ -68,22 +49,17 @@
 
             <section aria-label="Список вакансий">
               <div class="listing-page__mobile-tools" data-ui="listing-page__mobile-tools">
-                <form class="catalog-search" method="get" role="search">
-                  <input class="catalog-search__input" data-ui="catalog-search__input" name="query" type="search" placeholder="найти вакансию" aria-label="Найти вакансию" />
-                  <button class="catalog-search__button" type="submit" aria-label="Найти"><svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#vacancy-search"></use></svg></button>
-                </form>
+{% from "components/catalog-search.njk" import catalogSearch %}
+{{ catalogSearch(componentExamples.searches["searches-2"]) }}
                 <button class="catalog-filters-trigger" type="button" data-open-filter-panel="vacancy-filter-panel" aria-controls="vacancy-filter-panel" aria-expanded="false">Фильтры<svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#filters"></use></svg></button>
               </div>
               <div class="listing-page__results" data-ui="listing-page__results">
-                {% include "components/vacancy-card.njk" %}
-                <article class="vacancy-card" data-ui="vacancy-card" data-catalog-filters='{"category":["administrative"],"experience":["1-plus"],"employment":["full"],"work_format":["office"]}'>
-                  <img class="vacancy-card__pattern" src="../images/svg/vacancy-pattern.svg" alt="" />
-                  <div class="vacancy-card__content"><div class="vacancy-card__heading"><h2 class="vacancy-card__title">Инженер-конструктор</h2><p class="vacancy-card__category">Административный персонал</p></div><p class="vacancy-card__description">Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem.</p><a class="btn btn--default btn--m vacancy-card__button" href="detail-vacancy.html">Подробнее</a></div>
-                </article>
-                <article class="vacancy-card" data-ui="vacancy-card" data-catalog-filters='{"category":["administrative"],"experience":["1-plus"],"employment":["full"],"work_format":["office"]}'>
-                  <img class="vacancy-card__pattern" src="../images/svg/vacancy-pattern.svg" alt="" />
-                  <div class="vacancy-card__content"><div class="vacancy-card__heading"><h2 class="vacancy-card__title">Инженер-техник</h2><p class="vacancy-card__category">Административный персонал</p></div><p class="vacancy-card__description">Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem.</p><a class="btn btn--default btn--m vacancy-card__button" href="detail-vacancy.html">Подробнее</a></div>
-                </article>
+{% from "components/vacancy-card.njk" import vacancyCard %}
+{{ vacancyCard(componentExamples.vacancies["vacancies-3"]) }}
+{% from "components/vacancy-card.njk" import vacancyCard %}
+{{ vacancyCard(componentExamples.vacancies["vacancies-1"]) }}
+{% from "components/vacancy-card.njk" import vacancyCard %}
+{{ vacancyCard(componentExamples.vacancies["vacancies-2"]) }}
               </div>
             </section>
           </div>

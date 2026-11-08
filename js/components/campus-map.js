@@ -1,20 +1,20 @@
 (() => {
-    const mapElement = document.querySelector('[data-campus-map]');
-
-    if (!mapElement) {
-        window.CampusMap = {};
-        return;
-    }
-
-    const campusObjects = [
-        { id: 'building-e', title: 'Корпус Е', coordinates: [57.58468, 39.85582], position: [24.93, 9.2], address: 'Московский проспект, 84А', categories: ['education', 'laboratory'], departments: ['institute-1', 'department-1'], objects: [['campus-school.svg', 'Институт химии и химической технологии'], ['campus-lab.svg', 'Лаборатории']] },
-        { id: 'building-a', title: 'Корпус А', coordinates: [57.58548, 39.85529], position: [32.92, 18.77], address: 'Московский проспект, 88', categories: ['admissions', 'administration'], departments: ['service-1'], objects: [['campus-school.svg', 'Учебный корпус']] },
-        { id: 'building-g', title: 'Корпус Г', coordinates: [57.58496, 39.85454], position: [29.38, 37.3], address: 'Московский проспект, 88', categories: ['education', 'library'], departments: ['institute-2'], objects: [['campus-school.svg', 'Учебный корпус']] },
-        { id: 'building-s', title: 'Корпус С', coordinates: [57.58345, 39.85817], position: [56.25, 60.12], address: 'Московский проспект, 88', categories: ['education', 'laboratory'], departments: ['institute-3'], objects: [['campus-school.svg', 'Учебный корпус']] },
-        { id: 'education-building', title: 'Учебный корпус', coordinates: [57.58276, 39.85918], position: [62.64, 71.78], address: 'Московский проспект, 88', categories: ['education', 'military'], departments: ['department-2'], objects: [['campus-school.svg', 'Учебные аудитории']] },
-        { id: 'stadium', title: 'Стадион', coordinates: [57.58438, 39.85289], position: [13.75, 24.3], address: 'Московский проспект, 88', categories: ['sport', 'driving'], departments: ['service-2'], objects: [['campus-school.svg', 'Спортивный комплекс']] }
-    ];
-
+    const instances = new WeakMap();
+    let firstInstance = null;
+    const initOne = (mapElement) => {
+        if (instances.has(mapElement)) return instances.get(mapElement);
+        const componentScope = mapElement.closest('[data-campus-map-component], .campus-map') || mapElement.parentElement;
+        let campusObjects = window.CampusMapData || [];
+        if (mapElement.dataset.campusObjects) {
+            try {
+                const configured = JSON.parse(mapElement.dataset.campusObjects);
+                if (!Array.isArray(configured)) throw new TypeError('Ожидается массив объектов карты');
+                campusObjects = configured;
+            } catch (error) {
+                console.warn('Некорректные данные компонента карты', error);
+                campusObjects = [];
+            }
+        }
     const activeFilters = { category: '', department: '' };
     let interactiveMap = null;
     let activeMarker = null;
@@ -33,7 +33,7 @@
 
     const createMarkerHtml = (item) => `<div class="campus-marker" data-ui="campus-marker" data-campus-marker="${escapeHtml(item.id)}" style="left:${item.position[0]}%;top:${item.position[1]}%"><button class="campus-marker__head campus-marker__trigger" data-ui="campus-marker__trigger" type="button" aria-label="Показать информацию: ${escapeHtml(item.title)}" aria-expanded="false"><img src="../images/svg/campus-pin.svg" alt="" /><span class="campus-marker__label">${escapeHtml(item.title)}</span></button><template class="campus-marker__popup-template" data-ui="campus-marker__popup-template">${createPopupHtml(item)}</template></div>`;
 
-    mapElement.innerHTML = `<img class="campus-map-page__image" data-ui="campus-map-page__image" src="../images/fallback/campus-map.png" alt="Карта кампуса ЯГТУ с учебными корпусами и стадионом" />${campusObjects.map(createMarkerHtml).join('')}`;
+    mapElement.innerHTML = `<img class="campus-map__image" data-ui="campus-map-page__image" src="../images/fallback/campus-map.png" alt="Карта кампуса ЯГТУ с учебными корпусами и стадионом" />${campusObjects.map(createMarkerHtml).join('')}`;
 
     const popupLayer = document.createElement('div');
     const markers = new Map([...mapElement.querySelectorAll('[data-campus-marker]')]
@@ -94,7 +94,7 @@
         });
     };
 
-    document.querySelectorAll('[data-campus-filter]').forEach((filter) => {
+    componentScope.querySelectorAll('[data-campus-filter]').forEach((filter) => {
         const type = filter.dataset.campusFilter;
         const label = filter.querySelector('[data-campus-filter-label]');
         const initialLabel = label.textContent;
@@ -104,7 +104,7 @@
 
         filter.addEventListener('toggle', () => {
             if (!filter.open) return;
-            document.querySelectorAll('[data-campus-filter][open]').forEach((other) => {
+            componentScope.querySelectorAll('[data-campus-filter][open]').forEach((other) => {
                 if (other !== filter) other.open = false;
             });
         });
@@ -176,7 +176,7 @@
     });
 
     const clearFilters = () => {
-        document.querySelectorAll('[data-campus-filter]').forEach((filter) => {
+        componentScope.querySelectorAll('[data-campus-filter]').forEach((filter) => {
             activeFilters[filter.dataset.campusFilter] = '';
             filter.classList.remove('is-selected');
             filter.querySelectorAll('[data-filter-value]').forEach((item) => {
@@ -205,7 +205,7 @@
         window.setTimeout(() => showPopup(marker), 300);
     };
 
-    document.querySelector('[data-campus-search]')?.addEventListener('submit', (event) => {
+    componentScope.querySelector('[data-campus-search]')?.addEventListener('submit', (event) => {
         event.preventDefault();
         const query = new FormData(event.currentTarget).get('campus-query')?.toString().trim().toLowerCase();
         if (!query) return;
@@ -215,7 +215,7 @@
 
     document.addEventListener('click', (event) => {
         if (!event.target.closest('[data-campus-filter]')) {
-            document.querySelectorAll('[data-campus-filter][open]').forEach((filter) => { filter.open = false; });
+            componentScope.querySelectorAll('[data-campus-filter][open]').forEach((filter) => { filter.open = false; });
         }
     });
 
@@ -223,7 +223,7 @@
         if (event.key !== 'Escape') return;
         pinnedMarker = null;
         hidePopup(true);
-        document.querySelectorAll('[data-campus-filter][open]').forEach((filter) => { filter.open = false; });
+        componentScope.querySelectorAll('[data-campus-filter][open]').forEach((filter) => { filter.open = false; });
     });
 
     window.addEventListener('resize', () => { if (activeMarker) positionPopup(activeMarker); });
@@ -317,6 +317,23 @@
         }
     };
 
-    window.CampusMap = { campusObjects, focusObject, clearFilters };
-    initYandexMap();
+
+        const api = { campusObjects, focusObject, clearFilters };
+        instances.set(mapElement, api);
+        firstInstance ||= api;
+        initYandexMap();
+        return api;
+    };
+    const init = (scope = document) => {
+        const maps = [...(scope.matches?.('[data-campus-map]') ? [scope] : []), ...scope.querySelectorAll('[data-campus-map]')];
+        maps.forEach(initOne);
+    };
+    window.CampusMap = {
+        init,
+        get: element => instances.get(element),
+        get campusObjects() { return firstInstance?.campusObjects || []; },
+        focusObject: (...args) => firstInstance?.focusObject(...args),
+        clearFilters: () => firstInstance?.clearFilters(),
+    };
+    init();
 })();

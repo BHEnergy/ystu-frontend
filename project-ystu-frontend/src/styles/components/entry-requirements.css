@@ -1,0 +1,27 @@
+/* Переиспользуемый блок показателей и disclosure, не привязан к странице. */
+.entry-requirements {
+    margin-bottom: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.entry-requirements__title {
+    font-size: 2.75rem;
+}
+
+.entry-requirements__description { font-size: 1.125rem; }
+.entry-requirements__description.wyswig ul { list-style-position: inside; }
+
+@media(max-width: 768px) {
+
+    .entry-requirements__title {
+        font-size: 2rem;
+    }
+
+    .entry-requirements__description {
+        font-size: 1rem;
+    }
+
+
+}

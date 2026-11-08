@@ -1,29 +1,6 @@
-<div class="flagship-projects__grid card-8">
-                <a draggable="false" href="#" class="flagship-project__card">
-                  <p class = "flagship-project__title">Название проекта</p>
-                </a>
-                <a draggable="false" href="#" class="flagship-project__card">
-                  <p class = "flagship-project__title">Очень очень Очень длиное название проекта</p>
-                </a>
-                <a draggable="false" href="#" class="flagship-project__card">
-                  <p class = "flagship-project__title">Название проекта</p>
-                  <div class = "flagship-project__photo">
-                    <img draggable="false" loading="lazy" decoding="async" src = "../images/fallback/prioritet.png" alt="Приоритет 2030. Лидерами становятся">
-                  </div>
-                </a>
-                <a draggable="false" href="#" class="flagship-project__card">
-                  <p class = "flagship-project__title">Название проекта</p>
-                </a>
-                <a draggable="false" href="#" class="flagship-project__card">
-                  <p class = "flagship-project__title">Название проекта</p>
-                </a>
-                <a draggable="false" href="#" class="flagship-project__card">
-                  <p class = "flagship-project__title">Очень очень Очень длиное название проекта</p>
-                </a>
-                <a draggable="false" href="#" class="flagship-project__card">
-                  <p class = "flagship-project__title">Название проекта</p>
-                </a>
-                <a draggable="false" href="#" class="flagship-project__card">
-                  <p class = "flagship-project__title">Название проекта</p>
-                </a>
-            </div>
+{% macro projectCard(project) %}
+<a draggable="false" href="{{ project.href }}" class="flagship-project__card">
+  <p class="flagship-project__title">{{ project.titleHtml | safe }}</p>
+  {% if project.image %}<div class="flagship-project__photo"><img draggable="false"{% if project.image.loading %} loading="{{ project.image.loading }}"{% endif %}{% if project.image.decoding %} decoding="{{ project.image.decoding }}"{% endif %} src="{{ project.image.src }}" alt="{{ project.image.alt }}"></div>{% endif %}
+</a>
+{% endmacro %}

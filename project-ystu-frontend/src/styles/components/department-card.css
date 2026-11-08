@@ -1,0 +1,133 @@
+.department-directory__institutes.no-border .department-card {
+    border: none;
+}
+
+.department-card {
+    max-height: 271px;
+    min-height: 271px;
+    padding: 16px 16px 97px;
+    list-style: none;
+    background-color: var(--white-shade-1);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--subprimary-color-2);
+}
+
+.department-card::before {
+    position: absolute;
+    bottom: -11%;
+    right: -33px;
+    content: "";
+    display: block;
+    width: 94px;
+    height: 132px;
+    background-color: var(--primary-color-2);
+    clip-path: polygon(0 0, 43% 0, 100% 50%, 43% 100%, 0 100%, 57% 50%);
+    z-index: 0;
+}
+
+.department-card::after {
+    position: absolute;
+    bottom: -2.5%;
+    right: 33px;
+    content: "";
+    display: block;
+    width: 60px;
+    height: 85px;
+    background-color: var(--primary-color-5);
+    clip-path: polygon(0 0, 43% 0, 100% 50%, 43% 100%, 0 100%, 57% 50%);
+    z-index: 0;
+}
+
+/* Обе декоративные линии увеличиваются одновременно, не меняя размер карточки. */
+.department-card::before,
+.department-card::after {
+    pointer-events: none;
+    transform: scale(1);
+    transform-origin: center;
+    transition: transform 400ms ease-in-out;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .department-card:hover::before,
+    .department-card:hover::after {
+        transform: scale(1.08);
+    }
+}
+
+
+.department-card:is(:focus-visible, :has(:focus-visible))::before,
+.department-card:is(:focus-visible, :has(:focus-visible))::after {
+    transform: scale(1.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .department-card::before,
+    .department-card::after {
+        transition: none;
+    }
+}
+
+
+.department-card__title {
+    font-size: 1.25rem;
+    color: var(--subprimary-color-1);
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.department-card__link {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.department-card__badges {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: baseline;
+}
+
+/* Устройства X-Large (большие настольные компьютеры, 1200 пикселей и выше) */
+@media (max-width: 1200px) {
+
+    .department-card__title {
+        font-size: 1.125rem;
+    }
+}
+
+
+/* Устройства Medium (планшеты, 768 пикселей и выше) */
+@media (max-width: 768px) {
+
+    .department-card::before {
+        bottom: -15%;
+        right: -20px;
+        width: 75px;
+        height: 106px;
+    }
+
+    .department-card::after {
+        bottom: -4.5%;
+        right: 30px;
+        width: 48px;
+        height: 68px;
+    }
+
+    .department-card {
+        padding: 16px 24px 24px 16px;
+        min-height: 176px;
+    }
+
+    .department-card__link {
+        max-width: 310px;
+    }
+
+    .department-card__title {
+        font-size: 1.125rem;
+    }
+}

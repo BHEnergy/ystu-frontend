@@ -1,0 +1,8 @@
+{% macro departmentCard(department) %}
+<li class="department-card"{% if department.category %} data-category="{{ department.category }}"{% endif %}>
+  <a class="department-card__link" href="{{ department.href }}">
+    <h2 class="department-card__title">{{ department.titleHtml | safe }}</h2>
+    <ul class="department-card__badges">{% for badge in department.badges %}<li class="{{ badge.classes }}">{{ badge.text }}</li>{% endfor %}</ul>
+  </a>
+</li>
+{% endmacro %}

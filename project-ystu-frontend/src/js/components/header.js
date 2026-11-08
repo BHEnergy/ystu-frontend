@@ -85,7 +85,7 @@
     }
 
     if (openBtn && megaMenu) {
-        const menuItems = megaMenu.querySelectorAll('[data-ui~="mega-menu__primary"] > a, [data-ui~="mega-menu__section"], [data-ui~="mega-menu__additional"] > a',
+        const menuItems = megaMenu.querySelectorAll('[data-ui~="mega-menu__primary"] > a, [data-ui~="mega-menu__section"] .mega-menu__title, [data-ui~="mega-menu__section"] .mega-menu__links > a, [data-ui~="mega-menu__additional"] > a',
         );
         const navbarPanel = header.querySelector('[data-ui~="navbar__panel"]');
         const mobileTools = document.createElement('div');
@@ -384,7 +384,8 @@
                     { autoAlpha: 1, y: 0, scaleY: 1, duration: 0.32, ease: 'power2.out', clearProps: 'transform,opacity,visibility', onComplete: () => window.Header?.update() },
                 );
                 gsapInstance.fromTo(
-                    menuItems,
+                    // Содержимое второй колонки появляется по пунктам, как в соседних.
+                    [...menuItems].filter((item) => item.getClientRects().length > 0),
                     { autoAlpha: 0, y: -6 },
                     { autoAlpha: 1, y: 0, duration: 0.24, stagger: 0.018, delay: 0.06, ease: 'power1.out', clearProps: 'transform,opacity,visibility' },
                 );

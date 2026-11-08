@@ -276,3 +276,17 @@
         right: 16px;
     }
 }
+.catalog-filters-trigger { cursor: pointer; transition: background-color 200ms ease; }
+.catalog-filters__reset { transition: color 200ms ease; }
+.catalog-search__button { border-radius: 4px; transition: background-color 200ms ease; }
+@media (hover: hover) and (pointer: fine) {
+    .catalog-filters-trigger:hover { background-color: var(--subprimary-color-2); }
+    .catalog-filters__reset:hover { color: #002759; }
+    .catalog-search__button:hover { background-color: var(--subprimary-color-5); }
+}
+.catalog-filters-trigger:active { background-color: #002759; }
+.catalog-filters__reset:active { color: #001b3d; }
+.catalog-search__button:active { background-color: var(--subprimary-color-4); }
+@media (prefers-reduced-motion: reduce) {
+    .catalog-filters-trigger, .catalog-filters__reset, .catalog-search__button { transition: none; }
+}

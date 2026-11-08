@@ -21,6 +21,7 @@ function build() {
     const pageData = JSON.parse(fs.readFileSync(path.join(source, 'data/pages.json'), 'utf8'));
     const seo = JSON.parse(fs.readFileSync(path.join(source, 'data/seo.json'), 'utf8'));
     env.addGlobal('navigation', JSON.parse(fs.readFileSync(path.join(source, 'data/navigation.json'), 'utf8')));
+    env.addGlobal('componentExamples', JSON.parse(fs.readFileSync(path.join(source, 'data/component-examples.json'), 'utf8')));
     const rendered = pages.map(name => {
         const key = name.replace(/\.njk$/, '');
         const page = seo.pages[key];
@@ -29,7 +30,7 @@ function build() {
             image: new URL(page.image || seo.image, seo.siteUrl).href };
         const html = env.render(name, { ...pageData[key], metadata })
             .replace(/<head\b[^>]*>[\s\S]*?<\/head>/, head => head.replace(/[ \t]+(?=\r?$)/gm, ''));
-        return [key + '.html', html.replace(/<title>[\s\S]*?<\/title>/, '<title>' + nunjucks.lib.escape(metadata.title) + '</title>')];
+        return [key + '.html', html.replace(/[ \t]+(?=\r?$)/gm, '').replace(/<title>[\s\S]*?<\/title>/, '<title>' + nunjucks.lib.escape(metadata.title) + '</title>')];
     });
     const templates = listFiles(source).filter(file => file.endsWith('.njk'));
     const inventory = fs.readdirSync(path.join(source, 'templates/components')).map(name => ({

@@ -17,7 +17,7 @@ const { chromium, webkit } = require('playwright-core');
                         const host = document.createElement('section');
                         host.style.width = width + 'px';
                         host.style.margin = '20px';
-                        for (const selector of ['.student-directions', '.student-links']) {
+                        for (const selector of ['.feature-sections', '.link-cards']) {
                             const clone = document.querySelector(selector).cloneNode(true);
                             clone.querySelectorAll('[style]').forEach(el => el.removeAttribute('style'));
                             clone.querySelectorAll('[id]').forEach(el => el.removeAttribute('id'));
@@ -36,19 +36,19 @@ const { chromium, webkit } = require('playwright-core');
                 const narrow = await page.evaluate(() => reuseHosts.map(host => ({
                     width: host.clientWidth,
                     scroll: host.scrollWidth,
-                    directions: [...host.querySelectorAll('.student-direction')].map(el => ({
+                    directions: [...host.querySelectorAll('.feature-section')].map(el => ({
                         direction: getComputedStyle(el).flexDirection,
                         scroll: el.scrollWidth, width: el.clientWidth
                     })),
-                    galleries: [...host.querySelectorAll('.js-init-student-slider')].every(el => !!el.swiper),
-                    columns: getComputedStyle(host.querySelector('.student-links__body')).gridTemplateColumns.split(' ').length
+                    galleries: [...host.querySelectorAll('.js-init-media-gallery')].every(el => !!el.swiper),
+                    columns: getComputedStyle(host.querySelector('.link-cards__body')).gridTemplateColumns.split(' ').length
                 })));
                 assert(narrow.every(item => item.scroll <= item.width + 1), JSON.stringify(narrow));
                 assert(narrow.every(item => item.directions.every(d => (item.width < 1000 ? d.direction === 'column' : d.direction.startsWith('row')) && d.scroll <= d.width + 1) && item.galleries), JSON.stringify(narrow));
                 assert.deepEqual(narrow.map(item => item.columns), [1, 1, 2, 3]);
                 assert(await page.evaluate(() => {
-                    const first = reuseHosts[0].querySelector('.js-init-student-slider');
-                    const second = reuseHosts[1].querySelector('.js-init-student-slider');
+                    const first = reuseHosts[0].querySelector('.js-init-media-gallery');
+                    const second = reuseHosts[1].querySelector('.js-init-media-gallery');
                     first.querySelector('.swiper-button-next:not(.big)').click();
                     return first.swiper.activeIndex === 1 && second.swiper.activeIndex === 0;
                 }), 'Локальные стрелки и повторный init');

@@ -1,0 +1,10 @@
+{% macro newsCard(card, title=none, tags=none) %}
+<a class="news__card" data-ui="news__card" href="{{ card.href }}">
+  <div class="news__photo">{% include "components/news-arrow.njk" %}<img{% if card.image.loading %} loading="{{ card.image.loading }}"{% endif %}{% if card.image.decoding %} decoding="{{ card.image.decoding }}"{% endif %} src="{{ card.image.src }}" alt="{{ card.image.alt }}"></div>
+  <div class="news__content">
+    <div class="news__header"><p class="news__date">{{ card.date }}</p><p class="news__title">{% if title is not none %}{{ title }}{% elif card.titleHtml %}{{ card.titleHtml | safe }}{% else %}{{ card.title }}{% endif %}</p></div>
+    {% set visibleTags = card.tags %}{% if tags is not none %}{% set visibleTags = tags %}{% endif %}
+    <div class="news__tags">{% for tag in visibleTags %}<p class="news__tag" data-ui="news__tag">{{ tag }}</p>{% endfor %}</div>
+  </div>
+</a>
+{% endmacro %}

@@ -1,0 +1,92 @@
+.department-directory {
+    margin-top: 40px;
+    margin-bottom: 140px;
+}
+
+.department-directory__container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.department-directory__tags {
+    display: flex;
+    gap: 25px;
+}
+
+
+.department-directory__institutes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 24px;
+}
+
+.department-directory__institutes[hidden],
+.content-filter-status[hidden] { display: none; }
+
+/* Устройства X-Large (большие настольные компьютеры, 1200 пикселей и выше) */
+@media (max-width: 1200px) {
+    .department-directory__institutes {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+
+
+}
+
+
+
+
+/* Устройства Large (настольные компьютеры, 992 пикселей и выше) */
+@media (max-width: 992px) {
+    .department-directory__tags {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+
+
+
+}
+
+
+
+
+/* Устройства Medium (планшеты, 768 пикселей и выше) */
+@media (max-width: 768px) {
+    .department-directory {
+        margin-bottom: 100px;
+    }
+
+    .department-directory__container {
+        gap: 24px;
+    }
+
+    .department-directory__institutes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .department-directory__tags {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+
+
+}
+
+
+
+
+/* Устройства Small (телефоны с горизонтальной ориентацией, 576 пикселей и выше) */
+@media (max-width: 576px) {
+    .department-directory__institutes {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+
+
+}

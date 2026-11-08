@@ -1,0 +1,261 @@
+{
+  "version": 1,
+  "migration": {
+    "program-exams__examples": "disclosure",
+    "program-exams__details": "disclosure__content",
+    "program-exams__item__title": "metric-card__label",
+    "program-exams__item__value": "metric-card__value",
+    "program-exams__item": "metric-card",
+    "program-exams__list": "metric-list",
+    "program-admissions": "contact-section",
+    "program-exams": "entry-requirements",
+    "program-education": "curriculum",
+    "student-directions": "feature-sections",
+    "student-direction": "feature-section",
+    "student-links": "link-cards",
+    "student-driving": "text-media",
+    "student-office": "contact-section--office",
+    "science-detail": "journal-card",
+    "science-list": "journal-list",
+    "structure-contact-card": "contact-card",
+    "structure-person-card": "person-card",
+    "structure__institute-link": "department-card__link",
+    "structure__institute": "department-card",
+    "structure__program": "education-badge",
+    "structure__tag": "filter-tag",
+    "structure": "department-directory",
+    "sotrudnik": "employee-profile",
+    "feature-section__gallery": "media-gallery",
+    "feature-section__controls": "media-gallery__controls",
+    "campus-map-page": "campus-map",
+    "js-init-student-slider": "js-init-media-gallery",
+    "department-directory__institute-title": "department-card__title",
+    "department-directory__programs": "department-card__badges"
+  },
+  "components": [
+    {
+      "name": "disclosure",
+      "template": "templates/components/disclosure.njk",
+      "css": "styles/components/disclosure.css",
+      "module": "Dropdown",
+      "hook": "disclosure"
+    },
+    {
+      "name": "accordion",
+      "template": "templates/components/accordion.njk",
+      "css": "styles/components/dropdown.css",
+      "module": "Dropdown",
+      "hook": "dropdown--item"
+    },
+    {
+      "name": "contact-section",
+      "template": "templates/components/contact-section.njk",
+      "css": "styles/components/contact-section.css",
+      "module": null,
+      "hook": null
+    },
+    {
+      "name": "feature-section",
+      "template": "templates/components/feature-section.njk",
+      "css": "styles/components/feature-sections.css",
+      "module": null,
+      "hook": null
+    },
+    {
+      "name": "media-gallery",
+      "template": "templates/components/media-gallery.njk",
+      "css": "styles/components/media-gallery.css",
+      "module": "Galleries",
+      "hook": "js-init-media-gallery"
+    },
+    {
+      "name": "journal-card",
+      "template": "templates/components/journal-card.njk",
+      "css": "styles/components/journal-card.css",
+      "module": "Dropdown",
+      "hook": "dropdown--item"
+    },
+    {
+      "name": "program-card",
+      "template": "templates/components/program-card.njk",
+      "css": "styles/components/program-card.css",
+      "module": "CatalogSearch",
+      "hook": "program-card"
+    },
+    {
+      "name": "vacancy-card",
+      "template": "templates/components/vacancy-card.njk",
+      "css": "styles/components/vacancy-card.css",
+      "module": "CatalogSearch",
+      "hook": "vacancy-card"
+    },
+    {
+      "name": "news-card",
+      "template": "templates/components/news-card.njk",
+      "css": "styles/components/news.css",
+      "module": "Pagination",
+      "hook": "news__card"
+    },
+    {
+      "name": "event-card",
+      "template": "templates/components/event-card.njk",
+      "css": "styles/components/events.css",
+      "module": "Modals",
+      "hook": "event__card"
+    },
+    {
+      "name": "metric-card",
+      "template": "templates/components/metric-card.njk",
+      "css": "styles/components/metric-card.css",
+      "module": null,
+      "hook": null
+    },
+    {
+      "name": "catalog-filter-group",
+      "template": "templates/components/catalog-filter-group.njk",
+      "css": "styles/components/catalog-filters.css",
+      "module": "CatalogSearch",
+      "hook": null
+    },
+    {
+      "name": "catalog-search",
+      "template": "templates/components/catalog-search.njk",
+      "css": "styles/components/catalog-filters.css",
+      "module": "CatalogSearch",
+      "hook": "catalog-search__input"
+    },
+    {
+      "name": "campus-filter",
+      "template": "templates/components/campus-filter.njk",
+      "css": "styles/components/campus-map.css",
+      "module": "CampusMap",
+      "hook": "data-campus-filter"
+    },
+    {
+      "name": "action",
+      "template": "templates/components/action.njk",
+      "css": "styles/components/buttons.css",
+      "module": "Modals",
+      "hook": "button-modal"
+    },
+    {
+      "name": "contact-card",
+      "template": "templates/components/contact-card.njk",
+      "css": "styles/components/contact-card.css",
+      "module": null,
+      "hook": null
+    },
+    {
+      "name": "person-card",
+      "template": "templates/components/person-card.njk",
+      "css": "styles/components/person-card.css",
+      "module": null,
+      "hook": null
+    },
+    {
+      "name": "training-program-card",
+      "template": "templates/components/training-program-card.njk",
+      "css": "styles/components/training-program-card.css",
+      "module": "Tabs",
+      "hook": "training-program-card"
+    },
+    {
+      "name": "department-card",
+      "template": "templates/components/department-card.njk",
+      "css": "styles/components/department-card.css",
+      "module": "Tabs",
+      "hook": "structure__institutes"
+    },
+    {
+      "name": "education-badge",
+      "template": null,
+      "css": "styles/components/education-badge.css",
+      "module": null,
+      "hook": null
+    },
+    {
+      "name": "filter-tag",
+      "template": null,
+      "css": "styles/components/filter-tag.css",
+      "module": "Tabs",
+      "hook": "structure__tags"
+    },
+    {
+      "name": "curriculum",
+      "template": "templates/components/curriculum.njk",
+      "css": "styles/components/curriculum.css",
+      "module": "Dropdown",
+      "hook": "dropdown--item"
+    },
+    {
+      "name": "text-media",
+      "template": "templates/components/text-media.njk",
+      "css": "styles/components/text-media.css",
+      "module": null,
+      "hook": null
+    },
+    {
+      "name": "entry-requirements",
+      "template": "templates/components/entry-requirements.njk",
+      "css": "styles/components/entry-requirements.css",
+      "module": null,
+      "hook": null
+    },
+    {
+      "name": "link-cards",
+      "template": "templates/components/link-cards.njk",
+      "css": "styles/components/link-cards.css",
+      "module": null,
+      "hook": null
+    },
+    {
+      "name": "employee-profile",
+      "template": "templates/components/employee-summary.njk",
+      "css": "styles/components/employee-profile.css",
+      "module": null,
+      "hook": null
+    },
+    {
+      "name": "campus-map",
+      "template": null,
+      "css": "styles/components/campus-map.css",
+      "module": "CampusMap",
+      "hook": "data-campus-map"
+    },
+    {
+      "name": "structure-gallery",
+      "template": "templates/components/structure-gallery.njk",
+      "css": "styles/components/structure-gallery.css",
+      "module": "Galleries",
+      "hook": "js-init-structure-gallery"
+    },
+    {
+      "name": "contact-list",
+      "template": "templates/components/contact-list.njk",
+      "css": "styles/components/contact-list.css",
+      "module": null,
+      "hook": null
+    },
+    {
+      "name": "project-card",
+      "template": "templates/components/flagship-card.njk",
+      "css": "styles/components/flagship-projects.css",
+      "module": null,
+      "hook": null
+    },
+    {
+      "name": "teaser-card",
+      "template": "templates/components/ficher.njk",
+      "css": "styles/components/fichers.css",
+      "module": null,
+      "hook": null
+    }
+  ],
+  "shellServices": [
+    "header",
+    "footer",
+    "cookie-banner",
+    "header-search",
+    "site-search"
+  ]
+}

@@ -1,0 +1,11 @@
+{% from "components/media-gallery.njk" import mediaGallery %}
+{% macro featureSection(feature) %}
+<article class="{{ feature.classes }}">
+  <div class="feature-section__content">
+    <h3 class="{{ feature.titleClasses }}">{{ feature.title }}</h3>
+    <p class="feature-section__description">{{ feature.descriptionHtml | safe }}</p>
+    <a class="{{ feature.button.classes }}" href="{{ feature.button.href }}">{{ feature.button.text }}</a>
+  </div>
+  {{ mediaGallery(feature.images) }}
+</article>
+{% endmacro %}

@@ -17,7 +17,10 @@
 @import url('components/fichers.css');
 @import url('components/slider.css');
 @import url('components/events.css');
-@import url('components/structure.css');
+@import url('components/department-directory.css');
+@import url('components/department-card.css');
+@import url('components/education-badge.css');
+@import url('components/filter-tag.css');
 @import url('components/news.css');
 
 /* Основные компоненты */
@@ -31,18 +34,21 @@
 
 /* Страница программы */
 @import url('components/program-about.css');
-@import url('components/program-amissions.css');
-@import url('components/program-exams.css');
-@import url('components/program-education.css');
+@import url('components/contact-section.css');
+@import url('components/entry-requirements.css');
+@import url('components/curriculum.css');
+@import url('components/disclosure.css');
+@import url('components/metric-card.css');
 
 @import url('components/preparatory-courses.css');
 @import url('components/flagship-projects.css');
 @import url('components/university-statistics.css');
 
 /* Страница Студенческая жизнь */
-@import url('components/student-directions.css');
-@import url('components/student-links.css');
-@import url('components/student-driving.css');
+@import url('components/feature-sections.css');
+@import url('components/media-gallery.css');
+@import url('components/link-cards.css');
+@import url('components/text-media.css');
 
 
 /* Каталоги вакансий и образовательных программ */
@@ -53,13 +59,21 @@
 @import url('components/document-list.css');
 @import url('components/mobile-filter-panel.css');
 @import url('components/campus-map.css');
+@import url('components/map-page.css');
 
 /* Страница научной деятельности */
-@import url('components/science.css');
+@import url('components/journal-card.css');
+@import url('components/science-page.css');
 
 /* Детальная страница сотнрудника */
 @import url('components/detail-sotrudnik.css');
 @import url('components/detail-structure.css');
+@import url('components/contact-card.css');
+@import url('components/contact-list.css');
+@import url('components/person-card.css');
+@import url('components/training-program-card.css');
+@import url('components/structure-gallery.css');
+@import url('components/employee-profile.css');
 
 /* Детальная страница вакансии */
 @import url('components/detail-vacancy.css');
@@ -136,7 +150,7 @@ a, a:visited {
 .ui-icon { display: inline-block; width: 24px; height: 24px; flex-shrink: 0; vertical-align: middle; }
 :where(a, button, input, label, [role="button"]) { -webkit-tap-highlight-color: transparent; }
 
-:where(a[href], button, input, select, textarea, [tabindex="0"]):focus-visible {
+:where(a[href], button, summary, input, select, textarea, [tabindex="0"]):focus-visible {
     outline: 2px solid var(--subprimary-color-1);
     outline-offset: 3px;
 }
@@ -228,38 +242,38 @@ a, a:visited {
 }
 
 /* Двухцветное кольцо видно и на белом, и на синем фоне. */
-:where(a[href], button, input, select, textarea, [tabindex="0"]):focus-visible {
+:where(a[href], button, summary, input, select, textarea, [tabindex="0"]):focus-visible {
     outline: 3px solid var(--subprimary-color-1);
     outline-offset: 3px;
     box-shadow: 0 0 0 3px var(--white-shade-1);
 }
 .information-banner a:has(.btn) { border-radius: 100px; }
-:is(.ficher, .flagship-project__card, .training-program-card, .structure__institute,
-    .student-links__item, .news__card, .event__card, .program-card, .vacancy-card) {
+:is(.ficher, .flagship-project__card, .training-program-card, .department-card,
+    .link-cards__item, .news__card, .event__card, .program-card, .vacancy-card) {
     isolation: isolate;
     outline: 2px solid transparent;
     outline-offset: -2px;
     -webkit-tap-highlight-color: transparent;
     transition: outline-color 200ms ease, box-shadow 200ms ease, background-color 200ms ease, color 200ms ease, transform 420ms ease, grid-template-rows 420ms ease, gap 420ms ease;
 }
-:is(.ficher, .flagship-project__card, .training-program-card, .structure__institute,
-    .student-links__item, .news__card, .event__card, .program-card, .vacancy-card):is(:active, :focus-visible, :has(:focus-visible)) {
+:is(.ficher, .flagship-project__card, .training-program-card, .department-card,
+    .link-cards__item, .news__card, .event__card, .program-card, .vacancy-card):is(:active, :focus-visible, :has(:focus-visible)) {
     outline: 2px solid var(--card-focus-color, var(--subprimary-color-1));
     outline-offset: -2px;
     box-shadow: 0 4px 12px rgb(9 65 136 / 18%);
 }
-:is(.ficher, .flagship-project__card, .training-program-card, .structure__institute,
-    .student-links__item)::before,
-:is(.ficher, .flagship-project__card, .training-program-card, .structure__institute,
-    .student-links__item)::after {
+:is(.ficher, .flagship-project__card, .training-program-card, .department-card,
+    .link-cards__item)::before,
+:is(.ficher, .flagship-project__card, .training-program-card, .department-card,
+    .link-cards__item)::after {
     z-index: -1;
 }
-:is(.flagship-project__card, .training-program-card, .structure__institute):is(:active, :is(:focus-visible, :has(:focus-visible)))::before,
-:is(.flagship-project__card, .training-program-card, .structure__institute):is(:active, :is(:focus-visible, :has(:focus-visible)))::after {
+:is(.flagship-project__card, .training-program-card, .department-card):is(:active, :is(:focus-visible, :has(:focus-visible)))::before,
+:is(.flagship-project__card, .training-program-card, .department-card):is(:active, :is(:focus-visible, :has(:focus-visible)))::after {
     transform: scale(1.08);
 }
 @media (prefers-reduced-motion: reduce) {
     .training-program-card h3 a { transition: none; }
-    :is(.ficher, .flagship-project__card, .training-program-card, .structure__institute,
-        .student-links__item, .news__card, .event__card, .program-card, .vacancy-card) { transition: none; }
+    :is(.ficher, .flagship-project__card, .training-program-card, .department-card,
+        .link-cards__item, .news__card, .event__card, .program-card, .vacancy-card) { transition: none; }
 }

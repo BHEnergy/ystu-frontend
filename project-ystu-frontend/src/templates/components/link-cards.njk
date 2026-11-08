@@ -1,0 +1,6 @@
+{% macro linkCards(cards) %}
+<section class="{{ cards.classes }}">
+  <h2 class="title link-cards__title">{{ cards.title }}</h2>
+  <ul class="link-cards__body d-grid grid-list-3">{% for link in cards.links %}<li class="link-cards__item"><a href="{{ link.href }}">{{ link.label }}</a></li>{% endfor %}</ul>
+</section>
+{% endmacro %}

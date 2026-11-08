@@ -168,7 +168,8 @@
         });
 
         /* Слайдеры студенческая жизнь */
-        find(".js-init-student-slider").forEach((slider) => {
+        // Старый hook оставлен для совместимости ранее переданных шаблонов.
+        find(".js-init-media-gallery, .js-init-student-slider").forEach((slider) => {
             const prevButton = slider.querySelector('.swiper-button-prev:not([data-ui~="big"])');
             const nextButton = slider.querySelector('.swiper-button-next:not([data-ui~="big"])');
             const prevButtonBig = slider.querySelector('[data-slider-control="prev-big"]');
@@ -274,6 +275,8 @@
 
         // Пагинация учитывает набор, подготовленный обработчиками вкладок и тем.
         await loadScripts([["tabs.js", "Tabs"]]);
+        // Демонстрационные данные отделены от переиспользуемой логики карты.
+        await loadScripts([["../data/campus-objects.js", "CampusMapData"]]);
 
         await loadScripts([
             ["pagination.js", "Pagination"],
@@ -313,7 +316,7 @@
         ready,
         async init(scope = document) {
             await ready;
-            for (const name of ['Tabs', 'Pagination', 'Dropdown', 'FilterPanel', 'CatalogSearch', 'Modals', 'Validation']) {
+            for (const name of ['Tabs', 'Pagination', 'Dropdown', 'FilterPanel', 'CatalogSearch', 'CampusMap', 'Modals', 'Validation']) {
                 window[name]?.init?.(scope);
             }
             window.Content?.prepare?.(scope);

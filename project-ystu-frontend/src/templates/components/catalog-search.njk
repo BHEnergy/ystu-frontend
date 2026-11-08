@@ -1,15 +1,7 @@
-<form class="catalog-search" method="get" role="search">
-                  <input
-                    class="catalog-search__input" data-ui="catalog-search__input"
-                    name="query"
-                    type="search"
-                    placeholder="найти направление"
-                    aria-label="Найти направление"
-                  /><button
-                    class="catalog-search__button"
-                    type="submit"
-                    aria-label="Найти"
-                  >
-                    <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#vacancy-search"></use></svg>
-                  </button>
-                </form>
+{% macro catalogSearch(search) %}
+{% if search.form %}<form class="catalog-search" method="get" role="search">{% else %}<div class="catalog-search">{% endif %}
+  {% if search.caption %}<p>{{ search.caption }}</p>{% endif %}
+  <input class="catalog-search__input" data-ui="catalog-search__input" name="{{ search.name }}" type="search"{% if search.placeholder %} placeholder="{{ search.placeholder }}"{% endif %} aria-label="{{ search.label }}">
+  <button class="catalog-search__button" type="submit" aria-label="Найти"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#vacancy-search"></use></svg></button>
+{% if search.form %}</form>{% else %}</div>{% endif %}
+{% endmacro %}

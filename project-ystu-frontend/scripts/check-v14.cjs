@@ -97,7 +97,7 @@ for (const root of [repo, path.join(project, 'dist')]) {
                     }
                     if (width === 1280) await page.locator('.program-card--wide').first().screenshot({ path: path.join(output, 'wide-program.png'), style: '.header, .cookie-banner { visibility: hidden !important; }' });
                     await visit('student-life', width);
-                    const waves = await page.locator('.student-links__item').evaluateAll(cards => cards.map(card => {
+                    const waves = await page.locator('.link-cards__item').evaluateAll(cards => cards.map(card => {
                         const style = getComputedStyle(card, '::after');
                         return { width: parseFloat(style.width), height: parseFloat(style.height), mask: style.maskSize || style.webkitMaskSize };
                     }));
@@ -107,7 +107,7 @@ for (const root of [repo, path.join(project, 'dist')]) {
                         assert(Math.abs(wave.width / wave.height - ratios[index]) < .015, `wave ${index + 1} distorted at ${width}`);
                         assert.equal(wave.mask, 'contain');
                     });
-                    if ([320, 390, 500, 1920].includes(width)) await page.locator('.student-links').screenshot({ path: path.join(output, `waves-${width}.png`), style: '.header, .cookie-banner { visibility: hidden !important; }' });
+                    if ([320, 390, 500, 1920].includes(width)) await page.locator('.link-cards').screenshot({ path: path.join(output, `waves-${width}.png`), style: '.header, .cookie-banner { visibility: hidden !important; }' });
                     await visit('news-events', width);
                     const panels = page.locator('.pagination:visible');
                     assert(await panels.count() > 0);
@@ -127,7 +127,7 @@ for (const root of [repo, path.join(project, 'dist')]) {
                     console.log(`OK ${engineName}/${name}/${width}: programs, six waves, pagination`);
                 }
                 await visit('structure', 1280);
-                const transition = await page.locator('.structure__tag').first().evaluate(el => ({ duration: getComputedStyle(el).transitionDuration, easing: getComputedStyle(el).transitionTimingFunction }));
+                const transition = await page.locator('.filter-tag').first().evaluate(el => ({ duration: getComputedStyle(el).transitionDuration, easing: getComputedStyle(el).transitionTimingFunction }));
                 await visit('detail-structure', 1280);
                 assert.deepEqual(await page.locator('.structure-detail__tab').first().evaluate(el => ({ duration: getComputedStyle(el).transitionDuration, easing: getComputedStyle(el).transitionTimingFunction })), transition, 'matching tab transitions');
                 assert(transition.duration.split(',').every(duration => duration.trim() === '0.2s'));

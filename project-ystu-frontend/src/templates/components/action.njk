@@ -1,0 +1,3 @@
+{% macro action(button) %}
+{% if button.href %}<a class="{{ button.classes }}" href="{{ button.href }}">{{ button.label }}</a>{% else %}<button type="{{ button.type or 'button' }}" class="{{ button.classes }}"{% if button.ui %} data-ui="{{ button.ui }}"{% endif %}{% if button.modal %} data-modal="{{ button.modal }}"{% endif %}>{{ button.label }}</button>{% endif %}
+{% endmacro %}

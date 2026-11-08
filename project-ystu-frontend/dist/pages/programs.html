@@ -312,179 +312,93 @@
             <aside class="listing-page__sidebar">
               <h2 class="catalog-filters__title">Фильтры</h2>
               <form class="catalog-filters" method="get">
-                <div class="catalog-search">
-                  <p>найти направление</p>
-                  <input
-                    class="catalog-search__input" data-ui="catalog-search__input"
-                    name="query"
-                    type="search"
-                    aria-label="Найти направление"
-                  /><button
-                    class="catalog-search__button"
-                    type="submit"
-                    aria-label="Найти"
-                  >
-                    <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#vacancy-search"></use></svg>
-                  </button>
-                </div>
-                <div class="catalog-filter-group">
-                  <div class="catalog-filter-group__title">
-                    уровень образования
-                  </div>
-                  <div class="catalog-filter-group__options">
-                    <label class="catalog-filter-option"
-                      ><input
-                        type="checkbox"
-                        name="education_level[]"
-                        value="bachelor"
-                      />Бакалавриат</label
-                    ><label class="catalog-filter-option"
-                      ><input
-                        type="checkbox"
-                        name="education_level[]"
-                        value="specialist"
-                      />Специалитет</label
-                    ><label class="catalog-filter-option"
-                      ><input
-                        type="checkbox"
-                        name="education_level[]"
-                        value="master"
-                        checked
-                      />Магистратура</label
-                    >
-                  </div>
-                </div>
-                <div class="catalog-filter-group">
-                  <div class="catalog-filter-group__title">
-                    форма обучения
-                  </div>
-                  <div class="catalog-filter-group__options">
-                    <label class="catalog-filter-option"
-                      ><input
-                        type="checkbox"
-                        name="study_form[]"
-                        value="full_time"
-                        checked
-                      />Очная</label
-                    ><label class="catalog-filter-option"
-                      ><input
-                        type="checkbox"
-                        name="study_form[]"
-                        value="extramural"
-                      />Заочная</label
-                    ><label class="catalog-filter-option"
-                      ><input
-                        type="checkbox"
-                        name="study_form[]"
-                        value="part_time"
-                      />Очно-заочная</label
-                    >
-                  </div>
-                </div>
-                <div class="catalog-filter-group">
-                  <div class="catalog-filter-group__title">
-                    основа обучения
-                  </div>
-                  <div class="catalog-filter-group__options">
-                    <label class="catalog-filter-option"
-                      ><input
-                        type="checkbox"
-                        name="financing[]"
-                        value="budget"
-                      />Бюджетные места</label
-                    ><label class="catalog-filter-option"
-                      ><input
-                        type="checkbox"
-                        name="financing[]"
-                        value="target"
-                      />Целевые места</label
-                    ><label class="catalog-filter-option"
-                      ><input
-                        type="checkbox"
-                        name="financing[]"
-                        value="paid"
-                      />Платные места</label
-                    >
-                  </div>
-                </div>
-                <div class="catalog-filter-group">
-                  <div class="catalog-filter-group__title">
-                    вступительные испытания
-                  </div>
-                  <div class="catalog-filter-group__options">
-                    <label class="catalog-filter-option"
-                      ><input
-                        type="checkbox"
-                        name="entrance_exam[]"
-                        value="russian"
-                        checked
-                      />Русский язык</label
-                    ><label class="catalog-filter-option"
-                      ><input
-                        type="checkbox"
-                        name="entrance_exam[]"
-                        value="mathematics"
-                        checked
-                      />Математика</label
-                    ><label class="catalog-filter-option"
-                      ><input
-                        type="checkbox"
-                        name="entrance_exam[]"
-                        value="physics"
-                      />Физика</label
-                    ><label class="catalog-filter-option"
-                      ><input
-                        type="checkbox"
-                        name="entrance_exam[]"
-                        value="social_studies"
-                      />Обществознание</label
-                    ><label class="catalog-filter-option"
-                      ><input
-                        type="checkbox"
-                        name="entrance_exam[]"
-                        value="history"
-                        checked
-                      />История</label
-                    ><label class="catalog-filter-option"
-                      ><input
-                        type="checkbox"
-                        name="entrance_exam[]"
-                        value="informatics"
-                      />Информатика</label
-                    ><label class="catalog-filter-option"
-                      ><input
-                        type="checkbox"
-                        name="entrance_exam[]"
-                        value="foreign_language"
-                      />Иностранный язык</label
-                    ><label class="catalog-filter-option"
-                      ><input
-                        type="checkbox"
-                        name="entrance_exam[]"
-                        value="chemistry"
-                      />Химия</label
-                    ><label class="catalog-filter-option"
-                      ><input
-                        type="checkbox"
-                        name="entrance_exam[]"
-                        value="geography"
-                      />География</label
-                    ><label class="catalog-filter-option"
-                      ><input
-                        type="checkbox"
-                        name="entrance_exam[]"
-                        value="creative"
-                      />Творческое испытание</label
-                    >
-                  </div>
-                </div>
+
+
+<div class="catalog-search">
+  <p>найти направление</p>
+  <input class="catalog-search__input" data-ui="catalog-search__input" name="query" type="search" aria-label="Найти направление">
+  <button class="catalog-search__button" type="submit" aria-label="Найти"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#vacancy-search"></use></svg></button>
+</div>
+
+
+
+<div class="catalog-filter-group">
+  <div class="catalog-filter-group__title">уровень образования</div>
+  <div class="catalog-filter-group__options">
+
+    <label class="catalog-filter-option"><input type="checkbox" name="education_level[]" value="bachelor">Бакалавриат</label>
+
+    <label class="catalog-filter-option"><input type="checkbox" name="education_level[]" value="specialist">Специалитет</label>
+
+    <label class="catalog-filter-option"><input type="checkbox" name="education_level[]" value="master" checked>Магистратура</label>
+
+  </div>
+</div>
+
+
+
+<div class="catalog-filter-group">
+  <div class="catalog-filter-group__title">форма обучения</div>
+  <div class="catalog-filter-group__options">
+
+    <label class="catalog-filter-option"><input type="checkbox" name="study_form[]" value="full_time" checked>Очная</label>
+
+    <label class="catalog-filter-option"><input type="checkbox" name="study_form[]" value="extramural">Заочная</label>
+
+    <label class="catalog-filter-option"><input type="checkbox" name="study_form[]" value="part_time">Очно-заочная</label>
+
+  </div>
+</div>
+
+
+
+<div class="catalog-filter-group">
+  <div class="catalog-filter-group__title">основа обучения</div>
+  <div class="catalog-filter-group__options">
+
+    <label class="catalog-filter-option"><input type="checkbox" name="financing[]" value="budget">Бюджетные места</label>
+
+    <label class="catalog-filter-option"><input type="checkbox" name="financing[]" value="target">Целевые места</label>
+
+    <label class="catalog-filter-option"><input type="checkbox" name="financing[]" value="paid">Платные места</label>
+
+  </div>
+</div>
+
+
+
+<div class="catalog-filter-group">
+  <div class="catalog-filter-group__title">вступительные испытания</div>
+  <div class="catalog-filter-group__options">
+
+    <label class="catalog-filter-option"><input type="checkbox" name="entrance_exam[]" value="russian" checked>Русский язык</label>
+
+    <label class="catalog-filter-option"><input type="checkbox" name="entrance_exam[]" value="mathematics" checked>Математика</label>
+
+    <label class="catalog-filter-option"><input type="checkbox" name="entrance_exam[]" value="physics">Физика</label>
+
+    <label class="catalog-filter-option"><input type="checkbox" name="entrance_exam[]" value="social_studies">Обществознание</label>
+
+    <label class="catalog-filter-option"><input type="checkbox" name="entrance_exam[]" value="history" checked>История</label>
+
+    <label class="catalog-filter-option"><input type="checkbox" name="entrance_exam[]" value="informatics">Информатика</label>
+
+    <label class="catalog-filter-option"><input type="checkbox" name="entrance_exam[]" value="foreign_language">Иностранный язык</label>
+
+    <label class="catalog-filter-option"><input type="checkbox" name="entrance_exam[]" value="chemistry">Химия</label>
+
+    <label class="catalog-filter-option"><input type="checkbox" name="entrance_exam[]" value="geography">География</label>
+
+    <label class="catalog-filter-option"><input type="checkbox" name="entrance_exam[]" value="creative">Творческое испытание</label>
+
+  </div>
+</div>
+
                 <div class="catalog-filters__actions">
-                  <button
-                    class="btn btn--default btn--m catalog-filters__apply"
-                    type="submit"
-                  >
-                    Применить</button
-                  ><button class="btn catalog-filters__reset" type="reset">
+
+
+<button type="submit" class="btn btn--default btn--m catalog-filters__apply">Применить</button>
+<button class="btn catalog-filters__reset" type="reset">
                     Очистить
                   </button>
                 </div>
@@ -493,21 +407,13 @@
 
             <section aria-label="Список образовательных программ">
               <div class="listing-page__mobile-tools" data-ui="listing-page__mobile-tools">
-                <form class="catalog-search" method="get" role="search">
-                  <input
-                    class="catalog-search__input" data-ui="catalog-search__input"
-                    name="query"
-                    type="search"
-                    placeholder="найти направление"
-                    aria-label="Найти направление"
-                  /><button
-                    class="catalog-search__button"
-                    type="submit"
-                    aria-label="Найти"
-                  >
-                    <svg   class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#vacancy-search"></use></svg>
-                  </button>
-                </form>
+
+
+<form class="catalog-search" method="get" role="search">
+
+  <input class="catalog-search__input" data-ui="catalog-search__input" name="query" type="search" placeholder="найти направление" aria-label="Найти направление">
+  <button class="catalog-search__button" type="submit" aria-label="Найти"><svg class="ui-icon" aria-hidden="true" focusable="false"><use href="../images/svg/sprite.svg#vacancy-search"></use></svg></button>
+</form>
 
                 <button
                   class="catalog-filters-trigger"
@@ -520,246 +426,120 @@
                 </button>
               </div>
               <div class="listing-page__results" data-ui="listing-page__results">
-                <article class="program-card" data-ui="program-card" data-catalog-filters='{"education_level":["bachelor"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","creative"]}'>
-<div class="program-card__tags">
-                        <span class="program-card__tag program-card__tag--bacalavr"
-                          >Бакалавриат</span
-                        ><span
-                          class="program-card__tag program-card__tag--outline"
-                          >Очно</span
-                        ><span
-                          class="program-card__tag program-card__tag--outline program-card__tag--accreditation"
-                          >Государственная аккредитация</span
-                        >
-                      </div>
-                  <div class="program-card__content">
-                    <div class = "program-card__body">
-                      <div class="program-card__heading">
-                        <p class="program-card__code">07.03.01</p>
-                        <h2 class="program-card__title"><a href="program.html">Архитектура</a></h2>
-                      </div>
-                    </div>
-                    <div class="program-card__profiles">
-                      <p class="program-card__profiles-title">Профили</p>
-                      <ul class="program-card__profiles-list">
-                        <li>Профиль 1</li>
-                        <li>Профиль 2</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <dl class="program-card__stats">
-                    <div class="program-card__stat">
-                      <dt>Бюджетные места</dt>
-                      <dd>16</dd>
-                    </div>
-                    <div class="program-card__stat">
-                      <dt>Целевые места</dt>
-                      <dd>16</dd>
-                    </div>
-                    <div class="program-card__stat">
-                      <dt>Платные места</dt>
-                      <dd>50</dd>
-                    </div>
-                    <div class="program-card__stat">
-                      <dt>Срок обучения</dt>
-                      <dd>5 лет</dd>
-                    </div>
-                  </dl>
-                </article>
-                <article class="program-card" data-ui="program-card" data-catalog-filters='{"education_level":["bachelor"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
-<div class="program-card__tags">
-                      <span class="program-card__tag program-card__tag--bacalavr"
-                        >Бакалавриат</span
-                      ><span
-                        class="program-card__tag program-card__tag--outline"
-                        >Очно</span
-                      ><span
-                        class="program-card__tag program-card__tag--outline program-card__tag--accreditation"
-                        >Государственная аккредитация</span
-                      >
-                    </div>
-                  <div class="program-card__content">
-                    <div class = "program-card__body">
-                    <div class="program-card__heading">
-                      <p class="program-card__code">07.03.01</p>
-                      <h2 class="program-card__title"><a href="program.html">Дизайн</a></h2>
-                    </div>
-                    </div>
-                    <div class="program-card__profiles">
-                      <p class="program-card__profiles-title">Профили</p>
-                      <ul class="program-card__profiles-list">
-                        <li>Профиль 1</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <dl class="program-card__stats">
-                    <div class="program-card__stat">
-                      <dt>Бюджетные места</dt>
-                      <dd>16</dd>
-                    </div>
-                    <div class="program-card__stat">
-                      <dt>Целевые места</dt>
-                      <dd>16</dd>
-                    </div>
-                    <div class="program-card__stat">
-                      <dt>Платные места</dt>
-                      <dd>50</dd>
-                    </div>
-                    <div class="program-card__stat">
-                      <dt>Срок обучения</dt>
-                      <dd>5 лет</dd>
-                    </div>
-                  </dl>
-                </article>
-                <article class="program-card program-card--wide" data-ui="program-card" data-catalog-filters='{"education_level":["master"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
-<div class="program-card__tags">
-                      <span class="program-card__tag program-card__tag--magistratura"
-                        >Магистратура</span
-                      ><span
-                        class="program-card__tag program-card__tag--outline"
-                        >Очно</span
-                      ><span
-                        class="program-card__tag program-card__tag--outline program-card__tag--accreditation"
-                        >Государственная аккредитация</span
-                      >
-                    </div>
-                  <div class="program-card__content">
-                    <div class = "program-card__body">
-                    <div class="program-card__heading">
-                      <p class="program-card__code">15.04.02</p>
-                      <h2 class="program-card__title"><a href="program.html">
-                        Технологические машины и оборудование
-                      </a></h2>
-                    </div>
-                    </div>
-                    <div class="program-card__profiles">
-                      <p class="program-card__profiles-title">Профили</p>
-                      <ul class="program-card__profiles-list">
-                        <li>Профиль 1</li>
-                        <li>Профиль 2</li>
-                        <li>Профиль 3</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <dl class="program-card__stats">
-                    <div class="program-card__stat">
-                      <dt>Бюджетные места</dt>
-                      <dd>16</dd>
-                    </div>
-                    <div class="program-card__stat">
-                      <dt>Целевые места</dt>
-                      <dd>16</dd>
-                    </div>
-                    <div class="program-card__stat">
-                      <dt>Платные места</dt>
-                      <dd>50</dd>
-                    </div>
-                    <div class="program-card__stat">
-                      <dt>Срок обучения</dt>
-                      <dd>2 года</dd>
-                    </div>
-                  </dl>
-                </article>
 
-                <article class="program-card program-card--wide" data-ui="program-card" data-catalog-filters='{"education_level":["master"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
-<div class="program-card__tags">
-                      <span class="program-card__tag program-card__tag--magistratura"
-                        >Магистратура</span
-                      ><span
-                        class="program-card__tag program-card__tag--outline"
-                        >Очно</span
-                      ><span
-                        class="program-card__tag program-card__tag--outline program-card__tag--accreditation"
-                        >Государственная аккредитация</span
-                      >
-                    </div>
-                  <div class="program-card__content">
-                    <div class = "program-card__body">
-                    <div class="program-card__heading">
-                      <p class="program-card__code">15.04.02</p>
-                      <h2 class="program-card__title"><a href="program.html">
-                        Технологические машины и оборудование
-                      </a></h2>
-                    </div>
-                    </div>
-                    <div class="program-card__profiles">
-                      <p class="program-card__profiles-title">Профили</p>
-                      <ul class="program-card__profiles-list">
-                        <li>Профиль 1</li>
-                        <li>Профиль 2</li>
-                        <li>Профиль 3</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <dl class="program-card__stats">
-                    <div class="program-card__stat">
-                      <dt>Бюджетные места</dt>
-                      <dd>16</dd>
-                    </div>
-                    <div class="program-card__stat">
-                      <dt>Целевые места</dt>
-                      <dd>16</dd>
-                    </div>
-                    <div class="program-card__stat">
-                      <dt>Платные места</dt>
-                      <dd>50</dd>
-                    </div>
-                    <div class="program-card__stat">
-                      <dt>Срок обучения</dt>
-                      <dd>2 года</dd>
-                    </div>
-                  </dl>
-                </article>
 
-                <article class="program-card program-card--wide" data-ui="program-card" data-catalog-filters='{"education_level":["master"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
-<div class="program-card__tags">
-                      <span class="program-card__tag program-card__tag--magistratura"
-                        >Магистратура</span
-                      ><span
-                        class="program-card__tag program-card__tag--outline"
-                        >Очно</span
-                      ><span
-                        class="program-card__tag program-card__tag--outline program-card__tag--accreditation"
-                        >Государственная аккредитация</span
-                      >
-                    </div>
-                  <div class="program-card__content">
-                    <div class = "program-card__body">
-                    <div class="program-card__heading">
-                      <p class="program-card__code">15.04.02</p>
-                      <h2 class="program-card__title"><a href="program.html">
-                        Технологические машины и оборудование
-                      </a></h2>
-                    </div>
-                    </div>
-                    <div class="program-card__profiles">
-                      <p class="program-card__profiles-title">Профили</p>
-                      <ul class="program-card__profiles-list">
-                        <li>Профиль 1</li>
-                        <li>Профиль 2</li>
-                        <li>Профиль 3</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <dl class="program-card__stats">
-                    <div class="program-card__stat">
-                      <dt>Бюджетные места</dt>
-                      <dd>16</dd>
-                    </div>
-                    <div class="program-card__stat">
-                      <dt>Целевые места</dt>
-                      <dd>16</dd>
-                    </div>
-                    <div class="program-card__stat">
-                      <dt>Платные места</dt>
-                      <dd>50</dd>
-                    </div>
-                    <div class="program-card__stat">
-                      <dt>Срок обучения</dt>
-                      <dd>2 года</dd>
-                    </div>
-                  </dl>
-                </article>
+<article class="program-card" data-ui="program-card" data-catalog-filters="{&quot;education_level&quot;:[&quot;bachelor&quot;],&quot;study_form&quot;:[&quot;full_time&quot;],&quot;financing&quot;:[&quot;budget&quot;,&quot;target&quot;,&quot;paid&quot;],&quot;entrance_exam&quot;:[&quot;russian&quot;,&quot;mathematics&quot;,&quot;creative&quot;]}">
+  <div class="program-card__tags">
+    <span class="program-card__tag program-card__tag--bacalavr">Бакалавриат</span><span class="program-card__tag program-card__tag--outline">Очно</span><span class="program-card__tag program-card__tag--outline program-card__tag--accreditation">Государственная аккредитация</span>
+  </div>
+  <div class="program-card__content">
+    <div class="program-card__body">
+      <div class="program-card__heading">
+        <p class="program-card__code">07.03.01</p>
+        <h2 class="program-card__title"><a href="program.html">Архитектура</a></h2>
+      </div>
+    </div>
+    <div class="program-card__profiles">
+      <p class="program-card__profiles-title">Профили</p>
+      <ul class="program-card__profiles-list"><li>Профиль 1</li><li>Профиль 2</li></ul>
+    </div>
+  </div>
+  <dl class="program-card__stats">
+    <div class="program-card__stat"><dt>Бюджетные места</dt><dd>16</dd></div><div class="program-card__stat"><dt>Целевые места</dt><dd>16</dd></div><div class="program-card__stat"><dt>Платные места</dt><dd>50</dd></div><div class="program-card__stat"><dt>Срок обучения</dt><dd>5 лет</dd></div>
+  </dl>
+</article>
+
+
+
+<article class="program-card" data-ui="program-card" data-catalog-filters="{&quot;education_level&quot;:[&quot;bachelor&quot;],&quot;study_form&quot;:[&quot;full_time&quot;],&quot;financing&quot;:[&quot;budget&quot;,&quot;target&quot;,&quot;paid&quot;],&quot;entrance_exam&quot;:[&quot;russian&quot;,&quot;mathematics&quot;,&quot;physics&quot;]}">
+  <div class="program-card__tags">
+    <span class="program-card__tag program-card__tag--bacalavr">Бакалавриат</span><span class="program-card__tag program-card__tag--outline">Очно</span><span class="program-card__tag program-card__tag--outline program-card__tag--accreditation">Государственная аккредитация</span>
+  </div>
+  <div class="program-card__content">
+    <div class="program-card__body">
+      <div class="program-card__heading">
+        <p class="program-card__code">07.03.01</p>
+        <h2 class="program-card__title"><a href="program.html">Дизайн</a></h2>
+      </div>
+    </div>
+    <div class="program-card__profiles">
+      <p class="program-card__profiles-title">Профили</p>
+      <ul class="program-card__profiles-list"><li>Профиль 1</li></ul>
+    </div>
+  </div>
+  <dl class="program-card__stats">
+    <div class="program-card__stat"><dt>Бюджетные места</dt><dd>16</dd></div><div class="program-card__stat"><dt>Целевые места</dt><dd>16</dd></div><div class="program-card__stat"><dt>Платные места</dt><dd>50</dd></div><div class="program-card__stat"><dt>Срок обучения</dt><dd>5 лет</dd></div>
+  </dl>
+</article>
+
+
+
+<article class="program-card program-card--wide" data-ui="program-card" data-catalog-filters="{&quot;education_level&quot;:[&quot;master&quot;],&quot;study_form&quot;:[&quot;full_time&quot;],&quot;financing&quot;:[&quot;budget&quot;,&quot;target&quot;,&quot;paid&quot;],&quot;entrance_exam&quot;:[&quot;russian&quot;,&quot;mathematics&quot;,&quot;physics&quot;]}">
+  <div class="program-card__tags">
+    <span class="program-card__tag program-card__tag--magistratura">Магистратура</span><span class="program-card__tag program-card__tag--outline">Очно</span><span class="program-card__tag program-card__tag--outline program-card__tag--accreditation">Государственная аккредитация</span>
+  </div>
+  <div class="program-card__content">
+    <div class="program-card__body">
+      <div class="program-card__heading">
+        <p class="program-card__code">15.04.02</p>
+        <h2 class="program-card__title"><a href="program.html">Технологические машины и оборудование</a></h2>
+      </div>
+    </div>
+    <div class="program-card__profiles">
+      <p class="program-card__profiles-title">Профили</p>
+      <ul class="program-card__profiles-list"><li>Профиль 1</li><li>Профиль 2</li><li>Профиль 3</li></ul>
+    </div>
+  </div>
+  <dl class="program-card__stats">
+    <div class="program-card__stat"><dt>Бюджетные места</dt><dd>16</dd></div><div class="program-card__stat"><dt>Целевые места</dt><dd>16</dd></div><div class="program-card__stat"><dt>Платные места</dt><dd>50</dd></div><div class="program-card__stat"><dt>Срок обучения</dt><dd>2 года</dd></div>
+  </dl>
+</article>
+
+
+
+<article class="program-card program-card--wide" data-ui="program-card" data-catalog-filters="{&quot;education_level&quot;:[&quot;master&quot;],&quot;study_form&quot;:[&quot;full_time&quot;],&quot;financing&quot;:[&quot;budget&quot;,&quot;target&quot;,&quot;paid&quot;],&quot;entrance_exam&quot;:[&quot;russian&quot;,&quot;mathematics&quot;,&quot;physics&quot;]}">
+  <div class="program-card__tags">
+    <span class="program-card__tag program-card__tag--magistratura">Магистратура</span><span class="program-card__tag program-card__tag--outline">Очно</span><span class="program-card__tag program-card__tag--outline program-card__tag--accreditation">Государственная аккредитация</span>
+  </div>
+  <div class="program-card__content">
+    <div class="program-card__body">
+      <div class="program-card__heading">
+        <p class="program-card__code">15.04.02</p>
+        <h2 class="program-card__title"><a href="program.html">Технологические машины и оборудование</a></h2>
+      </div>
+    </div>
+    <div class="program-card__profiles">
+      <p class="program-card__profiles-title">Профили</p>
+      <ul class="program-card__profiles-list"><li>Профиль 1</li><li>Профиль 2</li><li>Профиль 3</li></ul>
+    </div>
+  </div>
+  <dl class="program-card__stats">
+    <div class="program-card__stat"><dt>Бюджетные места</dt><dd>16</dd></div><div class="program-card__stat"><dt>Целевые места</dt><dd>16</dd></div><div class="program-card__stat"><dt>Платные места</dt><dd>50</dd></div><div class="program-card__stat"><dt>Срок обучения</dt><dd>2 года</dd></div>
+  </dl>
+</article>
+
+
+
+<article class="program-card program-card--wide" data-ui="program-card" data-catalog-filters="{&quot;education_level&quot;:[&quot;master&quot;],&quot;study_form&quot;:[&quot;full_time&quot;],&quot;financing&quot;:[&quot;budget&quot;,&quot;target&quot;,&quot;paid&quot;],&quot;entrance_exam&quot;:[&quot;russian&quot;,&quot;mathematics&quot;,&quot;physics&quot;]}">
+  <div class="program-card__tags">
+    <span class="program-card__tag program-card__tag--magistratura">Магистратура</span><span class="program-card__tag program-card__tag--outline">Очно</span><span class="program-card__tag program-card__tag--outline program-card__tag--accreditation">Государственная аккредитация</span>
+  </div>
+  <div class="program-card__content">
+    <div class="program-card__body">
+      <div class="program-card__heading">
+        <p class="program-card__code">15.04.02</p>
+        <h2 class="program-card__title"><a href="program.html">Технологические машины и оборудование</a></h2>
+      </div>
+    </div>
+    <div class="program-card__profiles">
+      <p class="program-card__profiles-title">Профили</p>
+      <ul class="program-card__profiles-list"><li>Профиль 1</li><li>Профиль 2</li><li>Профиль 3</li></ul>
+    </div>
+  </div>
+  <dl class="program-card__stats">
+    <div class="program-card__stat"><dt>Бюджетные места</dt><dd>16</dd></div><div class="program-card__stat"><dt>Целевые места</dt><dd>16</dd></div><div class="program-card__stat"><dt>Платные места</dt><dd>50</dd></div><div class="program-card__stat"><dt>Срок обучения</dt><dd>2 года</dd></div>
+  </dl>
+</article>
 
               </div>
             </section>

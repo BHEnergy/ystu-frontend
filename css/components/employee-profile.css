@@ -1,0 +1,171 @@
+.employee-profile {
+    justify-content: space-between;
+    min-height: 297px;
+}
+
+.employee-profile__body {
+    display: flex;
+    gap: 24px;
+}
+
+.employee-profile__info {
+    display: flex;
+    gap: 40px;
+    flex: 0 0 67%;
+    max-width: 952px;
+}
+
+.employee-profile__data {
+    gap: 40px;
+}
+
+.employee-profile__picture {
+    width: 280px;
+    height: 280px;
+    flex: 0 0 280px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.employee-profile__picture :is(img, .ui-icon) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.employee-profile__qualification {
+    margin-top: 16px;
+    font-size: 1.5rem;
+    color: var(--subprimary-color-2);
+}
+
+.employee-profile__post {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.employee-profile__division {
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    color: var(--subprimary-color-2);
+}
+
+.employee-profile__division-position {
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--subprimary-color-1);
+    color: var(--subprimary-color-1);
+    font-weight: 500;
+}
+
+.employee-profile__contacts {
+    padding: 24px;
+    border-radius: 16px;
+    background-color: var(--subprimary-color-7);
+    max-width: 464px;
+    flex: 0 0 33%;
+    gap: 24px;
+}
+
+.employee-profile__contact-item {
+    font-size: 1.125rem;
+    gap: 10px;
+}
+
+.employee-profile__contact-item p:first-child {
+    text-transform: uppercase;
+    color: var(--subprimary-color-1);
+    font-weight: 500;
+}
+
+.employee-profile__contact-item p:last-child,
+.employee-profile__contact-item a {
+    line-height: 1.4;
+}
+
+.employee-profile__contents {
+    gap: 40px;
+}
+
+.employee-profile__content {
+    padding-top: 24px;
+    font-size: 1.25rem;
+    max-width: 1010px;
+}
+
+@media (max-width: 1200px) {
+    .employee-profile {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .employee-profile__info,
+    .employee-profile__contacts {
+        width: 100%;
+        max-width: none;
+        flex-basis: auto;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .employee-profile {
+        flex-direction: column !important;
+        gap: 24px;
+    }
+
+    .employee-profile__info {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .employee-profile__contacts {
+        min-height: 0;
+    }
+
+    .employee-profile__picture {
+        width: 200px;
+        height: 200px;
+        flex-basis: 200px;
+    }
+
+    .employee-profile__name .title {
+        font-size: 1.75rem;
+    }
+
+    .employee-profile__qualification {
+        font-size: 1.125rem;
+    }
+
+    .employee-profile__division {
+        font-size: 1rem;
+    }
+
+    .employee-profile__division-position {
+        font-size: 1.25rem;
+    }
+
+    .employee-profile__contacts {
+        padding: 24px 16px;
+    }
+
+    .employee-profile__contact-item p:first-child {
+        font-size: 0.9375rem;
+    }
+
+    .employee-profile__contact-item{
+        font-size: 1rem;
+        gap: 8px;
+    }
+
+    .employee-profile__content {
+        padding-top: 16px;
+        font-size: 1rem;
+    }
+}
+
+
+.employee-profile__contact-item p:first-child { line-height: 1; }

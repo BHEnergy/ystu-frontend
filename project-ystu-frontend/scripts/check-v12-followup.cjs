@@ -26,9 +26,9 @@ const output = path.join(project, 'test-results-v12', process.argv.includes('--l
         };
         await visit('structure');
         await page.evaluate(() => document.addEventListener('click', event => {
-            if (event.target.closest('.structure__institute-link')) event.preventDefault();
+            if (event.target.closest('.department-card__link')) event.preventDefault();
         }));
-        const institutes = page.locator('.structure__institute');
+        const institutes = page.locator('.department-card');
         for (const index of [0, 1]) {
             await institutes.nth(index).locator('a').first().tap();
             await page.waitForTimeout(450);
@@ -42,7 +42,7 @@ const output = path.join(project, 'test-results-v12', process.argv.includes('--l
         await page.keyboard.press('Tab');
         assert(await page.evaluate(() => {
             const link = document.activeElement;
-            const card = link.closest('.structure__institute');
+            const card = link.closest('.department-card');
             return link.matches(':focus-visible') && card && getComputedStyle(card).outlineStyle === 'solid';
         }), 'keyboard focus must still highlight the card');
         console.log('OK: sequential mobile taps reset card states; keyboard focus remains visible');
@@ -72,10 +72,10 @@ const output = path.join(project, 'test-results-v12', process.argv.includes('--l
         console.log('OK: popup header geometry at top and after scrolling, 390/1440px');
         await page.setViewportSize({ width: 390, height: 844 });
         await visit('detail-sotrudnik');
-        assert(await page.locator('.sotrudnik__contact-item a').first().evaluate(el => Math.abs(parseFloat(getComputedStyle(el).lineHeight) / parseFloat(getComputedStyle(el).fontSize) - 1.4) < .01), 'contact link line-height');
+        assert(await page.locator('.employee-profile__contact-item a').first().evaluate(el => Math.abs(parseFloat(getComputedStyle(el).lineHeight) / parseFloat(getComputedStyle(el).fontSize) - 1.4) < .01), 'contact link line-height');
         await visit('program');
         assert.equal(await page.locator('.program-about__description__feacher > p').evaluate(el => getComputedStyle(el).maxWidth), 'none');
-        assert(await page.locator('.program-admissions__contacts').evaluate(el => !/[–‑]/.test(el.textContent) && /9:00 - 18:00/.test(el.textContent)), 'ASCII hyphens and spaced hours');
+        assert(await page.locator('.contact-section__contacts').evaluate(el => !/[–‑]/.test(el.textContent) && /9:00 - 18:00/.test(el.textContent)), 'ASCII hyphens and spaced hours');
         await visit('detail-structure');
         assert.equal(await page.locator('.training-program-card .magistratura').first().evaluate(el => getComputedStyle(el).maxWidth), '110px');
         const card = page.locator('.training-program-card').first();
@@ -113,7 +113,7 @@ const output = path.join(project, 'test-results-v12', process.argv.includes('--l
         await caption.locator('..').screenshot({ path: path.join(output, 'cms-table-caption.png') });
         await visit('student-life');
         for (const index of [1, 5]) {
-            const item = page.locator('.student-links__item').nth(index);
+            const item = page.locator('.link-cards__item').nth(index);
             await item.locator('a').focus();
             await page.waitForTimeout(500);
             assert(await item.evaluate(el => {

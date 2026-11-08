@@ -222,3 +222,10 @@
         align-items: center;
     }
 }
+.program-about__link { transition: color 200ms ease; text-underline-offset: 3px; }
+@media (hover: hover) and (pointer: fine) {
+    .program-about__link:hover { color: var(--primary-color-1) !important; text-decoration: underline; }
+}
+.program-about__link:focus-visible { text-decoration: underline; }
+.program-about__link:active { color: var(--subprimary-color-1) !important; text-decoration: underline; }
+@media (prefers-reduced-motion: reduce) { .program-about__link { transition: none; } }

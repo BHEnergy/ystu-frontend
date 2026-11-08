@@ -1,0 +1,292 @@
+/* Независимый блок направлений с несколькими галереями. */
+.feature-sections {
+    container-type: inline-size;
+    margin-top: 100px;
+    margin-bottom: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.feature-sections__title {
+    font-size: 2.75rem;
+    font-weight: 500;
+}
+
+.feature-sections__list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.feature-section {
+    display: flex;
+    gap: 24px;
+}
+
+.feature-section.feature-section--reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-section__content {
+    min-width: 0;
+    max-width: 708px;
+    flex: 1 1 0;
+    max-height: 477px;
+}
+
+
+.feature-section__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: baseline;
+    font-size: 1.125rem;
+}
+
+.feature-section__content .btn {
+    font-weight: 600;
+    height: 54px;
+    max-width: 180px;
+    width: 100%;
+}
+
+.feature-section__title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--subprimary-color-1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.feature-section__title.projects-svg::before {
+    content: '';
+    height: 48px;
+    min-width: 48px;
+
+/* UI sprite: projects */
+    background-image: url('../../images/svg/sprite.svg');
+    background-size: 512px 1152px;
+    background-position: calc(50% + 192px) calc(50% + -128px);
+    background-repeat: no-repeat;
+
+
+    line-height: 0;
+}
+
+.feature-section__title.art-svg::before {
+    content: '';
+    height: 48px;
+    min-width: 48px;
+
+/* UI sprite: art */
+    background-image: url('../../images/svg/sprite.svg');
+    background-size: 512px 1152px;
+    background-position: calc(50% + 64px) calc(50% + 512px);
+    background-repeat: no-repeat;
+
+
+    line-height: 0;
+}
+
+.feature-section__title.sport-svg::before {
+    content: '';
+    height: 48px;
+    min-width: 48px;
+
+/* UI sprite: sport */
+    background-image: url('../../images/svg/sprite.svg');
+    background-size: 512px 1152px;
+    background-position: calc(50% + -192px) calc(50% + -128px);
+    background-repeat: no-repeat;
+
+
+    line-height: 0;
+}
+
+.feature-section__title.volonter-svg::before {
+    content: '';
+    height: 48px;
+    min-width: 48px;
+
+/* UI sprite: volonter */
+    background-image: url('../../images/svg/sprite.svg');
+    background-size: 512px 1152px;
+    background-position: calc(50% + -64px) calc(50% + -512px);
+    background-repeat: no-repeat;
+
+
+    line-height: 0;
+}
+
+.feature-section__title.science-svg::before {
+    content: '';
+    height: 48px;
+    min-width: 48px;
+
+/* UI sprite: science */
+    background-image: url('../../images/svg/sprite.svg');
+    background-size: 512px 1152px;
+    background-position: calc(50% + 64px) calc(50% + -128px);
+    background-repeat: no-repeat;
+
+
+    line-height: 0;
+}
+
+.feature-section__description {
+    font-size: 1.125rem;
+}
+
+
+@media(max-width: 1440px) {
+
+.feature-section__content {
+        max-width: 708px;
+        min-height: unset;
+    }
+
+
+}
+
+
+@media (max-width: 991px) {
+    .feature-sections {
+        margin-top: 80px;
+        margin-bottom: 80px;
+        gap: 48px;
+    }
+
+    .feature-sections__list {
+        gap: 56px;
+    }
+
+    .feature-section,
+    .feature-section.feature-section--reverse {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+.feature-section__content {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: none;
+        min-height: 0;
+    }
+
+
+    .feature-section__content {
+        gap: 24px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+    .feature-sections {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        gap: 40px;
+    }
+
+    .feature-sections__title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .feature-sections__list {
+        gap: 40px;
+    }
+
+    .feature-section,
+    .feature-section.feature-section--reverse {
+        gap: 24px;
+    }
+
+    .feature-section__content .btn {
+        height: 47px;
+        font-weight: 500;
+        max-width: 136px;
+        padding: 14px 24px;
+    }
+
+    .feature-section__content {
+        gap: 24px;
+        font-size: 1rem;
+    }
+
+    .feature-section__title {
+        gap: 16px;
+        font-size: 1.25rem;
+        line-height: 1.2;
+    }
+
+    .feature-section__title::before {
+        display: block;
+        flex: 0 0 40px;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+    }
+
+    .feature-section__description {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+
+    .feature-section__title.projects-svg::before,
+    .feature-section__title.art-svg::before,
+    .feature-section__title.sport-svg::before,
+    .feature-section__title.volonter-svg::before,
+    .feature-section__title.science-svg::before {
+        height: 40px;
+        min-width: 40px;
+        /* Иконка 48px уменьшается до 33px вместе со всем атласом. */
+        background-size: 352px 792px;
+    }
+
+    .feature-section__title.projects-svg::before {
+        background-position: calc(50% + 132px) calc(50% - 88px);
+    }
+
+    .feature-section__title.art-svg::before {
+        background-position: calc(50% + 44px) calc(50% + 352px);
+    }
+
+    .feature-section__title.sport-svg::before {
+        background-position: calc(50% - 132px) calc(50% - 88px);
+    }
+
+    .feature-section__title.volonter-svg::before {
+        background-position: calc(50% - 44px) calc(50% - 352px);
+    }
+
+    .feature-section__title.science-svg::before {
+        background-position: calc(50% + 44px) calc(50% - 88px);
+    }
+
+}
+
+
+/* Компонент может находиться в узкой колонке при широком окне. */
+@container (max-width: 991px) {
+    .feature-section,
+    .feature-section.feature-section--reverse { flex-direction: column; gap: 32px; }
+
+.feature-section__content {
+        flex: 0 0 auto; width: 100%; max-width: none; min-height: 0; max-height: none;
+    }
+
+    .feature-section__content { gap: 24px; }
+    .feature-section__title { min-width: 0; overflow-wrap: anywhere; }
+
+}
+
+
+@container (max-width: 576px) {
+    .feature-sections__title { font-size: 2rem; overflow-wrap: anywhere; }
+    .feature-section__title { font-size: 1.25rem; gap: 16px; }
+    .feature-section__description { font-size: 1rem; }
+
+}

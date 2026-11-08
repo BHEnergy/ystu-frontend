@@ -23,7 +23,7 @@ const base = process.argv[2] || 'http://127.0.0.1:5500';
                 return Math.abs(bounds.left) < 1 && Math.abs(bounds.width - innerWidth) < 1
                     && rim.borderRadius === style.borderRadius && rim.filter === 'none' && style.boxShadow.includes('inset');
             }), 'Мобильное стекло должно быть на всю ширину, окантовка — внутри');
-            if (width === 728) assert(await page.locator('.student-direction__content').first().evaluate(element => element.scrollHeight <= element.clientHeight + 1), 'Обрезан текст направления');
+            if (width === 728) assert(await page.locator('.feature-section__content').first().evaluate(element => element.scrollHeight <= element.clientHeight + 1), 'Обрезан текст направления');
         }
         await visit('index', 1920);
         assert(await page.locator('.flagship-project__card').evaluateAll(elements => elements.every(element => element.tagName === 'A' && element.hasAttribute('href') && element.tabIndex === 0)));

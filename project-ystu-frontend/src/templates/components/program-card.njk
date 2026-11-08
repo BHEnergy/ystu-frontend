@@ -1,50 +1,22 @@
-<article class="program-card program-card--wide" data-ui="program-card" data-catalog-filters='{"education_level":["master"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
-<div class="program-card__tags">
-                            <span
-                              class="program-card__tag program-card__tag--magistratura"
-                              >Магистратура</span
-                            ><span
-                              class="program-card__tag program-card__tag--outline"
-                              >Очно</span
-                            ><span
-                              class="program-card__tag program-card__tag--outline program-card__tag--accreditation"
-                              >Государственная аккредитация</span
-                            >
-                          </div>
-                      <div class="program-card__content">
-                        <div class="program-card__body">
-                          <div class="program-card__heading">
-                            <p class="program-card__code">15.04.02</p>
-                            <h2 class="program-card__title"><a href="program.html">
-                              Технологические машины и оборудование
-                            </a></h2>
-                          </div>
-                        </div>
-                        <div class="program-card__profiles">
-                          <p class="program-card__profiles-title">Профили</p>
-                          <ul class="program-card__profiles-list">
-                            <li>Профиль 1</li>
-                            <li>Профиль 2</li>
-                            <li>Профиль 3</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <dl class="program-card__stats">
-                        <div class="program-card__stat">
-                          <dt>Бюджетных мест</dt>
-                          <dd>16</dd>
-                        </div>
-                        <div class="program-card__stat">
-                          <dt>Целевых мест</dt>
-                          <dd>16</dd>
-                        </div>
-                        <div class="program-card__stat">
-                          <dt>Платных мест</dt>
-                          <dd>50</dd>
-                        </div>
-                        <div class="program-card__stat">
-                          <dt>Срок обучения</dt>
-                          <dd>2 года</dd>
-                        </div>
-                      </dl>
-                    </article>
+{% macro programCard(card) %}
+<article class="{{ card.classes }}" data-ui="program-card" data-catalog-filters="{{ card.filters | dump }}">
+  <div class="program-card__tags">
+    {% for tag in card.tags %}<span class="{{ tag.classes }}">{{ tag.text }}</span>{% endfor %}
+  </div>
+  <div class="program-card__content">
+    <div class="program-card__body">
+      <div class="program-card__heading">
+        <p class="program-card__code">{{ card.code }}</p>
+        <h2 class="program-card__title"><a href="{{ card.href }}">{{ card.title }}</a></h2>
+      </div>
+    </div>
+    <div class="program-card__profiles">
+      <p class="program-card__profiles-title">{{ card.profilesTitle }}</p>
+      <ul class="program-card__profiles-list">{% for profile in card.profiles %}<li>{{ profile }}</li>{% endfor %}</ul>
+    </div>
+  </div>
+  <dl class="program-card__stats">
+    {% for stat in card.stats %}<div class="program-card__stat"><dt>{{ stat.label }}</dt><dd>{{ stat.value }}</dd></div>{% endfor %}
+  </dl>
+</article>
+{% endmacro %}

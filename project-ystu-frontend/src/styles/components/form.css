@@ -248,3 +248,9 @@
         font-size: 0.9375rem;
     }
 }
+.modal-form__file-button { transition: background-color 200ms ease; }
+@media (hover: hover) and (pointer: fine) {
+    .modal-form__file-button:hover { background-color: var(--subprimary-color-3); }
+}
+.modal-form__file-button:active { background-color: var(--subprimary-color-2); color: var(--white-shade-1); }
+@media (prefers-reduced-motion: reduce) { .modal-form__file-button { transition: none; } }

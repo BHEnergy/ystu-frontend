@@ -1,0 +1,20 @@
+{% from "components/accordion.njk" import accordionItem %}
+{% macro journalCard(journal) %}
+<section class="journal-card__section">
+  <div class="journal-card__content d-flex flex-row">
+    <img class="journal-card__photo"{% if journal.image.loading %} loading="{{ journal.image.loading }}"{% endif %}{% if journal.image.decoding %} decoding="{{ journal.image.decoding }}"{% endif %} src="{{ journal.image.src }}" alt="{{ journal.image.alt }}">
+    <div class="journal-card__info">
+      {% for column in journal.columns %}
+      <div class="journal-card__column">
+        {% for stat in column %}<dl><dt>{{ stat.label }}</dt><dd>{{ stat.value }}</dd></dl>{% endfor %}
+        {% if loop.last %}<a href="{{ journal.button.href }}" class="{{ journal.button.classes }}">{{ journal.button.text }}</a>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="journal-card__description">{{ journal.descriptionHtml | safe }}</div>
+</section>
+{% endmacro %}
+{% macro journalAccordion(journal) %}
+{% call accordionItem(journal.title, journal.expanded, journal.headerClasses, journal.titleClasses) %}{{ journalCard(journal) }}{% endcall %}
+{% endmacro %}

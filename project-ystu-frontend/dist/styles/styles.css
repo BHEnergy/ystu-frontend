@@ -17,7 +17,10 @@
 @import url('components/fichers.css');
 @import url('components/slider.css');
 @import url('components/events.css');
-@import url('pages/structure.css');
+@import url('components/department-directory.css');
+@import url('components/department-card.css');
+@import url('components/education-badge.css');
+@import url('components/filter-tag.css');
 @import url('components/news.css');
 
 /* Основные компоненты */
@@ -31,18 +34,21 @@
 
 /* Страница программы */
 @import url('pages/program-about.css');
-@import url('pages/program-amissions.css');
-@import url('components/program-exams.css');
-@import url('pages/program-education.css');
+@import url('components/contact-section.css');
+@import url('components/entry-requirements.css');
+@import url('components/curriculum.css');
+@import url('components/disclosure.css');
+@import url('components/metric-card.css');
 
 @import url('components/preparatory-courses.css');
 @import url('components/flagship-projects.css');
 @import url('components/university-statistics.css');
 
 /* Страница Студенческая жизнь */
-@import url('components/student-directions.css');
-@import url('components/student-links.css');
-@import url('pages/student-driving.css');
+@import url('components/feature-sections.css');
+@import url('components/media-gallery.css');
+@import url('components/link-cards.css');
+@import url('components/text-media.css');
 
 
 /* Каталоги вакансий и образовательных программ */
@@ -52,14 +58,22 @@
 @import url('components/program-card.css');
 @import url('components/document-list.css');
 @import url('components/mobile-filter-panel.css');
-@import url('pages/campus-map.css');
+@import url('components/campus-map.css');
+@import url('pages/map.css');
 
 /* Страница научной деятельности */
+@import url('components/journal-card.css');
 @import url('pages/science.css');
 
 /* Детальная страница сотнрудника */
 @import url('pages/detail-sotrudnik.css');
 @import url('pages/detail-structure.css');
+@import url('components/contact-card.css');
+@import url('components/contact-list.css');
+@import url('components/person-card.css');
+@import url('components/training-program-card.css');
+@import url('components/structure-gallery.css');
+@import url('components/employee-profile.css');
 
 /* Детальная страница вакансии */
 @import url('pages/detail-vacancy.css');

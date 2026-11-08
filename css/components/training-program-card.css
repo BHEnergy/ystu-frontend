@@ -1,0 +1,252 @@
+.training-program-card[hidden] { display: none; }
+
+.training-program-card {
+    display: flex;
+    min-height: 368px;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    background: var(--white-shade-1);
+    border: 1px solid var(--subprimary-color-2);
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.training-program-card::before {
+    position: absolute;
+    bottom: -10%;
+    right: -33px;
+    content: "";
+    display: block;
+    width: 138px;
+    height: 195px;
+    background-color: var(--primary-color-2);
+    clip-path: polygon(0 0, 43% 0, 100% 50%, 43% 100%, 0 100%, 57% 50%);
+    z-index: -1;
+}
+
+.training-program-card::after {
+    position: absolute;
+    bottom: -1%;
+    right: 63px;
+    content: "";
+    display: block;
+    width: 89px;
+    height: 126px;
+    background-color: var(--primary-color-5);
+    clip-path: polygon(0 0, 43% 0, 100% 50%, 43% 100%, 0 100%, 57% 50%);
+    z-index: -1;
+}
+
+.training-program-card::before,
+.training-program-card::after {
+    pointer-events: none;
+    transform: scale(1);
+    transform-origin: center;
+    transition: transform 400ms ease-in-out;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .training-program-card:hover::before,
+    .training-program-card:hover::after {
+        transform: scale(1.08);
+    }
+}
+
+
+
+
+.training-program-card:is(:focus-visible, :has(:focus-visible))::before,
+.training-program-card:is(:focus-visible, :has(:focus-visible))::after {
+    transform: scale(1.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .training-program-card::before,
+    .training-program-card::after {
+        transition: none;
+    }
+}
+
+
+
+
+.training-program-card__tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.training-program-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+span.training-program-card__tag {
+    padding: 6px 20px;
+    color: var(--subprimary-color-1);
+    background: transparent;
+    border: 1px solid var(--subprimary-color-1);
+    border-radius: 100px;
+    font-size: 0.875rem;
+    height: 30px;
+    max-width: 75px;
+}
+
+.training-program-card :is(.training-program-card__header, .training-program-card__tags) .bakalavr {
+    color: var(--white-shade-1);
+    background: var(--subprimary-color-1);
+    border: none;
+    max-width: 123px;
+}
+
+.training-program-card :is(.training-program-card__header, .training-program-card__tags) .magistratura {
+    color: var(--white-shade-1);
+    background: var(--primary-color-2);
+    border: none;
+    max-width: 133px;
+    width: 100%;
+}
+
+.training-program-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.training-program-card__code {
+    color: var(--subprimary-color-2);
+    font-size: 1.125rem;
+}
+
+.training-program-card h3 {
+    color: var(--subprimary-color-1);
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.training-program-card > p:last-of-type {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.training-program-card__footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 267px;
+}
+
+.training-program-card__footer-item {
+    padding: 10px 20px;
+    background: var(--subprimary-color-4);
+    border-radius: 100px;
+    font-style: italic;
+    font-size: 0.875rem;
+    color: var(--subprimary-color-1);
+}
+
+.training-program-card h3 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 200ms ease;
+}
+
+.training-program-card h3 a:is(:hover, :focus-visible, :active) {
+    color: var(--primary-color-2);
+}
+
+.training-program-card > a {
+    margin-top: auto;
+    color: var(--primary-color-2);
+    font-weight: 600;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .training-program-card {
+        padding: 16px;
+        min-height: 213px;
+        border-radius: 10px;
+        gap: 16px;
+    }
+
+    .training-program-card::before {
+        height: 105px;
+        width: 78px;
+        right: -19px;
+        bottom: -25px;
+    }
+
+    .training-program-card::after {
+        height: 68px;
+        width: 51px;
+        right: 33px;
+        bottom: -6px;
+    }
+
+    span.training-program-card__tag {
+        padding: 4px 16px;
+        font-size: 0.75rem;
+        height: 23px;
+        max-width: 62px;
+
+        &.bakalavr {
+            max-width: 103px;
+        }
+
+        &.magistratura {
+            max-width: 110px;
+        }
+    }
+
+    .training-program-card__code {
+        font-size: 0.9375rem;
+    }
+
+    .training-program-card__footer {
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .training-program-card__footer-item {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+
+    .training-program-card h3 {
+        font-size: 1.375rem;
+    }
+
+    .training-program-card__tags .bakalavr {
+        max-width: 103px;
+    }
+
+    .training-program-card__tags .magistratura {
+        max-width: 110px;
+    }
+
+    .training-program-card :is(.training-program-card__header, .training-program-card__tags) .magistratura {
+        max-width: 110px;
+    }
+
+    .training-program-card__tags {
+        flex-wrap: nowrap;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .training-program-card__footer { flex-direction: row; flex-wrap: wrap; align-items: center; }
+    .training-program-card__footer-item { padding: 6px 12px; }
+}

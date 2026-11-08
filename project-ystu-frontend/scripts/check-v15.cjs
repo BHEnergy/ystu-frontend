@@ -10,12 +10,12 @@ const { chromium, webkit } = require('playwright-core');
                 const errors = [];
                 page.on('pageerror', e => errors.push(e.message));
                 await page.goto(base + '/pages/ui-kit.html');
-                await page.waitForFunction(() => [...document.querySelectorAll('.js-init-student-slider')].every(el => el.swiper));
+                await page.waitForFunction(() => [...document.querySelectorAll('.js-init-media-gallery')].every(el => el.swiper));
                 await page.evaluate(() => {
                     document.querySelectorAll('header,.cookie').forEach(el => el.style.visibility = 'hidden');
                     document.addEventListener('click', e => { if (e.target.closest('a[href="#"]')) e.preventDefault(); });
                 });
-                const links = page.locator('.student-links__item');
+                const links = page.locator('.link-cards__item');
                 for (let i = 0; i < 2; i++) {
                     await links.nth(i).hover();
                     await page.waitForTimeout(460);
@@ -25,7 +25,7 @@ const { chromium, webkit } = require('playwright-core');
                     const r = el.getBoundingClientRect();
                     return document.elementFromPoint(r.right - 20, r.top + 30)?.closest('a')?.parentElement === el;
                 }), 'Вся карточка ссылки кликабельна');
-                const details = page.locator('.program-exams__examples').first();
+                const details = page.locator('.disclosure').first();
                 await details.locator('summary').click();
                 await page.waitForTimeout(350);
                 assert(await details.evaluate(el => el.open));
@@ -68,9 +68,9 @@ const { chromium, webkit } = require('playwright-core');
                 await tabs.locator('button').nth(2).click();
                 assert(await tabs.evaluate(el => el.children[2].getAttribute('aria-pressed') === 'true'));
                 assert(await tabs.evaluate(el => [...el.parentElement.querySelectorAll('[data-ui~="training-program-card"]')].some(card => card.hidden)));
-                assert(await page.locator('.js-init-student-slider').count() >= 2);
-                await page.locator('.js-init-student-slider').first().evaluate(el => el.swiper.slideTo(1, 0));
-                assert.equal(await page.locator('.js-init-student-slider').nth(1).evaluate(el => el.swiper.activeIndex), 0);
+                assert(await page.locator('.js-init-media-gallery').count() >= 2);
+                await page.locator('.js-init-media-gallery').first().evaluate(el => el.swiper.slideTo(1, 0));
+                assert.equal(await page.locator('.js-init-media-gallery').nth(1).evaluate(el => el.swiper.activeIndex), 0);
                 // Пункт 8: примеры UI-Kit должны сохранять контракт рабочих компонентов.
                 assert(await page.locator('.news__card').evaluateAll(cards => cards.length === 3
                     && cards.every(card => card.tagName === 'A' && card.hasAttribute('href') && !card.querySelector('a'))),

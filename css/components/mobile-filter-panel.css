@@ -141,3 +141,14 @@
         transition: none;
     }
 }
+.mobile-filter-panel__close { transition: background-color 200ms ease; }
+.mobile-filter-panel summary { transition: color 200ms ease; }
+@media (hover: hover) and (pointer: fine) {
+    .mobile-filter-panel__close:hover { background-color: var(--primary-color-4); }
+    .mobile-filter-panel summary:hover { color: var(--primary-color-2); }
+}
+.mobile-filter-panel__close:active { background-color: var(--primary-color-1); }
+.mobile-filter-panel summary:active { color: var(--primary-color-1); }
+@media (prefers-reduced-motion: reduce) {
+    .mobile-filter-panel__close, .mobile-filter-panel summary { transition: none; }
+}

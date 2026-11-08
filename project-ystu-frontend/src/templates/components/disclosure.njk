@@ -1,0 +1,6 @@
+{% macro disclosure(title, expanded=false) %}
+<details data-ui="disclosure" class="disclosure"{% if expanded %} open{% endif %}>
+  <summary>{{ title }}</summary>
+  <div class="disclosure__content">{{ caller() }}</div>
+</details>
+{% endmacro %}

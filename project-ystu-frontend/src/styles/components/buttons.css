@@ -99,7 +99,8 @@
     box-shadow: 0 0 0 3px var(--white-shade-1);
 }
 
-.btn:is(:disabled, [aria-disabled="true"]) {
+.btn:is(:disabled, [aria-disabled="true"]),
+.btn:is(:disabled, [aria-disabled="true"]):is(:hover, :active) {
     background-color: var(--white-shade-4);
     border-color: transparent;
     color: #d5d5d5 !important;
@@ -130,7 +131,8 @@
     border-bottom-color: currentColor;
 }
 
-.btn--ghost:is(:disabled, [aria-disabled="true"]) {
+.btn--ghost:is(:disabled, [aria-disabled="true"]),
+.btn--ghost:is(:disabled, [aria-disabled="true"]):is(:hover, :active) {
     color: #7d868a !important;
     background: transparent;
     border-color: transparent;

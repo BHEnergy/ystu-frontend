@@ -105,13 +105,14 @@
         </section>
 
         <!-- Образовательные программы -->
-        {% include "components/program-education.njk" %}
+        {% include "components/curriculum.njk" %}
 
         <!-- Вступительные испытания -->
-        {% include "components/program-exams.njk" %}
+        {% include "components/entry-requirements.njk" %}
 
         <!-- Приёмная комиссия -->
-        {% include "components/program-admissions.njk" %}
+{% from "components/contact-section.njk" import contactSection %}
+{{ contactSection(componentExamples.contacts["contacts-3"]) }}
 
       </main>
 

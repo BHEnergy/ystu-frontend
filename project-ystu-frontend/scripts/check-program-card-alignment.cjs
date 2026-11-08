@@ -24,6 +24,7 @@ const types = { '.html': 'text/html', '.css': 'text/css', '.js': 'application/ja
                         await page.goto('http://ystu.test/pages/' + file + '.html');
                         await page.evaluate(() => document.fonts.ready);
                         await page.waitForFunction(() => !!window.Content);
+                        await page.evaluate(() => window.SiteUI.ready);
                         const cards = await page.locator('.program-card:visible').evaluateAll(elements => elements.map(card => {
                             const rect = selector => card.querySelector(selector).getBoundingClientRect().toJSON();
                             return { card: card.getBoundingClientRect().toJSON(), heading: rect('.program-card__heading'), profiles: rect('.program-card__profiles'), stats: rect('.program-card__stats') };

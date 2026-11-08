@@ -1,0 +1,14 @@
+{% from "components/action.njk" import action %}
+{% macro eventCard(card, title=none) %}
+<div class="event__card" data-ui="event__card">
+  <div class="event__photo"><img{% if card.image.loading %} loading="{{ card.image.loading }}"{% endif %}{% if card.image.decoding %} decoding="{{ card.image.decoding }}"{% endif %} src="{{ card.image.src }}" alt="{{ card.image.alt }}"></div>
+  <div class="event__content">
+    <p class="event__title" data-ui="event__title">{{ title if title is not none else card.title }}</p>
+    <div class="event__body">
+      <div class="event__info"><p class="event__date">{{ card.date }}</p><p class="event__time">{{ card.time }}</p><p class="event__location">{{ card.location }}</p></div>
+      <div class="event__footer">{{ action(card.register) }}{{ action(card.details) }}</div>
+    </div>
+  </div>
+  <div class="event__tags">{% for tag in card.tags %}<div class="event__tag">{{ tag }}</div>{% endfor %}</div>
+</div>
+{% endmacro %}

@@ -344,3 +344,9 @@
     .modal-success__text { max-width: 303px; font-size: 1rem; }
     .modal-success__back { padding: 14px 24px; }
 }
+.modal-success__back { transition: background-color 200ms ease; }
+@media (hover: hover) and (pointer: fine) {
+    .modal-success__back:hover { background-color: var(--subprimary-color-2); }
+}
+.modal-success__back:active { background-color: #002759; }
+@media (prefers-reduced-motion: reduce) { .modal-success__back { transition: none; } }

@@ -1,0 +1,101 @@
+.curriculum {
+    margin-bottom: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.curriculum__title {
+    font-size: 2.75rem;
+}
+
+.curriculum__list {
+    display: flex;
+    flex-direction: column;
+    gap: inherit;
+}
+
+.curriculum__name {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--subprimary-color-1);
+    text-transform: uppercase;
+}
+
+.curriculum__content {
+    padding-top: 20px;
+}
+
+.curriculum__section {
+    padding: 40px 0;
+    border-bottom: 1px solid var(--subprimary-color-4);
+    display: flex;
+    gap: 26px;
+    font-size: 1.125rem;
+}
+
+.curriculum__caption {
+    flex: 0 0 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 24px;
+}
+
+.curriculum__caption h4 {
+    font-size: 1.5rem;
+    color: var(--subprimary-color-1);
+    font-weight: 500;
+}
+
+.curriculum__caption .btn {
+    border-radius: 10px;
+    font-weight: 600;
+    max-height: 54px;
+    max-width: 276px;
+    white-space: nowrap;
+}
+
+@media(max-width: 768px) {
+    .preparatory-courses {
+        margin: 60px 0;
+    }
+
+    .curriculum__name {
+        font-size: 1.25rem;
+        flex: 0 1 72%;
+    }
+
+    .curriculum__title {
+        font-size: 2rem;
+    }
+
+    .curriculum__section {
+        flex-direction: column;
+        gap: 24px;
+        font-size: 1rem;
+    }
+
+    .curriculum__caption {
+        display: contents;
+    }
+
+    .curriculum__caption h4 {
+        order: 1;
+        font-size: 1.25rem;
+    }
+
+    .curriculum__section > p {
+        order: 2;
+    }
+
+    .curriculum__caption .btn {
+        order: 3;
+        align-self: flex-start;
+        padding: 14px 20px;
+        height: 47px;
+        max-width: 219px;
+    }
+
+
+}

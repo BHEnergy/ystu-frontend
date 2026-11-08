@@ -24,3 +24,9 @@
     .header--menu-open .header-search { position: fixed; top: calc(96px + var(--header-top)); left: 0; right: 0; }
 }
 @media (max-width: 576px) { .header-search { gap: 8px; padding: 12px; } }
+.header-search__close { border-radius: 6px; transition: background-color 200ms ease; }
+@media (hover: hover) and (pointer: fine) {
+    .header-search__close:hover { background-color: var(--subprimary-color-5); }
+}
+.header-search__close:active { background-color: var(--subprimary-color-4); }
+@media (prefers-reduced-motion: reduce) { .header-search__close { transition: none; } }

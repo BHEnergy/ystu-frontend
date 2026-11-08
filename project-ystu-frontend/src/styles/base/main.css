@@ -206,3 +206,23 @@
 /* @media (max-width: 576px) {
 
 } */
+/* Текстовые ссылки: общий отклик без изменения размеров и без затрагивания подвала. */
+:is(.contact-section__contact, .employee-profile__contact-item, .contact-card,
+    .person-card__contacts, .cookie-text, .checkbox--container label,
+    .ui-kit__toc, .ui-kit__meta, .ui-kit__intro) a[href] { transition: color 200ms ease; text-underline-offset: 3px; }
+@media (hover: hover) and (pointer: fine) {
+    :is(.contact-section__contact, .employee-profile__contact-item, .contact-card,
+        .person-card__contacts, .cookie-text, .checkbox--container label,
+        .ui-kit__toc, .ui-kit__meta, .ui-kit__intro) a[href]:hover { color: var(--subprimary-color-2); text-decoration: underline; }
+}
+:is(.contact-section__contact, .employee-profile__contact-item, .contact-card,
+    .person-card__contacts, .cookie-text, .checkbox--container label,
+    .ui-kit__toc, .ui-kit__meta, .ui-kit__intro) a[href]:focus-visible { text-decoration: underline; }
+:is(.contact-section__contact, .employee-profile__contact-item, .contact-card,
+    .person-card__contacts, .cookie-text, .checkbox--container label,
+    .ui-kit__toc, .ui-kit__meta, .ui-kit__intro) a[href]:active { color: var(--primary-color-1); text-decoration: underline; }
+@media (prefers-reduced-motion: reduce) {
+    :is(.contact-section__contact, .employee-profile__contact-item, .contact-card,
+        .person-card__contacts, .cookie-text, .checkbox--container label,
+        .ui-kit__toc, .ui-kit__meta, .ui-kit__intro) a[href] { transition: none; }
+}

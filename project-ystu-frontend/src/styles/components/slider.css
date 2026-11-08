@@ -1,24 +1,24 @@
 /* Управление галереями располагается под изображением с отступом 16px. */
 @media (max-width: 768px) {
-    .student-direction__gallery.swiper {
+    .media-gallery.swiper {
         height: calc(var(--gallery-image-height) + 60px);
         max-height: none;
     }
 
-    .student-direction__gallery.swiper .student-direction__controls {
+    .media-gallery.swiper .media-gallery__controls {
         margin-top: 16px;
         height: 44px;
     }
 
-    .student-direction__gallery.swiper .student-direction__controls :is(.swiper-button-prev, .swiper-button-next):not(.big),
-    .student-direction__gallery.swiper .student-direction__controls .swiper-pagination {
+    .media-gallery.swiper .media-gallery__controls :is(.swiper-button-prev, .swiper-button-next):not(.big),
+    .media-gallery.swiper .media-gallery__controls .swiper-pagination {
         position: static;
         margin: 0;
         transform: none;
         flex-shrink: 0;
     }
 
-    .student-direction__gallery.swiper .student-direction__controls .swiper-pagination {
+    .media-gallery.swiper .media-gallery__controls .swiper-pagination {
         display: flex;
         align-items: center;
         width: auto;
@@ -64,13 +64,13 @@ button.swiper-button-next {
 }
 
 /* Большие стрелки привязаны к центру фотографии, а не к строке пагинации. */
-.student-direction__gallery { --gallery-image-height: 477px; }
-.student-direction__gallery.swiper .default-slider-controls { position: static; }
-.student-direction__gallery.swiper .default-slider-controls :is(.swiper-button-prev.big, .swiper-button-next.big) {
+.media-gallery { --gallery-image-height: 477px; }
+.media-gallery.swiper .default-slider-controls { position: static; }
+.media-gallery.swiper .default-slider-controls :is(.swiper-button-prev.big, .swiper-button-next.big) {
     top: calc(var(--gallery-image-height) / 2); transform: translateY(-50%); margin-top: 0;
 }
-@media (max-width: 991px) { .student-direction__gallery { --gallery-image-height: 392px; } }
-@media (max-width: 576px) { .student-direction__gallery { --gallery-image-height: 241px; } }
+@media (max-width: 991px) { .media-gallery { --gallery-image-height: 392px; } }
+@media (max-width: 576px) { .media-gallery { --gallery-image-height: 241px; } }
 
 .swiper-button-prev:focus-visible,
 .swiper-button-next:focus-visible,
@@ -318,7 +318,7 @@ button.swiper-button-next {
 }
 
 /* Слайдер "Студ. жизнь" */
-.student-direction__gallery {
+.media-gallery {
     & .default-slider-controls {
         position: unset;
         width: 100%;
@@ -350,23 +350,23 @@ button.swiper-button-next {
 }
 
 /* Слайдер "Галерея" */
-.student-direction__gallery .swiper-button-prev.big,
-.student-direction__gallery .swiper-button-next.big {
+.media-gallery .swiper-button-prev.big,
+.media-gallery .swiper-button-next.big {
     top: 238.5px;
 }
 
 @media (max-width: 991px) {
-    .student-direction__gallery .default-slider-controls .swiper-button-prev.big,
-    .student-direction__gallery .default-slider-controls .swiper-button-next.big { top: 196px; }
+    .media-gallery .default-slider-controls .swiper-button-prev.big,
+    .media-gallery .default-slider-controls .swiper-button-next.big { top: 196px; }
 }
 
 @media (max-width: 576px) {
-    .student-direction__gallery .default-slider-controls .swiper-button-prev.big,
-    .student-direction__gallery .default-slider-controls .swiper-button-next.big { top: 120.5px; }
+    .media-gallery .default-slider-controls .swiper-button-prev.big,
+    .media-gallery .default-slider-controls .swiper-button-next.big { top: 120.5px; }
 }
 
 @media(max-width: 768px) {
-    .student-direction__gallery {
+    .media-gallery {
         & .default-slider-controls {
             position: absolute;
             bottom: -20px;
@@ -541,3 +541,19 @@ button.swiper-button-next {
     }
 
 }
+/* Фильтр меняет саму иконку, не затрагивая позиционирование стрелок. */
+:is(.swiper-button-prev, .swiper-button-next, .swiper-pagination-bullet) { transition: filter 200ms ease; }
+@media (hover: hover) and (pointer: fine) {
+    :is(.swiper-button-prev, .swiper-button-next, .swiper-pagination-bullet):not(:disabled, [aria-disabled="true"], .swiper-button-disabled, .swiper-button-lock):hover { filter: brightness(.75); }
+}
+:is(.swiper-button-prev, .swiper-button-next, .swiper-pagination-bullet):not(:disabled, [aria-disabled="true"], .swiper-button-disabled, .swiper-button-lock):active { filter: brightness(.55); }
+@media (prefers-reduced-motion: reduce) {
+    :is(.swiper-button-prev, .swiper-button-next, .swiper-pagination-bullet) { transition: none; }
+}
+
+.banner__body { transition: box-shadow 200ms ease; }
+@media (hover: hover) and (pointer: fine) {
+    .banner__body:hover { box-shadow: 0 4px 10px rgb(9 65 136 / 18%); }
+}
+.banner__body:active { box-shadow: inset 0 2px 10px rgb(9 65 136 / 18%); }
+@media (prefers-reduced-motion: reduce) { .banner__body { transition: none; } }

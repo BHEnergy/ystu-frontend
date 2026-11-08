@@ -33,7 +33,8 @@
                 <p class="structure-detail__lead">
                   Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem. In malesuada vitae urna mattis tortor aenean porttitor aenean. Lorem ipsum dolor sit amet consectetur. Eu augue fames felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec eu dui feugiat orci dui amet consectetur tortor sem. In malesuada vitae urna mattis tortor aenean porttitor aenean.
                 </p>
-                {% include "components/structure-contact-card.njk" %}
+{% from "components/contact-card.njk" import contactCard %}
+{{ contactCard(componentExamples.contactCards["contactCards-1"]) }}
               </div>
             </section>
 
@@ -64,83 +65,14 @@
                 </button>
               </div>
               <div class="training-programs">
-                <article class="training-program-card" data-ui="training-program-card">
-                  <div class="training-program-card__body">
-                    <div class="training-program-card__header">
-                      <p class="training-program-card__code">09.03.01</p>
-                      <span class = "training-program-card__tag bakalavr" data-ui="training-program-card__tag">Бакалавриат</span>
-                    </div>
-                    <h3><a href="program.html">Информатика и вычислительная техника</a></h3>
-                  </div>
-                  <div class = "training-program-card__footer">
-                    <div class = "training-program-card__footer-item">
-                      Очно
-                    </div>
-                    <div class = "training-program-card__footer-item">
-                      20 бюджетных мест
-                    </div>
-                    <div class = "training-program-card__footer-item">
-                      40 платных мест
-                    </div>
-                  </div>
-                </article>
-                <article class="training-program-card" data-ui="training-program-card">
-                  <div class="training-program-card__body">
-                    <div class="training-program-card__header">
-                      <p class="training-program-card__code">09.03.02</p>
-                      <span class = "training-program-card__tag bakalavr" data-ui="training-program-card__tag">Бакалавриат</span>
-                    </div>
-                    <h3><a href="program.html">Информационные системы и технологии</a></h3>
-                  </div>
-                  <div class = "training-program-card__footer">
-                    <div class = "training-program-card__footer-item">
-                      Очно
-                    </div>
-                    <div class = "training-program-card__footer-item">
-                      20 бюджетных мест
-                    </div>
-                  </div>
-                </article>
-                <article class="training-program-card" data-ui="training-program-card">
-                  <div class="training-program-card__body">
-                    <div class="training-program-card__header">
-                      <p class="training-program-card__code">09.03.03</p>
-                      <span class = "training-program-card__tag magistratura" data-ui="training-program-card__tag">Магистратура</span>
-                    </div>
-                    <h3><a href="program.html">Прикладная информатика</a></h3>
-                  </div>
-                  <div class = "training-program-card__footer">
-                    <div class = "training-program-card__footer-item">
-                      Очно
-                    </div>
-                    <div class = "training-program-card__footer-item">
-                      20 бюджетных мест
-                    </div>
-                    <div class = "training-program-card__footer-item">
-                      40 платных мест
-                    </div>
-                  </div>
-                </article>
-                <article class="training-program-card" data-ui="training-program-card">
-                  <div class="training-program-card__body">
-                    <div class="training-program-card__header">
-                      <p class="training-program-card__code">09.04.01</p>
-                      <span class = "training-program-card__tag magistratura" data-ui="training-program-card__tag">Магистратура</span>
-                    </div>
-                    <h3><a href="program.html">Информатика и вычислительная техника</a></h3>
-                  </div>
-                  <div class = "training-program-card__footer">
-                    <div class = "training-program-card__footer-item">
-                      Очно
-                    </div>
-                    <div class = "training-program-card__footer-item">
-                      20 бюджетных мест
-                    </div>
-                    <div class = "training-program-card__footer-item">
-                      40 платных мест
-                    </div>
-                  </div>
-                </article>
+{% from "components/training-program-card.njk" import trainingCard %}
+{{ trainingCard(componentExamples.training["training-1"]) }}
+{% from "components/training-program-card.njk" import trainingCard %}
+{{ trainingCard(componentExamples.training["training-2"]) }}
+{% from "components/training-program-card.njk" import trainingCard %}
+{{ trainingCard(componentExamples.training["training-3"]) }}
+{% from "components/training-program-card.njk" import trainingCard %}
+{{ trainingCard(componentExamples.training["training-4"]) }}
               </div>
             </section>
 
@@ -186,7 +118,8 @@
               <h2 class="structure-detail__section-title" id="management-title">
                 Руководство
               </h2>
-              {% include "components/structure-person-card.njk" %}
+{% from "components/person-card.njk" import personCard %}
+{{ personCard(componentExamples.people["people-1"]) }}
             </section>
 
             <section

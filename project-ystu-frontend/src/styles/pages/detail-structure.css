@@ -28,37 +28,6 @@
     line-height: 1.4;
 }
 
-.structure-contact-card {
-    display: flex;
-    padding: 24px;
-    flex-direction: column;
-    gap: 24px;
-    background: var(--subprimary-color-7);
-    border-radius: 16px;
-    font-style: normal;
-    min-height: 0;
-}
-
-.structure-contact-card div {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.structure-contact-card h2,
-.structure-person-card__contacts span {
-    color: var(--subprimary-color-1);
-    font-size: 1.125rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    line-height: 1;
-}
-
-.structure-contact-card p,
-.structure-contact-card a {
-    font-size: 1.125rem;
-    line-height: 1.4;
-}
 
 .structure-detail__section,
 .structure-detail__documents {
@@ -70,8 +39,6 @@
     font-size: 2.75rem;
     font-weight: 500;
 }
-
-.training-program-card[hidden] { display: none; }
 
 .structure-detail__tabs {
     display: flex;
@@ -117,168 +84,6 @@
     margin-top: 24px;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
-}
-
-.training-program-card {
-    display: flex;
-    min-height: 368px;
-    padding: 24px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-    background: var(--white-shade-1);
-    border: 1px solid var(--subprimary-color-2);
-    border-radius: 16px;
-    position: relative;
-    overflow: hidden;
-    z-index: 0;
-}
-
-.training-program-card::before {
-    position: absolute;
-    bottom: -10%;
-    right: -33px;
-    content: "";
-    display: block;
-    width: 138px;
-    height: 195px;
-    background-color: var(--primary-color-2);
-    clip-path: polygon(0 0, 43% 0, 100% 50%, 43% 100%, 0 100%, 57% 50%);
-    z-index: -1;
-}
-
-.training-program-card::after {
-    position: absolute;
-    bottom: -1%;
-    right: 63px;
-    content: "";
-    display: block;
-    width: 89px;
-    height: 126px;
-    background-color: var(--primary-color-5);
-    clip-path: polygon(0 0, 43% 0, 100% 50%, 43% 100%, 0 100%, 57% 50%);
-    z-index: -1;
-}
-
-.training-program-card::before,
-.training-program-card::after {
-    pointer-events: none;
-    transform: scale(1);
-    transform-origin: center;
-    transition: transform 400ms ease-in-out;
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .training-program-card:hover::before,
-    .training-program-card:hover::after {
-        transform: scale(1.08);
-    }
-}
-
-.training-program-card:is(:focus-visible, :has(:focus-visible))::before,
-.training-program-card:is(:focus-visible, :has(:focus-visible))::after {
-    transform: scale(1.08);
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .training-program-card::before,
-    .training-program-card::after {
-        transition: none;
-    }
-}
-
-.training-program-card__tags {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 6px;
-}
-
-.training-program-card__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-span.training-program-card__tag {
-    padding: 6px 20px;
-    color: var(--subprimary-color-1);
-    background: transparent;
-    border: 1px solid var(--subprimary-color-1);
-    border-radius: 100px;
-    font-size: 0.875rem;
-    height: 30px;
-    max-width: 75px;
-}
-
-.training-program-card :is(.training-program-card__header, .training-program-card__tags) .bakalavr {
-    color: var(--white-shade-1);
-    background: var(--subprimary-color-1);
-    border: none;
-    max-width: 123px;
-}
-
-.training-program-card :is(.training-program-card__header, .training-program-card__tags) .magistratura {
-    color: var(--white-shade-1);
-    background: var(--primary-color-2);
-    border: none;
-    max-width: 133px;
-    width: 100%;
-}
-
-.training-program-card__body {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    width: 100%;
-}
-
-.training-program-card__code {
-    color: var(--subprimary-color-2);
-    font-size: 1.125rem;
-}
-
-.training-program-card h3 {
-    color: var(--subprimary-color-1);
-    font-size: 1.75rem;
-    font-weight: 500;
-}
-
-.training-program-card > p:last-of-type {
-    font-size: 1rem;
-    line-height: 1.4;
-}
-
-.training-program-card__footer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    max-width: 267px;
-}
-
-.training-program-card__footer-item {
-    padding: 10px 20px;
-    background: var(--subprimary-color-4);
-    border-radius: 100px;
-    font-style: italic;
-    font-size: 0.875rem;
-    color: var(--subprimary-color-1);
-}
-
-.training-program-card h3 a {
-    color: inherit;
-    text-decoration: none;
-    transition: color 200ms ease;
-}
-
-.training-program-card h3 a:is(:hover, :focus-visible, :active) {
-    color: var(--primary-color-2);
-}
-
-.training-program-card > a {
-    margin-top: auto;
-    color: var(--primary-color-2);
-    font-weight: 600;
 }
 
 .content-filter-status {
@@ -378,45 +183,6 @@ span.training-program-card__tag {
     mask-composite: exclude;
 }
 
-.structure-gallery {
-    margin-top: 60px;
-}
-
-.structure-gallery h3 {
-    color: var(--subprimary-color-1);
-    font-size: 2rem;
-    font-weight: 500;
-}
-
-.structure-gallery__slider {
-    position: relative;
-    margin-top: 40px;
-    padding-bottom: 48px;
-}
-
-.structure-gallery__list {
-    margin-top: 0;
-}
-
-.structure-gallery__list .swiper-slide,
-.structure-gallery__list :is(img, .ui-icon) {
-    width: 100%;
-    height: 248px;
-}
-
-.structure-gallery__list :is(img, .ui-icon) {
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.structure-gallery__controls {
-    gap: 16px;
-}
-
-.structure-gallery__controls .swiper-pagination {
-    min-width: 86px;
-}
-
 .structure-employees {
     display: flex;
     margin-top: 40px;
@@ -424,77 +190,8 @@ span.training-program-card__tag {
     gap: 24px;
 }
 
-.structure-detail__section > .structure-person-card {
+.structure-detail__section > .person-card {
     margin-top: 40px;
-}
-
-.structure-person-card {
-    display: flex;
-    min-height: 222px;
-    padding: 40px;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    background: var(--white-shade-4);
-    border: 2px solid var(--subprimary-color-2);
-    border-radius: 20px;
-}
-
-.structure-person-card__person {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.structure-person-card__person > :is(img, .ui-icon),
-.structure-person-card__person > .responsive-picture > :is(img, .ui-icon) {
-    width: 140px;
-    height: 140px;
-    flex: 0 0 140px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-.structure-person-card__person h3 {
-    color: var(--subprimary-color-1);
-    font-size: 1.75rem;
-    font-weight: 600;
-}
-
-.structure-person-card__person p {
-    margin-top: 16px;
-    color: var(--subprimary-color-2);
-    font-size: 1.25rem;
-    font-weight: 500;
-}
-
-.structure-person-card__contacts {
-    display: grid;
-    width: 430px;
-    flex: 0 0 430px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-    font-style: normal;
-}
-
-.structure-person-card__contacts div:first-child {
-    grid-column: 1 / -1;
-}
-
-.structure-person-card__contacts div {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.structure-person-card__contacts span {
-    color: var(--subprimary-color-2);
-}
-
-.structure-person-card__contacts p,
-.structure-person-card__contacts a {
-    font-size: 1.125rem;
-    line-height: 1.4;
 }
 
 @media (max-width: 1200px) {
@@ -502,14 +199,14 @@ span.training-program-card__tag {
         grid-template-columns: minmax(0, 1fr) 400px;
     }
 
-    .structure-person-card {
-        align-items: flex-start;
-    }
 
-    .structure-person-card__person {
-        align-items: flex-start;
-    }
+
+
 }
+
+
+
+
 
 @media (max-width: 992px) {
     .structure-detail__intro-grid,
@@ -521,31 +218,22 @@ span.training-program-card__tag {
         grid-column: 1 / -1;
     }
 
-    .structure-contact-card {
-        grid-column: 1 / -1;
-    }
-
     .structure-about__video {
         height: 520px;
     }
 
-    .structure-person-card {
-        flex-direction: column;
-    }
 
-    .structure-person-card__contacts {
-        width: 100%;
-        flex-basis: auto;
-    }
+
+
 }
+
+
+
+
 
 @media (max-width: 768px) {
     .detail-structure .breadcrumbs {
         margin-top: 16px;
-    }
-
-    .structure-gallery {
-        margin-top: 40px;
     }
 
     .structure-detail {
@@ -559,23 +247,6 @@ span.training-program-card__tag {
         font-size: 2rem;
     }
 
-    .structure-contact-card {
-        padding: 24px 16px;
-        min-height: 0;
-    }
-
-    .structure-contact-card div {
-        gap: 8px;
-    }
-
-    .structure-contact-card h2 {
-        font-size: 0.9375rem;
-    }
-
-    .structure-contact-card p, .structure-contact-card a {
-        font-size: 1rem;
-    }
-
     .structure-detail__tabs {
         gap: 16px;
     }
@@ -583,60 +254,6 @@ span.training-program-card__tag {
     .structure-detail__tab {
         padding: 14px 24px;
         font-size: 1rem;
-    }
-
-    .training-program-card {
-        padding: 16px;
-        min-height: 213px;
-        border-radius: 10px;
-        gap: 16px;
-    }
-
-    .training-program-card::before {
-        height: 105px;
-        width: 78px;
-        right: -19px;
-        bottom: -25px;
-    }
-
-    .training-program-card::after {
-        height: 68px;
-        width: 51px;
-        right: 33px;
-        bottom: -6px;
-    }
-
-    span.training-program-card__tag {
-        padding: 4px 16px;
-        font-size: 0.75rem;
-        height: 23px;
-        max-width: 62px;
-
-        &.bakalavr {
-            max-width: 103px;
-        }
-
-        &.magistratura {
-            max-width: 110px;
-        }
-    }
-
-    .training-program-card__code {
-        font-size: 0.9375rem;
-    }
-
-    .training-program-card__footer {
-        flex-direction: column;
-        align-items: baseline;
-    }
-
-    .training-program-card__footer-item {
-        font-size: 0.75rem;
-        padding: 6px 12px;
-    }
-
-    .training-program-card h3 {
-        font-size: 1.375rem;
     }
 
     .structure-detail__intro-grid,
@@ -662,61 +279,14 @@ span.training-program-card__tag {
         height: 72px;
     }
 
-    .structure-person-card {
-        padding: 40px 16px;
-        gap: 24px;
-        min-height: 488px;
-        border-radius: 8px;
-    }
 
-    .structure-person-card__person {
-        flex-direction: column;
-        gap: 16px;
-    }
 
-    .structure-person-card__person h3 {
-        font-size: 1.25rem;
-    }
 
-    .structure-person-card__person p {
-        margin-top: 8px;
-    }
-
-    .structure-person-card__contacts div {
-        gap: 8px;
-    }
-
-    .structure-person-card__person > :is(img, .ui-icon),
-    .structure-person-card__person > .responsive-picture > :is(img, .ui-icon) {
-        width: 100px;
-        height: 100px;
-        flex: 0 0 100px;
-    }
-
-    .training-program-card__tags .bakalavr {
-        max-width: 103px;
-    }
-
-    .training-program-card__tags .magistratura {
-        max-width: 110px;
-    }
-
-    .training-program-card :is(.training-program-card__header, .training-program-card__tags) .magistratura {
-        max-width: 110px;
-    }
-
-    .training-program-card__tags {
-        flex-wrap: nowrap;
-    }
-
-    .structure-person-card__contacts {
-        grid-template-columns: 1fr;
-    }
-
-    .structure-person-card__contacts div:first-child {
-        grid-column: auto;
-    }
 }
+
+
+
+
 
 @media(hover: hover) {
     .structure-detail__tab:hover {
@@ -732,18 +302,66 @@ span.training-program-card__tag {
     .structure-detail__tab:hover::after {
         transform: scaleX(1);
     }
+
+
+
+
 }
+
+
+
+
 
 @media (prefers-reduced-motion: reduce) {
     .structure-detail__tab,
     .structure-detail__tab::after {
         transition: none;
     }
+
+
+
+
 }
+
+
+
+
 
 @media (max-width: 768px) {
     .detail-structure .breadcrumbs { margin-top: 16px; }
-    .structure-contact-card a[href^="tel:"] { display: block; }
-    .training-program-card__footer { flex-direction: row; flex-wrap: wrap; align-items: center; }
-    .training-program-card__footer-item { padding: 6px 12px; }
+
+
+
+
+}
+
+
+
+
+
+.structure-about__video { transition: filter 200ms ease; }
+@media (hover: hover) and (pointer: fine) { .structure-about__video:hover { filter: brightness(.9); }
+
+
+
+}
+
+
+
+
+.structure-about__video:active { filter: brightness(.8); }
+@media (prefers-reduced-motion: reduce) { .structure-about__video { transition: none; }
+
+
+
+}
+
+
+
+
+.structure-detail__tab:active { background-color: var(--primary-color-1); border-color: var(--primary-color-1); color: var(--white-shade-1); }
+@media (hover: hover) and (pointer: fine) { .structure-detail__tab.select:hover { background-color: var(--primary-color-1); border-color: var(--primary-color-1); }
+
+
+
 }

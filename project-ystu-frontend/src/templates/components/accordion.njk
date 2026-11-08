@@ -1,0 +1,8 @@
+{% macro accordionItem(title, expanded=false, headerClasses="", titleClasses="dropdown--item__title") %}
+<div class="dropdown--item{% if expanded %} open{% endif %}" data-ui="dropdown--item">
+  <div class="{{ headerClasses }} dropdown--header" data-ui="dropdown--header">
+    <h2 class="{{ titleClasses }}"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="{{ 'true' if expanded else 'false' }}" type="button">{{ title }}</button></h2>
+  </div>
+  <div class="dropdown--content" data-ui="dropdown--content">{{ caller() }}</div>
+</div>
+{% endmacro %}

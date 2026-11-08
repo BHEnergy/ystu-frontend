@@ -1,0 +1,8 @@
+{% macro contactList(groups, labelTag="h2") %}
+{% for group in groups %}
+<div class="contact-list__item">
+  {% if labelTag == "span" %}<span>{{ group.label }}</span>{% else %}<h2>{{ group.label }}</h2>{% endif %}
+  {% for value in group.values %}{% if value.href %}<a href="{{ value.href }}">{{ value.text }}</a>{% else %}<p>{{ value.text }}</p>{% endif %}{% endfor %}
+</div>
+{% endfor %}
+{% endmacro %}

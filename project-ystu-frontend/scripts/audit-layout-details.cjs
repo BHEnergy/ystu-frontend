@@ -10,7 +10,7 @@ results.push({file,width,overflow:await page.evaluate(()=>[...document.querySele
 await page.screenshot({path:path.resolve(__dirname,'../test-results/production-audit/layout-'+file+'-'+width+'.png')});
 }
 await page.setViewportSize({width:390,height:844});await page.goto('http://localhost:8000/pages/map.html');await page.waitForTimeout(1000);
-const map=page.locator('.campus-map-page__canvas');const before=await map.boundingBox();await page.locator('.campus-filter summary').first().click();await page.waitForTimeout(300);const after=await map.boundingBox();
+const map=page.locator('.campus-map__canvas');const before=await map.boundingBox();await page.locator('.campus-filter summary').first().click();await page.waitForTimeout(300);const after=await map.boundingBox();
 results.push({mapCanvas:before,mapAfterFilter:after,markers:await page.locator('.campus-marker__trigger').count()});
 if(await page.locator('.campus-marker__trigger').count()){
  await page.locator('.campus-filter summary').first().click();

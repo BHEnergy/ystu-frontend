@@ -1,0 +1,37 @@
+<section class="container entry-requirements">
+            <h2 class="title entry-requirements__title">
+              Вступительные испытания и проходные баллы
+            </h2>
+
+            <ul class="metric-list">
+{% from "components/metric-card.njk" import metricCard %}
+{{ metricCard(componentExamples.metrics["metrics-1"]) }}
+{% from "components/metric-card.njk" import metricCard %}
+{{ metricCard(componentExamples.metrics["metrics-2"]) }}
+{% from "components/metric-card.njk" import metricCard %}
+{{ metricCard(componentExamples.metrics["metrics-3"]) }}
+{% from "components/metric-card.njk" import metricCard %}
+{{ metricCard(componentExamples.metrics["metrics-4"]) }}
+            </ul>
+
+            <div class="entry-requirements__description wyswig" data-ui="wyswig">
+              <p>
+                Для приема на направление 07.03.01 «Архитектура» предусмотрены
+                два дополнительных вступительных<br> испытания творческой направленности:
+              </p>
+              <ul>
+                <li>Композиция в графике (рисунок 1)</li>
+                <li>Рисунок (рисунок 2)</li>
+              </ul>
+              <p>
+                Вступительные испытания проводятся в очном формате.<br>
+                Продолжительность каждого вступительного испытания —
+                шесть астрономических часов.
+              </p>
+            </div>
+
+{% from "components/disclosure.njk" import disclosure %}
+{% call disclosure("Примеры экзаменационных работ", false) %}
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              {% endcall %}
+        </section>

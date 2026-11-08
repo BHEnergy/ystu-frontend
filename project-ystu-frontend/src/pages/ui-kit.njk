@@ -348,88 +348,12 @@
                   data-tab="events"
                 >
                   <div class="events__content" data-ui="events__content">
-                    <div class="event__card" data-ui="event__card">
-                      <div class="event__photo">
-                        <img loading="lazy" decoding="async" src="../images/fallback/banner1.png" alt="Выступление с презентацией анализа 3D-сканов деталей" />
-                      </div>
-                      <div class="event__content">
-                        <p class="event__title" data-ui="event__title">
-                          Международная научно-практическая конференция
-                          «Экологическая безопасность водных объектов»
-                        </p>
-                        <div class="event__body">
-                          <div class="event__info">
-                            <p class="event__date">1-3 июля 2026</p>
-                            <p class="event__time">
-                              с&nbsp;11:00 до&nbsp;16:00
-                            </p>
-                            <p class="event__location">Точка кипения</p>
-                          </div>
-                          <div class="event__footer">
-                            {% include "components/btn--link.njk" %}
-                            {% include "components/btn--link-2.njk" %}
-                          </div>
-                        </div>
-                      </div>
-                      <div class="event__tags">
-                        <div class="event__tag">10-11 класс</div>
-                        <div class="event__tag">Онлайн</div>
-                      </div>
-                    </div>
-                    <div class="event__card" data-ui="event__card">
-                      <div class="event__photo">
-                        <img loading="lazy" decoding="async" src="../images/fallback/banner1.png" alt="Выступление с презентацией анализа 3D-сканов деталей" />
-                      </div>
-                      <div class="event__content">
-                        <p class="event__title" data-ui="event__title">
-                          Исторический квиз "Я помню! Я горжусь!"
-                        </p>
-                        <div class="event__body">
-                          <div class="event__info">
-                            <p class="event__date">1-3 июля 2026</p>
-                            <p class="event__time">
-                              с&nbsp;11:00 до&nbsp;16:00
-                            </p>
-                            <p class="event__location">Точка кипения</p>
-                          </div>
-                          <div class="event__footer">
-                            {% include "components/btn--link.njk" %}
-                            {% include "components/btn--link-2.njk" %}
-                          </div>
-                        </div>
-                      </div>
-                      <div class="event__tags">
-                        <div class="event__tag">10-11 класс</div>
-                        <div class="event__tag">Онлайн</div>
-                      </div>
-                    </div>
-                    <div class="event__card" data-ui="event__card">
-                      <div class="event__photo">
-                        <img loading="lazy" decoding="async" src="../images/fallback/banner1.png" alt="Выступление с презентацией анализа 3D-сканов деталей" />
-                      </div>
-                      <div class="event__content">
-                        <p class="event__title" data-ui="event__title">
-                          Акселератор «ПолиТех.Индустрия 5.0»
-                        </p>
-                        <div class="event__body">
-                          <div class="event__info">
-                            <p class="event__date">1-3 июля 2026</p>
-                            <p class="event__time">
-                              с&nbsp;11:00 до&nbsp;16:00
-                            </p>
-                            <p class="event__location">Точка кипения</p>
-                          </div>
-                          <div class="event__footer">
-                            {% include "components/btn--link.njk" %}
-                            {% include "components/btn--link-2.njk" %}
-                          </div>
-                        </div>
-                      </div>
-                      <div class="event__tags">
-                        <div class="event__tag">10-11 класс</div>
-                        <div class="event__tag">Онлайн</div>
-                      </div>
-                    </div>
+{% from "components/event-card.njk" import eventCard %}
+{{ eventCard(componentExamples.events["events-8"]) }}
+{% from "components/event-card.njk" import eventCard %}
+{{ eventCard(componentExamples.events["events-9"]) }}
+{% from "components/event-card.njk" import eventCard %}
+{{ eventCard(componentExamples.events["events-10"]) }}
                   </div>
                   <a
                     class="btn btn--default btn--m"
@@ -444,59 +368,12 @@
                   data-tab="news"
                 >
                   <div class="events__content" data-ui="events__content">
-                    <a class="news__card" data-ui="news__card" href="news-events.html">
-                      <div class="news__photo">{% include "components/news-arrow.njk" %}
-                        <img loading="lazy" decoding="async" src="../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета" />
-                      </div>
-                      <div class="news__content">
-                        <div class="news__header">
-                          <p class="news__date">26.02.2026</p>
-                          <p class="news__title"
-                            >Международная научно-практическая конференция
-                            «Экологическая безопасность водных объектов»</p
-                          >
-                        </div>
-                        <div class="news__tags">
-                          <p class="news__tag" data-ui="news__tag">приемная кампания</p>
-                          <p class="news__tag" data-ui="news__tag">поступающим</p>
-                        </div>
-                      </div>
-                    </a>
-                    <a class="news__card" data-ui="news__card" href="news-events.html">
-                      <div class="news__photo">{% include "components/news-arrow.njk" %}
-                        <img loading="lazy" decoding="async" src="../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета" />
-                      </div>
-                      <div class="news__content">
-                        <div class="news__header">
-                          <p class="news__date">26.02.2026</p>
-                          <p class="news__title"
-                            >Социологическй опрос «Приоритет 2030»</p
-                          >
-                        </div>
-                        <div class="news__tags">
-                          <p class="news__tag" data-ui="news__tag">приемная кампания</p>
-                          <p class="news__tag" data-ui="news__tag">поступающим</p>
-                        </div>
-                      </div>
-                    </a>
-                    <a class="news__card" data-ui="news__card" href="news-events.html">
-                      <div class="news__photo">{% include "components/news-arrow.njk" %}
-                        <img loading="lazy" decoding="async" src="../images/fallback/banner-news.png" alt="Студенты с табличкой Ярославского государственного технического университета" />
-                      </div>
-                      <div class="news__content">
-                        <div class="news__header">
-                          <p class="news__date">26.02.2026</p>
-                          <p class="news__title"
-                            >Максим Татаров встретился <br />со студентами
-                            Института экономики и менеджмента</p
-                          >
-                        </div>
-                        <div class="news__tags">
-                          <p class="news__tag" data-ui="news__tag">приемная кампания</p>
-                          <p class="news__tag" data-ui="news__tag">поступающим</p>
-                        </div>
-                      </div>
-                    </a>
+{% from "components/news-card.njk" import newsCard %}
+{{ newsCard(componentExamples.news["news-4"]) }}
+{% from "components/news-card.njk" import newsCard %}
+{{ newsCard(componentExamples.news["news-5"]) }}
+{% from "components/news-card.njk" import newsCard %}
+{{ newsCard(componentExamples.news["news-6"]) }}
                   </div>
                   <a
                     class="btn btn--default btn--m"
@@ -547,191 +424,116 @@
                 <h2 class="flagship-projects__title">
                   Флагманские проекты - Сетка 8
                 </h2>
-                {% include "components/flagship-card.njk" %}
+            {% include "components/flagship-grid.njk" %}
 
                 <h2 class="flagship-projects__title">
                   Флагманские проекты - Сетка 7
                 </h2>
                 <div class="flagship-projects__grid card-7">
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">
-                      Очень очень Очень длиное название проекта
-                    </p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                    <div class="flagship-project__photo">
-                      <img draggable="false" loading="lazy" decoding="async" src="../images/fallback/prioritet.png" alt="Приоритет 2030. Лидерами становятся" />
-                    </div>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">
-                      Очень очень Очень длиное название проекта
-                    </p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-2"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-3"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-2"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
                 </div>
 
                 <h2 class="flagship-projects__title">
                   Флагманские проекты - Сетка 6
                 </h2>
                 <div class="flagship-projects__grid card-6">
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">
-                      Очень очень Очень длиное название проекта
-                    </p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                    <div class="flagship-project__photo">
-                      <img draggable="false" loading="lazy" decoding="async" src="../images/fallback/prioritet.png" alt="Приоритет 2030. Лидерами становятся" />
-                    </div>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">
-                      Очень очень Очень длиное название проекта
-                    </p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-2"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-3"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-2"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
                 </div>
 
                 <h2 class="flagship-projects__title">
                   Флагманские проекты - Сетка 5
                 </h2>
                 <div class="flagship-projects__grid card-5">
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">
-                      Очень очень Очень длиное название проекта
-                    </p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                    <div class="flagship-project__photo">
-                      <img draggable="false" loading="lazy" decoding="async" src="../images/fallback/prioritet.png" alt="Приоритет 2030. Лидерами становятся" />
-                    </div>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">
-                      Очень очень Очень длиное название проекта
-                    </p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-2"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-3"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-2"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
                 </div>
 
                 <h2 class="flagship-projects__title">
                   Флагманские проекты - Сетка 4
                 </h2>
                 <div class="flagship-projects__grid card-4">
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">
-                      Очень очень Очень длиное название проекта
-                    </p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                    <div class="flagship-project__photo">
-                      <img draggable="false" loading="lazy" decoding="async" src="../images/fallback/prioritet.png" alt="Приоритет 2030. Лидерами становятся" />
-                    </div>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">
-                      Очень очень Очень длиное название проекта
-                    </p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-2"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-3"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-2"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
                 </div>
 
                 <h2 class="flagship-projects__title">
                   Флагманские проекты - Сетка 3
                 </h2>
                 <div class="flagship-projects__grid card-3">
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">
-                      Очень очень Очень длиное название проекта
-                    </p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                    <div class="flagship-project__photo">
-                      <img draggable="false" loading="lazy" decoding="async" src="../images/fallback/prioritet.png" alt="Приоритет 2030. Лидерами становятся" />
-                    </div>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">
-                      Очень очень Очень длиное название проекта
-                    </p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
-                  <a draggable="false" href="#" class="flagship-project__card">
-                    <p class="flagship-project__title">Название проекта</p>
-                  </a>
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-2"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-3"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-2"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
+{% from "components/flagship-card.njk" import projectCard %}
+{{ projectCard(componentExamples.projects["projects-1"]) }}
                 </div>
               </div>
             </section>
@@ -879,51 +681,17 @@
               стрелок.
             </p>
             <p>Страницы: <a href="student-life.html">student-life.html</a></p>
-            <p>Компонент: <code>.student-directions</code></p>
+            <p>Компонент: <code>.feature-sections</code></p>
           </div>
           <div class="ui-kit__sample">
-            <section class="student-directions container">
-              <h2 class="title student-directions__title">Направления</h2>
-              <div class="student-directions__list">
-                <article class="student-direction">
-                  <div class="student-direction__content">
-                    <h3 class="student-direction__title projects-svg">
-                      Проектная деятельность и предпринимательство
-                    </h3>
-                    <p class="student-direction__description">
-                      Lorem ipsum dolor sit amet consectetur. Eu augue fames
-                      felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec
-                      eu dui feugiat orci dui amet consectetur tortor sem. In
-                      malesuada vitae urna mattis tortor aenean porttitor
-                      aenean. Lorem ipsum dolor sit amet consectetur. Eu augue
-                      fames felis ultrices. Scelerisque ipsum nulla tempor
-                      vitae. Nec eu dui feugiat orci dui amet consectetur tortor
-                      sem. In malesuada vitae urna mattis tortor aenean
-                      porttitor aenean..
-                    </p>
-                    <a class="btn btn--default btn--m" href="#">Подробнее</a>
-                  </div>
-                  {% include "components/student-gallery.njk" %}
-                </article>
+            <section class="feature-sections container">
+              <h2 class="title feature-sections__title">Направления</h2>
+              <div class="feature-sections__list">
+{% from "components/feature-section.njk" import featureSection %}
+{{ featureSection(componentExamples.features["features-6"]) }}
 
-                <article class="student-direction student-direction--reverse">
-                  <div class="student-direction__content">
-                    <h3 class="student-direction__title art-svg">Творчество</h3>
-                    <p class="student-direction__description">
-                      Lorem ipsum dolor sit amet consectetur. Eu augue fames
-                      felis ultrices. Scelerisque ipsum nulla tempor vitae. Nec
-                      eu dui feugiat orci dui amet consectetur tortor sem. In
-                      malesuada vitae urna mattis tortor aenean porttitor
-                      aenean. Lorem ipsum dolor sit amet consectetur. Eu augue
-                      fames felis ultrices. Scelerisque ipsum nulla tempor
-                      vitae. Nec eu dui feugiat orci dui amet consectetur tortor
-                      sem. In malesuada vitae urna mattis tortor aenean
-                      porttitor aenean..
-                    </p>
-                    <a class="btn btn--default btn--m" href="#">Подробнее</a>
-                  </div>
-                  {% include "components/student-gallery.njk" %}
-                </article>
+{% from "components/feature-section.njk" import featureSection %}
+{{ featureSection(componentExamples.features["features-7"]) }}
               </div>
             </section>
           </div>
@@ -934,10 +702,10 @@
             <h2>Центр подготовки водителей</h2>
             <p>Информационный блок с фотографиями и ссылкой.</p>
             <p>Страницы: <a href="student-life.html">student-life.html</a></p>
-            <p>Компонент: <code>.student-driving</code></p>
+            <p>Компонент: <code>.text-media</code></p>
           </div>
           <div class="ui-kit__sample">
-            {% include "components/student-driving.njk" %}
+            {% include "components/text-media.njk" %}
           </div>
         </section>
         <!-- Полезные ссылки: student-life.html -->
@@ -946,10 +714,11 @@
             <h2>Полезные ссылки</h2>
             <p>Сетка ссылок с индивидуальными декоративными линиями.</p>
             <p>Страницы: <a href="student-life.html">student-life.html</a></p>
-            <p>Компонент: <code>.student-links</code></p>
+            <p>Компонент: <code>.link-cards</code></p>
           </div>
           <div class="ui-kit__sample">
-            {% include "components/student-links.njk" %}
+{% from "components/link-cards.njk" import linkCards %}
+{{ linkCards(componentExamples.linkCards["linkCards-1"]) }}
           </div>
         </section>
         <!-- Студенческий офис: student-life.html -->
@@ -958,53 +727,11 @@
             <h2>Студенческий офис</h2>
             <p>Контактный блок для студенческого офиса.</p>
             <p>Страницы: <a href="student-life.html">student-life.html</a></p>
-            <p>Компонент: <code>.student-office</code></p>
+            <p>Компонент: <code>.contact-section--office</code></p>
           </div>
           <div class="ui-kit__sample">
-            <section class="program-admissions student-office">
-              <div class="container">
-                <h2 class="title program-admissions__title">
-                  Студенческий офис
-                </h2>
-                <div class="program-admissions__body">
-                  <div class="program-admissions__map">
-                    <img loading="lazy" decoding="async"
-                      src="../images/fallback/admissions-map.png"
-                      alt="Приёмная комиссия ЯГТУ на Московском проспекте, рядом с корпусом Б"
-                    />
-                  </div>
-                  <div class="program-admissions__contacts">
-                    <div class="program-admissions__contact">
-                      <h3>Адрес</h3>
-                      <div class="program-admissions__address">
-                        150023, г. Ярославль, Московский проспект, 84, корпус
-                        «А», А-219
-                      </div>
-                    </div>
-                    <div class="program-admissions__contact">
-                      <h3>Телефон</h3>
-                      <a href="tel:+74852441739">+7 (4852) 44-17-39</a>
-                      <a href="tel:88002507677">8-800-250-76-77</a>
-                    </div>
-                    <div class="program-admissions__contact">
-                      <h3>Почта</h3>
-                      <a href="mailto:priem@ystu.ru">priem@ystu.ru</a>
-                    </div>
-                    <div class="program-admissions__contact">
-                      <h3>Часы работы</h3>
-                      <p>Пн-Сб: 9:00 - 18:00</p>
-                      <p>Вс: выходной</p>
-                    </div>
-                    <div class="program-admissions__contact">
-                      <h3>Часы работы в летний период</h3>
-                      <p>Пн-Пт: 10:00 - 18:00</p>
-                      <p>Сб: 10:00 - 15:00</p>
-                      <p>Вс: выходной</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+{% from "components/contact-section.njk" import contactSection %}
+{{ contactSection(componentExamples.contacts["contacts-2"]) }}
           </div>
         </section>
         <!-- Баннер образовательной программы: program.html -->
@@ -1137,10 +864,10 @@
               Раскрывающиеся описания дисциплин и скачивание учебного плана.
             </p>
             <p>Страницы: <a href="program.html">program.html</a></p>
-            <p>Компонент: <code>.program-education</code></p>
+            <p>Компонент: <code>.curriculum</code></p>
           </div>
           <div class="ui-kit__sample">
-            {% include "components/program-education.njk" %}
+            {% include "components/curriculum.njk" %}
           </div>
         </section>
         <!-- Вступительные испытания: program.html -->
@@ -1152,10 +879,10 @@
               примеры.
             </p>
             <p>Страницы: <a href="program.html">program.html</a></p>
-            <p>Компонент: <code>.program-exams</code></p>
+            <p>Компонент: <code>.entry-requirements</code></p>
           </div>
           <div class="ui-kit__sample">
-            {% include "components/program-exams.njk" %}
+            {% include "components/entry-requirements.njk" %}
           </div>
         </section>
         <!-- Приёмная комиссия: program.html -->
@@ -1167,10 +894,11 @@
               Страницы: <a href="program.html">program.html</a>,
               <a href="student-life.html">student-life.html</a>
             </p>
-            <p>Компонент: <code>.program-admissions</code></p>
+            <p>Компонент: <code>.contact-section</code></p>
           </div>
           <div class="ui-kit__sample">
-            {% include "components/program-admissions.njk" %}
+{% from "components/contact-section.njk" import contactSection %}
+{{ contactSection(componentExamples.contacts["contacts-3"]) }}
           </div>
         </section>
         <!-- Каталог образовательных программ: programs.html -->
@@ -1197,20 +925,19 @@
                 <aside class="listing-page__sidebar">
                   <h2 class="catalog-filters__title">Фильтры</h2>
                   <form class="catalog-filters" method="get">
-                    {% include "components/catalog-search-2.njk" %}
-                    {% include "components/catalog-filter-group-2.njk" %}
-                    {% include "components/catalog-filter-group-3.njk" %}
-                    <div class="catalog-filter-group">
-                      <div class="catalog-filter-group__title">
-                        основа обучения
-                      </div>
-                      <div class="catalog-filter-group__options">
-                        {% set option = {"label":"Бюджет","name":"financing[]","value":"budget","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Целевое","name":"financing[]","value":"target","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}{% set option = {"label":"Платное","name":"financing[]","value":"paid","checked":false,"type":"checkbox"} %}{% include "components/catalog-filter-option.njk" %}
-                      </div>
-                    </div>
-                    {% include "components/catalog-filter-group.njk" %}
+                    {% from "components/catalog-search.njk" import catalogSearch %}
+{{ catalogSearch(componentExamples.searches["searches-3"]) }}
+{% from "components/catalog-filter-group.njk" import filterGroup %}
+{{ filterGroup(componentExamples.filters["filters-6"]) }}
+{% from "components/catalog-filter-group.njk" import filterGroup %}
+{{ filterGroup(componentExamples.filters["filters-7"]) }}
+{% from "components/catalog-filter-group.njk" import filterGroup %}
+{{ filterGroup(componentExamples.filters["filters-2"]) }}
+{% from "components/catalog-filter-group.njk" import filterGroup %}
+{{ filterGroup(componentExamples.filters["filters-9"]) }}
                     <div class="catalog-filters__actions">
-                      {% include "components/btn--default.njk" %}<button class="btn catalog-filters__reset" type="reset">
+                      {% from "components/action.njk" import action %}
+{{ action(componentExamples.actions["actions-1"]) }}<button class="btn catalog-filters__reset" type="reset">
                         Очистить
                       </button>
                     </div>
@@ -1219,7 +946,8 @@
 
                 <section aria-label="Список образовательных программ">
                   <div class="listing-page__mobile-tools" data-ui="listing-page__mobile-tools">
-                    {% include "components/catalog-search.njk" %}
+                    {% from "components/catalog-search.njk" import catalogSearch %}
+{{ catalogSearch(componentExamples.searches["searches-4"]) }}
                     <button
                       class="catalog-filters-trigger"
                       type="button"
@@ -1231,102 +959,16 @@
                     </button>
                   </div>
                   <div class="listing-page__results" data-ui="listing-page__results">
-                    <article class="program-card" data-ui="program-card" data-catalog-filters='{"education_level":["bachelor"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","creative"]}'>
-<div class="program-card__tags">
-                            <span
-                              class="program-card__tag program-card__tag--bacalavr"
-                              >Бакалавриат</span
-                            ><span
-                              class="program-card__tag program-card__tag--outline"
-                              >Очно</span
-                            ><span
-                              class="program-card__tag program-card__tag--outline program-card__tag--accreditation"
-                              >Государственная аккредитация</span
-                            >
-                          </div>
-                      <div class="program-card__content">
-                        <div class="program-card__body">
-                          <div class="program-card__heading">
-                            <p class="program-card__code">07.03.01</p>
-                            <h2 class="program-card__title"><a href="program.html">Архитектура</a></h2>
-                          </div>
-                        </div>
-                        <div class="program-card__profiles">
-                          <p class="program-card__profiles-title">Профили</p>
-                          <ul class="program-card__profiles-list">
-                            <li>Профиль 1</li>
-                            <li>Профиль 2</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <dl class="program-card__stats">
-                        <div class="program-card__stat">
-                          <dt>Бюджетных мест</dt>
-                          <dd>16</dd>
-                        </div>
-                        <div class="program-card__stat">
-                          <dt>Целевых мест</dt>
-                          <dd>16</dd>
-                        </div>
-                        <div class="program-card__stat">
-                          <dt>Платных мест</dt>
-                          <dd>50</dd>
-                        </div>
-                        <div class="program-card__stat">
-                          <dt>Срок обучения</dt>
-                          <dd>5 лет</dd>
-                        </div>
-                      </dl>
-                    </article>
-                    <article class="program-card" data-ui="program-card" data-catalog-filters='{"education_level":["bachelor"],"study_form":["full_time"],"financing":["budget","target","paid"],"entrance_exam":["russian","mathematics","physics"]}'>
-<div class="program-card__tags">
-                            <span
-                              class="program-card__tag program-card__tag--bacalavr"
-                              >Бакалавриат</span
-                            ><span
-                              class="program-card__tag program-card__tag--outline"
-                              >Очно</span
-                            ><span
-                              class="program-card__tag program-card__tag--outline program-card__tag--accreditation"
-                              >Государственная аккредитация</span
-                            >
-                          </div>
-                      <div class="program-card__content">
-                        <div class="program-card__body">
-                          <div class="program-card__heading">
-                            <p class="program-card__code">07.03.01</p>
-                            <h2 class="program-card__title"><a href="program.html">Дизайн</a></h2>
-                          </div>
-                        </div>
-                        <div class="program-card__profiles">
-                          <p class="program-card__profiles-title">Профили</p>
-                          <ul class="program-card__profiles-list">
-                            <li>Профиль 1</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <dl class="program-card__stats">
-                        <div class="program-card__stat">
-                          <dt>Бюджетных мест</dt>
-                          <dd>16</dd>
-                        </div>
-                        <div class="program-card__stat">
-                          <dt>Целевых мест</dt>
-                          <dd>16</dd>
-                        </div>
-                        <div class="program-card__stat">
-                          <dt>Платных мест</dt>
-                          <dd>50</dd>
-                        </div>
-                        <div class="program-card__stat">
-                          <dt>Срок обучения</dt>
-                          <dd>5 лет</dd>
-                        </div>
-                      </dl>
-                    </article>
-                    {% include "components/program-card.njk" %}
-                    {% include "components/program-card.njk" %}
-                    {% include "components/program-card.njk" %}
+{% from "components/program-card.njk" import programCard %}
+{{ programCard(componentExamples.programCards["programCards-3"]) }}
+{% from "components/program-card.njk" import programCard %}
+{{ programCard(componentExamples.programCards["programCards-4"]) }}
+{% from "components/program-card.njk" import programCard %}
+{{ programCard(componentExamples.programCards["programCards-6"]) }}
+{% from "components/program-card.njk" import programCard %}
+{{ programCard(componentExamples.programCards["programCards-6"]) }}
+{% from "components/program-card.njk" import programCard %}
+{{ programCard(componentExamples.programCards["programCards-6"]) }}
                   </div>
                 </section>
               </div>
@@ -1381,7 +1023,8 @@
                       </div>
                     </details>
                     <div class="catalog-filters__actions">
-                      {% include "components/btn--default.njk" %}<button class="catalog-filters__reset" type="reset">
+                      {% from "components/action.njk" import action %}
+{{ action(componentExamples.actions["actions-1"]) }}<button class="catalog-filters__reset" type="reset">
                         Сбросить
                       </button>
                     </div>
@@ -1429,7 +1072,8 @@
             <p>Компонент: <code>.vacancy-card</code></p>
           </div>
           <div class="ui-kit__sample">
-            {% include "components/vacancy-card.njk" %}
+{% from "components/vacancy-card.njk" import vacancyCard %}
+{{ vacancyCard(componentExamples.vacancies["vacancies-3"]) }}
           </div>
         </section>
         <!-- Радиокнопки фильтра вакансий: vacancies.html -->
@@ -1447,7 +1091,8 @@
             </p>
           </div>
           <div class="ui-kit__sample container">
-            {% include "components/catalog-filter-group-4.njk" %}
+{% from "components/catalog-filter-group.njk" import filterGroup %}
+{{ filterGroup(componentExamples.filters["filters-8"]) }}
           </div>
         </section>
         <!-- Детальная вакансия: detail-vacancy.html -->
@@ -1531,154 +1176,42 @@
             <h2>Структура университета</h2>
             <p>Категории и сетка ссылок на институты и подразделения.</p>
             <p>Страницы: <a href="structure.html">structure.html</a></p>
-            <p>Компонент: <code>.structure</code></p>
+            <p>Компонент: <code>.department-directory</code></p>
           </div>
           <div class="ui-kit__sample">
-            <section class="structure">
-              <div class="container structure__container" data-ui="structure__container">
+            <section class="department-directory">
+              <div class="container department-directory__container" data-ui="structure__container">
                 <h1 class="title">Структура университета</h1>
-                <div class="structure__tags" data-ui="structure__tags" role="group" aria-label="Раздел структуры">
-                  <button type="button" class="structure__tag tag select" data-filter="institutes" aria-pressed="true">Институты</button>
-                  <button type="button" class="structure__tag tag" data-filter="departments" aria-pressed="false">Кафедры</button>
-                  <button type="button" class="structure__tag tag" data-filter="buildings" aria-pressed="false">Корпуса и общежитие</button>
-                  <button type="button" class="structure__tag tag" data-filter="services" aria-pressed="false">Службы и отделы</button>
+                <div class="department-directory__tags" data-ui="structure__tags" role="group" aria-label="Раздел структуры">
+                  <button type="button" class="filter-tag tag select" data-filter="institutes" aria-pressed="true">Институты</button>
+                  <button type="button" class="filter-tag tag" data-filter="departments" aria-pressed="false">Кафедры</button>
+                  <button type="button" class="filter-tag tag" data-filter="buildings" aria-pressed="false">Корпуса и общежитие</button>
+                  <button type="button" class="filter-tag tag" data-filter="services" aria-pressed="false">Службы и отделы</button>
                 </div>
-                <ul class="structure__institutes" data-ui="structure__institutes" data-category="institutes">
-                  <li class="structure__institute">
-                    <a class="structure__institute-link" href="#">
-                      <h2 class="structure__institute-title">
-                        Институт базовой инженерной подготовки
-                      </h2>
+                <ul class="department-directory__institutes" data-ui="structure__institutes" data-category="institutes">
+{% from "components/department-card.njk" import departmentCard %}
+{{ departmentCard(componentExamples.departments["departments-9"]) }}
 
-                      <ul class="structure__programs">
-                        <li class="structure__program">
-                          Бакалавриат: 1 программа
-                        </li>
-                        <li class="structure__program">
-                          Магистратура: 1 программа
-                        </li>
-                      </ul>
-                    </a>
-                  </li>
+{% from "components/department-card.njk" import departmentCard %}
+{{ departmentCard(componentExamples.departments["departments-10"]) }}
 
-                  <li class="structure__institute">
-                    <a class="structure__institute-link" href="#">
-                      <h2 class="structure__institute-title">
-                        Институт цифровых систем
-                      </h2>
+{% from "components/department-card.njk" import departmentCard %}
+{{ departmentCard(componentExamples.departments["departments-11"]) }}
 
-                      <ul class="structure__programs">
-                        <li class="structure__program">
-                          Бакалавриат: 1 программа
-                        </li>
-                        <li class="structure__program">
-                          Магистратура: 1 программа
-                        </li>
-                      </ul>
-                    </a>
-                  </li>
+{% from "components/department-card.njk" import departmentCard %}
+{{ departmentCard(componentExamples.departments["departments-12"]) }}
 
-                  <li class="structure__institute">
-                    <a class="structure__institute-link" href="#">
-                      <h2 class="structure__institute-title">
-                        Институт экономики и менеджмента
-                      </h2>
+{% from "components/department-card.njk" import departmentCard %}
+{{ departmentCard(componentExamples.departments["departments-13"]) }}
 
-                      <ul class="structure__programs">
-                        <li class="structure__program">
-                          Бакалавриат: 1 программа
-                        </li>
-                        <li class="structure__program">
-                          Магистратура: 1 программа
-                        </li>
-                      </ul>
-                    </a>
-                  </li>
+{% from "components/department-card.njk" import departmentCard %}
+{{ departmentCard(componentExamples.departments["departments-14"]) }}
 
-                  <li class="structure__institute">
-                    <a class="structure__institute-link" href="#">
-                      <h2 class="structure__institute-title">
-                        Институт химии и химической технологии
-                      </h2>
+{% from "components/department-card.njk" import departmentCard %}
+{{ departmentCard(componentExamples.departments["departments-15"]) }}
 
-                      <ul class="structure__programs">
-                        <li class="structure__program">
-                          Бакалавриат: 1 программа
-                        </li>
-                        <li class="structure__program">
-                          Магистратура: 1 программа
-                        </li>
-                      </ul>
-                    </a>
-                  </li>
-
-                  <li class="structure__institute">
-                    <a class="structure__institute-link" href="#">
-                      <h2 class="structure__institute-title">
-                        Институт архитектуры и дизайна
-                      </h2>
-
-                      <ul class="structure__programs">
-                        <li class="structure__program">
-                          Бакалавриат: 1 программа
-                        </li>
-                        <li class="structure__program">
-                          Магистратура: 1 программа
-                        </li>
-                      </ul>
-                    </a>
-                  </li>
-
-                  <li class="structure__institute">
-                    <a class="structure__institute-link" href="#">
-                      <h2 class="structure__institute-title">
-                        Институт инженеров строительства и транспорта
-                      </h2>
-
-                      <ul class="structure__programs">
-                        <li class="structure__program">
-                          Бакалавриат: 1 программа
-                        </li>
-                        <li class="structure__program">
-                          Магистратура: 1 программа
-                        </li>
-                      </ul>
-                    </a>
-                  </li>
-
-                  <li class="structure__institute">
-                    <a class="structure__institute-link" href="#">
-                      <h2 class="structure__institute-title">
-                        Институт инженерии и машиностроения
-                      </h2>
-
-                      <ul class="structure__programs">
-                        <li class="structure__program">
-                          Бакалавриат: 1 программа
-                        </li>
-                        <li class="structure__program">
-                          Магистратура: 1 программа
-                        </li>
-                      </ul>
-                    </a>
-                  </li>
-
-                  <li class="structure__institute">
-                    <a class="structure__institute-link" href="#">
-                      <h2 class="structure__institute-title">
-                        Университетский колледж ЯГТУ «Политехник»
-                      </h2>
-
-                      <ul class="structure__programs">
-                        <li class="structure__program">
-                          Бакалавриат: 1 программа
-                        </li>
-                        <li class="structure__program">
-                          Магистратура: 1 программа
-                        </li>
-                      </ul>
-                    </a>
-                  </li>
+{% from "components/department-card.njk" import departmentCard %}
+{{ departmentCard(componentExamples.departments["departments-16"]) }}
                 </ul>
               </div>
             </section>
@@ -1709,7 +1242,8 @@
                   dui amet consectetur tortor sem. In malesuada vitae urna
                   mattis tortor aenean porttitor aenean.
                 </p>
-                {% include "components/structure-contact-card.njk" %}
+{% from "components/contact-card.njk" import contactCard %}
+{{ contactCard(componentExamples.contactCards["contactCards-1"]) }}
               </div>
             </section>
           </div>
@@ -1752,79 +1286,14 @@
                 </button>
               </div>
               <div class="training-programs">
-                <article class="training-program-card" data-ui="training-program-card">
-                  <div class="training-program-card__body">
-                    <div class="training-program-card__header">
-                      <p class="training-program-card__code">09.03.01</p>
-                      <span class = "training-program-card__tag bakalavr" data-ui="training-program-card__tag">Бакалавриат</span>
-                    </div>
-                    <h3><a href="program.html">Информатика и вычислительная техника</a></h3>
-                  </div>
-                  <div class = "training-program-card__footer">
-                    <div class = "training-program-card__footer-item">
-                      Очно
-                    </div>
-                    <div class = "training-program-card__footer-item">
-                      20 бюджетных мест
-                    </div>
-                    <div class = "training-program-card__footer-item">
-                      40 платных мест
-                    </div>
-                  </div>
-                </article>
-                <article class="training-program-card" data-ui="training-program-card">
-                  <div class="training-program-card__body">
-                    <div class="training-program-card__header">
-                      <p class="training-program-card__code">09.03.02</p>
-                      <span class = "training-program-card__tag bakalavr" data-ui="training-program-card__tag">Бакалавриат</span>
-                    </div>
-                    <h3><a href="program.html">Информационные системы и технологии</a></h3>
-                  </div>
-                  <div class = "training-program-card__footer">
-                    <div class = "training-program-card__footer-item">
-                      Очно
-                    </div>
-                    <div class = "training-program-card__footer-item">
-                      20 бюджетных мест
-                    </div>
-                  </div>
-                </article>
-                <article class="training-program-card" data-ui="training-program-card">
-                  <div class="training-program-card__body">
-                    <div class="training-program-card__header">
-                      <p class="training-program-card__code">09.03.03</p>
-                      <span class = "training-program-card__tag magistratura" data-ui="training-program-card__tag">Магистратура</span>
-                    </div>
-                    <h3><a href="program.html">Прикладная информатика</a></h3>
-                  </div>
-                  <div class = "training-program-card__footer">
-                    <div class = "training-program-card__footer-item">
-                      Очно
-                    </div>
-                    <div class = "training-program-card__footer-item">
-                      20 бюджетных мест
-                    </div>
-                    <div class = "training-program-card__footer-item">
-                      40 платных мест
-                    </div>
-                  </div>
-                </article>
-                <article class="training-program-card" data-ui="training-program-card">
-                  <div class="training-program-card__body">
-                    <div class="training-program-card__header">
-                      <p class="training-program-card__code">09.04.01</p>
-                      <span class="training-program-card__tag magistratura" data-ui="training-program-card__tag">Магистратура</span>
-                    </div>
-                    <h3><a href="program.html">Информатика и вычислительная техника</a></h3>
-                  </div>
-                  <div class="training-program-card__footer">
-                    <div class="training-program-card__footer-item">Очно</div>
-                    <div class="training-program-card__footer-item">16 бюджетных мест</div>
-                    <div class="training-program-card__footer-item">16 целевых мест</div>
-                    <div class="training-program-card__footer-item">50 платных мест</div>
-                    <div class="training-program-card__footer-item">Срок обучения: 5 лет</div>
-                  </div>
-                </article>
+{% from "components/training-program-card.njk" import trainingCard %}
+{{ trainingCard(componentExamples.training["training-1"]) }}
+{% from "components/training-program-card.njk" import trainingCard %}
+{{ trainingCard(componentExamples.training["training-2"]) }}
+{% from "components/training-program-card.njk" import trainingCard %}
+{{ trainingCard(componentExamples.training["training-3"]) }}
+{% from "components/training-program-card.njk" import trainingCard %}
+{{ trainingCard(componentExamples.training["training-5"]) }}
               </div>
             </section>
           </div>
@@ -1903,7 +1372,7 @@
             <p>
               Компонент:
               <code
-                >.structure-detail__section:has(.structure-person-card)</code
+                >.structure-detail__section:has(.person-card)</code
               >
             </p>
           </div>
@@ -1918,7 +1387,8 @@
               >
                 Руководство
               </h2>
-              {% include "components/structure-person-card.njk" %}
+{% from "components/person-card.njk" import personCard %}
+{{ personCard(componentExamples.people["people-1"]) }}
             </section>
           </div>
         </section>
@@ -1966,16 +1436,16 @@
           </div>
           <div class="ui-kit__sample">
             <section class="detail-sotrudnik d-flex flex-column container">
-              <div class="sotrudnik d-flex">
-                <div class="sotrudnik__info">
-                  <div class="sotrudnik__picture">
+              <div class="employee-profile d-flex">
+                <div class="employee-profile__info">
+                  <div class="employee-profile__picture">
                     <img loading="lazy" decoding="async" src="../images/fallback/stepanova.png" alt="Степанова Елена Олеговна" />
                   </div>
                   {% include "components/employee-summary.njk" %}
                 </div>
                 {% include "components/employee-contacts.njk" %}
               </div>
-              <div class="sotrudnik__contents d-flex flex-column">
+              <div class="employee-profile__contents d-flex flex-column">
                 <div class="dropdown--item open" data-ui="dropdown--item">
                   <div class="dropdown--header" data-ui="dropdown--header">
                     <h3 class="dropdown--item__title"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="true" type="button">Полномочия и функции</button></h3>
@@ -2020,91 +1490,17 @@
           </div>
           <div class="ui-kit__sample">
             <section class="science">
-              <div class="science-list container d-flex flex-column">
-                <h1 class="title science-list__title">Научные журналы ЯГТУ</h1>
-                <div class="science-list__content d-flex flex-column">
-                  {% include "components/dropdown--item-3.njk" %}
-                  {% include "components/dropdown--item-2.njk" %}
-                  {% include "components/dropdown--item.njk" %}
-                  <div class="dropdown--item" data-ui="dropdown--item">
-                    <div class="science-detail dropdown--header" data-ui="dropdown--header">
-                      <h2 class="science-detail__title"><button class="dropdown--trigger" data-ui="dropdown--trigger" aria-expanded="false" type="button">
-                        «Oт химии к технологии шаг за шагом»
-                      </button></h2>
-                    </div>
-
-                    <div
-                      class="dropdown--content science-detail__content" data-ui="dropdown--content"
-                    >
-                      <section class="science-detail__section">
-                        <div class="science-detail__content d-flex flex-row">
-                          <img loading="lazy" decoding="async"
-                            class="science-detail__photo"
-                            src="../images/fallback/journal.png" alt="Обложка научного журнала «Теоретическая экономика», № 10 (70), 2020"
-                          />
-                          <div class="science-detail__info">
-                            <dl>
-                              <dt>Год основания</dt>
-                              <dd>2020</dd>
-                            </dl>
-                            <dl>
-                              <dt>Главный редактор</dt>
-                              <dd>
-                                Федосов Сергей Викторович, доктор технических
-                                наук, академик РААСН, профессор.
-                              </dd>
-                            </dl>
-                            <dl>
-                              <dt>Индексация</dt>
-                              <dd>РИНЦ</dd>
-                            </dl>
-                            <dl>
-                              <dt>Доступность</dt>
-                              <dd>
-                                Открытый доступ, издается при финансовой
-                                поддержке Университета
-                              </dd>
-                            </dl>
-                            <dl>
-                              <dt>Лицензия</dt>
-                              <dd>Creative Commons: CC BY 4.0</dd>
-                            </dl>
-                            <dl>
-                              <dt>Периодичность выхода</dt>
-                              <dd>4 выпуска в год</dd>
-                            </dl>
-                            <dl>
-                              <dt>Рецензирование</dt>
-                              <dd>двойное слепое</dd>
-                            </dl>
-                            <dl>
-                              <dt>Язык</dt>
-                              <dd>русский, английский</dd>
-                            </dl>
-                            <a href="#" class="btn btn--default btn--sm"
-                              >Подробнее</a
-                            >
-                          </div>
-                        </div>
-                        <div class="science-detail__description">
-                          <p >ISSN 2782-1919</p>
-                          <p>
-                            Рецензируемый научно-практический журнал публикует
-                            работы преподавателей и сотрудников высших учебных
-                            заведений РФ, РАН, РААСН, других исследовательских
-                            подразделений, работающих в сфере промышленного и
-                            гражданского строительства и архитектуры, в том
-                            числе в странах стран СНГ и за рубежом. Рубрики
-                            журнала: строительные конструкции, здания и
-                            сооружения; строительные материалы и изделия;
-                            проектирование и строительство дорог,
-                            метрополитенов; архитектура зданий и сооружений;
-                            творческие концепции архитектурной деятельности.
-                          </p>
-                        </div>
-                      </section>
-                    </div>
-                  </div>
+              <div class="journal-list container d-flex flex-column">
+                <h1 class="title journal-list__title">Научные журналы ЯГТУ</h1>
+                <div class="journal-list__content d-flex flex-column">
+{% from "components/journal-card.njk" import journalAccordion %}
+{{ journalAccordion(componentExamples.journals["journals-4"]) }}
+{% from "components/journal-card.njk" import journalAccordion %}
+{{ journalAccordion(componentExamples.journals["journals-3"]) }}
+{% from "components/journal-card.njk" import journalAccordion %}
+{{ journalAccordion(componentExamples.journals["journals-5"]) }}
+{% from "components/journal-card.njk" import journalAccordion %}
+{{ journalAccordion(componentExamples.journals["journals-2"]) }}
                 </div>
               </div>
             </section>
@@ -2121,29 +1517,31 @@
             <p>Компонент: <code>main</code></p>
           </div>
           <div class="ui-kit__sample">
-            <section class="campus-map-page">
+            <section class="campus-map" data-campus-map-component>
               <div class="container">
-                <h1 class="campus-map-page__title">Карта кампуса</h1>
+                <h1 class="campus-map__title">Карта кампуса</h1>
 
-                <div class="campus-map-page__toolbar">
-                  <div class="campus-map-page__filters">
-                    {% include "components/campus-filter.njk" %}
-                    {% include "components/campus-filter-2.njk" %}
+                <div class="campus-map__toolbar">
+                  <div class="campus-map__filters">
+                    {% from "components/campus-filter.njk" import campusFilter %}
+{{ campusFilter(componentExamples.campusFilters["campusFilters-2"]) }}
+                    {% from "components/campus-filter.njk" import campusFilter %}
+{{ campusFilter(componentExamples.campusFilters["campusFilters-1"]) }}
                   </div>
                   <form
-                    class="campus-map-page__control"
+                    class="campus-map__control"
                     data-campus-search=""
                     role="search"
                   >
                     <input
-                      class="campus-map-page__search-input"
+                      class="campus-map__search-input"
                       type="search"
                       name="campus-query"
                       placeholder="поиск"
                       aria-label="Поиск по карте кампуса"
                     />
                     <button
-                      class="campus-map-page__search-button"
+                      class="campus-map__search-button"
                       type="submit"
                       aria-label="Найти"
                     >
@@ -2153,7 +1551,7 @@
                 </div>
 
                 <section
-                  class="campus-map-page__canvas"
+                  class="campus-map__canvas"
                   aria-label="Интерактивная карта кампуса"
                 >
                   <div id="ui-37-campus-map" data-campus-map=""></div>

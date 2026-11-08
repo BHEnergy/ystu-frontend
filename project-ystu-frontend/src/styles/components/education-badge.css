@@ -1,0 +1,35 @@
+.education-badge {
+    min-height: 33px;
+    background-color: var(--subprimary-color-4);
+    padding: 7px 15px;
+    border-radius: 100px;
+    font-size: 0.9375rem;
+    color: var(--subprimary-color-1);
+    text-transform: lowercase;
+    font-style: italic;
+    z-index: 1;
+}
+
+.education-badge--plain {
+    color: #000;
+    font-style: normal;
+}
+
+
+/* Устройства Medium (планшеты, 768 пикселей и выше) */
+@media (max-width: 768px) {
+
+    .education-badge {
+        font-size: 0.875rem;
+        padding: 6px 11px;
+        min-height: 30px;
+    }
+
+    .education-badge:first-child {
+        max-width: 196px;
+    }
+
+    .education-badge:last-child {
+        max-width: 203px;
+    }
+}
