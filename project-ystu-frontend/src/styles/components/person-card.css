@@ -33,10 +33,15 @@
     border-radius: 50%;
 }
 
-.person-card__person h3 {
-    color: var(--subprimary-color-1);
+.person-card__person a {
+    color: var(--subprimary-color-1) !important;
     font-size: 1.75rem;
     font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+.person-card__person a:hover {
+    color: var(--primary-color-2) !important;
 }
 
 .person-card__person p {

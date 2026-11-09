@@ -352,11 +352,14 @@
     }
 }
 .navbar__panel a, .header__mobile-tools a { border-radius: 4px; transition: background-color 200ms ease; }
+:is(.navbar__panel, .header__mobile-tools) a :is(img, .ui-icon) { transition: opacity 200ms ease; }
 @media (hover: hover) and (pointer: fine) {
-    .navbar__panel a:hover, .header__mobile-tools a:hover { background-color: var(--subprimary-color-5); }
+    .navbar__panel a:hover, .header__mobile-tools a:hover { background-color: transparent; }
+    :is(.navbar__panel, .header__mobile-tools) a:hover :is(img, .ui-icon) { opacity: .7; }
 }
 .navbar__panel a:active, .header__mobile-tools a:active { background-color: var(--subprimary-color-4); }
 .header__menu > a:first-child:active { opacity: .65; }
 @media (prefers-reduced-motion: reduce) {
     .navbar__panel a, .header__mobile-tools a { transition: none; }
+    :is(.navbar__panel, .header__mobile-tools) a :is(img, .ui-icon) { transition: none; }
 }
